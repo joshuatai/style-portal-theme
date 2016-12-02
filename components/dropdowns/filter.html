@@ -1,0 +1,61 @@
+<section class="css-reference">
+  <h5>Outer Dropdown Menu</h5>
+  <p>Wrap the filter input and the dropdown menu within a <code data-tag="div"></code> element. E.g. <code>.dropdown-menu</code></p>
+  <pre data-title="Unset inner spacing">
+    <style data-selector=".dropdown-filter > .dropdown-menu"></style>
+  </pre>
+
+  <h5>Filter Input</h5>
+  <p>Wrap the input and icon within a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".dropdown-menu-filter"></style>
+  </pre>
+
+  <h5>Height-limited Dropdown Menu</h5>
+  <p>Wrap the dropdown menu within a <code data-tag="div"></code> element which is limited to its height.</p>
+  <pre>
+    <style data-selector=".dropdown-menu-scrollable"></style>
+  </pre>
+
+  <h5>Inner Dropdown Menu</h5>
+  <p>Replace the default styles of dropdown menu which is under a height-limited <code data-tag="div"></code>.</p>
+  <pre>
+    <style data-selector=".dropdown-menu-scrollable .dropdown-menu"></style>
+  </pre>
+</section>
+
+<section class="dropdown-example">
+  <p>A drop-down menu can contain a search field.</p>
+  <p>
+    <div class="dropdown dropdown-filter open">
+      <button class="btn btn-border dropdown-toggle" type="button">
+        <span class="caret"></span>Sample
+      </button>
+      
+      <div class="dropdown-menu">
+        <div class="input-icon-group dropdown-menu-filter">
+          <input id="filter" type="text" class="form-control" placeholder="Search...">
+          
+          <label class="input-icon-label" for="filter">
+            <i class="fa fa-search"></i>
+          </label>
+        </div>
+
+        <div class="dropdown-menu-scrollable mCustomScrollbar mCustomScrollbar-dragger-hover">
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li><a href="javascript:;">Menu item four</a></li>
+            <li><a href="javascript:;">Menu item five</a></li>
+            <li><a href="javascript:;">Menu item six</a></li>
+            <li><a href="javascript:;">Menu item seven</a></li>
+            <li><a href="javascript:;">Menu item eight</a></li>
+            <li><a href="javascript:;">Menu item nine</a></li>
+            <li><a href="javascript:;">Menu item ten</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </p>
+</section>

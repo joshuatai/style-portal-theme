@@ -1,0 +1,44 @@
+<section class="css-reference">
+  <p>For details on form control styles, see Form Elements.</p>
+
+  <h5>Label Class For Required Field</h5>
+  <p>Add an asterisk to the content property on the label class pseudo-element <code data-html=":after"></code></p>
+  <pre>
+    <style data-selector=".label-required:after"></style>
+  </pre>
+
+  <h5>Help Text Class</h5>
+  <p>Use a new block for help text. It is recommanded to use a <code data-tag="span"></code> element</p>
+  <pre>
+    <style data-selector=".help-block"></style>
+  </pre>
+
+  <h5>Help Text States</h5>
+  <pre data-title="inValid">
+    <style data-selector=".help-block-invalid"></style>
+  </pre>
+
+  <h5>Icon</h5>
+  <p>The icon class should be only used on elements that do not contain text or any child elements. It is recommanded to use the <code data-tag="span"></code> element. E.g. <code data-html="<span class="icon"></span>Text"></code></p>
+  <pre data-title="For Image icon:">
+    <style data-selector=".icon">Default size of icon</style>
+  </pre>
+
+  <h5>Help Icon</h5>
+  <pre>
+    <style data-selector=".help-block .icon">Leave a space between icon and text. Put an icon on the vertical center of the help container.</style>
+  </pre>
+</section>
+
+<section class="form-validation-example">
+  <p>For an invalid input, the error will be indicated right below the input field.</p>
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label label-required" for="errorInput">Input error:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control form-invalid" id="errorInput" aria-describedby="errorBlock">
+	    	<span id="errorBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Required field.</span>
+		</div>
+	  </div>
+	</form>
+</section>

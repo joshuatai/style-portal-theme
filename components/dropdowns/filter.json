@@ -1,0 +1,17 @@
+{
+  "id": "92ae9e63-5bf0-408c-9c06-2e4e8175cc24",
+  "name": "Search",
+  "location": "dropdowns/filter.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "8dad46f6-ea13-4746-ba77-5e428e8684bc",
+  "name": "Touchspin",
+  "location": "form-input-groups/touchspin.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

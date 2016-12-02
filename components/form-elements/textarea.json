@@ -1,0 +1,17 @@
+{
+  "id": "41f453e0-cda2-4dc5-80b9-12ad090f77fe",
+  "name": "Text Area",
+  "location": "form-elements/textarea.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

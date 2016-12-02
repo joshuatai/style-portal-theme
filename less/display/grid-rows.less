@@ -1,0 +1,38 @@
+/* grid rows */
+
+@grid-rows: 40;
+
+.calc-grid-column(@index, @class) when (@index > 0) {
+  .row-@{class}-@{index} {
+    height: @index * 50px + (@index - 1) * 20px;
+  }
+}
+
+// Basic looping
+.loop-grid-rows(@index, @class) when (@index >= 0) {
+  .calc-grid-column(@index, @class);
+  // next iteration
+  .loop-grid-rows((@index - 1), @class);
+}
+
+// Create grid rows for specific class
+.make-grid-rows(@class) {
+  .loop-grid-rows(@grid-rows, @class);
+}
+
+@media (min-width: @screen-sm-min) {
+  .make-grid-rows(sm);
+}
+
+@media (min-width: @screen-md-min) {
+  .make-grid-rows(md);
+}
+
+@media (min-width: @screen-lg-min) {
+  .make-grid-rows(lg);
+}
+
+@media (min-width: @screen-xl-min) {
+  .make-grid-rows(xl);
+}
+

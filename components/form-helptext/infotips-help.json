@@ -1,0 +1,17 @@
+{
+  "id": "18c998d0-5af3-42b0-ae9f-a66efd7bb5ed",
+  "name": "Infotips",
+  "location": "form-helptext/infotips-help.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

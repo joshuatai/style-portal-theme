@@ -1,0 +1,17 @@
+{
+  "id": "a72d3fec-c151-492e-b03d-f3086c0b143c",
+  "name": "Checkboxes",
+  "location": "form-elements/checkbox.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-12"
+  }
+}

@@ -1,0 +1,52 @@
+<section class="css-reference">
+  <h5>Combo Box Container</h5>
+  <p>Wrap the input, icon, and drop-down menu with a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".input-icon-group"></style>
+  </pre>
+  <pre data-title=":after">
+    <style data-selector=".combobox:after"></style>
+  </pre>
+
+  <h5>Input with From Control</h5>
+  <pre>
+    <style data-selector=".combobox .form-control"></style>
+  </pre>
+
+  <h5>Dropdown Menu</h5>
+  <p>Dropdown menu should be a drop-down menu style. Please refer to Components > Drop-down Menus.</p>
+  <pre data-title="No matches list item">
+    <style data-selector=".dropdown-menu .no-matches"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".dropdown-menu .no-matches:hover"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>IThe icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> element.</p>
+  <pre data-title="For image icon(svg or png):">
+    <style data-selector=".input-icon-group .icon"></style>
+  </pre>
+  <pre data-title="Cancel Icon">
+    <style data-selector=".input-icon-group .icon-cancel"></style>
+    <style data-selector=".combobox .icon"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".input-icon-group .icon-cancel:hover"></style>
+  </pre>
+</section>
+
+<section class="form-advanced-example">
+  <p>A combo box allows the user to type in a single-line input to limit the search, and select an item from a list of matched options. We recommend using a combo box when you have a list that contains more than 13 items.</p>
+
+	<div class="input-icon-group combobox" data-combobox="initialize">
+    <select id="editable-select" data-combobox="combobox"> 
+        <option>France</option>
+        <option>Germany</option>
+        <option>Syria</option>
+        <option>Tahiti</option>
+        <option>Taiwan</option>
+        <option>Tajikistan</option>        
+    </select>
+  </div>
+</section>

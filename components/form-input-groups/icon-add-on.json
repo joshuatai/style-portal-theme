@@ -1,0 +1,17 @@
+{
+  "id": "ae99aa05-15da-43c6-a256-7eec3bcf2c70",
+  "name": "Icon Addon",
+  "location": "form-input-groups/icon-add-on.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

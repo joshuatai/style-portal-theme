@@ -1,0 +1,184 @@
+<section class="css-reference">
+  <h5>Modal Wrapper</h5>
+  <p>Use <code data-tag="div"></code> to create a modal wrapper class. For example, <code>.modal</code> is a modal wrapper class used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".modal"></style>
+  </pre>
+  <pre data-title=":before">
+    <style data-selector=".modal:before">Let modal position in the middle of the screen</style>
+  </pre>
+
+  <h5>Modal Backdrop</h5>
+  <pre>
+    <style data-selector=".modal-backdrop"></style>
+  </pre>
+  <pre data-title="Modal In:">
+    <style data-selector=".modal-backdrop.in"></style>
+  </pre>
+  <pre data-title="Modal Fade:">
+    <style data-selector=".modal-backdrop.fade"></style>
+  </pre>
+
+  <h5>Modal Dialog</h5>
+  <p>Use <code data-tag="div"></code> to create a modal dialog class. For example, <code>.modal-dialog</code> is a modal dialog class used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".modal-dialog"></style>
+  </pre>
+  <pre data-title="The modal dialog of the medium and large size">
+    <style data-selector=".modal-dialog.modal-lg">Let modal max height always 80% of the screen.</style>
+  </pre>
+
+  <h5>Modal Width</h5>
+  <p>Extend the modal dialog class to define the modal width.</p>
+  <pre data-title="Extra Small">
+    <style data-selector=".modal-xs"></style>
+  </pre>
+  <pre data-title="Small">
+    <style data-selector=".modal-sm"></style>
+  </pre>
+  <pre data-title="Medium">
+    <style data-selector=".modal-md"></style>
+  </pre>
+  <pre data-title="Large">
+    <style data-selector=".modal-lg"></style>
+  </pre>
+
+  <h5>Modal Animation</h5>
+  <p>Extend the modal dialog class to define pop-up animation.</p>
+  <pre data-title="Modal In:">
+    <style data-selector=".modal.in .modal-dialog"></style>
+  </pre>
+  <pre data-title="Modal Fade:">
+    <style data-selector=".modal.fade .modal-dialog"></style>
+  </pre>
+
+  <h5>Modal Container</h5>
+  <p>Wrap the modal header, body, and footer with a modal container.  <code>.modal-content</code> is a modal container used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".modal-content"></style>
+  </pre>
+
+  <h5>Modal Header</h5>
+  <p>Use <code data-tag="div"></code> to create a modal header class. For example, <code>.modal-header</code> is a modal header used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".modal-header"></style>
+  </pre>
+  <pre data-title="A modal without header">
+    <style data-selector=".modal-header.no-header"></style>
+  </pre>
+  <pre data-title="Title text class within header">
+    <style data-selector=".modal-title"></style>
+  </pre>
+
+  <h5>Close Button Class</h5>
+  <pre>
+    <style data-selector=".modal-header .close"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".modal-header .close:hover"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".modal-header .close:focus"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> element.</p>
+  <pre>
+    <style data-selector=".icon"></style>
+    <style data-selector=".icon-modal-close"></style>
+  </pre>
+
+  <h5>Modal Body</h5>
+  <p>Use <code data-tag="div"></code> to create a modal body class. For example, <code>.modal-body</code> is a modal body used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".modal-body"></style>
+  </pre>
+  <pre data-title="The modal body of the extra small size">
+    <style data-selector=".modal-body.body-xs"></style>
+  </pre>
+  <pre data-title="The modal body of the small size">
+    <style data-selector=".modal-body.body-sm"></style>
+  </pre>
+  <pre data-title="The modal body of the medium and large size">
+    <style data-selector=".modal-lg .modal-body"></style>
+  </pre>
+
+  <h5>Modal Footer</h5>
+  <p>Use <code data-tag="div"></code> to create a modal footer class. For example, <code>.modal-footer</code> is a modal footer used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".modal-footer"></style>
+  </pre>
+  <pre data-title="More than one buttons in a row in footer">
+    <style data-selector=".modal-footer .btn + .btn"></style>
+  </pre>
+</section>
+
+<section class="modal-example">
+  <p>Modal dialogs are used to get a response from a user before other features can be assessed from the main page. Use title case for the titles.</p>
+  <p>Use one of these 4 modal sizes depending on your needs and requirements.</p>
+  <div class="lists-unordered">
+    <ul>
+      <li><span>Extra Small</span>:W400 x H240 px (minimum height)</li>
+      <li><span>Small</span>:W544 x H304 px (minimum height)</li>
+      <li><span>Medium</span>:W688 x H304 px (minimum height)</li>
+      <li><span>Large</span>:W928 x H304 px (minimum height)</li>
+    </ul>
+  </div>
+  <div class="modal-example-wrapper">
+    <div>
+      <h5>Extra small modal:</h5>
+      <p>Basic dialog</p>
+      <div class="modal xs-example" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xs" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-modal-close"></span></button>
+              <h3 class="modal-title">Modal Title</h3>
+            </div>
+            <div class="modal-body body-xs">
+              <form>
+                <div class="form-group">
+                  <label class="control-label" for="modalInput1">Text input:</label>
+                  <input type="text" class="form-control" id="modalInput1">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </div>
+    <div>
+      <p>Basic dialog with no title</p>
+      <div class="modal xs-example" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xs" role="document">
+          <div class="modal-content">
+            <div class="modal-header no-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-modal-close"></span></button>
+            </div>
+            <div class="modal-body body-xs">
+              <img src="../dist/img/modal_content.png">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </div>
+  </div>
+  <div class="example">
+    <div>
+      <h5>Standard dialogs</h5>
+      <p>Modal dialogs only come in four standard sizes:</p>
+      <button class="btn btn-default" id="demo-xs-button" data-toggle="modal" data-target="#demo-xs">Extra small modal</button>
+      <button class="btn btn-default" id="demo-sm-button" data-toggle="modal" data-target="#demo-sm">Small modal</button>
+      <button class="btn btn-default" id="demo-md-button" data-toggle="modal" data-target="#demo-md">Medium modal</button>
+      <button class="btn btn-default" id="demo-lg-button" data-toggle="modal" data-target="#demo-lg">Large modal</button>
+    </div>
+  </div>
+</section>

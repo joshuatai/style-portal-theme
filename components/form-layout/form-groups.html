@@ -1,0 +1,62 @@
+<section class="css-reference">
+  <h5>Fields Group Container</h5>
+  <p>Use a block-level element to group related elements in a form. Recommend to use <code data-tag="fieldset"></code> element.</p>
+  <pre>
+    <style data-selector="fieldset">fieldset tag is defined based on normalize.css</style>
+  </pre>
+
+  <h5>Fields Group Caption</h5>
+  <p>Use a block-level element to group related elements in a form. Recommend to use <code data-tag="legend"></code> element.</p>
+  <pre>
+    <style data-selector="legend">legend tag is defined based on normalize.css</style>
+  </pre>
+</section>
+
+<section class="form-layout-example">
+  <p>If you have multiple fields, consider organizing related fields into groups. Put a title for each form group.</p>
+	<form class="form-horizontal">
+		<fieldset>
+		  <legend>Group title</legend>
+		  <div class="form-group">
+		    <label class="control-label" for="normalInput">Text input:</label>
+		    <div class="control-wrapper">
+		    	<input type="text" class="form-control" id="normalInput">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label" for="placeholderInput">Text label:</label>
+		    <div class="control-wrapper">
+		    	<input type="text" class="form-control" id="placeholderInput" placeholder="Placeholder" aria-describedby="helpBlock">
+		    	<span id="helpBlock" class="help-block">Example block-level help text here.</span>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label">Description:</label>
+		    <div class="control-wrapper">
+		    	<textarea class="form-control textarea-resizable"></textarea>
+		    </div>
+		  </div>
+	  	</fieldset>
+	  	<fieldset>
+		  <legend>Group title</legend>
+		  <div class="form-group">
+		    <label class="control-label" for="normalInput">Text input:</label>
+		    <div class="control-wrapper">
+		    	<input type="text" class="form-control" id="normalInput">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label" for="placeholderInput">Text label:</label>
+		    <div class="control-wrapper">
+		    	<input type="text" class="form-control" id="placeholderInput">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label">Static text:</label>
+		    <div class="control-wrapper">
+		    	<p class="form-control-static">email@example.com</p>
+		    </div>
+		  </div>
+	  	</fieldset>
+	</form>
+</section>

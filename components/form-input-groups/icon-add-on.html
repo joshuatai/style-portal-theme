@@ -1,0 +1,44 @@
+<section class="css-reference">
+  <h5>Input Icon Group Container</h5>
+  <p>Wrap the input and the icon with a <code data-tag="div"></code> element, also create the container class. For example, <code>.input-icon-group</code> is used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".input-icon-group"></style>
+  </pre>
+
+  <h5>Input with Form Controls</h5>
+  <pre>
+    <style data-selector=".input-icon-group > .form-control"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> element.</p>
+  <pre data-title="For font">
+    <style data-selector=".input-icon-label"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".input-icon-group > .form-control:focus + .input-icon-label > i"></style>
+  </pre>
+</section>
+
+<section class="form-input-groups-example">
+  <p>You can add icons into a search box and have the icon highlighted when the input is focused.</p>
+
+	<div class="input-icon-group">
+      <input id="filter" type="text" class="form-control" placeholder="Case name">
+      <label class="input-icon-label" for="filter">
+        <i class="fa fa-search"></i>
+      </label>
+  </div>
+  <div class="input-icon-group">
+      <input id="filter1" type="text" class="form-control input-focus" value="DDEI">
+      <label class="input-icon-label" for="filter1">
+        <i class="fa fa-search focus"></i>
+      </label>
+  </div>
+  <div class="input-icon-group">
+      <input id="filter2" type="text" class="form-control" value="2016-08-30">
+      <label class="input-icon-label" for="filter2">
+        <i class="fa fa-calendar"></i>
+      </label>
+  </div>
+</section>

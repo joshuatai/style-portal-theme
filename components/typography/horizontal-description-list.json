@@ -1,0 +1,17 @@
+{
+  "id": "9123b711-5477-43cb-a47d-e9940d810a57",
+  "name": "Horizontal Description List",
+  "location": "typography/horizontal-description-list.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4"
+  }
+}

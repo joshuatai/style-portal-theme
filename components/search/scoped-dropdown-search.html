@@ -1,0 +1,101 @@
+<section class="css-reference">
+  <h5>Search Container</h5>
+  <p>Use a <code data-tag="div"></code> element to create a container that wraps the input and the button. For example, <code>.input-group</code> is used as a search container in Bootstrap.</p>
+  <pre>
+    <style data-selector=".input-group"></style>
+  </pre>
+
+  <h5>Search Container with an Icon</h5>
+  <pre>
+    <style data-selector=".input-group .input-icon-group"></style>
+  </pre>
+  <pre data-title="Input tag">
+    <style data-selector=".input-group .input-icon-group > .form-control"></style>
+    <style data-selector=".input-group .input-icon-group > .icon">Icon stack order</style>
+  </pre>
+
+  <h5>Input with Form Control</h5>
+  <pre>
+    <style data-selector=".input-group .form-control"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".input-group .form-control:focus"></style>
+  </pre>
+  <pre data-title=":not(:first">
+    <style data-selector=".input-group .form-control:not(:first-child):not(:last-child)"></style>
+  </pre>
+
+  <h5>Drop-down Menus</h5>
+  <pre>
+    <style data-selector=".input-group-btn">Use div element to wrap the dropdown</style>
+  </pre>
+  <pre data-title="Dropdown Class">
+    <style data-selector=".input-group-btn > .btn">About the dropdown style, please refer to dropdowns component</style>
+  </pre>
+  <pre data-title=":focus :active">
+    <style data-selector=".input-group-btn > .btn:focus"></style>
+  </pre>
+  <pre data-title=":first">
+    <style data-selector=".input-group-btn:first-child > .dropdown-toggle"></style>
+  </pre>
+  <pre data-title="Dropdown Caret">
+    <style data-selector=".input-group-btn .dropdown-toggle .caret">Put the caret icon behind the text</style>
+  </pre>
+</section>
+
+<section class="search-example">
+  <p>Use drop-down menus to limit your search in the selected category.</p>
+  <div>
+  	<div class="input-group">
+  	  <div class="input-group-btn">
+        <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+          	Host name<span class="caret"></span>
+        </button>
+      	<ul class="dropdown-menu">
+          <li><a href="javascript:;">Host name</a></li>
+          <li><a href="javascript:;">IP address</a></li>
+          <li><a href="javascript:;">Asset tag</a></li>
+      	</ul>
+  	  </div>
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-search"></span></button>
+      </span>
+    </div><!-- /input-group -->
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+          	Host name<span class="caret"></span>
+        </button>
+      	<ul class="dropdown-menu">
+          <li><a href="javascript:;">Host name</a></li>
+          <li><a href="javascript:;">IP address</a></li>
+          <li><a href="javascript:;">Asset tag</a></li>
+      	</ul>
+  	  </div>
+      <input type="text" class="form-control input-focus" value="DDEI">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-search"></span></button>
+      </span>
+    </div><!-- /input-group -->
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+          	Host name<span class="caret"></span>
+        </button>
+      	<ul class="dropdown-menu">
+          <li><a href="javascript:;">Host name</a></li>
+          <li><a href="javascript:;">IP address</a></li>
+          <li><a href="javascript:;">Asset tag</a></li>
+      	</ul>
+  	  </div>
+    	<div class="input-icon-group">
+        <input type="text" class="form-control" value="DDEI">
+        <span class="icon icon-cancel" data-clear-field="clearField"></span>
+      </div>
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-search"></span></button>
+      </span>
+    </div><!-- /input-group -->
+  </div>
+</section>

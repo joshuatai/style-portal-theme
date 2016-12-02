@@ -1,0 +1,17 @@
+{
+  "id": "e26b19c3-35fa-4b1e-ac7b-8e2d55311ab9",
+  "name": "Label Addon",
+  "location": "form-input-groups/label-add-on.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

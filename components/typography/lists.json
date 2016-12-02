@@ -1,0 +1,17 @@
+{
+  "id": "fd6ac4ae-b42a-47c0-9e18-7d4788c0a3f1",
+  "name": "Lists",
+  "location": "typography/lists.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-8"
+  }
+}

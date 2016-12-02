@@ -1,0 +1,17 @@
+{
+  "id": "a3246c06-0d15-41f0-a52e-4683be4ff47f",
+  "name": "Input Masks",
+  "location": "form-advanced/input-masks.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

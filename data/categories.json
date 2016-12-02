@@ -1,0 +1,81 @@
+[
+  {
+    "id": "0ebb6bc8-2720-47bc-a53c-9c712efd844b",
+    "name": "Getting Started",
+    "icon": "home",
+    "segments": [],
+    "components": []
+  },
+  {
+    "id": "67ec27d1-4f66-42b4-bb99-2dbb57f53a1e",
+    "name": "Style",
+    "icon": "type",
+    "segments": [],
+    "components": [
+      "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",
+      "60236c76-f8ab-4ad9-87db-2017b51957e2",
+      "aca6f1ac-609a-431c-8fca-739b6c060299",
+      "1811bd76-57b6-4fb9-930f-b6899313fa41"
+    ]
+  },
+  {
+    "id": "a2721936-4be9-4abf-9a74-cd64f40d9053",
+    "name": "Components",
+    "icon": "components",
+    "segments": [],
+    "components": [
+      "97ad8624-f277-4734-93cb-3940ec280510",
+      "e5bd7778-d707-420b-ac64-4a55da161b83",
+      "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
+      "37a6f43e-9194-4b29-94ad-e54bbc3f1b38",
+      "4cd601bb-d7a7-4b4a-8d4d-d087a630929a",
+      "348487b9-82cc-4c06-98e4-ede8ac73a42b",
+      "a2fa8b5e-6dd7-4570-9352-eea232f1d5a0",
+      "168263ea-0f3f-4782-8a37-f18334007680",
+      "003ae527-8e9e-41fb-a275-ae2babcdf49e",
+      "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
+      "31ac4e6c-120e-46dd-9c31-285e04543ddd",
+      "93c477ed-5ac1-4d47-95ca-1ac03d4b5faa",
+      "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
+      "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f",
+      "654e09d7-1bc4-42e6-816e-791c52f4308d"
+    ]
+  },
+  {
+    "id": "da0b989b-0a02-4eab-ae13-3b22b212586a",
+    "name": "Forms",
+    "icon": "form",
+    "segments": [],
+    "components": [
+      "206355af-1c26-49d7-b878-d3d6f094990f",
+      "65ce6af3-87b9-45ed-b1e7-56f1b1ad3745",
+      "8de08a62-4895-4549-a71b-adb5d2008f53",
+      "b661774f-cb42-4ca4-9637-7da9bc5fb090",
+      "13c93b6d-c0f4-4983-a2de-27a0f910caa8",
+      "f1cdc7cd-5ee2-436a-b7ae-60188c813881",
+      "4ec8071d-3dc0-4c63-90d7-9b41cb87a423",
+      "0448aa99-2fd0-4218-b960-4037f18e8bcb",
+      "06f6ed7b-95c5-449d-a3c7-cd56ff037d66",
+      "73243502-1317-451b-b3c9-e75f7e5fab81"
+    ]
+  },
+  {
+    "id": "c2503f0e-8e19-4d2d-b79f-eca53e4d401d",
+    "name": "Charts",
+    "icon": "line-chart",
+    "segments": [],
+    "components": [
+      "c6f1ea57-cdd6-4190-bfd9-4bcc0673b1df",
+      "ccf72043-8aee-4dfd-b976-888dbb12ef7b",
+      "15c240c6-b25c-4bb6-8981-65c19c89711b",
+      "64d00b7c-ae9b-4bcf-83f1-c8e58328ce81"
+    ]
+  },
+  {
+    "id": "c1beeb74-7df3-4341-9490-2cb80371de2c",
+    "name": "Templates",
+    "icon": "templates",
+    "segments": [],
+    "components": []
+  }
+]

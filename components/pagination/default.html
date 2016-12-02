@@ -1,0 +1,94 @@
+<section class="css-reference">
+  <h5>Pagination Class</h5>
+  <p>To paginate, use a pagination class on a <code data-tag="ul"></code> element. For example, <code>.pagination</code> is used as a Bootstrap pagination class.</p>
+  <pre>
+    <style data-selector=".pagination"></style>
+  </pre>
+
+  <h5>Pagination Items</h5>
+  <p>Put <code data-tag="li"></code> under the <code data-tag="ul"></code> element.</p>
+  <pre data-title="li">
+    <style data-selector=".pagination > li">Remove list-style and block-level defaults</style>
+  </pre>
+
+  <h5>Pagination text</h5>
+  <p>Use <code data-tag="a"></code> for pagination text under a <code data-tag="li"></code> element.</p>
+  <pre data-title="a">
+    <style data-selector=".pagination > li > a"></style>
+  </pre>
+  <pre data-title="li:first">
+    <style data-selector=".pagination > li:first-child > a"></style>
+  </pre>
+  <pre data-title="li:last">
+    <style data-selector=".pagination > li:last-child > a"></style>
+  </pre>
+
+  <h5>Pagination Items state</h5>
+  <p>Use the activated state to indicate the current selected page. For example, <code>.active</code> is used in Bootstrap for this purpose. Use the disabled state to indicate that the item is inaccessible. For example, <code>.disabled</code> is used in Bootstrap.</p>
+  <pre data-title="Active state">
+    <style data-selector=".pagination > .active > a">For current page</style>
+  </pre>
+  <pre data-title="Disabled state">
+    <style data-selector=".pagination > .disabled > a"></style>
+  </pre>
+  <pre data-title=":hover , :focus">
+    <style data-selector=".pagination > li > a:hover"></style>
+  </pre>
+  <pre data-title=":active">
+    <style data-selector=".pagination > li > a:active">For active behavior</style>
+  </pre>
+
+  <h5>Icons as Pagination Items</h5>
+  <pre data-title="For pagination icon">
+    <style data-selector="span.fa"></style>
+  </pre>
+</section>
+
+<section class="pagination-example">
+  <div class="lists-unordered">
+		<ul>
+			<li>Separate your content to different pages for better system performance when it is displayed.</li>
+			<li>Always put page numbers at the bottom of the page.</li>
+			<li>Provide navigations for previous or next pages.</li>
+		</ul>
+	</div>
+	<p>	
+		<ul class="pagination">
+			<li class="disabled">
+				<a href="javascript:;" aria-label="Previous">
+					<span class="fa fa-angle-left" aria-hidden="true"></span>
+				</a>
+			</li>
+			<li class="active"><a href="javascript:;">1</a></li>
+			<li><a href="javascript:;">2</a></li>
+			<li><a href="javascript:;">3</a></li>
+			<li><a href="javascript:;">4</a></li>
+			<li><a href="javascript:;">5</a></li>
+			<li>
+				<a href="javascript:;" aria-label="Next">
+					<span class="fa fa-angle-right" aria-hidden="true"></span>
+				</a>
+			</li>
+		</ul>
+	</p>
+	<p>	
+		<ul class="pagination">
+			<li>
+				<a href="javascript:;" aria-label="Previous">
+					<i class="fa fa-angle-left" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li><a href="javascript:;">8</a></li>
+			<li><a href="javascript:;">9</a></li>
+			<li><a href="javascript:;">10</a></li>
+			<li><a href="javascript:;">11</a></li>
+			<li class="active"><a href="javascript:;">12</a></li>
+			<li><a href="javascript:;">...</a></li>
+			<li>
+				<a href="javascript:;" aria-label="Next">
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+	</p>
+</section>

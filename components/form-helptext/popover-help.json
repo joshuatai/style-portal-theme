@@ -1,0 +1,17 @@
+{
+  "id": "54c56eca-e598-4bd6-b2a0-cb1cd104b1bd",
+  "name": "Popover Help",
+  "location": "form-helptext/popover-help.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

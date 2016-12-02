@@ -1,0 +1,69 @@
+<section class="css-reference">
+  <h5>Form Controller Class</h5>
+  <p>All textual elements, including <code data-tag="input"></code>, <code data-tag="textarea"></code>, and <code data-tag="select"></code> should contain a form control class. E.g. The form controller class in Bootstrap is <code>.form-control</code></p>
+  <pre>
+    <style data-selector=".form-control"></style>
+  </pre>
+
+  <h5>Inputs with Form Control</h5>
+  <pre data-title="Placeholder">
+    <style data-selector=".form-control::-webkit-input-placeholder"></style>
+  </pre>
+  <pre data-title=":invalid or input error class">
+    <style data-selector=".form-invalid"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector="input[type="text"]:focus"></style>
+    <style data-selector=".form-control[disabled]"></style>
+  </pre>
+</section>
+
+<section class="form-elements-example">
+  <p>An input field is a field for users to enter a value or a short line of text. Use sentence case for field labels.</p>
+
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label" for="normalInput">Normal:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="normalInput">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="placeholderInput">Placeholder:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="placeholderInput" placeholder="placeholder">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="disabledInput">Disabled:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="disabledInput" disabled>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="focusInput">Focused:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control input-focus" id="focusInput" value="This is focused...">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label label-required" for="requiredInput">Required:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="requiredInput">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="errorInput">Invalid:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control form-invalid" id="errorInput" value="trendmicro@trend" aria-describedby="errorBlock">
+	    	<span id="errorBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Invalid email address</span>
+		</div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label">Static text:</label>
+	    <div class="control-wrapper">
+	    	<p class="form-control-static">email@example.com</p>
+	    </div>
+	  </div>
+	</form>
+</section>

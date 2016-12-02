@@ -1,0 +1,17 @@
+{
+  "id": "7258a865-d31f-430c-8b78-a16fa083cbc1",
+  "name": "Modal dialogs",
+  "location": "modals/modal.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-12"
+  }
+}

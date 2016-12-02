@@ -1,0 +1,47 @@
+<section class="css-reference">
+  <h5>Infotips Class</h5>
+  <p>Create infotips by extending tooltip text classes.</p>
+  <pre>
+    <style data-selector=".tooltip-inner-light"></style>
+  </pre>
+
+  <h5>Info Icon Class</h5>
+  <pre>
+    <style data-selector=".icon"></style>
+    <style data-selector=".icon-info-sign"></style>
+    <style data-selector="form .icon-info-sign"></style>
+    <style data-selector="form .icon-info-sign:hover">:hover</style>
+  </pre>
+</section>
+
+<section>
+  <p>An infotip is a pop-up box that contains descriptions for a UI element that is being hovered over.</p>
+
+	<ul class="description">
+		<li>Infotips are used to provide full forms of abbreviated or truncated terms, or information about unfamiliar objects.</li>
+		<li>The content can be a few lines long.</li>
+		<li>Infotips do appear in boxes without arrows.</li>
+	</ul>
+
+	<div class="tooltip-example">
+		<div class="tooltip right tooltip-example" role="tooltip">
+			<div class="tooltip-inner tooltip-inner-light">DeepDiscoveryInspector_381_lx_en_hfb1234.tar</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p>You may use an icon to display the infotip.</p>
+
+	<div style="padding: 10px 0 20px;">
+		<form><span class="icon icon-info-sign"></span></form>
+	</div>
+
+	<div class="example">
+		<div class="tooltip-light-example-container">
+			<form>
+				<span class="icon icon-info-sign" data-toggle="tooltip" data-placement="right" data-template="&lt;div class=&apos;tooltip right&apos; role=&apos;tooltip&apos;&gt;&lt;div class=&apos;tooltip-inner tooltip-inner-light&apos;&gt;&lt;/div&gt;&lt;/div&gt;" title="Users with this role have read-only access to all management console features."></span>
+			</form>
+		</div>
+	</div>
+</section>

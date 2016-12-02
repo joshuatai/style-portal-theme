@@ -1,0 +1,17 @@
+{
+  "id": "171a4d94-9890-4e85-81d5-124d98814bdb",
+  "name": "Inline Form",
+  "location": "form-layout/inline-form.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

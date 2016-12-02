@@ -1,0 +1,17 @@
+{
+  "id": "6fe1c2de-7b54-4ed4-94f1-6895f573b0dc",
+  "name": "Combo Box",
+  "location": "form-advanced/comboboxes.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

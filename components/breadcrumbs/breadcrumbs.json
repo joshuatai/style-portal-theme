@@ -1,0 +1,17 @@
+{
+  "id": "9c352cdc-f375-4f51-8d61-9cada00adc1e",
+  "name": "Breadcrumbs",
+  "location": "breadcrumbs/breadcrumbs.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-8"
+  }
+}

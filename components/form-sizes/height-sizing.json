@@ -1,0 +1,17 @@
+{
+  "id": "09f2aeb2-4447-4f9c-b36d-d517b1b6750f",
+  "name": "Height",
+  "location": "form-sizes/height-sizing.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

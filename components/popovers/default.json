@@ -1,0 +1,17 @@
+{
+  "id": "5ecc5ef6-4d48-4167-8792-aa0daf13b2c3",
+  "name": "Popovers",
+  "location": "popovers/default.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-14"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "da4c3a37-4845-4784-aa60-e5bf5491316b",
+  "name": "Field Labels",
+  "location": "form-layout/labels.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

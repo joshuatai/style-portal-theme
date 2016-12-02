@@ -1,0 +1,53 @@
+<section class="css-reference">
+  <h5>Tag Container</h5>
+  <pre>
+    <style data-selector=".tag-editor li"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".tag-editor li:hover .tag-editor-tag"></style>
+  </pre>
+
+  <h5>Tag Container with Text</h5>
+  <pre data-title="Text container">
+    <style data-selector=".tag-editor .tag-editor-tag"></style>
+  </pre>
+
+  <h5>Tag Container with Icons</h5>
+  <pre data-title="Icon container">
+    <style data-selector=".tag-editor .tag-editor-delete"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> elements.</p>
+  <pre data-title="For image icon(svg or png):">
+    <style data-selector=".input-icon-group .icon"></style>
+  </pre>
+  <pre data-title="Cancel Image Icon">
+    <style data-selector=".tag-editor .tag-editor-delete .icon-cancel"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".tag-editor .tag-editor-delete .icon-cancel:hover"></style>
+  </pre>
+</section>
+
+<section class="form-advanced-example">
+  <p>Tags are often used to represent a category or to label an object. Tags should be removable.</p>
+	<h5>Basic</h5>
+	<ul class="tag-editor basic">
+		<li>
+			<div class="tag-editor-tag">1.10.2.11</div>
+			<div class="tag-editor-delete"><span class="icon icon-cancel"></span></div>
+		</li>
+		<li>
+			<div class="tag-editor-tag">Known threats</div>
+			<div class="tag-editor-delete"><span class="icon icon-cancel"></span></div>
+		</li>
+	</ul>
+	<h5>Truncated</h5>
+	<ul class="tag-editor truncated">
+		<li>
+			<div class="tag-editor-tag">Loreamet_psums12121@gmail.com</div>
+			<div class="tag-editor-delete"><span class="icon icon-cancel"></span></div>
+		</li>
+	</ul>
+</section>

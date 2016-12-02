@@ -1,0 +1,90 @@
+<section class="css-reference">
+  <h5>Switch Container</h5>
+  <p>Wrap an <code>input</code> and a <code>div</code> within an element, such as <code>label</code></p>
+  <pre>
+    <style data-selector=".switch"></style>
+    <style data-selector=".switch-sm">Small Class</style>
+  </pre>
+
+  <h5>Checkbox Class</h5>
+  <p>Use the checkbox class on an <code>input</code> element, and the type attribute is checkbox.</p>
+  <pre>
+    <style data-selector=".switch input">In order to customized toggle switch, hide the input checkbox type</style>
+  </pre>
+
+  <h5>Toggle Class</h5>
+  <p>Use the toggle class on a <code>div</code> element.</p>
+  <pre>
+    <style data-selector=".toggle">Default toggle switch state is OFF</style>
+    <style data-selector=".toggle.round"></style>
+    <style data-selector=".toggle-sm.round">Small Class</style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".toggle:hover"></style>
+  </pre>
+
+  <h5>Toggle Button Class</h5>
+  <p>Add the pseudo-element, for example, <code data-html=".toggle:before"></code> on the toggle class.</p>
+  <pre>
+    <style data-selector=".toggle:before"></style>
+    <style data-selector=".toggle-sm:before">Small Class</style>
+  </pre>
+
+  <h5>Toggle Switch State</h5>
+  <pre data-title=":checked">
+    <style data-selector="input:checked + .toggle">Change toggle class background color when toggle switch turn on</style>
+    <style data-selector="input:checked + .toggle:before">In order to move the toggle button position, add the style on toggle class pseudo-element :before</style>
+    <style data-selector="input:checked + .toggle-sm:before">Small Class</style>
+    <style data-selector=".switch .disabled"></style>
+  </pre>
+</section>
+
+<section class="form-advanced-example">
+  <p>A toggle switch allows the user to indicate a state of on vs. off or yes vs. no. </p>
+	<div class="toggle-example">
+		<h5>Defalut</h5>
+		<div class="switch-wrapper">
+			<label class="switch">
+			  <input type="checkbox" checked>
+			  <div class="toggle round"></div>
+			</label><span>ON</span>
+			<label class="switch">
+			  <input type="checkbox" checked disabled>
+			  <div class="toggle round disabled"></div>
+			</label><span>Disabled on</span>
+		</div>
+		<div class="switch-wrapper">
+			<label class="switch">
+			  <input type="checkbox">
+			  <div class="toggle round"></div>
+			</label><span>OFF</span>
+			<label class="switch">
+			  <input type="checkbox" disabled>
+			  <div class="toggle round disabled"></div>
+			</label><span>Disabled off</span>
+		</div>
+	</div>
+	<div class="toggle-example">
+		<h5>Small</h5>
+		<div class="switch-wrapper">
+			<label class="switch switch-sm">
+			  <input type="checkbox" checked>
+			  <div class="toggle toggle-sm round"></div>
+			</label><span>ON</span>
+			<label class="switch switch-sm">
+			  <input type="checkbox" checked disabled>
+			  <div class="toggle toggle-sm round disabled"></div>
+			</label><span>Disabled on</span>
+		</div>
+		<div class="switch-wrapper">
+			<label class="switch switch-sm">
+			  <input type="checkbox">
+			  <div class="toggle toggle-sm round"></div>
+			</label><span>OFF</span>
+			<label class="switch switch-sm">
+			  <input type="checkbox" disabled>
+			  <div class="toggle toggle-sm round disabled"></div>
+			</label><span>Disabled off</span>
+		</div>
+	</div>
+</section>

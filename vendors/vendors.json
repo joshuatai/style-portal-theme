@@ -1,0 +1,16 @@
+{
+  "jquery-2.2.4": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
+  "bootstrap-3.3.7": [
+    "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
+  ],
+  "bootswatch-lumen-3.3.7": "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/lumen/bootstrap.css",
+  "mcustom-scrollbar-3.1.5": "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js",
+  "tinycolor-1.4.1": "https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.js",
+  "prettify-298": [
+    "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.js"
+  ],
+  "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js"
+}

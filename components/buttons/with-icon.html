@@ -1,0 +1,45 @@
+<section class="css-reference">
+  <h5>Icon Class</h5>
+  <p>Icon class should only be used on elements that do not contain either text or child elements. We recommend wrapping <code data-tag="span"></code> or <code data-tag="li"></code> into a <code data-tag="button"></code> element. For example, <code data-html="<button><span class="icon-class"></span>Text</button>"></code></p>
+  <pre data-title="For font">
+    <style data-selector=".btn .fa"></style>
+    <style data-selector=".btn-lg.btn .fa">Large, small, or extra small size button</style>
+  </pre>
+  <pre data-title="For image icon(svg or png):">
+    <style data-selector=".btn .icon">Default size button</style>
+    <style data-selector=".btn-lg.btn .icon">Large size button</style>
+    <style data-selector=".btn-sm.btn .icon">Small or extra small size button</style>
+  </pre>
+
+  <h5>Toolbar buttons</h5>
+  <p>Use the flat style button for toolbar buttons.</p>
+
+  <h5>Buttons with only an icon</h5>
+  <pre data-title="Button class:">
+    <style data-selector=".btn.btn-icon-only">Remove button minimized width and left/right padding, then set a fixed width.</style>
+  </pre>
+  <pre data-title="icon class:">
+    <style data-selector=".btn-icon-only.btn .fa">Remove margin-right property.</style>
+  </pre>
+</section>
+
+<section>  
+	<h5>Static (default)</h5>
+	<button type="button" class="btn btn-default"><span class="fa fa-download"></span>Download</button>
+	<button type="button" class="btn btn-primary"><span class="fa fa-plus"></span>Add Account</button>
+
+	<h5>Progressing</h5>
+	<button type="button" class="btn btn-default" disabled="disabled"><span class="loader loader-small"></span>Uploading</button>
+	<button type="button" class="btn btn-primary" disabled="disabled"><span class="loader loader-small"></span>Uploading</button>
+
+	<h5>Static (flat)</h5>
+	<button type="button" class="btn btn-default btn-border"><span class="fa fa-wrench"></span>Settings</button>
+	<button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Remove</button>
+	<button type="button" class="btn btn-default btn-border"><span class="fa fa-repeat"></span>Refresh</button>
+
+	<h5>Icons-only</h5>
+	<button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-comment"></span></button>
+	<button type="button" class="btn btn-primary btn-icon-only"><span class="fa fa-plus"></span></button>
+	<button type="button" class="btn btn-danger btn-icon-only"><span class="fa fa-search"></span></button>
+	<button type="button" class="btn btn-default btn-border btn-icon-only"><span class="fa fa-cog"></span></button>	
+</section>

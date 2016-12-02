@@ -1,0 +1,40 @@
+//
+// Glyphicons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url("@{icon-font-path}@{icon-font-name}.eot");
+  src: url("@{icon-font-path}@{icon-font-name}.eot?#iefix") format("embedded-opentype"),
+       url("@{icon-font-path}@{icon-font-name}.woff2") format("woff2"),
+       url("@{icon-font-path}@{icon-font-name}.woff") format("woff"),
+       url("@{icon-font-path}@{icon-font-name}.ttf") format("truetype"),
+       url("@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}") format("svg");
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

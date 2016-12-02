@@ -1,0 +1,72 @@
+<section class="css-reference">
+  <h5>Tooltip Class</h5>
+  <p>Use <code data-tag="div"></code> or <code data-tag="span"></code> to create a tooltip class. For example, <code>.tooltip</code> is used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".tooltip"></style>
+  </pre>
+  <pre data-title="Position the tooltip">
+    <style data-selector=".tooltip.top">top</style>
+    <style data-selector=".tooltip.bottom">bottom</style>
+    <style data-selector=".tooltip.left">left</style>
+    <style data-selector=".tooltip.right">right</style>
+  </pre>
+
+  <h5>Tooltip Arrow Class</h5>
+  <p>Use a tooltip arrow class to define the arrow direction. For example, <code>.tooltip-arrow</code> is used in Bootstrap.</p>
+  <pre data-title="Tooltip arrow">
+    <style data-selector=".tooltip-arrow"></style>
+  </pre>
+  <pre data-title="Four directions">
+    <style data-selector=".tooltip.top .tooltip-arrow">top</style>
+    <style data-selector=".tooltip.bottom .tooltip-arrow">bottom</style>
+    <style data-selector=".tooltip.left .tooltip-arrow">left</style>
+    <style data-selector=".tooltip.right .tooltip-arrow">right</style>
+  </pre>
+
+  <h5>Tooltip Text Class</h5>
+  <p>Wrap tooltip text class with a <code data-tag="div"></code> or <code data-tag="span"></code> element within the tooltip class. For example, <code>.tooltip-inner</code> is used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".tooltip-inner"></style>
+  </pre>
+</section>
+
+<section>
+  <p>A tooltip is a box of information that labels a UI element that is hovered over.</p>
+
+	<ul class="description">
+		<li>Tooltips are used for UI elements such as icons and buttons.</li>
+		<li>Try to keep a tooltip within a few words.</li>
+		<li>A tooltip should appear in a box with an arrow pointing to the UI element that is being referred to.</li>
+		<li>Display tooltips in one of the four directions in relation to the indicated UI control: top, bottom, left, or right.</li>
+	</ul>
+
+	<div class="tooltip-example">
+		<div class="tooltip top tooltip-example" role="tooltip">
+			<div class="tooltip-arrow"></div>
+			<div class="tooltip-inner">Top Tooltip</div>
+		</div>
+		
+		<div class="tooltip bottom tooltip-example" role="tooltip">
+			<div class="tooltip-arrow"></div>
+			<div class="tooltip-inner">Bottom Tooltip</div>
+		</div>
+
+		<div class="tooltip left tooltip-example" role="tooltip">
+			<div class="tooltip-arrow"></div>
+			<div class="tooltip-inner">Left Tooltip</div>
+		</div>
+
+		<div class="tooltip right tooltip-example" role="tooltip">
+			<div class="tooltip-arrow"></div>
+			<div class="tooltip-inner">Right Tooltip</div>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="tooltip-standard-example-container">
+			<button type="button" class="btn btn-border btn-icon-only" data-toggle="tooltip" data-placement="top" title="Settings">
+				<span class="fa fa-cog"></span>
+			</button>
+		</div>
+	</div>
+</section>

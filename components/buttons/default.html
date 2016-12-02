@@ -1,0 +1,61 @@
+<section class="css-reference">
+  <h5>Button Tag</h5>
+  <p>The button tag is defined based on <code>normalize.css</code>.</p>
+  <pre>
+    <style data-selector="button"></style>
+  </pre>
+
+  <h5>Button Class</h5>
+  <p>This button class can be used for <code data-tag="a"></code>, <code data-tag="button"></code>, and <code data-tag="input"></code> elements.  For example, a Bootstrap button uses <code>.btn</code> as its button class.</p>
+  <pre>
+    <style data-selector=".btn"></style>
+  </pre>
+  <pre data-title="More than one buttons in a row:">
+    <style data-selector=".btn + .btn">Such as Bootstrap buttons in a row: .btn + .btn</style>
+  </pre>
+
+  <h5>Default Class</h5>
+  <p>Define the general style by extending the button class. For example, a defult style button in Bootstrap is <code>.btn-default</code>.</p>
+  <pre>
+    <style data-selector=".btn-default"></style>
+  </pre>
+
+  <h5>Primary Class</h5>
+  <p>Define the primary style by extending the button class. For example, a primary style button in Bootstrap is <code>.btn-primary</code>.</p>
+  <pre>
+    <style data-selector=".btn-primary"></style>
+  </pre>
+
+  <h5>Emphasis Class</h5>
+  <p>Define the emphasis style by extending the button class. For example, an emphasis style button in Bootstrap is <code>.btn-danger</code>.</p>
+  <pre>
+    <style data-selector=".btn-danger"></style>
+  </pre>
+
+  <h5>Flat Class</h5>
+  <p>Define the flat style by extending the button class.</p>
+  <pre>
+    <style data-selector=".btn-border"></style>
+  </pre>
+
+  <h5>Linking Class</h5>
+  <p>Define the linking style by extending the button class. For example, a linking button in Bootstrap is <code>.btn-link</code>.</p>
+  <pre>
+    <style data-selector=".btn-link"></style>
+  </pre>
+</section>
+
+<section>
+  <ul class="description">
+		<li><strong>Default:</strong> Use the default style if the button does not belong to any of the category below.</li>
+		<li><strong>Primary:</strong> Except for Log on, Log out, and linking buttons, use the primary style for the most important button on a UI page. For example, save and ok buttons.</li>
+		<li><strong>Emphasis:</strong> Use the emphasis style for logon buttons.</li>
+		<li><strong>Flat:</strong> Use the flat style for buttons that do not generally need additional attention, such as toolbar buttons or buttons in tables.</li>
+		<li><strong>Linking:</strong> Use the linking style for hyperlinks or for action buttons when you want to simply the interface.</li>
+	</ul>
+	<button class="btn btn-default">Default</button>	
+	<button class="btn btn-primary">Primary</button>
+	<button class="btn btn-danger">Emphasis</button>	
+	<button class="btn btn-border">Flat</button>	
+	<button class="btn btn-link">Linking</button>
+</section>

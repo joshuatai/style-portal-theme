@@ -1,0 +1,17 @@
+{
+  "id": "a33044fb-3210-43dc-9ac9-c896eadf3793",
+  "name": "Button Groups",
+  "location": "buttons/groups.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4"
+  }
+}

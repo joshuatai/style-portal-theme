@@ -1,0 +1,17 @@
+{
+  "id": "e1f3dcf0-359f-4207-9efd-af567a12ed5e",
+  "name": "Basic Search Box",
+  "location": "search/basic-search.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

@@ -1,0 +1,76 @@
+<section class="css-reference">
+  <h5>Toast Notification Class</h5>
+  <p>Extend the notification class for toast notifications.</p>
+  <pre>
+    <style data-selector=".toast-alert">The width of toast alert should be defined by project.</style>
+  </pre>
+
+  <h5>Modal Notifications</h5>
+  <p>Subordinate modal notifications to navigations or modals.</p>
+  <pre>
+    <style data-selector=".toast-alert-top">An alert in both navigation and modal needs to leave space.</style>
+  </pre>
+</section>
+
+<section class="alert-example">
+  <p>Toast notifications are transient messages used to provide toast for user-initiated actions. A toast notification:</p>
+	<div class="lists-unordered">
+		<ul>
+			<li>should appear at the top center of product consoles or above the referred UI location.</li>
+			<li>is often triggerd by user actions.</li>			
+			<li>should be closable.</li>
+			<li>can automatically close itself after being displayed for 5 seconds.</li>
+			<li>should never be overlapped by other toast notifications. An older notification needs to be closed before the next one is displayed.</li>
+		</ul>
+	</div>
+	<p><strong>Types:</strong></p>
+	<div class="lists-unordered">
+		<ul>
+			<li><strong>Error:</strong> This type of toast notifications are used to indicate incorrect or unsuccessful user actions.</li>
+			<li><strong>Warning:</strong> This type of toast notifications are used to indicate unusual user actions.</li>
+			<li><strong>Success:</strong> This type of toast notifications are used to indicate successful user actions.</li>
+			<li><strong>Informational:</strong> they are used to provide additional information on user-initiated actions.</li>
+		</ul>
+	</div>
+	<p>	
+		<div class="alert toast-alert alert-danger" role="alert">
+		 	<span class="icon icon-danger"></span>Please fix the 3 errors.
+			<a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		</div>
+		<div class="alert toast-alert alert-warning" role="alert">
+			<span class="icon icon-warn"></span>You missed some required form.
+			<a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		</div>
+		<div class="alert toast-alert alert-success" role="alert">
+			<span class="icon icon-success"></span>Files uploaded successfully.
+			<a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		</div>
+		<div class="alert toast-alert alert-info" role="alert">
+			<span class="icon icon-info"></span>Here are details for your quey.
+			<a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		</div>	
+	</p>
+	<div class="example">
+		<div class="toast-alert-example">
+			<div class="toast-alert-banner">
+				<img src="./dist/img/alert_img2_left.png"><img src="./dist/img/alert_img2_right.png">
+			</div>
+			<div class="alert toast-alert alert-danger" role="alert">
+				<span class="icon icon-danger"></span>Please fix the 3 errors.
+				<a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+			</div>
+		</div>
+	</div>
+	<div class="example">
+		<div class="toast-alert-example">
+			<h5>Modal Notification</h5>
+			<div class="modal-alert">
+				<img src="./dist/img/alert_ex3.png">
+				<div class="alert toast-alert alert-success" role="alert">
+					<span class="icon icon-success"></span>Files uploaded successfully.
+					<a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

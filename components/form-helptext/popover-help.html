@@ -1,0 +1,30 @@
+<section class="css-reference">
+  <p>Popover help should be a bottom-right popover style. Please refer to Popovers component.</p>
+
+  <h5>Popover Help Under Input Fields</h5>
+  <pre>
+    <style data-selector=".form-group .popover-example.bottom-right"></style>
+  </pre>
+</section>
+
+<section class="form-helptext-example">
+  <p>A form can be difficult to read if it contains too much text. Use popovers that only appear when the corresponding fields are focused to reduce the amount of text.</p>
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label" for="popoverhelpInput">Text label:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control input-focus" id="popoverhelpInput">
+	    	<div class="popover bottom-right popover-example">
+				<div class="arrow"></div>
+				<h3 class="popover-title">At least 8 characters consisting of :</h3>
+				<div class="popover-content lists-unordered">
+					<ul>
+						<li>Alphanumeric characters (A-Z, a-z, 0-9) with both upper and lower case letters and number characters.</li>
+						<li>At least one special character, e.g.  ` ~ ! @ # $ % ^ &amp; * ( ) - _ + = [ ]{ } \ |&lt; &gt; , . / ? : ; &apos; &quot;</li>
+					</ul>
+				</div> 
+			</div>
+		</div>
+	  </div>
+	</form>
+</section>

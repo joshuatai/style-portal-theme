@@ -1,0 +1,37 @@
+<section class="css-reference">
+  <h5>Form Group Class</h5>
+  <p>Use a block-level element to wrap form control containers and labels. For example, <code>.form-group</code> is used as a form group class in Bootstrap.</p>
+  <pre>
+    <style data-selector=".form-group"></style>
+  </pre>
+
+  <h5>Label Class for Stacked Forms</h5>
+  <pre>
+    <style data-selector="label"></style>
+  </pre>
+</section>
+
+<section class="form-layout-example">
+  <p>In a stacked form, labels are placed above input fields, and are aligned to the left. Stacked forms are the easiest to localize, but they will require more vertical space.</p>
+	<form>
+	  <div class="form-group">
+	    <label class="control-label" for="normalInput">Text input:</label>
+	    <input type="text" class="form-control" id="normalInput">
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="placeholderInput">Text label:</label>
+	    <input type="text" class="form-control" id="placeholderInput" placeholder="Placeholder">
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label">Description:</label>
+	    <textarea class="form-control textarea-resizable"></textarea>
+	  </div>
+	  <div class="form-group">
+    	<div class="checkbox">
+		  <input type="checkbox" name="optionscheckboxs" id="stackedcheckboxs" class="input-checkbox">
+		  <label for="stackedcheckboxs">I agree to the Terms &amp; Service</label>
+		</div>
+	  </div>
+	  <button class="btn btn-primary">Submit</button>
+	</form>
+</section>

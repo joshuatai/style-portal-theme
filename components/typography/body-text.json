@@ -1,0 +1,17 @@
+{
+  "id": "086c3800-888b-4ee6-a13c-5e67846e21e7",
+  "name": "Body Text",
+  "location": "typography/body-text.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4"
+  }
+}

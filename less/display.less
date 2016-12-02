@@ -1,0 +1,76 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Utility
+@import "utilities/utilities";
+
+// Display
+@import "display/nav-icons";
+@import "display/grid-rows";
+@import "display/segment";
+
+body {
+  background: #eee;
+}
+
+figure {
+  margin: 1em 2em;
+}
+
+pre {
+  background-color: #fcfcfc;
+}
+
+/* CSS Reference */
+
+.css-reference {
+  display: none;
+}
+
+.css-reference-title {
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 0;
+  margin-bottom: 8px;
+}
+
+/* prettyprint */
+
+pre.prettyprint {
+  border: 1px solid #eee;
+  padding: 8px 12px;
+}
+
+.com {
+  color: #888;
+  white-space: normal;
+}
+
+/* modal */
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 650px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-dialog {
+    width: 850px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .modal-dialog {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .modal-dialog {
+    width: 95%;
+  }
+}
+

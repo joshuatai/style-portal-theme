@@ -1,0 +1,77 @@
+<section class="css-reference">
+  <h5>Group Class</h5>
+  <p>Create a class to define a group for buttons. Use an inline-block level element to wrap a series of buttons with button class. For example, the group class in Bootstrap is <code>.btn-group</code>.</p>
+  <pre>
+    <style data-selector=".btn-group"></style>
+  </pre>
+
+  <h5>Class for A Grouped Button</h5>
+  <p>This class should be under the Group Class. In Bootstrap, the archietecture is <code>.btn-group > .btn</code>.</p>
+  <pre>
+    <style data-selector=".btn-group > .btn"></style>
+  </pre>
+  <pre data-title=":hover, , :active">
+    <style data-selector=".btn-group > .btn:hover">Bring the "hover" and "active" button to the front</style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".btn-group > .btn:focus">Bring the "focus" button to the front</style>
+  </pre>
+  <pre data-title=":not(:first">
+    <style data-selector=".btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle)"></style>
+  </pre>
+  <pre data-title=":not(:first">
+    <style data-selector=".btn-group .btn + .btn"></style>
+  </pre>
+  <pre data-title=":first">
+    <style data-selector=".btn-group > .btn:first-child"></style>
+  </pre>
+  <pre data-title=":first">
+    <style data-selector=".btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle)"></style>
+  </pre>
+  <pre data-title=":last">
+    <style data-selector=".btn-group > .btn:last-child:not(:first-child)"></style>
+  </pre>
+</section>
+
+<section>
+  <p>Group related buttons to improve clarity and imply relavance.</p>	
+	<h5>Default button group</h5>
+	<div class="btn-group" data-toggle="buttons" role="group">
+	  <label class="btn btn-default active">
+	    <input type="radio" name="options" id="option1" autocomplete="off" checked> Left
+	  </label>
+	  <label class="btn btn-default">
+	    <input type="radio" name="options" id="option2" autocomplete="off"> Middle
+	  </label>
+	  <label class="btn btn-default">
+	    <input type="radio" name="options" id="option3" autocomplete="off"> Right
+	  </label>
+	</div>		
+	<div class="btn-group"> 
+		<button type="button" class="btn btn-default btn-icon-only" aria-label="Edit"><span class="fa fa-pencil"></span></button>
+		<button type="button" class="btn btn-default btn-icon-only" aria-label="Reply"><span class="fa fa-mail-reply"></span></button>		
+	</div>	
+	<h5>Flat button group</h5>
+	<div class="btn-group" data-toggle="buttons" role="group">
+	  <label class="btn btn-border active">
+	    <input type="radio" name="options" id="option1" autocomplete="off" checked> Left
+	  </label>
+	  <label class="btn btn-border">
+	    <input type="radio" name="options" id="option2" autocomplete="off"> Middle
+	  </label>
+	  <label class="btn btn-border">
+	    <input type="radio" name="options" id="option3" autocomplete="off"> Right
+	  </label>
+	</div>	
+	<div class="btn-group" data-toggle="buttons" role="group">
+	  <label class="btn btn-border btn-icon-only">
+	    <input type="radio" name="options" id="option1" autocomplete="off"><span class="fa fa-pie-chart"></span>
+	  </label>
+	  <label class="btn btn-border btn-icon-only active">
+	    <input type="radio" name="options" id="option2" autocomplete="off" checked><span class="fa fa-line-chart"></span>
+	  </label>
+	  <label class="btn btn-border btn-icon-only">
+	    <input type="radio" name="options" id="option3" autocomplete="off"><span class="fa fa-table"></span>
+	  </label>
+	</div>	
+</section>

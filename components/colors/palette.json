@@ -1,0 +1,15 @@
+{
+  "id": "33c9a987-edff-43ae-8963-1bd3992ea404",
+  "name": "Color Palette",
+  "location": "colors/palette.html",
+  "dependencies": [
+    "tinycolor-1.4.1",
+    "clipboard-1.5.12"
+  ],
+  "actions": [],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-36"
+  }
+}

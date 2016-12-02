@@ -1,0 +1,17 @@
+{
+  "id": "bfe746d2-6607-4bbe-9eb2-b2041c8a858e",
+  "name": "General Pagination",
+  "location": "pagination/default.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "4ed6f4d5-cc34-4e6f-9f3b-64204aaa1eef",
+  "name": "Action",
+  "location": "form-input-groups/action.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-10"
+  }
+}

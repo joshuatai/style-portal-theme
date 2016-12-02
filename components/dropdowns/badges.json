@@ -1,0 +1,17 @@
+{
+  "id": "4fe80c77-a90b-45e7-9645-6663b2ea527c",
+  "name": "Badges",
+  "location": "dropdowns/badges.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

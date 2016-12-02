@@ -1,0 +1,17 @@
+{
+  "id": "53677489-3466-4dcd-b724-a9670cc1ca23",
+  "name": "Banner Notifications",
+  "location": "notifications/banner.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-16"
+  }
+}

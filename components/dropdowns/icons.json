@@ -1,0 +1,17 @@
+{
+  "id": "ab5754fc-9376-4e77-b27d-c480cad65d46",
+  "name": "Icons",
+  "location": "dropdowns/icons.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

@@ -1,0 +1,61 @@
+<section class="css-reference">
+  <h5>Search Box Container with Icons</h5>
+  <p>Wrap the input and the icon with a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".input-icon-group"></style>
+  </pre>
+
+  <h5>Input with Form Controls</h5>
+  <pre>
+    <style data-selector=".input-icon-group > .form-control"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> element.</p>
+  <pre data-title="For font">
+    <style data-selector=".input-icon-label"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".input-icon-group > .form-control:focus + .input-icon-label > i"></style>
+  </pre>
+  <pre data-title="For image icon(svg or png):">
+    <style data-selector=".input-icon-group .loader"></style>
+  </pre>
+  <pre data-title="Cancel Image Icon">
+    <style data-selector=".input-icon-group .icon-cancel"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".input-icon-group .icon-cancel:hover"></style>
+  </pre>
+</section>
+
+<section class="search-example">
+  <p>A search box allows the user to query for data.</p>
+
+	<ul class="description">
+		<li>Consider using a loader if it will some time to process the search results.</li>
+		<li>Whenever appropriate, include a reset button for efficiently cleaning up the search text.</li>
+	</ul>
+  <div>
+  	<div class="input-icon-group">
+      <input id="filter" type="text" class="form-control" placeholder="Case name">
+      <label class="input-icon-label" for="filter">
+        <i class="fa fa-search"></i>
+      </label>
+    </div>
+    <div class="input-icon-group">
+      <input id="filter1" type="text" class="form-control input-focus" value="D">
+      <label class="input-icon-label" for="filter1">
+        <i class="fa fa-search focus"></i>
+      </label>
+      <span class="loader loader-small"></span>
+    </div>
+    <div class="input-icon-group">
+      <input id="filter2" type="text" class="form-control input-focus" value="DDEI">
+      <label class="input-icon-label" for="filter2">
+        <i class="fa fa-search focus"></i>
+      </label>
+      <span class="icon icon-cancel" data-clear-field="clearField"></span>
+    </div>
+  </div>
+</section>

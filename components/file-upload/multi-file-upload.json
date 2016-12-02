@@ -1,0 +1,17 @@
+{
+  "id": "47013de3-7aaa-49e2-b640-7052858cb542",
+  "name": "Multi File Upload",
+  "location": "file-upload/multi-file-upload.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-10"
+  }
+}

@@ -1,0 +1,35 @@
+<section class="css-reference">
+  <h5>Inline Form Class</h5>
+  <p>To form, use a form class on a block-level element which doesn"t have to be a <code data-tag="form"></code>. For example, <code>.form-inline</code> is used as a Bootstrap linline form class.</p>
+
+  <h5>Inline Form Group Class</h5>
+  <p>Use a block-level element to wrap form control and labels. For example, <code>.form-group</code> is used as a form group class in Bootstrap.</p>
+  <pre>
+    <style data-selector=".form-inline .form-group"></style>
+  </pre>
+
+  <h5>Label Class for Inline Forms</h5>
+  <pre>
+    <style data-selector=".form-inline .form-group > label"></style>
+  </pre>
+
+  <h5>Inputs with Form Control</h5>
+  <pre>
+    <style data-selector=".form-inline .form-control"></style>
+  </pre>
+</section>
+
+<section class="form-layout-example">
+  <p>Multiple input fields can be placed on the same line. Use inline forms when you expect short inputs.</p>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label class="control-label" for="nameInput">Name:</label>
+	    <input type="text" class="form-control" id="nameInput">
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="emilInput">Email:</label>
+	    <input type="text" class="form-control" id="emilInput">
+	  </div>
+	  <button class="btn btn-primary">Submit</button>
+	</form>
+</section>

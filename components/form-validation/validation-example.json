@@ -1,0 +1,12 @@
+{
+  "id": "a4f8ef6c-2d59-4431-956c-0a72e242a7d4",
+  "name": "Examples",
+  "location": "form-validation/validation-example.html",
+  "dependencies": [],
+  "actions": [],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-10"
+  }
+}

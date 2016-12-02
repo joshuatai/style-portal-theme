@@ -1,0 +1,17 @@
+{
+  "id": "377a1cfd-6256-4ea0-900e-8325c785f184",
+  "name": "Loaders",
+  "location": "loader/defaults.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-14"
+  }
+}

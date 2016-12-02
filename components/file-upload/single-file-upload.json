@@ -1,0 +1,17 @@
+{
+  "id": "53dc41a5-3f6f-4fbb-8571-d6a71fc01f06",
+  "name": "Single File Upload",
+  "location": "file-upload/single-file-upload.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

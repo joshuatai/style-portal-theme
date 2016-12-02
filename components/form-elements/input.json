@@ -1,0 +1,17 @@
+{
+  "id": "ce091515-dba7-4a28-b255-3e83a21bd2f4",
+  "name": "Input Fields",
+  "location": "form-elements/input.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-8"
+  }
+}

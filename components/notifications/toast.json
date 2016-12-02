@@ -1,0 +1,17 @@
+{
+  "id": "0be96478-bceb-4410-b5e7-afbaa331379c",
+  "name": "Toast Notifications",
+  "location": "notifications/toast.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-20"
+  }
+}

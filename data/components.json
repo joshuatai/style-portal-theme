@@ -1,0 +1,384 @@
+[
+  {
+    "id": "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",
+    "name": "Colors",
+    "keywords": null,
+    "segments": [
+      "087c0ced-6fb5-4d8d-aed5-adf2457fbbc3",
+      "96a9916e-e770-4cc8-9e75-c5b5ebd96268",
+      "33c9a987-edff-43ae-8963-1bd3992ea404"
+    ]
+  },
+  {
+    "id": "60236c76-f8ab-4ad9-87db-2017b51957e2",
+    "name": "Layout",
+    "keywords": null,
+    "segments": []
+  },
+  {
+    "id": "aca6f1ac-609a-431c-8fca-739b6c060299",
+    "name": "Typography",
+    "keywords": [
+      "typography",
+      "font"
+    ],
+    "segments": [
+      "492875b0-89cc-4cb6-aaec-4bb46969239c",
+      "57b01452-280b-47d8-b4f7-c22ed0f2e364",
+      "ce531d75-4d1c-4f45-986a-793ee0c958e0",
+      "fd6ac4ae-b42a-47c0-9e18-7d4788c0a3f1",
+      "9123b711-5477-43cb-a47d-e9940d810a57"
+    ]
+  },
+  {
+    "id": "1811bd76-57b6-4fb9-930f-b6899313fa41",
+    "name": "Icons",
+    "keywords": [
+      "icon"
+    ],
+    "segments": []
+  },
+  {
+    "id": "97ad8624-f277-4734-93cb-3940ec280510",
+    "name": "Breadcrumbs",
+    "keywords": [
+      "breadcrumbs"
+    ],
+    "segments": [
+      "9c352cdc-f375-4f51-8d61-9cada00adc1e"
+    ]
+  },
+  {
+    "id": "e5bd7778-d707-420b-ac64-4a55da161b83",
+    "name": "Buttons",
+    "keywords": [
+      "button"
+    ],
+    "segments": [
+      "74c6a280-0070-465b-9e4b-668cb24e416d",
+      "4534d75a-66fc-4a44-8bf9-972198f870fc",
+      "fcd98d30-d6bf-4b30-b50d-fafe594cf7bc",
+      "4ebd3d3a-5ca6-42a9-86b2-38735dcf99e7",
+      "111d3211-7358-42c8-be48-da90f4ca60df",
+      "a33044fb-3210-43dc-9ac9-c896eadf3793",
+      "2da9337d-af76-49f9-adef-a12996c5a67f"
+    ]
+  },
+  {
+    "id": "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
+    "name": "Drop-down Menus",
+    "keywords": [
+      "dropdown"
+    ],
+    "segments": [
+      "6b663fa8-746a-4dda-8db8-898f642fd4e0",
+      "e40a8bbe-da8b-4509-b516-8406c13cf6f0",
+      "b4c96107-a075-4c9d-8baf-526072649ac6",
+      "7491e967-a72b-4303-aa43-7ff901458ad2",
+      "ab5754fc-9376-4e77-b27d-c480cad65d46",
+      "4fe80c77-a90b-45e7-9645-6663b2ea527c",
+      "d20bf90d-1f20-4867-8876-85fca20ef8ea",
+      "92ae9e63-5bf0-408c-9c06-2e4e8175cc24"
+    ]
+  },
+  {
+    "id": "37a6f43e-9194-4b29-94ad-e54bbc3f1b38",
+    "name": "Labels & Badges",
+    "keywords": [
+      "label",
+      "badge"
+    ],
+    "segments": [
+      "6c400c9b-00b5-40ae-b2c1-4f17f9236dc9",
+      "1a9b33f7-1fc1-48d1-a1ae-2b1527ec8031"
+    ]
+  },
+  {
+    "id": "4cd601bb-d7a7-4b4a-8d4d-d087a630929a",
+    "name": "Loader",
+    "keywords": [
+      "loader",
+      "loading"
+    ],
+    "segments": [
+      "377a1cfd-6256-4ea0-900e-8325c785f184"
+    ]
+  },
+  {
+    "id": "348487b9-82cc-4c06-98e4-ede8ac73a42b",
+    "name": "Modals",
+    "keywords": [
+      "modal"
+    ],
+    "segments": [
+      "7258a865-d31f-430c-8b78-a16fa083cbc1"
+    ]
+  },
+  {
+    "id": "a2fa8b5e-6dd7-4570-9352-eea232f1d5a0",
+    "name": "Navigations",
+    "keywords": [
+      "navigation"
+    ],
+    "segments": []
+  },
+  {
+    "id": "168263ea-0f3f-4782-8a37-f18334007680",
+    "name": "Notifications",
+    "keywords": [
+      "notification",
+      "alert"
+    ],
+    "segments": [
+      "53677489-3466-4dcd-b724-a9670cc1ca23",
+      "0be96478-bceb-4410-b5e7-afbaa331379c"
+    ]
+  },
+  {
+    "id": "003ae527-8e9e-41fb-a275-ae2babcdf49e",
+    "name": "Paginations",
+    "keywords": [
+      "pager",
+      "pagination"
+    ],
+    "segments": [
+      "bfe746d2-6607-4bbe-9eb2-b2041c8a858e",
+      "aedc60e0-630c-4764-abf3-b13cd8edae22"
+    ]
+  },
+  {
+    "id": "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
+    "name": "Popovers",
+    "keywords": [
+      "popover"
+    ],
+    "segments": [
+      "5ecc5ef6-4d48-4167-8792-aa0daf13b2c3",
+      "f7c8d8ac-9bad-462b-b89a-885eec6425fc",
+      "27ddafaf-b2d1-47f0-9b28-8c82ad8f8940"
+    ]
+  },
+  {
+    "id": "31ac4e6c-120e-46dd-9c31-285e04543ddd",
+    "name": "Progress",
+    "keywords": [
+      "progress"
+    ],
+    "segments": []
+  },
+  {
+    "id": "93c477ed-5ac1-4d47-95ca-1ac03d4b5faa",
+    "name": "Tables",
+    "keywords": [
+      "table"
+    ],
+    "segments": []
+  },
+  {
+    "id": "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
+    "name": "Tabs",
+    "keywords": [
+      "tab"
+    ],
+    "segments": []
+  },
+  {
+    "id": "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f",
+    "name": "Tooltips",
+    "keywords": [
+      "tip",
+      "tooltip",
+      "infotip"
+    ],
+    "segments": [
+      "424d42ce-1476-4ea3-bc58-565cd12d923d",
+      "6e8391d2-5d9c-4544-aabf-b3cbd9633753"
+    ]
+  },
+  {
+    "id": "654e09d7-1bc4-42e6-816e-791c52f4308d",
+    "name": "Tree View",
+    "keywords": [
+      "tree view"
+    ],
+    "segments": []
+  },
+  {
+    "id": "206355af-1c26-49d7-b878-d3d6f094990f",
+    "name": "Form Elements",
+    "keywords": [
+      "input",
+      "textarea",
+      "radio",
+      "checkbox",
+      "select"
+    ],
+    "segments": [
+      "ce091515-dba7-4a28-b255-3e83a21bd2f4",
+      "41f453e0-cda2-4dc5-80b9-12ad090f77fe",
+      "211f114e-5c79-4171-8750-a5097bbb8a35",
+      "a72d3fec-c151-492e-b03d-f3086c0b143c",
+      "c2a5d641-6a27-427f-bcf5-8df4547904aa"
+    ]
+  },
+  {
+    "id": "65ce6af3-87b9-45ed-b1e7-56f1b1ad3745",
+    "name": "Advanced Form",
+    "keywords": [
+      "toggle switches",
+      "combo boxes",
+      "input mask",
+      "multiple selection"
+    ],
+    "segments": [
+      "5a53d144-59ec-4280-8cff-f034ff445827",
+      "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
+      "954d9736-4abf-41b5-bc49-d32a6805bd20",
+      "6fe1c2de-7b54-4ed4-94f1-6895f573b0dc",
+      "a3246c06-0d15-41f0-a52e-4683be4ff47f",
+      "b275b05f-c3c7-4552-a8a8-94c42e4ed066"
+    ]
+  },
+  {
+    "id": "8de08a62-4895-4549-a71b-adb5d2008f53",
+    "name": "Form Layout",
+    "keywords": [
+      "labels",
+      "horizontal form",
+      "stacked form",
+      "inline form",
+      "form groups"
+    ],
+    "segments": [
+      "da4c3a37-4845-4784-aa60-e5bf5491316b",
+      "34a4ed5e-03c3-4c22-83cd-bc688d4c4f51",
+      "06521568-a35a-47cf-a99c-16661d212580",
+      "171a4d94-9890-4e85-81d5-124d98814bdb",
+      "ca9d6a55-c645-4a6e-9b56-19c3ef7ae783"
+    ]
+  },
+  {
+    "id": "b661774f-cb42-4ca4-9637-7da9bc5fb090",
+    "name": "Form Size",
+    "keywords": [
+      "form",
+      "size"
+    ],
+    "segments": [
+      "09f2aeb2-4447-4f9c-b36d-d517b1b6750f",
+      "7eb7d51c-4197-4f6f-b4b3-e9512a1584db"
+    ]
+  },
+  {
+    "id": "13c93b6d-c0f4-4983-a2de-27a0f910caa8",
+    "name": "Form Validation",
+    "keywords": [
+      "form",
+      "validation"
+    ],
+    "segments": [
+      "ce880094-f93a-462d-b476-5290e2ae4d45",
+      "a4f8ef6c-2d59-4431-956c-0a72e242a7d4"
+    ]
+  },
+  {
+    "id": "f1cdc7cd-5ee2-436a-b7ae-60188c813881",
+    "name": "Help Text",
+    "keywords": [
+      "form",
+      "help text"
+    ],
+    "segments": [
+      "d53ab415-61ec-4f6c-bbfa-03ed1968500e",
+      "18c998d0-5af3-42b0-ae9f-a66efd7bb5ed",
+      "54c56eca-e598-4bd6-b2a0-cb1cd104b1bd"
+    ]
+  },
+  {
+    "id": "4ec8071d-3dc0-4c63-90d7-9b41cb87a423",
+    "name": "Input Groups",
+    "keywords": [
+      "form",
+      "input groups"
+    ],
+    "segments": [
+      "ae99aa05-15da-43c6-a256-7eec3bcf2c70",
+      "e26b19c3-35fa-4b1e-ac7b-8e2d55311ab9",
+      "4ed6f4d5-cc34-4e6f-9f3b-64204aaa1eef",
+      "8dad46f6-ea13-4746-ba77-5e428e8684bc"
+    ]
+  },
+  {
+    "id": "0448aa99-2fd0-4218-b960-4037f18e8bcb",
+    "name": "File Upload",
+    "keywords": [
+      "form",
+      "upload"
+    ],
+    "segments": [
+      "53dc41a5-3f6f-4fbb-8571-d6a71fc01f06",
+      "47013de3-7aaa-49e2-b640-7052858cb542"
+    ]
+  },
+  {
+    "id": "06f6ed7b-95c5-449d-a3c7-cd56ff037d66",
+    "name": "Search",
+    "keywords": [
+      "form",
+      "search"
+    ],
+    "segments": [
+      "e1f3dcf0-359f-4207-9efd-af567a12ed5e",
+      "856dcb17-52f2-47ab-acae-462ce182986c",
+      "27a7e158-ec25-440a-9c36-c73cba471f42"
+    ]
+  },
+  {
+    "id": "73243502-1317-451b-b3c9-e75f7e5fab81",
+    "name": "Tags",
+    "keywords": [
+      "tags",
+      "token"
+    ],
+    "segments": [
+      "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
+      "954d9736-4abf-41b5-bc49-d32a6805bd20"
+    ]
+  },
+  {
+    "id": "c6f1ea57-cdd6-4190-bfd9-4bcc0673b1df",
+    "name": "Bar Charts",
+    "keywords": [
+      "bar chart",
+      "chart"
+    ],
+    "segments": []
+  },
+  {
+    "id": "ccf72043-8aee-4dfd-b976-888dbb12ef7b",
+    "name": "Line Charts",
+    "keywords": [
+      "line chart",
+      "chart"
+    ],
+    "segments": []
+  },
+  {
+    "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
+    "name": "Pie Charts",
+    "keywords": [
+      "pie chart",
+      "chart"
+    ],
+    "segments": []
+  },
+  {
+    "id": "64d00b7c-ae9b-4bcf-83f1-c8e58328ce81",
+    "name": "Map",
+    "keywords": [
+      "map",
+      "chart"
+    ],
+    "segments": []
+  }
+]

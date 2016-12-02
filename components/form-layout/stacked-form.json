@@ -1,0 +1,17 @@
+{
+  "id": "06521568-a35a-47cf-a99c-16661d212580",
+  "name": "Stacked Form",
+  "location": "form-layout/stacked-form.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-8"
+  }
+}

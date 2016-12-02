@@ -1,0 +1,17 @@
+{
+  "id": "e40a8bbe-da8b-4509-b516-8406c13cf6f0",
+  "name": "Divider",
+  "location": "dropdowns/divider.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

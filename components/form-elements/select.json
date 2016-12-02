@@ -1,0 +1,17 @@
+{
+  "id": "c2a5d641-6a27-427f-bcf5-8df4547904aa",
+  "name": "Select",
+  "location": "form-elements/select.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

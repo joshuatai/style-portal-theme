@@ -1,0 +1,73 @@
+<section class="css-reference">
+  <h5>Search Container</h5>
+  <p>Use a <code data-tag="div"></code> element to create a container that wraps the input and the button. For example, <code>.input-group</code> is used as a search container in Bootstrap.</p>
+  <pre>
+    <style data-selector=".input-group"></style>
+  </pre>
+
+  <h5>Search Container with an Icon</h5>
+  <pre>
+    <style data-selector=".input-group .input-icon-group"></style>
+  </pre>
+  <pre data-title="Input tag">
+    <style data-selector=".input-group .input-icon-group > .form-control"></style>
+    <style data-selector=".input-group .input-icon-group > .icon">Icon stack order</style>
+  </pre>
+
+  <h5>Input with Form Control</h5>
+  <pre>
+    <style data-selector=".input-group .form-control"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".input-group .form-control:focus"></style>
+  </pre>
+  <pre data-title=":first">
+    <style data-selector=".input-group .form-control:first-child"></style>
+  </pre>
+
+  <h5>Search Button</h5>
+  <pre>
+    <style data-selector=".input-group-btn">Use span element to wrap the button</style>
+  </pre>
+  <pre data-title="Button Class">
+    <style data-selector=".input-group-btn > .btn">About the button with icon style, please refer to buttons component</style>
+  </pre>
+  <pre data-title=":focus :active">
+    <style data-selector=".input-group-btn > .btn:focus"></style>
+  </pre>
+  <pre data-title=":last">
+    <style data-selector=".input-group-btn:last-child > .btn"></style>
+  </pre>
+</section>
+
+<section class="search-example">
+  <p>Click the search button to start querying for the typed text.</p>
+
+	<ul class="description">
+		<li>Use the default button style for the search button. You may also use the primary or emphasis style for emphasis.</li>
+		<li>You can include a reset button for efficiently clearing up the search text.</li>
+	</ul>
+	<div>
+	  <div class="input-group">
+      <input type="text" class="form-control" placeholder="Case name">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-search"></span></button>
+      </span>
+    </div><!-- /input-group -->
+    <div class="input-group">
+      <input type="text" class="form-control input-focus" value="DDEI">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-search"></span></button>
+      </span>
+    </div><!-- /input-group -->
+    <div class="input-group">
+	  	<div class="input-icon-group">
+	      <input type="text" class="form-control" value="DDEI">
+	      <span class="icon icon-cancel" data-clear-field="clearField"></span>
+	    </div>
+	    <span class="input-group-btn">
+	      <button type="button" class="btn btn-default btn-icon-only"><span class="fa fa-search"></span></button>
+	    </span>
+    </div><!-- /input-group -->
+  </div>
+</section>

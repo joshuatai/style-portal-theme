@@ -1,0 +1,52 @@
+<section class="css-reference">
+  <h5>Input Group Container</h5>
+  <p>Wrap the label and the input with a <code data-tag="div"></code> element, also create the container class. For example, <code>.input-group</code> is used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".input-group"></style>
+  </pre>
+
+  <h5>Label Class</h5>
+  <pre>
+    <style data-selector=".input-group-addon"></style>
+  </pre>
+  <pre data-title=":first">
+    <style data-selector=".input-group-addon:first-child"></style>
+  </pre>
+  <pre data-title=":not(:first">
+    <style data-selector=".input-group-addon:not(:first-child):not(:last-child)"></style>
+  </pre>
+
+  <h5>Input with Form Controls</h5>
+  <pre>
+    <style data-selector=".input-group .form-control"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".input-group .form-control:focus"></style>
+  </pre>
+  <pre data-title="Input after the label">
+    <style data-selector=".input-group-addon + .form-control"></style>
+  </pre>
+  <pre data-title="Input between two labels">
+    <style data-selector=".input-group-addon + .form-control:not(:last-child)"></style>
+  </pre>
+</section>
+
+<section class="form-input-groups-example">
+  <p>You can add labels into a search box.</p>
+
+  <div class="input-group">
+    <span class="input-group-addon">http://</span>
+    <input type="text" class="form-control">
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon">http://</span>
+    <input type="text" class="form-control input-focus">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">IP address</span>
+    <input type="text" class="form-control">
+    <span class="input-group-addon">to</span>
+    <input type="text" class="form-control">
+  </div>
+</section>

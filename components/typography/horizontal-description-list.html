@@ -1,0 +1,43 @@
+<section class="css-reference">
+  <h5>Description list</h5>
+  <p>Use <code data-tag="dl"></code> to wrap one or multiple pairs of description titles <code data-tag="dt"></code> and description details <code data-tag="dd"></code>.</p>
+  <pre data-title="dl">
+    <style data-selector="dl"></style>
+  </pre>
+  <pre data-title="dt">
+    <style data-selector="dt"></style>
+  </pre>
+  <pre data-title="dd">
+    <style data-selector="dd"></style>
+  </pre>
+
+  <h5>Horizontal description list</h5>
+  <p>Use the width of the longest <code data-tag="dt"></code> as the <code data-tag="dt"></code> column width, and then leave 16px between the <code data-tag="dt"></code> and <code data-tag="dd"></code> columns.</p>
+  <pre data-title="dt">
+    <style data-selector=".dl-horizontal dt"></style>
+  </pre>
+  <pre data-title="dd:before">
+    <style data-selector=".dl-horizontal dd:before">Clear the floated `dt` if an empty `dd` is present</style>
+  </pre>
+  <pre data-title="dd:after">
+    <style data-selector=".dl-horizontal dd:after">Clear the floated `dt` if an empty `dd` is present</style>
+  </pre>
+</section>
+
+<section>  
+	<p>A horizontal description list shows a list of variables with corresponding values or information.</p>
+	<dl class="dl-horizontal">
+	  <dt>Original filename:</dt>
+	  <dd>ACME_encrybter.exe</dd>
+	  <dt>Location:</dt>
+	  <dd>C:\Program Files\Adobe\Reader11.0\Readme</dd>
+	  <dt>Size:</dt>
+	  <dd>27.6 MB</dd>
+	  <dt>File description:</dt>
+	  <dd>Acme Inc.</dd>
+	  <dt>File version:</dt>
+	  <dd>11.0.1.36</dd>
+	  <dt>Create time:</dt>
+	  <dd>04/12/2016 2:08:32 PM +0800</dd>
+	</dl>
+</section>

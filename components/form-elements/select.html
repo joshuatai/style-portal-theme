@@ -1,0 +1,33 @@
+<section class="css-reference">
+  <h5>Form Controller Class</h5>
+  <p>All textual elemetns, including <code data-tag="input"></code>, <code data-tag="textarea"></code>, and <code data-tag="select"></code> should contain a form control class. E.g. The form controller class in Bootstrap is <code>.form-control</code></p>
+  <pre>
+    <style data-selector=".form-control"></style>
+  </pre>
+
+  <h5>Select With Form Control</h5>
+  <pre>
+    <style data-selector="select.form-control">appearance and background property for customized native select caret icon</style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector="select:focus.form-control"></style>
+    <style data-selector="select[multiple].form-control"></style>
+  </pre>
+</section>
+
+<section class="form-elements-example">
+  <p>Use the native browser select element.</p>
+	<select class="form-control">
+	  <option>Menu item one</option>
+	  <option>Menu item two</option>
+	  <option>Menu item three</option>
+	</select>
+	<br>
+	<h5>Multiple</h5>
+    <select multiple class="form-control">
+        <option>optionA</option>
+        <option>optionB</option>
+        <option>optionC</option>
+        <option>optionD</option>
+    </select>
+</section>

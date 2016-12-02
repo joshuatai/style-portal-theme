@@ -1,0 +1,17 @@
+{
+  "id": "d53ab415-61ec-4f6c-bbfa-03ed1968500e",
+  "name": "Block-Level Help",
+  "location": "form-helptext/block-level-help.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

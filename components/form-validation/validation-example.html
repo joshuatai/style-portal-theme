@@ -1,0 +1,58 @@
+<section class="form-validation-example full-example">
+  <p>The goal of form validation is to ensure that the user provides necessary and properly formatted information needed to successfully complete an operation.</p>
+	<div class="lists-unordered">
+		<ul>
+			<li>Scroll to and focus the first field with an error when the form is submitted.</li>
+			<li>Provide field level validation for fields that are known to be invalid.</li>
+			<li>Describe why an error occurred.</li>
+		</ul>
+	</div>
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label label-required" for="errorInput">Required Fields:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control form-invalid" id="errorInput" aria-describedby="inputBlock">
+	    	<span id="inputBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Required field.</span>
+		</div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label label-required" for="errorSelect">Dropdowns:</label>
+	    <div class="control-wrapper">
+	    	<select class="form-control form-invalid" aria-describedby="selectBlock" id="errorSelect">
+	    	  <option disabled selected>Select an option</option>
+			  <option>Menu item one</option>
+			  <option>Menu item two</option>
+			  <option>Menu item three</option>
+			</select>
+	    	<span id="selectBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Please select an option.</span>
+		</div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="errorTextarea">Text area:</label>
+	    <div class="control-wrapper">
+	    	<textarea class="form-control textarea-normal textarea-resize form-invalid" id="errorTextarea" aria-describedby="textareaBlock">This text area has exceed the character limit by 100 characters. The user can still continue to type after reaching the limit, but the field is invalid.</textarea>
+	    	<span id="textareaBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>152/100 character limit.</span>
+		</div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label label-required checkbox-label">Checkboxes:</label>
+	    <div class="control-wrapper">
+	    	<div aria-describedby="checkboxBlock">
+		    	<div class="checkbox">
+				  <input type="checkbox" name="optionscheckboxs" id="validationcheckboxs1" class="input-checkbox">
+				  <label for="validationcheckboxs1">Item 1</label>
+				</div>
+				<div class="checkbox">
+				  <input type="checkbox" name="optionscheckboxs" id="validationcheckboxs2" class="input-checkbox">
+				  <label for="validationcheckboxs2">Item 2</label>
+				</div>
+				<div class="checkbox">
+				  <input type="checkbox" name="optionscheckboxs" id="validationcheckboxs3" class="input-checkbox">
+				  <label for="validationcheckboxs3">Item 3</label>
+				</div>
+			</div>
+	    	<span id="checkboxBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Please specify at least one.</span>
+		</div>
+	  </div>
+	</form>
+</section>

@@ -1,0 +1,17 @@
+{
+  "id": "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
+  "name": "Tags",
+  "location": "form-advanced/tags.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

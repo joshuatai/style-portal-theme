@@ -1,0 +1,17 @@
+{
+  "id": "4534d75a-66fc-4a44-8bf9-972198f870fc",
+  "name": "Button Sizes",
+  "location": "buttons/size.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4"
+  }
+}

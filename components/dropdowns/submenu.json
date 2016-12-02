@@ -1,0 +1,17 @@
+{
+  "id": "d20bf90d-1f20-4867-8876-85fca20ef8ea",
+  "name": "Submenu",
+  "location": "dropdowns/submenu.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

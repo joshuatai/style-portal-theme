@@ -1,0 +1,49 @@
+<section class="css-reference">
+  <h5>Submenu Items</h5>
+  <p>Add submenu class to <code data-tag="li"></code> elements. E.g. <code>.dropdown-submenu</code></p>
+  <pre>
+    <style data-selector=".dropdown-submenu"></style>
+  </pre>
+
+  <h5>Submenu Caret</h5>
+  <p>Display a right-direction triangle to indicate a submenu.</p>
+  <pre>
+    <style data-selector=".dropdown-submenu > a:before"></style>
+  </pre>
+
+  <h5>Submenus</h5>
+  <p>Wrap the submenu items within an <code data-tag="ul"></code> element which under the <code data-tag="li"></code> element.</p>
+  <pre data-title="Adjust position">
+    <style data-selector=".dropdown-submenu > .dropdown-menu">Move submenu to the left side of its parent</style>
+  </pre>
+  <pre data-title="Hover submenu">
+    <style data-selector=".dropdown-submenu:hover > .dropdown-menu">Display submenu as a block element</style>
+  </pre>
+</section>
+
+<section class="dropdown-example dropdown-submenu-example">
+  <p>Use submenus to present a second level of options. A submenu should expand when its first-level item is hovered over.</p>
+  <p>
+    <div class="dropdown open">
+      <button class="btn btn-border dropdown-toggle" type="button">
+        <span class="caret"></span>Select an option
+      </button>
+      
+      <ul class="dropdown-menu">
+        <li><a href="javascript:;">Menu item one</a></li>
+        <li><a href="javascript:;">Menu item two</a></li>
+        <li><a href="javascript:;">Menu item three</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="dropdown-submenu open">
+          <a href="javascript:;">Menu item four</a>
+		  
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Second level item one</a></li>
+            <li><a href="javascript:;">Second level item two</a></li>
+            <li><a href="javascript:;">Second level item three</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </p>
+</section>

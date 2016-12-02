@@ -1,0 +1,33 @@
+<section class="css-reference">
+  <h5>Date and Time Input Masks</h5>
+  <p>Date and time input masks format and validate inputs as the user types along.</p>
+
+  <h5>Activation Input Mask</h5>
+  <p>This mask is there to ensure that the user types activation codes in the predefined format.</p>
+</section>
+
+<section class="form-advanced-example">
+  <p>An input mask is used to format and validate user input as it is typed in.</p>
+
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label" for="dateInput">Date:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="dateInput" data-input-mask="date" placeholder="mm/dd/yyyy">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="timeInput">Time:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="timeInput" data-input-mask="time" placeholder="hh:mm:ss">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label" for="activationInput">Activation Code:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="activationInput" aria-describedby="promptBlock" data-input-mask="activation">
+	    	<span id="promptBlock" class="help-block">AB-1234-1234-1234-1234-1234-1234</span>
+    	</div>
+	  </div>
+	</form>
+</section>

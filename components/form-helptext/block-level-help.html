@@ -1,0 +1,20 @@
+<section class="css-reference">
+  <h5>Help Text Class</h5>
+  <p>Use block-level help text for form controls. We recommend using a <code data-tag="span"></code> element.</p>
+  <pre>
+    <style data-selector=".help-block"></style>
+  </pre>
+</section>
+
+<section class="form-helptext-example">
+  <p>Block-level help is help text that occupies the full length of an input field and is placed under the field.</p>
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label" for="helpInput">Text label:</label>
+	    <div class="control-wrapper">
+	    	<input type="text" class="form-control" id="helpInput" aria-describedby="helpBlock" placeholder="Placeholder">
+	    	<span id="helpBlock" class="help-block">Some other help text and information.</span>
+		</div>
+	  </div>
+	</form>
+</section>

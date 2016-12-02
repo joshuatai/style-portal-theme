@@ -1,0 +1,138 @@
+<section class="css-reference">
+  <ul>
+    <li>Use the flat style for Button Dropdowns.</li>
+    <li>Place buttons within a Button Dropdowns wrapper. For example, a bootsrapt Button Dropdowns: <code data-html="<div class="btn-group"><button class="btn dropdowns-toogle">Dropdowns<span class="caret"></span></button></ul class="dropdowns">...</ul></div>"></code></li>
+  </ul>
+
+  <h5>Caret</h5>
+  <p>Wrap a glyph(caret) class using <code data-tag="span"></code> within Button Dropdowns to indicate that they are dropdowns toogle buttons. For example, a Bootstrap glyph(caret) is wrapped within a Button Dropdowns:<code data-html="<button>Dropdowns<span class="caret"></span></button>"></code></p>
+  <pre>
+    <style data-selector=".caret"></style>
+  </pre>
+
+  <h5>Caret with single Button Dropdowns</h5>
+  <pre data-title="A Single Button Dropdowns contains an arrow indicating that it is a dropdowns toggle button:">
+    <style data-selector=".dropdown-toggle .caret"></style>
+  </pre>
+
+  <h5>Split Button Dropdowns</h5>
+  <p>Use the single Button Dropdowns design for a Split Button Dropdowns except that the arrow toggle is separated.</p>
+  <pre data-title="Split button dropdowns, such as:">
+    <style data-selector=".btn-group > .btn + .dropdown-toggle"></style>
+  </pre>
+  <pre data-title="Reposition the caret:">
+    <style data-selector=".btn-group > .btn + .dropdown-toggle .caret"></style>
+  </pre>
+
+  <h5>Text</h5>
+  <p>Use link style button as a Button Dropdowns</p>
+  <pre data-title="Caret within a link style of hovered Button Dopdowns:">
+    <style data-selector=".dropdown-toggle.btn-link:hover .caret"></style>
+  </pre>
+
+  <h5>Sizes</h5>
+  <p>Buttons Dropdowns should work for buttons of all sizes.</p>
+  <pre data-title="Split button dropdowns with large size, such as:">
+    <style data-selector=".btn-group > .btn-lg + .dropdown-toggle"></style>
+  </pre>
+  <pre data-title="Carets in large button sizes">
+    <style data-selector=".btn-lg .caret"></style>
+  </pre>
+</section>
+
+<section class="button-dropdowns-example">
+    <p>Use a drop-down menu to provide a list of options for the user.</p>   
+    <div class="inline-block-group"> 
+        <div class="inline-block">
+            <h5>Single</h5>
+            <div class="btn-group">
+                <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>Dropdown</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>                
+                </ul>
+            </div>
+        </div>
+        <div class="inline-block">
+            <h5>Split</h5>
+            <div class="btn-group">
+                <button type="button" class="btn btn-border">Default</button>
+                <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>                    
+                </ul> 
+            </div>
+        </div>
+    </div>      
+    <div class="inline-block-group">   
+        <div class="inline-block">
+            <h5>Text</h5>
+            <div class="btn-group">
+                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>All Devices
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>                    
+                </ul>
+            </div>
+        </div>
+        <div class="inline-block">
+            <h5>Icon</h5>
+            <div class="btn-group">
+                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span><span class="fa fa-database"></span>All Devices
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>                    
+                </ul>
+            </div>
+        </div>
+    </div>     
+    <h5>Sizes</h5>
+    <div class="btn-group">
+        <button type="button" class="btn btn-border btn-lg dropdown-toggle">
+            <span class="caret"></span>Large
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>                                
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-border dropdown-toggle">
+            <span class="caret"></span>Default
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>                               
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-border btn-sm dropdown-toggle">
+            <span class="caret"></span>Small
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>                           
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-border btn-xs dropdown-toggle">
+            <span class="caret"></span>Extra Small
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>                          
+        </ul>
+    </div>    
+</section>

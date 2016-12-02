@@ -1,0 +1,17 @@
+{
+  "id": "856dcb17-52f2-47ab-acae-462ce182986c",
+  "name": "Search Box with a Button",
+  "location": "search/search-button.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

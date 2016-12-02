@@ -1,0 +1,17 @@
+{
+  "id": "f7c8d8ac-9bad-462b-b89a-885eec6425fc",
+  "name": "Popovers with Headers",
+  "location": "popovers/header.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

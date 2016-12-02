@@ -1,0 +1,52 @@
+<section class="css-reference">
+  <h5>Form Controller Class</h5>
+  <p>All textual elements, including <code data-tag="input"></code>, <code data-tag="textarea"></code>, and <code data-tag="select"></code> should contain a form control class. For example, the Bootstrap form controller class is <code>.form-control</code></p>
+  <pre>
+    <style data-selector=".form-control"></style>
+  </pre>
+
+  <h5>Textarea with Form Control</h5>
+  <pre>
+    <style data-selector="textarea.form-control"></style>
+  </pre>
+  <pre data-title="Placeholder">
+    <style data-selector=".form-control::-webkit-input-placeholder"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector="textarea:focus"></style>
+    <style data-selector=".form-control[disabled]"></style>
+  </pre>
+  <pre data-title="Resizable Textarea Class">
+    <style data-selector="textarea.textarea-resizable"></style>
+  </pre>
+
+  <h5>Rows</h5>
+  <p>By default, an text area must be to contain at least two rows of text. Specify the text area using the cols and rows attributes.</p>
+</section>
+
+<section class="form-elements-example">
+  <p>A text area allows the user to type in extended, multi-line inputs.</p>
+	<p>A text area can be fixed in height, grow automatically based on the input, or contain a resize handle, which allows for vertical resizing.</p>
+	<div class="textarea-block">
+		<form class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <label class="control-label">Normal:</label>
+		    <div class="control-wrapper">
+		    	<textarea class="form-control" placeholder="Enter a description"></textarea>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label">Disabled:</label>
+		    <div class="control-wrapper">
+		    	<textarea class="form-control" disabled></textarea>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label">Resizable:</label>
+		    <div class="control-wrapper">
+		    	<textarea class="form-control textarea-resizable"></textarea>
+		   	</div>
+		  </div>
+		</form>
+	</div>
+</section>

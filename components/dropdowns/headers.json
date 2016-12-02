@@ -1,0 +1,17 @@
+{
+  "id": "7491e967-a72b-4303-aa43-7ff901458ad2",
+  "name": "Headers",
+  "location": "dropdowns/headers.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

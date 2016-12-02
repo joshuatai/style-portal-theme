@@ -1,0 +1,71 @@
+<section class="css-reference">
+  <h5>Multiple Input Files</h5>
+  <p>Add a <code>multiple</code> attribute to the <code data-tag="input"></code> element.</p>
+
+  <h5>File Information List Container</h5>
+  <p>Wrap file information with a container. We recommend using a <code data-tag="ul"></code> element.</p>
+  <pre>
+    <style data-selector=".multiple-file-info"></style>
+  </pre>
+
+  <h5>File Information Container</h5>
+  <pre>
+    <style data-selector=".multiple-file-info > li"></style>
+  </pre>
+  <pre data-title="More than one file list">
+    <style data-selector=".multiple-file-info > li + li">Such as li + li</style>
+  </pre>
+
+  <h5>File Name</h5>
+  <pre>
+    <style data-selector=".multiple-file-info .file-name"></style>
+  </pre>
+
+  <h5>Cancel Icon</h5>
+  <pre>
+    <style data-selector=".multiple-file-info .icon-cancel"></style>
+  </pre>
+</section>
+
+<section class="file-upload-example">
+  <p>For a multi file upload, more than one file is selected from a pop-up file explorer.</p>
+	
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="control-label">File:</label>
+	    <div class="control-wrapper">
+	     	<label for="multifileupload1" class="btn btn-default">Select Files...</label>
+        	<input id="multifileupload1" type="file" name="file[]" multiple>
+		</div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label">File:</label>
+	    <div class="control-wrapper">
+	    	<label for="multifileupload2" class="btn btn-default">Select Files...</label>
+	    	<input id="multifileupload2" type="file" name="file[]" multiple>
+    		<ul class="multiple-file-info">
+    			<li>
+    				<span class="file-name">IMG_1234.png </span><span class="file-size">(36 MB)</span><span class="icon icon-cancel"></span>
+    				<span id="errorBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Incorrect file format.</span>
+    			</li>
+    			<li><span class="file-name">DDEI_2.5_en_hfb1234.tar </span><span class="file-size">(829 KB)</span><span class="icon icon-cancel"></span></li>
+    			<li><span class="file-name">DDEI_2.8_en_hfb5678.tar </span><span class="file-size">(970 KB)</span><span class="icon icon-cancel"></span></li>
+    			<li><span class="file-name">DDEI_3.0_en_hfb.tar </span><span class="file-size">(120 KB)</span><span class="icon icon-cancel"></span></li>
+    			<li><span class="file-name">DeepDiscoveryInspector_381_lx_en_criticalpatch1232890.tar </span><span class="file-size">(140 KB)</span><span class="icon icon-cancel"></span></li>
+    		</ul>
+		</div>
+	  </div>
+	</form>
+	<div class="example">
+		<form class="form-horizontal">
+		  <div class="form-group">
+		    <label class="control-label">File:</label>
+		    <div class="control-wrapper">
+		    	<label for="multifileupload" class="btn btn-default">Select Files...</label>
+	        	<input id="multifileupload" type="file" name="file[]" data-file-upload="multiFile" multiple>
+	        	<ul id="multifileInfo" class="multiple-file-info"></ul>
+			</div>
+		  </div>
+		</form>
+	</div>
+</section>

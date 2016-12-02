@@ -1,0 +1,17 @@
+{
+  "id": "6c400c9b-00b5-40ae-b2c1-4f17f9236dc9",
+  "name": "Labels",
+  "location": "labels-badges/labels.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

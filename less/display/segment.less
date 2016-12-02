@@ -1,0 +1,84 @@
+/* segment panel */
+
+.segment-panels {
+  padding: 20px;
+}
+
+.segment {
+  .transition(width .3s ease);
+}
+
+.segment-panel {
+  background: #fff;
+  border: 1px #d6d6d6 solid;
+  position: relative;
+  z-index: 1; /* Prevent z-index of segment examples higher than others, like modal. */
+  .transition(height .3s ease);
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.segment-panel-loading {
+  @media screen and (max-width: 1023px) {
+    height: 200px !important;
+  }
+}
+
+.segment-panel-heading {
+  padding: 0 16px;
+  &:extend(.clearfix all);
+}
+
+.segment-panel-title {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 52px;
+  float: left;
+  margin: 0;
+}
+
+.segment-panel-actions {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  > li {
+    float: left;
+    line-height: 1;
+    margin: 8px 0 8px 8px;
+  }
+
+  > li > a {
+    padding: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9c9c9c;
+    text-decoration: none;
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  > li > a:hover {
+    color: #666;
+  }
+}
+
+.segment-content {
+  padding: 0 16px 16px;
+  // These styles are designed for scrollable content with a fixed height panel
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 52px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @media screen and (max-width: 1023px) {
+    position: static;
+    height: 100%;
+  }
+}

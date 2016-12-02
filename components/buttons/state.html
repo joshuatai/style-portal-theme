@@ -1,0 +1,122 @@
+<section class="css-reference">
+  <p>Extend the button class to define button states.</p>
+
+  <h5>Button Tag</h5>
+  <p>The disabled state of the button tag should be normalized by <code>normalize.css</code>.</p>
+  <pre>
+    <style data-selector="button[disabled]"></style>
+  </pre>
+
+  <h5>Button Class</h5>
+  <p>Button states are defined as follows:</p>
+  <pre data-title=":hover">
+    <style data-selector=".btn:hover"></style>
+  </pre>
+  <pre data-title=":active">
+    <style data-selector=".btn:active"></style>
+  </pre>
+  <pre data-title=":active:focus">
+    <style data-selector=".btn:active:focus"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".btn:focus"></style>
+    <style data-selector=".btn.disabled"></style>
+  </pre>
+
+  <h5>Default Class</h5>
+  <p>The button states for general style are defined as follows:</p>
+  <pre data-title=":hover">
+    <style data-selector=".btn-default:hover"></style>
+  </pre>
+  <pre data-title=":active">
+    <style data-selector=".btn-default:active"></style>
+  </pre>
+  <pre data-title=":active:focus">
+    <style data-selector=".btn-default:active:focus"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".btn-default:focus"></style>
+    <style data-selector=".btn-default[disabled]:hover"></style>
+  </pre>
+
+  <h5>Primary Class</h5>
+  <p>The button states for primary style are defined as follows:</p>
+  <pre data-title=":hover">
+    <style data-selector=".btn-primary:hover"></style>
+  </pre>
+  <pre data-title=":active">
+    <style data-selector=".btn-primary:active"></style>
+  </pre>
+  <pre data-title=":active:focus">
+    <style data-selector=".btn-primary:active:focus"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".btn-primary:focus"></style>
+    <style data-selector=".btn-primary[disabled]:hover"></style>
+  </pre>
+
+  <h5>Emphasis Class</h5>
+  <p>The button states for emphasis style are defined as follows:</p>
+  <pre data-title=":hover">
+    <style data-selector=".btn-danger:hover"></style>
+  </pre>
+  <pre data-title=":active">
+    <style data-selector=".btn-danger:active"></style>
+  </pre>
+  <pre data-title=":active:focus">
+    <style data-selector=".btn-danger:active:focus"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".btn-danger:focus"></style>
+    <style data-selector=".btn-danger[disabled]:hover"></style>
+  </pre>
+
+  <h5>Flat Class</h5>
+  <p>The button states for flat style are defined as follows:</p>
+  <pre data-title=":hover">
+    <style data-selector=".btn-border:hover"></style>
+  </pre>
+  <pre data-title=":active">
+    <style data-selector=".btn-border:active"></style>
+  </pre>
+  <pre data-title=":active:focus">
+    <style data-selector=".btn-border:active:focus"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".btn-border:focus"></style>
+    <style data-selector=".btn-border[disabled]:hover"></style>
+  </pre>
+</section>
+
+<section class="buttons-state-example">  
+	<p>		
+		<button class="btn btn-default">Normal</button>
+		<button class="btn btn-primary">Normal</button>
+		<button class="btn btn-danger">Normal</button>
+		<button class="btn btn-border">Normal</button>
+	</p>	
+	<p>		
+		<button class="btn btn-default hover">Hover</button>
+		<button class="btn btn-primary hover">Hover</button>
+		<button class="btn btn-danger hover">Hover</button>
+		<button class="btn btn-border hover">Hover</button>
+	</p>
+	<p>				
+		<button class="btn btn-default active focus">Active</button>
+		<button class="btn btn-primary active focus">Active</button>
+		<button class="btn btn-danger active focus">Active</button>
+		<button class="btn btn-border active focus">Active</button>
+	</p>	
+	<p>		
+		<button class="btn btn-default focus">Focus</button>
+		<button class="btn btn-primary focus">Focus</button>
+		<button class="btn btn-danger focus">Focus</button>
+		<button class="btn btn-border focus">Focus</button>
+	</p>	
+	<p>		
+		<button class="btn btn-default" disabled="disabled">Disabled</button>
+		<button class="btn btn-primary" disabled="disabled">Disabled</button>
+		<button class="btn btn-danger" disabled="disabled">Disabled</button>
+		<button class="btn btn-border" disabled="disabled">Disabled</button>
+	</p>
+</section>

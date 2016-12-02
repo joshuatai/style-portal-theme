@@ -1,0 +1,17 @@
+{
+  "id": "ce880094-f93a-462d-b476-5290e2ae4d45",
+  "name": "Validation Styles",
+  "location": "form-validation/validation-style.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

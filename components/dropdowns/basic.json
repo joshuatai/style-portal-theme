@@ -1,0 +1,17 @@
+{
+  "id": "6b663fa8-746a-4dda-8db8-898f642fd4e0",
+  "name": "Basic Drop-down Menu",
+  "location": "dropdowns/basic.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}

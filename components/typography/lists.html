@@ -1,0 +1,72 @@
+<section class="css-reference">
+  <h5>Unordered Lists</h5>
+  <p>Use a single or nested <code data-tag="ul"></code> tag.</p>
+  <pre data-title="ul">
+    <style data-selector="ul"></style>
+  </pre>
+  <pre data-title="ul ul">
+    <style data-selector="ul ul"></style>
+  </pre>
+
+  <h5>Ordered Lists</h5>
+  <p>Use single or nested <code data-tag="ol"></code> tag.</p>
+  <pre data-title="ol">
+    <style data-selector="ol"></style>
+  </pre>
+  <pre data-title="ol ol">
+    <style data-selector="ol ol"></style>
+  </pre>
+
+  <h5>Unordered Inline Lists</h5>
+  <p>Place all the listed items on a single line with <code data-html="display: inline-block"></code>, and a pair of grey margins.</p>
+  <pre data-title="ul">
+    <style data-selector=".list-inline"></style>
+  </pre>
+  <pre data-title="li">
+    <style data-selector=".list-inline > li"></style>
+  </pre>
+  <pre data-title="li:first">
+    <style data-selector=".list-inline > li:first-child"></style>
+  </pre>
+  <pre data-title="li a">
+    <style data-selector=".list-inline > li a">Hyperlink wrapped in the inline list</style>
+  </pre>
+  <pre data-title="li a:hover, li a:focus">
+    <style data-selector=".list-inline > li a:hover">Hyperlink wrapped in the inline list</style>
+  </pre>
+</section>
+
+<section>  
+	<div class="lists-unordered">
+		<h6>Unordered Lists</h6>
+		<p>Use unordered lists if you do not want to imply a particular sequence for the listed items.</p>
+		<ul>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Consectetur adipiscing elit
+				<ul>
+					<li>Phasellus iaculis neque</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<hr>
+	<div>
+		<h6>Ordered Lists</h6>
+		<p>Use ordered lists to imply a particular sequence for the listed items.</p>
+		<ol>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Consectetur adipiscing elit</li>
+			<li>Integer molestie lorem at massa</li>
+		</ol>
+	</div>
+	<hr>
+	<div>
+		<h6>Unordered Inline Lists</h6>
+		<p>Place all list items on a single line with margin.</p>
+		<ul class="list-inline">
+			<li><a href="javascript:;">Link item A</a></li>
+			<li><a href="javascript:;">Link item B</a></li>
+			<li><a href="javascript:;">Link item C</a></li>
+		</ul>	
+	</div>
+</section>

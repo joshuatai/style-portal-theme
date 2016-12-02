@@ -1,0 +1,27 @@
+<section class="css-reference">
+  <p>Increase inner spacing to <code data-tag="a"></code> elements and mark selected items.</p>
+  <pre data-title="Replace default inner spacing">
+    <style data-selector=".dropdown-menu-multi-select > li > a"></style>
+  </pre>
+  <pre data-title="Selected items">
+    <style data-selector=".dropdown-menu-multi-select > li.selected a:before">Displays checkmark before selected items</style>
+  </pre>
+</section>
+
+<section class="dropdown-example">
+  <p>Drop-down menus can contain checkboxes or checkmarks to indicate the selected option(s).</p>
+  <p>
+    <div class="dropdown open">
+      <button class="btn btn-border dropdown-toggle" type="button">
+        <span class="caret"></span>View severity
+      </button>
+      
+      <ul class="dropdown-menu dropdown-menu-multi-select">
+        <li class="selected"><a href="#">Hight</a></li>
+        <li><a href="javascript:;">Medium</a></li>
+        <li><a href="javascript:;">Low</a></li>
+        <li><a href="javascript:;">Safe</a></li>
+      </ul>
+    </div>
+  </p>
+</section>

@@ -1,0 +1,17 @@
+{
+  "id": "ca9d6a55-c645-4a6e-9b56-19c3ef7ae783",
+  "name": "Form Groups",
+  "location": "form-layout/form-groups.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-8"
+  }
+}
