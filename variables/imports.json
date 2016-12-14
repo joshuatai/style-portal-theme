@@ -13,5 +13,11 @@
   "dropdown",
   "breadcrumb",
   "modal",
-  "tooltip"
+  "pagination",
+  "popovers",
+  "tooltip",
+  "labels",
+  "alerts",
+  "badges",
+  "tables"
 ]
