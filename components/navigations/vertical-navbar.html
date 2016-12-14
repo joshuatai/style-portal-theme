@@ -1,0 +1,182 @@
+<section class="css-reference">
+  <h5>Vertical Navigation Bar</h5>
+  <p>A vertical navigation bar can created with a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".navigation"></style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand">Click toggle button to expand the vertical navigation bar</style>
+  </pre>
+
+  <h5>Vertical Navigation Bar Toggle Button</h5>
+  <p>Use a <code data-tag="button"></code> element to wrap the hamburger menu icon</p>
+  <pre>
+    <style data-selector=".sidebar-toggle"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".sidebar-toggle:focus"></style>
+  </pre>
+
+  <h5>Vertical Navigation Bar Hamburger Menu Icon</h5>
+  <p>A hamburger navigation icon can created with three <code data-tag="span"></code> element</p>
+  <pre>
+    <style data-selector=".sidebar-toggle span"></style>
+    <style data-selector=".sidebar-toggle .icon-bar"></style>
+    <style data-selector=".sidebar-toggle .icon-bar + .icon-bar"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".sidebar-toggle:hover span"></style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand .sidebar-toggle span"></style>
+    <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(2)">First span</style>
+    <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(3)">Second span</style>
+    <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(4)">Third span</style>
+  </pre>
+
+  <h5>Vertical Navigation Bar Wrapper</h5>
+  <p>Wrap items with a <code data-tag="ul"></code> element.</p>
+  <pre>
+    <style data-selector=".navigation-items"></style>
+  </pre>
+
+  <h5>Vertical Navigation Bar Item</h5>
+  <p>Use <code data-tag="li"></code> options under <code data-tag="ul"></code> elements.</p>
+  <pre>
+    <style data-selector=".navigation-items > li"></style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded="true"]::after">::after</style>
+  </pre>
+  <pre data-title="selected">
+    <style data-selector=".navigation.expand .navigation-items > li.selected > [aria-expanded="true"]::after"></style>
+  </pre>
+
+  <h5>Vertical Navigation Bar Item Options</h5>
+  <p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
+  <pre>
+    <style data-selector=".navigation-items > li > a"></style>
+    <style data-selector=".navigation-items > li.selected > a[data-parent="#navigation-items"]"></style>
+  </pre>
+  <pre data-title="::after">
+    <style data-selector=".navigation-items > li > a::after"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".navigation-items > li:hover > a::after"></style>
+  </pre>
+  <pre data-title="selected">
+    <style data-selector=".navigation-items > li.selected > a::after"></style>
+  </pre>
+
+  <h5>Icon and Text within Vertical Navigation Bar Item Options</h5>
+  <pre data-title="Icon Class">
+    <style data-selector=".navigation-items > li > a > i"></style>
+  </pre>
+  <pre data-title="Text Class">
+    <style data-selector=".navigation-items > li > a > i + span"></style>
+    <style data-selector=".navigation-items > li > a > span"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".navigation-items > li:hover > a > i"></style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded="true"] > i">Both icon and text</style>
+  </pre>
+  <pre data-title="Text with icon">
+    <style data-selector=".navigation.expand .navigation-items > li i + span"></style>
+  </pre>
+
+  <h5>Sub Menu within Vertical Navigation Bar Item</h5>
+  <p>Wrap items with a <code data-tag="ul"></code> element.</p>
+  <pre>
+    <style data-selector="ul.sub-nav"></style>
+    <style data-selector=".navigation.collapsed .navigation-items ul.sub-nav"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".navigation.collapsed .navigation-items > li:hover > ul.sub-nav"></style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand ul.sub-nav"></style>
+  </pre>
+
+  <h5>Sub Menu Item within Vertical Navigation Bar Item</h5>
+  <p>Use <code data-tag="li"></code> options under <code data-tag="ul"></code> elements.</p>
+  <pre data-title="Only one option">
+    <style data-selector="ul.sub-nav.without-page > li"></style>
+  </pre>
+  <pre data-title=":nth">
+    <style data-selector="ul.sub-nav > li:nth-child(2)"></style>
+  </pre>
+  <pre data-title=":last">
+    <style data-selector="ul.sub-nav > li:last-child"></style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand ul.sub-nav > li"></style>
+  </pre>
+  <pre data-title=":first">
+    <style data-selector=".navigation.expand ul.sub-nav > li:first-child"></style>
+  </pre>
+  <pre data-title="selected">
+    <style data-selector=".navigation.expand ul.sub-nav > li.selected"></style>
+  </pre>
+
+  <h5>Sub Menu Item Options within Vertical Navigation Bar Item</h5>
+  <p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
+  <pre>
+    <style data-selector="ul.sub-nav > li > a"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector="ul.sub-nav > li:hover > a"></style>
+  </pre>
+  <pre data-title="select">
+    <style data-selector="ul.sub-nav > li.selected > a"></style>
+    <style data-selector="ul.sub-nav > li:first-child h4">Use h4 tag under the first li elements</style>
+    <style data-selector="ul.sub-nav.without-page > li > h4">Only one option</style>
+  </pre>
+  <pre data-title="Expand State">
+    <style data-selector=".navigation.expand ul.sub-nav > li > a"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".navigation.expand ul.sub-nav > li:hover > a"></style>
+  </pre>
+  <pre data-title="selected">
+    <style data-selector=".navigation.expand ul.sub-nav > li.selected > a"></style>
+  </pre>
+</section>
+
+<section class="navbar-example">
+  <div>
+    <ul class="description">
+      <li>A vertical navigation bar is one that has tabs put vertically on the side.</li>
+    </ul>
+    <div class="col-example ">
+      <div class="navigation collapsed">
+          <button class="sidebar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <ul id="sidebarExample" class="navigation-items"></ul>
+      </div>
+      <header>
+          <a href="javascript:;" class="banner">
+            <img src="dist/img/tball.svg" alt="Style Portal">
+            <h1>Product Name</h1>
+          </a>             
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
+            <li class="dropdown">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Change Password</a></li>
+                <li><a href="javascript:;">Log off</a></li>
+              </ul>
+            </li>
+          </ul>
+      </header>
+    </div>
+  </div>
+</section>

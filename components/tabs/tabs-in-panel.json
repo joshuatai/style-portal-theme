@@ -1,7 +1,7 @@
 {
-  "id": "2da9337d-af76-49f9-adef-a12996c5a67f",
-  "name": "Drop-down Buttons",
-  "location": "buttons/dropdown.html",
+  "id": "9bb5afb1-9dd0-4835-9e02-5d5a8ce1c57c",
+  "name": "In-Panel Tabs",
+  "location": "tabs/tabs-in-panel.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-10"
+    "row": "row-md-6"
   }
 }

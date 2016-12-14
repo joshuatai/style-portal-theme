@@ -59,18 +59,18 @@
       "4534d75a-66fc-4a44-8bf9-972198f870fc",
       "fcd98d30-d6bf-4b30-b50d-fafe594cf7bc",
       "4ebd3d3a-5ca6-42a9-86b2-38735dcf99e7",
-      "111d3211-7358-42c8-be48-da90f4ca60df",
       "a33044fb-3210-43dc-9ac9-c896eadf3793",
-      "2da9337d-af76-49f9-adef-a12996c5a67f"
+      "111d3211-7358-42c8-be48-da90f4ca60df"
     ]
   },
   {
     "id": "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
-    "name": "Drop-down Menus",
+    "name": "Dropdowns",
     "keywords": [
       "dropdown"
     ],
     "segments": [
+      "2da9337d-af76-49f9-adef-a12996c5a67f",
       "6b663fa8-746a-4dda-8db8-898f642fd4e0",
       "e40a8bbe-da8b-4509-b516-8406c13cf6f0",
       "b4c96107-a075-4c9d-8baf-526072649ac6",
@@ -120,7 +120,11 @@
     "keywords": [
       "navigation"
     ],
-    "segments": []
+    "segments": [
+      "64760149-30ad-41cc-bb07-e2e98e6d6c7b",
+      "74ab8123-c3c6-4272-b7de-0e3bff4fd08c",
+      "cd872a06-e1ed-46fc-92ec-3aa4b85ebd18"
+    ]
   },
   {
     "id": "168263ea-0f3f-4782-8a37-f18334007680",
@@ -180,7 +184,11 @@
     "keywords": [
       "tab"
     ],
-    "segments": []
+    "segments": [
+      "b1118ae9-ed8f-4da7-a401-a0ad910ca3a8",
+      "d715316d-b355-4029-b041-c5efb4f4dc01",
+      "9bb5afb1-9dd0-4835-9e02-5d5a8ce1c57c"
+    ]
   },
   {
     "id": "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f",
