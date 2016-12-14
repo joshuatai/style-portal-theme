@@ -58,6 +58,9 @@
     text-decoration: none;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }
+  > li.dropdown-submenu > a {
+    padding-right: 32px;
+  }
   
   .fa {
     margin-right: @base-space;
@@ -254,7 +257,7 @@
     border: @caret-width-base solid transparent;
     border-right-width: 0;
     border-left-color: @dropdown-caret-color;
-    margin: 6px 0 6px 12px;
+    margin: 6px -16px 6px 0;
   }
   
   &:hover > .dropdown-menu,
