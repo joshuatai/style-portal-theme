@@ -1,0 +1,53 @@
+//
+// Custom scrollbar
+// --------------------------------------------------
+
+.mCSB_inside > .mCSB_container {
+	margin-right: 8px;
+}
+
+.mCSB_scrollTools {
+	width: 8px;
+
+  .mCSB_draggerRail {
+    width: 8px;
+    border-radius: 0;
+  }
+  
+  .mCSB_dragger .mCSB_dragger_bar {
+    background-color: rgba(0, 0, 0, .3);
+    border: 1px solid rgba(0, 0, 0, .15);
+    width: 8px;
+    border-radius: 0;
+  }
+
+  .mCSB_dragger .mCSB_dragger_bar:hover {
+    background-color: rgba(0, 0, 0, .35);
+    border: 1px solid rgba(0, 0, 0, .25);
+  }
+
+  .mCSB_dragger:active .mCSB_dragger_bar,
+  .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: rgba(0, 0, 0, .35);
+    border: 1px solid rgba(0, 0, 0, .25);
+  }
+}
+
+.mCustomScrollbar-box-hover,
+.mCustomScrollbar-dragger-hover {
+  .mCSB_draggerRail {
+    background-color: transparent;
+  }
+}
+
+.mCustomScrollbar-box-hover {
+  .mCustomScrollBox:hover .mCSB_draggerRail {
+    background-color: rgba(0, 0, 0, .15);
+  }
+}
+
+.mCustomScrollbar-dragger-hover {
+  .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    background-color: rgba(0, 0, 0, .15);
+  }
+}
