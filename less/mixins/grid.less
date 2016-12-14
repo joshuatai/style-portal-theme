@@ -13,8 +13,8 @@
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
-  //margin-left:  ceil((@gutter / -2));
-  //margin-right: floor((@gutter / -2));
+  margin-left:  ceil((@gutter / -2));
+  margin-right: floor((@gutter / -2));
   &:extend(.clearfix all);
 }
 
@@ -117,6 +117,34 @@
 }
 .make-lg-column-pull(@columns) {
   @media (min-width: @screen-lg-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the xlarge columns
+.make-xl-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @screen-xl-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+.make-xl-column-offset(@columns) {
+  @media (min-width: @screen-xl-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-xl-column-push(@columns) {
+  @media (min-width: @screen-xl-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-xl-column-pull(@columns) {
+  @media (min-width: @screen-xl-min) {
     right: percentage((@columns / @grid-columns));
   }
 }
