@@ -1,0 +1,47 @@
+<section class="css-reference">
+  <h5>Light Tab Wrapper</h5>
+  <p>Wrap all light tabs with a <code data-tag="ul"></code> element. Please extend the nav class to define tab style.</p>
+  <pre data-title=":before">
+    <style data-selector=".nav:before"></style>
+  </pre>
+  <pre data-title=":after">
+    <style data-selector=".nav:after"></style>
+  </pre>
+
+  <h5>Light Tab</h5>
+  <p>Use <code data-tag="li"></code> options under <code data-tag="ul"></code> elements.</p>
+  <pre>
+    <style data-selector=".nav-pills > li"></style>
+  </pre>
+  <pre data-title=":not(:first">
+    <style data-selector=".nav-pills > li + li"></style>
+  </pre>
+
+  <h5>Light Tab Label</h5>
+  <p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
+  <pre>
+    <style data-selector=".nav-pills > li > a"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".nav-pills > li > a:hover"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".nav-pills > li > a:focus"></style>
+  </pre>
+
+  <h5>Light Tab Label Selected State</h5>
+  <pre data-title=":hover, :focus">
+    <style data-selector=".nav-pills > li.active > a:hover"></style>
+  </pre>
+</section>
+
+<section class="tab-example">
+  <p>Use when the tabs need less emphasis in reltion to other navigational elements.</p>
+
+	<ul class="nav nav-pills">
+		<li class="active"><a href="#Item1" aria-controls="Item1" role="tab" data-toggle="tab">Item1</a></li>
+		<li><a href="#Item2" aria-controls="Item2" role="tab" data-toggle="tab">Item2</a></li>
+		<li><a href="#Item3" aria-controls="Item3" role="tab" data-toggle="tab">Item3</a></li>
+		<li><a href="#Item4" aria-controls="Item4" role="tab" data-toggle="tab">Item4</a></li>
+	</ul>
+</section>

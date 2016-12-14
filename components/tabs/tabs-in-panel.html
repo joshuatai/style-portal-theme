@@ -1,0 +1,55 @@
+<section class="css-reference">
+  <h5>In-Panel Tab Wrapper</h5>
+  <p>Wrap all light tabs with a <code data-tag="ul"></code> element. Please extend the nav class to define tab style.</p>
+  <pre>
+    <style data-selector=".nav-justified"></style>
+  </pre>
+  <pre data-title=":before">
+    <style data-selector=".nav:before"></style>
+  </pre>
+  <pre data-title=":after">
+    <style data-selector=".nav:after"></style>
+  </pre>
+
+  <h5>In-Panel Tab</h5>
+  <p>Use <code data-tag="li"></code> options under <code data-tag="ul"></code> elements.</p>
+  <pre>
+    <style data-selector=".nav-justified > li"></style>
+  </pre>
+
+  <h5>In-Panel Tab Label</h5>
+  <p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
+  <pre>
+    <style data-selector=".nav-justified > li > a"></style>
+  </pre>
+  <pre data-title="li + li > a">
+    <style data-selector=".nav-justified > li + li > a">Prevent double borders when tabs are next to each other</style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".nav-justified > li > a:hover"></style>
+  </pre>
+
+  <h5>Light Tab Label Selected State</h5>
+  <pre data-title=":hover, :focus">
+    <style data-selector=".nav-justified > li.active > a:hover"></style>
+  </pre>
+</section>
+
+<section class="tab-example">
+  <p>The width of each in-panel tab should be the length of the window divided by the total number of tabs.</p>
+	<div class="justified-tabs-example">
+		<ul class="nav nav-justified">
+			<li class="active"><a href="#Item1" aria-controls="Item1" role="tab" data-toggle="tab">Item1</a></li>
+			<li><a href="#Item2" aria-controls="Item2" role="tab" data-toggle="tab">Item2</a></li>
+			<li><a href="#Item3" aria-controls="Item3" role="tab" data-toggle="tab">Item3</a></li>
+			<li><a href="#Item4" aria-controls="Item4" role="tab" data-toggle="tab">Item4</a></li>
+		</ul> 
+		<!-- Tab panes -->
+	  	<div class="tab-content">
+	    	<div role="tabpanel" class="tab-pane active"></div>
+	    	<div role="tabpanel" class="tab-pane"></div>
+	    	<div role="tabpanel" class="tab-pane"></div>
+	    	<div role="tabpanel" class="tab-pane"></div>
+	  	</div>
+	</div>
+</section>

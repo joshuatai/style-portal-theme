@@ -30,6 +30,11 @@
     <style data-selector=".dropdown-toggle.btn-link:hover .caret"></style>
   </pre>
 
+  <h5>Label in Dropdown</h5>
+  <pre>
+    <style data-selector=".dropdown-toggle .btn-label"></style>
+  </pre>
+
   <h5>Sizes</h5>
   <p>Buttons Dropdowns should work for buttons of all sizes.</p>
   <pre data-title="Split button dropdowns with large size, such as:">
@@ -41,10 +46,10 @@
 </section>
 
 <section class="button-dropdowns-example">
-    <p>Use a drop-down menu to provide a list of options for the user.</p>   
+    <p>Dropdown buttons are elements that are used to display drop-down menus.</p>   
     <div class="inline-block-group"> 
         <div class="inline-block">
-            <h5>Single</h5>
+            <h5>Basic</h5>
             <div class="btn-group">
                 <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>Dropdown</button>
@@ -54,23 +59,7 @@
                     <li><a href="#">Something else here</a></li>                
                 </ul>
             </div>
-        </div>
-        <div class="inline-block">
-            <h5>Split</h5>
-            <div class="btn-group">
-                <button type="button" class="btn btn-border">Default</button>
-                <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>                    
-                </ul> 
-            </div>
-        </div>
-    </div>      
-    <div class="inline-block-group">   
+        </div>    
         <div class="inline-block">
             <h5>Text</h5>
             <div class="btn-group">
@@ -83,9 +72,29 @@
                     <li><a href="#">Something else here</a></li>                    
                 </ul>
             </div>
-        </div>
-        <div class="inline-block">
+        </div>    
+    </div>      
+    <div class="inline-block-group">  
+        <div>
+            <h5>Split</h5>
+            <p>A split drop-down button contains an arrow that is divided from its menu. An selected option can be clicked to perform the action.</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-border">Default</button>
+                <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>                    
+                </ul> 
+            </div>
+        </div>        
+    </div> 
+    <div class="inline-block-group">  
+        <div>
             <h5>Icon</h5>
+            <p>Icon dropdowns are those that contain an icon in the drop-down menus. These dropdowns may or may not contain text.</p>
             <div class="btn-group">
                 <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span><span class="fa fa-database"></span>All Devices
@@ -97,8 +106,26 @@
                 </ul>
             </div>
         </div>
-    </div>     
+    </div>    
+    <div class="inline-block-group">  
+        <div>
+            <h5>Labels</h5>
+            <p>Labels can be included in drop-down buttons to present a clean look, especially when multiple drop-down buttons are lined next to each other.</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span><span class="btn-label">Type:</span> All
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">IP Addresses</a></li>  
+                    <li><a href="#">URLs</a></li>                  
+                </ul>
+            </div>
+        </div>
+    </div> 
     <h5>Sizes</h5>
+    <p>There are 4 sizes of dropdowns:</p>
     <div class="btn-group">
         <button type="button" class="btn btn-border btn-lg dropdown-toggle">
             <span class="caret"></span>Large

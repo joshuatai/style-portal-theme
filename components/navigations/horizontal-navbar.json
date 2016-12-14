@@ -1,7 +1,7 @@
 {
-  "id": "2da9337d-af76-49f9-adef-a12996c5a67f",
-  "name": "Drop-down Buttons",
-  "location": "buttons/dropdown.html",
+  "id": "74ab8123-c3c6-4272-b7de-0e3bff4fd08c",
+  "name": "Horizontal Navigation Bar",
+  "location": "navigations/horizontal-navbar.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-10"
+    "row": "row-md-12"
   }
 }
