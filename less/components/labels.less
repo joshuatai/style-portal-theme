@@ -1,0 +1,83 @@
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  display: inline-block;
+  padding: 3px 5px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  font-size:12px;
+  color: @label-color;
+  
+  // Add hover effects, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      color: @label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Colors
+
+.label-blue {
+  background-color: @label-blue-bg;
+}
+
+.label-green {
+  background-color: @label-green-bg;
+}
+
+.label-cyan {
+  background-color: @label-cyan-bg;
+}
+
+.label-orange {
+  background-color: @label-orange-bg;
+}
+
+.label-red {
+  background-color: @label-red-bg;
+}
+
+.label-indigo {
+  background-color: @label-indigo-bg;
+}
+
+.label-yellow {
+  background-color: @label-yellow-bg;
+  color: #666666;
+}
+
+.label-light-gray {
+  background-color: @label-light-gray-bg;
+  color: #666666;
+}
+
+.label-gray {
+  background-color: @label-gray-bg;
+}
+
+.label-dark {
+  background-color: @label-dark-bg;
+}
+
+
+

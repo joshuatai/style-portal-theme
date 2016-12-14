@@ -1,0 +1,159 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  border-radius: @border-radius-base;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: 5px 0;
+      text-decoration: none;
+      color: @pagination-color;
+      background-color: @pagination-bg;
+      border: 1px solid @pagination-border;
+      margin-left: -1px;
+      width: 32px;
+      text-align: center;
+    }
+    &:first-child { //The icon border
+      > a,
+      > span {
+        margin-left: 0;
+        .border-left-radius(@border-radius-base);
+      }
+    }
+    &:last-child {
+      > a,
+      > span { //The icon border
+        .border-right-radius(@border-radius-base);
+      }
+    }
+  }
+
+  //The icon color
+  > li > a,
+  > li > span {
+    &.fa {
+      color: #666666;
+    }
+  }
+
+  //The pagination hover and focus status
+  > li > a,
+  > li > span {
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: @pagination-hover-color;
+      background-color: @pagination-hover-bg;
+      border-color: @pagination-hover-border;
+    }
+  }
+
+  //The pagination active status
+  > li > a:active,
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: @pagination-active-color;
+      background-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .1) inset;
+      background-image: none;
+    }
+  }
+
+
+  //The pagination default active status
+  > .active > a,
+  > .active > span {
+    cursor: default;
+  }
+
+  //The pagination disabled class status
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @pagination-disabled-color;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
+      cursor: @cursor-disabled;
+      opacity: .4;
+    }
+  }
+}
+.table-pagination{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    display: inline-block;
+    
+ .table-pagination-block {
+    float: right;
+    > div {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      margin-right: 16px;
+      float: left;
+    }
+    .pagination{
+      vertical-align: top;
+    }
+    .pagination-records{
+      color: #666666;
+      font-size: 13px;
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+    .pagination-records + .dropdown{
+      border-left: 1px solid #dddddd;
+    }
+    .dropdown{
+      padding-left: 16px;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      .dropdown-menu{
+        left: 16px;
+        top: (@line-height-base-computed + @padding-base-vertical + 2);
+      }
+      .btn{
+        border-left: 0;
+        border-right: 0;
+        color: #666666;
+        font-size: 13px;
+        &:hover {
+          color: @link-color;
+          .caret{
+            border-top: 4px dashed @link-color;
+          }
+        }
+      }
+    }
+    .pagination-input{
+      color: #666666;
+       > input{
+        width: 32px;
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 3px;
+        border: 1px solid #cccccc;
+        &:focus{
+          border: 1px solid #0096cc;
+        }
+      }
+    }
+  }
+}

@@ -8,35 +8,6 @@
   position: relative;
 }
 
-// Replace min-width from 80px (.btn) to 0
-.dropdown-toggle {
-  min-width: 0;
-  
-  .caret {
-    float: right; // To ensure the caret float to right
-    margin: 8px 0 8px 12px;
-  }
-  
-  &.btn-border{
-    padding: 5px 12px;
-    text-align: left;
-  }
-  
-  &.btn-icon-only{
-    text-align: center;
-  }
-
-  &.btn-link{
-    color: @text-color;
-    padding: 5px 0;
-    text-decoration: none;
-
-    &:hover {
-      color: @link-color;
-    }
-  }
-}
-
 // Prevent the focus on the dropdown toggle when closing dropdowns
 .dropdown-toggle:focus {
   outline: 0;
@@ -52,7 +23,7 @@
   float: left;
   min-width: 0;
   padding: @base-space 0;
-  margin: -1px 0 0; // override default ul
+  margin: 0; // override default ul
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -60,7 +31,7 @@
   border: 1px solid @dropdown-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-border;
   border-radius: 0;
-  .box-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  .box-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -95,6 +66,7 @@
   .badge {
     float: right;
     margin-left: 24px;
+    margin-top: 1px;
   }
 }
 
@@ -180,7 +152,7 @@
 }
 
 .dropdown-menu-multi-select > li.selected a:before{
-	background-image: url(../img/icon_check.svg);
+	background-image: url(../images/icon/check.svg);
 	background-position: 0 2px;
 	background-repeat: no-repeat;
 	content: "";
@@ -200,6 +172,10 @@
   color: @dropdown-header-color;
   text-transform: uppercase;
   white-space: nowrap; // as with > li > a
+}
+
+.dropdown-header ~ li > a {
+  padding-left: (@padding-small-horizontal + 12px);
 }
 
 // Backdrop to catch body clicks on mobile, etc.
@@ -303,13 +279,13 @@
 }
 
 .dropdown-menu-filter {
-	border-bottom: 1px solid @dropdown-divider-bg;
-	padding: @base-space;
+	margin: @base-space;
 }
 
 .dropdown-menu-scrollable {
 	max-height: 148px;
   overflow-y: auto;
+  border-top: 1px solid @dropdown-divider-bg;
   
   .dropdown-menu {
     position: static;

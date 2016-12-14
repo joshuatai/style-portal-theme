@@ -1,0 +1,73 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @background-top; @background-bottom; @border; @background-hover-top; @background-hover-bottom; @border-hover; @border-focus; @background-active; @border-active; @active-shadow) {
+  color: @color;
+  background-color: @background;
+  #gradient > .vertical(@start-color: @background-top; @end-color: @background-bottom);
+  border-color: @border;
+
+  &:hover,
+  &.hover,  
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: @background-hover-top;
+    #gradient > .vertical(@start-color: @background-hover-top; @end-color: @background-hover-bottom);    
+    border-color: @border-hover;
+  }
+  
+  &:focus,
+  &.focus {
+    color: @color;
+    border-color: @border-focus;
+  }
+
+  &:active,
+  &.active {
+    color: @color;
+    background-color: @background-active;
+        border-color: @border-active;
+    .box-shadow(@active-shadow);
+    
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      color: @color;      
+          border-color: @border-active;
+      .box-shadow(@active-shadow);
+    }
+  }
+  
+  &:active,
+  &.active,
+  .open > .dropdown-toggle&  {
+    background-image: none;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    .opacity(.4);
+    cursor: @cursor-disabled;
+    
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+      #gradient > .vertical(@start-color: @background-top; @end-color: @background-bottom);
+      border-color: @border;
+    }
+  } 
+}
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}

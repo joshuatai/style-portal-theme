@@ -1,0 +1,80 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  font-family: @font-family-arial;
+  font-size: @font-size-base;
+  color: @gray-base;
+  padding: 8px 16px 8px 24px;
+  border-radius: 0;
+  .icon{
+    margin-right: 8px;
+    vertical-align: top;
+    margin-top: 2px;
+  }
+  .icon-cancel{
+    margin-right: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+.alert + .alert {
+  margin-top: 1px;
+}
+
+.alert .btn-xs{
+  margin-left: 12px;
+}
+
+.cancel{
+  opacity: 0.4;
+}
+
+.cancel:hover{
+  opacity: 1;
+}
+
+
+.toast-alert{
+  position: absolute;
+  padding: 8px 12px 8px 16px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  min-width: 280px;
+  max-width: 680px;
+}
+
+.toast-alert-top{
+  top: 8px;
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+  background-color: @alert-success-bg;
+  border: @alert-success-border;
+}
+
+.alert-info {
+  background-color: @alert-info-bg;
+  border: @alert-info-border;
+}
+
+.alert-warning {
+  background-color: @alert-warning-bg;
+  border: @alert-warning-border;
+}
+
+.alert-danger {
+  background-color: @alert-danger-bg;
+  border: @alert-danger-border;
+}
+

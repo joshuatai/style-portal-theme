@@ -1,0 +1,189 @@
+//
+// Popovers
+// --------------------------------------------------
+
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: @zindex-popover;
+  display: none;
+  max-width: @popover-max-width;
+  padding: 0;
+  // Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  .reset-text();
+  font-size: @font-size-base;
+
+  background-color: @popover-bg;
+  background-clip: padding-box;
+  border: 1px solid @popover-fallback-border-color;
+  border: 1px solid @popover-border-color;
+  border-radius: @border-radius-base;
+  .box-shadow(0 2px 6px rgba(0,0,0,.2));
+
+  // Offset the popover to account for the popover arrow
+  // It contains 3px gap between popover and its trigger
+  &.top,
+  &.top-right,
+  &.top-left {
+    margin-top: (-@popover-arrow-width - 3);
+  }
+
+  &.right,
+  &.right-top,
+  &.right-bottom {
+    margin-left: (@popover-arrow-width + 3);
+  }
+  
+  &.bottom,
+  &.bottom-right,
+  &.bottom-left  {
+    margin-top: (@popover-arrow-width + 3);
+  }
+  
+  &.left,
+  &.left-top,
+  &.left-bottom {
+    margin-left: (-@popover-arrow-width - 3);
+  }
+}
+
+.popover-title {
+  margin: 0; // reset heading margin
+  font-family: @font-family-arial;
+  font-size: @font-size-large;
+  font-weight: normal;
+  background-color: @popover-title-bg;
+  border-bottom: 0;
+  border-radius: 0;
+  padding: 12px @padding-base-horizontal 0;
+}
+
+.popover-content {
+  padding: 12px @padding-base-horizontal;
+}
+
+.popover-footer {
+  background-color: @gray-lighter;
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+  padding: @base-space @padding-base-horizontal;
+}
+
+// Arrows
+//
+// .arrow is outer, .arrow:after is inner
+
+.popover > .arrow {
+  &,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+.popover > .arrow {
+  border-width: @popover-arrow-outer-width;
+}
+.popover > .arrow:after {
+  border-width: @popover-arrow-width;
+  content: " ";
+}
+
+.popover {
+  &.top > .arrow,
+  &.top-right > .arrow,
+  &.top-left > .arrow {
+    border-bottom-width: 0;
+    border-top-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-top-color: @popover-arrow-outer-color;
+    bottom: -@popover-arrow-outer-width;
+    &:after {
+      bottom: 1px;
+      margin-left: -@popover-arrow-width;
+      border-bottom-width: 0;
+      border-top-color: @popover-arrow-color;
+    }
+  }
+
+  &.right > .arrow,
+  &.right-top > .arrow,
+  &.right-bottom > .arrow {
+    left: -@popover-arrow-outer-width;
+    border-left-width: 0;
+    border-right-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-right-color: @popover-arrow-outer-color;
+    &:after {
+      left: 1px;
+      bottom: -@popover-arrow-width;
+      border-left-width: 0;
+      border-right-color: @popover-arrow-color;
+    }
+  }
+
+  &.bottom > .arrow,
+  &.bottom-right > .arrow,
+  &.bottom-left > .arrow {
+    border-top-width: 0;
+    border-bottom-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-bottom-color: @popover-arrow-outer-color;
+    top: -@popover-arrow-outer-width;
+    &:after {
+      top: 1px;
+      margin-left: -@popover-arrow-width;
+      border-top-width: 0;
+      border-bottom-color: @popover-arrow-color;
+    }
+  }
+
+  &.left > .arrow,
+  &.left-top > .arrow,
+  &.left-bottom > .arrow {
+    right: -@popover-arrow-outer-width;
+    border-right-width: 0;
+    border-left-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-left-color: @popover-arrow-outer-color;
+    &:after {
+      right: 1px;
+      border-right-width: 0;
+      border-left-color: @popover-arrow-color;
+      bottom: -@popover-arrow-width;
+    }
+  }
+
+  &.top > .arrow,
+  &.bottom > .arrow {
+    left: 50%;
+    margin-left: -@popover-arrow-outer-width;
+  }
+
+  &.right > .arrow,
+  &.left > .arrow {
+    top: 50%;
+    margin-top: -@popover-arrow-outer-width;
+  }
+
+  &.right-bottom > .arrow,
+  &.left-bottom > .arrow {
+    top: @padding-base-horizontal;
+  }
+
+  &.right-top > .arrow,
+  &.left-top > .arrow {
+    bottom: @padding-base-horizontal;
+  }
+
+  &.top-right > .arrow,
+  &.bottom-right > .arrow {
+    left: @padding-base-horizontal;
+  }
+  
+  &.top-left > .arrow,
+  &.bottom-left > .arrow {
+    right: @padding-base-horizontal;
+  }
+}

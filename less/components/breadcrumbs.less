@@ -8,18 +8,16 @@
   list-style: none;
   background-color: @breadcrumb-bg;  
   margin-bottom: @breadcrumb-margin;
-
   &.with-line {
     border-bottom: @breadcrumb-border-width @breadcrumb-border-color solid;
     margin-bottom: (@base-space * 2);
   }
-  
+
   > li {
     display: inline-block;
     font-size: @breadcrumb-font-size;
     color: @breadcrumb-color;
     line-height: @breadcrumb-line-height;
-    
     > a {
       color: @breadcrumb-color;
       text-decoration: none;
@@ -27,7 +25,6 @@
         color: @link-color;
       }
     }
-    
     + li:before {
       content: @breadcrumb-separator;
       padding: 0 5px;
