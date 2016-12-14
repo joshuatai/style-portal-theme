@@ -10,7 +10,8 @@
     "c1beeb74-7df3-4341-9490-2cb80371de2c"
   ],
   "dependencies": [
-    "prettify-298"
+    "prettify-298",
+    "mcustom-scrollbar-3.1.5"
   ],
   "archives": {
     "icon": [
