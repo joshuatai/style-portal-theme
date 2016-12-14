@@ -19,5 +19,7 @@
   "labels",
   "alerts",
   "badges",
-  "tables"
+  "tables",
+  "navs",
+  "navbar"
 ]
