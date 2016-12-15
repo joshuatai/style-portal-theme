@@ -1,0 +1,51 @@
+.typography-example .row {
+  margin: 0 0 24px 0;
+}
+.typography-example .row:first-of-type {
+  margin-top: 24px;
+}
+.typography-example .row > label {
+  display: inline-block;
+  width: 95px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.typography-example .row span,
+.typography-example .row h1,
+.typography-example .row h2,
+.typography-example .row h3,
+.typography-example .row h4,
+.typography-example .row h5,
+.typography-example .row h6 {
+  display: inline-block;
+  margin: 0 !important;
+  vertical-align: middle;
+}
+@media (max-width: 1325px) {
+  .typography-example .row {
+    margin-bottom: 6px;
+  }
+  .typography-example .row > label,
+  .typography-example .row span,
+  .typography-example .row h1,
+  .typography-example .row h2,
+  .typography-example .row h3,
+  .typography-example .row h4,
+  .typography-example .row h5,
+  .typography-example .row h6 {
+    display: block;
+  }
+  .typography-example .row:first-of-type {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 1240px) {
+  .typography-example .row {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 1075px) {
+  .typography-example .row {
+    margin-bottom: 1px;
+  }
+}
