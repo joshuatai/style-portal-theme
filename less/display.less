@@ -48,29 +48,27 @@ pre.prettyprint {
   white-space: normal;
 }
 
-/* modal */
-
-@media (min-width: 768px) {
-  .modal-dialog {
-    width: 650px;
-  }
+/* TODO: It should be replace for sepecifying*/
+ul.description { 
+  list-style-type: disc;      
+  margin-bottom: 20px;   
 }
 
-@media (min-width: 1024px) {
-  .modal-dialog {
-    width: 850px;
+.example {
+  position: relative;
+  padding: 45px 0 15px;
+  margin-bottom: 20px;
+  &:after {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
-
-@media (min-width: 1920px) {
-  .modal-dialog {
-    width: 1200px;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .modal-dialog {
-    width: 95%;
-  }
-}
-
