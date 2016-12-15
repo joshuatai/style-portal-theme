@@ -1,0 +1,15 @@
+.badge-example p {
+  margin-bottom: 22px;
+}
+.badge-example .badge {
+  margin-right: 12px;
+}
+.badge-example .dropdown {
+  margin-top: 8px;
+}
+.badge-example .dropdown .dropdown-menu {
+  width: 150px;
+}
+.badge-example .dropdown .badge {
+  margin-right: 0;
+}
