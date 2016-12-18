@@ -40,7 +40,7 @@ var object = [
     ]
   }
 ];
-
+/*
 $sidebar.category({
   type: 'sidebar',
   data: object,
@@ -52,3 +52,4 @@ $sidebar.category({
   dataParent: "#sidebarExample"
 });
 $(".page-item a, .cate-item a", $sidebar).attr("href", "javascript:;");
+*/

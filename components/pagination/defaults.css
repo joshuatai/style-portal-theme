@@ -1,0 +1,19 @@
+.pagination-example .pagination {
+  margin-bottom: 8px;
+}
+.pagination-example .table-pagination {
+  width: 600px;
+}
+.pagination-example .table-pagination .pagination {
+  margin-bottom: 0;
+}
+.pagination-example .example {
+  margin-top: 100px;
+}
+.pagination-example .example .table-pagination {
+  background-color: #fff;
+  border: 0;
+}
+.pagination-example .example .table-pagination-block {
+  float: left;
+}
