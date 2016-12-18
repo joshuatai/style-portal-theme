@@ -15,5 +15,11 @@
     "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js",
     "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.js"
   ],
+  "jquery-editable-select": [
+      "jQuery-editable-select-master/dist/jquery-editable-select.min.css",
+      "jQuery-editable-select-master/dist/jquery-editable-select.min.js"
+  ],
+  "jquery-inputmask": "jQuery-inputmask/dist/min/jquery.inputmask.bundle.min.js",
+  "tokenize": "Tokenize/jquery.tokenize.js",
   "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js"
 }
