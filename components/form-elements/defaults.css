@@ -1,0 +1,28 @@
+.form-elements-example .lists-unordered {
+  margin-bottom: 40px;
+}
+.form-elements-example .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .form-elements-example .form-horizontal {
+    padding-top: 16px;
+  }
+  .form-elements-example .form-horizontal .form-group .control-wrapper {
+    width: 524px;
+  }
+  .form-elements-example .form-horizontal .form-group .control-label {
+    width: 73px;
+  }
+}
+.form-elements-example .radio-wrapper,
+.form-elements-example .checkbox-wrapper {
+  margin-left: 40px;
+}
+.form-elements-example .default-block {
+  margin-left: 22px;
+}
+.form-elements-example .textarea-block .form-group .control-label {
+  width: 61px;
+}
