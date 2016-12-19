@@ -1,0 +1,18 @@
+.search-example .input-icon-group,
+.search-example .input-group {
+  width: 256px;
+}
+.search-example > div {
+  margin-top: 32px;
+}
+.search-example .input-group + .input-group,
+.search-example .input-icon-group + .input-icon-group {
+  margin-top: 24px;
+}
+.search-example .input-group .form-control {
+  z-index: 3;
+  width: 256px;
+}
+.search-example .dropdown-menu {
+  width: 105px;
+}
