@@ -1,6 +1,6 @@
 {
   "jquery-2.2.4": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
-  "jquery-ui-1.12.1": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
+  "jquery-ui-1.11.3": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js",
   "bootstrap-3.3.7": [
     "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js",
     "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
@@ -23,6 +23,10 @@
   "jquery-file-upload-9.12.5": "jQuery-File-Upload-9.12.5/js/jquery.fileupload.js",
   "jquery-inputmask": "jQuery-inputmask/dist/min/jquery.inputmask.bundle.min.js",
   "jquery.multi-select": "jQuery-multiselect/jquery.multi-select.js",
+  "jquery-tageditor-master": [
+    "jQuery-tagEditor-master/jquery.caret.min.js",
+    "jQuery-tagEditor-master/jquery.tag-editor.min.js"
+  ],
   "tokenize": "Tokenize/jquery.tokenize.js",
   "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js"
 }

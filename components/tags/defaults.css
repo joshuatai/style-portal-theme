@@ -1,0 +1,17 @@
+.form-advanced-example .tag-editor.basic,
+.form-advanced-example .tag-editor.truncated {
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .form-advanced-example .tokenize,
+  .form-advanced-example .tokenize ul {
+    width: 512px;
+  }
+}
+.form-advanced-example .tokenize .Token .Close {
+  float: right;
+}
+.form-advanced-example .tokenize .Token > span {
+  display: block;
+}

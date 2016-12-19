@@ -1,3 +1,6 @@
+.form-layout-example ul {
+  margin-bottom: 0;
+}
 .form-layout-example .form-group {
   margin-left: 24px;
 }
@@ -22,9 +25,6 @@
   }
   .form-layout-example .form-inline .form-group .form-control {
     width: 168px;
-  }
-  .form-layout-example .example .form-group {
-    margin-top: 24px;
   }
   .form-layout-example .example .form-group > .form-control {
     width: 598px;
