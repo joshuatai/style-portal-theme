@@ -1,7 +1,7 @@
 {
-  "id": "6c400c9b-00b5-40ae-b2c1-4f17f9236dc9",
-  "name": "Labels",
-  "location": "labels-badges/labels.html",
+  "id": "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
+  "name": "Tags",
+  "location": "form-advanced/tags.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-5"
+    "row": "row-md-4"
   }
 }

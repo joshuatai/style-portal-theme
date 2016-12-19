@@ -2,7 +2,10 @@
   "id": "53dc41a5-3f6f-4fbb-8571-d6a71fc01f06",
   "name": "Single File Upload",
   "location": "file-upload/single-file-upload.html",
-  "dependencies": [],
+  "dependencies": [
+    "jquery-ui-1.12.1",
+    "jquery-file-upload-9.12.5"
+  ],
   "actions": [
     {
       "name": "Style",

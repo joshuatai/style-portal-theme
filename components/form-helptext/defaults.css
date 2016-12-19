@@ -1,0 +1,46 @@
+@media (min-width: 768px) {
+  .form-helptext-example .form-horizontal fieldset > legend {
+    width: 573px;
+  }
+  .form-helptext-example .form-horizontal .form-group .control-wrapper {
+    width: 512px;
+  }
+  .form-helptext-example .form-horizontal .form-group .control-label {
+    width: 61px;
+  }
+}
+.form-helptext-example .popover-example {
+  
+}
+.form-helptext-example .popover {
+  max-width: 100%;
+}
+.form-helptext-example .popover-example.bottom-right {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 1200px) {
+  .popover-examples {
+    max-width: 1200px;
+  }
+}
+.popover-example {
+  position: relative;
+  display: inline-block;
+}
+.popover-example.top,
+.popover-example.top-right,
+.popover-example.top-left,
+.popover-example.right,
+.popover-example.right-top,
+.popover-example.right-bottom,
+.popover-example.bottom,
+.popover-example.bottom-right,
+.popover-example.bottom-left,
+.popover-example.left,
+.popover-example.left-top,
+.popover-example.left-bottom {
+  margin: 20px 15px 20px 25px;
+}

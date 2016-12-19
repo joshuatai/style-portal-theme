@@ -1,6 +1,9 @@
 .alert-example .alert {
   margin-bottom: 16px;
 }
+.alert-example .alert:last-child {
+  margin-bottom: 0;
+} 
 .alert-example .toast-alert {
   position: static;
   width: 305px;
