@@ -1,0 +1,38 @@
+.form-input-groups-example .input-icon-group:first-of-type,
+.form-input-groups-example .input-group:first-of-type {
+  margin-top: 25px;
+}
+.form-input-groups-example .input-icon-group:last-child,
+.form-input-groups-example .input-group:last-child {
+	margin-bottom: 0;
+}
+.form-input-groups-example.action .input-icon-group:first-of-type,
+.form-input-groups-example.action .input-group:first-of-type {
+  margin-top: 0;
+}
+.form-input-groups-example .input-icon-group,
+.form-input-groups-example .input-group {
+  width: 360px;
+  margin-bottom: 24px;
+}
+.form-input-groups-example .input-icon-group .input-focus,
+.form-input-groups-example .input-group .input-focus {
+  border-left-color: #0096cc;
+}
+.form-input-groups-example .input-icon-group .btn-group-vertical .btn,
+.form-input-groups-example .input-group .btn-group-vertical .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-input-groups-example .input-icon-group.touchspin-example-1,
+.form-input-groups-example .input-group.touchspin-example-1,
+.form-input-groups-example .input-icon-group.touchspin-example-2,
+.form-input-groups-example .input-group.touchspin-example-2 {
+  width: 168px;
+}
+.form-input-groups-example .input-group .form-control {
+  z-index: 3;
+}
+.form-input-groups-example .input-group.hostName .dropdown-menu {
+  width: 105px;
+}

@@ -21,6 +21,9 @@
 .popover-example.left-bottom {
   margin: 20px 15px 20px 25px;
 }
+.popover-footer-example .popover-example {
+	margin: 0;
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .popover-example-rwd {
     max-width: 240px;

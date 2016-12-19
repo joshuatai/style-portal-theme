@@ -1,0 +1,80 @@
+<section class="css-reference">
+  <h5>Basic Token Container</h5>
+  <pre>
+    <style data-selector=".tag-editor"></style>
+  </pre>
+  <pre data-title="Focus state:">
+    <style data-selector=".tag-editor.focused"></style>
+  </pre>
+
+  <h5>Editable Token Container</h5>
+  <p>Extend the basic token container class.</p>
+  <pre data-title="Tag normal state in editable token container">
+    <style data-selector=".tag-editor .tag-editor-editTag"></style>
+  </pre>
+  <pre data-title="Tag active state in editable token container">
+    <style data-selector=".tag-editor .tag-editor-tag.active"></style>
+  </pre>
+
+  <h5>Token Container with Input</h5>
+  <pre>
+    <style data-selector=".tag-editor input"></style>
+  </pre>
+
+  <h5>Token Filter Wrapper</h5>
+  <p>Wrap the token container, icon, and drop-down menu with a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".tokenize"></style>
+  </pre>
+
+  <h5>Token Filter Container</h5>
+  <p>Extend the basic token container class.</p>
+  <pre>
+    <style data-selector=".tokenize .tag-editor"></style>
+  </pre>
+  <pre data-title=":after">
+    <style data-selector=".tokenize .tag-editor:after"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> elements.</p>
+  <pre data-title="For image icon(svg or png):">
+    <style data-selector=".input-icon-group .icon"></style>
+  </pre>
+  <pre data-title="Cancel Image Icon">
+    <style data-selector=".tokenize > .icon-cancel"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".tokenize > .icon-cancel:hover"></style>
+  </pre>
+
+  <h5>Dropdown Menu</h5>
+  <p>Dropdown menu should be a drop-down menu style. Please refer to Components > Drop-down Menus.</p>
+  <pre data-title="No matches list item">
+    <style data-selector=".dropdown-menu .no-matches"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".dropdown-menu .no-matches:hover"></style>
+  </pre>
+</section>
+
+<section class="form-advanced-example">
+  <p>In a token field, users can select and gather multiple tokens.</p>
+	<h5>Basic</h5>
+	<input type="text" data-input-tag="tags">
+	<h5>Token with Filter</h5>
+	<div class="token-filed" data-token-field="initialize">
+		<select id="tokenize" multiple="multiple" data-token-field="token">
+		  	<option value="Japan" selected>Japan</option>
+		  	<option value="Korea" selected>Korea</option>
+		  	<option value="Malaysia" selected>Malaysia</option>
+		  	<option value="Switzerland">Switzerland</option>
+	    	<option value="Syria">Syria</option>
+	    	<option value="Tahiti">Tahiti</option>
+	    	<option value="Taiwan">Taiwan</option>
+			<option value="Tajikistan">Tajikistan</option>
+		</select>
+	</div>
+	<h5>Editable</h5>
+	<input type="text" data-input-tag="editTags">	
+</section>
