@@ -12,6 +12,12 @@
   padding: 0 24px;
   padding-right: 0;
 }
+.navbar-example .navigation.collapsed + .site-header {
+  margin-left: 0;
+}
+.navbar-example .navigation.expand + .site-header {
+  margin-left: 176px;
+}
 .navbar-example nav {
   padding: 0;
 }
@@ -40,11 +46,11 @@
 .navbar-example .col-example .navigation {
   position: absolute;
   bottom: inherit;
-  height: 400px;
+  height: 340px;
 }
-.navbar-example .icon-getting-home {
-  background-image: url("../img/icon_get_start.png");
+.navbar-example .nav-icon-getting-home {
+  background-image: url("images/get_start.png");
 }
-.navbar-example .icon-styles {
-  background-image: url("../img/icon_basic.png");
+.navbar-example .nav-icon-styles {
+  background-image: url("images/type.png");
 }

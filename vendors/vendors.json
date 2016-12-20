@@ -25,7 +25,7 @@
   "jquery.multi-select": "jQuery-multiselect/jquery.multi-select.js",
   "jquery-tageditor-master": [
     "jQuery-tagEditor-master/jquery.caret.min.js",
-    "jQuery-tagEditor-master/jquery.tag-editor.min.js"
+    "jQuery-tagEditor-master/jquery.tag-editor.js"
   ],
   "tokenize": "Tokenize/jquery.tokenize.js",
   "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js"
