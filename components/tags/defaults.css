@@ -5,7 +5,8 @@
 
 @media (min-width: 768px) {
   .form-advanced-example .tokenize,
-  .form-advanced-example .tokenize ul {
+  .form-advanced-example .tokenize ul,
+  .tag-editor {
     width: 512px;
   }
 }
