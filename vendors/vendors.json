@@ -1,6 +1,6 @@
 {
   "jquery-2.2.4": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
-  "jquery-ui-1.11.3": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js",
+  "jquery-ui-1.12.1": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
   "bootstrap-3.3.7": [
     "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js",
     "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
