@@ -12,10 +12,8 @@
     "icon": "type",
     "segments": [],
     "components": [
-      "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",
-      "60236c76-f8ab-4ad9-87db-2017b51957e2",
-      "aca6f1ac-609a-431c-8fca-739b6c060299",
-      "1811bd76-57b6-4fb9-930f-b6899313fa41"
+      "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",     
+      "aca6f1ac-609a-431c-8fca-739b6c060299"     
     ]
   },
   {
@@ -33,12 +31,10 @@
       "a2fa8b5e-6dd7-4570-9352-eea232f1d5a0",
       "168263ea-0f3f-4782-8a37-f18334007680",
       "003ae527-8e9e-41fb-a275-ae2babcdf49e",
-      "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
-      "31ac4e6c-120e-46dd-9c31-285e04543ddd",
+      "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",     
       "93c477ed-5ac1-4d47-95ca-1ac03d4b5faa",
       "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
-      "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f",
-      "654e09d7-1bc4-42e6-816e-791c52f4308d"
+      "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f"      
     ]
   },
   {
@@ -64,18 +60,13 @@
     "name": "Charts",
     "icon": "line-chart",
     "segments": [],
-    "components": [
-      "c6f1ea57-cdd6-4190-bfd9-4bcc0673b1df",
-      "ccf72043-8aee-4dfd-b976-888dbb12ef7b",
-      "15c240c6-b25c-4bb6-8981-65c19c89711b",
-      "64d00b7c-ae9b-4bcf-83f1-c8e58328ce81"
-    ]
+    "components": []
   },
   {
     "id": "c1beeb74-7df3-4341-9490-2cb80371de2c",
     "name": "Templates",
     "icon": "templates",
     "segments": [],
-    "components": []
+    "components": ["510755b0-3de5-45ef-a288-f59b51051444"]
   }
 ]
