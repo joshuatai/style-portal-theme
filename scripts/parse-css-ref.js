@@ -1,4 +1,20 @@
 
+function style (data) {
+  if (data.selector) {
+    return portal.theme.current.styles.style(data.selector);
+  }
+
+  if (data.font) {
+    return portal.theme.current.styles.font(data.font);
+  }
+
+  if (data.keyframes) {
+    return portal.theme.current.styles.keyframes(data.keyframes);
+  }
+
+  console.warn('data-* attribute not exists on <style> element.');
+}
+
 export default function parse (context) {
   var $ref = $('.css-reference', context);
 
@@ -29,8 +45,7 @@ export default function parse (context) {
 
     $styles.each((i, elem) => {
       var $style = $(elem);
-      var selector = $style.data('selector');
-      var style = portal.theme.current.styles.style(selector);
+      var data = $style.data();
       var comments = $style.text();
 
       comments.trim().split('\n').map((comment) => {
@@ -40,7 +55,7 @@ export default function parse (context) {
         contents.push(comment && `/* ${comment} */`); // Push undefined if comment is empty
       });
 
-      contents.push(style, i !== last ? ' ' : null); // Push single space for insert one empty line
+      contents.push(style(data), i !== last ? ' ' : null); // Push single space for insert one empty line
     });
 
     contents = contents.filter((content) => {
