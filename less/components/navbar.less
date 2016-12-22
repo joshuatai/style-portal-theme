@@ -324,13 +324,31 @@
   padding: 16px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
   .border-top-radius(0);
-  > li > a {
-    padding: 4px 24px;
+
+  > li {
+    margin-top: 4px;
+    &:first-child {
+      margin-top: 0;
+    }
+    > a {
+      padding: 4px 24px;
+    }
+  }
+  > .active > a {
+    &,
+    &:hover,
+    &:focus {
+      color: @dropdown-link-active-color;
+      font-weight: bold;
+      cursor: default;
+      background-color:  @dropdown-link-active-bg;
+    }
   }
 }
 header .navbar-nav > li > .dropdown-menu {
   > li > a {
     padding: 4px 16px;
+    margin-top: 4px;
   }
 }
 // Menu position and menu caret support for dropups via extra dropup class
@@ -339,7 +357,6 @@ header .navbar-nav > li > .dropdown-menu {
   .border-top-radius(@navbar-border-radius);
   .border-bottom-radius(0);
 }
-
 
 // Buttons in navbars
 //
