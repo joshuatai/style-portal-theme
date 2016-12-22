@@ -20,6 +20,8 @@
 @input-color:                    @gray-base;
 //** `<input>` border color #cccccc
 @input-border:                   extract(@grays, 9);
+//** `<input type="checkbox">` border color #999999
+@input-checkbox-radio-border:    extract(@grays, 6);
 
 //** TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -36,7 +38,7 @@
 @input-border-danger:            @brand-danger;
 
 //** Placeholder text color
-@input-color-placeholder:        @gray;
+@input-color-placeholder:        @text-muted;
 
 
 //** Default `.form-control` height

@@ -184,7 +184,7 @@ output {
   //.form-control-focus();
 
   // Placeholder
-  .placeholder(#bbbbbb);
+  .placeholder(@input-color-placeholder);
 
   select&{
     height: 32px;
@@ -428,7 +428,7 @@ input[type="checkbox"] {
   width: 14px;
   height: 14px;
   margin-right: 8px;
-  border: 1px solid @input-border;
+  border: 1px solid @input-checkbox-radio-border;
   vertical-align: top;
   margin-top: 3px;
 }
@@ -496,7 +496,7 @@ input[type="checkbox"] {
     background-color: #33ABD6;
 }
 
-.checkbox-partical + label:before{
+.checkbox-partial + label:before{
   content: "\25A0";
   color: @input-border-focus;
   font-size: 13px;
