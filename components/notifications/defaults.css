@@ -1,0 +1,55 @@
+.alert-example .alert {
+  margin-bottom: 16px;
+}
+.alert-example .alert:last-child {
+  margin-bottom: 0;
+} 
+.alert-example .toast-alert {
+  position: static;
+  width: 305px;
+}
+.alert-example .banner-alert-example,
+.alert-example .toast-alert-example {
+  position: relative;
+}
+.alert-example .banner-alert-example .alert,
+.alert-example .toast-alert-example .alert {
+  margin-bottom: 0;
+}
+.alert-example .toast-alert-example .alert-danger {
+  position: absolute;
+  top: 112px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.alert-example .toast-alert-example .alert-success {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.alert-example .modal-alert {
+  position: absolute;
+  display: inline-block;
+}
+@media screen and (max-width: 1023px) {
+  .alert-example .modal-alert {
+    position: relative;
+  }
+}
+.alert-example .alert-banner {
+  background-image: url("images/alert_img1_bg.png");
+  background-repeat: repeat-x;
+}
+.alert-example .alert-banner img[src*="righ"] {
+  float: right;
+}
+.alert-example .toast-alert-banner {
+  background-image: url("images/alert_img2_bg.png");
+  background-repeat: repeat-x;
+}
+.alert-example .toast-alert-banner img[src*="righ"] {
+  float: right;
+}

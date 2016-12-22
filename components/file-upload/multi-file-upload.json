@@ -2,7 +2,10 @@
   "id": "47013de3-7aaa-49e2-b640-7052858cb542",
   "name": "Multi File Upload",
   "location": "file-upload/multi-file-upload.html",
-  "dependencies": [],
+  "dependencies": [
+    "jquery-ui-1.12.1",
+    "jquery-file-upload-9.12.5"
+  ],
   "actions": [
     {
       "name": "Style",

@@ -1,0 +1,58 @@
+.modal-example .lists-unordered span {
+  display: inline-block;
+  width: 74px;
+}
+.modal-example .modal-example-wrapper {
+  margin: 32px 0 32px 12px;
+}
+.modal-example .modal-example-wrapper > div {
+  display: inline-block;
+}
+@media (min-width: 1200px) {
+  .modal-example .modal-example-wrapper > div + div {
+    margin-left: 200px;
+  }
+}
+.modal-example .xs-example {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: block;
+  overflow: visible;
+}
+.modal-example .xs-example .no-header + .body-xs {
+  padding-top: 0;
+}
+.modal-example .example > div {
+  margin-left: 12px;
+}
+.modal-example .example .btn + .btn {
+  margin-left: 8px;
+}
+
+#modal-sm .form-horizontal .control-label,
+#modal-md .form-horizontal .control-label {
+  width: 70px;
+}
+#modal-sm .form-horizontal div:last-child .control-label,
+#modal-md .form-horizontal div:last-child .control-label {
+  margin-top: 0;
+}
+#modal-sm .form-horizontal .control-wrapper,
+#modal-md .form-horizontal .control-wrapper {
+  width: 85%;
+}
+#modal-sm .form-horizontal .form-group,
+#modal-md .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+#modal-lg .modal-body {
+  padding: 0;
+}
+#modal-lg .modal-table-img {
+  width: 926px;
+}

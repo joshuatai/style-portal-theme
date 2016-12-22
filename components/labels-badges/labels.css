@@ -1,0 +1,16 @@
+.label-example p {
+  margin-bottom: 18px;
+}
+.label-example .label {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+@media (min-width: 768px) {
+  .label-example .table {
+    width: 700px;
+  }
+}
+.label-example .table .label {
+  margin-right: 0;
+  margin-bottom: 0;
+}

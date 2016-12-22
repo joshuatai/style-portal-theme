@@ -1,45 +1,54 @@
 var $sidebar = $('.col-example .navigation-items');
 var object = [
   {
-    "bower-search":null,
     "id": "1",
-    "items": [],
     "name": "Getting Home",
-    "pages": []
+    "icon": "getting-home",
+    "bower-search":null,
+    "segments": [],    
+    "components": []
   },
   {
-    "bower-search":null,
+    
     "id": "2",
-    "items": [],
-    "name": "Styles",   
-    "pages": [
+    "name": "Styles",  
+    "icon": "styles",
+    "bower-search":null, 
+    "segments": [],
+    "components": [
       {
-        "bower-search":null,
         "id":"2-1",
-        "items": [],
-        "name": "Color"
+        "name": "Color",
+        "keywords":null,
+        "bower-search":null,
+        "segments": [],
+        "parent": "2"
       },
       {
-        "bower-search":null,
         "id":"2-2",
-        "items": [],
-        "name": "Layout"
+        "name": "Layout",
+        "bower-search": null,      
+        "segments": [],
+        "parent": "2"
       },
       {
-        "bower-search":null,
         "id":"2-3",
-        "items": [],
-        "name": "Typography"
+        "name": "Typography",
+        "bower-search": null,        
+        "segments": [],
+        "parent": "2"
       },
-      {
-        "bower-search":null,
+      {        
         "id":"2-4",
-        "items": [],
-        "name": "Icons"
+        "name": "Icons",
+        "bower-search": null,
+        "segments": [],
+        "parent": "2"        
       }
     ]
   }
 ];
+
 
 $sidebar.category({
   type: 'sidebar',
@@ -51,4 +60,26 @@ $sidebar.category({
   content: '.tab-content',
   dataParent: "#sidebarExample"
 });
-$(".page-item a, .cate-item a", $sidebar).attr("href", "javascript:;");
+//$(".page-item a, .cate-item a", $sidebar).attr("href", "javascript:;");
+
+
+$('.col-example .navigation')
+  .on('click', '.sidebar-toggle', function (e) {
+    var $nav = $(this).parent('.navigation');
+    if ($nav.is('.collapsed')) {
+      $nav.addClass('expand').removeClass('collapsed');
+      $('[data-parent="#sidebarExample"]', $nav).attr('data-toggle', 'collapse');
+    } else {
+      $nav.addClass('collapsed').removeClass('expand');
+      $('[data-parent="#sidebarExample"]', $nav).removeAttr('data-toggle'); 
+      $('.sub-nav', $nav).css('height', 'auto');
+    }
+
+  })  
+  .on('show.bs.collapse', '.sub-nav', function (e) {    
+    console.log($subNav);
+    var $subNav = $(this);
+    var $navItems = $subNav.closest(".navigation-items");
+    $('.sub-nav.in', $navItems).collapse('toggle');
+
+  });

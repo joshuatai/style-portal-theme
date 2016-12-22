@@ -1,7 +1,7 @@
 {
   "id": "377a1cfd-6256-4ea0-900e-8325c785f184",
   "name": "Loaders",
-  "location": "loader/defaults.html",
+  "location": "loader/loader.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-14"
+    "row": "row-md-12"
   }
 }

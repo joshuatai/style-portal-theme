@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+  .form-advanced-example .form-horizontal .form-group .control-label {
+    width: 95px;
+  }
+  .form-advanced-example .form-horizontal .form-group .control-wrapper {
+    width: 256px;
+  }
+}
+@media (min-width: 992px) {
+  .form-advanced-example .toggle-example {
+    display: inline-block;
+  }
+  .form-advanced-example .toggle-example + .toggle-example {
+    margin-left: 200px;
+  }
+}
+.form-advanced-example .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+.form-advanced-example .switch-wrapper {
+  margin-bottom: 16px;
+}
+.form-advanced-example .switch-wrapper span {
+  display: inline-block;
+  width: 80px;
+  margin-right: 40px;
+  vertical-align: middle;
+}
+.form-advanced-example .switch {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .form-advanced-example .combobox,
+  .form-advanced-example .combobox .dropdown-menu {
+    width: 256px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-advanced-example .multiple-selection:first-child {
+    margin-right: 80px;
+  }
+}
+.form-advanced-example .multiple-selection {
+  display: inline-block;
+}
+.form-advanced-example .multiple-selection h5 {
+  margin-top: 0;
+}
+
+
+.form-advanced-example hr {
+  margin: 20px 0;
+}

@@ -1,7 +1,7 @@
 {
   "id": "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
   "name": "Tags",
-  "location": "form-advanced/tags.html",
+  "location": "tags/tags.html",
   "dependencies": [],
   "actions": [
     {

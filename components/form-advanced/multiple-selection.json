@@ -2,7 +2,7 @@
   "id": "b275b05f-c3c7-4552-a8a8-94c42e4ed066",
   "name": "Multiple Selection",
   "location": "form-advanced/multiple-selection.html",
-  "dependencies": [],
+  "dependencies": ["jquery.multi-select"],
   "actions": [
     {
       "name": "Style",
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-6"
+    "row": "row-md-4"
   }
 }

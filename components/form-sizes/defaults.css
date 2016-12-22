@@ -1,0 +1,15 @@
+.form-sizes-example > .form-control {
+  margin-bottom: 12px;
+}
+.form-sizes-example .form-horizontal .form-group {
+	margin-left: 0;
+	margin-right: 0;
+}
+@media (min-width: 768px) {
+  .form-sizes-example .form-horizontal .form-group .control-wrapper {
+    width: 600px;
+  }
+  .form-sizes-example .form-horizontal .form-group .control-label {
+    width: 70px;
+  }
+}

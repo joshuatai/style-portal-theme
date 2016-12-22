@@ -9,6 +9,7 @@
 @import "display/nav-icons";
 @import "display/grid-rows";
 @import "display/segment";
+@import "display/templates";
 
 body {
   background: #eee;
@@ -48,12 +49,22 @@ pre.prettyprint {
   white-space: normal;
 }
 
+.segment-content .block {
+  display: block;
+}
+.segment-content .inline-block {
+  display: inline-block;
+  margin-right: 20px;
+}
 /* TODO: It should be replace for sepecifying*/
 ul.description { 
   list-style-type: disc;      
   margin-bottom: 20px;   
 }
-
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
 .example {
   position: relative;
   padding: 45px 0 15px;

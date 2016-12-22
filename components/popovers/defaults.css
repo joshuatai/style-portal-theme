@@ -1,0 +1,31 @@
+@media (min-width: 1200px) {
+  .popover-examples {
+    max-width: 1200px;
+  }
+}
+.popover-example {
+  position: relative;
+  display: inline-block;
+}
+.popover-example.top,
+.popover-example.top-right,
+.popover-example.top-left,
+.popover-example.right,
+.popover-example.right-top,
+.popover-example.right-bottom,
+.popover-example.bottom,
+.popover-example.bottom-right,
+.popover-example.bottom-left,
+.popover-example.left,
+.popover-example.left-top,
+.popover-example.left-bottom {
+  margin: 20px 15px 20px 25px;
+}
+.popover-footer-example .popover-example {
+	margin: 0;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .popover-example-rwd {
+    max-width: 240px;
+  }
+}

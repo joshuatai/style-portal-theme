@@ -1,0 +1,12 @@
+.file-upload-example > p {
+  margin-bottom: 16px;
+}
+.file-upload-example .form-horizontal .form-group {
+  margin-bottom: 24px;
+}
+.file-upload-example .form-horizontal .form-group:last-child {
+	margin-bottom: 0;
+}
+.file-upload-example .example {
+	margin-top: 12px;
+}

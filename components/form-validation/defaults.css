@@ -1,0 +1,20 @@
+.form-validation-example .lists-unordered {
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .form-validation-example .form-horizontal {
+    padding-top: 16px;
+  }
+  .form-validation-example .form-horizontal .form-group .control-wrapper {
+    width: 524px;
+  }
+  .form-validation-example.full-example .form-horizontal {
+    padding-top: 0;
+  }
+  .form-validation-example.full-example .control-label {
+    width: 100px;
+  }
+  .form-validation-example.full-example .control-label.checkbox-label {
+    margin-top: 0;
+  }
+}
