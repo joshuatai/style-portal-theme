@@ -10,8 +10,7 @@
   border-color: @border;
 
   &:hover,
-  &.hover,  
-  .open > .dropdown-toggle& {
+  &.hover {
     color: @color;
     background-color: @background-hover-top;
     #gradient > .vertical(@start-color: @background-hover-top; @end-color: @background-hover-bottom);    
@@ -25,10 +24,11 @@
   }
 
   &:active,
-  &.active {
+  &.active,
+  .open > .dropdown-toggle& {
     color: @color;
     background-color: @background-active;
-        border-color: @border-active;
+    border-color: @border-active;
     .box-shadow(@active-shadow);
     
     &:hover,
@@ -36,7 +36,7 @@
     &:focus,
     &.focus {
       color: @color;      
-          border-color: @border-active;
+      border-color: @border-active;
       .box-shadow(@active-shadow);
     }
   }
