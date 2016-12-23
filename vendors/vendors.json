@@ -16,10 +16,7 @@
     "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js",
     "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.js"
   ],
-  "jquery-editable-select": [
-      "jQuery-editable-select-master/dist/jquery-editable-select.min.css",
-      "jQuery-editable-select-master/dist/jquery-editable-select.min.js"
-  ],
+  "jquery-editable-select": "jQuery-editable-select-master/dist/jquery-editable-select.min.js",
   "jquery-file-upload-9.12.5": "jQuery-File-Upload-9.12.5/js/jquery.fileupload.js",
   "jquery-inputmask": "jQuery-inputmask/dist/min/jquery.inputmask.bundle.min.js",
   "jquery.multi-select": "jQuery-multiselect/jquery.multi-select.js",
