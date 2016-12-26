@@ -30,9 +30,9 @@
 .form-input-groups-example .input-group.touchspin-example-2 {
   width: 168px;
 }
-.form-input-groups-example .input-group .form-control {
+/*.form-input-groups-example .input-group .form-control {
   z-index: 3;
-}
+}*/
 .form-input-groups-example .input-group.hostName .dropdown-menu {
   width: 105px;
 }
