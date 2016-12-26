@@ -16,20 +16,20 @@
   <pre data-title=":focus">
     <style data-selector=".btn-group > .btn:focus">Bring the "focus" button to the front</style>
   </pre>
-  <pre data-title=":not(:first">
-    <style data-selector=".btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle)"></style>
+  <pre data-title=":not(:first-child):not(:last-child)">
+    <style data-selector=".btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle)">Prevent border-radius when buttons are next to each other</style>
   </pre>
-  <pre data-title=":not(:first">
-    <style data-selector=".btn-group .btn + .btn"></style>
+  <pre data-title=":not(:first-child) or .btn + .btn (as a bootstrap group button)">
+    <style data-selector=".btn-group .btn + .btn">Prevent double borders when buttons are next to each other</style>
   </pre>
-  <pre data-title=":first">
-    <style data-selector=".btn-group > .btn:first-child"></style>
+  <pre data-title=":first-child">
+    <style data-selector=".btn-group > .btn:first-child">Left border of the first button doesn"t need to prevent double borders</style>
   </pre>
-  <pre data-title=":first">
-    <style data-selector=".btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle)"></style>
+  <pre data-title=":first-child:not(:last-child)">
+    <style data-selector=".btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle)">The first button(not last button or not a dropdowns toggle button) shouldn"t have right border-radius</style>
   </pre>
-  <pre data-title=":last">
-    <style data-selector=".btn-group > .btn:last-child:not(:first-child)"></style>
+  <pre data-title=":last-child:not(:first-child)">
+    <style data-selector=".btn-group > .btn:last-child:not(:first-child)">The last button or dropdowns toggle button(not first button) should"t have left border-radius</style>
   </pre>
 </section>
 
