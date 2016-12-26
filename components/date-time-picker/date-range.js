@@ -22,6 +22,8 @@ datePickerStart.datepicker({
 }).on('changeDate', function(ev){
 	var dateText = dateFormat(ev.date.valueOf());
 	datePickerEnd.datepicker('setStartDate', dateText);
+}).on('show', function(ev){
+	datePickerStart.datepicker('iconChange');
 });
 
 datePickerEnd.datepicker({
@@ -31,4 +33,6 @@ datePickerEnd.datepicker({
 }).on('changeDate', function(ev){
 	var dateText = dateFormat(ev.date.valueOf());
 	datePickerStart.datepicker('setEndDate', dateText);
+}).on('show', function(ev){
+	datePickerEnd.datepicker('iconChange');
 });

@@ -4,6 +4,8 @@ var timePickerDate = $('[data-time-picker=time-picker-with-date]', container);
 datePickerTime.datepicker({
 	format: 'dd/mm/yyyy',
 	todayHighlight: true
+}).on('show', function(ev){
+	datePickerTime.datepicker('iconChange');
 });
 timePickerDate.timeEntry({
 	show24Hours: true, 
