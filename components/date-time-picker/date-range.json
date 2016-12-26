@@ -1,0 +1,20 @@
+{
+  "id": "16daf5af-4379-4a21-869d-b625f3f22f66",
+  "name": "Date Range",
+  "location": "date-time-picker/date-range.html",
+  "dependencies": [
+    "bootstrap-datepicker",
+    "jquery.timeentry.package-2.0.1"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

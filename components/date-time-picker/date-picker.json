@@ -1,0 +1,19 @@
+{
+  "id": "e5150e3b-e93b-4fed-a1f3-0652135b6066",
+  "name": "Date Picker",
+  "location": "date-time-picker/date-picker.html",
+  "dependencies": [
+    "bootstrap-datepicker"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-10"
+  }
+}

@@ -512,7 +512,7 @@ input[type="checkbox"] {
 }
 
 //Customized toggle switchs
-.switch {
+label.switch {
   position: relative;
   display: inline-block;
   width: 48px;
@@ -521,12 +521,12 @@ input[type="checkbox"] {
   vertical-align: middle;
 }
 
-.switch-sm{
+label.switch-sm{
   width: 32px;
   height: 16px;
 }
 
-.switch input {
+label.switch input {
   display:none;
 }
 
@@ -583,7 +583,7 @@ input:checked + .toggle-sm:before{
   border-radius: 16px;
 }
 
-.switch .disabled{
+label.switch .disabled{
   opacity: 0.4;
   cursor: @cursor-disabled;
 }
@@ -1319,6 +1319,205 @@ input:checked + .toggle-sm:before{
       color: #999999;
       background-color: #ffffff;
       cursor: text;
+    }
+  }
+}
+
+// datapicker
+//
+.datepicker {
+  padding: 0;
+
+  &.days div.datepicker-days {
+    display: block;
+  }
+  &.months div.datepicker-months {
+    display: block;
+  }
+  &.years div.datepicker-years {
+    display: block;
+  }
+  table {
+    padding: 4px;
+    border-collapse: separate;
+    border-spacing: 4px 4px;
+    td, th {
+      text-align: center;
+      width: 30px;
+      line-height: 20px;
+      border: 0;
+      padding: 5px;
+      color: #222222;
+      font-size: 13px;
+      font-family: @font-family-arial;
+    }
+    th.switch {
+      font-weight: 700;
+    }
+  }
+  div.datepicker-months,
+  div.datepicker-years {
+    table {
+      padding: 8px 4px;
+      border-spacing: 4px 0;
+    }
+    th.switch {
+      width: 166px;
+    } 
+    tbody > tr > td {
+      padding-top: 8px;
+      padding-bottom: 12px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  // Inline display inside a table presents some problems with
+  // border and background colors.
+  .table-striped & table tr {
+    td, th {
+      background-color:transparent;
+    }
+  }
+  table tr td {
+    &.day:hover {
+      background: #eeeeee;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    &.old,
+    &.new {
+      color: #bbbbbb;
+    }
+    &.disabled,
+    &.disabled:hover {
+      background: none;
+      color: #eeeeee;
+      cursor: not-allowed;
+    }
+    &.today,
+    &.today:hover,
+    &.today.disabled,
+    &.today.disabled:hover {
+      color: #db3d44;
+    }
+    &.active,
+    &.active:hover,
+    &.active.disabled,
+    &.active.disabled:hover {
+      color: #fff;
+      font-weight: bold;
+      background-color: #db3d44;
+      border-radius: 50%;
+    }
+    span {
+      display: block;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      float: left;
+      cursor: pointer;
+      color: #222222;
+      font-size: 13px;
+      font-family: @font-family-arial;
+      margin: 5px;
+      &:hover {
+        background: #eeeeee;
+        border-radius: 50%;
+      }
+      &.disabled,
+      &.disabled:hover {
+        background:none;
+        color: #eeeeee;
+        cursor: not-allowed;
+      }
+      &.active,
+      &.active:hover,
+      &.active.disabled,
+      &.active.disabled:hover {
+        color: #ffffff;
+        background-color: #db3d44;
+        font-weight: 700;
+        border-radius: 50%;
+      }
+      &.old {
+        color: #bbbbbb;
+      }
+    }
+  }
+  thead tr:first-child th,
+  tfoot tr:first-child th {
+    &:hover{
+      cursor: pointer;
+      background: #eeeeee;
+      border-radius: 3px;
+    }
+  }
+  thead tr:first-child th.prev, 
+  thead tr:first-child th.next {
+    .fa {
+      font-size: 16px;
+      color: #222222;
+      vertical-align: top;
+      margin-top: 1px;
+    }
+  }
+  .dow { //week name
+    font-size: 12px;
+    font-weight: bold;
+    color: #222222;
+    padding-top: 9px;
+  }
+}
+.simple-date-time-example {
+  .input-icon-group {
+    float: left;
+    + .input-icon-group {
+      margin-left: 8px;
+    }
+  }
+}
+.date-time-picker-example {
+  .custom-wrapper {
+    position: absolute;
+    left: 0;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    > ul.dropdown-menu {
+      position: static;
+    }
+    .date-picker-pane {
+      padding: 12px;
+      border-left: 1px solid #dddddd;
+      &.show {
+        display: inline-block !important;
+      }
+      .date-picker-pane-header {
+        .tilde {
+          width: 24px;
+        }
+      }
+      .date-picker-pane-body {
+        margin-top: 8px;
+        .date-picker-pane-example {
+          float: left;
+          .datepicker table{
+            padding: 0 3px;
+          }
+        }
+      }
+      .date-picker-pane-footer {
+        margin-top: 12px;
+      }
+    }
+  }
+  .dropdown {
+    &.open > .custom-wrapper {
+      > ul.dropdown-menu {
+        display: inline-block;
+        border: 0;
+        box-shadow: none;
+      }
     }
   }
 }

@@ -1,0 +1,84 @@
+.date-time-picker-example .field-example {
+  display: inline-block;
+  margin-right: 42px;
+}
+.date-time-picker-example .form-control {
+  padding-right: 12px;
+}
+.date-time-picker-example .datepicker-example {
+  display: inline-block;
+}
+.date-time-picker-example .dropdown-toggle {
+  width: 120px;
+}
+.date-time-picker-example .custom-wrapper {
+  display: none;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane {
+  display: none;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-header {
+  height: 32px;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-header .tilde {
+  float: left;
+  line-height: 32px;
+  text-align: center;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body {
+  height: 280px;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-example {
+  float: left;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-example + .date-picker-pane-example {
+  margin-left: 24px;
+}
+.date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-footer {
+  margin-top: 12px;
+}
+.date-time-picker-example .dropdown.open > .custom-wrapper {
+  display: block;
+}
+.date-time-picker-example .dropdown.open > .custom-wrapper > ul.dropdown-menu {
+  width: 118px;
+}
+.date-time-picker-example .input-group {
+  width: 300px;
+}
+.date-time-picker-example .input-group .input-icon-group .form-control {
+  padding-left: 30px;
+}
+.date-time-picker-example .input-group .input-icon-group:first-child .form-control {
+  z-index: 3;
+  border-right-color: #e6e6e6;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.date-time-picker-example .input-group .input-icon-group:first-child .form-control:focus {
+  border-right-color: #0096cc;
+}
+.date-time-picker-example .input-group .input-icon-group:last-child .form-control {
+  z-index: 3;
+  border-left-color: #e6e6e6;
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+}
+.date-time-picker-example .input-group .input-icon-group:last-child .form-control:focus {
+  border-left-color: #0096cc;
+}
+.date-time-picker-example .input-group .input-icon-group .input-icon-label {
+  z-index: 3;
+}
+.datepicker table thead tr:first-child th.prev .fa,
+.datepicker table thead tr:first-child th.next .fa {
+  margin-right: 0;
+}
+.datepicker.dropdown-menu {
+  padding: 0;
+}
+.datepicker tfoot {
+  display: none;
+}

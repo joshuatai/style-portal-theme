@@ -25,5 +25,10 @@
     "jQuery-tagEditor-master/jquery.tag-editor.js"
   ],
   "tokenize": "Tokenize/jquery.tokenize.js",
+  "bootstrap-datepicker": "bootstrap-datepicker/js/bootstrap-datepicker.js",
+  "jquery.timeentry.package-2.0.1": [
+    "jQuery.timeentry.package-2.0.1/jquery.plugin.js",
+    "jQuery.timeentry.package-2.0.1/jquery.timeentry.js"
+  ],
   "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js"
 }

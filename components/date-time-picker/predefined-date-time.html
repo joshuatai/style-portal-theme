@@ -1,0 +1,105 @@
+<section class="css-reference">
+  <h5>Custom Range Wrapper</h5>
+  <p>Wrap the dropdown menu and calender container.</p>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper"></style>
+  </pre>
+
+  <h5>Dropdown Menu</h5>
+  <p>Extend Dropdown Menu style, please refer to Dropdowns component.</p>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper > ul.dropdown-menu"></style>
+    <style data-selector=".date-time-picker-example .dropdown.open > .custom-wrapper > ul.dropdown-menu"></style>
+  </pre>
+
+  <h5>Calender Container</h5>
+  <p>Wrap the Simple Date Time, start/end datepicker, buttons.</p>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane"></style>
+  </pre>
+
+  <h5>Simple Date Time</h5>
+  <pre>
+    <style data-selector=".simple-date-time-example .input-icon-group + .input-icon-group">Leave space between start/end date and start/end time</style>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-header .tilde">Leave space between end date and start time</style>
+  </pre>
+
+  <h5>Datepicker Wrapper</h5>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body">Leave space between start/end Datepicker and Simple Date Time</style>
+  </pre>
+
+  <h5>Datepicker Attached to Wrapper</h5>
+  <p>A datepicker attached to wrapper can created with a block-level element.</p>
+
+  <h5>Datepicker Container</h5>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-example .datepicker table"></style>
+  </pre>
+
+  <h5>Button Container</h5>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-footer">Leave space between Button and Datepicker Wrapper</style>
+    <style data-selector=".btn + .btn">Leave space between buttons</style>
+  </pre>
+
+</section>
+<section class="date-time-picker-example">
+	<p>When users select custom range to display date/time pickers with two calenders view.</p>
+	<p>The calender pane can be opened on the right side or the left side depends on the space.</p>
+	<div class="dropdown">
+		<button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+		<span class="caret"></span>Last 30 days
+		</button>
+      	<div class="custom-wrapper">
+	   		<ul class="dropdown-menu">
+			    <li><a class="predefine-range" href="javascript:;">Last 24 hours</a></li>
+			    <li><a class="predefine-range" href="javascript:;">Last 7 days</a></li>
+			    <li><a class="predefine-range" href="javascript:;">Last 30 days</a></li>
+			    <li><a class="predefine-range" href="javascript:;">Last 90 days</a></li>
+			    <li><a class="custom-range" href="javascript:;">Custom range</a></li>
+			</ul>
+		    <div class="date-picker-pane">
+			      <div class="date-picker-pane-header">
+			      	<div class="simple-date-time-example">
+						<div class="input-icon-group">
+					      	<input id="pane-date-start" type="text" class="form-control input-width-xs" placeholder="dd/mm/yyyy">
+					      	<label class="input-icon-label" for="pane-date-start">
+					        	<i class="fa fa-calendar"></i>
+					      	</label>
+					  	</div>
+						<div class="input-icon-group">
+					        <input id="pane-time-start" type="text" class="form-control input-width-xs" data-time-picker="pane-time-start" placeholder="hh:mm:ss">
+					        <label class="input-icon-label" for="pane-time-start">
+					          <i class="fa fa-clock-o"></i>
+					        </label>
+					    </div>
+				    </div>
+				    <div class="tilde">~</div>
+				    <div class="simple-date-time-example">
+						<div class="input-icon-group">
+					      	<input id="pane-date-end" type="text" class="form-control input-width-xs" placeholder="dd/mm/yyyy">
+					      	<label class="input-icon-label" for="pane-date-end">
+					        	<i class="fa fa-calendar"></i>
+					      	</label>
+					  	</div>
+						<div class="input-icon-group">
+					        <input id="pane-time-end" type="text" class="form-control input-width-xs" data-time-picker="pane-time-end" placeholder="hh:mm:ss">
+					        <label class="input-icon-label" for="pane-time-end">
+					          <i class="fa fa-clock-o"></i>
+					        </label>
+					    </div>
+				    </div>
+			      </div>
+			      <div class="date-picker-pane-body">
+			      	<div class="date-picker-pane-example" data-date-picker="date-pane-date-start"></div>
+			      	<div class="date-picker-pane-example" data-date-picker="date-pane-date-end"></div>
+			      </div>
+			      <div class="date-picker-pane-footer">
+					<button class="btn btn-primary">Apply</button>
+					<button class="btn btn-default">Cancel</button>
+			      </div>
+		    </div>
+      </div>
+    </div>
+</section>
