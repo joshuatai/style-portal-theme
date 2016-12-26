@@ -352,6 +352,21 @@
     ]
   },
   {
+    "id": "f67b16d7-2d35-4c9c-bc5a-02e2824e46c3",
+    "name": "Date / Time Picker",
+    "keywords": [
+      "datepicker",
+      "timepicker"
+    ],
+    "segments": [
+      "e5150e3b-e93b-4fed-a1f3-0652135b6066",
+      "3492581d-a555-4690-911f-67a93999693a",
+      "16daf5af-4379-4a21-869d-b625f3f22f66",
+      "84ac9650-408c-4c4a-a5a6-62e49e39e9aa",
+      "44693e7b-0c49-4264-8640-5f765ebded82"
+    ]
+  },
+  {
     "id": "c6f1ea57-cdd6-4190-bfd9-4bcc0673b1df",
     "name": "Bar Charts",
     "keywords": [
