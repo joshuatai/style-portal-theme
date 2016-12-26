@@ -1,0 +1,12 @@
+{
+  "id": "e7cfb35a-1e2b-4329-b0e2-fbf15a0fcaae",
+  "name": "Palette Overview",
+  "location": "chart-colors/palette-overview.html",
+  "dependencies": [],
+  "actions": [],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-12 row-lg-11"
+  }
+}

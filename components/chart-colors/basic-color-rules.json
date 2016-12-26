@@ -1,0 +1,12 @@
+{
+  "id": "8c1d18c5-1651-4fd2-af26-1c85fb177b56",
+  "name": "Basic Color Rules",
+  "location": "chart-colors/basic-color-rules.html",
+  "dependencies": [],
+  "actions": [],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-11"
+  }
+}

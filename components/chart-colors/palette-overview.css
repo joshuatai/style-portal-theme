@@ -1,0 +1,46 @@
+
+.chart-color-palette {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+@media (max-width: 1199px) {
+  .chart-color-palette {
+    display: block;
+  }
+
+  .chart-color-palette + .chart-color-palette{
+    margin-top: 20px;
+  }
+}
+
+.chart-color {
+  margin: 0 12px;
+  float: left;
+}
+
+.chart-color-sqaure {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.chart-color-index {
+  font-weight: bold;
+}
+
+.chart-color-hex {
+  text-transform: uppercase;
+}
+
+.chart-color-note {
+  color: #999;
+}
+
+.chart-color-divider {
+  background: #ddd;
+  width: 1px;
+  height: 115px;
+  float: left;
+  margin: 0 12px;
+}

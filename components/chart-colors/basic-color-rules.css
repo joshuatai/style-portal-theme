@@ -1,0 +1,21 @@
+
+.chart-diagrammatic {
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+@media (max-width: 991px) {
+  .chart-diagrammatic {
+    width: 460px;
+  }
+}
+
+@media (min-width: 992px) {
+  .chart-diagrammatic {
+    width: 690px;
+  }
+}
+
+.chart-diagrammatic-image {
+  margin-top: 20px;
+}
