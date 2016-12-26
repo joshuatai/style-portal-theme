@@ -367,6 +367,15 @@
     ]
   },
   {
+    "id": "dffba378-6723-4701-9087-3d527c831509",
+    "name": "Chart Colors",
+    "keywords": null,
+    "segments": [
+      "e7cfb35a-1e2b-4329-b0e2-fbf15a0fcaae",
+      "8c1d18c5-1651-4fd2-af26-1c85fb177b56"
+    ]
+  },
+  {
     "id": "c6f1ea57-cdd6-4190-bfd9-4bcc0673b1df",
     "name": "Bar Charts",
     "keywords": [

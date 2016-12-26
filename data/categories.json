@@ -61,7 +61,9 @@
     "name": "Charts",
     "icon": "line-chart",
     "segments": [],
-    "components": []
+    "components": [
+      "dffba378-6723-4701-9087-3d527c831509"
+    ]
   },
   {
     "id": "c1beeb74-7df3-4341-9490-2cb80371de2c",
