@@ -3,6 +3,7 @@
   "name": "Time Picker",
   "location": "date-time-picker/time-picker.html",
   "dependencies": [
+    "jquery.plugin.timeentry.package-2.0.1",
     "jquery.timeentry.package-2.0.1"
   ],
   "actions": [

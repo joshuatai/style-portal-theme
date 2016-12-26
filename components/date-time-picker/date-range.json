@@ -3,8 +3,7 @@
   "name": "Date Range",
   "location": "date-time-picker/date-range.html",
   "dependencies": [
-    "bootstrap-datepicker",
-    "jquery.timeentry.package-2.0.1"
+    "bootstrap-datepicker"
   ],
   "actions": [
     {
@@ -15,6 +14,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-6"
+    "row": "row-md-4"
   }
 }

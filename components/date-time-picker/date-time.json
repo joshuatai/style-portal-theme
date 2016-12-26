@@ -4,11 +4,12 @@
   "location": "date-time-picker/date-time.html",
   "dependencies": [
   	"bootstrap-datepicker",
-  	"jquery.timeentry.package-2.0.1"
+    "jquery.plugin.timeentry.package-2.0.1",
+    "jquery.timeentry.package-2.0.1"
   ],
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-6"
+    "row": "row-md-4"
   }
 }

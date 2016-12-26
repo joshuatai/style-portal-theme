@@ -17,23 +17,30 @@ function dateFormat(date) {
 	var thisDate = dd+'/'+mm+'/'+yyyy;
 	return thisDate;
 }
-datePickerPaneStart.datepicker({
-	format: 'dd/mm/yyyy',
-	todayHighlight: true
-}).on('changeDate', function(ev){
-	var dateText = dateFormat(ev.date.valueOf());
-	$("#pane-date-start").val(dateText);
-	datePickerPaneEnd.datepicker('setStartDate', dateText);
-});
+datePickerPaneStart
+	.datepicker({
+		format: 'dd/mm/yyyy',
+		todayHighlight: true
+	})
+	.on('changeDate', function(ev){
+		var dateText = dateFormat(ev.date.valueOf());
+		$("#pane-date-start").val(dateText);
+		datePickerPaneEnd.datepicker('setStartDate', dateText);
+	});
+datePickerPaneStart.datepicker("iconChange");
 
-datePickerPaneEnd.datepicker({
-	format: 'dd/mm/yyyy',
-	todayHighlight: true
-}).on('changeDate', function(ev){
-	var dateText = dateFormat(ev.date.valueOf());
-	$("#pane-date-end").val(dateText);
-	datePickerPaneStart.datepicker('setEndDate', dateText);
-});
+datePickerPaneEnd
+	.datepicker({
+		format: 'dd/mm/yyyy',
+		todayHighlight: true
+	})
+	.on('changeDate', function(ev){
+		var dateText = dateFormat(ev.date.valueOf());
+		$("#pane-date-end").val(dateText);
+		datePickerPaneStart.datepicker('setEndDate', dateText);
+	});
+	
+datePickerPaneEnd.datepicker("iconChange");
 timePickerPaneStart.timeEntry({
 	show24Hours: true, 
 	showSeconds: true,
