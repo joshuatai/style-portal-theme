@@ -1,0 +1,19 @@
+{
+  "id": "3492581d-a555-4690-911f-67a93999693a",
+  "name": "Time Picker",
+  "location": "date-time-picker/time-picker.html",
+  "dependencies": [
+    "jquery.timeentry.package-2.0.1"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

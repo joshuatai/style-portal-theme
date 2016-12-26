@@ -1,0 +1,130 @@
+<section class="css-reference">
+  <h5>Date Inputs with Form Control</h5>
+  <p>About the inputs style and state, please refer to form elements style. About the input with icon style, please refer to input group style.</p>
+  <pre data-title="Date inputs field width">
+    <style data-selector=".input-width-xs"></style>
+  </pre>
+
+  <h5>Datepicker Dropdown</h5>
+  <p>Extend the dropdown menu class to define datepicker dropdown.</p>
+  <pre>
+    <style data-selector=".datepicker"></style>
+  </pre>
+
+  <h5>Datepicker Container</h5>
+  <p>A datepicker container can created with a <code data-tag="table"></code></p>
+  <pre>
+    <style data-selector=".datepicker table"></style>
+  </pre>
+
+  <h5>Datepicker-months, Datepicker-years Container</h5>
+  <pre>
+    <style data-selector=".datepicker div.datepicker-months table"></style>
+  </pre>
+
+  <h5>Datepicker Block</h5>
+  <p>A datepicker block can created with a <code data-tag="td"></code>, <code data-tag="th"></code> element.</p>
+  <pre>
+    <style data-selector=".datepicker table td"></style>
+  </pre>
+  <pre>
+    <style data-selector=".datepicker table tr td.old">Not currently month days</style>
+  </pre>
+  <pre>
+    <style data-selector=".datepicker table tr td.today">Today day</style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".datepicker table tr td.day:hover"></style>
+  </pre>
+  <pre data-title="Selected state">
+    <style data-selector=".datepicker table tr td.active"></style>
+  </pre>
+  <pre data-title="The month/year header cell">
+    <style data-selector=".datepicker table th.switch">Also need to use the colspan attribute on the element</style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".datepicker thead tr:first-child th:hover"></style>
+  </pre>
+  <pre data-title="The week header cell">
+    <style data-selector=".datepicker .dow"></style>
+  </pre>
+
+  <h5>Datepicker-months, Datepicker-years Block</h5>
+  <pre>
+    <style data-selector=".datepicker div.datepicker-months tbody > tr > td"></style>
+  </pre>
+
+
+  <h5>Datepicker-months, Datepicker-years</h5>
+  <p>A datepicker-months, datepicker-years block can created with a <code data-tag="span"></code> element within <code data-tag="td"></code></p>
+  <pre>
+    <style data-selector=".datepicker table tr td span"></style>
+  </pre>
+  <pre>
+    <style data-selector=".datepicker table tr td span.old">The year not in the range</style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".datepicker table tr td span:hover"></style>
+  </pre>
+  <pre data-title="Selected state">
+    <style data-selector=".datepicker table tr td span.active"></style>
+  </pre>
+
+  <h5>Icon Class</h5>
+  <p>Icon class should only be used on elements that do not contain either text or child elements. We recommend wrapping <code data-tag="span"></code> or <code data-tag="i"></code>.</p>
+  <pre data-title="For font-awesome arrow icon:">
+    <style data-selector=".datepicker thead tr:first-child th.prev .fa"></style>
+  </pre>
+
+</section>
+
+<section class="date-time-picker-example">
+	<p>The date picker contains the date input field and the calender view. Users can either use the input field to type a date or by selecting a date in the calendar.</p>
+  <ul class="description">
+    <li>Clicking the input field to open the calender dropdown.</li>
+    <li>Click the arrows to view the previous and next days, months, or years</li>
+    <li>Click the month/year shows an overview of all months/years</li>
+    <li>The selected date is shown with a red background. The today day is indicated with red</li>
+    <li>If no default date is selected, show a placeholder help text to indicate the date format</li>
+    <li>Once select a date, the calendar closes and shows the selected date in the input field</li>
+    <li>Finsh typing the whole date, then display the selected date in the calender view</li>
+    <li>Support keyboard selection</li>
+  </ul>
+  <p>For default date format is dd/mm/yyyy, other formats details for local dependencies, see <a href="http://tw-hie/ui_standards/2010/08/date-time/">Date & Time</a>UI guidelines.</p>
+
+  <h5>Date Input Field</h5>
+  <div class="field-example">
+    <h6>Normal</h6>
+    <div class="input-icon-group">
+        <input id="datepicker1" type="text" class="form-control input-width-xs" value="11/10/2016" placeholder="dd/mm/yyyy">
+        <label class="input-icon-label" for="datepicker1">
+          <i class="fa fa-calendar"></i>
+        </label>
+    </div>
+  </div>
+  <div class="field-example">
+    <h6>Focus</h6>
+    <div class="input-icon-group">
+        <input id="datepicker2" type="text" class="form-control input-width-xs input-focus" value="11/10/2016" placeholder="dd/mm/yyyy">
+        <label class="input-icon-label" for="datepicker2">
+          <i class="fa fa-calendar"></i>
+        </label>
+    </div>
+  </div>
+  <div class="field-example">
+    <h6>Invalid</h6>
+    <div class="input-icon-group">
+        <input id="datepicker3" type="text" class="form-control input-width-xs form-invalid" value="11/10/2016" placeholder="dd/mm/yyyy">
+        <label class="input-icon-label" for="datepicker3">
+          <i class="fa fa-calendar"></i>
+        </label>
+    </div>
+  </div>
+  <hr>
+  <div class="input-icon-group">
+      <input id="datepicker" type="text" class="form-control input-width-xs" placeholder="dd/mm/yyyy" data-date-picker="date-picker">
+      <label class="input-icon-label" for="datepicker">
+        <i class="fa fa-calendar"></i>
+      </label>
+  </div>
+</section>
