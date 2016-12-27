@@ -1,7 +1,7 @@
 {
   "id": "4ebd3d3a-5ca6-42a9-86b2-38735dcf99e7",
   "name": "Full-width Buttons",
-  "location": "buttons/block-level.html",
+  "location": "buttons/full-width.html",
   "dependencies": [],
   "actions": [
     {

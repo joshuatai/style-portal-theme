@@ -1,7 +1,7 @@
 {
   "id": "74c6a280-0070-465b-9e4b-668cb24e416d",
   "name": "Button Styles",
-  "location": "buttons/default.html",
+  "location": "buttons/styles.html",
   "dependencies": [],
   "actions": [
     {
