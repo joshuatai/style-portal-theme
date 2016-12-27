@@ -48,7 +48,8 @@ body {
 .log-on-title {
     background: url(../images/ico_account_gray.png) no-repeat left center transparent;
     padding-left: 40px;
-    margin: 2px 0;
+    margin: 0;
+    line-height: 32px;
 }
 .log-on-form {
     margin-top: 16px;
