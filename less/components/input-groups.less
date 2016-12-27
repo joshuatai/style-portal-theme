@@ -31,7 +31,7 @@
     margin-bottom: 0;
 
     &:focus {
-      z-index: 3;
+      z-index: 4;
     }
   }
   .input-icon-group {
@@ -217,6 +217,9 @@
     > .btn-group {
       z-index: 2;
       margin-right: -1px;
+      &:hover {
+        z-index: 3;
+      }
     }
   }
   &:last-child {
@@ -224,6 +227,9 @@
     > .btn-group {
       z-index: 2;
       margin-left: -1px;
+      &:hover {
+        z-index: 3;
+      }
     }
   }
   > .btn {
@@ -247,8 +253,14 @@
 .touchspin-example-1.focused {
   .form-control {
     border-color: @btn-default-focus-border #ccc @btn-default-focus-border @btn-default-focus-border;
+    &:focus {
+      z-index: 2;
+    }
   }
   .btn {
+    &:hover {
+      z-index: 3;
+    }
     &:focus {
       border-left-color: #ccc;
     }
@@ -271,10 +283,16 @@
 .touchspin-example-2.focused {
   .form-control {
     border-color: @btn-default-focus-border #ccc;
+    &:focus {
+      z-index: 2;
+    }
   }
   .input-group-btn .btn {
     border-top-color: @btn-default-focus-border;
     border-bottom-color: @btn-default-focus-border;
+    &:focus {
+      z-index: 3;
+    }
   }
   .input-group-btn:first-child .btn{
     border-left-color: @btn-default-focus-border;
