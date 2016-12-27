@@ -1,0 +1,10 @@
+.table > thead > tr > th:nth-last-child(3) {
+	text-align: right;
+}
+.table > tbody > tr > td:nth-last-child(3) {
+	text-align: right;
+}
+
+.tables-example h5:not(:first-child) {
+	margin-top: 40px
+}
