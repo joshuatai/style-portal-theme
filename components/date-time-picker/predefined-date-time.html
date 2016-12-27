@@ -44,62 +44,71 @@
   </pre>
 
 </section>
+
 <section class="date-time-picker-example">
-	<p>When users select custom range to display date/time pickers with two calenders view.</p>
-	<p>The calender pane can be opened on the right side or the left side depends on the space.</p>
-	<div class="dropdown">
-		<button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-		<span class="caret"></span>Last 30 days
-		</button>
-      	<div class="custom-wrapper">
-	   		<ul class="dropdown-menu">
-			    <li><a class="predefine-range" href="javascript:;">Last 24 hours</a></li>
-			    <li><a class="predefine-range" href="javascript:;">Last 7 days</a></li>
-			    <li><a class="predefine-range" href="javascript:;">Last 30 days</a></li>
-			    <li><a class="predefine-range" href="javascript:;">Last 90 days</a></li>
-			    <li><a class="custom-range" href="javascript:;">Custom range</a></li>
-			</ul>
-		    <div class="date-picker-pane">
-			      <div class="date-picker-pane-header">
-			      	<div class="simple-date-time-example">
-						<div class="input-icon-group">
-					      	<input id="pane-date-start" type="text" class="form-control input-width-xs" placeholder="dd/mm/yyyy">
-					      	<label class="input-icon-label" for="pane-date-start">
-					        	<i class="fa fa-calendar"></i>
-					      	</label>
-					  	</div>
-						<div class="input-icon-group">
-					        <input id="pane-time-start" type="text" class="form-control input-width-xs" data-time-picker="pane-time-start" placeholder="hh:mm:ss">
-					        <label class="input-icon-label" for="pane-time-start">
-					          <i class="fa fa-clock-o"></i>
-					        </label>
-					    </div>
-				    </div>
-				    <div class="tilde">~</div>
-				    <div class="simple-date-time-example">
-						<div class="input-icon-group">
-					      	<input id="pane-date-end" type="text" class="form-control input-width-xs" placeholder="dd/mm/yyyy">
-					      	<label class="input-icon-label" for="pane-date-end">
-					        	<i class="fa fa-calendar"></i>
-					      	</label>
-					  	</div>
-						<div class="input-icon-group">
-					        <input id="pane-time-end" type="text" class="form-control input-width-xs" data-time-picker="pane-time-end" placeholder="hh:mm:ss">
-					        <label class="input-icon-label" for="pane-time-end">
-					          <i class="fa fa-clock-o"></i>
-					        </label>
-					    </div>
-				    </div>
-			      </div>
-			      <div class="date-picker-pane-body">
-			      	<div class="date-picker-pane-example" data-date-picker="date-pane-date-start"></div>
-			      	<div class="date-picker-pane-example" data-date-picker="date-pane-date-end"></div>
-			      </div>
-			      <div class="date-picker-pane-footer">
-					<button class="btn btn-primary">Apply</button>
-					<button class="btn btn-default">Cancel</button>
-			      </div>
-		    </div>
+  <p>When users select custom range to display date/time pickers with two calenders view.</p>
+  <p>The calender pane can be opened on the right side or the left side depends on the space.</p>
+  
+  <div id="date-time-range-dropdown" class="dropdown open">
+    <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+      <span class="caret"></span>Last 30 days
+    </button>
+
+    <div class="custom-wrapper">
+      <ul class="dropdown-menu">
+        <li><a class="predefine-range" href="javascript:;">Last 24 hours</a></li>
+        <li><a class="predefine-range" href="javascript:;">Last 7 days</a></li>
+        <li><a class="predefine-range" href="javascript:;">Last 30 days</a></li>
+        <li><a class="predefine-range" href="javascript:;">Last 90 days</a></li>
+        <li><a class="custom-range focus" href="javascript:;">Custom range</a></li>
+      </ul>
+
+      <div class="date-picker-pane show">
+        <div class="date-picker-pane-header">
+          <div class="simple-date-time-example">
+            <div class="input-icon-group">
+              <input id="pane-date-start" type="text" class="form-control input-width-xs" placeholder="mm/dd/yyyy">
+              <label class="input-icon-label" for="pane-date-start">
+                <i class="fa fa-calendar"></i>
+              </label>
+            </div>
+
+            <div class="input-icon-group">
+              <input id="pane-time-start" type="text" class="form-control input-width-xs" data-time-picker="pane-time-start" placeholder="hh:mm:ss">
+              <label class="input-icon-label" for="pane-time-start">
+                <i class="fa fa-clock-o"></i>
+              </label>
+            </div>
+          </div>
+
+          <div class="tilde">~</div>
+          <div class="simple-date-time-example">
+            <div class="input-icon-group">
+              <input id="pane-date-end" type="text" class="form-control input-width-xs" placeholder="mm/dd/yyyy">
+              <label class="input-icon-label" for="pane-date-end">
+                <i class="fa fa-calendar"></i>
+              </label>
+            </div>
+            
+            <div class="input-icon-group">
+              <input id="pane-time-end" type="text" class="form-control input-width-xs" data-time-picker="pane-time-end" placeholder="hh:mm:ss">
+              <label class="input-icon-label" for="pane-time-end">
+                <i class="fa fa-clock-o"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="date-picker-pane-body">
+          <div class="date-picker-pane-example" data-date-picker="date-pane-date-start"></div>
+          <div class="date-picker-pane-example" data-date-picker="date-pane-date-end"></div>
+        </div>
+
+        <div class="date-picker-pane-footer">
+          <button class="btn btn-primary">Apply</button>
+          <button class="btn btn-default">Cancel</button>
+        </div>
       </div>
     </div>
+  </div>
 </section>

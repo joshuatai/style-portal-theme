@@ -1,65 +1,137 @@
 var container = this;
+var dateTimeRangeDropdown = $('#date-time-range-dropdown', container);
+var dateStart = $('#pane-date-start', container);
+var dateEnd = $('#pane-date-end', container);
 var datePickerPaneStart = $('[data-date-picker=date-pane-date-start]', container);
 var datePickerPaneEnd = $('[data-date-picker=date-pane-date-end]', container);
-var timePickerPaneStart = $('[data-time-picker=pane-time-start]', container);
-var timePickerPaneEnd = $('[data-time-picker=pane-time-end]', container);
-function dateFormat(date) {
-	var thisDate = new Date(date);
-	var dd = thisDate.getDate();
-	var mm = thisDate.getMonth()+1; //January is 0
-	var yyyy = thisDate.getFullYear();
-	if(dd<10) {
-	    dd='0'+dd;
-	} 
-	if(mm<10) {
-	    mm='0'+mm;
-	} 
-	var thisDate = dd+'/'+mm+'/'+yyyy;
-	return thisDate;
-}
+var timePickerStart = $('[data-time-picker=pane-time-start]', container);
+var timePickerEnd = $('[data-time-picker=pane-time-end]', container);
+var today = dateFormat(Date.now());
+var lastweek = dateFormat(date(today) - 86400000 * 7);
+
+dateTimeRangeDropdown.on('shown.bs.dropdown', function () {
+  $('.dropdown-menu>li>a').removeClass('focus');
+})
+.on('hidden.bs.dropdown', function () {
+	$('.date-picker-pane').removeClass('show');
+});
+
+dateStart.val(lastweek);
+dateEnd.val(today);
+
+dateStart.on('change', function () {
+	datePickerPaneStart.data('date', $(this).val()).datepicker('update');
+});
+
+dateEnd.on('change', function () {
+	datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
+});
+
 datePickerPaneStart
+	.data('date', lastweek)
 	.datepicker({
-		format: 'dd/mm/yyyy',
 		todayHighlight: true
 	})
 	.on('changeDate', function(ev){
 		var dateText = dateFormat(ev.date.valueOf());
-		$("#pane-date-start").val(dateText);
-		datePickerPaneEnd.datepicker('setStartDate', dateText);
-	});
-datePickerPaneStart.datepicker("iconChange");
+
+		dateStart.val(dateText);
+
+		var start = date(dateStart.val());
+		var end = date(dateEnd.val());
+		
+		if (start > end) {
+			dateEnd.val(dateText);
+			datePickerPaneEnd.data('date', dateText).datepicker('update');
+		}
+
+		if (start.getTime() == end.getTime() && isStartTimeEqualsEndTime()) {
+			timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1));
+		}
+	})
+	.datepicker('iconChange');
 
 datePickerPaneEnd
 	.datepicker({
-		format: 'dd/mm/yyyy',
 		todayHighlight: true
 	})
 	.on('changeDate', function(ev){
 		var dateText = dateFormat(ev.date.valueOf());
-		$("#pane-date-end").val(dateText);
-		datePickerPaneStart.datepicker('setEndDate', dateText);
-	});
-	
-datePickerPaneEnd.datepicker("iconChange");
-timePickerPaneStart.timeEntry({
+
+		dateEnd.val(dateText);
+
+		var start = date(dateStart.val());
+		var end = date(dateEnd.val());
+		
+		if (start < end) {
+			dateStart.val(dateText);
+			datePickerPaneStart.data('date', dateText).datepicker('update');
+		}
+
+		if (start.getTime() == end.getTime() && isStartTimeEqualsEndTime()) {
+			timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerStart, -1));
+		}
+	})
+	.datepicker('iconChange');
+
+timePickerStart.timeEntry({
 	show24Hours: true, 
 	showSeconds: true,
 	spinnerImage: null
-});
-timePickerPaneEnd.timeEntry({
+})
+.timeEntry('setTime', '12:00:00');
+
+timePickerEnd.timeEntry({
 	show24Hours: true, 
 	showSeconds: true,
 	spinnerImage: null
-});
-$(".custom-range").on("click", function(e){
+})
+.timeEntry('setTime', '12:00:00');
+
+$('.custom-range').on('click', function(e){
 	e.stopPropagation();
-	$(".date-picker-pane").addClass("show");
+	$(this).addClass('focus');
+	$('.date-picker-pane').addClass('show');
 });
-$(".dropdown").on("hidden.bs.dropdown", function(event){
-	$(".date-picker-pane").removeClass("show");
-});
-$(".predefine-range").on("click", function(event){
+
+$('.predefine-range').on('click', function(event){
 	var caret = '<span class="caret"></span>';
 	var text = $(this).text();
 	$('button.dropdown-toggle').html(caret+text);
 });
+
+function isStartTimeEqualsEndTime () {
+	var timeStart = timePickerStart.timeEntry('getTime');
+	var timeEnd = timePickerEnd.timeEntry('getTime');
+
+	if (timeStart === null) { return false; }
+	if (timeEnd === null) { return false; }
+	if (timeStart.getTime() !== timeEnd.getTime()) { return false; }
+
+	return true;
+}
+
+function calTimePickerDate ($elem, secs) {
+	var origin = $elem.timeEntry('getTime');
+	var date = new Date(origin);
+
+	date.setSeconds(origin.getSeconds() + secs);
+
+	return date;
+}
+
+function date (date) {
+	return new Date(date);
+}
+
+function dateFormat (date) {
+	var date = new Date(date);
+	var dd = date.getDate();
+	var mm = date.getMonth() + 1; //January is 0
+	var yyyy = date.getFullYear();
+
+	dd = dd < 10 ? `0${dd}`: dd;
+	mm = mm < 10 ? `0${mm}`: mm;
+	
+	return `${mm}/${dd}/${yyyy}`;
+}
