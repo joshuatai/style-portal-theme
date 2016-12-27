@@ -1,38 +1,54 @@
 var container = this;
 var datePickerStart = $('[data-date-picker=date-picker-start]', container);
 var datePickerEnd = $('[data-date-picker=date-picker-end]', container);
-function dateFormat(date) {
-	var thisDate = new Date(date);
-	var dd = thisDate.getDate();
-	var mm = thisDate.getMonth()+1; //January is 0
-	var yyyy = thisDate.getFullYear();
-	if(dd<10) {
-	    dd='0'+dd;
-	} 
-	if(mm<10) {
-	    mm='0'+mm;
-	} 
-	var thisDate = dd+'/'+mm+'/'+yyyy;
-	return thisDate;
-}
+var today = dateFormat(Date.now());
+var yestoday = dateFormat(date(today) - 86400000);
+
+datePickerStart.val(yestoday);
+datePickerEnd.val(today);
+
 datePickerStart.datepicker({
-	format: 'dd/mm/yyyy',
-	todayHighlight: true,
-	endDate: "24/10/2016"
+	todayHighlight: true
 }).on('changeDate', function(ev){
-	var dateText = dateFormat(ev.date.valueOf());
-	datePickerEnd.datepicker('setStartDate', dateText);
+	var nextDate = dateFormat(ev.date.valueOf() + 86400000);
+
+	if (date(datePickerEnd.val()).getTime() <= date(datePickerStart.val()).getTime()) {
+		datePickerEnd.val(nextDate);
+		datePickerEnd.datepicker('setDate', date(nextDate));
+	}
+
+	datePickerStart.focus();
 }).on('show', function(ev){
 	datePickerStart.datepicker('iconChange');
 });
 
 datePickerEnd.datepicker({
-	format: 'dd/mm/yyyy',
-	todayHighlight: true,
-	startDate: "23/10/2016"
+	todayHighlight: true
 }).on('changeDate', function(ev){
-	var dateText = dateFormat(ev.date.valueOf());
-	datePickerStart.datepicker('setEndDate', dateText);
+	var preDate = dateFormat(ev.date.valueOf() - 86400000);
+
+	if (date(datePickerStart.val()).getTime() >= date(datePickerEnd.val()).getTime()) {
+		datePickerStart.val(preDate);
+		datePickerStart.datepicker('setDate', date(preDate));
+	}
+
+	datePickerEnd.focus();
 }).on('show', function(ev){
 	datePickerEnd.datepicker('iconChange');
 });
+
+function date (date) {
+	return new Date(date);
+}
+
+function dateFormat (date) {
+	var date = new Date(date);
+	var dd = date.getDate();
+	var mm = date.getMonth() + 1; //January is 0
+	var yyyy = date.getFullYear();
+
+	dd = dd < 10 ? `0${dd}`: dd;
+	mm = mm < 10 ? `0${mm}`: mm;
+	
+	return `${mm}/${dd}/${yyyy}`;
+}
