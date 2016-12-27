@@ -41,6 +41,11 @@
       "deps": [
         "jquery-2.2.4"
       ]
+    },
+    "jquery.timeentry.package-2.0.1": {
+      "deps": [
+        "jquery.plugin.timeentry.package-2.0.1"
+      ]
     }
   }
 }
