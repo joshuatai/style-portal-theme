@@ -1,0 +1,17 @@
+{
+  "id": "ed131974-58a7-408b-b724-b24bd9831cbe",
+  "name": "Status Variations",
+  "location": "tables/status-variations.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-34"
+  }
+}

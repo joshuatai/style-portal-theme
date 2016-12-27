@@ -1,0 +1,17 @@
+{
+  "id": "ff7bf402-d9ee-4b4f-a37c-be3a3997c8fe",
+  "name": "Sizes",
+  "location": "tables/sizes.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-12"
+  }
+}

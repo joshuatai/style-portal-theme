@@ -1,0 +1,17 @@
+{
+  "id": "65180e50-d1c2-4fe0-ab86-55e4abb5ca44",
+  "name": "Types",
+  "location": "tables/types.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-11"
+  }
+}
