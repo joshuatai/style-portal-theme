@@ -1,0 +1,38 @@
+.div-header .table > thead > tr > th:nth-child(1),
+.div-body .table > tbody > tr > td:nth-child(1) {
+	width: 388px;
+}
+.div-header .table > thead > tr > th:nth-child(2),
+.div-body .table > tbody > tr > td:nth-child(2) {
+	width: 166px;
+}
+.div-header .table > thead > tr > th:nth-child(3),
+.div-body .table > tbody > tr > td:nth-child(3) {
+	width: 266px;
+}
+.div-header .table > thead > tr > th:nth-child(4),
+.div-body .table > tbody > tr > td:nth-child(4) {
+	width: 254px;
+}
+.div-header .table > thead > tr > th:nth-child(5),
+.div-body .table > tbody > tr > td:nth-child(5) {
+	width: 219px;
+}
+
+.table-bordered {
+	border: 0;
+}
+
+.div-header .table-bordered {
+	border-top: 1px solid #dddddd;
+}
+
+.div-body .table > tbody > tr:first-child > td {
+	border-top: 0;
+}
+.div-body .table > tbody > tr:last-child > td {
+	border-bottom: 0;
+}
+.table-fixed-example .breadcrumb {
+	padding: 12px 20px;
+}
