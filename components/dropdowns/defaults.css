@@ -1,0 +1,15 @@
+
+.dropdown-example .dropdown-toggle {
+  float: left;
+}
+
+.dropdown-example .dropdown > .dropdown-menu {
+  clear: left;
+  position: static;
+}
+
+@media screen and (max-width: 1023px) {
+  .dropdown-submenu-example {
+    height: 300px;
+  }
+}
