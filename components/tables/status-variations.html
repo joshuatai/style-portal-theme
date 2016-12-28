@@ -324,44 +324,43 @@
   <h5>Table with Loader</h5>
   <p>Display a loader overlay to indicate progress or an unindeterminate amount of time required for a process.</p>
   <div class="table-container">
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Deployment Plan</th>
+              <th>Type</th>
+              <th>Appliance</th>
+              <th>Deployed</th>
+              <th>Creator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hotfix_DDEI</td>
+              <td>Hotfix</td>
+              <td>8</td>
+              <td>2016-06-02 23:15:00</td>
+              <td>Administrator</td>
+            </tr>
+            <tr>
+              <td>Hotfix_DDI_01</td>
+              <td>Virtual Analyzer image</td>
+              <td>12</td>
+              <td>2016-04-18 23:17:20</td>
+              <td>Administrator</td>
+            </tr>
+            <tr>
+              <td>TW_Patch_01_DDI</td>
+              <td>Firmware</td>
+              <td>29</td>
+              <td>2016-04-17 21:20:18</td>
+              <td>Operator</td>
+            </tr>
+          </tbody>
+      </table>
       <div class="loader-overlay">
         <span class="loader loader-large"></span>
       </div>
-      <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Deployment Plan</th>
-          <th>Type</th>
-          <th>Appliance</th>
-          <th>Deployed</th>
-          <th>Creator</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Hotfix_DDEI</td>
-          <td>Hotfix</td>
-          <td>8</td>
-          <td>2016-06-02 23:15:00</td>
-          <td>Administrator</td>
-        </tr>
-        <tr>
-          <td>Hotfix_DDI_01</td>
-          <td>Virtual Analyzer image</td>
-          <td>12</td>
-          <td>2016-04-18 23:17:20</td>
-          <td>Administrator</td>
-        </tr>
-        <tr>
-          <td>TW_Patch_01_DDI</td>
-          <td>Firmware</td>
-          <td>29</td>
-          <td>2016-04-17 21:20:18</td>
-          <td>Operator</td>
-        </tr>
-      </tbody>
-  </table>
   </div>
   <h5>Table without Data</h5>
   <p>Display a message in the middle of table</p>
