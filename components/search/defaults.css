@@ -10,7 +10,6 @@
   margin-top: 18px;
 }
 .search-example .input-group .form-control {
-  z-index: 3;
   width: 256px;
 }
 .search-example .dropdown-menu {
