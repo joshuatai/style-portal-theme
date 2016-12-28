@@ -1,17 +1,19 @@
 {
-  "id": "bfc3f4cb-446a-4638-9a96-e41a13314e88",
-  "name": "Log On with Error",
-  "location": "common-templates/log-on-with-error.html",
-  "dependencies": [],
-  "actions": [
-    {
-      "name": "Style",
-      "className": "fa fa-code"
-    }
-  ],
-  "type": "draggable",
-  "grid": { 
-    "col": "col-xs-6 col-md-4 col-xl-3", 
-    "row": "row-md-6 row-lg-7" 
-  }
+   "id":"bfc3f4cb-446a-4638-9a96-e41a13314e88",
+   "name":"Log On with Error",
+   "location":"common-templates/log-on-with-error.html",
+   "dependencies":[
+
+   ],
+   "actions":[
+      {
+         "name":"Style",
+         "className":"fa fa-code"
+      }
+   ],
+   "type":"draggable",
+   "grid":{
+      "col": "col-xs-6 col-md-4 col-xl-3",
+      "row": "row-md-6 row-lg-7"
+   }
 }

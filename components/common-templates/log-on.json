@@ -10,8 +10,8 @@
     }
   ],
   "type": "draggable",
-  "grid": {     
-    "col": "col-xs-6 col-md-4 col-xl-3", 
-    "row": "row-md-6 row-lg-7" 
+  "grid": {
+    "col": "col-xs-6 col-md-4 col-xl-3",
+    "row": "row-md-6 row-lg-7"
   }
 }
