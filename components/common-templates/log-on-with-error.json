@@ -1,0 +1,17 @@
+{
+  "id": "bfc3f4cb-446a-4638-9a96-e41a13314e88",
+  "name": "Log On with Error",
+  "location": "common-templates/log-on-with-error.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-6 col-lg-4 col-xl-4",
+    "row": "row-md-7 row-lg-7 row-lg-7 row-xl-8"
+  }
+}
