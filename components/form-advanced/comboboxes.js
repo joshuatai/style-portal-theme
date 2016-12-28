@@ -36,7 +36,7 @@ combobox.on('select.editable-select', function (e) {
     $(this).addClass("selected");  
 });
 if (combobox.length === 1) {        
-  $(container).parent().addClass("overflow");
+  $(".segment-panel", container).addClass("overflow");
 }
 $('[data-combobox=initialize]', container).each(function() {
   var $combobox =  $('.combobox');
