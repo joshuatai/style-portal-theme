@@ -1,6 +1,6 @@
 {
   "id": "f0d4e63c-729c-4feb-b18f-2af7f40f0d12",
-  "name": "Log on",
+  "name": "Log On",
   "location": "common-templates/log-on.html",
   "dependencies": [],
   "actions": [
@@ -10,8 +10,8 @@
     }
   ],
   "type": "draggable",
-  "grid": {
-    "col": "col-md-6 col-lg-4 col-xl-4",
-    "row": "row-md-7 row-lg-7 row-lg-7 row-xl-8"
+  "grid": {     
+    "col": "col-xs-6 col-md-4 col-xl-3", 
+    "row": "row-md-6 row-lg-7" 
   }
 }
