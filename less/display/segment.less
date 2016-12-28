@@ -28,6 +28,9 @@
 
 .segment-panel-heading {
   padding: 0 16px;
+  .templates & {
+    padding: 0 24px;
+  }
   &:extend(.clearfix all);
 }
 
@@ -77,6 +80,10 @@
   bottom: 0;
   left: 0;
 
+  .templates & {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   @media screen and (max-width: 1023px) {
     position: static;
     height: 100%;

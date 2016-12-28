@@ -1,0 +1,1 @@
+$(this).addClass("templates");
