@@ -14,10 +14,15 @@ datePickerStart.datepicker({
 
 	if (date(datePickerEnd.val()).getTime() <= date(datePickerStart.val()).getTime()) {
 		datePickerEnd.val(nextDate);
-		datePickerEnd.datepicker('setDate', date(nextDate));
+		datePickerEnd.datepicker('setDate', date(nextDate)).data('manually', true);
 	}
 
-	datePickerStart.focus();
+	if (!datePickerStart.data('manually')) {
+		datePickerStart.blur().datepicker('hide');
+		datePickerEnd.focus().datepicker('show');
+	}
+
+	datePickerStart.data('manually', false);
 }).on('show', function(ev){
 	datePickerStart.datepicker('iconChange');
 });
@@ -29,10 +34,14 @@ datePickerEnd.datepicker({
 
 	if (date(datePickerStart.val()).getTime() >= date(datePickerEnd.val()).getTime()) {
 		datePickerStart.val(preDate);
-		datePickerStart.datepicker('setDate', date(preDate));
+		datePickerStart.datepicker('setDate', date(preDate)).data('manually', true);
 	}
 
-	datePickerEnd.focus();
+	if (!datePickerEnd.data('manually')) {
+		datePickerEnd.blur().datepicker('hide');
+	}
+
+	datePickerEnd.data('manually', false);
 }).on('show', function(ev){
 	datePickerEnd.datepicker('iconChange');
 });
