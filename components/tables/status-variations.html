@@ -43,8 +43,8 @@
 </section>
 
 <section class="tables-example">
-	<h5>Row Hover</h5>
-	<p>Display a background in a table row if a user hovers over any part of that row.</p>
+	<h5>Row hover</h5>
+	<p>Change the color of a table row when the user hovers over any part of that row</p>
   <table class="table table-bordered table-hover">
       <thead>
         <tr>
@@ -80,10 +80,10 @@
         </tr>
       </tbody>
   </table>
-  <h5>Row Selection</h5>
-  <p>When a row is selected, display a background color on the row.</p>
+  <h5>Row selection</h5>
+  <p>Change the color of a table row when it is selected.</p>
   <ul>
-      <li>The area of clickable effect should be any part of that row unless there has a hyperlink in a column.</li>
+      <li>Row selection should take effect when the user clicks anywhere in a row, except for table cells that contain hyperlinks. Note the following checkboxes are greyed out for demo purposes.</li>
   </ul>
   <table class="table table-bordered table-hover">
       <thead>
@@ -118,8 +118,8 @@
         </tr>
         <tr>
           <td scope="row">
-            <div class="checkbox">
-              <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs3" class="input-checkbox">
+            <div class="checkbox disabled">
+              <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs3" class="input-checkbox disabled" disabled>
               <label for="tablecheckboxs3"></label>
             </div>
           </td>
@@ -131,8 +131,8 @@
         </tr>
         <tr>
           <td scope="row">
-            <div class="checkbox">
-              <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs4" class="input-checkbox">
+            <div class="checkbox disabled">
+              <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs4" class="input-checkbox disabled" disabled>
               <label for="tablecheckboxs4"></label>
             </div>
           </td>
@@ -144,10 +144,10 @@
         </tr>
       </tbody>
   </table>
-  <h5>Hyperlink in Table</h5>
-  <p>A table cell can have one hyperlink for bring users to get more details.</p>
+  <h5>Hyperlinks</h5>
+  <p>Preferrably, use no more one hyperlink in a table cell.</p>
   <ul>
-      <li>The area of clickable effect should be the whole column for usability.</li>
+      <li>A hyperlink should take effect when the user clicks any where in a table cell that contains the hyperlink.</li>
   </ul>
   <table class="table table-bordered table-hover">
       <thead>
@@ -184,51 +184,51 @@
         </tr>
       </tbody>
   </table>
-  <h5>Sortable</h5>
-  <p>A table may allow a user to sort contents by clicking on a table header.</p>
+  <h5>Sortable header</h5>
+  <p>Table rows may be sorted by clicking on table headers.</p>
   <ul>
-      <li>The first click should sort descending, the second click should sort ascending.</li>
-      <li>If sorting is enabled, display another background color upon hover a table header, which indicates that the column is sortable.</li>
+      <li>The first click should sort table rows in descending order, and the second click in ascending order.</li>
+      <li>When a sortable table header is hovered over, display a pointer and show the header in another color to indicate that the column is sortable.</li>
   </ul>
   <table class="table table-bordered table-hover table-sortable">
       <thead>
         <tr>
+          <th class="sortabled">Deployed<span class="icon icon_sortDescending"></span></th>
           <th>Deployment Plan</th>
           <th>Type</th>
           <th>Appliance</th>
-          <th class="sortabled">Deployed<span class="icon icon_sortDescending"></span></th>
           <th>Creator</th>
         </tr>
       </thead>
 
       <tbody>
         <tr>
+          <td>2016-06-02 23:15:00</td>
           <td>Hotfix_DDEI</td>
           <td>Hotfix</td>
           <td>8</td>
-          <td>2016-06-02 23:15:00</td>
           <td>Administrator</td>
         </tr>
         <tr>
+          <td>2016-04-18 23:17:20</td>
           <td>Hotfix_DDI_01</td>
           <td>Virtual Analyzer image</td>
           <td>12</td>
-          <td>2016-04-18 23:17:20</td>
           <td>Administrator</td>
         </tr>
         <tr>
+          <td>2016-04-17 21:20:18</td>
           <td>TW_Patch_01_DDI</td>
           <td>Firmware</td>
           <td>29</td>
-          <td>2016-04-17 21:20:18</td>
           <td>Operator</td>
         </tr>
       </tbody>
   </table>
-  <h5>Fixed</h5>
+  <h5>Fixed header</h5>
   <p>A fixed header remains visible as the table body is scrolled. This is useful for larger amounts of data.</p>
   <ul>
-      <li>There are two example of fixed header. One is table body have scrollbar can be scrolled inside table, the other one is table header is sticked on top of browser while scrolling down the table.</li>
+      <li>Use either of the following scroll bar styles: an in-table scroll bar with which only the table content can be scrolled or a browser scroll bar with the table header row fixed to the top of the browser while scrolling down.</li>
   </ul>
   <div class="table-with-pagination">
     <div class="div-header">
@@ -321,7 +321,7 @@
     </div>
   </div>
   <div class="placeholder" data-type="iframe" data-class="table-fixed-example" data-src="table-fixed-top-example.html"></div>
-  <h5>Table with Loader</h5>
+  <h5>Loader</h5>
   <p>Display a loader overlay to indicate progress or an unindeterminate amount of time required for a process.</p>
   <div class="table-container">
       <table class="table table-bordered">
@@ -362,10 +362,10 @@
         <span class="loader loader-large"></span>
       </div>
   </div>
-  <h5>Table without Data</h5>
-  <p>Display a message in the middle of table</p>
+  <h5>Tables without data</h5>
+  <p>Display a message at the cetner of table.</p>
   <ul>
-      <li> Setting the spaces as two rows height if the table is not fixed full page layout.</li>
+      <li>Use two rows for the table content  if the table is not set for full-page display.</li>
   </ul>
   <table class="table table-bordered table-no-data">
       <thead>
