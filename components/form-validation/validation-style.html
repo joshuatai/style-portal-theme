@@ -14,6 +14,10 @@
   <pre data-title="inValid">
     <style data-selector=".help-block-invalid"></style>
   </pre>
+  <h5>Help text with icon</h5>
+  <pre>
+    <style data-selector=".help-block.help-block-with-icon"></style>
+  </pre>
   <h5>Icon</h5>
   <p>The icon class should be only used on elements that do not contain text or any child elements. It is recommanded to use the <code data-tag="span"></code> element. E.g. <code data-html="<span class="icon"></span>Text"></code></p>
   <pre data-title="For Image icon:">
@@ -32,7 +36,7 @@
 	    <label class="control-label label-required" for="errorInput">Input error:</label>
 	    <div class="control-wrapper">
 	    	<input type="text" class="form-control form-invalid" id="errorInput" aria-describedby="errorBlock">
-	    	<span id="errorBlock" class="help-block help-block-invalid"><span class="icon icon-warning-red"></span>Required field.</span>
+	    	<span id="errorBlock" class="help-block help-block-invalid help-block-with-icon"><span class="icon icon-warning-red"></span>Required field.</span>
 		</div>
 	  </div>
 	</form>
