@@ -95,9 +95,7 @@ $('.custom-range').on('click', function(e){
 });
 
 $('.predefine-range').on('click', function(event){
-	var caret = '<span class="caret"></span>';
-	var text = $(this).text();
-	$('button.dropdown-toggle').html(caret+text);
+	$('#date-time-range-text').text($(this).text());
 });
 
 function isStartTimeEqualsEndTime () {
