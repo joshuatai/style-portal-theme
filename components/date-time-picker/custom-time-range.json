@@ -1,7 +1,7 @@
 {
   "id": "44693e7b-0c49-4264-8640-5f765ebded82",
-  "name": "Predefined Date/Time Range",
-  "location": "date-time-picker/predefined-date-time.html",
+  "name": "Custom Time Range",
+  "location": "date-time-picker/custom-time-range.html",
   "dependencies": [
     "jquery.plugin.timeentry.package-2.0.1",
     "jquery.timeentry.package-2.0.1",

@@ -4,9 +4,8 @@
 .navbar-example ul.description:not(:first-child) {
   margin-top: 36px;
 }
-.navbar-example ul.description li:nth-child(2) {
-  margin-top: 8px;
-  list-style-type: none;
+.navbar-example h5:not(:first-child) {
+  margin-top: 40px;
 }
 .navbar-example header {
   padding: 0 24px;
@@ -36,7 +35,9 @@
   background-image: url("images/innerpage.png");
   background-repeat: no-repeat;
 }
-.navbar-example .col-example {
+.navbar-example .vertical-nav-example {
+  border: 1px solid #ccc;
+  height: 342px;
   position: relative;
   padding-left: 64px;
   -webkit-transition: all .15s;

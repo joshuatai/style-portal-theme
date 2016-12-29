@@ -8,13 +8,16 @@
   list-style: none;
   background-color: @breadcrumb-bg;  
   margin-bottom: @breadcrumb-margin;
+
+  &:extend(.clearfix all);
+  
   &.with-line {
     border-bottom: @breadcrumb-border-width @breadcrumb-border-color solid;
     margin-bottom: (@base-space * 2);
   }
 
   > li {
-    display: inline-block;
+    float: left;
     font-size: @breadcrumb-font-size;
     color: @breadcrumb-color;
     line-height: @breadcrumb-line-height;

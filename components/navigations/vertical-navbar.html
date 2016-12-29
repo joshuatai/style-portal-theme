@@ -7,6 +7,7 @@
   <pre data-title="Expand State">
     <style data-selector=".navigation.expand">Click toggle button to expand the vertical navigation bar</style>
   </pre>
+
   <h5>Toggle button</h5>
   <p>Use a <code data-tag="button"></code> element to wrap a hamburger menu icon.</p>
   <pre>
@@ -15,6 +16,7 @@
   <pre data-title=":focus">
     <style data-selector=".sidebar-toggle:focus"></style>
   </pre>
+
   <h5>Hamburger menu icon</h5>
   <p>Create a hamburger menu icon with three <code data-tag="span"></code> elements.</p>
   <pre>
@@ -31,13 +33,15 @@
     <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(3)">Second span</style>
     <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(4)">Third span</style>
   </pre>
+
   <h5>Vertical navigation bar wrapper</h5>
   <p>Wrap all tabs with a <code data-tag="ul"></code> element.</p>
   <pre>
     <style data-selector=".navigation-items"></style>
   </pre>
+
   <h5>Vertical navigation bar tabs</h5>
-  <p>Use <code data-tag="li"></code> for each tab under the <code data-tag="ul"></code> element.</p>
+  <p>Use <code data-tag="li"></code> for each tab under the <code data-tag="ul"></code> element.</p>
   <pre>
     <style data-selector=".navigation-items > li"></style>
   </pre>
@@ -47,6 +51,7 @@
   <pre data-title="selected">
     <style data-selector=".navigation.expand .navigation-items > li.selected > [aria-expanded=true]::after"></style>
   </pre>
+
   <h5>Menu item link</h5>
   <p>Use <code data-tag="a"></code> for each menu item under <code data-tag="li"></code> elements.</p>
   <pre>
@@ -62,6 +67,7 @@
   <pre data-title="selected">
     <style data-selector=".navigation-items > li.selected > a::after"></style>
   </pre>
+
   <h5>Icons and text in tab menu items</h5>
   <pre data-title="Icon Class">
     <style data-selector=".navigation-items > li > a > i"></style>
@@ -79,6 +85,7 @@
   <pre data-title="Text with icon">
     <style data-selector=".navigation.expand .navigation-items > li i + span"></style>
   </pre>
+  
   <h5>Sub-menus</h5>
   <p>Wrap a sub-menu with a <code data-tag="ul"></code> element.</p>
   <pre>
@@ -134,40 +141,39 @@
     <style data-selector=".navigation.expand ul.sub-nav > li.selected > a"></style>
   </pre>
 </section>
+
 <section class="navbar-example">
-  <div>
-    <ul class="description">
-      <li>A vertical navigation bar is one that has tabs put vertically on the side.</li>
-    </ul>
-    <div class="col-example ">
-      <div class="navigation collapsed">
-          <button class="sidebar-toggle" type="button">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <ul id="sidebarExample" class="navigation-items"></ul>
-      </div>
-      <header class="site-header">
-          <a href="javascript:;" class="banner">
-            <!--img src="dist/img/tball.svg" alt="Style Portal"-->
-            <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
-            <h1 class="site-title">Product Name</h1>
-          </a>             
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
-            <li class="dropdown">
-              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="javascript:;">Change Password</a></li>
-                <li><a href="javascript:;">Log off</a></li>
-              </ul>
-            </li>
-          </ul>
-      </header>
+  <p>A vertical navigation bar is one that has tabs put vertically on the side.</p>
+  
+  <div class="vertical-nav-example">
+    <div class="navigation collapsed">
+      <button class="sidebar-toggle" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <ul id="sidebarExample" class="navigation-items"></ul>
     </div>
+    
+    <header class="site-header">
+      <a href="javascript:;" class="banner">
+        <!--img src="dist/img/tball.svg" alt="Style Portal"-->
+        <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
+        <h1 class="site-title">Product Name</h1>
+      </a>             
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Change Password</a></li>
+            <li><a href="javascript:;">Log off</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
   </div>
 </section>

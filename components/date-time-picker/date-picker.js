@@ -7,5 +7,5 @@ datePicker.datepicker({
   console.log("show");
   datePicker.datepicker('iconChange');
 }).on('changeDate', function(ev){
-  datePicker.focus();
+  datePicker.blur().datepicker('hide');
 });
