@@ -36,7 +36,7 @@
 }
 
 .template-screenshot-link:hover {
-  border: 1px solid #bbb;
+  border: 1px solid #999;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
