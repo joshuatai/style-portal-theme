@@ -44,7 +44,7 @@
        -o-transition: all .15s;
           transition: all .15s;
 }
-.navbar-example .col-example .navigation {
+.navbar-example .vertical-nav-example .navigation {
   position: absolute;
   bottom: inherit;
   height: 340px;
