@@ -462,7 +462,16 @@ header .navbar-nav > li > .dropdown-menu {
       background-color: @navbar-default-link-hover-bg;
     }
 
-    > .active > a {
+    > li.navbar-first > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    > .active > a,
+    > .active:hover > a {
       &,
       &:hover,
       &:focus {
