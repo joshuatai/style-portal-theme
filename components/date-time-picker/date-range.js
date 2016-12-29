@@ -8,8 +8,18 @@ datePickerStart.val(yestoday);
 datePickerEnd.val(today);
 
 datePickerStart.datepicker({
-	todayHighlight: true
-}).on('changeDate', function(ev){
+	todayHighlight: true,
+  autoclose: true
+})
+.on('input', (e) => {
+	datePickerStart.data('manually', true);
+})
+.on('keydown', (e) => {
+	if (e.keyCode === 13) {
+		datePickerEnd.focus().datepicker('show');
+	}
+})
+.on('changeDate', function(ev){
 	var nextDate = dateFormat(ev.date.valueOf() + 86400000);
 
 	if (date(datePickerEnd.val()).getTime() <= date(datePickerStart.val()).getTime()) {
@@ -18,7 +28,6 @@ datePickerStart.datepicker({
 	}
 
 	if (!datePickerStart.data('manually')) {
-		datePickerStart.blur().datepicker('hide');
 		datePickerEnd.focus().datepicker('show');
 	}
 
@@ -28,7 +37,8 @@ datePickerStart.datepicker({
 });
 
 datePickerEnd.datepicker({
-	todayHighlight: true
+	todayHighlight: true,
+  autoclose: true
 }).on('changeDate', function(ev){
 	var preDate = dateFormat(ev.date.valueOf() - 86400000);
 
@@ -38,7 +48,7 @@ datePickerEnd.datepicker({
 	}
 
 	if (!datePickerEnd.data('manually')) {
-		datePickerEnd.blur().datepicker('hide');
+		// datePickerEnd.blur().datepicker('hide');
 	}
 
 	datePickerEnd.data('manually', false);
