@@ -1,1 +1,2 @@
-$(this).addClass("templates");
+
+$(this).addClass('templates');
