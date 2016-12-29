@@ -33,8 +33,7 @@ $('[data-palette]', this).each((i, elem) => {
 
     $color.attr('data-content', [
       ClipboardButtonTemplate('HEX', color.toHexString()),
-      ClipboardButtonTemplate('RGB', color.toRgbString()),
-      ClipboardButtonTemplate('HSL', color.toHslString())
+      ClipboardButtonTemplate('RGB', color.toRgbString())
     ].join(' '));
 
     $item.attr('data-color', color.toHexString());
