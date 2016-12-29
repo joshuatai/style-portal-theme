@@ -40,13 +40,15 @@ datePickerPaneStart
 		var start = date(dateStart.val());
 		var end = date(dateEnd.val());
 		
-		if (start > end) {
+		if (start.getTime() >= end.getTime()) {
+			end = date(dateStart.val());
+
+			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1)).focus();
+			}
+
 			dateEnd.val(dateText);
 			datePickerPaneEnd.data('date', dateText).datepicker('update');
-		}
-
-		if (start.getTime() == end.getTime() && isStartTimeEqualsEndTime()) {
-			timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1));
 		}
 	})
 	.datepicker('iconChange');
@@ -63,13 +65,15 @@ datePickerPaneEnd
 		var start = date(dateStart.val());
 		var end = date(dateEnd.val());
 		
-		if (start < end) {
+		if (start.getTime() >= end.getTime()) {
+			start = date(dateEnd.val());
+
+			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, -1)).focus();
+			}
+
 			dateStart.val(dateText);
 			datePickerPaneStart.data('date', dateText).datepicker('update');
-		}
-
-		if (start.getTime() == end.getTime() && isStartTimeEqualsEndTime()) {
-			timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerStart, -1));
 		}
 	})
 	.datepicker('iconChange');
@@ -98,15 +102,15 @@ $('.predefine-range').on('click', function(event){
 	$('#date-time-range-text').text($(this).text());
 });
 
-function isStartTimeEqualsEndTime () {
+function isStartTimeGreaterThanEndTime () {
 	var timeStart = timePickerStart.timeEntry('getTime');
 	var timeEnd = timePickerEnd.timeEntry('getTime');
 
 	if (timeStart === null) { return false; }
 	if (timeEnd === null) { return false; }
-	if (timeStart.getTime() !== timeEnd.getTime()) { return false; }
+	if (timeStart.getTime() >= timeEnd.getTime()) { return true; }
 
-	return true;
+	return false;
 }
 
 function calTimePickerDate ($elem, secs) {
