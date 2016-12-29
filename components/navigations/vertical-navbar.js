@@ -1,4 +1,4 @@
-var $sidebar = $('.col-example .navigation-items');
+var $sidebar = $('.vertical-nav-example .navigation-items');
 var object = [
   {
     "id": "1",
@@ -63,7 +63,7 @@ $sidebar.category({
 //$(".page-item a, .cate-item a", $sidebar).attr("href", "javascript:;");
 
 
-$('.col-example .navigation')
+$('.vertical-nav-example .navigation')
   .on('click', '.sidebar-toggle', function (e) {
     var $nav = $(this).parent('.navigation');
     if ($nav.is('.collapsed')) {

@@ -65,14 +65,14 @@
     <style data-selector=".nav > li > a:focus"></style>
   </pre>
   <h5>Menu style</h5>
-  <p>For details, see Dropdowns in the Style Portal.</p>
+  <p>For details, see Drop-downs.</p>
   <pre>
     <style data-selector=".navbar-nav > li > .dropdown-menu"></style>
   </pre>
   <pre data-title="Dropdown menu within banner">
     <style data-selector="header .nav > li.dropdown .dropdown-menu"></style>
   </pre>
-  <h5>Dropdown menu caret</h5>
+  <h5>Menu caret</h5>
   <pre>
     <style data-selector=".nav > li > a .caret"></style>
   </pre>
@@ -80,7 +80,7 @@
     <style data-selector="header .nav > li > a .caret"></style>
   </pre>
   <h5>Menu item style</h5>
-  <p>For details, see Dropdowns in the Style Portal.</p>
+  <p>For details, see Drop-downs.</p>
   <pre>
     <style data-selector=".navbar-nav > li > .dropdown-menu > li > a"></style>
   </pre>
@@ -89,7 +89,7 @@
     <style data-selector="header .nav > li.dropdown .dropdown-menu > li"></style>
   </pre>
   <h5>Sub-menu item style</h5>
-  <p>For details, see Dropdowns in the Style Portal.</p>
+  <p>For details, see Drop-downs.</p>
   <h5>Icon class</h5>
   <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> elements.</p>
   <pre data-title="For image icon(svg or png):">
@@ -125,169 +125,164 @@
 </section>
 
 <section class="navbar-example">
+  <h5>Horizontal navigation bar without arrow icons</h5>
+  <p>When all tabs contain sub-items, do not use any arrows to indicate sub-items.</p>
   <div>
-    <ul class="description">
-      <li>Horizontal navigation bar without arrow icons</li>
-      <li>When all tabs contain sub-items, do not use any arrows to indicate sub-items.</li>
-    </ul>
-    <div>
-      <header class="site-header">
-        <a href="javascript:;" class="banner">
-          <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
-          <h1 class="site-title">Product Name</h1>
-        </a>             
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:;">Change Password</a></li>
-              <li><a href="javascript:;">Log off</a></li>
-            </ul>
-          </li>
-        </ul>
-      </header>
-      <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-          <li><a class="navbar-icon" href="javascript:;"><span class="icon icon-favorite"></span></a></li>
-          <li class="dropdown active">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 1</a>
-            <ul class="dropdown-menu open">
-              <li class="active"><a href="javascript:;">Menu item one</a></li>
-              <li><a href="javascript:;">Menu item two</a></li>
-              <li><a href="javascript:;">Menu item three</a></li>
-              <li class="dropdown-submenu">
-                <a href="javascript:;">Menu item four</a>
-                <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Second level item one</a></li>
-                  <li><a href="javascript:;">Second level item two</a></li>
-                  <li><a href="javascript:;">Second level item three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 2</a>
-            <ul class="dropdown-menu open">
-              <li><a href="javascript:;">Menu item one</a></li>
-              <li><a href="javascript:;">Menu item two</a></li>
-              <li><a href="javascript:;">Menu item three</a></li>
-              <li class="dropdown-submenu">
-                <a href="javascript:;">Menu item four</a>
-                <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Second level item one</a></li>
-                  <li><a href="javascript:;">Second level item two</a></li>
-                  <li><a href="javascript:;">Second level item three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 3</a>
-            <ul class="dropdown-menu open">
-              <li><a href="javascript:;">Menu item one</a></li>
-              <li><a href="javascript:;">Menu item two</a></li>
-              <li><a href="javascript:;">Menu item three</a></li>
-              <li class="dropdown-submenu">
-                <a href="javascript:;">Menu item four</a>
-                <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Second level item one</a></li>
-                  <li><a href="javascript:;">Second level item two</a></li>
-                  <li><a href="javascript:;">Second level item three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 4</a>
-            <ul class="dropdown-menu open">
-              <li><a href="javascript:;">Menu item one</a></li>
-              <li><a href="javascript:;">Menu item two</a></li>
-              <li><a href="javascript:;">Menu item three</a></li>
-              <li class="dropdown-submenu">
-                <a href="javascript:;">Menu item four</a>
-                <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Second level item one</a></li>
-                  <li><a href="javascript:;">Second level item two</a></li>
-                  <li><a href="javascript:;">Second level item three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <ul class="description">
-      <li>Horizontal navigation bar with arrow icons</li>
-      <li>When you have a mix of tabs that do and do not contain sub-items, use arrows to indicate sub-items.</li>
-    </ul>
-    <div>
-      <header class="site-header">
-        <a href="javascript:;" class="banner">
-          <!--img src="dist/img/tball.svg" alt="Style Portal"-->
-          <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
-          <h1 class="site-title">Product Name</h1>
-        </a>             
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:;">Change Password</a></li>
-              <li><a href="javascript:;">Log off</a></li>
-            </ul>
-          </li>
-        </ul>
-      </header>
-      <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-          <li><a class="navbar-icon" href="javascript:;"><span class="icon icon-favorite"></span></a></li>
-          <li class="active"><a href="javascript:;">Link 1</a></li>
-          <li><a href="javascript:;">Link 2</a></li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>link 3</a>
-            <ul class="dropdown-menu open">
-              <li class="active"><a href="javascript:;">Menu item one</a></li>
-              <li><a href="javascript:;">Menu item two</a></li>
-              <li><a href="javascript:;">Menu item three</a></li>
-              <li class="dropdown-submenu">
-                <a href="javascript:;">Menu item four</a>
-                <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Second level item one</a></li>
-                  <li><a href="javascript:;">Second level item two</a></li>
-                  <li><a href="javascript:;">Second level item three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>link 4</a>
-            <ul class="dropdown-menu open">
-              <li><a href="javascript:;">Menu item one</a></li>
-              <li><a href="javascript:;">Menu item two</a></li>
-              <li><a href="javascript:;">Menu item three</a></li>
-              <li class="dropdown-submenu">
-                <a href="javascript:;">Menu item four</a>
-                <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Second level item one</a></li>
-                  <li><a href="javascript:;">Second level item two</a></li>
-                  <li><a href="javascript:;">Second level item three</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <ul class="description">
-      <li>Navigation bar animation:</li>
-      <li>Always keep the navigation bar on the top of the UI when scrolling down the page.</li>
-    </ul>
-    <!--iframe class="fixed-example" src="themes/components/navigations/fixed-top-example/index.html"></iframe-->
-    <div class="placeholder" data-type="iframe" data-class="fixed-example" data-src="fixed-top-example.html"></div>
+    <header class="site-header">
+      <a href="javascript:;" class="banner">
+        <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
+        <h1 class="site-title">Product Name</h1>
+      </a>             
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Change Password</a></li>
+            <li><a href="javascript:;">Log off</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-icon" href="javascript:;"><span class="icon icon-favorite"></span></a></li>
+        <li class="dropdown active">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 1</a>
+          <ul class="dropdown-menu open">
+            <li class="active"><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li class="dropdown-submenu">
+              <a href="javascript:;">Menu item four</a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Second level item one</a></li>
+                <li><a href="javascript:;">Second level item two</a></li>
+                <li><a href="javascript:;">Second level item three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 2</a>
+          <ul class="dropdown-menu open">
+            <li><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li class="dropdown-submenu">
+              <a href="javascript:;">Menu item four</a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Second level item one</a></li>
+                <li><a href="javascript:;">Second level item two</a></li>
+                <li><a href="javascript:;">Second level item three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 3</a>
+          <ul class="dropdown-menu open">
+            <li><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li class="dropdown-submenu">
+              <a href="javascript:;">Menu item four</a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Second level item one</a></li>
+                <li><a href="javascript:;">Second level item two</a></li>
+                <li><a href="javascript:;">Second level item three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 4</a>
+          <ul class="dropdown-menu open">
+            <li><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li class="dropdown-submenu">
+              <a href="javascript:;">Menu item four</a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Second level item one</a></li>
+                <li><a href="javascript:;">Second level item two</a></li>
+                <li><a href="javascript:;">Second level item three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
+
+  <h5>Horizontal navigation bar with arrow icons</h5>
+  <p>When you have a mix of tabs that do and do not contain sub-items, use arrows to indicate sub-items.</p>
+  <div>
+    <header class="site-header">
+      <a href="javascript:;" class="banner">
+        <!--img src="dist/img/tball.svg" alt="Style Portal"-->
+        <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
+        <h1 class="site-title">Product Name</h1>
+      </a>             
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Change Password</a></li>
+            <li><a href="javascript:;">Log off</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-icon" href="javascript:;"><span class="icon icon-favorite"></span></a></li>
+        <li class="active"><a href="javascript:;">Link 1</a></li>
+        <li><a href="javascript:;">Link 2</a></li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>link 3</a>
+          <ul class="dropdown-menu open">
+            <li class="active"><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li class="dropdown-submenu">
+              <a href="javascript:;">Menu item four</a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Second level item one</a></li>
+                <li><a href="javascript:;">Second level item two</a></li>
+                <li><a href="javascript:;">Second level item three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>link 4</a>
+          <ul class="dropdown-menu open">
+            <li><a href="javascript:;">Menu item one</a></li>
+            <li><a href="javascript:;">Menu item two</a></li>
+            <li><a href="javascript:;">Menu item three</a></li>
+            <li class="dropdown-submenu">
+              <a href="javascript:;">Menu item four</a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Second level item one</a></li>
+                <li><a href="javascript:;">Second level item two</a></li>
+                <li><a href="javascript:;">Second level item three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <h5>Navigation bar animation</h5>
+  <p>Always keep the navigation bar on the top of the UI when scrolling down the page.</p>
+  
+  <!--iframe class="fixed-example" src="themes/components/navigations/fixed-top-example/index.html"></iframe-->
+  <div class="placeholder" data-type="iframe" data-class="fixed-example" data-src="fixed-top-example.html"></div>
 </section>

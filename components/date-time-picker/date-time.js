@@ -6,7 +6,7 @@ datePickerTime.datepicker({
 })
 .datepicker('setDate', new Date())
 .on('changeDate', function(ev){
-  datePickerTime.focus();
+  datePickerTime.blur().datepicker('hide');
 })
 .on('show', function(ev){
 	datePickerTime.datepicker('iconChange');
