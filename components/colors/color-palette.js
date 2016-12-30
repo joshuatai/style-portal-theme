@@ -19,7 +19,6 @@ $('[data-palette]', this).each((i, elem) => {
     $index = $('<span>').addClass('color-index').data({ index: 11 - index }).text(11 - index);
     $color = $('<span>').addClass('color-code').attr({
       'data-toggle': 'popover',
-      'data-title': 'Copy Color Code',
       'data-placement': 'left',
       'data-trigger': 'manual',
       'data-html': true
@@ -31,7 +30,8 @@ $('[data-palette]', this).each((i, elem) => {
     color = tinycolor(matches[1]);
     dark = color.isDark();
 
-    $color.attr('data-content', [
+    $color.attr('data-content', [  
+      '<p style="color: #222;">Copy color code</p>',
       ClipboardButtonTemplate('HEX', color.toHexString()),
       ClipboardButtonTemplate('RGB', color.toRgbString())
     ].join(' '));
