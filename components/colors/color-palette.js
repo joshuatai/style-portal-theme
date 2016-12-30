@@ -10,25 +10,48 @@ $('[data-palette]', this).each((i, elem) => {
   let $list = $(elem);
   let palette = $list.data('palette');
   let styles = portal.theme.current.styles;
-  let $item, $index, $color;
-  let selector, css, matches, color, dark;
-  let index = 1;
 
-  while (index <= 10) {
+  function render (index) {
+    let $item;
+    let selector, css, matches, color, dark;
+
+    selector = `.colors-palette-container .${palette} li:nth-child(${index})`;
+    css = styles.style(selector);
+
+    if (!css) { return; }
+
     $item = $('<li>').addClass('color-bar');
-    $index = $('<span>').addClass('color-index').data({ index: 11 - index }).text(11 - index);
-    $color = $('<span>').addClass('color-code').attr({
+    
+    matches = /background-color: (#\w+);/.exec(css);
+    color = tinycolor(matches[1]);
+    dark = color.isDark();
+
+    $item.attr('data-color', color.toHexString()).data();
+
+    $item.data({ color }).addClass(dark ? 'colors-dark' : null);
+    $list.append($item);
+
+    render(++index);
+  }
+
+  render(1);
+
+  let $items = $list.find('>li');
+  let length = $items.length;
+
+  $items.each((i, elem) => {
+    let $item = $(elem);
+    let color = $item.data('color');
+    let index = length - i;
+    let $index = $('<span>').addClass('color-index').data({ index: index }).text(index);
+    let $color = $('<span>').addClass('color-code').attr({
       'data-toggle': 'popover',
       'data-placement': 'left',
       'data-trigger': 'manual',
       'data-html': true
     });
 
-    selector = `.colors-palette-container .${palette} li:nth-child(${index})`;
-    css = styles.style(selector);
-    matches = /background-color: (#\w+);/.exec(css);
-    color = tinycolor(matches[1]);
-    dark = color.isDark();
+    color = tinycolor(color);
 
     $color.attr('data-content', [  
       '<p style="color: #222;">Copy color code</p>',
@@ -36,14 +59,9 @@ $('[data-palette]', this).each((i, elem) => {
       ClipboardButtonTemplate('RGB', color.toRgbString())
     ].join(' '));
 
-    $item.attr('data-color', color.toHexString());
-
     $color.popover().text(color.toHexString().toUpperCase());
-    $item.data({ color }).append($index, $color).addClass(dark ? 'colors-dark' : null);
-    $list.append($item);
-
-    index++;
-  }
+    $item.append($index, $color);
+  });
 });
 
 $('.colors-palette-container').on('click', '.color-bar', (e) => {
