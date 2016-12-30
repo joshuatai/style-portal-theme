@@ -46,6 +46,11 @@
       "deps": [
         "jquery.plugin.timeentry.package-2.0.1"
       ]
+    },
+    "jquery-file-upload-9.12.5": {
+      "deps": [
+        "jquery-ui-1.12.1"
+      ]
     }
   }
 }
