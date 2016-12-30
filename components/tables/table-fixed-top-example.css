@@ -4,11 +4,11 @@
 }
 .div-header .table > thead > tr > th:nth-child(2),
 .div-body .table > tbody > tr > td:nth-child(2) {
-	width: 166px;
+	width: 300px;
 }
 .div-header .table > thead > tr > th:nth-child(3),
 .div-body .table > tbody > tr > td:nth-child(3) {
-	width: 266px;
+	width: 200px;
 	text-align: right;
 }
 .div-header .table > thead > tr > th:nth-child(4),

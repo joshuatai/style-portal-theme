@@ -30,11 +30,11 @@
 }
 .div-header .table > thead > tr > th:nth-child(2),
 .table-scrollable .table > tbody > tr > td:nth-child(2) {
-	width: 166px;
+	width: 300px;
 }
 .div-header .table > thead > tr > th:nth-child(3),
 .table-scrollable .table > tbody > tr > td:nth-child(3) {
-	width: 266px;
+	width: 200px;
 }
 .div-header .table > thead > tr > th:nth-child(4),
 .table-scrollable .table > tbody > tr > td:nth-child(4) {
