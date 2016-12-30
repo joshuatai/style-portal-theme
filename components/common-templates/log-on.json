@@ -11,7 +11,7 @@
   ],
   "type": "draggable",
   "grid": {
-    "col": "col-xs-12",
-    "row": null
+    "col": "col-xs-12 templates",
+    "row": "row-md-6"
   }
 }
