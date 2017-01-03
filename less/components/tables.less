@@ -26,6 +26,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
+  table-layout: fixed;
   //margin-bottom: @line-height-computed;
   border: 1px solid @table-border-color;
   // Cells
@@ -37,6 +38,8 @@ th {
       > td {
         padding: @table-cell-padding;
         vertical-align: top;
+        overflow: hidden;
+        text-overflow:ellipsis;
         //line-height: @line-height-base;
         a {
           text-decoration: none;

@@ -1,23 +1,19 @@
 .div-header .table > thead > tr > th:nth-child(1),
 .div-body .table > tbody > tr > td:nth-child(1) {
-	width: 388px;
+	width: 20%;
 }
 .div-header .table > thead > tr > th:nth-child(2),
 .div-body .table > tbody > tr > td:nth-child(2) {
-	width: 300px;
+	width: 25%;
 }
 .div-header .table > thead > tr > th:nth-child(3),
 .div-body .table > tbody > tr > td:nth-child(3) {
-	width: 200px;
+	width: 15%;
 	text-align: right;
 }
 .div-header .table > thead > tr > th:nth-child(4),
 .div-body .table > tbody > tr > td:nth-child(4) {
-	width: 254px;
-}
-.div-header .table > thead > tr > th:nth-child(5),
-.div-body .table > tbody > tr > td:nth-child(5) {
-	width: 219px;
+	width: 20%;
 }
 
 .table-bordered {

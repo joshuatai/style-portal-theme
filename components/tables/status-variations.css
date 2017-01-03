@@ -13,6 +13,9 @@
 .table-with-pagination .table-scrollable .table {
 	border: 0;
 }
+.table-with-pagination .table-scrollable .mCSB_inside > .mCSB_container {
+	margin-right: 0;
+}
 .table-with-pagination .mCustomScrollbar-dragger-hover .mCSB_draggerRail {
 	background-color: #e6e6e6;
 	border: 1px solid #ddd;
@@ -26,23 +29,19 @@
 }
 .div-header .table > thead > tr > th:nth-child(1),
 .table-scrollable .table > tbody > tr > td:nth-child(1) {
-	width: 388px;
+	width: 20%;
 }
 .div-header .table > thead > tr > th:nth-child(2),
 .table-scrollable .table > tbody > tr > td:nth-child(2) {
-	width: 300px;
+	width: 25%;
 }
 .div-header .table > thead > tr > th:nth-child(3),
 .table-scrollable .table > tbody > tr > td:nth-child(3) {
-	width: 200px;
+	width: 15%;
 }
 .div-header .table > thead > tr > th:nth-child(4),
 .table-scrollable .table > tbody > tr > td:nth-child(4) {
-	width: 254px;
-}
-.div-header .table > thead > tr > th:nth-child(5),
-.table-scrollable .table > tbody > tr > td:nth-child(5) {
-	width: 219px;
+	width: 20%;
 }
 
 .table-with-pagination .div-header .table > thead > tr > th:nth-child(3) {
@@ -51,12 +50,6 @@
 
 .table-with-pagination .div-header .table > thead > tr > th:nth-child(5) {
 	border-right: 0
-}
-.table-with-pagination .div-header .table > thead > tr > th:nth-child(6) {
-	width: 8px;
-    padding: 0;
-    border: 0;
-    border-bottom: 2px solid #cccccc;
 }
 
 .table-fixed-example {
