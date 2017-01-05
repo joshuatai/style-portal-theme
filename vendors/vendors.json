@@ -14,9 +14,9 @@
     "tinycolor-1.4.1": "https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.js",
     "prettify-298": [
       "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.js"
+      "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"
     ],
+    "prettify-css-298": "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-css.js",
     "jquery-editable-select": "jQuery-editable-select-master/dist/jquery-editable-select.min.js",
     "jquery-file-upload-9.12.5": "jQuery-File-Upload-9.12.5/js/jquery.fileupload.js",
     "jquery-inputmask": "jQuery-inputmask/dist/min/jquery.inputmask.bundle.min.js",
@@ -50,6 +50,11 @@
     "jquery-file-upload-9.12.5": {
       "deps": [
         "jquery-ui-1.12.1"
+      ]
+    },
+    "prettify-css-298": {
+      "deps": [
+        "prettify-298@1"
       ]
     }
   }
