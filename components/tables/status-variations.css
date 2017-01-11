@@ -27,23 +27,6 @@
 .table-with-pagination .table-scrollable .table > tbody > tr:last-child > td {
 	border-bottom: 0;
 }
-.div-header .table > thead > tr > th:nth-child(1),
-.table-scrollable .table > tbody > tr > td:nth-child(1) {
-	width: 20%;
-}
-.div-header .table > thead > tr > th:nth-child(2),
-.table-scrollable .table > tbody > tr > td:nth-child(2) {
-	width: 25%;
-}
-.div-header .table > thead > tr > th:nth-child(3),
-.table-scrollable .table > tbody > tr > td:nth-child(3) {
-	width: 15%;
-}
-.div-header .table > thead > tr > th:nth-child(4),
-.table-scrollable .table > tbody > tr > td:nth-child(4) {
-	width: 20%;
-}
-
 .table-with-pagination .div-header .table > thead > tr > th:nth-child(3) {
 	text-align: right;
 }
@@ -58,4 +41,28 @@
   	overflow-y: auto;
   	border: 1px solid #ccc;
   	margin-top: 24px;
+}
+.table-row-selection > thead > tr > th.gutter {
+	width: 38px;
+}
+.table-row-selection > thead > tr > th:nth-child(2),
+.table-row-selection > tbody > tr > td:nth-child(2) {
+	width: 35.3%;
+}
+.table-row-selection > thead > tr > th:nth-child(3),
+.table-row-selection > tbody > tr > td:nth-child(3) {
+	width: 23.53%;
+}
+.table-row-selection > thead > tr > th:nth-child(4),
+.table-row-selection > tbody > tr > td:nth-child(4) {
+	width: 11.76%;
+	text-align: right;
+}
+.table-row-selection > thead > tr > th:nth-child(5),
+.table-row-selection > tbody > tr > td:nth-child(5) {
+	width: 17.64%;
+}
+.table-row-selection > thead > tr > th:nth-child(6),
+.table-row-selection > tbody > tr > td:nth-child(6) {
+	width: 11.77%;
 }
