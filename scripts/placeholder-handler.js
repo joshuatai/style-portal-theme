@@ -13,8 +13,8 @@ function image (context, segment) {
     let width = data.width;
     let height = data.height;
     let src = data.refer === 'theme'
-      ? `themes/${route.current.params.theme}/images/${data.src}`
-      : `themes/${route.current.params.theme}/components/${segment.dir}/${data.src}`;
+      ? `themes/${route.current.params.theme}/${route.current.params.version}/images/${data.src}`
+      : `themes/${route.current.params.theme}/${route.current.params.version}/components/${segment.dir}/${data.src}`;
 
     $elem.css({ width, height });
     $image.on('load', () => $elem.replaceWith($image)).attr({ src }).addClass(data.class);
@@ -30,7 +30,7 @@ function iframe (context, segment) {
     let $elem = $(elem);
     let $iframe = $('<iframe>');
     let data = $elem.data();
-    let src = `themes/${route.current.params.theme}/components/${segment.dir}/${data.src}`;
+    let src = `themes/${route.current.params.theme}/${route.current.params.version}/components/${segment.dir}/${data.src}`;
 
     $iframe.attr({ src }).addClass(data.class);
     $elem.replaceWith($iframe);
