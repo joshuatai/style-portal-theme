@@ -17,6 +17,10 @@
 }
 .table-fixed-example .breadcrumb {
 	padding: 12px 20px;
+	background: #fff;
+}
+.affix.div-header {
+	top: 48px;
 }
 .table > thead > tr > th:nth-child(1),
 .table > tbody > tr > td:nth-child(1) {
