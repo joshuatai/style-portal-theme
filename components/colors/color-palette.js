@@ -16,10 +16,10 @@ $('[data-palette]', this).each((i, elem) => {
     let selector, css, matches, color, dark;
 
     selector = `.colors-palette-container .${palette} li:nth-child(${index})`;
+
+    if (!styles.contains(selector)) { return; }
+
     css = styles.style(selector);
-
-    if (!css) { return; }
-
     $item = $('<li>').addClass('color-bar');
     
     matches = /background-color: (#\w+);/.exec(css);
