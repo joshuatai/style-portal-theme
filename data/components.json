@@ -397,7 +397,12 @@
       "line chart",
       "chart"
     ],
-    "segments": []
+    "segments": [
+      "16a627b3-d119-426c-a090-25cd34fb762e",
+      "9a79c8cc-21f5-4404-9b24-aa33a082c06c",
+      "99710ff0-af7f-43ac-8044-3b333f3aa261",
+      "7213a163-7205-46e1-8283-f6df60ae9b16"
+    ]
   },
   {
     "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
@@ -424,5 +429,5 @@
     "segments": [
       "f0d4e63c-729c-4feb-b18f-2af7f40f0d12"
     ]
-  }  
+  }
 ]
