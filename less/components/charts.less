@@ -1,0 +1,146 @@
+//
+// Charts
+// --------------------------------------------------
+
+@widgetLagendListColors: #509be5, #66bf60, #e55c5c, #f2c849, #9b50e5, #5050e5, #45bde5, #f26d99, #ff9866, #b88ae5;
+
+.style-portal {
+  .highcharts {
+    .axis {
+      color: #666666;
+      font-size: 12px;
+      font-family: @font-family-arial;
+      &.xAxis {
+        padding: 2px 0;
+      }
+    }
+    .series {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      &.hover {
+        .stroke {
+          background-color: #ffffff;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+        }
+        .outer-glow {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .tooltips {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      background-color: #ffffff;
+    }
+    
+  }
+}
+
+section.legend {
+  height: 30px;
+  text-align: center;
+  position: relative;
+  ul {
+    list-style: none;
+    padding: 0 36px;
+    line-height: 30px;
+    transition: all 0.5s;
+    li {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 20px;
+      + li {
+         margin-left: 16px;
+      }
+      &.mute {
+        .opacity(.3);
+      }
+      &:before {
+        display: block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin-top: 6px;
+        margin-right: 4px;
+        float: left;
+      }
+    }
+  }
+  .make-lagend-list-style();
+}
+
+section.legend-vertical {
+  position: absolute;
+  right: 0;
+  width: 180px;
+  height: 280px;
+  ul {
+    padding: 0 0 0 32px;
+    li {
+      display: block;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      padding: 4px 0;
+    }
+  }
+}
+
+.legend-page {
+  .fa {
+    color: #9c9c9c;
+    cursor: pointer;
+  }
+  .fa-caret-up {
+    margin-right: 8px;
+  }
+  .fa-caret-down {
+    margin-left: 8px;
+  }
+  .unable {
+    cursor: default;
+    color: #DDDDDD;
+  }
+  .enable {
+    color: #9c9c9c;
+    cursor: pointer;
+  }
+}
+
+.with-vertical-legend {
+  position: relative;
+  .chart-container {
+    position: absolute;
+    left: 0;
+    right: 180px;
+  }
+}
+
+
+.make-lagend-list-style (@colors: @widgetLagendListColors) {
+  .color {
+    .for(@colors);
+    .-each(@color) {
+      @name: e(replace("@{color}", "#", "", "gi"));
+      &-@{name}:before {
+        background: @color;
+      }       
+    }
+  }
+}
+.for(@i, @n) {.-each(@i)}
+.for(@n) when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
