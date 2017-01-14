@@ -1,0 +1,17 @@
+{
+  "id": "7213a163-7205-46e1-8283-f6df60ae9b16",
+  "name": "Line Chart with Legends in right",
+  "location": "line-charts/line-chart-right-legend.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7"
+  }
+}
