@@ -1,46 +1,68 @@
 $(function () {
     var series = [
         {
-            name: 'New York',
-            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-        }, {
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        },  {
-            name: 'Berlin',
-            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 2.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-        }, {
-            name: 'London',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            name: 'Ransomware',
+            data: [8, 5, 11, 17, 22, 24, 24]
+        }, 
+        {
+            name: 'Anti-spyware',
+            data: [7, 6, 9, 14, 18, 21, 25]
+        },  
+        {
+            name: 'Web Reputation',
+            data: [6, 3, 8, 13, 2, 18, 17]
+        }, 
+        {
+            name: 'Virus/Malware',
+            data: [3, 4, 5, 8, 11, 15, 17]
+        }, 
+        {
+            name: 'Spyware/Grayeare',
+            data: [0, 44, 25, 48, 15, 13, 47],
+            visible: false
         },
         {
-            name: 'New York',
-            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-        }, {
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        },  {
-            name: 'Berlin',
-            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 2.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-        }, {
-            name: 'London',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            name: 'URL Filtrting',
+            data: [23, 44, 25, 18, 31, 25, 47],
+            visible: false
         },
         {
-            name: 'New York',
-            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-        }, {
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        },  {
-            name: 'Berlin',
-            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 2.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-        }, {
-            name: 'London',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            name: 'Behavior Monitoring',
+            data: [21, 24, 5, 48, 11, 55, 17],
+            visible: false
+        },
+        {
+            name: 'Device Control',
+            data: [22, 4, 15, 8, 31, 53, 12],
+            visible: false
+        },
+        {
+            name: 'Network Virus',
+            data: [42, 14, 52, 3, 3, 13, 22],
+            visible: false
+        },
+        {
+            name: 'Malicious',
+            data: [2, 4, 5, 31, 13, 43, 12],
+            visible: false
+        },
+        {
+            name: 'URL Filtrting',
+            data: [23, 44, 25, 18, 31, 25, 47],
+            visible: false
+        },
+        {
+            name: 'Behavior Monitoring',
+            data: [21, 24, 5, 48, 11, 55, 17],
+            visible: false
+        },
+        {
+            name: 'Device Control',
+            data: [22, 4, 15, 8, 31, 53, 12],
+            visible: false
         }
       ];
-    var colors = ['#509be5', '#66bf60', '#e55c5c', '#f2c849', '#9b50e5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5','#ff9866', '#b88ae5','#509be5', '#66bf60', '#e55c5c', '#f2c849', '#9b50e5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5','#ff9866', '#b88ae5'];
+    var colors = ['#509be5', '#66bf60', '#e55c5c', '#f2c849', '#9b50e5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5'];
     
     Highcharts.chart('legend-right-container', {
         chart: {
@@ -63,6 +85,9 @@ $(function () {
                     var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[i].replace('#', ''));  
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
+                    if (series[i].visible == false) {
+                        newItem.addClass("mute");
+                    }
                 }
                 var ul_height = legendContainer.height();
 
@@ -121,8 +146,10 @@ $(function () {
           enabled: false
         },
         xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            type: 'datetime',
+            dateTimeLabelFormats:{
+                day: '%m/%d'
+            },
             labels: {
                 style: {
                   color: '#666666',
@@ -149,6 +176,8 @@ $(function () {
         series: series,
         plotOptions: {
           series: {
+            pointStart: Date.UTC(2016, 9, 10),
+            pointIntervalUnit: 'day',
             marker: {
               radius: 4,
               symbol: 'circle',
@@ -172,9 +201,9 @@ $(function () {
             backgroundColor: '#FFFFFF',
             padding: 16,
             useHTML: true,
-            headerFormat: '<table><thead><tr><td style="padding-bottom: 5px">{point.key}</td></tr></thead>',
+            headerFormat: '<table><thead><tr><td style="padding-bottom: 5px">{point.x:%Y/%m/%d}</td></tr></thead>',
             pointFormat: '<tr><td style="padding-right: 20px"><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
-                '<td style="text-align: right">{point.y} EUR</td></tr>',
+                '<td style="text-align: right">{point.y}</td></tr>',
             footerFormat: '</table>'
         }
     }, function (chart) {
