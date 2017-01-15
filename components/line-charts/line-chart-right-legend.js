@@ -64,16 +64,16 @@ $(function () {
       ];
     var colors = ['#509be5', '#66bf60', '#e55c5c', '#f2c849', '#9b50e5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5'];
     
-    Highcharts.chart('legend-right-container', {
+    Highcharts.chart('line-legend-right-container', {
         chart: {
             type: 'line',
             spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".legend-right-line-charts-example .legend");
+                var legend = $(".line-charts-example.with-vertical-legend .legend");
                 var legendContainer = $('ul', legend);
-                var legend_page = $(".with-vertical-legend .legend-page");
+                var legend_page = $(".line-charts-example.with-vertical-legend .legend-page");
                 var page_up = $(".fa-caret-up", legend_page);
                 var page_down = $(".fa-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
@@ -208,7 +208,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.legend-right-line-charts-example .legend li', function (event) {
+        $(document).on('click', '.line-charts-example.with-vertical-legend .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];
