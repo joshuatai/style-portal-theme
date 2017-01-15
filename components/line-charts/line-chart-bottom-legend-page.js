@@ -74,14 +74,14 @@ $(function () {
       ];
     var colors = ['#509be5', '#66bf60', '#e55c5c', '#f2c849', '#9b50e5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5'];
     
-    Highcharts.chart('scroll-container', {
+    Highcharts.chart('scroll-line-container', {
         chart: {
             type: 'line',
             spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".scroll-line-charts-example .legend");
+                var legend = $(".scroll-line-charts .legend");
                 var legendContainer = $('ul', legend);
                 var legend_page = $(".legend-page", legend);
                 var page_up = $(".fa-caret-up", legend_page);
@@ -217,7 +217,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.scroll-line-charts-example .legend li', function (event) {
+        $(document).on('click', '.scroll-line-charts .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];
