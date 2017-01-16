@@ -2,8 +2,6 @@
 // Charts
 // --------------------------------------------------
 
-@widgetLagendListColors: #509be5, #66bf60, #e55c5c, #f2c849, #9b50e5, #5050e5, #45bde5, #f26d99, #ff9866, #b88ae5;
-
 .style-portal {
   .highcharts {
     .axis {
@@ -13,29 +11,32 @@
       &.xAxis {
         padding: 2px 0;
       }
+      &.yAxis {
+        border: 1px solid #e6e6e6;
+      }
     }
     .series {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+      width: @highcharts-series-size;
+      height: @highcharts-series-size;
+      border-radius: @highcharts-series-border-radius;
       &.hover {
         .stroke {
-          background-color: #ffffff;
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
+          background-color: @white;
+          width: @highcharts-series-stroke-size;
+          height: @highcharts-series-stroke-size;
+          border-radius: @highcharts-series-border-radius;
         }
         .outer-glow {
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
+          width: @highcharts-series-outer-glow-size;
+          height: @highcharts-series-outer-glow-size;
+          border-radius: @highcharts-series-border-radius;
         }
       }
     }
     .tooltips {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       padding: 16px;
-      background-color: #ffffff;
+      background-color: @white;
     }
     
   }

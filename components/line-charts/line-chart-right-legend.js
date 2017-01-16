@@ -62,8 +62,7 @@ $(function () {
             visible: false
         }
       ];
-    var colors = ['#509be5', '#66bf60', '#e55c5c', '#f2c849', '#9b50e5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5', '#5050e5', '#45bde5', '#f26d99', '#ff9866', '#b88ae5'];
-    
+    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb', '#33abd6', '#33ba72', '#fe9967', '#45cce7'];
     Highcharts.chart('line-legend-right-container', {
         chart: {
             type: 'line',
@@ -152,7 +151,6 @@ $(function () {
             },
             labels: {
                 style: {
-                  color: '#666666',
                   fontSize: '12px',
                   fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal'
@@ -164,11 +162,13 @@ $(function () {
             title: {
                 text: 'Amount'
             },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#666666'
-            }]
+            labels: {
+                style: {
+                  fontSize: '12px',
+                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
+                  fontWeight: 'normal'
+                }
+            }
         },
         legend: {
             enabled: false
