@@ -1,7 +1,7 @@
 {
   "id": "99710ff0-af7f-43ac-8044-3b333f3aa261",
   "name": "Line Chart with Legends at Bottom",
-  "location": "line-charts/line-chart-bottom-legend-page.html",
+  "location": "line-charts/line-chart-legend-scroll.html",
   "dependencies": [],
   "actions": [
     {
