@@ -1,0 +1,17 @@
+{
+  "id": "99710ff0-af7f-43ac-8044-3b333f3aa261",
+  "name": "Line Chart with Legends at Bottom",
+  "location": "line-charts/line-chart-legend-scroll.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7"
+  }
+}

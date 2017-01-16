@@ -1,0 +1,17 @@
+{
+  "id": "16a627b3-d119-426c-a090-25cd34fb762e",
+  "name": "Line Chart",
+  "location": "line-charts/line-chart.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

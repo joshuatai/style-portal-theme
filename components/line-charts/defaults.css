@@ -1,0 +1,33 @@
+.legend-page {
+	position: absolute;
+	right: 12px;
+	top: 5px;
+	display: none;
+}
+
+.legend-page.show {
+	display: inline-block;
+}
+
+section.legend ul {
+	margin: 0;
+}
+
+section.legend.scrollable {
+	overflow-y: hidden;
+	padding-right: 70px;
+}
+
+section.legend-vertical.scrollable {
+	overflow-y: hidden;
+	padding: 0;
+}
+
+section.legend-vertical ul li + li {
+	margin-left: 0;
+}
+
+.with-vertical-legend .legend-page {
+	top: 334px;
+    right: 90px;
+}
