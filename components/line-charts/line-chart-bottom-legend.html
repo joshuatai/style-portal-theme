@@ -1,7 +1,10 @@
 <section class="css-reference">
-  <h5>Axis</h5>
-  <p></p>
+  <h5>Chart Wrapper</h5>
   <pre>
+    <style data-selector=".chart-container">Please according to product requirements to determine height style.</style>
+  </pre>
+  <h5>Axes</h5>
+  <pre data-title="Axis Label">
     <style data-selector=".style-portal .highcharts .axis"></style>
   </pre>
   <pre data-title="Chart grid line">
@@ -10,8 +13,7 @@
   <pre data-title="xAxis">
      <style data-selector=".style-portal .highcharts .axis.xAxis"></style>
   </pre>
-  <h5>Series</h5>
-  <p></p>
+  <h5>Series Point Markers</h5>
   <pre>
      <style data-selector=".style-portal .highcharts .series"></style>
   </pre>
@@ -21,7 +23,7 @@
   <pre>
      <style data-selector=".style-portal .highcharts .series.hover .outer-glow">Series outer glow circle</style>
   </pre>
-  <h5>Tooltips</h5>
+  <h5>Tooltip</h5>
   <p>About tooltips style, please refer to Tooltips component.</p>
   <pre>
      <style data-selector=".style-portal .highcharts .tooltips"></style>
@@ -31,12 +33,12 @@
      <style data-selector="section.legend"></style>
   </pre>
   <h5>Legend Container</h5>
-  <p>Wrap all legends with a <code data-tag="ul"></code> element.</p>
+  <p>Wrap all symbol and the name of the series with a <code data-tag="ul"></code> element.</p>
   <pre>
      <style data-selector="section.legend ul"></style>
   </pre>
   <h5>Legend</h5>
-  <p>Use <code data-tag="li"></code> for each legend under the <code data-tag="ul"></code> elements.</p>
+  <p>Use <code data-tag="li"></code> for each series under the <code data-tag="ul"></code> elements.</p>
   <pre>
      <style data-selector="section.legend ul li"></style>
   </pre>
@@ -50,8 +52,6 @@
      <style data-selector="section.legend ul li:before"></style>
   </pre>
 </section>
-
-
 <section class="line-charts-example standard-line-chart">
 	<div id="line-chart container" class="chart-container"></div>
 	<section class="legend">
