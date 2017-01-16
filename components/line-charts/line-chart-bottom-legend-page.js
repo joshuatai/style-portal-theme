@@ -192,7 +192,8 @@ $(function () {
               symbol: 'circle',
               states: {
                     hover: {
-                        lineWidth: 3
+                        lineWidth: 3,
+                        radius: 5
                     }
                 }
             },
