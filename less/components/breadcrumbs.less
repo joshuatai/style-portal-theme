@@ -1,12 +1,37 @@
 //
 // Breadcrumbs
 // --------------------------------------------------
-
+.icon-t-ball {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/tball.svg);
+  background-size: 24px 24px;
+}
+nav {
+  &.affix {
+    width: auto;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  &.affix-top .breadcrumb-header {
+    margin-left: -54px;
+  }
+  &.affix .breadcrumb-header {
+    margin-left: 0;
+  }
+}
 .breadcrumb-header {
   float: left;  
+  margin-left: -54px;
   padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;  
   line-height: @breadcrumb-line-height;
   margin-right: 12px;
+  transition: margin .5s ease-out;
+  + .breadcrumb {
+    float: left;
+  }
 }
 .breadcrumb {    
   padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;  
