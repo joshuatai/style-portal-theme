@@ -222,7 +222,7 @@ $(function () {
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td style="padding-bottom: 5px">{point.x:%Y/%m/%d}</td></tr></thead>',
-            pointFormat: '<tr><td style="padding-right: 20px;padding-bottom: 5px;"><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
+            pointFormat: '<tr><td style="text-align: left; line-height: 20px;"><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
                 '<td style="text-align: right">{point.y}</td></tr>',
             footerFormat: '</table>'
         }
