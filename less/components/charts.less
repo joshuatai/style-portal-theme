@@ -15,6 +15,9 @@
       font-family: @font-family-arial;
       &.xAxis {
         padding: 2px 0;
+        &.crosshair {
+          border: 1px solid #dddddd;
+        }
       }
       &.yAxis {
         border: 1px solid #e6e6e6;
@@ -24,6 +27,9 @@
       width: @highcharts-series-size;
       height: @highcharts-series-size;
       border-radius: @highcharts-series-border-radius;
+      &.stacked {
+        opacity: 0.25;
+      }
       &.hover {
         .stroke {
           background-color: @white;
@@ -41,6 +47,9 @@
     .tooltips {
       padding: 16px;
       background-color: @white;
+      &.area-tooltips {
+        border: 1px solid #bbbbbb;
+      }
     }
     
   }

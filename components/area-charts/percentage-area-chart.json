@@ -1,0 +1,17 @@
+{
+  "id": "8abcf592-3bc5-4ed0-b60f-9c8227d9b115",
+  "name": "100% stacked Area Chart",
+  "location": "area-charts/percentage-area-chart.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7"
+  }
+}
