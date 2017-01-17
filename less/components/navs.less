@@ -72,14 +72,15 @@
   // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
   > li > a > img {
     max-width: none;
-  }
-
-  header & {
+  } 
+}
+header {
+  .nav {
     > li {
       border-right: 0;
       border-left: 1px solid #eee;
       > a {
-        padding: 22px 24px;
+        padding: 21px 24px 22px;
         .caret {
           border-top: 4px dashed #666;
         }
@@ -103,6 +104,13 @@
             margin-right: 8px;
         }
       }
+    }    
+  }
+  &.header-with-navbar,
+  &.header-with-breadcrumbs { 
+    border-bottom: 0;
+    .navbar-nav > li > a {
+      padding: 22px 24px 22px;
     }
   }
 }

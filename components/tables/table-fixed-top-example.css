@@ -13,11 +13,15 @@
 	border-bottom: 0;
 }
 .table-fixed-example .site-header {
+	padding-left: 24px;
 	padding-right: 0;
 }
-.table-fixed-example .breadcrumb {
-	padding: 12px 20px;
+.table-fixed-example nav {
+	padding: 0 24px;
 	background: #fff;
+}
+.table-fixed-example .breadcrumb {
+	padding: 12px 0;
 }
 .affix.div-header {
 	top: 48px;
