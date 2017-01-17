@@ -407,6 +407,21 @@
     ]
   },
   {
+    "id": "7d8c26cf-c8fc-454d-92c5-2c4ca6cdbeeb",
+    "name": "Area Charts",
+    "keywords": [
+      "Area chart",
+      "chart"
+    ],
+    "segments": [
+      "6f3679a2-0c93-4772-8036-b2dd86f0d696",
+      "8874563e-ba9f-40f9-9452-a2b076b1dbd1",
+      "9640a7c2-fcd6-4f43-a127-4feee5cf8ce0",
+      "46d34632-2cde-4b01-8fcf-a3695cb61cdc",
+      "8abcf592-3bc5-4ed0-b60f-9c8227d9b115"
+    ]
+  },
+  {
     "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
     "name": "Pie Charts",
     "keywords": [
