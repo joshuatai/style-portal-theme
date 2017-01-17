@@ -1,7 +1,7 @@
 {
-  "id": "e40a8bbe-da8b-4509-b516-8406c13cf6f0",
-  "name": "Divider",
-  "location": "dropdowns/divider.html",
+  "id": "a416d05d-f201-46c3-8126-87295d77ab20",
+  "name": "Indication",
+  "location": "dropdowns/indication.html",
   "dependencies": [],
   "actions": [
     {

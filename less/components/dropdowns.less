@@ -104,7 +104,7 @@
   &,
   &:hover,
   &:focus {
-    // color: @dropdown-link-disabled-color;
+    color: @dropdown-link-disabled-color;
   }
 
   // Nuke hover/focus effects
@@ -112,8 +112,8 @@
   &:focus {
     text-decoration: none;
     background-color: transparent;
-    background-image: none; // Remove CSS gradient
-    .reset-filter();
+    //background-image: none; // Remove CSS gradient
+    //.reset-filter();
     cursor: @cursor-disabled;
   }
 }
@@ -298,5 +298,10 @@
     display: block;
     width: 100%;
   }
+}
+
+// A dropdown menu items that contains a checkboxes
+.dropdown-menu .checkbox > label {
+    width: 100%; //make whole dropdown menu items can check
 }
 
