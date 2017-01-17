@@ -16,16 +16,17 @@ $(function () {
             name: 'Virus/Malware',
             data: [3, 4, 5, 8, 11, 15, 17]
         }
-    ];
+      ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb'];
-    Highcharts.chart('line-chart container', {
+    
+    Highcharts.chart('percentage-area-container', {
         chart: {
-            type: 'line',
+            type: 'area',
             spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".standard-line-chart .legend");
+                var legend = $(".percentage-area-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[i].replace('#', ''));  
@@ -58,7 +59,11 @@ $(function () {
                   paddingBottom: '10px'
                 }
             },
-            tickWidth: 0
+            tickWidth: 0,
+            crosshair: {
+                width: 1,
+                color: "#dddddd"
+            }
         },
         yAxis: {
             title: {
@@ -77,13 +82,17 @@ $(function () {
         },
         series: series,
         plotOptions: {
-          series: {
-            pointStart: Date.UTC(2016, 9, 10),
-            pointIntervalUnit: 'day',
-            marker: {  
-              radius: 4,
-              symbol: 'circle',
-              states: {
+            area: {
+                stacking: 'percent'
+            },
+            series: {
+                pointStart: Date.UTC(2016, 9, 10),
+                pointIntervalUnit: 'day',
+                fillOpacity: 0.25,
+                marker: {  
+                    radius: 4,
+                    symbol: 'circle',
+                states: {
                     hover: {
                         lineWidth: 3,
                         radius: 5
@@ -101,7 +110,9 @@ $(function () {
           }
         },
         tooltip: {
+            shared: true,
             backgroundColor: '#FFFFFF',
+            borderColor: '#BBBBBB',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
@@ -111,7 +122,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.standard-line-chart .legend li', function (event) {
+        $(document).on('click', '.percentage-area-chart .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];

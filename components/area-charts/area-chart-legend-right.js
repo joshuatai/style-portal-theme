@@ -18,8 +18,7 @@ $(function () {
         }, 
         {
             name: 'Spyware/Grayeare',
-            data: [0, 44, 25, 48, 15, 13, 47],
-            visible: false
+            data: [0, 44, 25, 48, 15, 13, 47]
         },
         {
             name: 'URL Filtrting',
@@ -63,16 +62,17 @@ $(function () {
         }
       ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb', '#33abd6', '#33ba72', '#fe9967', '#45cce7'];
-    Highcharts.chart('line-legend-right-container', {
+    
+    Highcharts.chart('area-legend-right-container', {
         chart: {
-            type: 'line',
+            type: 'area',
             spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".line-charts-example.with-vertical-legend .legend");
+                var legend = $(".area-charts-example.with-vertical-legend .legend");
                 var legendContainer = $('ul', legend);
-                var legend_page = $(".line-charts-example.with-vertical-legend .legend-page");
+                var legend_page = $(".area-charts-example.with-vertical-legend .legend-page");
                 var page_up = $(".fa-caret-up", legend_page);
                 var page_down = $(".fa-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
@@ -156,7 +156,11 @@ $(function () {
                   fontWeight: 'normal'
                 }
             },
-            tickWidth: 0
+            tickWidth: 0,
+            crosshair: {
+                width: 1,
+                color: "#dddddd"
+            }
         },
         yAxis: {
             title: {
@@ -175,31 +179,37 @@ $(function () {
         },
         series: series,
         plotOptions: {
-          series: {
-            pointStart: Date.UTC(2016, 9, 10),
-            pointIntervalUnit: 'day',
-            marker: {
-              radius: 4,
-              symbol: 'circle',
-              states: {
-                    hover: {
-                        lineWidth: 3,
-                        radius: 5
-                    }
-                }
+            area: {
+                stacking: 'normal'
             },
-            states: {
-                hover: {
-                    halo: {
-                        size: 13,
-                        opacity: 0.2
+            series: {
+                pointStart: Date.UTC(2016, 9, 10),
+                pointIntervalUnit: 'day',
+                fillOpacity: 0.25,
+                marker: {
+                  radius: 4,
+                  symbol: 'circle',
+                  states: {
+                        hover: {
+                            lineWidth: 3,
+                            radius: 5
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        halo: {
+                            size: 13,
+                            opacity: 0.2
+                        }
                     }
                 }
             }
-          }
         },
         tooltip: {
+            shared: true,
             backgroundColor: '#FFFFFF',
+            borderColor: '#BBBBBB',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
@@ -209,7 +219,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.line-charts-example.with-vertical-legend .legend li', function (event) {
+        $(document).on('click', '.area-charts-example.with-vertical-legend .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];

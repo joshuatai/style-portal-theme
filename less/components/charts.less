@@ -15,6 +15,9 @@
       font-family: @font-family-arial;
       &.xAxis {
         padding: 2px 0;
+        &.crosshair {
+          border: 1px solid #dddddd;
+        }
       }
       &.yAxis {
         border: 1px solid #e6e6e6;
@@ -24,6 +27,9 @@
       width: @highcharts-series-size;
       height: @highcharts-series-size;
       border-radius: @highcharts-series-border-radius;
+      &.stacked {
+        opacity: 0.25;
+      }
       &.hover {
         .stroke {
           background-color: @white;
@@ -38,11 +44,26 @@
         }
       }
     }
-    .tooltips {
-      padding: 16px;
-      background-color: @white;
+    .area-tooltips {
+      border: 1px solid #bbbbbb;
     }
-    
+  }
+}
+
+.highcharts-tooltip > span > table {
+  padding: 16px;
+  background-color: @white;
+  td {
+    line-height: 20px;
+  }
+  > thead > tr > td{
+    padding-bottom: 4px;
+  }
+  > tbody > tr > td:first-child {
+    padding-right: 16px;
+  }
+  > tbody > tr > td:last-child {
+    text-align: right;
   }
 }
 
@@ -127,25 +148,3 @@ section.legend-vertical {
     right: 180px;
   }
 }
-
-
-.make-lagend-list-style (@colors: @widgetLagendListColors) {
-  .color {
-    .for(@colors);
-    .-each(@color) {
-      @name: e(replace("@{color}", "#", "", "gi"));
-      &-@{name}:before {
-        background: @color;
-      }       
-    }
-  }
-}
-.for(@i, @n) {.-each(@i)}
-.for(@n) when (isnumber(@n)) {.for(1, @n)}
-.for(@i, @n) when not (@i = @n)  {
-    .for((@i + (@n - @i) / abs(@n - @i)), @n);
-}
-
-.for(@array)   when (default()) {.for-impl_(length(@array))}
-.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
-.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}

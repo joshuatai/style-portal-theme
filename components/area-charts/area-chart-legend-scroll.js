@@ -18,8 +18,7 @@ $(function () {
         }, 
         {
             name: 'Spyware/Grayeare',
-            data: [0, 44, 25, 48, 15, 13, 47],
-            visible: false
+            data: [0, 44, 25, 48, 15, 13, 47]
         },
         {
             name: 'URL Filtrting',
@@ -60,19 +59,30 @@ $(function () {
             name: 'Device Control',
             data: [22, 4, 15, 8, 31, 53, 12],
             visible: false
+        },
+        {
+            name: 'Network Virus',
+            data: [42, 14, 52, 3, 3, 13, 22],
+            visible: false
+        },
+        {
+            name: 'Malicious',
+            data: [2, 4, 5, 31, 13, 43, 12],
+            visible: false
         }
       ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb', '#33abd6', '#33ba72', '#fe9967', '#45cce7'];
-    Highcharts.chart('line-legend-right-container', {
+    
+    Highcharts.chart('scroll-area-container', {
         chart: {
-            type: 'line',
+            type: 'area',
             spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".line-charts-example.with-vertical-legend .legend");
+                var legend = $(".scroll-area-chart .legend");
                 var legendContainer = $('ul', legend);
-                var legend_page = $(".line-charts-example.with-vertical-legend .legend-page");
+                var legend_page = $(".legend-page", legend);
                 var page_up = $(".fa-caret-up", legend_page);
                 var page_down = $(".fa-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
@@ -93,8 +103,7 @@ $(function () {
                 if (ul_height > legend_height) {
                     legend.addClass("scrollable");
                     ul_height = legendContainer.height();
-                    var result = parseInt(ul_height) / parseInt(legend_height);
-                    var totally_page = Math.ceil(result);
+                    var totally_page = parseInt(ul_height) / parseInt(legend_height);
                     total_page.text(totally_page);
                     now_page.text(initPage);
                     page_up.addClass("unable");
@@ -124,7 +133,6 @@ $(function () {
                 function changePage (now) {
                     var value = now-1;
                     var margin_value = value * legend_height;
-
                     if (now < 1 || now > totally_page) {
                         return false;
                     }
@@ -153,10 +161,15 @@ $(function () {
                 style: {
                   fontSize: '12px',
                   fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  paddingBottom: '10px'
                 }
             },
-            tickWidth: 0
+            tickWidth: 0,
+            crosshair: {
+                width: 1,
+                color: "#dddddd"
+            }
         },
         yAxis: {
             title: {
@@ -175,31 +188,37 @@ $(function () {
         },
         series: series,
         plotOptions: {
-          series: {
-            pointStart: Date.UTC(2016, 9, 10),
-            pointIntervalUnit: 'day',
-            marker: {
-              radius: 4,
-              symbol: 'circle',
-              states: {
-                    hover: {
-                        lineWidth: 3,
-                        radius: 5
-                    }
-                }
+            area: {
+                stacking: 'normal'
             },
-            states: {
-                hover: {
-                    halo: {
-                        size: 13,
-                        opacity: 0.2
+            series: {
+                pointStart: Date.UTC(2016, 9, 10),
+                pointIntervalUnit: 'day',
+                fillOpacity: 0.25,
+                marker: {
+                  radius: 4,
+                  symbol: 'circle',
+                  states: {
+                        hover: {
+                            lineWidth: 3,
+                            radius: 5
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        halo: {
+                            size: 13,
+                            opacity: 0.2
+                        }
                     }
                 }
             }
-          }
         },
         tooltip: {
+            shared: true,
             backgroundColor: '#FFFFFF',
+            borderColor: '#BBBBBB',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
@@ -209,7 +228,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.line-charts-example.with-vertical-legend .legend li', function (event) {
+        $(document).on('click', '.scroll-area-chart .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];
