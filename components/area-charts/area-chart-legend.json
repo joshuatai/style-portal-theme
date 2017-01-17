@@ -1,8 +1,10 @@
 {
-  "id": "9640a7c2-fcd6-4f43-a127-4feee5cf8ce0",
+  "id": "8874563e-ba9f-40f9-9452-a2b076b1dbd1",
   "name": "Stacked Area Chart with Legends at Bottom",
-  "location": "area-charts/area-chart-bottom-legend-page.html",
-  "dependencies": [],
+  "location": "area-charts/area-chart-legend.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
   "actions": [
     {
       "name": "Style",
