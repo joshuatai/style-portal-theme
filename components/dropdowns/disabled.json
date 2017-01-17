@@ -1,0 +1,17 @@
+{
+  "id": "00859dff-d929-40f4-bdbf-437e7863c0a6",
+  "name": "Disabled",
+  "location": "dropdowns/disabled.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-5 row-xl-5"
+  }
+}
