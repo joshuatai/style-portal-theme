@@ -10,7 +10,7 @@ $(function () {
         },  
         {
             name: 'Web Reputation',
-            data: [6, 3, 8, 13, 2, 18, 17]
+            data: [6, 3, 8, 13, 16, 18, 17]
         }, 
         {
             name: 'Virus/Malware',
@@ -18,46 +18,46 @@ $(function () {
         }, 
         {
             name: 'Spyware/Grayeare',
-            data: [0, 44, 25, 48, 15, 13, 47]
+            data: [0, 4, 5, 16, 15, 13, 22]
         },
         {
             name: 'URL Filtrting',
-            data: [23, 44, 25, 18, 31, 25, 47],
+            data: [3, 6, 2, 14, 17, 15, 19],
             visible: false
         },
         {
             name: 'Behavior Monitoring',
-            data: [21, 24, 5, 48, 11, 55, 17],
+            data: [2, 7, 1, 12, 11, 15, 17],
             visible: false
         },
         {
             name: 'Device Control',
-            data: [22, 4, 15, 8, 31, 53, 12],
+            data: [2, 4, 3, 10, 13, 11, 15],
             visible: false
         },
         {
             name: 'Network Virus',
-            data: [42, 14, 52, 3, 3, 13, 22],
+            data: [4, 1, 2, 13, 18, 16, 12],
             visible: false
         },
         {
             name: 'Malicious',
-            data: [2, 4, 5, 31, 13, 43, 12],
+            data: [2, 4, 8, 11, 13, 14, 19],
             visible: false
         },
         {
             name: 'URL Filtrting',
-            data: [23, 44, 25, 18, 31, 25, 47],
+            data: [5, 8, 7, 18, 13, 15, 17],
             visible: false
         },
         {
             name: 'Behavior Monitoring',
-            data: [21, 24, 5, 48, 11, 55, 17],
+            data: [1, 3, 5, 14, 11, 15, 20],
             visible: false
         },
         {
             name: 'Device Control',
-            data: [22, 4, 15, 8, 31, 53, 12],
+            data: [2, 4, 6, 8, 11, 15, 19],
             visible: false
         }
       ];
@@ -103,20 +103,18 @@ $(function () {
                     page_up.on("click", function(){
                         var now = parseInt(now_page.text()) -1;
                         if (now == 1) {
-                            page_up.removeClass("enable");
                             page_up.addClass("unable");
                         }
-                        page_down.addClass("enable");
+                        page_down.removeClass("unable");
                         changePage(now);
                     });
 
                     page_down.on("click", function(){
                         var now = parseInt(now_page.text()) + 1;
                         if(now == totally_page) {
-                            page_down.removeClass("enable");
-                            page_down.addClass("unable"); 
+                            page_down.addClass("unable");  
                         }
-                        page_up.addClass("enable");
+                        page_up.removeClass("unable");
                         changePage(now);   
                     });
                 }
@@ -135,6 +133,9 @@ $(function () {
                 }
 
               }
+            },
+            style: {
+              fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif'
             }
         },
         colors: colors,
