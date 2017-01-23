@@ -11,29 +11,21 @@ $(function () {
         {
             name: 'Web Reputation',
             data: [6, 3, 8, 13, 2, 18, 17]
-        }, 
-        {
-            name: 'Virus/Malware',
-            data: [3, 4, 5, 8, 11, 15, 17]
-        },
-        {
-            name: 'Spyware/Grayeare',
-            data: [0, 44, 25, 48, 15, 13, 47]
         }
       ];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb'];
+    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
     
     Highcharts.chart('area-chart-container', {
         chart: {
             type: 'area',
-            spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
                 var legend = $(".standard-area-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[i].replace('#', ''));  
+                    var color_idx = i%10;
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {
@@ -63,11 +55,7 @@ $(function () {
                   paddingBottom: '10px'
                 }
             },
-            tickWidth: 0,
-            crosshair: {
-                width: 1,
-                color: "#dddddd"
-            }
+            tickWidth: 0
         },
         yAxis: {
             title: {
@@ -114,9 +102,7 @@ $(function () {
             }
         },
         tooltip: {
-            shared: true,
             backgroundColor: '#FFFFFF',
-            borderColor: '#BBBBBB',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',

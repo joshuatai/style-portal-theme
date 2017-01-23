@@ -17,19 +17,20 @@ $(function () {
             data: [3, 4, 5, 8, 11, 15, 17]
         }
       ];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb'];
+    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
     
     Highcharts.chart('percentage-area-container', {
         chart: {
             type: 'area',
-            spacingRight: 0,
+            spacingTop: 15,
             spacingBottom: 0,
             events: {
               load: function () {
                 var legend = $(".percentage-area-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[i].replace('#', ''));  
+                    var color_idx = i%10;
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {
@@ -67,7 +68,7 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'Amount'
+                text: 'Percentage'
             },
             labels: {
                 style: {
@@ -117,7 +118,7 @@ $(function () {
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
-                '<td>{point.y}</td></tr>',
+                '<td>{point.percentage:.1f}% ({point.y:,.0f})</td></tr>',
             footerFormat: '</table>'
         }
     }, function (chart) {
