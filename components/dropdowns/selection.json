@@ -1,7 +1,7 @@
 {
   "id": "a416d05d-f201-46c3-8126-87295d77ab20",
-  "name": "Indication",
-  "location": "dropdowns/indication.html",
+  "name": "Selection",
+  "location": "dropdowns/selection.html",
   "dependencies": [],
   "actions": [
     {
