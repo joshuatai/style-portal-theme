@@ -119,10 +119,9 @@ $(function () {
                     var legend_postion = legendContainer.css("margin-top");
                     legend.addClass("scrollable");
                     ul_height = legendContainer.height();
-
-                    totally_page = parseInt(ul_height) / parseInt(legend_height);
+                    var page = parseInt(ul_height) / parseInt(legend_height);
+                    totally_page = Math.ceil(page);
                     total_page.text(totally_page);
-
                     if(legend_postion == "0px") {
                         now_page.text(initPage);
                         page_up.addClass("unable");

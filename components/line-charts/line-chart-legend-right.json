@@ -2,7 +2,9 @@
   "id": "7213a163-7205-46e1-8283-f6df60ae9b16",
   "name": "Line Chart with Legends on the Right",
   "location": "line-charts/line-chart-legend-right.html",
-  "dependencies": [],
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
   "actions": [
     {
       "name": "Style",

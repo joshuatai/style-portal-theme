@@ -78,7 +78,8 @@ $(function () {
                 var total_page = $(".total", legend_page);
                 var initPage = "1";
                 var legend_height = legend.height();
-
+                var totally_page;
+                
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
                     var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
@@ -93,8 +94,8 @@ $(function () {
                 if (ul_height > legend_height) {
                     legend.addClass("scrollable");
                     ul_height = legendContainer.height();
-                    var result = parseInt(ul_height) / parseInt(legend_height);
-                    var totally_page = Math.ceil(result);
+                    var page = parseInt(ul_height) / parseInt(legend_height);
+                    totally_page = Math.ceil(page);
                     total_page.text(totally_page);
                     now_page.text(initPage);
                     page_up.addClass("unable");
