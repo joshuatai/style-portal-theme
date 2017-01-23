@@ -17,18 +17,18 @@ $(function () {
             data: [3, 4, 5, 8, 11, 15, 17]
         }
     ];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3", '#bbbbbb'];
-    Highcharts.chart('line-chart container', {
+    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
+    Highcharts.chart('line-chart-container', {
         chart: {
             type: 'line',
-            spacingRight: 0,
             spacingBottom: 0,
             events: {
               load: function () {
                 var legend = $(".standard-line-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[i].replace('#', ''));  
+                    var color_idx = i%10;
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {

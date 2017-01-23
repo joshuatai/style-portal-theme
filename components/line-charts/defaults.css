@@ -1,3 +1,9 @@
+.chart-container {
+  min-width: 310px; 
+  height: 350px; 
+  margin: 0 auto;
+}
+
 .legend-page {
 	position: absolute;
 	right: 12px;
@@ -29,5 +35,5 @@ section.legend-vertical ul li + li {
 
 .with-vertical-legend .legend-page {
 	top: 334px;
-    right: 90px;
+    right: 106px;
 }

@@ -1,6 +1,6 @@
 {
   "id": "46d34632-2cde-4b01-8fcf-a3695cb61cdc",
-  "name": "Stacked Area Chart with Legends in right",
+  "name": "Stacked Area Chart with Legends on the Right",
   "location": "area-charts/area-chart-legend-right.html",
   "dependencies": [],
   "actions": [
