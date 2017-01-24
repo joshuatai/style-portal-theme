@@ -10,7 +10,7 @@ $(function () {
         },  
         {
             name: 'Web Reputation',
-            data: [6, 3, 8, 13, 2, 18, 17]
+            data: [6, 3, 8, 13, 16, 18, 17]
         }
       ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
@@ -33,6 +33,9 @@ $(function () {
                     }
                 }
               }
+            },
+            style: {
+              fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif'
             }
         },
         colors: colors,
@@ -50,7 +53,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal',
                   paddingBottom: '10px'
                 }
@@ -64,7 +66,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal'
                 }
             }

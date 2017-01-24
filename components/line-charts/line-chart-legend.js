@@ -10,7 +10,7 @@ $(function () {
         },  
         {
             name: 'Web Reputation',
-            data: [6, 3, 8, 13, 2, 18, 17]
+            data: [6, 3, 8, 13, 16, 18, 17]
         }, 
         {
             name: 'Virus/Malware',
@@ -36,6 +36,9 @@ $(function () {
                     }
                 }
               }
+            },
+            style: {
+              fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif'
             }
         },
         colors: colors,
@@ -53,7 +56,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal',
                   paddingBottom: '10px'
                 }
@@ -67,7 +69,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal'
                 }
             }
