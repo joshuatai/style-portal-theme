@@ -178,6 +178,7 @@ $(function () {
                         page_down.removeClass("unable");
                         page_up.addClass("unable");
                         legend_page.removeClass("show");
+                        legend.removeClass("scrollable");
                     }
                 });
 
