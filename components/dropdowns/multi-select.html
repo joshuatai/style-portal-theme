@@ -1,26 +1,68 @@
 <section class="css-reference">
-  <p>Increase inner spacing to <code data-tag="a"></code> elements and mark selected items.</p>
-  <pre data-title="Replace default inner spacing">
-    <style data-selector=".dropdown-menu-multi-select > li > a"></style>
-  </pre>
-  <pre data-title="Selected items">
-    <style data-selector=".dropdown-menu-multi-select > li.selected a:before">Displays checkmark before selected items</style>
+  <p>Wrap an <code>input</code> and a <code>label</code> within <code>span</code> element to implement a checkbox under the dropdown menu items.</p>
+  <p>About checkbox style, please refer to Form Elements.</p>
+  <pre data-title="Make whole dropdown menu items can checked">
+    <style data-selector=".dropdown-menu .checkbox > label">Label style</style>
   </pre>
 </section>
 
 <section class="dropdown-example">
-  <p>Drop-down menus can contain checkboxes or checkmarks to indicate the selected option(s).</p>
+  <p>You can use checkboxes in a drop-down menu to indicate item selection. As a summary, you can display a count for the number of selected items or list them out. Separate the listed items with commas, and put ellipses (...) at the end to indicate omission if the list is too long to fit into one line.</p>
   <p>
     <div class="dropdown open">
       <button class="btn btn-border dropdown-toggle" type="button">
-        <span class="caret"></span>View severity
+        <span class="caret"></span>Product <span>(3)</span>
       </button>
       
-      <ul class="dropdown-menu dropdown-menu-multi-select">
-        <li class="selected"><a href="#">Hight</a></li>
-        <li><a href="javascript:;">Medium</a></li>
-        <li><a href="javascript:;">Low</a></li>
-        <li><a href="javascript:;">Safe</a></li>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="javascript:;">
+            <sapn class="checkbox">
+              <input type="checkbox" name="dropdowncheckboxs" id="dropdowncheckboxs1" class="input-checkbox checked" >
+              <label for="dropdowncheckboxs1">Deep Discovery Email Inspector</label>
+            </sapn>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <sapn class="checkbox">
+              <input type="checkbox" name="dropdowncheckboxs" id="dropdowncheckboxs2" class="input-checkbox checked">
+              <label for="dropdowncheckboxs2">Deep Discovery Inspector</label>
+            </sapn>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <sapn class="checkbox">
+              <input type="checkbox" name="dropdowncheckboxs" id="dropdowncheckboxs3" class="input-checkbox checked">
+              <label for="dropdowncheckboxs3">Deep Security</label>
+            </sapn>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <sapn class="checkbox">
+              <input type="checkbox" name="dropdowncheckboxs" id="dropdowncheckboxs4" class="input-checkbox">
+              <label for="dropdowncheckboxs4">Mobile Security</label>
+            </sapn>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <sapn class="checkbox">
+              <input type="checkbox" name="dropdowncheckboxs" id="dropdowncheckboxs5" class="input-checkbox">
+              <label for="dropdowncheckboxs5">OfficeScan</label>
+            </sapn>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <sapn class="checkbox">
+              <input type="checkbox" name="dropdowncheckboxs" id="dropdowncheckboxs6" class="input-checkbox">
+              <label for="dropdowncheckboxs6">Threat Discovery Appliance</label>
+            </sapn>
+          </a>
+        </li>
       </ul>
     </div>
   </p>

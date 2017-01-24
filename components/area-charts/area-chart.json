@@ -1,0 +1,17 @@
+{
+  "id": "6f3679a2-0c93-4772-8036-b2dd86f0d696",
+  "name": "Area Chart",
+  "location": "area-charts/area-chart.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "9a79c8cc-21f5-4404-9b24-aa33a082c06c",
+  "name": "Line Chart with Legends at the Bottom",
+  "location": "line-charts/line-chart-legend.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7"
+  }
+}

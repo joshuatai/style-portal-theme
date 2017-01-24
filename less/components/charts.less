@@ -1,0 +1,147 @@
+//
+// Charts
+// --------------------------------------------------
+
+.chart-container { 
+  height: 350px; 
+  margin: 0 auto;
+}
+
+.style-portal {
+  .highcharts {
+    .axis {
+      color: #666666;
+      font-size: 12px;
+      font-family: @font-family-arial;
+      &.xAxis {
+        padding: 2px 0;
+        &.crosshair {
+          border: 1px solid #dddddd;
+        }
+      }
+      &.yAxis {
+        border: 1px solid #e6e6e6;
+      }
+    }
+    .series {
+      width: @highcharts-series-size;
+      height: @highcharts-series-size;
+      border-radius: @highcharts-series-border-radius;
+      &.stacked {
+        opacity: 0.25;
+      }
+      &.hover {
+        .stroke {
+          background-color: @white;
+          width: @highcharts-series-stroke-size;
+          height: @highcharts-series-stroke-size;
+          border-radius: @highcharts-series-border-radius;
+        }
+        .outer-glow {
+          width: @highcharts-series-outer-glow-size;
+          height: @highcharts-series-outer-glow-size;
+          border-radius: @highcharts-series-border-radius;
+        }
+      }
+    }
+    .area-tooltips {
+      border: 1px solid #bbbbbb;
+    }
+  }
+}
+
+.highcharts-tooltip > span > table {
+  padding: 16px;
+  background-color: @white;
+  font-family: @font-family-arial;
+  td {
+    line-height: 20px;
+  }
+  > thead > tr > td{
+    padding-bottom: 4px;
+  }
+  > tbody > tr > td:first-child {
+    padding-right: 16px;
+  }
+  > tbody > tr > td:last-child {
+    text-align: right;
+  }
+}
+
+section.legend {
+  height: 30px;
+  text-align: center;
+  position: relative;
+  ul {
+    list-style: none;
+    padding: 0 36px;
+    line-height: 30px;
+    transition: all 0.5s;
+    li {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 20px;
+      + li {
+         margin-left: 16px;
+      }
+      &.mute {
+        .opacity(.3);
+      }
+      &:before {
+        display: block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin-top: 6px;
+        margin-right: 4px;
+        float: left;
+      }
+    }
+  }
+  .make-lagend-list-style();
+}
+
+section.legend-vertical {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 336px;
+  ul {
+    padding: 0 0 0 16px;
+    li {
+      display: block;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      padding: 4px 0;
+    }
+  }
+}
+
+.legend-page {
+  .fa {
+    color: #9c9c9c;
+    cursor: pointer;
+  }
+  .fa-caret-up {
+    margin-right: 8px;
+  }
+  .fa-caret-down {
+    margin-left: 8px;
+  }
+  .unable {
+    cursor: default;
+    color: #DDDDDD;
+  }
+}
+
+.with-vertical-legend {
+  position: relative;
+  .chart-container {
+    position: relative;
+    margin-right: 180px;
+  }
+}

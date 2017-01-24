@@ -72,7 +72,9 @@
     "segments": [
       "2da9337d-af76-49f9-adef-a12996c5a67f",
       "6b663fa8-746a-4dda-8db8-898f642fd4e0",
+      "00859dff-d929-40f4-bdbf-437e7863c0a6",
       "e40a8bbe-da8b-4509-b516-8406c13cf6f0",
+      "a416d05d-f201-46c3-8126-87295d77ab20",
       "b4c96107-a075-4c9d-8baf-526072649ac6",
       "7491e967-a72b-4303-aa43-7ff901458ad2",
       "ab5754fc-9376-4e77-b27d-c480cad65d46",
@@ -397,7 +399,27 @@
       "line chart",
       "chart"
     ],
-    "segments": []
+    "segments": [
+      "16a627b3-d119-426c-a090-25cd34fb762e",
+      "9a79c8cc-21f5-4404-9b24-aa33a082c06c",
+      "99710ff0-af7f-43ac-8044-3b333f3aa261",
+      "7213a163-7205-46e1-8283-f6df60ae9b16"
+    ]
+  },
+  {
+    "id": "7d8c26cf-c8fc-454d-92c5-2c4ca6cdbeeb",
+    "name": "Area Charts",
+    "keywords": [
+      "Area chart",
+      "chart"
+    ],
+    "segments": [
+      "6f3679a2-0c93-4772-8036-b2dd86f0d696",
+      "8874563e-ba9f-40f9-9452-a2b076b1dbd1",
+      "9640a7c2-fcd6-4f43-a127-4feee5cf8ce0",
+      "46d34632-2cde-4b01-8fcf-a3695cb61cdc",
+      "8abcf592-3bc5-4ed0-b60f-9c8227d9b115"
+    ]
   },
   {
     "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
@@ -424,5 +446,5 @@
     "segments": [
       "f0d4e63c-729c-4feb-b18f-2af7f40f0d12"
     ]
-  }  
+  }
 ]

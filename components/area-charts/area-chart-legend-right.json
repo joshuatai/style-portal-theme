@@ -1,0 +1,19 @@
+{
+  "id": "46d34632-2cde-4b01-8fcf-a3695cb61cdc",
+  "name": "Stacked Area Chart with Legends on the Right",
+  "location": "area-charts/area-chart-legend-right.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7"
+  }
+}
