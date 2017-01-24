@@ -58,7 +58,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal',
                   paddingBottom: '10px'
                 }
@@ -76,7 +75,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal'
                 }
             }

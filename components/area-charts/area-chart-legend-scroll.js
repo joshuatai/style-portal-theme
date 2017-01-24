@@ -141,14 +141,14 @@ $(function () {
                     legend_page.addClass("show");
                     
                 }
-                function changePage(now) {
-                    var value = now-1;
+                function changePage(pages) {
+                    var value = pages-1;
                     var margin_value = value * legend_height;
-                    if (now < 1 || now > totally_page) {
+                    if (pages < 1 || pages > totally_page) {
                         return false;
                     }
                     else {
-                        now_page.text(now); //change page
+                        now_page.text(pages); //change page
                         legendContainer.css("margin-top","-" + margin_value + "px"); //change legend
                     } 
                 }
@@ -202,7 +202,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal',
                   paddingBottom: '10px'
                 }
@@ -220,7 +219,6 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                   fontWeight: 'normal'
                 }
             }
