@@ -130,7 +130,6 @@ $(function () {
                     else {
                         var now = parseInt(now_page.text());
                         if (now > totally_page) {
-                            now_page.text(totally_page);
                             changePage (totally_page);
                         }
                         else if (now < totally_page){
