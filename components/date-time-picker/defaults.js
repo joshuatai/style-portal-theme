@@ -284,7 +284,7 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 			this.element.on("click", $.proxy(this._doClick, this))
 						.on('paste', $.proxy(this._doPaste, this))
 						.on("keydown", $.proxy(this._doKeydown, this))
-						//.on("focus mousedown", $.proxy(this._doClick, this))
+						.on("focus mousedown", $.proxy(this._doClick, this))
 						
 						// .on("blur mousedown", $.proxy(this._doValidate, this))
 						
@@ -315,13 +315,18 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 			var input = this.element;
 			var value = input.val();
 			var start = input.prop('selectionStart');
-		
+			// var splitter = this.splitter;
+
+			// if (this._getChunkPosition(start).indicate === 'Y' && this.tmpYear && this.tmpYear.length > 0) {
+			// 	this.element.val(pad(this.tmpYear.join(''), 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(this.orgDate, 2));	
+			// } else {
 			this.orgYear = parseInt(value.substring(0,4), 10); 				// Get year value
 			this.orgMonth = parseInt(value.substring(5,7), 10);  			// Get month value
 			this.orgDate = parseInt(value.substring(8,10), 10); 			// Get day value
 			this.tmpYear = [];
 			this.tmpMonth = [];
 			this.tmpDate = [];
+			// }
 			this._showField(start);
 		},
 		_iconChange: function (e) {
@@ -581,25 +586,26 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 			// this.element.removeData("thirdDigits");
 			// this.element.removeData("fourthDigits");
 		},
-		_showField: function( startIdx ) {
-			var start;
-			var end;
-			var position;
+		_getChunkPosition: function (startIdx) {
+			var position = {};
 			if (startIdx <= 4) {
-				start = yearPositionStart;
-				end = start + 4;
-				position = "Y"
+				position.start = yearPositionStart;
+				position.end = yearPositionStart + 4;
+				position.indicate = "Y"
 			} else if (startIdx >= 5 && startIdx <= 7 ) {
-				start = monthPositionStart;
-				end = start + 2;
-				position = "M"
+				position.start = monthPositionStart;
+				position.end = monthPositionStart + 2;
+				position.indicate = "M"
 			} else if (startIdx >= 8 && startIdx <= 10 ) {
-				start = datePositionStart;
-				end = start + 2;
-				position = "D"
+				position.start = datePositionStart;
+				position.end = datePositionStart + 2;
+				position.indicate = "D"
 			}
-			this.input.setSelectionRange(start, end);
 			return position;
+		},
+		_showField: function( startIdx ) {
+			var position = this._getChunkPosition(startIdx);
+			this.input.setSelectionRange(position.start, position.end);
 		}
 	};
 
