@@ -27,8 +27,4 @@ datePicker
 	  autoclose: true,
 	  format: 'yyyy-mm-dd'
 	})
-	.datepickerBehavior({
-		setDate: function (date) {
-			this.element.val(date);
-		}
-	});
+	.datepickerBehavior();

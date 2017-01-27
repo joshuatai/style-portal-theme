@@ -264,17 +264,16 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 
 
 	var DatepickerBehavior = function(element, option) {
-		
 		this.input = element;   // Original javascript DOM
 		this.element = $(element);  // jQuery DOM
+		this.options = option;
 		this.picker = this.element.data('datepicker').picker;
-		this.setDate = option.setDate;
+		this.change = option.change;
 		this.element.val().match(dateReg,'$1');
 		this.splitter = RegExp.$1;
 		this.tmpYear = [];
 		this.tmpMonth = [];
 		this.tmpDate = [];
-
 		this._attachEvents();
 		this._iconChange();
 	};
@@ -285,7 +284,6 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 
 		_attachEvents: function(){
 			this.element.on("click", $.proxy(this._doClick, this))
-						//.on('show', $.proxy(this._iconChange, this))
 						.on('paste', $.proxy(this._doPaste, this))
 						.on("keydown", $.proxy(this._doKeydown, this))
 						// .on("blur mousedown", $.proxy(this._doValidate, this))
@@ -337,6 +335,7 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 		},
 		_doKeydown: function(e){
 			var input = this.element;
+			var display = this.options.display;
 			var start = input.prop('selectionStart');		// Get the keydown start position			
 			var enterNum = e.key;
 			//var enterNum = String.fromCharCode(e.keyCode); // Get the digits 
@@ -344,7 +343,7 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 			var dateText;
 			var showFieldPosition;
 
-			if (this.picker.is(':visible')) return false;
+			if (display !== 'show' && this.picker.is(':visible')) return false;
 			
 			// Allow: Ctrl/cmd+C
 			if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
@@ -382,8 +381,10 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 					} 
 				}
 				dateText = this._calculator(showFieldPosition);
-				this.setDate(dateText);
+				//this.setDate(dateText);
+				this.element.val(dateText);
 				this._showField(showFieldPosition);
+				this.change(dateText);
 				return false;
 			}
 			// Tab and Left/Right arrow Key to move selected position
@@ -392,14 +393,16 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 					if(e.keyCode == '9' || e.keyCode == '39') {
 						if (this._useTemp('Year') != undefined) {
 							dateText = this._calculator(yearPositionStart);
-							this.setDate(dateText);
+							// this.setDate(dateText);
+							this.element.val(dateText);
 						}												
 						this._showField(monthPositionStart);
 					}
 				} else if (start == monthPositionStart) { // Selected on month position					
 					if (this._useTemp('Month') != undefined) {						
 						dateText = this._calculator(monthPositionStart);
-						this.setDate(dateText);
+						// this.setDate(dateText);
+						this.element.val(dateText);
 					}
 					if(e.keyCode == '37') {						
 						this._showField(yearPositionStart);
@@ -410,7 +413,8 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 					if(e.keyCode == '37') {
 						if (this._useTemp('Date') != undefined) {
 							dateText = this._calculator(datePositionStart);
-							this.setDate(dateText);
+							// this.setDate(dateText);
+							this.element.val(dateText);
 						}
 						this._showField(monthPositionStart);
 					}	
@@ -438,6 +442,7 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 						dateText = this._calculator(showFieldPosition);	
 						showFieldPosition = monthPositionStart;	
 						this.tmpYear = [];		
+						this.change(dateText);
 					} else {
 						dateText = pad(year.join(''), 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(this.orgDate, 2);
 					}
@@ -454,6 +459,7 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 						dateText = this._calculator(showFieldPosition);	
 						showFieldPosition = datePositionStart;	
 						this.tmpMonth = [];		
+						this.change(dateText);
 					} else {
 						dateText = pad(this.orgYear, 4) + splitter + pad(month[0], 2) + splitter + pad(this.orgDate, 2);
 					}					
@@ -469,13 +475,14 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 						this.orgDate = date.join('');
 						dateText = this._calculator(showFieldPosition);							
 						this.tmpDate = [];
+						this.change(dateText);
 					} else {
 						dateText = pad(this.orgYear, 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(date[0], 2);
 					}
 					
 				}
 				// Update date value						
-				this.setDate(dateText);
+				this.element.val(dateText);
 				this._showField(showFieldPosition);
 
 		    } else {

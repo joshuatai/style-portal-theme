@@ -55,80 +55,77 @@ dateTimeRangeDropdown
 dateStart.val(lastweek);
 dateEnd.val(today);
 
-dateStart
-	.on('change', function () {
-		//datePickerPaneStart.data('date', $(this).val()).datepicker('update');
-	});
-
-dateEnd
-	.on('change', function () {
-		datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
-	});
-
-//console.log(datePickerPaneStart);
-
 datePickerPaneStart
 	.data('date', lastweek)
 	.datepicker({
 		todayHighlight: true,
 		format: 'yyyy-mm-dd'
 	})
-	.datepickerBehavior({
-		setDate: function (date) {
-			this.element.val(date);
+	.on('changeDate', function(ev) {
+		var dateText = dateFormat(ev.date.valueOf());
+		var dateStartVal = dateStart.val();
+		if (dateStartVal !== dateText) {
+			dateStart.val(dateText);
 		}
-	})
-// 	.on('changeDate', function(ev){
-// 		// var dateText = dateFormat(ev.date.valueOf());
 
-// 		// dateStart.val(dateText);
-
-// 		// var start = date(dateStart.val());
-// 		// var end = date(dateEnd.val());
+		var start = date(dateStart.val());
+		var end = date(dateEnd.val());
 		
-// 		// if (start.getTime() >= end.getTime()) {
-// 		// 	end = date(dateStart.val());
-
-// 		// 	if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
-// 		// 		timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1)).focus();
-// 		// 	}
-
-// 		// 	dateEnd.val(dateText);
-// 		// 	datePickerPaneEnd.data('date', dateText).datepicker('update');
-// 		// }
-// 	})
+		if (start.getTime() >= end.getTime()) {
+			end = date(dateStart.val());
+			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerStart, 0));
+			}
+			dateEnd.val(dateText);
+			datePickerPaneEnd.data('date', dateText).datepicker('update');
+		}
+	});
 
 
+dateStart
+	.data('datepicker', datePickerPaneStart.data('datepicker'))
+	.datepickerBehavior({
+		change: function (date) {
+			datePickerPaneStart.data('date', date).datepicker('update');
+		},
+		display: 'show'
+	});
+	
 datePickerPaneEnd
 	.datepicker({
 		todayHighlight: true,
 		format: 'yyyy-mm-dd'
 	})
-	.datepickerBehavior({
-		setDate: function (date) {
-			this.element.val(date);
+	.on('changeDate', function(ev) {
+		var dateText = dateFormat(ev.date.valueOf());
+		var dateEndVal = dateEnd.val();
+		if (dateEndVal !== dateText) {
+			dateEnd.val(dateText);
+		}
+		var start = date(dateStart.val());
+		var end = date(dateEnd.val());
+		
+		if (start.getTime() >= end.getTime()) {
+			start = date(dateEnd.val());
+			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, 0));
+			}
+			dateStart.val(dateText);
+			datePickerPaneStart.data('date', dateText).datepicker('update');
 		}
 	});
-// 	.on('changeDate', function(ev){
-// 		// var dateText = dateFormat(ev.date.valueOf());
-
-// 		// dateEnd.val(dateText);
-
-// 		// var start = date(dateStart.val());
-// 		// var end = date(dateEnd.val());
-		
-// 		// if (start.getTime() >= end.getTime()) {
-// 		// 	start = date(dateEnd.val());
-
-// 		// 	if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
-// 		// 		timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, -1)).focus();
-// 		// 	}
-
-// 		// 	dateStart.val(dateText);
-// 		// 	datePickerPaneStart.data('date', dateText).datepicker('update');
-// 		// }
-// 	})
-
+dateEnd
+	.on('change', function () {
+		datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
+	})
+	.data('datepicker', datePickerPaneEnd.data('datepicker'))
+	.datepickerBehavior({
+		change: function (date) {
+			datePickerPaneEnd.data('date', date).datepicker('update');
+		},
+		display: 'show'
+	});
+	
 
 timePickerStart
 	.timeEntry({

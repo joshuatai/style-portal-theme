@@ -9,11 +9,7 @@ datePickerTime
 	  	format: 'yyyy-mm-dd'
 	})
 	.datepicker('setDate', new Date())
-	.datepickerBehavior({
-		setDate: function (date) {
-			this.element.val(date);
-		}
-	});
+	.datepickerBehavior();
 
 timePickerDate
 	.timeEntry({
