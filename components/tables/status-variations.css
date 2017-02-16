@@ -67,9 +67,6 @@
 .tables-example .table-row-selection > tbody > tr > td:nth-child(6) {
 	width: 11.77%;
 }
-.tables-example .fixed-table-loading {
-	display: none;
-}
 
 .tables-example .longtext-example .table > thead > tr > th:nth-child(1),
 .tables-example .longtext-example .table > tbody > tr > td:nth-child(1) {
