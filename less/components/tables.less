@@ -38,6 +38,7 @@ th {
       > td {
         padding: @table-cell-padding;
         vertical-align: top;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow:ellipsis;
         //line-height: @line-height-base;
@@ -54,6 +55,9 @@ th {
     font-weight: bold;
     &.gutter {
       width: 38px;
+    }
+    &:focus {
+      outline: none;
     }
   }
   // Remove top border from thead by default
@@ -75,6 +79,22 @@ th {
   // Nesting
   .table {
     background-color: @body-bg;
+  }
+  &.table-longtext {
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          white-space: normal;
+          text-overflow: clip;
+        }
+        > th {
+          vertical-align: middle;
+        }
+      }
+    }
   }
 }
 
