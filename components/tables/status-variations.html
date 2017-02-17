@@ -1,17 +1,17 @@
 <section class="css-reference">
-  <h5>Table row status</h5>
+  <h3>Table row hover/selection</h3>
   <pre>
     <style data-selector=".table-hover > tbody > tr:hover">:hover</style>
   </pre>
   <pre>
     <style data-selector=".table > tbody > tr.active > td">Selected state</style>
   </pre>
-
   <h5>Table column only with icon</h5>
   <pre>
     <style data-selector=".table > thead > tr > th.gutter">Set width on the table header cell</style>
   </pre>
 
+  <h3>Hyperlinks</h3>
   <h5>Table cell with hyperlink</h5>
   <pre>
     <style data-selector=".table-hover > tbody > tr > td.td-link:hover">:hover</style>
@@ -20,6 +20,7 @@
     <style data-selector=".table-hover > tbody > tr > td.td-link:hover a">Link text</style>
   </pre>
 
+  <h3>Sortable header</h3>
   <h5>Table header sortable status</h5>
   <pre>
     <style data-selector=".table-sortable > thead > tr > th:hover">:hover</style>
@@ -28,17 +29,41 @@
     <style data-selector=".table-sortable .sortabled">Sortabled state</style>
   </pre>
 
+  <h3>Long text</h3>
+  <h5>Non-truncated table header</h5>
+  <pre>
+    <style data-selector=".table-longtext > thead > tr > th"></style>
+  </pre>
+  <h5>Truncated table cell</h5>
+  <pre>
+    <style data-selector=".table-longtext-truncated > thead > tr > td"></style>
+  </pre>
+  <h5>Truncated infotip</h5>
+  <p>About the infotip style, please refer to Tooltip component style.</p>
+
+  <h3>Resize columns</h3>
+  <h5>Resizable handler</h5>
+  <pre data-title=":hover">
+    <style data-selector=".JCLRgrip:hover"></style>
+  </pre>
+   <pre data-title="Drag state">
+    <style data-selector=".JCLRgripDrag"></style>
+  </pre>
+
+  <h3>Icon</h3>
   <h5>Icon class</h5>
   <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
   <pre data-title="For Image icon:">
     <style data-selector=".icon">Default size of icon</style>
   </pre>
-
   <h5>Sort descending icon</h5>
   <pre>
     <style data-selector=".table-sortable .sortabled .icon_sortDescending"></style>
+  </pre>
+  <pre>
     <style data-selector=".icon_sortDescending"></style>
   </pre>
+  
 
 </section>
 
@@ -439,7 +464,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Hotfix_DeepDiscoveryEmailInspector_3812_lx_en_criticalpatch1151</td>
+            <td>Hotfix_DeepDiscoveryEmailInspector 3812 lx_en_criticalpatch1151</td>
             <td>Hotfix</td>
             <td>8</td>
             <td>3.8 Service Build 1170</td>
@@ -449,7 +474,7 @@
             <td>Administrator</td>
           </tr>
           <tr>
-            <td>Hotfix_DeepDiscoveryInspector_380_lx_en_hfb1280_criticalpatch1152</td>
+            <td>Hotfix_DeepDiscoveryInspector 380 lx_en_hfb1280_criticalpatch1152</td>
             <td>Virtual Analyzer image</td>
             <td>12</td>
             <td>1.0 Build 1232 Pack 2.0</td>
@@ -459,7 +484,7 @@
             <td>Administrator</td>
           </tr>
           <tr>
-            <td>Taiwan_Patch_01_DeepDiscoveryInspector_380_lx_en</td>
+            <td>Taiwan_Patch_01_DeepDiscoveryInspector 380 lx_en</td>
             <td>Firmware</td>
             <td>29</td>
             <td>Build 1048</td>
@@ -469,7 +494,7 @@
             <td>Operator</td>
           </tr>
           <tr>
-            <td>Patch_02_DeepDiscoveryInspector_380_lx_en_hfb1229</td>
+            <td>Patch_02_DeepDiscoveryInspector 380 lx_en_hfb1229</td>
             <td>Hotfix</td>
             <td>10</td>
             <td>Build 1048</td>
@@ -479,7 +504,7 @@
             <td>Operator</td>
           </tr>
           <tr>
-            <td>Japan_Hotfix_DeepDiscoveryInspector_380_lx_en_hfb2088</td>
+            <td>Japan_Hotfix_DeepDiscoveryInspector 380 lx_en_hfb2088</td>
             <td>Hotfix</td>
             <td>7</td>
             <td>Build 1048</td>
@@ -505,7 +530,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Hotfix_DeepDiscoveryEmailInspector_3812_lx_en_criticalpatch1151</td>
+            <td>Hotfix_DeepDiscoveryEmailInspector 3812 lx_en_criticalpatch1151</td>
             <td>Hotfix</td>
             <td>8</td>
             <td>3.8 Service Build 1170</td>
@@ -515,7 +540,7 @@
             <td>Administrator</td>
           </tr>
           <tr>
-            <td>Hotfix_DeepDiscoveryInspector_380_lx_en_hfb1280_criticalpatch1152</td>
+            <td>Hotfix_DeepDiscoveryInspector 380 lx_en_hfb1280_criticalpatch1152</td>
             <td>Virtual Analyzer image</td>
             <td>12</td>
             <td>1.0 Build 1232 Pack 2.0</td>
@@ -525,7 +550,7 @@
             <td>Administrator</td>
           </tr>
           <tr>
-            <td>Taiwan_Patch_01_DeepDiscoveryInspector_380_lx_en</td>
+            <td>Taiwan_Patch_01_DeepDiscoveryInspector 380 lx_en</td>
             <td>Firmware</td>
             <td>29</td>
             <td>Build 1048</td>
@@ -535,7 +560,7 @@
             <td>Operator</td>
           </tr>
           <tr>
-            <td>Patch_02_DeepDiscoveryInspector_380_lx_en_hfb1229</td>
+            <td>Patch_02_DeepDiscoveryInspector 380 lx_en_hfb1229</td>
             <td>Hotfix</td>
             <td>10</td>
             <td>Build 1048</td>
@@ -545,7 +570,7 @@
             <td>Operator</td>
           </tr>
           <tr>
-            <td>Japan_Hotfix_DeepDiscoveryInspector_380_lx_en_hfb2088</td>
+            <td>Japan_Hotfix_DeepDiscoveryInspector 380lx_en_hfb2088</td>
             <td>Hotfix</td>
             <td>7</td>
             <td>Build 1048</td>
@@ -557,4 +582,45 @@
         </tbody>
     </table>
   </div>
+  <h5>Resize columns</h5>
+  <p>Table columns may be resized by dragging border on table headers.</p>
+  <ul>
+      <li>When a resizable columns border is hovered over on table headers, display a col-resize cursor and show the border in another color to indicate that the column is resizable, and then adding a translucent border when users drag the boundary.</li>
+      <li>Use a minimum width of 56px for resizable columns if that columns without critical limitation of content.</li>
+      <li>Recommend to support double-click the right border of a table header cell to increase the column width to accommodate the largest entry in the column.</li>
+  </ul>
+  <table id="resize" class="table table-bordered table-longtext-truncated table-resize">
+      <thead>
+        <tr>          
+          <th>Deployment Plan</th>
+          <th>Type</th>
+          <th>Appliance</th>
+          <th>Deployed</th>
+          <th>Creator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>          
+          <td>Hotfix_DDEI</td>
+          <td>Hotfix</td>          
+          <td>8</td>
+          <td>2016/06/02 23:15:00</td>
+          <td>Administrator</td>
+        </tr>
+        <tr>          
+          <td>Hotfix_DDI_01</td>
+          <td>Virtual Analyzer image</td>
+          <td>12</td>
+          <td>2016/04/18 23:17:20</td>
+          <td>Administrator</td>
+        </tr>
+        <tr>          
+          <td>TW_Patch_01_DDI</td>
+          <td>Firmware</td>
+          <td>29</td>
+          <td>2016/04/17 21:20:18</td>
+          <td>Operator</td>
+        </tr>
+      </tbody>
+  </table>
 </section>

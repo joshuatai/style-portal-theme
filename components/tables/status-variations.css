@@ -104,3 +104,9 @@
 .tables-example .longtext-example .table-longtext {
 	margin-bottom: 20px;
 }
+.JCLRgrip {
+    margin-left: -1px !important;
+}
+.JCLRgripDrag {
+    border-left: 1px solid #bbb !important;
+}

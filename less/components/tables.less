@@ -38,9 +38,6 @@ th {
       > td {
         padding: @table-cell-padding;
         vertical-align: top;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow:ellipsis;
         //line-height: @line-height-base;
         a {
           text-decoration: none;
@@ -80,24 +77,35 @@ th {
   .table {
     background-color: @body-bg;
   }
-  &.table-longtext {
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th,
-        > td {
-          white-space: normal;
-          text-overflow: clip;
-        }
-        > th {
-          vertical-align: middle;
-        }
+}
+
+//long text 
+.table-longtext {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th {
+        vertical-align: middle;
       }
     }
   }
 }
-
+//long text truncated
+.table-longtext-truncated {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+      }
+    }
+  }
+}
 
 // Condensed table w/ half padding
 
@@ -358,4 +366,14 @@ table {
   .table-comfortable + & {
     top: 47px;
   }
+}
+
+//Resizable
+.JCLRgripDrag {
+  border-right: 4px solid rgba(34, 34, 34, .08);
+  border-left: 1px solid #bbb;
+}
+.JCLRgrip:hover {
+  border-left: 1px solid #bbb;
+  cursor: col-resize;
 }
