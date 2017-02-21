@@ -804,33 +804,48 @@ header .navbar-nav > li > .dropdown-menu {
       float: left;
       clear: both;
       width: 100%;   
-      padding-left: 10px;
       background: transparent;
       overflow: hidden;          
       .box-shadow(none);      
-      > li {
-        border-left: 2px transparent solid;
+      > li {        
+        position: relative;
         &:first-child {
           display: none;
         }
+        &::before {
+          content: " ";
+          width: 100%;
+          height: 28px;
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+        &:hover::before {
+          background: @side-navigation-category-bg-light;
+          .opacity(@side-navigation-category-hover-bg-opacity);
+        }
         &:hover > a {        
           background: transparent;
-          color: #fff;
-          // .opacity(1);          
+          color: #fff;               
         }
-        &.selected {
-          border-left: 2px @side-navigation-extend-item-color solid;
+        &.selected {          
           > a {
-            color: #fff;
-            //.opacity(1);
+            color: #fff;            
+            &::before {
+              content: " ";
+              width: 2px;
+              height: 20px;
+              left: 10px;
+              top: 4px;
+              position: absolute;
+              border-left: 2px @side-navigation-extend-item-color solid;
+            }
           }
         }
         > a {
-          // color: @side-navigation-extend-item-color;
           color: lighten(@navbar-default-bg, 37%); 
-          padding: 0 14px 0 8px;
-          line-height: 28px;
-          //.opacity(@side-navigation-extend-item-opacity);
+          padding: 0 14px 0 20px;
+          line-height: 28px;          
         }        
       }
     }      
