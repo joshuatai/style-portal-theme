@@ -1,7 +1,7 @@
 var mouseY;
 var mouseX;
 var timer;
-var table_longtext_toggle = $("<div class='longtext_toggle tooltip-inner tooltip-inner-light'></div>");
+var table_longtext_toggle = $("<div class='longtext_toggle tooltip-inner fade tooltip-inner-light'></div>");
 var table_cell = $('.table-longtext-truncated').find('tr').children();
 
 // FIXED HEADER
@@ -50,18 +50,21 @@ table_cell
 
 		if(cell_width < cell_text_length) {
 			table_longtext_toggle.html(cell_text);
-			table_longtext_toggle.addClass("show");
+			//table_longtext_toggle.addClass("show");
 			$(this).css("cursor", "default");
 			timer = setTimeout(function(){
-				table_longtext_toggle.css({top: mouseY, left: mouseX});
-				table_longtext_toggle.appendTo('body');
+				table_longtext_toggle.appendTo('body').css({top: mouseY, left: mouseX});
+				setTimeout(function(){
+					table_longtext_toggle.addClass("in");
+				}, 50);
 			}, 500);
 		}
 	})
 	.mouseleave(function () {
 		clearTimeout(timer);
 		$(this).css("cursor", "auto");
-		table_longtext_toggle.remove();
+		table_longtext_toggle.removeClass("in").remove();
+		//table_longtext_toggle.;
 	});
 
 $(document).on('mousemove', function(e){

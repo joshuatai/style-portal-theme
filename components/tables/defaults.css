@@ -30,8 +30,8 @@
 .longtext_toggle {
 	position: absolute;
 	z-index: 1070;
-	display: none;
+	//display: none;
 }
 .longtext_toggle.show {
-	display: block;
+	//display: block;
 }
