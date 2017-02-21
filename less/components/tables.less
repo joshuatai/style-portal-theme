@@ -38,6 +38,8 @@ th {
       > td {
         padding: @table-cell-padding;
         vertical-align: top;
+        overflow: hidden;
+        
         //line-height: @line-height-base;
         a {
           text-decoration: none;
@@ -371,9 +373,9 @@ table {
 //Resizable
 .JCLRgripDrag {
   border-right: 4px solid rgba(34, 34, 34, .08);
-  border-left: 1px solid #bbb;
+  border-left: 1px solid #999;
 }
 .JCLRgrip:hover {
-  border-left: 1px solid #bbb;
+  border-left: 1px solid #999;
   cursor: col-resize;
 }
