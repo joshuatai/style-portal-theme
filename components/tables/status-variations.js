@@ -49,8 +49,7 @@ table_cell
 		var cell_text_length = $('.calSpace span').width();
 
 		if(cell_width < cell_text_length) {
-			table_longtext_toggle.html(cell_text);
-			//table_longtext_toggle.addClass("show");
+			table_longtext_toggle.html(cell_text);			
 			$(this).css("cursor", "default");
 			timer = setTimeout(function(){
 				table_longtext_toggle.appendTo('body').css({top: mouseY, left: mouseX});
@@ -63,8 +62,7 @@ table_cell
 	.mouseleave(function () {
 		clearTimeout(timer);
 		$(this).css("cursor", "auto");
-		table_longtext_toggle.removeClass("in").remove();
-		//table_longtext_toggle.;
+		table_longtext_toggle.removeClass("in").remove();		
 	});
 
 $(document).on('mousemove', function(e){
