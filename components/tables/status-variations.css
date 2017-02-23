@@ -120,12 +120,9 @@
 .tables-example .table-with-header.plain-header .toolbar {
 	border: 0;
 }
-.tables-example .table-with-header .toolbar .functional-block {
+.tables-example .table-with-header .toolbar .controls {
 	display: none;
 }
-.tables-example .table-with-header .toolbar .functional-block.show {
+.tables-example .table-with-header .toolbar .controls.show {
 	display: block;
-}
-.tables-example .table-with-header .toolbar .functional-block > div {
-	float: left;
 }

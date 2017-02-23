@@ -61,19 +61,16 @@
   </pre>
   <h5>Individual item container</h5>
   <pre>
-    <style data-selector=".table-with-header .toolbar > div"></style>
+    <style data-selector=".table-with-header .toolbar .items-block"></style>
   </pre>
-  <pre data-title="Button feature block">
-    <style data-selector=".table-with-header .toolbar .button-block"></style>
+  <pre data-title="::before">
+    <style data-selector=".table-with-header .toolbar .items-block + .items-block:before">Vertical line between buttons</style>
   </pre>
-  <pre data-title="Infomation feature block">
-    <style data-selector=".table-with-header .toolbar .selected-block"></style>
+  <pre data-title="Selected Records block">
+    <style data-selector=".table-with-header .toolbar .items-block .selected-records"></style>
   </pre>
   <pre>
-    <style data-selector=".table-with-header .toolbar .selected-block .count">The number of the selected</style>
-  </pre>
-  <pre data-title="Vertical line between buttons">
-    <style data-selector=".table-with-header .toolbar .divider"></style>
+    <style data-selector=".table-with-header .toolbar .items-block .selected-records .count">The number of the selected</style>
   </pre>
 
   <h3>Icon</h3>
@@ -658,16 +655,13 @@
   </ul>
   <div id="table-selected" class="table-with-header">
     <div class="toolbar">
-      <div class="button-block">
+      <div class="items-block">
         <button type="button" class="btn btn-primary"><span class="fa fa-plus"></span>Add</button>
       </div>
-      <div class="functional-block">
-        <div class="divider"></div>
-        <div class="button-block">
-          <button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Delete</button>
-        </div>
-        <div class="selected-block">
-          <span class="count">1</span> selected
+      <div class="items-block controls">
+        <button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Delete</button>
+        <div class="selected-records">
+          <span class="count"></span> selected
         </div>
       </div>
     </div>
@@ -732,15 +726,12 @@
   </div>
   <div id="plain-table-selected" class="table-with-header plain-header">
     <div class="toolbar">
-      <div class="button-block">
+      <div class="items-block">
         <button type="button" class="btn btn-primary"><span class="fa fa-plus"></span>Add</button>
       </div>
-      <div class="functional-block">
-        <div class="divider"></div>
-        <div class="button-block">
-          <button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Delete</button>
-        </div>
-        <div class="selected-block">
+      <div class="items-block controls">
+        <button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Delete</button>
+        <div class="selected-records">
           <span class="count"></span> selected
         </div>
       </div>

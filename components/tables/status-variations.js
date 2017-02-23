@@ -106,7 +106,7 @@ function toolbarSelection(selector) {
 	var click_timer;
 	var table_selected = $(selector);
 	var table = $('table', table_selected);
-	var functional_block = $('.functional-block', table_selected);
+	var functional_block = $('.controls', table_selected);
 	var text_of_selected = $('.selected-block .count', functional_block);
 	var tbody_row = $("tbody > tr", table);
 	var partial_checkbox = $("thead > tr > th.gutter input.input-checkbox", table);
