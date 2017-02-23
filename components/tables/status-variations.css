@@ -105,6 +105,9 @@
 .tables-example .table-with-header {
 	margin-bottom: 24px;
 }
+.JCLRgripDrag {
+    border-left: 1px solid #999 !important;
+}
 .JCLRgrip {
     margin-left: -1px !important;
 }
