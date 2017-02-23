@@ -103,7 +103,7 @@
 }
 .tables-example .longtext-example .table-longtext,
 .tables-example .table-with-header {
-	margin-bottom: 20px;
+	margin-bottom: 24px;
 }
 .JCLRgrip {
     margin-left: -1px !important;
@@ -112,4 +112,17 @@
 	.JCLRgrip {
 		margin-left: -2px !important;
 	}
+}
+
+.tables-example .table-with-header.plain-header .toolbar {
+	border: 0;
+}
+.tables-example .table-with-header .toolbar .functional-block {
+	display: none;
+}
+.tables-example .table-with-header .toolbar .functional-block.show {
+	display: block;
+}
+.tables-example .table-with-header .toolbar .functional-block > div {
+	float: left;
 }
