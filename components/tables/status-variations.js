@@ -96,5 +96,59 @@ function resetDragLineHeight(){
 	$(".JCLRgrip").css({height: thead_height});
 }
 
+// TOOL BAR
+// =================
 
+var $table_selected = $('#table-selected');
 
+$table_selected.on('click', "tbody > tr", function (e) {
+	var select_text;
+	var checkbox = $(this).children().find("input.input-checkbox");
+
+	select_text = getSelectedText()
+    console.log(select_text);
+
+    if($(this).hasClass('active')) {
+  
+    	checkbox.prop("checked", false);
+		$(this).removeClass('active');
+    
+	}
+	else {
+		checkbox.prop("checked", true);
+		$(this).addClass('active');
+	}
+	
+	
+});
+
+$table_selected.on('click', "thead > tr > th.gutter", function (e) {
+
+	var partial_checkbox = $(this).find("input.input-checkbox");
+	var tbody_row = $table_selected.find("tbody > tr");
+	var tbody_checkbox = tbody_row.find("input.input-checkbox");
+	if(tbody_row.hasClass('active')) {
+		tbody_row.removeClass('active');
+		partial_checkbox.prop("checked", false);
+		tbody_checkbox.prop("checked", false);
+	}
+	else {
+		tbody_row.addClass('active');
+		partial_checkbox.prop("checked", true);
+		tbody_checkbox.prop("checked", true);
+	}
+	
+});
+
+function getSelectedText() {
+    if (window.getSelection) { 
+        var range = window.getSelection ();
+        return range.toString();
+    } 
+    else {
+        if (document.selection.createRange) { // IR
+            var range = document.selection.createRange ();
+            return range.text;
+        }
+    }
+}

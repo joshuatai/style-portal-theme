@@ -109,6 +109,53 @@ th {
   }
 }
 
+//Toolbar
+.table-with-header {
+  .toolbar {
+    background-color: #f8f8f8;
+    border: 1px solid @table-border-color;
+    border-bottom: none;
+    > div {
+      float: left;
+    }
+    .button-block {
+      margin: 8px 0;
+      padding: 0 12px;
+      + .button-block {
+        //border-left: 1px solid @table-border-color;
+      }
+    }
+    .divider{
+        height: 22px;
+        margin-top: 13px;
+        border-left: 1px solid @table-border-color;
+    }
+    .selected-block {
+      margin: 14px 0;
+    }
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .selected-block {
+      color: #666666;
+      font-size: 12px;
+      .count {
+        font-weight: bold;
+      }
+    }
+  }
+  &.plain-header {
+    .toolbar {
+      background-color: #ffffff;
+      border: 0;
+      box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid #dddddd;
+    }
+  }
+}
+
 // Condensed table w/ half padding
 
 .table-condensed {

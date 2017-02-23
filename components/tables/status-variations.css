@@ -101,7 +101,8 @@
 .tables-example .longtext-example .table > tbody > tr > td:nth-child(8) {
 	width: 11.77%;
 }
-.tables-example .longtext-example .table-longtext {
+.tables-example .longtext-example .table-longtext,
+.tables-example .table-with-header {
 	margin-bottom: 20px;
 }
 .JCLRgrip {
