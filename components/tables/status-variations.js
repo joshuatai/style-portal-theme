@@ -151,7 +151,7 @@ function toolbarSelection(selector) {
 		clearTimeout(click_timer);
 	});
 
-	table.on('click', "thead > tr > th.gutter", function (e) {
+	table.on('click', "thead > tr > th.gutter > .checkbox", function (e) {
 		var tbody_row_active = table.find("tbody > tr.active");
 
 		if(tbody_row.hasClass('active') || tbody_row_active.length == 0) {
