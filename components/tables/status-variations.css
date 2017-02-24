@@ -101,8 +101,12 @@
 .tables-example .longtext-example .table > tbody > tr > td:nth-child(8) {
 	width: 11.77%;
 }
-.tables-example .longtext-example .table-longtext {
-	margin-bottom: 20px;
+.tables-example .longtext-example .table-longtext,
+.tables-example .table-with-header {
+	margin-bottom: 24px;
+}
+.JCLRgripDrag {
+    border-left: 1px solid #999 !important;
 }
 .JCLRgrip {
     margin-left: -1px !important;
@@ -111,4 +115,14 @@
 	.JCLRgrip {
 		margin-left: -2px !important;
 	}
+}
+
+.tables-example .table-with-header.plain-header .toolbar {
+	border: 0;
+}
+.tables-example .table-with-header .toolbar .controls {
+	display: none;
+}
+.tables-example .table-with-header .toolbar .controls.show {
+	display: block;
 }

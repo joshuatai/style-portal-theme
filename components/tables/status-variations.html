@@ -50,6 +50,30 @@
     <style data-selector=".JCLRgripDrag"></style>
   </pre>
 
+  <h3>Toolbar</h3>
+  <h5>Toolbar container</h5>
+  <p>Use a block-level element at the top of the table.</p>
+  <pre>
+    <style data-selector=".table-with-header .toolbar"></style>
+  </pre>
+  <pre data-title="Plain style">
+    <style data-selector=".table-with-header.plain-header .toolbar"></style>
+  </pre>
+  <h5>Individual item container</h5>
+  <pre>
+    <style data-selector=".table-with-header .toolbar .items-block"></style>
+  </pre>
+  <pre data-title="::before">
+    <style data-selector=".table-with-header .toolbar .items-block + .items-block:before">Vertical line between buttons</style>
+  </pre>
+  <h5>Selected records</h5>
+  <pre>
+    <style data-selector=".table-with-header .toolbar .items-block .selected-records"></style>
+  </pre>
+  <pre>
+    <style data-selector=".table-with-header .toolbar .items-block .selected-records .count">The number of the selected</style>
+  </pre>
+
   <h3>Icon</h3>
   <h5>Icon class</h5>
   <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
@@ -623,4 +647,154 @@
         </tr>
       </tbody>
   </table>
+  <h5>Toolbar</h5>
+  <p>A toolbar contains actions that impact the whole table. Please be aware that actions should corresponding multi-selection items, do not block the actions work when selected more than one item.</p>
+  <ul>
+      <li>The toolbar always appears above the table and the background based on types of table.</li>
+      <li>In case the user has to use the table action very often, consider to freezes it above the table while scrolling down the page.</li>
+      <li>You can put control into the toolbar for different usage. For the specific actions of control, you can display controls directly; For the generic actions of control, you may display controls after users selected items. Note the following toolbar is an example of possible generic actions for demo purpose.</li>
+  </ul>
+  <div id="table-selected" class="table-with-header">
+    <div class="toolbar">
+      <div class="items-block">
+        <button type="button" class="btn btn-primary"><span class="fa fa-plus"></span>Add</button>
+      </div>
+      <div class="items-block controls">
+        <button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Delete</button>
+        <div class="selected-records">
+          <span class="count"></span> selected
+        </div>
+      </div>
+    </div>
+    <table class="table table-bordered table-hover table-row-selection">
+        <thead>
+          <tr>
+            <th class="gutter">
+            <div class="checkbox">
+              <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs1" class="input-checkbox">
+              <label for="tablecheckboxs1"></label>
+            </div>
+            </th>
+            <th>Deployment Plan</th>
+            <th>Type</th>
+            <th>Appliance</th>
+            <th>Deployed</th>
+            <th>Creator</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">
+              <div class="checkbox">
+                <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs2" class="input-checkbox">
+                <label for="tablecheckboxs2"></label>
+              </div>
+            </td>
+            <td>Hotfix_DDEI</td>
+            <td>Hotfix</td>
+            <td>8</td>
+            <td>2016/06/02 23:15:00</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <div class="checkbox">
+                <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs3" class="input-checkbox">
+                <label for="tablecheckboxs3"></label>
+              </div>
+            </td>
+            <td>Hotfix_DDI_01</td>
+            <td>Virtual Analyzer image</td>
+            <td>12</td>
+            <td>2016/04/18 23:17:20</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <div class="checkbox">
+                <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs4" class="input-checkbox">
+                <label for="tablecheckboxs4"></label>
+              </div>
+            </td>
+            <td>TW_Patch_01_DDI</td>
+            <td>Firmware</td>
+            <td>29</td>
+            <td>2016/04/17 21:20:18</td>
+            <td>Operator</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <div id="plain-table-selected" class="table-with-header plain-header">
+    <div class="toolbar">
+      <div class="items-block">
+        <button type="button" class="btn btn-primary"><span class="fa fa-plus"></span>Add</button>
+      </div>
+      <div class="items-block controls">
+        <button type="button" class="btn btn-default btn-border"><span class="fa fa-trash"></span>Delete</button>
+        <div class="selected-records">
+          <span class="count"></span> selected
+        </div>
+      </div>
+    </div>
+    <table class="table table-minimalism table-hover table-row-selection">
+        <thead>
+          <tr>
+            <th class="gutter">
+            <div class="checkbox">
+              <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs1" class="input-checkbox">
+              <label for="tablecheckboxs1"></label>
+            </div>
+            </th>
+            <th>Deployment Plan</th>
+            <th>Type</th>
+            <th>Appliance</th>
+            <th>Deployed</th>
+            <th>Creator</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td scope="row">
+              <div class="checkbox">
+                <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs2" class="input-checkbox">
+                <label for="tablecheckboxs2"></label>
+              </div>
+            </td>
+            <td>Hotfix_DDEI</td>
+            <td>Hotfix</td>
+            <td>8</td>
+            <td>2016/06/02 23:15:00</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <div class="checkbox">
+                <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs3" class="input-checkbox">
+                <label for="tablecheckboxs3"></label>
+              </div>
+            </td>
+            <td>Hotfix_DDI_01</td>
+            <td>Virtual Analyzer image</td>
+            <td>12</td>
+            <td>2016/04/18 23:17:20</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <div class="checkbox">
+                <input type="checkbox" name="tablecheckboxs" id="tablecheckboxs4" class="input-checkbox">
+                <label for="tablecheckboxs4"></label>
+              </div>
+            </td>
+            <td>TW_Patch_01_DDI</td>
+            <td>Firmware</td>
+            <td>29</td>
+            <td>2016/04/17 21:20:18</td>
+            <td>Operator</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
 </section>

@@ -14,6 +14,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-sm-60 row-md-54 row-lg-51 row-xl-49"
+    "row": "row-sm-70 row-md-65 row-lg-60 row-xl-57"
   }
 }

@@ -1,7 +1,7 @@
 var mouseY;
 var mouseX;
 var timer;
-var table_longtext_toggle = $("<div class='longtext_toggle tooltip-inner fade tooltip-inner-light'></div>");
+var table_longtext_toggle = $("<div class='longtext-toggle tooltip-inner fade tooltip-inner-light'></div>");
 var table_cell = $('.table-longtext-truncated').find('tr').children();
 
 // FIXED HEADER
@@ -96,5 +96,96 @@ function resetDragLineHeight(){
 	$(".JCLRgrip").css({height: thead_height});
 }
 
+// TOOLBAR
+// =================
+toolbarSelection('#table-selected');
+toolbarSelection('#plain-table-selected'); 
 
+function toolbarSelection(selector) {
+	var select_text;
+	var click_timer;
+	var table_selected = $(selector);
+	var table = $('table', table_selected);
+	var functional_block = $('.controls', table_selected);
+	var text_of_selected = $('.selected-records .count', functional_block);
+	var tbody_row = $("tbody > tr", table);
+	var partial_checkbox = $("thead > tr > th.gutter input.input-checkbox", table);
+	var tbody_checkbox = $("input.input-checkbox", tbody_row);
 
+	table.on('click', "tbody > tr", function (e) {
+		var _this = $(this);
+		click_timer = setTimeout(function(){
+			var each_checkbox = _this.children().find("input.input-checkbox");
+			
+			select_text = getSelectedText();
+
+		    if(select_text == "") {
+		    	if(_this.hasClass('active')) {
+			    	each_checkbox.prop("checked", false);
+			    	partial_checkbox.prop("checked", false);
+					_this.removeClass('active');
+					var number_of_checked = table.find('tbody input:checkbox:checked');
+					text_of_selected.html(number_of_checked.length);
+					if(number_of_checked.length == 0){
+						partial_checkbox.removeClass("checkbox-partial");
+						functional_block.removeClass("show");
+					}
+				}
+				else {
+					each_checkbox.prop("checked", true);
+					_this.addClass('active');
+					partial_checkbox.addClass("checkbox-partial");
+					var number_of_checked = table.find('tbody input:checkbox:checked');
+					text_of_selected.html(number_of_checked.length);
+					functional_block.addClass("show");
+					if(number_of_checked.length == tbody_row.length) {
+						partial_checkbox.prop("checked", true);
+					}
+				}
+		    }
+	    }, 250)
+	  
+	});
+
+	table.on('dbclick', "tbody > tr", function (e) { 
+		clearTimeout(click_timer);
+	});
+
+	table.on('click', "thead > tr > th.gutter > .checkbox", function (e) {
+		var tbody_row_active = table.find("tbody > tr.active");
+
+		if(tbody_row.hasClass('active') || tbody_row_active.length == 0) {
+			// checked all row
+			tbody_row.addClass('active');
+			partial_checkbox.addClass("checkbox-partial");
+			partial_checkbox.prop("checked", true);
+			tbody_checkbox.prop("checked", true);
+			text_of_selected.html(tbody_row.length);
+			functional_block.addClass("show");
+
+			// unchecked all row
+			if(tbody_row_active.length == tbody_row.length) {
+				tbody_row.removeClass('active');
+				partial_checkbox.removeClass("checkbox-partial");
+				partial_checkbox.prop("checked", false);
+				tbody_checkbox.prop("checked", false);
+				text_of_selected.html("");
+				functional_block.removeClass("show");
+			}
+		}
+		
+	});
+
+	function getSelectedText() {
+	    if (window.getSelection) { 
+	        var range = window.getSelection();
+	        return range.toString();
+	    } 
+	    else {
+	        if (document.selection.createRange) { // IE
+	            var range = document.selection.createRange();
+	            return range.text;
+	        }
+	    }
+	}
+}
