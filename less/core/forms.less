@@ -1476,14 +1476,6 @@ label.switch .disabled{
     padding-top: 9px;
   }
 }
-.simple-date-time-example {
-  .input-icon-group {
-    float: left;
-    + .input-icon-group {
-      margin-left: 8px;
-    }
-  }
-}
 .date-time-picker-example {
   .custom-wrapper {
     position: absolute;
@@ -1506,10 +1498,24 @@ label.switch .disabled{
       }
       .date-picker-pane-body {
         margin-top: 8px;
-        .date-picker-pane-example {
+        .date-picker-pane-container {
           float: left;
           .datepicker table{
             padding: 0 3px;
+          }
+          + .date-picker-pane-container {
+            margin-left: 24px;
+            &:before {
+              content: ' ';
+              display: block;
+              height: 224px;
+              vertical-align: middle;
+              margin-left: -12px;
+              float: left;
+              margin-right: 12px;
+              margin-top: 47px;
+              border-left: 1px solid #E6E6E6;
+            }
           }
         }
       }
@@ -1524,6 +1530,14 @@ label.switch .disabled{
         display: inline-block;
         border: 0;
         box-shadow: none;
+      }
+    }
+  }
+  .simple-date-time-container {
+    .input-icon-group {
+      float: left;
+      + .input-icon-group {
+        margin-left: 8px;
       }
     }
   }
