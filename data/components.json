@@ -174,19 +174,6 @@
     "segments": []
   },
   {
-    "id": "93c477ed-5ac1-4d47-95ca-1ac03d4b5faa",
-    "name": "Tables",
-    "keywords": [
-      "table"
-    ],
-    "segments": [
-      "81835958-3c59-4f98-be96-d5023690e495",
-      "65180e50-d1c2-4fe0-ab86-55e4abb5ca44",
-      "ed131974-58a7-408b-b724-b24bd9831cbe",
-      "ff7bf402-d9ee-4b4f-a37c-be3a3997c8fe"
-    ]
-  },
-  {
     "id": "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
     "name": "Tabs",
     "keywords": [
@@ -446,5 +433,95 @@
     "segments": [
       "f0d4e63c-729c-4feb-b18f-2af7f40f0d12"
     ]
+  },
+  {
+    "id": "36b0decb-5891-4683-a933-214cc0dd82b9",
+    "name": "Styling",
+    "keywords": [
+      "standard table",
+      "plain table",
+      "table"
+    ],
+    "segments": [
+      "c7b84a5c-ef88-4598-afb7-7097d876d842",
+      "2665e879-c28b-4a0b-b713-70af97d85ed4",
+      "1d327acd-6d72-41a1-b462-afcbdbcbe9f3",
+      "afc5cf8d-7b57-40ff-97e2-447481e58ba8",
+      "379e15bf-7e46-475c-abec-084a5507a27f"
+    ]
+  },
+  {
+    "id": "0dd091cf-6392-49d2-8a9d-5ccc45131f3d",
+    "name": "Basic Table",
+    "keywords": [
+      "hover table",
+      "selection table",
+      "hyperlinks table",
+      "loader table",
+      "table without data",
+      "long text table",
+      "table"
+    ],
+    "segments": [
+      "3bbddab9-2501-42cf-9cb4-4581b1b03564",
+      "f882c6c6-2a88-43a2-898b-a7c8fb01fdc6",
+      "f7ec6bcb-be04-4e88-ad0b-9c9b65940b4c",
+      "89a51fe8-e952-409a-9330-69deb0c268b4",
+      "5c28cda7-972c-4b7c-94ec-b105b79ad7b9",
+      "e87f938a-48cd-4cfc-aaad-e38649d44430"
+    ]
+  },
+  {
+    "id": "d343d2ac-67aa-44a4-a8ca-bd6f6cb490b8",
+    "name": "Advanced Table",
+    "keywords": [
+      "sortable table",
+      "resize columns table",
+      "toolbar table",
+      "table"
+    ],
+    "segments": [
+      "e26756ec-9811-4429-8435-6fb6f24c4e95",
+      "8f8315e8-d95a-4cef-92bd-dcb90f28f3ea",
+      "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df"
+    ]
+  },
+  {
+    "id": "f7017cfc-efff-457f-9457-cf4d34df4db1",
+    "name": "Fixed Table",
+    "keywords": [
+      "fixed header table",
+      "table"
+    ],
+    "segments": [
+      "6e87a4d1-0e5e-44f0-8550-eed86ad72b86"
+    ]
+  },
+  {
+    "id": "5d77b5ec-a33b-4a6b-9a13-7c9107072d01",
+    "name": "Editable Table",
+    "keywords": [
+      "editable table",
+      "table"
+    ],
+    "segments": []
+  },
+  {
+    "id": "cce4e2d3-137d-4a21-8f51-c631339b3fae",
+    "name": "Tree Table",
+    "keywords": [
+      "tree table",
+      "table"
+    ],
+    "segments": []
+  },
+  {
+    "id": "cdee8cee-ace9-42c1-b418-000e71a3a709",
+    "name": "Filter Columns",
+    "keywords": [
+      "filter columns",
+      "table"
+    ],
+    "segments": []
   }
 ]
