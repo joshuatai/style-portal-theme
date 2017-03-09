@@ -1,7 +1,7 @@
 {
-  "id": "81835958-3c59-4f98-be96-d5023690e495",
-  "name": "Structure",
-  "location": "tables/structure.html",
+  "id": "3bbddab9-2501-42cf-9cb4-4581b1b03564",
+  "name": "Row hover",
+  "location": "table-basic/row-hover.html",
   "dependencies": [],
   "actions": [
     {

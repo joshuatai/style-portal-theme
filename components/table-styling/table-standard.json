@@ -1,0 +1,17 @@
+{
+  "id": "2665e879-c28b-4a0b-b713-70af97d85ed4",
+  "name": "Standard Table",
+  "location": "table-styling/table-standard.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-5"
+  }
+}

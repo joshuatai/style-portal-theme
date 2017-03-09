@@ -1,0 +1,17 @@
+{
+  "id": "89a51fe8-e952-409a-9330-69deb0c268b4",
+  "name": "Loader",
+  "location": "table-basic/loader.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "id": "ed131974-58a7-408b-b724-b24bd9831cbe",
-  "name": "Displays and Functionalities",
-  "location": "tables/status-variations.html",
+  "id": "8f8315e8-d95a-4cef-92bd-dcb90f28f3ea",
+  "name": "Resize Columns",
+  "location": "table-advanced/resize-columns.html",
   "dependencies": [
     "colResizable-1.6"
   ],
@@ -14,6 +14,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-50"
+    "row": "row-md-6"
   }
 }

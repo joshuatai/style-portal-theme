@@ -32,8 +32,7 @@
       "a2fa8b5e-6dd7-4570-9352-eea232f1d5a0",
       "168263ea-0f3f-4782-8a37-f18334007680",
       "003ae527-8e9e-41fb-a275-ae2babcdf49e",
-      "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",     
-      "93c477ed-5ac1-4d47-95ca-1ac03d4b5faa",
+      "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
       "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
       "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f"      
     ]
@@ -54,6 +53,18 @@
       "0448aa99-2fd0-4218-b960-4037f18e8bcb",
       "06f6ed7b-95c5-449d-a3c7-cd56ff037d66",
       "73243502-1317-451b-b3c9-e75f7e5fab81"
+    ]
+  },
+  {
+    "id": "b2e6fdb7-7fe6-428f-b62b-4fc7d50ad237",
+    "name": "Tables",
+    "icon": "table",
+    "segments": [],
+    "components": [
+      "36b0decb-5891-4683-a933-214cc0dd82b9",
+      "0dd091cf-6392-49d2-8a9d-5ccc45131f3d",
+      "d343d2ac-67aa-44a4-a8ca-bd6f6cb490b8",
+      "f7017cfc-efff-457f-9457-cf4d34df4db1"
     ]
   },
   {

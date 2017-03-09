@@ -1,0 +1,17 @@
+{
+  "id": "f7ec6bcb-be04-4e88-ad0b-9c9b65940b4c",
+  "name": "Hyperlinks",
+  "location": "table-basic/hyperlinks.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-5"
+  }
+}

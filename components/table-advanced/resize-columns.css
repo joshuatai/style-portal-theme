@@ -1,0 +1,11 @@
+.JCLRgripDrag {
+    border-left: 1px solid #999 !important;
+}
+.JCLRgrip {
+    margin-left: -1px !important;
+}
+@-moz-document url-prefix() { 
+	.JCLRgrip {
+		margin-left: -2px !important;
+	}
+}
