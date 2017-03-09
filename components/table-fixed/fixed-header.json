@@ -1,0 +1,17 @@
+{
+  "id": "6e87a4d1-0e5e-44f0-8550-eed86ad72b86",
+  "name": "Fixed Header",
+  "location": "table-fixed/fixed-header.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-11"
+  }
+}

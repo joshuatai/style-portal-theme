@@ -1,0 +1,63 @@
+<section class="css-reference">
+	<h5>Table header sortable status</h5>
+	<pre>
+		<style data-selector=".table-sortable > thead > tr > th:hover">:hover</style>
+	</pre>
+	<pre>
+		<style data-selector=".table-sortable .sortabled">Sortabled state</style>
+	</pre>
+	<h5>Icon class</h5>
+	<p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
+	<pre data-title="For Image icon:">
+		<style data-selector=".icon">Default size of icon</style>
+	</pre>
+	<h5>Sort descending icon</h5>
+	<pre>
+		<style data-selector=".table-sortable .sortabled .icon_sortDescending"></style>
+	</pre>
+	<pre>
+		<style data-selector=".icon_sortDescending"></style>
+	</pre>
+</section>
+
+<section class="tables-example">
+	<p>Table rows may be sorted by clicking on table headers.</p>
+	<ul>
+		<li>The first click should sort table rows in descending order, and the second click in ascending order.</li>
+		<li>When a sortable table header is hovered over, display a pointer and show the header in another color to indicate that the column is sortable.</li>
+	</ul>
+	<table class="table table-bordered table-hover table-sortable">
+		<thead>
+			<tr>          
+				<th class="sortabled">Deployment Plan<span class="icon icon_sortDescending"></span></th>
+				<th>Type</th>
+				<th>Appliance</th>
+				<th>Deployed</th>
+				<th>Creator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>          
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>          
+				<td>8</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>          
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td>12</td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>          
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>29</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

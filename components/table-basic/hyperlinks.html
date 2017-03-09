@@ -1,0 +1,50 @@
+<section class="css-reference">
+	<h5>Table cell with hyperlink</h5>
+  	<pre>
+    	<style data-selector=".table-hover > tbody > tr > td.td-link:hover">:hover</style>
+  	</pre>
+   	<pre>
+    	<style data-selector=".table-hover > tbody > tr > td.td-link:hover a">Link text</style>
+  	</pre>
+</section>
+
+<section class="tables-example">
+	<p>Preferrably, use no more one hyperlink in a table cell.</p>
+	<ul>
+		<li>A hyperlink should take effect when the user clicks anywhere in a table cell that contains the hyperlink.</li>
+	</ul>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+			<th>Deployment Plan</th>
+			<th>Type</th>
+			<th>Appliance</th>
+			<th>Deployed</th>
+			<th>Creator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>
+				<td class="td-link"><a href="javascript:;">8</a></td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td class="td-link"><a href="javascript:;">12</a></td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td class="td-link"><a href="javascript:;">29</a></td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

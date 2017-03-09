@@ -1,0 +1,17 @@
+{
+  "id": "e26756ec-9811-4429-8435-6fb6f24c4e95",
+  "name": "Sortable",
+  "location": "table-advanced/sortable.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-5"
+  }
+}

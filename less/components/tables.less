@@ -288,8 +288,22 @@ th {
   } 
 }
 
-// Table Comfortable
-.table-comfortable {
+// Table Cramped
+.table-cramped {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 4px 4px;
+      }
+    }
+  }
+}
+
+// Table Roomy
+.table-roomy {
   > thead,
   > tbody,
   > tfoot {

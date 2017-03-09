@@ -1,7 +1,7 @@
 {
-  "id": "ff7bf402-d9ee-4b4f-a37c-be3a3997c8fe",
-  "name": "Row Heights",
-  "location": "tables/sizes.html",
+  "id": "c7b84a5c-ef88-4598-afb7-7097d876d842",
+  "name": "Structure",
+  "location": "table-styling/structure.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-12"
+    "row": "row-md-3"
   }
 }

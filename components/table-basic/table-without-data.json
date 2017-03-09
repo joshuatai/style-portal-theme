@@ -1,0 +1,17 @@
+{
+  "id": "5c28cda7-972c-4b7c-94ec-b105b79ad7b9",
+  "name": "Tables without data",
+  "location": "table-basic/table-without-data.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

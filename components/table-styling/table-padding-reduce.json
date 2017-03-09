@@ -1,7 +1,7 @@
 {
-  "id": "65180e50-d1c2-4fe0-ab86-55e4abb5ca44",
-  "name": "Types",
-  "location": "tables/types.html",
+  "id": "afc5cf8d-7b57-40ff-97e2-447481e58ba8",
+  "name": "Resuce Padding",
+  "location": "table-styling/table-padding-reduce.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-11"
+    "row": "row-md-5"
   }
 }

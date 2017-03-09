@@ -1,0 +1,17 @@
+{
+  "id": "1d327acd-6d72-41a1-b462-afcbdbcbe9f3",
+  "name": "Plain Table",
+  "location": "table-styling/table-plain.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-5"
+  }
+}

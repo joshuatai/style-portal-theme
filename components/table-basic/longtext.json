@@ -1,0 +1,17 @@
+{
+  "id": "e87f938a-48cd-4cfc-aaad-e38649d44430",
+  "name": "Long Text",
+  "location": "table-basic/longtext.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-12"
+  }
+}
