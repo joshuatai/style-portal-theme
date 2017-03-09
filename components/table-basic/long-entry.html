@@ -1,5 +1,5 @@
 <section class="css-reference">
-	<h5>Non-truncated table header</h5>
+	<h5>Wrapped table header</h5>
 	<pre>
 		<style data-selector=".table-longtext > thead > tr > th"></style>
 	</pre>
@@ -12,10 +12,10 @@
 </section>
 
 <section class="tables-example">
-	<p>There are two options to handle text that does not fit into a table cell.</p>
+	<p>There are two options to handle entries that are longer than their column widths.</p>
 	<ul>
-		<li><strong>Non-truncated:</strong> Display all by warp the text with extend height of rows. Table header should be middle vertical alignment, table content should be top vertical alignment.</li>
-		<li><strong>Truncated:</strong> Truncate text (the ending or in the middle) with ellipsis and adding a infotip to display it in full on hover. A infotip should take effect when the user hover anywhere in a table cell which is truncated.</li>
+		<li><strong>Wrapping:</strong> Display the full content by wrapping the text and increasing the column height. Use middle alignment for table headers and top alignment for other content of the table.</li>
+		<li><strong>Truncation:</strong> Truncate the entry and add ellipsis to indicate omission. Display the full content in an infotip when moused over. </li>
 	</ul>
 	<div class="longtext-example">
 		<table class="table table-bordered table-hover table-longtext">
