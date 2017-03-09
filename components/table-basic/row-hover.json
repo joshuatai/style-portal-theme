@@ -1,0 +1,17 @@
+{
+  "id": "3bbddab9-2501-42cf-9cb4-4581b1b03564",
+  "name": "Row hover",
+  "location": "table-basic/row-hover.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

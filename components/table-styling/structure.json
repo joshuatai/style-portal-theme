@@ -1,0 +1,17 @@
+{
+  "id": "c7b84a5c-ef88-4598-afb7-7097d876d842",
+  "name": "Structure",
+  "location": "table-styling/structure.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-3"
+  }
+}

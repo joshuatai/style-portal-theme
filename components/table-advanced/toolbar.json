@@ -1,0 +1,17 @@
+{
+  "id": "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df",
+  "name": "Toolbar",
+  "location": "table-advanced/toolbar.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-10"
+  }
+}

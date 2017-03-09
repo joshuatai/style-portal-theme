@@ -1,0 +1,52 @@
+<section class="css-reference">
+	<h5>Resizable handler</h5>
+	<pre data-title=":hover">
+		<style data-selector=".JCLRgrip:hover"></style>
+	</pre>
+	<pre data-title="Drag state">
+		<style data-selector=".JCLRgripDrag"></style>
+	</pre>
+</section>
+
+<section class="tables-example">
+	<p>Table columns may be resized by dragging border on table headers.</p>
+	<ul>
+		<li>When a resizable columns border is hovered over on table headers, display a col-resize cursor and show the border in another color to indicate that the column is resizable, and then adding a translucent border when users drag the boundary.</li>
+		<li>Use a minimum width of 56px for resizable columns if that columns without critical limitation of content.</li>
+		<li>Recommend to support double-click the right border of a table header cell to increase the column width to accommodate the largest entry in the column.</li>
+	</ul>
+	<table id="resize" class="table table-bordered table-longtext-truncated table-hover table-resize">
+		<thead>
+			<tr>          
+				<th>Deployment Plan</th>
+				<th>Type</th>
+				<th>Appliance</th>
+				<th>Deployed</th>
+				<th>Creator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>          
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>          
+				<td>8</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>          
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td>12</td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>          
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>29</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

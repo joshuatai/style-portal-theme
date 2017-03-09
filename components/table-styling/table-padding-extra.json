@@ -1,0 +1,17 @@
+{
+  "id": "379e15bf-7e46-475c-abec-084a5507a27f",
+  "name": "Extra Padding",
+  "location": "table-styling/table-padding-extra.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}
