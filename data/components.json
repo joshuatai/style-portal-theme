@@ -436,7 +436,7 @@
   },
   {
     "id": "36b0decb-5891-4683-a933-214cc0dd82b9",
-    "name": "Styling",
+    "name": "Style",
     "keywords": [
       "standard table",
       "plain table",
@@ -452,7 +452,7 @@
   },
   {
     "id": "0dd091cf-6392-49d2-8a9d-5ccc45131f3d",
-    "name": "Basic Table",
+    "name": "Basic Elements",
     "keywords": [
       "hover table",
       "selection table",
@@ -473,7 +473,7 @@
   },
   {
     "id": "d343d2ac-67aa-44a4-a8ca-bd6f6cb490b8",
-    "name": "Advanced Table",
+    "name": "Advanced Elements",
     "keywords": [
       "sortable table",
       "resize columns table",
