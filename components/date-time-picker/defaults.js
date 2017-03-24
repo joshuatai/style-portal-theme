@@ -9,3 +9,4 @@
     $.extend(true, $.fn.datepicker.Constructor.prototype, extensionChangeIcon);
 
 })(jQuery);
+

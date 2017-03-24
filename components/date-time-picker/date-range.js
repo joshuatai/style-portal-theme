@@ -9,7 +9,8 @@ datePickerEnd.val(today);
 
 datePickerStart.datepicker({
 	todayHighlight: true,
-  autoclose: true
+  	autoclose: true,
+  	format: 'yyyy-mm-dd'
 })
 .on('input', (e) => {
 	datePickerStart.data('manually', true);
@@ -38,7 +39,8 @@ datePickerStart.datepicker({
 
 datePickerEnd.datepicker({
 	todayHighlight: true,
-  autoclose: true
+  	autoclose: true,
+  	format: 'yyyy-mm-dd'
 }).on('changeDate', function(ev){
 	var preDate = dateFormat(ev.date.valueOf() - 86400000);
 
@@ -69,5 +71,5 @@ function dateFormat (date) {
 	dd = dd < 10 ? `0${dd}`: dd;
 	mm = mm < 10 ? `0${mm}`: mm;
 	
-	return `${mm}/${dd}/${yyyy}`;
+	return `${yyyy}-${mm}-${dd}`;
 }

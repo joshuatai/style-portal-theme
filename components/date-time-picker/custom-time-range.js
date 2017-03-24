@@ -30,7 +30,8 @@ dateEnd.on('change', function () {
 datePickerPaneStart
 	.data('date', lastweek)
 	.datepicker({
-		todayHighlight: true
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
 	})
 	.on('changeDate', function(ev){
 		var dateText = dateFormat(ev.date.valueOf());
@@ -55,7 +56,8 @@ datePickerPaneStart
 
 datePickerPaneEnd
 	.datepicker({
-		todayHighlight: true
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
 	})
 	.on('changeDate', function(ev){
 		var dateText = dateFormat(ev.date.valueOf());
@@ -135,5 +137,5 @@ function dateFormat (date) {
 	dd = dd < 10 ? `0${dd}`: dd;
 	mm = mm < 10 ? `0${mm}`: mm;
 	
-	return `${mm}/${dd}/${yyyy}`;
+	return `${yyyy}-${mm}-${dd}`;
 }
