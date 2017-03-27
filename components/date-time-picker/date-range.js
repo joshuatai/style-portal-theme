@@ -35,6 +35,10 @@ datePickerStart.datepicker({
 	datePickerStart.data('manually', false);
 }).on('show', function(ev){
 	datePickerStart.datepicker('iconChange');
+}).datepickerBehavior({
+	setDate: function (date) {
+		this.element.val(date);
+	}
 });
 
 datePickerEnd.datepicker({
@@ -56,6 +60,10 @@ datePickerEnd.datepicker({
 	datePickerEnd.data('manually', false);
 }).on('show', function(ev){
 	datePickerEnd.datepicker('iconChange');
+}).datepickerBehavior({
+	setDate: function (date) {
+		this.element.val(date);
+	}
 });
 
 function date (date) {

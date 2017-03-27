@@ -9,7 +9,12 @@ datePickerTime.datepicker({
 .datepicker('setDate', new Date())
 .on('show', function(ev){
 	datePickerTime.datepicker('iconChange');
-}).datePickerBehavior();
+})
+.datepickerBehavior({
+	setDate: function (date) {
+		this.element.val(date);
+	}
+});
 
 function dateFormat (date, index) {
 	var date = new Date(date);
@@ -34,4 +39,9 @@ timePickerDate.timeEntry({
 	show24Hours: true, 
 	showSeconds: true,
 	spinnerImage: null
+})
+.timepickerBehavior({
+	setTime: function(timeText){
+		this.element.timeEntry('setTime', timeText);
+	}
 });

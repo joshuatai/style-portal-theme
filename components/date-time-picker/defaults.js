@@ -67,12 +67,11 @@
 			if (ev.keyCode == 67 && (ev.ctrlKey === true || ev.metaKey === true)){
 		        return;
 		    }
-
-		    // Ensure that it is a number and stop the keypress
+		    // Ensure that it is a number and stop the keydown
 		    if ((ev.shiftKey || (ev.keyCode < 48 || ev.keyCode > 57)) && (ev.keyCode < 96 || ev.keyCode > 105)) {
 		        ev.preventDefault();
 		    } else {
-		    	ev.preventDefault();
+		    	ev.preventDefault(); //Use this because setSelectionRange function will prevent by default.
 
 		    	if(start == yearPositionStart){
 					var year = input.data();
@@ -97,7 +96,7 @@
 					dateText = this._combineDate(yearPositionStart, newYear, value);
 					this.setDate(dateText);
 					// Change Position
-					if (year.fourthDigits == null) {
+					if (year.fourthDigits == null) {  // Select itself until four digits are set.
 						this._showField(yearPositionStart);
 					} 
 					else {
@@ -157,8 +156,7 @@
 					}
 				}
 		    }
-
-			// Up/Down arrow Key to change the content
+			// Up/Down arrow Key to change the digits
 			if (ev.keyCode == 40 || ev.keyCode == 38) {
 				ev.preventDefault();
 				if (start == yearPositionStart) {
@@ -310,9 +308,9 @@
 // ========================
 (function($) {
 
-	// Third Party TimeEntry Plugin Extend
+	// Extend the third party "TimeEntry"
 	// ========================
-
+	// In order to make sure the user only enter the one digite and move to next chunk, add resetInputTime() at case37 and case39 to clear the data of the input.
 	var _this = this;
 	var plugin = $.timeEntry;
     var extensionKeydown = {

@@ -9,13 +9,13 @@ datePicker.datepicker({
   autoclose: true,
   format: 'yyyy-mm-dd'
 })
+.on('show', function(ev){
+  datePicker.datepicker('iconChange');
+})
 .datepickerBehavior({
 	setDate: function (date) {
 		this.element.val(date);
 	}
-})
-.on('show', function(ev){
-  datePicker.datepicker('iconChange');
 });
 
 
