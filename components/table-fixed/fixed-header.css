@@ -1,38 +1,38 @@
-.tables-example .table-with-pagination .table > thead > tr > th:nth-last-child(3) {
+.fixed-header-example .table-with-pagination .table > thead > tr > th:nth-last-child(3) {
 	text-align: left;
 }
-.tables-example .table-with-pagination .table-pagination {
+.fixed-header-example .table-with-pagination .table-pagination {
 	width: 100%;
 }
-.tables-example .table-with-pagination .table-pagination .table-pagination-block .pagination {
+.fixed-header-example .table-with-pagination .table-pagination .table-pagination-block .pagination {
 	margin-bottom: 0;
 }
-.tables-example .table-with-pagination .table-scrollable .table {
+.fixed-header-example .table-with-pagination .table-scrollable .table {
 	border: 0;
 }
-.tables-example .table-with-pagination .table-scrollable .mCSB_inside > .mCSB_container {
+.fixed-header-example .table-with-pagination .table-scrollable .mCSB_inside > .mCSB_container {
 	margin-right: 0;
 }
-.tables-example .table-with-pagination .mCustomScrollbar-dragger-hover .mCSB_draggerRail {
+.fixed-header-example .table-with-pagination .mCustomScrollbar-dragger-hover .mCSB_draggerRail {
 	background-color: #e6e6e6;
 	border: 1px solid #ddd;
     border-left: 0;
 }
-.tables-example .table-with-pagination .table-scrollable .table > tbody > tr:first-child > td {
+.fixed-header-example .table-with-pagination .table-scrollable .table > tbody > tr:first-child > td {
 	border-top: 0;
 }
-.tables-example .table-with-pagination .table-scrollable .table > tbody > tr:last-child > td {
+.fixed-header-example .table-with-pagination .table-scrollable .table > tbody > tr:last-child > td {
 	border-bottom: 0;
 }
-.tables-example .table-with-pagination .div-header .table > thead > tr > th:nth-child(3) {
+.fixed-header-example .table-with-pagination .div-header .table > thead > tr > th:nth-child(3) {
 	text-align: right;
 }
 
-.tables-example .table-with-pagination .div-header .table > thead > tr > th:nth-child(5) {
+.fixed-header-example .table-with-pagination .div-header .table > thead > tr > th:nth-child(5) {
 	border-right: 0
 }
 
-.tables-example .table-fixed-example {
+.fixed-header-example .table-fixed-example {
 	width: 100%;
   	height: 288px;
   	overflow-y: auto;

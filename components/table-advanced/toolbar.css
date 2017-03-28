@@ -1,41 +1,41 @@
-.tables-example .table .input-checkbox + label:before {
+.tables-advanced-example .table .input-checkbox + label:before {
 	margin-right: 0;
 }
-.tables-example .table-row-selection > thead > tr > th.gutter {
+.tables-advanced-example .table-row-selection > thead > tr > th.gutter {
 	width: 38px;
 }
-.tables-example .table-row-selection > thead > tr > th:nth-child(2),
-.tables-example .table-row-selection > tbody > tr > td:nth-child(2) {
+.tables-advanced-example .table-row-selection > thead > tr > th:nth-child(2),
+.tables-advanced-example .table-row-selection > tbody > tr > td:nth-child(2) {
 	width: 35.3%;
 }
-.tables-example .table-row-selection > thead > tr > th:nth-child(3),
-.tables-example .table-row-selection > tbody > tr > td:nth-child(3) {
+.tables-advanced-example .table-row-selection > thead > tr > th:nth-child(3),
+.tables-advanced-example .table-row-selection > tbody > tr > td:nth-child(3) {
 	width: 23.53%;
 	text-align: left;
 }
-.tables-example .table-row-selection > thead > tr > th:nth-child(4),
-.tables-example .table-row-selection > tbody > tr > td:nth-child(4) {
+.tables-advanced-example .table-row-selection > thead > tr > th:nth-child(4),
+.tables-advanced-example .table-row-selection > tbody > tr > td:nth-child(4) {
 	width: 11.76%;
 	text-align: right;
 }
-.tables-example .table-row-selection > thead > tr > th:nth-child(5),
-.tables-example .table-row-selection > tbody > tr > td:nth-child(5) {
+.tables-advanced-example .table-row-selection > thead > tr > th:nth-child(5),
+.tables-advanced-example .table-row-selection > tbody > tr > td:nth-child(5) {
 	width: 17.64%;
 }
-.tables-example .table-row-selection > thead > tr > th:nth-child(6),
-.tables-example .table-row-selection > tbody > tr > td:nth-child(6) {
+.tables-advanced-example .table-row-selection > thead > tr > th:nth-child(6),
+.tables-advanced-example .table-row-selection > tbody > tr > td:nth-child(6) {
 	width: 11.77%;
 }
-.tables-example .table-with-header {
+.tables-advanced-example .table-with-header {
 	margin-bottom: 24px;
 }
-.tables-example .table-with-header.plain-header .toolbar {
+.tables-advanced-example .table-with-header.plain-header .toolbar {
 	border: 0;
 	border-bottom: 1px solid #dddddd;
 }
-.tables-example .table-with-header .toolbar .controls {
+.tables-advanced-example .table-with-header .toolbar .controls {
 	display: none;
 }
-.tables-example .table-with-header .toolbar .controls.show {
+.tables-advanced-example .table-with-header .toolbar .controls.show {
 	display: block;
 }

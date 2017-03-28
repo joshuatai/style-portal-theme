@@ -1,6 +1,6 @@
 {
   "id": "8f8315e8-d95a-4cef-92bd-dcb90f28f3ea",
-  "name": "Resize Columns",
+  "name": "Resizing Columns",
   "location": "table-advanced/resize-columns.html",
   "dependencies": [
     "colResizable-1.6"
