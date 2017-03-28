@@ -8,120 +8,6 @@ var timePickerStart = $('[data-time-picker=pane-time-start]', container);
 var timePickerEnd = $('[data-time-picker=pane-time-end]', container);
 var today = dateFormat(Date.now());
 var lastweek = dateFormat(date(today) - 86400000 * 7);
-
-dateTimeRangeDropdown.on('shown.bs.dropdown', function () {
-  $('.dropdown-menu>li>a').removeClass('focus');
-})
-.on('hidden.bs.dropdown', function () {
-	$('.date-picker-pane').removeClass('show');
-});
-
-dateStart.val(lastweek);
-dateEnd.val(today);
-
-dateStart.on('change', function () {
-	datePickerPaneStart.data('date', $(this).val()).datepicker('update');
-}).datepickerBehavior({
-	setDate: function (date) {
-		this.element.val(date);
-	}
-});
-
-dateEnd.on('change', function () {
-	datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
-}).datepickerBehavior({
-	setDate: function (date) {
-		this.element.val(date);
-	}
-});
-
-datePickerPaneStart
-	.data('date', lastweek)
-	.datepicker({
-		todayHighlight: true,
-		format: 'yyyy-mm-dd'
-	})
-	.on('changeDate', function(ev){
-		var dateText = dateFormat(ev.date.valueOf());
-
-		dateStart.val(dateText);
-
-		var start = date(dateStart.val());
-		var end = date(dateEnd.val());
-		
-		if (start.getTime() >= end.getTime()) {
-			end = date(dateStart.val());
-
-			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
-				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1)).focus();
-			}
-
-			dateEnd.val(dateText);
-			datePickerPaneEnd.data('date', dateText).datepicker('update');
-		}
-	})
-	.datepicker('iconChange');
-
-datePickerPaneEnd
-	.datepicker({
-		todayHighlight: true,
-		format: 'yyyy-mm-dd'
-	})
-	.on('changeDate', function(ev){
-		var dateText = dateFormat(ev.date.valueOf());
-
-		dateEnd.val(dateText);
-
-		var start = date(dateStart.val());
-		var end = date(dateEnd.val());
-		
-		if (start.getTime() >= end.getTime()) {
-			start = date(dateEnd.val());
-
-			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
-				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, -1)).focus();
-			}
-
-			dateStart.val(dateText);
-			datePickerPaneStart.data('date', dateText).datepicker('update');
-		}
-	})
-	.datepicker('iconChange');
-
-timePickerStart.timeEntry({
-	show24Hours: true, 
-	showSeconds: true,
-	spinnerImage: null
-})
-.timeEntry('setTime', '12:00:00')
-.timepickerBehavior({
-	setTime: function(timeText){
-		this.element.timeEntry('setTime', timeText);
-	}
-});
-
-timePickerEnd.timeEntry({
-	show24Hours: true, 
-	showSeconds: true,
-	spinnerImage: null
-})
-.timeEntry('setTime', '12:00:00')
-.timepickerBehavior({
-	setTime: function(timeText){
-		this.element.timeEntry('setTime', timeText);
-	}
-});
-
-$('.custom-range').on('click', function(e){
-	e.stopPropagation();
-	$(this).addClass('focus');
-	$('.date-picker-pane').addClass('show');
-});
-
-$('.predefine-range').on('click', function(event){
-	$('#date-time-range-text').text($(this).text());
-});
-
 function isStartTimeGreaterThanEndTime () {
 	var timeStart = timePickerStart.timeEntry('getTime');
 	var timeEnd = timePickerEnd.timeEntry('getTime');
@@ -157,3 +43,125 @@ function dateFormat (date) {
 	
 	return `${yyyy}-${mm}-${dd}`;
 }
+
+dateTimeRangeDropdown
+	.on('shown.bs.dropdown', function () {
+	  $('.dropdown-menu>li>a').removeClass('focus');
+	})
+	.on('hidden.bs.dropdown', function () {
+		$('.date-picker-pane').removeClass('show');
+	});
+
+dateStart.val(lastweek);
+dateEnd.val(today);
+
+dateStart
+	.on('change', function () {
+		//datePickerPaneStart.data('date', $(this).val()).datepicker('update');
+	});
+
+dateEnd
+	.on('change', function () {
+		datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
+	});
+
+//console.log(datePickerPaneStart);
+
+datePickerPaneStart
+	.data('date', lastweek)
+	.datepicker({
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
+	})
+	.datepickerBehavior({
+		setDate: function (date) {
+			this.element.val(date);
+		}
+	})
+// 	.on('changeDate', function(ev){
+// 		// var dateText = dateFormat(ev.date.valueOf());
+
+// 		// dateStart.val(dateText);
+
+// 		// var start = date(dateStart.val());
+// 		// var end = date(dateEnd.val());
+		
+// 		// if (start.getTime() >= end.getTime()) {
+// 		// 	end = date(dateStart.val());
+
+// 		// 	if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+// 		// 		timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1)).focus();
+// 		// 	}
+
+// 		// 	dateEnd.val(dateText);
+// 		// 	datePickerPaneEnd.data('date', dateText).datepicker('update');
+// 		// }
+// 	})
+
+
+datePickerPaneEnd
+	.datepicker({
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
+	})
+	.datepickerBehavior({
+		setDate: function (date) {
+			this.element.val(date);
+		}
+	});
+// 	.on('changeDate', function(ev){
+// 		// var dateText = dateFormat(ev.date.valueOf());
+
+// 		// dateEnd.val(dateText);
+
+// 		// var start = date(dateStart.val());
+// 		// var end = date(dateEnd.val());
+		
+// 		// if (start.getTime() >= end.getTime()) {
+// 		// 	start = date(dateEnd.val());
+
+// 		// 	if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+// 		// 		timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, -1)).focus();
+// 		// 	}
+
+// 		// 	dateStart.val(dateText);
+// 		// 	datePickerPaneStart.data('date', dateText).datepicker('update');
+// 		// }
+// 	})
+
+
+timePickerStart
+	.timeEntry({
+		show24Hours: true, 
+		showSeconds: true,
+		spinnerImage: null
+	})
+	.timeEntry('setTime', '12:00:00')
+	.timepickerBehavior({
+		setTime: function(timeText){
+			this.element.timeEntry('setTime', timeText);
+		}
+	});
+
+timePickerEnd
+	.timeEntry({
+		show24Hours: true, 
+		showSeconds: true,
+		spinnerImage: null
+	})
+	.timeEntry('setTime', '12:00:00')
+	.timepickerBehavior({
+		setTime: function(timeText){
+			this.element.timeEntry('setTime', timeText);
+		}
+	});
+
+$('.custom-range').on('click', function(e){
+	e.stopPropagation();
+	$(this).addClass('focus');
+	$('.date-picker-pane').addClass('show');
+});
+
+$('.predefine-range').on('click', function(event){
+	$('#date-time-range-text').text($(this).text());
+});
