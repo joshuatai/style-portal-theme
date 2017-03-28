@@ -57,6 +57,10 @@ datePicker.val(today);
 		this.setDate = option.setDate;
 		this.element.val().match(dateReg,'$1');
 		this.splitter = RegExp.$1;
+		this.tmpYear = [];
+		this.tmpMonth = [];
+		this.tmpDate = [];
+
 		this._attachEvents();
 	};
 	
@@ -70,7 +74,7 @@ datePicker.val(today);
 						.on('paste', $.proxy(this._doPaste, this))
 						.on("keydown", $.proxy(this._doKeydown, this))
 						// .on("blur mousedown", $.proxy(this._doValidate, this))
-						// .on("keydown", $.proxy(this._doKeydown, this));
+						
 
 			// $(document).on('mouseup', $.proxy(this._doSelection, this));
 			
@@ -90,8 +94,10 @@ datePicker.val(today);
 			this.orgYear = parseInt(value.substring(0,4), 10); 			// Get year value
 			this.orgMonth = parseInt(value.substring(5,7), 10);  		// Get month value
 			this.orgDate = parseInt(value.substring(8,10), 10); 			// Get day value
+			this.tmpYear = [];
+			this.tmpMonth = [];
+			this.tmpDate = [];
 
-			this._resetInputData();
 			this._showField(start);
 		},
 		_iconChange: function (e) {
@@ -102,20 +108,24 @@ datePicker.val(today);
 			e.stopPropagation();
 			return false;
 		},
-		_doValidate: function() {
-			var input = $(this.element);
-			var value = input.val(); 						 
-			var validate = this._parseDateYMD(value);
-			if(!validate) {
-				this.setDate(this.orgVal);
-			}
+		_useTemp: function (unit) {
+			var tmp = this['tmp' + unit];
+			var returnVal;
+			if (tmp.length > 0) {				
+				this['org' + unit] = parseInt(tmp.join(''), 10);				
+				this['tmp' + unit] = [];
+				returnVal = this['org' + unit];
+			} 
+
+			return returnVal;
 		},
 		_doKeydown: function(e){
-			var dateText;
 			var input = this.element;
-			var start = input.prop('selectionStart');		// Get the keydown start position
-			var end = input.prop('selectionEnd');
-			var enterNum = String.fromCharCode(e.keyCode); // Get the digits 
+			var start = input.prop('selectionStart');		// Get the keydown start position			
+			var enterNum = e.key;
+			//var enterNum = String.fromCharCode(e.keyCode); // Get the digits 
+			var splitter = this.splitter;
+			var dateText;
 			var showFieldPosition;
 
 			if (this.picker.is(':visible')) return false;
@@ -130,7 +140,8 @@ datePicker.val(today);
 			if (e.keyCode == 40 || e.keyCode == 38) {
 				e.preventDefault();
 				if (start === yearPositionStart) {
-					showFieldPosition = yearPositionStart;
+					showFieldPosition = yearPositionStart;	
+					this._useTemp('Year');				
 					if (e.keyCode == '40') { // keydown
 						this.orgYear--;
 					} 
@@ -138,14 +149,16 @@ datePicker.val(today);
 						this.orgYear++;
 					}
 				} else if (start == monthPositionStart) {
-					showFieldPosition = monthPositionStart;
+					showFieldPosition = monthPositionStart;					
+					this._useTemp('Month');
 					if (e.keyCode == '40') { //keydown
 						this.orgMonth--;
 					} else { //keyup
 						this.orgMonth++;
 					}
 				} else if (start == datePositionStart) {
-					showFieldPosition = datePositionStart;
+					showFieldPosition = datePositionStart;					
+					this._useTemp('Date');
 					if (e.keyCode == '40') { //keydown
 						this.orgDate--;
 					} else { //keyup
@@ -155,130 +168,104 @@ datePicker.val(today);
 				dateText = this._calculator(showFieldPosition);
 				this.setDate(dateText);
 				this._showField(showFieldPosition);
-
 				return false;
 			}
 			// Tab and Left/Right arrow Key to move selected position
-			if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 39) {
-				e.preventDefault();
-				if (start == yearPositionStart) { // Selected on year position
+			if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 39) {				
+				if (start == yearPositionStart) { // Selected on year position					
 					if(e.keyCode == '9' || e.keyCode == '39') {
-						//this._resetInputData();
+						if (this._useTemp('Year') != undefined) {
+							dateText = this._calculator(yearPositionStart);
+							this.setDate(dateText);
+						}												
 						this._showField(monthPositionStart);
 					}
-				} else if (start == monthPositionStart) { // Selected on month position
-					if(e.keyCode == '37') {
-						//this._resetInputData();
+				} else if (start == monthPositionStart) { // Selected on month position					
+					if (this._useTemp('Month') != undefined) {						
+						dateText = this._calculator(monthPositionStart);
+						this.setDate(dateText);
+					}
+					if(e.keyCode == '37') {						
 						this._showField(yearPositionStart);
-					} else {
-						//this._resetInputData();
+					} else {	
 						this._showField(datePositionStart);
 					}
 				} else if (start == datePositionStart) { // Selected on day position
 					if(e.keyCode == '37') {
-						//this._resetInputData();
+						if (this._useTemp('Date') != undefined) {
+							dateText = this._calculator(datePositionStart);
+							this.setDate(dateText);
+						}
 						this._showField(monthPositionStart);
 					}	
 				} 
+				e.preventDefault();
 				return false;
 			}
+			// Ensure that it is a number and stop the keydown	
+			e.preventDefault();
+			if (/^\d$/.test(enterNum)) {
+				if(start === yearPositionStart){
+					var year = this.tmpYear;
+					showFieldPosition = yearPositionStart;
+					if(!year[0]) {						
+						year[0] = enterNum;						
+					} else if (!year[1]) {
+						year[1] = enterNum;						
+					} else if (!year[2]) {
+						year[2] = enterNum;
+					} else if (!year[3]) {
+						year[3] = enterNum;
+					}
+					if (year.length === 4) {
+						this.orgYear = year.join('');
+						dateText = this._calculator(showFieldPosition);	
+						showFieldPosition = monthPositionStart;	
+						this.tmpYear = [];		
+					} else {
+						dateText = pad(year.join(''), 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(this.orgDate, 2);
+					}
+				} else if(start == monthPositionStart) {
+					var month = this.tmpMonth;					
+					showFieldPosition = monthPositionStart;
+					if(!month[0]) {
+						month[0] = enterNum;												
+					} else if (!month[1]) {
+						month[1] = enterNum;
+					}
+					if (month.length === 2) {
+						this.orgMonth = month.join('');
+						dateText = this._calculator(showFieldPosition);	
+						showFieldPosition = datePositionStart;	
+						this.tmpMonth = [];		
+					} else {
+						dateText = pad(this.orgYear, 4) + splitter + pad(month[0], 2) + splitter + pad(this.orgDate, 2);
+					}					
+				} else if (start == datePositionStart) {
+					var date = this.tmpDate;					
+					showFieldPosition = datePositionStart;
+					if(!date[0]) {
+						date[0] = enterNum;												
+					} else if (!date[1]) {
+						date[1] = enterNum;
+					}
+					if (date.length === 2) {
+						this.orgDate = date.join('');
+						dateText = this._calculator(showFieldPosition);							
+						this.tmpDate = [];
+					} else {
+						dateText = pad(this.orgYear, 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(date[0], 2);
+					}
+					
+				}
+				// Update date value						
+				this.setDate(dateText);
+				this._showField(showFieldPosition);
 
-			// if ((ev.shiftKey || (ev.keyCode < 48 || ev.keyCode > 57)) && (ev.keyCode < 96 || ev.keyCode > 105)) {
-		 //        ev.preventDefault();
-		 //    } else {
-		 //    	ev.preventDefault(); //Use this because setSelectionRange function will prevent by default.
-
-		 //    	if(start == yearPositionStart){
-			// 		var year = input.data();
-			// 		var newYear;
-			// 		if(year.firstDigits == null) {
-			// 			year.firstDigits = enterNum;
-			// 			newYear = `000${year.firstDigits}`;
-						
-			// 		} else if (year.secondDigits == null) {
-			// 			year.secondDigits = enterNum;
-			// 			newYear = `00${year.firstDigits}${year.secondDigits}`;
-						
-			// 		} else if (year.thirdDigits == null) {
-			// 			year.thirdDigits = enterNum;
-			// 			newYear = `0${year.firstDigits}${year.secondDigits}${year.thirdDigits}`;
-						
-			// 		} else {
-			// 			year.fourthDigits = enterNum;
-			// 			newYear = year.firstDigits + year.secondDigits + year.thirdDigits + year.fourthDigits;
-			// 		}
-			// 		// Update date value
-			// 		dateText = this._combineDate(yearPositionStart, newYear, value);
-			// 		this.setDate(dateText);
-			// 		// Change Position
-			// 		if (year.fourthDigits == null) {  // Select itself until four digits are set.
-			// 			this._showField(yearPositionStart);
-			// 		} 
-			// 		else {
-			// 			this._showField(monthPositionStart);
-			// 			this._resetInputData();
-			// 		}
-			// 	} 
-			// 	if(start == monthPositionStart) {
-			// 		var month = input.data();
-			// 		var newMonth;
-			// 		if (month.firstDigits == null) {
-			// 			month.firstDigits = enterNum;
-			// 			newMonth = `0${month.firstDigits}`;
-				
-			// 		} else {
-			// 			month.secondDigits = enterNum;
-			// 			newMonth = month.firstDigits + month.secondDigits;
-			// 			if (parseInt(newMonth) > 12 || parseInt(newMonth) == 0) {
-			// 				newMonth = 12;
-			// 			}
-			// 		}
-			// 		// Update date value
-			// 		dateText = this._combineDate(monthPositionStart, newMonth, value);
-			// 		this.setDate(dateText);
-
-			// 		// Change Position
-			// 		if (month.secondDigits == null) {
-			// 			this._showField(monthPositionStart);
-			// 		} 
-			// 		else {
-			// 			this._showField(dayPositionStart);
-			// 			this._resetInputData();
-			// 		}
-			// 	} 
-			// 	if(start == dayPositionStart){
-			// 		var day = input.data();
-			// 		var newDay;
-			// 		if (day.firstDigits == null) {
-			// 			day.firstDigits = enterNum;
-			// 			newDay = `0${day.firstDigits}`;
-			// 		} else {
-			// 			day.secondDigits = enterNum;
-			// 			newDay = day.firstDigits + day.secondDigits;
-			// 			if (parseInt(newDay) > 31 || parseInt(newMonth) == 0) {
-			// 				newDay = 31;
-			// 			}
-			// 		}
-
-			// 		// Update date value
-			// 		dateText = this._combineDate(dayPositionStart, newDay, value);
-			// 		this.setDate(dateText);
-			// 		this._showField(dayPositionStart);
-
-			// 		// Change Position
-			// 		if (day.secondDigits != null) {
-			// 			this._resetInputData();
-			// 		}
-			// 	}
-		 //    }
-			// Ensure that it is a number and stop the keydown
-		    if (enterNum && !$.isNumeric(enterNum)) return false;
-		},
-		// _resetVal: function (index) {
-		// 	if (index === 0) {
-
-		// 	}
-		// },
+		    } else {
+		    	return false;
+		    }		    
+		},		
 		_calculator: function (position) {
 			var splitter = this.splitter;
 			var lastDate;
@@ -287,7 +274,7 @@ datePicker.val(today);
 				if (this.orgYear < minYear) this.orgYear = minYear;
 				if (this.orgYear > maxYear) this.orgYear = maxYear;
 			} 
-		    if (position === 5) {
+		    if (position === 5) {		    	
 		    	if (this.orgMonth < 1) {
 		    		if (this.orgYear > minYear) {
 		    			this.orgMonth = 12;
@@ -352,7 +339,7 @@ datePicker.val(today);
 		    	return true;
 		    }
 		},
-		_resetInputData: function(){
+		_resetInputData: function() {
 			// this.element.removeData("firstDigits");
 			// this.element.removeData("secondDigits");
 			// this.element.removeData("thirdDigits");
