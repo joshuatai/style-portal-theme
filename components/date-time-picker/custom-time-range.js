@@ -21,16 +21,25 @@ dateEnd.val(today);
 
 dateStart.on('change', function () {
 	datePickerPaneStart.data('date', $(this).val()).datepicker('update');
+}).datepickerBehavior({
+	setDate: function (date) {
+		this.element.val(date);
+	}
 });
 
 dateEnd.on('change', function () {
 	datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
+}).datepickerBehavior({
+	setDate: function (date) {
+		this.element.val(date);
+	}
 });
 
 datePickerPaneStart
 	.data('date', lastweek)
 	.datepicker({
-		todayHighlight: true
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
 	})
 	.on('changeDate', function(ev){
 		var dateText = dateFormat(ev.date.valueOf());
@@ -55,7 +64,8 @@ datePickerPaneStart
 
 datePickerPaneEnd
 	.datepicker({
-		todayHighlight: true
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
 	})
 	.on('changeDate', function(ev){
 		var dateText = dateFormat(ev.date.valueOf());
@@ -83,14 +93,24 @@ timePickerStart.timeEntry({
 	showSeconds: true,
 	spinnerImage: null
 })
-.timeEntry('setTime', '12:00:00');
+.timeEntry('setTime', '12:00:00')
+.timepickerBehavior({
+	setTime: function(timeText){
+		this.element.timeEntry('setTime', timeText);
+	}
+});
 
 timePickerEnd.timeEntry({
 	show24Hours: true, 
 	showSeconds: true,
 	spinnerImage: null
 })
-.timeEntry('setTime', '12:00:00');
+.timeEntry('setTime', '12:00:00')
+.timepickerBehavior({
+	setTime: function(timeText){
+		this.element.timeEntry('setTime', timeText);
+	}
+});
 
 $('.custom-range').on('click', function(e){
 	e.stopPropagation();
@@ -135,5 +155,5 @@ function dateFormat (date) {
 	dd = dd < 10 ? `0${dd}`: dd;
 	mm = mm < 10 ? `0${mm}`: mm;
 	
-	return `${mm}/${dd}/${yyyy}`;
+	return `${yyyy}-${mm}-${dd}`;
 }
