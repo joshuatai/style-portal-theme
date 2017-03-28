@@ -1,6 +1,5 @@
 import Modal from './views/Modal';
 import ModalTemplate from './templates/ModalTemplate';
-import parse from './parse-css-ref';
 import placeholder from './placeholder-handler';
 
 $(ModalTemplate({ id: 'show-css-ref' })).appendTo('body');
@@ -15,6 +14,5 @@ $(document).on('show.bs.modal', '#show-css-ref', function (e) {
 });
 
 portal.on(Portal.EVENT_COMPONENT_LOADED, (e) => {
-  parse(e.target);
   placeholder.replace(e.target, e.data);
 });
