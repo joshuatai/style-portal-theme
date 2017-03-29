@@ -1,9 +1,30 @@
 var container = this;
 var datePicker = $('[data-date-picker=date-picker]', container);
+var dateFormat = function  (date, index) {
+	var date = new Date(date);
+	var dd = date.getDate();
+	var mm = date.getMonth() + 1; //January is 0
+	var yyyy = date.getFullYear();
 
-datePicker.datepicker({
-  todayHighlight: true,
-  autoclose: true
-}).on('show', function(ev){
-  datePicker.datepicker('iconChange');
-});
+	if (index == "mm") {
+		return mm;
+	} else if (index == "dd") {
+		return dd;
+	} else if (index == "yyyy") {
+		return yyyy;
+	} else {
+		dd = dd < 10 ? `0${dd}`: dd;
+		mm = mm < 10 ? `0${mm}`: mm;
+		return `${yyyy}-${mm}-${dd}`;
+	}
+}
+var today = dateFormat(Date.now());
+
+datePicker.val(today);
+datePicker
+	.datepicker({
+	  todayHighlight: true,
+	  autoclose: true,
+	  format: 'yyyy-mm-dd'
+	})
+	.datepickerBehavior();
