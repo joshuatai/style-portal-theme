@@ -8,100 +8,6 @@ var timePickerStart = $('[data-time-picker=pane-time-start]', container);
 var timePickerEnd = $('[data-time-picker=pane-time-end]', container);
 var today = dateFormat(Date.now());
 var lastweek = dateFormat(date(today) - 86400000 * 7);
-
-dateTimeRangeDropdown.on('shown.bs.dropdown', function () {
-  $('.dropdown-menu>li>a').removeClass('focus');
-})
-.on('hidden.bs.dropdown', function () {
-	$('.date-picker-pane').removeClass('show');
-});
-
-dateStart.val(lastweek);
-dateEnd.val(today);
-
-dateStart.on('change', function () {
-	datePickerPaneStart.data('date', $(this).val()).datepicker('update');
-});
-
-dateEnd.on('change', function () {
-	datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
-});
-
-datePickerPaneStart
-	.data('date', lastweek)
-	.datepicker({
-		todayHighlight: true
-	})
-	.on('changeDate', function(ev){
-		var dateText = dateFormat(ev.date.valueOf());
-
-		dateStart.val(dateText);
-
-		var start = date(dateStart.val());
-		var end = date(dateEnd.val());
-		
-		if (start.getTime() >= end.getTime()) {
-			end = date(dateStart.val());
-
-			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
-				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerEnd, 1)).focus();
-			}
-
-			dateEnd.val(dateText);
-			datePickerPaneEnd.data('date', dateText).datepicker('update');
-		}
-	})
-	.datepicker('iconChange');
-
-datePickerPaneEnd
-	.datepicker({
-		todayHighlight: true
-	})
-	.on('changeDate', function(ev){
-		var dateText = dateFormat(ev.date.valueOf());
-
-		dateEnd.val(dateText);
-
-		var start = date(dateStart.val());
-		var end = date(dateEnd.val());
-		
-		if (start.getTime() >= end.getTime()) {
-			start = date(dateEnd.val());
-
-			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
-				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, -1)).focus();
-			}
-
-			dateStart.val(dateText);
-			datePickerPaneStart.data('date', dateText).datepicker('update');
-		}
-	})
-	.datepicker('iconChange');
-
-timePickerStart.timeEntry({
-	show24Hours: true, 
-	showSeconds: true,
-	spinnerImage: null
-})
-.timeEntry('setTime', '12:00:00');
-
-timePickerEnd.timeEntry({
-	show24Hours: true, 
-	showSeconds: true,
-	spinnerImage: null
-})
-.timeEntry('setTime', '12:00:00');
-
-$('.custom-range').on('click', function(e){
-	e.stopPropagation();
-	$(this).addClass('focus');
-	$('.date-picker-pane').addClass('show');
-});
-
-$('.predefine-range').on('click', function(event){
-	$('#date-time-range-text').text($(this).text());
-});
-
 function isStartTimeGreaterThanEndTime () {
 	var timeStart = timePickerStart.timeEntry('getTime');
 	var timeEnd = timePickerEnd.timeEntry('getTime');
@@ -135,5 +41,124 @@ function dateFormat (date) {
 	dd = dd < 10 ? `0${dd}`: dd;
 	mm = mm < 10 ? `0${mm}`: mm;
 	
-	return `${mm}/${dd}/${yyyy}`;
+	return `${yyyy}-${mm}-${dd}`;
 }
+
+dateTimeRangeDropdown
+	.on('shown.bs.dropdown', function () {
+	  $('.dropdown-menu>li>a').removeClass('focus');
+	})
+	.on('hidden.bs.dropdown', function () {
+		$('.date-picker-pane').removeClass('show');
+	});
+
+dateStart.val(lastweek);
+dateEnd.val(today);
+
+datePickerPaneStart
+	.data('date', lastweek)
+	.datepicker({
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
+	})
+	.on('changeDate', function(ev) {
+		var dateText = dateFormat(ev.date.valueOf());
+		var dateStartVal = dateStart.val();
+		if (dateStartVal !== dateText) {
+			dateStart.val(dateText);
+		}
+
+		var start = date(dateStart.val());
+		var end = date(dateEnd.val());
+		
+		if (start.getTime() >= end.getTime()) {
+			end = date(dateStart.val());
+			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerStart, 0));
+			}
+			dateEnd.val(dateText);
+			datePickerPaneEnd.data('date', dateText).datepicker('update');
+		}
+	});
+
+
+dateStart
+	.data('datepicker', datePickerPaneStart.data('datepicker'))
+	.datepickerBehavior({
+		change: function (date) {
+			datePickerPaneStart.data('date', date).datepicker('update');
+		},
+		display: 'show'
+	});
+	
+datePickerPaneEnd
+	.datepicker({
+		todayHighlight: true,
+		format: 'yyyy-mm-dd'
+	})
+	.on('changeDate', function(ev) {
+		var dateText = dateFormat(ev.date.valueOf());
+		var dateEndVal = dateEnd.val();
+		if (dateEndVal !== dateText) {
+			dateEnd.val(dateText);
+		}
+		var start = date(dateStart.val());
+		var end = date(dateEnd.val());
+		
+		if (start.getTime() >= end.getTime()) {
+			start = date(dateEnd.val());
+			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, 0));
+			}
+			dateStart.val(dateText);
+			datePickerPaneStart.data('date', dateText).datepicker('update');
+		}
+	});
+dateEnd
+	.on('change', function () {
+		datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
+	})
+	.data('datepicker', datePickerPaneEnd.data('datepicker'))
+	.datepickerBehavior({
+		change: function (date) {
+			datePickerPaneEnd.data('date', date).datepicker('update');
+		},
+		display: 'show'
+	});
+	
+
+timePickerStart
+	.timeEntry({
+		show24Hours: true, 
+		showSeconds: true,
+		spinnerImage: null
+	})
+	.timeEntry('setTime', '12:00:00')
+	.timepickerBehavior({
+		setTime: function(timeText){
+			this.element.timeEntry('setTime', timeText);
+		}
+	});
+
+timePickerEnd
+	.timeEntry({
+		show24Hours: true, 
+		showSeconds: true,
+		spinnerImage: null
+	})
+	.timeEntry('setTime', '12:00:00')
+	.timepickerBehavior({
+		setTime: function(timeText){
+			this.element.timeEntry('setTime', timeText);
+		}
+	});
+
+$('.custom-range').on('click', function(e){
+	e.stopPropagation();
+	$(this).addClass('focus');
+	$('.date-picker-pane').addClass('show');
+});
+
+$('.predefine-range').on('click', function(event){
+	$('#date-time-range-text').text($(this).text());
+});
