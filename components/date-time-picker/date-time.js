@@ -1,15 +1,38 @@
 var container = this;
-var datePickerTime = $('[data-date-picker=date-picker-with-time]', container);
+var datePickerTimeInput = $('#datepicker-with-time', container);
+var datePickerTimeContainer = $('#datepicker-with-time-container', container);
 var timePickerDate = $('[data-time-picker=time-picker-with-date]', container);
+var today = moment().format('YYYY-MM-DD');
 
-datePickerTime
+$(container).children().css('z-index', 2);
+
+datePickerTimeInput
+	.val(today)	
+	.datepickerBehavior()
+	.on('edit', function (e, date) {
+		datePickerTimeInput.addClass('input-focus');
+		datePickerTimeContainer.show();
+	})
+	.on('unedit', function (e) {
+		datePickerTimeInput.removeClass('input-focus');
+		datePickerTimeContainer.hide();
+	})
+	.on('change', function (e, date) {
+		datePickerTimeContainer.datepicker('update', date);
+	});
+
+datePickerTimeContainer
+	.data('date', today)
 	.datepicker({
 		todayHighlight: true,
-	  	autoclose: true,
-	  	format: 'yyyy-mm-dd'
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+		keyboardNavigation: false
 	})
-	.datepicker('setDate', new Date())
-	.datepickerBehavior();
+	.on('changeDate changeMonth', function (e) {
+		datePickerTimeInput.val(moment(e.date).format('YYYY-MM-DD'));
+	});
+
 
 timePickerDate
 	.timeEntry({
@@ -22,3 +45,6 @@ timePickerDate
 			this.element.timeEntry('setTime', timeText);
 		}
 	});
+
+$(".prev", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-left');
+$(".next", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-right');
