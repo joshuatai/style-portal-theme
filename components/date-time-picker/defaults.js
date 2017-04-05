@@ -1,16 +1,4 @@
 var _this = this;
-/*
-var extensionChangeIcon = {
-	iconChange: function(){
-		$(".datepicker .prev", _this).find("i").attr('class', 'fa fa-angle-left');
-		$(".datepicker .next", _this).find("i").attr('class', 'fa fa-angle-right');
-	}
-};
-
-console.log($.fn.datepicker.Constructor.prototype)
-$.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Constructor.prototype, extensionChangeIcon);
-
-*/
 
 // TimePicker Behavior Plugin
 // ========================
@@ -235,16 +223,9 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 
 })(jQuery);
 
-
 // DatePicker Behavior Plugin
 // ========================
-(function($) {
-	var yearPositionStart = 0;
-	var yearTextLength = 4;
-	var monthPositionStart = 5;
-	var monthTextLength = 2;
-	var datePositionStart = 8;
-	var dateTextLength =2;
+(function($) {	
 	var minYear = 1900;
 	var maxYear = 9999;
 	var dateReg = /\d{4}(\D{1})\d{2}(\D{1})\d{2}/;
@@ -256,24 +237,56 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 		}  
 		return num; 
 	}
-	var lastDayOfMonth = function (Year, Month) {
-		var lastDate = new Date((new Date(Year, Month, 1)) - 1);
-	    return lastDate.getDate();
+	var yearPosition = {
+		start: 0,
+		end: 4,
+		length: 4,
+		indicate: 'Y'
 	}
-
+	var monthPosition = {
+		start: 5,
+		end: 7,
+		length: 2,
+		indicate: 'M'
+	}
+	var datePosition = {
+		start: 8,
+		end: 10,
+		length: 2,
+		indicate: 'D'
+	}
+	
 
 	var DatepickerBehavior = function(element, option) {
+		this.options = option;
 		this.input = element;   // Original javascript DOM
 		this.element = $(element);  // jQuery DOM
-		this.options = option;
-		this.change = option.change || function () {};
-		this.element.val().match(dateReg,'$1');
-		this.splitter = RegExp.$1;
-		this.tmpYear = [];
-		this.tmpMonth = [];
-		this.tmpDate = [];
+		this.iconLabel = this.element.next();
+		//this.change = option.change || function () {};
+		var value = this.element.val();
+		value.match(dateReg,'$1');
+
+		this.splitter = RegExp.$1;		
+		//this.picker = option.picker? option.picker : $();
+		//this.pickerFocus = false;
+		this.orgY = parseInt(value.substring(0,4), 10);
+		this.orgM = parseInt(value.substring(5,7), 10); 
+		this.orgD = parseInt(value.substring(8,10), 10);
+		this.tmpY = [];
+		this.tmpM = [];
+		this.tmpD = [];
 		this._attachEvents();
-		this._iconChange();
+		/*
+		this.picker
+			.on('mousehover', function () {
+				this.pickerFocus = true;
+			})
+			.on('mouseout', function () {
+				this.pickerFocus = false;
+			})*/
+
+		
+		//this._iconChange();
 	};
 	
 	DatepickerBehavior.prototype = {
@@ -281,171 +294,182 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 		constructor: DatepickerBehavior,
 
 		_attachEvents: function(){
-			this.element.on("click", $.proxy(this._doClick, this))
-						.on('paste', $.proxy(this._doPaste, this))
-						.on("keydown", $.proxy(this._doKeydown, this))
-						.on("focus mousedown", $.proxy(this._doClick, this))
-						
-						// .on("blur mousedown", $.proxy(this._doValidate, this))
-						
+			var _this = this;
 
-			// $(document).on('mouseup', $.proxy(this._doSelection, this));
-			
+			this.element
+				// .on('focus', function (e) {				
+				// 	e.preventDefault();
+				// 	e.stopPropagation();
+				// })
+				// .on('select', function (e) {					
+				// 	e.preventDefault();
+				// 	e.stopPropagation();
+				// })
+				// .on('focus', $.proxy(this._doFocus, this))							
+				.on('click', $.proxy(this._doClick, this))				
+				.on('keydown', $.proxy(this._doKeydown, this))
+				.on('blur', $.proxy(this._doBlur, this));
+			//this.element							 .on('copy', $.proxy(this._doCopy, this))	
+			// 			.on('paste', $.proxy(this._doPaste, this))
+			 			//.on("keydown", $.proxy(this._doKeydown, this));				
+						
+			//$(document).on('click', $.proxy(this._doBlur, this));
+			$(document).on('click', function (e) {
+				var target = $(e.target);
+				var container = target.closest('.input-icon-group');
+				var datepickerInput = container.children('input');
+				if(target.is('.input-icon-group') || datepickerInput.length === 0 || !datepickerInput.is(_this.element)) {
+					_this.element.trigger($.Event('unedit'));
+				}
+			});
 
 		},
-		// _doSelection: function (e) {
-		//     if ($(e.toElement).is(this.element)) return false;
-		// 	if (this.element.is(':focus')) {
-		// 		this._doClick();
-		// 	}
-		// },
-		// _doMousedown: function (e) {
-		//  	var input = this.element;
-		// 	var value = input.val();
-		// 	var start = input.prop('selectionStart');
-		// 	var selectionAt = this._showField(start);
-			
-		// 	/*if (selectionAt === 'Y' && this.tmpYear && this.tmpYear.length > 0) {
-		// 		e.preventDefault();
-		// 		e.stopPropagation();
-		// 		console.log('d')
-		// 	}*/
-		// },
-		_doClick: function(e) {
+		_doFocus: function (e) {
+			// var input = this.element;//.addClass('input-focus');
+			// var value = input.val();
+			// var start = input.prop('selectionStart');
+			// var end = input.prop('selectionEnd');
+			// console.log(start, end)
+		},
+		_doClick: function (e) {			
 			var input = this.element;
 			var value = input.val();
 			var start = input.prop('selectionStart');
-			// var splitter = this.splitter;
-
-			// if (this._getChunkPosition(start).indicate === 'Y' && this.tmpYear && this.tmpYear.length > 0) {
-			// 	this.element.val(pad(this.tmpYear.join(''), 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(this.orgDate, 2));	
-			// } else {
-			this.orgYear = parseInt(value.substring(0,4), 10); 				// Get year value
-			this.orgMonth = parseInt(value.substring(5,7), 10);  			// Get month value
-			this.orgDate = parseInt(value.substring(8,10), 10); 			// Get day value
-			this.tmpYear = [];
-			this.tmpMonth = [];
-			this.tmpDate = [];
-			// }
-			this._showField(start);
+			var end = input.prop('selectionEnd');
+			var position = this._getChunkPosition(start, end);			
+			if (!this._tmpCheck(position)) {
+				this.orgY = parseInt(value.substring(0,4), 10); 				// Get year value
+				this.orgM = parseInt(value.substring(5,7), 10);  			// Get month value
+				this.orgD = parseInt(value.substring(8,10), 10); 			// Get day value
+				this.tmpY = [];
+				this.tmpM = [];
+				this.tmpD = [];
+			} 
+			if (position.indicate) {
+				this._showField(position);
+				this.element.trigger($.Event('edit'), [value]);
+			}						
+		},		
+		_getChunkPosition: function (start, end) { //lock
+			var position = {};			
+			if (start >= 0 && start <= 4 && end >= 0 && end <= 4) {
+				position = yearPosition;				
+			} else if (start >= 5 && start <= 7 && end >= 5 && end <= 7) {
+				position = monthPosition;	
+			} else if (start >= 8 && start <= 10 && end >= 8 && end <= 10) {
+				position = datePosition;
+			}			
+			return position;
 		},
-		_iconChange: function (e) {
-			var instance = this.element.data('datepicker');		
-			this.picker = instance? instance.picker : $();
-			$(".prev", this.picker).find("i").attr('class', 'fa fa-angle-left');
-			$(".next", this.picker).find("i").attr('class', 'fa fa-angle-right');
-		},
+		_doBlur: function (e) { //lock
+			var target = $(e.target);
+			this._tmpCheck({});			
+		},		
 		_doPaste: function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 			return false;
 		},
-		_useTemp: function (unit) {
-			var tmp = this['tmp' + unit];
+		_change: function (date) {			
+    		this.element.trigger($.Event('change'), [date]);
+		},
+		_tmpCheck: function (position) {//lock
+			var indicate = position.indicate;
+			if ((this.tmpY && this.tmpY.length > 0) || (this.tmpM && this.tmpM.length > 0) || (this.tmpD && this.tmpD.length > 0)) {
+				if (indicate) {
+					if (indicate !== 'Y' && this.tmpY.length > 0) {
+						this._correctVal(yearPosition);
+						return true;
+					}
+					if (indicate !== 'M' && this.tmpM.length > 0) {
+						this._correctVal(monthPosition);
+						return true;
+					}
+					if (indicate !== 'D' && this.tmpD.length > 0) {
+						this._correctVal(datePosition);	
+						return true;
+					}
+				} else {
+					if (this.tmpY.length > 0) this._correctVal(yearPosition);
+					if (this.tmpM.length > 0) this._correctVal(monthPosition);
+					if (this.tmpD.length > 0) this._correctVal(datePosition);
+				}				
+			}
+			return false;
+		},
+		_correctVal: function(position) {//lock
+			var dateText;
+			if (this._useTemp(position.indicate) != undefined) {
+				dateText = this._calculator(position.indicate);				
+				this.element.val(dateText);
+				this._change(dateText);				
+			}
+		},
+		_useTemp: function (indicate) { //lock
+			var tmp = this['tmp' + indicate];
 			var returnVal;
 			if (tmp.length > 0) {				
-				this['org' + unit] = parseInt(tmp.join(''), 10);				
-				this['tmp' + unit] = [];
-				returnVal = this['org' + unit];
-			} 
-
+				this['org' + indicate] = returnVal = parseInt(tmp.join(''), 10);
+				this['tmp' + indicate] = [];			
+			}
 			return returnVal;
 		},
-		_doKeydown: function(e){
-			var input = this.element;
-			var display = this.options.display;
-			var start = input.prop('selectionStart');		// Get the keydown start position			
-			var enterNum = e.key;
-			//var enterNum = String.fromCharCode(e.keyCode); // Get the digits 
-			var splitter = this.splitter;
+		_doUpDown: function (e, position) {//lock
 			var dateText;
-			var showFieldPosition;
-
-			if (display !== 'show' && this.picker.is(':visible')) return false;
-			
-			// Allow: Ctrl/cmd+C
-			if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
-
-			// Allow: Delete/Backword
-			//if (e.keyCode === 8 || e.keyCode === 46) this._resetVal(start);
-
-			// Up/Down arrow Key to change the digits
-			if (e.keyCode == 40 || e.keyCode == 38) {
-				e.preventDefault();
-				if (start === yearPositionStart) {
-					showFieldPosition = yearPositionStart;	
-					this._useTemp('Year');				
-					if (e.keyCode == '40') { // keydown
-						this.orgYear--;
-					} 
-					else { // keyup
-						this.orgYear++;
-					}
-				} else if (start == monthPositionStart) {
-					showFieldPosition = monthPositionStart;					
-					this._useTemp('Month');
-					if (e.keyCode == '40') { //keydown
-						this.orgMonth--;
-					} else { //keyup
-						this.orgMonth++;
-					}
-				} else if (start == datePositionStart) {
-					showFieldPosition = datePositionStart;					
-					this._useTemp('Date');
-					if (e.keyCode == '40') { //keydown
-						this.orgDate--;
-					} else { //keyup
-						this.orgDate++;
-					} 
-				}
-				dateText = this._calculator(showFieldPosition);
-				//this.setDate(dateText);
-				this.element.val(dateText);
-				this._showField(showFieldPosition);
-				this.change(dateText);
-				return false;
-			}
-			// Tab and Left/Right arrow Key to move selected position
-			if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 39) {				
-				if (start == yearPositionStart) { // Selected on year position					
-					if(e.keyCode == '9' || e.keyCode == '39') {
-						if (this._useTemp('Year') != undefined) {
-							dateText = this._calculator(yearPositionStart);
-							// this.setDate(dateText);
-							this.element.val(dateText);
-						}												
-						this._showField(monthPositionStart);
-					}
-				} else if (start == monthPositionStart) { // Selected on month position					
-					if (this._useTemp('Month') != undefined) {						
-						dateText = this._calculator(monthPositionStart);
-						// this.setDate(dateText);
-						this.element.val(dateText);
-					}
-					if(e.keyCode == '37') {						
-						this._showField(yearPositionStart);
-					} else {	
-						this._showField(datePositionStart);
-					}
-				} else if (start == datePositionStart) { // Selected on day position
-					if(e.keyCode == '37') {
-						if (this._useTemp('Date') != undefined) {
-							dateText = this._calculator(datePositionStart);
-							// this.setDate(dateText);
-							this.element.val(dateText);
-						}
-						this._showField(monthPositionStart);
-					}	
+			if (position.indicate === 'Y') {				
+				this._useTemp('Y');
+				if (e.keyCode == '40') { // keydown
+					this.orgY--;
 				} 
-				e.preventDefault();
-				return false;
+				else { // keyup
+					this.orgY++;
+				}				
+			} else if (position.indicate === 'M') {								
+				this._useTemp('M');
+				if (e.keyCode == '40') { //keydown
+					this.orgM--;
+				} else { //keyup
+					this.orgM++;
+				}
+			} else if (position.indicate === 'D') {							
+				this._useTemp('D');
+				if (e.keyCode == '40') { //keydown
+					this.orgD--;
+				} else { //keyup
+					this.orgD++;
+				} 
 			}
-			// Ensure that it is a number and stop the keydown	
-			e.preventDefault();
-			if (/^\d$/.test(enterNum)) {
-				if(start === yearPositionStart){
-					var year = this.tmpYear;
-					showFieldPosition = yearPositionStart;
+			dateText = this._calculator(position.indicate);
+			this.element.val(dateText);
+			this._change(dateText);
+			this._showField(position);		
+		},
+		_doLeftRight: function (e, position) {//lock
+			if (position.indicate === 'Y') { // Selected on year position					
+				if(e.keyCode == '9' || e.keyCode == '39') {
+					this._correctVal(yearPosition);									
+					this._showField(monthPosition);
+				}
+			} else if (position.indicate === 'M') { // Selected on month position				
+				this._correctVal(monthPosition);
+				if(e.keyCode == '37') {						
+					this._showField(yearPosition);
+				} else {	
+					this._showField(datePosition);
+				}
+			} else if (position.indicate === 'D') { // Selected on day position
+				if(e.keyCode == '37') {						
+					this._correctVal(datePosition);
+					this._showField(monthPosition);
+				}	
+			} 			
+		},
+		_doKeyNumber: function (enterNum, position) {//lock
+			var dateText;			
+			var splitter = this.splitter;
+			if(position.indicate === 'Y'){
+				var year = this.tmpY;	
+				if (enterNum) {
 					if(!year[0]) {						
 						year[0] = enterNum;						
 					} else if (!year[1]) {
@@ -455,157 +479,186 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 					} else if (!year[3]) {
 						year[3] = enterNum;
 					}
-					if (year.length === 4) {
-						this.orgYear = year.join('');
-						dateText = this._calculator(showFieldPosition);	
-						showFieldPosition = monthPositionStart;	
-						this.tmpYear = [];		
-						this.change(dateText);
-					} else {
-						dateText = pad(year.join(''), 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(this.orgDate, 2);
-					}
-				} else if(start == monthPositionStart) {
-					var month = this.tmpMonth;					
-					showFieldPosition = monthPositionStart;
+				}
+				if (year.length === 4) {
+					this.orgY = year.join('');
+					dateText = this._calculator(position.indicate);	
+					position = monthPosition;					
+					this.tmpY = [];	
+					this._change(dateText);				
+				} else {
+					dateText = pad(year.join(''), 4) + splitter + pad(this.orgM, 2) + splitter + pad(this.orgD, 2);
+				}
+			} else if(position.indicate === 'M') {
+				var month = this.tmpM;
+				if (enterNum) {
 					if(!month[0]) {
 						month[0] = enterNum;												
 					} else if (!month[1]) {
 						month[1] = enterNum;
 					}
-					if (month.length === 2) {
-						this.orgMonth = month.join('');
-						dateText = this._calculator(showFieldPosition);	
-						showFieldPosition = datePositionStart;	
-						this.tmpMonth = [];		
-						this.change(dateText);
-					} else {
-						dateText = pad(this.orgYear, 4) + splitter + pad(month[0], 2) + splitter + pad(this.orgDate, 2);
-					}					
-				} else if (start == datePositionStart) {
-					var date = this.tmpDate;					
-					showFieldPosition = datePositionStart;
+				}
+				if ((month[0] > 1 && month[0] < 10) || month.length === 2) {
+					this.orgM = month.join('');
+					dateText = this._calculator(position.indicate);	
+					position = datePosition;					
+					this.tmpM = [];		
+					this._change(dateText);			
+				} else {					
+					dateText = pad(this.orgY, 4) + splitter + pad(month[0], 2) + splitter + pad(this.orgD, 2);					
+					if (month[0] == 1) {
+						this._change(dateText);
+					}
+				}					
+			} else if (position.indicate === 'D') {
+				var date = this.tmpD;
+				if (enterNum) {
 					if(!date[0]) {
-						date[0] = enterNum;												
+						date[0] = enterNum;
 					} else if (!date[1]) {
 						date[1] = enterNum;
 					}
-					if (date.length === 2) {
-						this.orgDate = date.join('');
-						dateText = this._calculator(showFieldPosition);							
-						this.tmpDate = [];
-						this.change(dateText);
-					} else {
-						dateText = pad(this.orgYear, 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(date[0], 2);
+				}				
+				if (date.length === 2) {
+					this.orgD = date.join('');
+					dateText = this._calculator(position.indicate);
+					position = datePosition;					
+					this.tmpD = [];		
+					this._change(dateText);		
+				} else {
+					dateText = pad(this.orgY, 4) + splitter + pad(this.orgM, 2) + splitter + pad(date[0], 2);
+					if (date[0] > 0) {
+						this._change(dateText);
 					}
-					
+				}				
+			}
+			// Update date value						
+			this.element.val(dateText);			
+			this._showField(position);
+		},
+		_doBack: function (position) {
+			
+			// var indicate = position.indicate;
+			// var tmp = this['tmp' + indicate];
+			
+			// if (tmp.length > 0) {
+			// 	tmp.pop();
+			// } 	
+			// if (tmp.length === 0) {
+			// 	this['org' + indicate] = pad(0, position.length)
+			// }
+			// this._doKeyNumber(null, position);
+		},
+		_doKeydown: function (e) {			
+			var input = this.element;//.addClass('input-focus');			
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = this._getChunkPosition(start, end);			
+			var enterNum = e.key;			
+			var splitter = this.splitter;
+			var dateText;
+			var showFieldPosition;			
+			
+			if (position.indicate) {
+				// Up/Down arrow Key to change the digits
+				if (e.keyCode == 40 || e.keyCode == 38) { //lock
+					this._doUpDown(e, position);
 				}
-				// Update date value						
-				this.element.val(dateText);
-				this._showField(showFieldPosition);
+				// Tab and Left/Right arrow Key to move selected position
+				if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 39) {				
+					this._doLeftRight(e, position);
+				}
+				// Insert Number
 
-		    } else {
+				if (/^\d$/.test(enterNum)) {
+					this._doKeyNumber(enterNum, position);
+			    } else {
+			    	// Allow: Ctrl/cmd+C
+					if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+
+					// Allow: Delete/Backword
+					// if (e.keyCode === 8 || e.keyCode === 46) {
+					// 	this._doBack(position);
+					// }
+					e.preventDefault();
+			    	return false;
+			    }
+			} else {
+				// // Allow: Ctrl/cmd+C
+				if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+
+				e.preventDefault();
 		    	return false;
-		    }		    
+			}			
+			return false;
 		},		
-		_calculator: function (position) {
+		_calculator: function (indicate) { //lock
 			var splitter = this.splitter;
 			var lastDate;
 			
-			if (position === 0) {
-				if (this.orgYear < minYear) this.orgYear = minYear;
-				if (this.orgYear > maxYear) this.orgYear = maxYear;
+			if (indicate === 'Y') {
+				if (this.orgY < minYear) this.orgY = minYear;
+				if (this.orgY > maxYear) this.orgY = maxYear;
 			} 
-		    if (position === 5) {		    	
-		    	if (this.orgMonth < 1) {
-		    		if (this.orgYear > minYear) {
-		    			this.orgMonth = 12;
-		    			this.orgYear--;
+		    if (indicate === 'M') {		    	
+		    	if (this.orgM < 1) {
+		    		if (this.orgY > minYear) {
+		    			this.orgM = 12;
+		    			this.orgY--;
 		    		} else {
-		    			this.orgMonth = 1;
+		    			this.orgM = 1;
 		    		}
 		    	}
-		    	if (this.orgMonth > 12) {
-		    		if (this.orgYear < maxYear) {
-		    			this.orgMonth = 1;
-		    			this.orgYear++;
+		    	if (this.orgM > 12) {
+		    		if (this.orgY < maxYear) {
+		    			this.orgM = 1;
+		    			this.orgY++;
 		    		} else {
-		    			this.orgMonth = 12;
+		    			this.orgM = 12;
 		    		}
-		    	}
-		    	if (this.orgMonth === 2) {
-		    		lastDate = lastDayOfMonth(this.orgYear, this.orgMonth)
-		    		if (this.orgDate > lastDate) this.orgDate = lastDate;
-		    	}
+		    	}		    	
+	    		lastDate = moment(this.orgY + '/' + this.orgM).endOf('month')._d.getDate();
+	    		if (this.orgD > lastDate) this.orgD = lastDate;		    	
 			}
-			if (position === 8) {
-				if (this.orgDate < 1) {
-					if (this.orgYear === minYear && this.orgMonth === 1) {
-						this.orgDate = 1;
+			if (indicate === 'D') {
+				if (this.orgD < 1) {
+					if (this.orgY === minYear && this.orgM === 1) {
+						this.orgD = 1;
 					} else {
-						if (this.orgMonth === 1) {
-							this.orgYear--;
-							this.orgMonth = 12;
-							this.orgDate = 31;
+						if (this.orgM === 1) {
+							this.orgY--;
+							this.orgM = 12;
+							this.orgD = 31;
 						} else {
-							this.orgMonth--;
-							this.orgDate = lastDayOfMonth(this.orgYear, this.orgMonth);
+							this.orgM--;
+							this.orgD = moment(this.orgY + '-' + this.orgM).endOf('month')._d.getDate();
 						}
 					}
 				}
-				lastDate = lastDayOfMonth(this.orgYear, this.orgMonth);
-				if (this.orgDate > lastDate) {
-					if (this.orgYear === maxYear && this.orgMonth === 12) {
-						this.orgDate = 31;
+				lastDate = moment(this.orgY + '/' + this.orgM).endOf('month')._d.getDate();
+				if (this.orgD > lastDate) {
+					if (this.orgY === maxYear && this.orgM === 12) {
+						this.orgD = 31;
 					} else {
-						if (this.orgMonth === 12) {
-							this.orgYear++;
-							this.orgMonth = 1;
-							this.orgDate = 31;
+						if (this.orgM === 12) {
+							this.orgY++;
+							this.orgM = 1;
+							this.orgD = 31;
 						} else {
-							this.orgMonth++;
-							this.orgDate = 1;
+							this.orgM++;
+							this.orgD = 1;
 						}
 					}
 				}
-			}
-
-			return pad(this.orgYear, 4) + splitter + pad(this.orgMonth, 2) + splitter + pad(this.orgDate, 2);
+			}			
+			return pad(this.orgY, 4) + splitter + pad(this.orgM, 2) + splitter + pad(this.orgD, 2);
 		},
-		_parseDateYMD: function (value) {
-			var date = value.split("-");
-		    if (date[0] < 1900) {
-		    	return false;
-		    }
-		    else {
-		    	return true;
-		    }
-		},
-		_resetInputData: function() {
-			// this.element.removeData("firstDigits");
-			// this.element.removeData("secondDigits");
-			// this.element.removeData("thirdDigits");
-			// this.element.removeData("fourthDigits");
-		},
-		_getChunkPosition: function (startIdx) {
-			var position = {};
-			if (startIdx <= 4) {
-				position.start = yearPositionStart;
-				position.end = yearPositionStart + 4;
-				position.indicate = "Y"
-			} else if (startIdx >= 5 && startIdx <= 7 ) {
-				position.start = monthPositionStart;
-				position.end = monthPositionStart + 2;
-				position.indicate = "M"
-			} else if (startIdx >= 8 && startIdx <= 10 ) {
-				position.start = datePositionStart;
-				position.end = datePositionStart + 2;
-				position.indicate = "D"
-			}
-			return position;
-		},
-		_showField: function( startIdx ) {
-			var position = this._getChunkPosition(startIdx);
+		_showField: function( position ) { //lock
+			var _this = this;
 			this.input.setSelectionRange(position.start, position.end);
+			setTimeout(function () {				
+				_this.input.setSelectionRange(position.start, position.end);							
+			}, 20);
 		}
 	};
 
@@ -614,8 +667,8 @@ $.fn.datepicker.Constructor.prototype = $.extend(true, $.fn.datepicker.Construct
 	      var $this   = $(this);
 	      var data    = $this.data('datepickerBehavior');
 	      var options = typeof option == 'object' && option;
-	      if (!data) $this.data('datepickerBehavior', (data = new DatepickerBehavior(this, options)));
-	      if (option === 'iconChange') data.iconChange();
+	      if (!data) $this.data('datepickerBehavior', (data = new DatepickerBehavior(this, options)));	      
 	    });
 	};
+
 })(jQuery);

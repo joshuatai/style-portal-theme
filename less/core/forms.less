@@ -34,7 +34,8 @@
 }
 
 .input-icon-group > .form-control:focus + .input-icon-label > i,
-.input-icon-group > .input-icon-label .focus{
+.input-icon-group > .form-control.input-focus + .input-icon-label > i,
+.input-icon-group > .input-icon-label .focus {
   transition: all .2s linear 0s;
   color: @input-inner-icon-focus-color;
 
@@ -1331,10 +1332,9 @@ label.switch .disabled{
 }
 
 // datapicker
-//
 .datepicker {
   padding: 0;
-
+  width: 248px;
   &.days div.datepicker-days {
     display: block;
   }
