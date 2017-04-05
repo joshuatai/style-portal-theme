@@ -39,6 +39,14 @@ datepickerStartInput
 	})
 	.on('change', function (e, date) {
 		datePickerStartContainer.datepicker('update', date);
+	})
+	.on('insertCompleted', function (e, indicate, date) {
+		if (indicate === 'Date') {
+			datepickerEndInput
+				.trigger('focus')
+				.datepickerBehavior('showField', 'Y')
+				.trigger('click');
+		}
 	});
 
 
@@ -73,6 +81,14 @@ datepickerEndInput
 	})
 	.on('change', function (e, date) {
 		datePickerEndContainer.datepicker('update', date);
+	})
+	.on('insertCompleted', function (e, indicate, date) {
+		if (indicate === 'Year') {
+			datepickerStartInput
+				.trigger('focus')
+				.datepickerBehavior('showField', 'Y')
+				.trigger('click');
+		}
 	});
 
 $(".prev", datePickerStartContainer).add($(".prev", datePickerEndContainer)).find("i").attr('class', 'fa fa-angle-left');

@@ -373,6 +373,10 @@ var _this = this;
 		_change: function (date) {			
     		this.element.trigger($.Event('change'), [date]);
 		},
+		_insertCompleted: function (indicate) {
+			var indicator = indicate === 'Y'? 'Year' : 'Date';
+			this.element.trigger($.Event('insertCompleted'), [indicator, this.element.val()]);
+		},
 		_tmpCheck: function (position) {//lock
 			var indicate = position.indicate;
 			if ((this.tmpY && this.tmpY.length > 0) || (this.tmpM && this.tmpM.length > 0) || (this.tmpD && this.tmpD.length > 0)) {
@@ -449,6 +453,8 @@ var _this = this;
 				if(e.keyCode == '9' || e.keyCode == '39') {
 					this._correctVal(yearPosition);									
 					this._showField(monthPosition);
+				} else {
+					this._insertCompleted('Y');
 				}
 			} else if (position.indicate === 'M') { // Selected on month position				
 				this._correctVal(monthPosition);
@@ -461,12 +467,15 @@ var _this = this;
 				if(e.keyCode == '37') {						
 					this._correctVal(datePosition);
 					this._showField(monthPosition);
-				}	
+				} else {
+					this._insertCompleted('D');
+				}
 			} 			
 		},
 		_doKeyNumber: function (enterNum, position) {//lock
 			var dateText;			
 			var splitter = this.splitter;
+			var insertCompleted = false;
 			if(position.indicate === 'Y'){
 				var year = this.tmpY;	
 				if (enterNum) {
@@ -524,17 +533,34 @@ var _this = this;
 					dateText = this._calculator(position.indicate);
 					position = datePosition;					
 					this.tmpD = [];		
-					this._change(dateText);		
+					this._change(dateText);	
+					insertCompleted = true;
 				} else {
 					dateText = pad(this.orgY, 4) + splitter + pad(this.orgM, 2) + splitter + pad(date[0], 2);
-					if (date[0] > 0) {
+					var lastDate = moment(this.orgY + '/' + this.orgM).endOf('month')._d.getDate();
+					var canContinue = false;
+					for (var i = 0; i < 10; i++) {
+						var targetDate = parseInt(date[0] + i.toString(), 10);
+						if (targetDate <= lastDate) canContinue = true;
+					}
+					if (canContinue) {
+						if (date[0] > 0) {
+							this._change(dateText);
+						}
+					} else {
+						this.orgD = date.join('');
+						dateText = this._calculator(position.indicate);
+						position = datePosition;					
+						this.tmpD = [];		
 						this._change(dateText);
+						insertCompleted = true;
 					}
 				}				
 			}
 			// Update date value						
 			this.element.val(dateText);			
 			this._showField(position);
+			if (insertCompleted === true) this._insertCompleted('D');
 		},
 		_doBack: function (position) {
 			
@@ -558,7 +584,7 @@ var _this = this;
 			var splitter = this.splitter;
 			var dateText;
 			var showFieldPosition;			
-			
+
 			if (position.indicate) {
 				// Up/Down arrow Key to change the digits
 				if (e.keyCode == 40 || e.keyCode == 38) { //lock
@@ -659,15 +685,21 @@ var _this = this;
 			setTimeout(function () {				
 				_this.input.setSelectionRange(position.start, position.end);							
 			}, 20);
+		},
+		showField: function(indicate) {
+			if (indicate === 'Y') this._showField(yearPosition);
+			if (indicate === 'M') this._showField(monthPosition);
+			if (indicate === 'D') this._showField(datePosition);
 		}
 	};
 
-	$.fn.datepickerBehavior = function (option) {
+	$.fn.datepickerBehavior = function (option, param) {
 		return this.each(function () {
-	      var $this   = $(this);
-	      var data    = $this.data('datepickerBehavior');
-	      var options = typeof option == 'object' && option;
-	      if (!data) $this.data('datepickerBehavior', (data = new DatepickerBehavior(this, options)));	      
+			var $this   = $(this);
+			var data    = $this.data('datepickerBehavior');
+			var options = typeof option == 'object' && option;
+			if (!data) $this.data('datepickerBehavior', (data = new DatepickerBehavior(this, options)));	      
+			if (option === 'showField') data.showField(param);
 	    });
 	};
 
