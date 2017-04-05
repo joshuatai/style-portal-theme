@@ -1,10 +1,8 @@
 var container = this;
 var datepickerInput = $('#datepicker-input', container);
-var datePickerContainer = $('.datepicker-container', container);
+var datePickerContainer = $('#datepicker-container', container);
 
 $(container).children().css('z-index', 2);
-
-
 
 datePickerContainer
 	.datepicker({
@@ -35,7 +33,3 @@ datepickerInput
 	.on('change', function (e, date) {
 		datePickerContainer.datepicker('update', date);
 	});
-
-/*{
-		"picker": datePickerContainer
-	}*/

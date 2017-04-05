@@ -1,13 +1,19 @@
 var container = this;
 var dateTimeRangeDropdown = $('#date-time-range-dropdown', container);
-var dateStart = $('#pane-date-start', container);
-var dateEnd = $('#pane-date-end', container);
-var datePickerPaneStart = $('[data-date-picker=date-pane-date-start]', container);
-var datePickerPaneEnd = $('[data-date-picker=date-pane-date-end]', container);
+
+
+var dateStartInput = $('#pane-date-start-input', container);
+var dateEndInput = $('#pane-date-end-input', container);
+
+var datePickerPaneStart = $('#date-pane-date-start', container);
+var datePickerPaneEnd = $('#date-pane-date-end', container);
+
 var timePickerStart = $('[data-time-picker=pane-time-start]', container);
 var timePickerEnd = $('[data-time-picker=pane-time-end]', container);
-var today = dateFormat(Date.now());
-var lastweek = dateFormat(date(today) - 86400000 * 7);
+
+var today = moment().format('YYYY-MM-DD');
+var lastweek = moment().add(-7, 'd').format('YYYY-MM-DD');
+
 function isStartTimeGreaterThanEndTime () {
 	var timeStart = timePickerStart.timeEntry('getTime');
 	var timeEnd = timePickerEnd.timeEntry('getTime');
@@ -28,22 +34,6 @@ function calTimePickerDate ($elem, secs) {
 	return date;
 }
 
-function date (date) {
-	return new Date(date);
-}
-
-function dateFormat (date) {
-	var date = new Date(date);
-	var dd = date.getDate();
-	var mm = date.getMonth() + 1; //January is 0
-	var yyyy = date.getFullYear();
-
-	dd = dd < 10 ? `0${dd}`: dd;
-	mm = mm < 10 ? `0${mm}`: mm;
-	
-	return `${yyyy}-${mm}-${dd}`;
-}
-
 dateTimeRangeDropdown
 	.on('shown.bs.dropdown', function () {
 	  $('.dropdown-menu>li>a').removeClass('focus');
@@ -52,80 +42,59 @@ dateTimeRangeDropdown
 		$('.date-picker-pane').removeClass('show');
 	});
 
-dateStart.val(lastweek);
-dateEnd.val(today);
+dateStartInput
+	.val(lastweek)
+	.datepickerBehavior()
+	.on('change', function (e, date) {
+		datePickerPaneStart.datepicker('update', date);
+	});
+
+dateEndInput
+	.val(today)
+	.datepickerBehavior()
+	.on('change', function (e, date) {
+		datePickerPaneEnd.datepicker('update', date);
+	});
 
 datePickerPaneStart
 	.data('date', lastweek)
 	.datepicker({
 		todayHighlight: true,
-		format: 'yyyy-mm-dd'
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+		keyboardNavigation: false
 	})
-	.on('changeDate', function(ev) {
-		var dateText = dateFormat(ev.date.valueOf());
-		var dateStartVal = dateStart.val();
-		if (dateStartVal !== dateText) {
-			dateStart.val(dateText);
-		}
-
-		var start = date(dateStart.val());
-		var end = date(dateEnd.val());
-		
-		if (start.getTime() >= end.getTime()) {
-			end = date(dateStart.val());
-			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+	.on('changeDate changeMonth', function(e) {		
+		var selectedDate = moment($(this).data('date'));		
+		var endDate = datePickerPaneEnd.data('date');
+		dateStartInput.val(selectedDate.format('YYYY-MM-DD'));
+		if (selectedDate.isAfter(endDate) || selectedDate.isSame(endDate)) {			
+			datePickerPaneEnd.datepicker('update', selectedDate.format('YYYY-MM-DD'));
+			if (isStartTimeGreaterThanEndTime()) {
 				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerStart, 0));
 			}
-			dateEnd.val(dateText);
-			datePickerPaneEnd.data('date', dateText).datepicker('update');
-		}
-	});
-
-
-dateStart
-	.data('datepicker', datePickerPaneStart.data('datepicker'))
-	.datepickerBehavior({
-		change: function (date) {
-			datePickerPaneStart.data('date', date).datepicker('update');
-		},
-		display: 'show'
+		}		
 	});
 	
 datePickerPaneEnd
+	.data('date', today)
 	.datepicker({
 		todayHighlight: true,
-		format: 'yyyy-mm-dd'
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+		keyboardNavigation: false
 	})
-	.on('changeDate', function(ev) {
-		var dateText = dateFormat(ev.date.valueOf());
-		var dateEndVal = dateEnd.val();
-		if (dateEndVal !== dateText) {
-			dateEnd.val(dateText);
-		}
-		var start = date(dateStart.val());
-		var end = date(dateEnd.val());
-		
-		if (start.getTime() >= end.getTime()) {
-			start = date(dateEnd.val());
-			if (start.getTime() == end.getTime() && isStartTimeGreaterThanEndTime()) {
+	.on('changeDate changeMonth', function(e) {		
+		var selectedDate = moment($(this).data('date'));		
+		var startDate = datePickerPaneStart.data('date');
+		dateEndInput.val(selectedDate.format('YYYY-MM-DD'));
+		if (selectedDate.isBefore(startDate) || selectedDate.isSame(startDate)) {
+			datePickerPaneStart.datepicker('update', selectedDate.format('YYYY-MM-DD'));
+			if (isStartTimeGreaterThanEndTime()) {
 				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, 0));
 			}
-			dateStart.val(dateText);
-			datePickerPaneStart.data('date', dateText).datepicker('update');
-		}
-	});
-dateEnd
-	.on('change', function () {
-		datePickerPaneEnd.data('date', $(this).val()).datepicker('update');
-	})
-	.data('datepicker', datePickerPaneEnd.data('datepicker'))
-	.datepickerBehavior({
-		change: function (date) {
-			datePickerPaneEnd.data('date', date).datepicker('update');
-		},
-		display: 'show'
-	});
-	
+		}		
+	});	
 
 timePickerStart
 	.timeEntry({
@@ -152,6 +121,11 @@ timePickerEnd
 			this.element.timeEntry('setTime', timeText);
 		}
 	});
+
+
+$(".prev", datePickerPaneStart).add($(".prev", datePickerPaneEnd)).find("i").attr('class', 'fa fa-angle-left');
+$(".next", datePickerPaneStart).add($(".next", datePickerPaneEnd)).find("i").attr('class', 'fa fa-angle-right');
+
 
 $('.custom-range').on('click', function(e){
 	e.stopPropagation();

@@ -1,75 +1,79 @@
 var container = this;
-var datePickerStart = $('[data-date-picker=date-picker-start]', container);
-var datePickerEnd = $('[data-date-picker=date-picker-end]', container);
-var today = dateFormat(Date.now());
-var yestoday = dateFormat(date(today) - 86400000);
-function date (date) {
-	return new Date(date);
-}
-function dateFormat (date) {
-	var date = new Date(date);
-	var dd = date.getDate();
-	var mm = date.getMonth() + 1; //January is 0
-	var yyyy = date.getFullYear();
+var datepickerStartInput = $('#datepicker-start-input', container);
+var datePickerStartContainer = $('#datepicker-start-container', container);
+var datepickerEndInput = $('#datepicker-end-input', container);
+var datePickerEndContainer = $('#datepicker-end-container', container);
+var today = moment().format('YYYY-MM-DD');
+var yestoday = moment().add(-1, 'd').format('YYYY-MM-DD');
 
-	dd = dd < 10 ? `0${dd}`: dd;
-	mm = mm < 10 ? `0${mm}`: mm;
-	
-	return `${yyyy}-${mm}-${dd}`;
-}
+$(container).children().css('z-index', 2);
 
-datePickerStart.val(yestoday);
-datePickerEnd.val(today);
-
-datePickerStart
+datePickerStartContainer
+	.data('date', yestoday)
 	.datepicker({
 		todayHighlight: true,
-	  	autoclose: true,
-	  	format: 'yyyy-mm-dd'
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+		keyboardNavigation: false
 	})
-	// .on('input', (e) => {
-	// 	datePickerStart.data('manually', true);
-	// })
-	// .on('keydown', (e) => {
-	// 	if (e.keyCode === 13) {
-	// 		datePickerEnd.focus().datepicker('show');
-	// 	}
-	// })
-	.on('changeDate', function(ev) {
-		var alignDate = dateFormat(ev.date.valueOf());
+	.on('changeDate changeMonth', function (e) {
+		var selectedDate = moment($(this).data('date'));
 
-		if (date(datePickerEnd.val()).getTime() <= date(datePickerStart.val()).getTime()) {
-			datePickerEnd.val(alignDate);
-			datePickerEnd.datepicker('setDate', date(alignDate))		
-			//datePickerEnd.datepicker('setDate', date(nextDate)).data('manually', true);
+		datepickerStartInput.val(selectedDate.format('YYYY-MM-DD'));
+
+		if (selectedDate.isAfter(datePickerEndContainer.data('date'))) {
+			datePickerEndContainer.datepicker('update', selectedDate.format('YYYY-MM-DD'));
 		}
-		// if (!datePickerStart.data('manually')) {
-		// 	datePickerEnd.focus().datepicker('show');
-		// }
-		// datePickerStart.data('manually', false);
-	})
-	.datepickerBehavior();
+	});
 
-datePickerEnd
+datepickerStartInput
+	.val(yestoday)
+	.datepickerBehavior()
+	.on('edit', function (e, date) {
+		datepickerStartInput.addClass('input-focus');
+		datePickerStartContainer.show();
+	})
+	.on('unedit', function (e) {
+		datepickerStartInput.removeClass('input-focus');
+		datePickerStartContainer.hide();
+	})
+	.on('change', function (e, date) {
+		datePickerStartContainer.datepicker('update', date);
+	});
+
+
+datePickerEndContainer
+	.data('date', today)
 	.datepicker({
 		todayHighlight: true,
-	  	autoclose: true,
-	  	format: 'yyyy-mm-dd'
+		autoclose: true,
+		format: 'yyyy-mm-dd',
+		keyboardNavigation: false
 	})
-	.on('changeDate', function(ev){
-		var alignDate = dateFormat(ev.date.valueOf());
+	.on('changeDate changeMonth', function (e) {		 
+		var selectedDate = moment($(this).data('date'));
 
-		if (date(datePickerStart.val()).getTime() >= date(datePickerEnd.val()).getTime()) {
-			datePickerStart.val(alignDate);
-			datePickerStart.datepicker('setDate', date(alignDate))//.data('manually', true);
+		datepickerEndInput.val(selectedDate.format('YYYY-MM-DD'));
+
+		if (selectedDate.isBefore(datePickerStartContainer.data('date'))) {
+			datePickerStartContainer.datepicker('update', selectedDate.format('YYYY-MM-DD'));
 		}
+	});
 
-		// if (!datePickerEnd.data('manually')) {
-		// 	// datePickerEnd.blur().datepicker('hide');
-		// }
-
-		// datePickerEnd.data('manually', false);
+datepickerEndInput
+	.val(today)	
+	.datepickerBehavior()
+	.on('edit', function (e, date) {
+		datepickerEndInput.addClass('input-focus');
+		datePickerEndContainer.show();
 	})
-	.datepickerBehavior();
+	.on('unedit', function (e) {
+		datepickerEndInput.removeClass('input-focus');
+		datePickerEndContainer.hide();
+	})
+	.on('change', function (e, date) {
+		datePickerEndContainer.datepicker('update', date);
+	});
 
-
+$(".prev", datePickerStartContainer).add($(".prev", datePickerEndContainer)).find("i").attr('class', 'fa fa-angle-left');
+$(".next", datePickerStartContainer).add($(".next", datePickerEndContainer)).find("i").attr('class', 'fa fa-angle-right');

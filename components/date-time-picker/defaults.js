@@ -305,7 +305,7 @@ var _this = this;
 				// 	e.preventDefault();
 				// 	e.stopPropagation();
 				// })
-				// .on('focus', $.proxy(this._doFocus, this))
+				// .on('focus', $.proxy(this._doFocus, this))							
 				.on('click', $.proxy(this._doClick, this))				
 				.on('keydown', $.proxy(this._doKeydown, this))
 				.on('blur', $.proxy(this._doBlur, this));
@@ -557,8 +557,8 @@ var _this = this;
 			var enterNum = e.key;			
 			var splitter = this.splitter;
 			var dateText;
-			var showFieldPosition;
-
+			var showFieldPosition;			
+			
 			if (position.indicate) {
 				// Up/Down arrow Key to change the digits
 				if (e.keyCode == 40 || e.keyCode == 38) { //lock
@@ -569,6 +569,7 @@ var _this = this;
 					this._doLeftRight(e, position);
 				}
 				// Insert Number
+
 				if (/^\d$/.test(enterNum)) {
 					this._doKeyNumber(enterNum, position);
 			    } else {
@@ -579,14 +580,16 @@ var _this = this;
 					// if (e.keyCode === 8 || e.keyCode === 46) {
 					// 	this._doBack(position);
 					// }
+					e.preventDefault();
 			    	return false;
 			    }
 			} else {
 				// // Allow: Ctrl/cmd+C
 				if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
 
+				e.preventDefault();
 		    	return false;
-			}
+			}			
 			return false;
 		},		
 		_calculator: function (indicate) { //lock
