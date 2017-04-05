@@ -6,7 +6,7 @@ var datePickerEndContainer = $('#datepicker-end-container', container);
 var today = moment().format('YYYY-MM-DD');
 var yestoday = moment().add(-1, 'd').format('YYYY-MM-DD');
 
-$(container).children().css('z-index', 2);
+$(container).children().css('z-index', 3);
 
 datePickerStartContainer
 	.data('date', yestoday)
