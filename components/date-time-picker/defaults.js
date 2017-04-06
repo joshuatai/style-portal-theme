@@ -80,7 +80,7 @@ var _this = this;
 			var getMinutes = value.substring(3,5);        // Get Minutes value
 			var getSeconds = value.substring(6,8);      // Get Seconds value
 			var start = input.prop('selectionStart');   // Get the keydown start position
-			var enterNum = String.fromCharCode(ev.keyCode); // Get the digits 
+			var enterNum = ev.key; // Get the digits 
 			var hoursPosition = 0;              // Get input hours position index
 			var minutesPosition = 3;              // Get input minutes position index
 			var secondsPosition = 6;             // Get input seconds position index
@@ -229,12 +229,12 @@ var _this = this;
 	var minYear = 1900;
 	var maxYear = 9999;
 	var dateReg = /\d{4}(\D{1})\d{2}(\D{1})\d{2}/;
-    var pad = function (num, n) {  
-		var len = num.toString().length;  
-		while(len < n) {  
-			num = "0" + num;  
-			len++;  
-		}  
+    var pad = function (num, n) {
+		var len = num.toString().length;
+		while(len < n) {
+			num = "0" + num;
+			len++;
+		}
 		return num; 
 	}
 	var yearPosition = {
@@ -254,8 +254,7 @@ var _this = this;
 		end: 10,
 		length: 2,
 		indicate: 'D'
-	}
-	
+	}	
 
 	var DatepickerBehavior = function(element, option) {
 		this.options = option;
