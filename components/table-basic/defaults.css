@@ -1,0 +1,28 @@
+.tables-basic-example h5:not(:first-child) {
+	margin-top: 40px
+}
+.tables-basic-example .table > thead > tr > th:nth-child(1),
+.tables-basic-example .table > tbody > tr > td:nth-child(1) {
+	width: 35.3%;
+}
+.tables-basic-example .table > thead > tr > th:nth-child(2),
+.tables-basic-example .table > tbody > tr > td:nth-child(2) {
+	width: 23.53%;
+}
+.tables-basic-example .table > thead > tr > th:nth-child(3),
+.tables-basic-example .table > tbody > tr > td:nth-child(3) {
+	width: 11.76%;
+	text-align: right;
+}
+.tables-basic-example .table > thead > tr > th:nth-child(4),
+.tables-basic-example .table > tbody > tr > td:nth-child(4) {
+	width: 17.64%;
+}
+.tables-basic-example .table > thead > tr > th:nth-child(5),
+.tables-basic-example .table > tbody > tr > td:nth-child(5) {
+	width: 11.77%;
+}
+.longtext-toggle {
+	position: absolute;
+	z-index: 1070;
+}

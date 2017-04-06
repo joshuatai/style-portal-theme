@@ -31,11 +31,8 @@
     "jquery.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.timeentry.js",
     "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js",
     "highcharts-5.0.6": "https://cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.6/highcharts.js",
-    "a": "a.js",
-    "b": "b.js",
-    "c": [
-      "c.js"
-    ]
+    "colResizable-1.6": "colResizable-1.6/colResizable-1.6.min.js",
+    "moment-2.18.1": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"
   },
   "meta": {
     "bootstrap-3.3.7": {

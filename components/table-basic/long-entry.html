@@ -1,0 +1,156 @@
+<section class="css-reference">
+	<h5>A wrapped table header</h5>
+	<pre>
+		<style data-selector=".table-longtext > thead > tr > th"></style>
+	</pre>
+	<h5>A truncated table cell</h5>
+	<pre>
+		<style data-selector=".table-longtext-truncated > thead > tr > td"></style>
+	</pre>
+	<h5>A truncated infotip</h5>
+	<p>
+		For details about infotip style guidelines, go to Components > <a href="#/styles/{{theme}}/{{version}}/0cc7f2c3-4690-4f66-89b9-33ab469e8b5f">Tooltip</a> in the Style Portal.
+	</p>
+</section>
+
+<section class="tables-basic-example">
+	<p>There are two options to handle entries that are longer than their column widths.</p>
+	<ul>
+		<li><strong>Wrapping:</strong> Display the full content by wrapping the text and increasing the column height. Use middle alignment for table headers and top alignment for other content of the table.</li>
+		<li><strong>Truncation:</strong> Truncate the entry and add ellipsis to indicate omission. Display the full content in an infotip when moused over any where in a table cell with truncated.</li>
+	</ul>
+	<div class="longtext-example">
+		<table class="table table-bordered table-hover table-longtext">
+			<thead>
+			  <tr>
+			    <th>Deployment Plan</th>
+			    <th>Type</th>
+			    <th>Appliance</th>
+			    <th>Package Version</th>
+			    <th>Language</th>
+			    <th>Product Name</th>
+			    <th>Deployed</th>
+			    <th>Creator</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+			    <td>Hotfix_DeepDiscoveryEmailInspector 3812 lx_en_criticalpatch1151 backup consolidated_1.1.0.1114_20170106111551</td>
+			    <td>Hotfix</td>
+			    <td>8</td>
+			    <td>3.8 Service Build 1170</td>
+			    <td>English</td>
+			    <td>Deep Discovery Email Inspector</td>
+			    <td>2016-06-02 23:15:00</td>
+			    <td>Administrator</td>
+			  </tr>
+			  <tr>
+			    <td>Hotfix_DeepDiscoveryInspector 380 lx_en_hfb1280_criticalpatch1152 backup ms_1.1.0.1080_20161201223952</td>
+			    <td>Virtual Analyzer image</td>
+			    <td>12</td>
+			    <td>1.0 Build 1232 Pack 2.0</td>
+			    <td>English</td>
+			    <td>Deep Discovery Director Local Repository</td>
+			    <td>2016-04-18 23:17:20</td>
+			    <td>Administrator</td>
+			  </tr>
+			  <tr>
+			    <td>Taiwan_Patch_01_DeepDiscoveryInspector 380 lx_en</td>
+			    <td>Firmware</td>
+			    <td>29</td>
+			    <td>Build 1048</td>
+			    <td>English</td>
+			    <td>Deep Discovery Inspector</td>
+			    <td>2016-04-17 21:20:18</td>
+			    <td>Operator</td>
+			  </tr>
+			  <tr>
+			    <td>Patch_02_DeepDiscoveryInspector 380 lx_en_hfb1229</td>
+			    <td>Hotfix</td>
+			    <td>10</td>
+			    <td>Build 1048</td>
+			    <td>English</td>
+			    <td>Deep Discovery Inspector</td>
+			    <td>2016-03-20 21:00:55</td>
+			    <td>Operator</td>
+			  </tr>
+			  <tr>
+			    <td>Japan_Hotfix_DeepDiscoveryInspector 380 lx_en_hfb2088</td>
+			    <td>Hotfix</td>
+			    <td>7</td>
+			    <td>Build 1048</td>
+			    <td>Japanese</td>
+			    <td>Deep Discovery Inspector</td>
+			    <td>2016-03-11 12:34:02</td>
+			    <td>Operator</td>
+			  </tr>
+			</tbody>
+		</table>
+		<table class="table table-bordered table-hover table-longtext-truncated">
+			<thead>
+			  <tr>
+			    <th>Deployment Plan</th>
+			    <th>Type</th>
+			    <th>Appliance</th>
+			    <th>Package Version</th>
+			    <th>Language</th>
+			    <th>Product Name</th>
+			    <th>Deployed</th>
+			    <th>Creator</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+			    <td>Hotfix_DeepDiscoveryEmailInspector 3812 lx_en_criticalpatch1151 backup consolidated_1.1.0.1114_20170106111551</td>
+			    <td>Hotfix</td>
+			    <td>8</td>
+			    <td>3.8 Service Build 1170</td>
+			    <td>English</td>
+			    <td>Deep Discovery Email Inspector</td>
+			    <td>2016-06-02 23:15:00</td>
+			    <td>Administrator</td>
+			  </tr>
+			  <tr>
+			    <td>Hotfix_DeepDiscoveryInspector 380 lx_en_hfb1280_criticalpatch1152 backup ms_1.1.0.1080_20161201223952</td>
+			    <td>Virtual Analyzer image</td>
+			    <td>12</td>
+			    <td>1.0 Build 1232 Pack 2.0</td>
+			    <td>English</td>
+			    <td>Deep Discovery Director Local Repository</td>
+			    <td>2016-04-18 23:17:20</td>
+			    <td>Administrator</td>
+			  </tr>
+			  <tr>
+			    <td>Taiwan_Patch_01_DeepDiscoveryInspector 380 lx_en</td>
+			    <td>Firmware</td>
+			    <td>29</td>
+			    <td>Build 1048</td>
+			    <td>English</td>
+			    <td>Deep Discovery Inspector</td>
+			    <td>2016-04-17 21:20:18</td>
+			    <td>Operator</td>
+			  </tr>
+			  <tr>
+			    <td>Patch_02_DeepDiscoveryInspector 380 lx_en_hfb1229</td>
+			    <td>Hotfix</td>
+			    <td>10</td>
+			    <td>Build 1048</td>
+			    <td>English</td>
+			    <td>Deep Discovery Inspector</td>
+			    <td>2016-03-20 21:00:55</td>
+			    <td>Operator</td>
+			  </tr>
+			  <tr>
+			    <td>Japan_Hotfix_DeepDiscoveryInspector 380lx_en_hfb2088</td>
+			    <td>Hotfix</td>
+			    <td>7</td>
+			    <td>Build 1048</td>
+			    <td>Japanese</td>
+			    <td>Deep Discovery Inspector</td>
+			    <td>2016-03-11 12:34:02</td>
+			    <td>Operator</td>
+			  </tr>
+			</tbody>
+		</table>
+	</div>
+</section>

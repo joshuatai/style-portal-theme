@@ -3,7 +3,8 @@
   "name": "Date Picker",
   "location": "date-time-picker/date-picker.html",
   "dependencies": [
-    "bootstrap-datepicker"
+    "bootstrap-datepicker",
+    "moment-2.18.1"
   ],
   "actions": [
     {

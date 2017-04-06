@@ -34,7 +34,8 @@
 }
 
 .input-icon-group > .form-control:focus + .input-icon-label > i,
-.input-icon-group > .input-icon-label .focus{
+.input-icon-group > .form-control.input-focus + .input-icon-label > i,
+.input-icon-group > .input-icon-label .focus {
   transition: all .2s linear 0s;
   color: @input-inner-icon-focus-color;
 
@@ -105,6 +106,7 @@ input[type="checkbox"] {
 
 input[type="text"]:focus,
 input[type="number"]:focus,
+input[type="password"]:focus,
 textarea:focus,
 .input-focus {
 	border-color: @input-border-focus;
@@ -432,6 +434,7 @@ input[type="checkbox"] {
   vertical-align: top;
   margin-top: 3px;
   background-color: #ffffff;
+  color: #ffffff;
 }
 
 .radio label:before,
@@ -503,7 +506,7 @@ input[type="checkbox"] {
   font-size: 13px;
   text-align: center;
   line-height: 10px;
-  transition: 0.2s;
+  transition: color 0.2s;
 }
 
 .checkbox .disabled + label:before,
@@ -1329,10 +1332,9 @@ label.switch .disabled{
 }
 
 // datapicker
-//
 .datepicker {
   padding: 0;
-
+  width: 248px;
   &.days div.datepicker-days {
     display: block;
   }
@@ -1474,14 +1476,6 @@ label.switch .disabled{
     padding-top: 9px;
   }
 }
-.simple-date-time-example {
-  .input-icon-group {
-    float: left;
-    + .input-icon-group {
-      margin-left: 8px;
-    }
-  }
-}
 .date-time-picker-example {
   .custom-wrapper {
     position: absolute;
@@ -1504,10 +1498,24 @@ label.switch .disabled{
       }
       .date-picker-pane-body {
         margin-top: 8px;
-        .date-picker-pane-example {
+        .date-picker-pane-container {
           float: left;
           .datepicker table{
             padding: 0 3px;
+          }
+          + .date-picker-pane-container {
+            margin-left: 24px;
+            &:before {
+              content: ' ';
+              display: block;
+              height: 260px;
+              vertical-align: middle;
+              margin-left: -12px;
+              float: left;
+              margin-right: 12px;
+              margin-top: 16px;
+              border-left: 1px solid #E6E6E6;
+            }
           }
         }
       }
@@ -1522,6 +1530,14 @@ label.switch .disabled{
         display: inline-block;
         border: 0;
         box-shadow: none;
+      }
+    }
+  }
+  .simple-date-time-container {
+    .input-icon-group {
+      float: left;
+      + .input-icon-group {
+        margin-left: 8px;
       }
     }
   }

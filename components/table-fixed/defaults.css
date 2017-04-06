@@ -1,0 +1,24 @@
+.fixed-header-example h5:not(:first-child) {
+	margin-top: 40px
+}
+.fixed-header-example .table > thead > tr > th:nth-child(1),
+.fixed-header-example .table > tbody > tr > td:nth-child(1) {
+	width: 35.3%;
+}
+.fixed-header-example .table > thead > tr > th:nth-child(2),
+.fixed-header-example .table > tbody > tr > td:nth-child(2) {
+	width: 23.53%;
+}
+.fixed-header-example .table > thead > tr > th:nth-child(3),
+.fixed-header-example .table > tbody > tr > td:nth-child(3) {
+	width: 11.76%;
+	text-align: right;
+}
+.fixed-header-example .table > thead > tr > th:nth-child(4),
+.fixed-header-example .table > tbody > tr > td:nth-child(4) {
+	width: 17.64%;
+}
+.fixed-header-example .table > thead > tr > th:nth-child(5),
+.fixed-header-example .table > tbody > tr > td:nth-child(5) {
+	width: 11.77%;
+}

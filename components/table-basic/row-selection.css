@@ -1,0 +1,28 @@
+.tables-basic-example .table .input-checkbox + label:before {
+	margin-right: 0;
+}
+.tables-basic-example .table-row-selection > thead > tr > th.gutter {
+	width: 38px;
+}
+.tables-basic-example .table-row-selection > thead > tr > th:nth-child(2),
+.tables-basic-example .table-row-selection > tbody > tr > td:nth-child(2) {
+	width: 35.3%;
+}
+.tables-basic-example .table-row-selection > thead > tr > th:nth-child(3),
+.tables-basic-example .table-row-selection > tbody > tr > td:nth-child(3) {
+	width: 23.53%;
+	text-align: left;
+}
+.tables-basic-example .table-row-selection > thead > tr > th:nth-child(4),
+.tables-basic-example .table-row-selection > tbody > tr > td:nth-child(4) {
+	width: 11.76%;
+	text-align: right;
+}
+.tables-basic-example .table-row-selection > thead > tr > th:nth-child(5),
+.tables-basic-example .table-row-selection > tbody > tr > td:nth-child(5) {
+	width: 17.64%;
+}
+.tables-basic-example .table-row-selection > thead > tr > th:nth-child(6),
+.tables-basic-example .table-row-selection > tbody > tr > td:nth-child(6) {
+	width: 11.77%;
+}

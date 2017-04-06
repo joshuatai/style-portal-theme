@@ -20,7 +20,7 @@
 
   <h5>Simple date time</h5>
   <pre>
-    <style data-selector=".simple-date-time-example .input-icon-group + .input-icon-group">Leave space between start/end date and start/end time</style>
+    <style data-selector=".date-time-picker-example .simple-date-time-container .input-icon-group + .input-icon-group">Leave space between start/end date and start/end time</style>
     <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-header .tilde">Leave space between end date and start time</style>
   </pre>
 
@@ -34,7 +34,13 @@
 
   <h5>Datepicker container</h5>
   <pre>
-    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-example .datepicker table"></style>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-container .datepicker table"></style>
+  </pre>
+  <pre>
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-container + .date-picker-pane-container">Leave a space between containers</style>
+  </pre>
+  <pre data-title="Vertical line between containers">
+    <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-body .date-picker-pane-container + .date-picker-pane-container:before">::before</style>
   </pre>
 
   <h5>Button container</h5>
@@ -65,16 +71,16 @@
 
       <div class="date-picker-pane show">
         <div class="date-picker-pane-header">
-          <div class="simple-date-time-example">
+          <div class="simple-date-time-container">
             <div class="input-icon-group">
-              <input id="pane-date-start" type="text" class="form-control input-width-xs" placeholder="mm/dd/yyyy">
+              <input id="pane-date-start-input" type="text" class="form-control input-width-xs" placeholder="yyyy-mm-dd">
               <label class="input-icon-label" for="pane-date-start">
                 <i class="fa fa-calendar"></i>
               </label>
             </div>
 
             <div class="input-icon-group">
-              <input id="pane-time-start" type="text" class="form-control input-width-xs" data-time-picker="pane-time-start" placeholder="hh:mm:ss">
+              <input id="pane-time-start-input" type="text" class="form-control input-width-xs" data-time-picker="pane-time-start" placeholder="hh:mm:ss">
               <label class="input-icon-label" for="pane-time-start">
                 <i class="fa fa-clock-o"></i>
               </label>
@@ -82,9 +88,9 @@
           </div>
 
           <div class="tilde">~</div>
-          <div class="simple-date-time-example">
+          <div class="simple-date-time-container">
             <div class="input-icon-group">
-              <input id="pane-date-end" type="text" class="form-control input-width-xs" placeholder="mm/dd/yyyy">
+              <input id="pane-date-end-input" type="text" class="form-control input-width-xs" placeholder="yyyy-mm-dd">
               <label class="input-icon-label" for="pane-date-end">
                 <i class="fa fa-calendar"></i>
               </label>
@@ -100,8 +106,8 @@
         </div>
 
         <div class="date-picker-pane-body">
-          <div class="date-picker-pane-example" data-date-picker="date-pane-date-start"></div>
-          <div class="date-picker-pane-example" data-date-picker="date-pane-date-end"></div>
+          <div class="date-picker-pane-container" id="date-pane-date-start"></div>
+          <div class="date-picker-pane-container" id="date-pane-date-end"></div>
         </div>
 
         <div class="date-picker-pane-footer">

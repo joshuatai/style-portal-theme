@@ -89,14 +89,14 @@
     <li>As soon as a date is selected, the calendar closes itself and the selected date is shown in the input field.</li>
     <li>As soon as a date is typed, the date is also circled on the calendar.</li>
     <li>Support selecting using keyboards.</li>
-    <li>Date formats may be adjusted as required. For detailed information about different date format variations, see <a href="http://tw-hie/ui_standards/2010/08/date-time/" target="_blank">HIE UX Guidelines.</a></li>
+    <li>Date formats may be adjusted as required. For detailed information about different date format variations, see <a href="http://tw-hie/ui_standards/2010/08/date-time/" target="_blank">Date & Time</a>.</li>
   </ul>
 
   <h5>Date Input Field</h5>
-  <div class="field-example">
+  <!--div class="field-example">
     <h6>Normal</h6>
     <div class="input-icon-group">
-        <input id="datepicker1" type="text" class="form-control input-width-xs" value="11/10/2016" placeholder="mm/dd/yyyy">
+        <input id="datepicker1" type="text" class="form-control input-width-xs" value="2016-11-10" placeholder="yyyy-mm-dd">
         <label class="input-icon-label" for="datepicker1">
           <i class="fa fa-calendar"></i>
         </label>
@@ -105,7 +105,7 @@
   <div class="field-example">
     <h6>Focus</h6>
     <div class="input-icon-group">
-        <input id="datepicker2" type="text" class="form-control input-width-xs input-focus" value="11/10/2016" placeholder="mm/dd/yyyy">
+        <input id="datepicker2" type="text" class="form-control input-width-xs input-focus" value="2016-11-10" placeholder="yyyy-mm-dd">
         <label class="input-icon-label" for="datepicker2">
           <i class="fa fa-calendar"></i>
         </label>
@@ -114,17 +114,18 @@
   <div class="field-example">
     <h6>Invalid</h6>
     <div class="input-icon-group">
-        <input id="datepicker3" type="text" class="form-control input-width-xs form-invalid" value="11/10/2016" placeholder="mm/dd/yyyy">
+        <input id="datepicker3" type="text" class="form-control input-width-xs form-invalid" value="2016-11-10" placeholder="yyyy-mm-dd">
         <label class="input-icon-label" for="datepicker3">
           <i class="fa fa-calendar"></i>
         </label>
     </div>
   </div>
-  <hr>
+  <hr-->
   <div class="input-icon-group">
-      <input id="datepicker" type="text" class="form-control input-width-xs" placeholder="mm/dd/yyyy" data-date-picker="date-picker">
-      <label class="input-icon-label" for="datepicker">
+      <input id="datepicker-input" type="text" class="form-control input-width-xs" placeholder="yyyy-mm-dd">
+      <label class="input-icon-label">
         <i class="fa fa-calendar"></i>
       </label>
-  </div>
+      <div id="datepicker-container" class="dropdown-menu"></div>
+  </div>  
 </section>

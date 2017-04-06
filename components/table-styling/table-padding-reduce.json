@@ -1,7 +1,7 @@
 {
-  "id": "ff7bf402-d9ee-4b4f-a37c-be3a3997c8fe",
-  "name": "Row Heights",
-  "location": "tables/sizes.html",
+  "id": "afc5cf8d-7b57-40ff-97e2-447481e58ba8",
+  "name": "Reduced Padding",
+  "location": "table-styling/table-padding-reduce.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-12"
+    "row": "row-md-5"
   }
 }

@@ -103,11 +103,14 @@
     
  .table-pagination-block {
     float: right;
+    margin-right: 12px;
     > div {
       margin-top: 8px;
       margin-bottom: 8px;
-      margin-right: 16px;
       float: left;
+      + div {
+        margin-left: 16px;
+      }
     }
     .pagination{
       vertical-align: top;

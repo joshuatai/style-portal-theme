@@ -1,7 +1,7 @@
 {
-  "id": "ed131974-58a7-408b-b724-b24bd9831cbe",
-  "name": "Displays and Functionalities",
-  "location": "tables/status-variations.html",
+  "id": "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df",
+  "name": "Toolbars",
+  "location": "table-advanced/toolbar.html",
   "dependencies": [],
   "actions": [
     {
@@ -12,6 +12,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-35"
+    "row": "row-md-10"
   }
 }
