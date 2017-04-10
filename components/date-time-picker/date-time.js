@@ -1,7 +1,9 @@
 var container = this;
 var datePickerTimeInput = $('#datepicker-with-time', container);
 var datePickerTimeContainer = $('#datepicker-with-time-container', container);
-var timePickerDate = $('[data-time-picker=time-picker-with-date]', container);
+var timePickerDate = $('#time-picker-date', container);
+
+
 var today = moment().format('YYYY-MM-DD');
 
 $(container).children().css('z-index', 2);
@@ -19,7 +21,16 @@ datePickerTimeInput
 	})
 	.on('change', function (e, date) {
 		datePickerTimeContainer.datepicker('update', date);
+	})
+	.on('next', function (e, date) {
+		
+		timePickerDate
+			.trigger('focus')
+			.timepickerBehavior('showField', 'H')
+			.trigger('click');
+		
 	});
+
 
 datePickerTimeContainer
 	.data('date', today)
@@ -35,15 +46,14 @@ datePickerTimeContainer
 
 
 timePickerDate
-	.timeEntry({
-		show24Hours: true, 
-		showSeconds: true,
-		spinnerImage: null
-	})
-	.timepickerBehavior({
-		setTime: function(timeText){
-			this.element.timeEntry('setTime', timeText);
-		}
+	.timepickerBehavior()
+	.on('prev', function (e, time) {
+		
+		datePickerTimeInput
+			.trigger('focus')
+			.datepickerBehavior('showField', 'Y')
+			.trigger('click');
+		
 	});
 
 $(".prev", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-left');

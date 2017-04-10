@@ -1,37 +1,26 @@
 var container = this;
 var dateTimeRangeDropdown = $('#date-time-range-dropdown', container);
 
-
 var dateStartInput = $('#pane-date-start-input', container);
 var dateEndInput = $('#pane-date-end-input', container);
 
 var datePickerPaneStart = $('#date-pane-date-start', container);
 var datePickerPaneEnd = $('#date-pane-date-end', container);
 
-var timePickerStart = $('[data-time-picker=pane-time-start]', container);
-var timePickerEnd = $('[data-time-picker=pane-time-end]', container);
+var timePickerStartInput = $('#pane-time-start-input', container);
+var timePickerEndInput = $('#pane-time-end-input', container);
 
 var today = moment().format('YYYY-MM-DD');
 var lastweek = moment().add(-7, 'd').format('YYYY-MM-DD');
 
 function isStartTimeGreaterThanEndTime () {
-	var timeStart = timePickerStart.timeEntry('getTime');
-	var timeEnd = timePickerEnd.timeEntry('getTime');
-
-	if (timeStart === null) { return false; }
-	if (timeEnd === null) { return false; }
-	if (timeStart.getTime() >= timeEnd.getTime()) { return true; }
+	var startDate = datePickerPaneStart.data('date');
+	var endDate = datePickerPaneEnd.data('date');	
+	var timeStart = timePickerStartInput.val();
+	var timeEnd = timePickerEndInput.val();
+	if (moment(`${startDate} ${timeStart}`).isAfter(moment(`${endDate} ${timeEnd}`))) return true;
 
 	return false;
-}
-
-function calTimePickerDate ($elem, secs) {
-	var origin = $elem.timeEntry('getTime');
-	var date = new Date(origin);
-
-	date.setSeconds(origin.getSeconds() + secs);
-
-	return date;
 }
 
 dateTimeRangeDropdown
@@ -47,6 +36,14 @@ dateStartInput
 	.datepickerBehavior()
 	.on('change', function (e, date) {
 		datePickerPaneStart.datepicker('update', date);
+	})
+	.on('next', function (e, date) {
+		
+		timePickerStartInput
+			.trigger('focus')
+			.timepickerBehavior('showField', 'H')
+			.trigger('click');
+		
 	});
 
 dateEndInput
@@ -54,6 +51,14 @@ dateEndInput
 	.datepickerBehavior()
 	.on('change', function (e, date) {
 		datePickerPaneEnd.datepicker('update', date);
+	})
+	.on('next', function (e, date) {
+		
+		timePickerEndInput
+			.trigger('focus')
+			.timepickerBehavior('showField', 'H')
+			.trigger('click');
+		
 	});
 
 datePickerPaneStart
@@ -71,10 +76,11 @@ datePickerPaneStart
 		if (selectedDate.isAfter(endDate) || selectedDate.isSame(endDate)) {			
 			datePickerPaneEnd.datepicker('update', selectedDate.format('YYYY-MM-DD'));
 			if (isStartTimeGreaterThanEndTime()) {
-				timePickerEnd.timeEntry('setTime', calTimePickerDate(timePickerStart, 0));
+				timePickerEndInput.val(timePickerStartInput.val());				
 			}
 		}		
 	});
+
 	
 datePickerPaneEnd
 	.data('date', today)
@@ -89,37 +95,35 @@ datePickerPaneEnd
 		var startDate = datePickerPaneStart.data('date');
 		dateEndInput.val(selectedDate.format('YYYY-MM-DD'));
 		if (selectedDate.isBefore(startDate) || selectedDate.isSame(startDate)) {
-			datePickerPaneStart.datepicker('update', selectedDate.format('YYYY-MM-DD'));
+			datePickerPaneStart.datepicker('update', selectedDate.format('YYYY-MM-DD'));			
 			if (isStartTimeGreaterThanEndTime()) {
-				timePickerStart.timeEntry('setTime', calTimePickerDate(timePickerEnd, 0));
+				timePickerStartInput.val(timePickerEndInput.val());		
 			}
 		}		
 	});	
 
-timePickerStart
-	.timeEntry({
-		show24Hours: true, 
-		showSeconds: true,
-		spinnerImage: null
-	})
-	.timeEntry('setTime', '12:00:00')
-	.timepickerBehavior({
-		setTime: function(timeText){
-			this.element.timeEntry('setTime', timeText);
-		}
+timePickerStartInput	
+	.val('12:00:00')	
+	.timepickerBehavior()
+	.on('prev', function (e, time) {
+		
+		dateStartInput
+			.trigger('focus')
+			.datepickerBehavior('showField', 'Y')
+			.trigger('click');
+		
 	});
 
-timePickerEnd
-	.timeEntry({
-		show24Hours: true, 
-		showSeconds: true,
-		spinnerImage: null
-	})
-	.timeEntry('setTime', '12:00:00')
-	.timepickerBehavior({
-		setTime: function(timeText){
-			this.element.timeEntry('setTime', timeText);
-		}
+timePickerEndInput	
+	.val('12:00:00')
+	.timepickerBehavior()
+	.on('prev', function (e, time) {
+		
+		dateEndInput
+			.trigger('focus')
+			.datepickerBehavior('showField', 'Y')
+			.trigger('click');
+		
 	});
 
 
