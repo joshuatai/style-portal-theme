@@ -15,22 +15,13 @@ datePickerTimeInput
 		datePickerTimeInput.addClass('input-focus');
 		datePickerTimeContainer.show();
 	})
-	.on('unedit', function (e) {
+	.on('unedit next prev', function (e) {
 		datePickerTimeInput.removeClass('input-focus');
 		datePickerTimeContainer.hide();
 	})
 	.on('change', function (e, date) {
 		datePickerTimeContainer.datepicker('update', date);
-	})
-	.on('next', function (e, date) {
-		
-		timePickerDate
-			.trigger('focus')
-			.timepickerBehavior('showField', 'H')
-			.trigger('click');
-		
 	});
-
 
 datePickerTimeContainer
 	.data('date', today)
@@ -45,16 +36,7 @@ datePickerTimeContainer
 	});
 
 
-timePickerDate
-	.timepickerBehavior()
-	.on('prev', function (e, time) {
-		
-		datePickerTimeInput
-			.trigger('focus')
-			.datepickerBehavior('showField', 'Y')
-			.trigger('click');
-		
-	});
-
+timePickerDate.timepickerBehavior();
+	
 $(".prev", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-left');
 $(".next", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-right');

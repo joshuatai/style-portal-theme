@@ -172,7 +172,8 @@ var _this = this;
 			this.element
 				.on('click', $.proxy(this._doEdit, this))
 				.on('keydown', $.proxy(this._doKeydown, this))
-				// .on('blur', $.proxy(this._doBlur, this));
+				.on('focus', $.proxy(this._doFocus, this))
+				.on('blur', $.proxy(this._doBlur, this));
 
 			$(document).on('click', $.proxy(this._doUnEdit, this));
 		
@@ -235,12 +236,15 @@ var _this = this;
 
 				// Tab and Left/Right arrow Key to move selected position
 				if (e.keyCode == 39) {
-					this._doLeftRight(KEY.RIGHT, position);
+					return this._doLeftRight(KEY.RIGHT, position);
 				} else if (e.keyCode == 37) {
-					this._doLeftRight(KEY.LEFT, position);
+					return this._doLeftRight(KEY.LEFT, position);
 				} else if (e.keyCode == 9) {
-					if (e.shiftKey === true) this._doLeftRight(KEY.LEFT, position);
-						else this._doLeftRight(KEY.RIGHT, position);
+					if (e.shiftKey === true) {
+						return this._doLeftRight(KEY.LEFT, position);
+					} else {
+						return this._doLeftRight(KEY.RIGHT, position);
+					}
 				}
 				
 				// Insert Number
@@ -308,12 +312,15 @@ var _this = this;
 
 		_doLeftRight: function (direction, position) {
 
+			var tabable = false;
+
 			if (position.indicate === 'H') { // Selected on year position	
 
 				if(direction === KEY.RIGHT) {
 					this._correctVal(H_POS);								
 					this._showField(H_POS.next());
 				} else {
+					tabable = true;
 					this._prev();
 				}
 
@@ -330,10 +337,13 @@ var _this = this;
 					this._correctVal(S_POS);
 					this._showField(S_POS.prev());
 				} else {
+					tabable = true;
 					this._next();
 				}
 
-			} 			
+			} 	
+
+			return tabable;		
 		},
 
 		_doInsertNumber: function (enterNum, position) {
@@ -419,6 +429,29 @@ var _this = this;
 
 		},
 
+		_doFocus: function (e) {
+			
+			var input = this.element;
+			var value = input.val();
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = getChunkPosition(start, end);	
+
+			if (start === 0 && end === 0) {
+
+			} else {
+				this._showField(H_POS);
+				this._doEdit();
+			}
+
+		},
+
+		_doBlur: function (e) {
+
+			this._tmpCheck({});
+
+		},	
+
 		/* Events Triggerer */
 
 		_edit: function (time) {
@@ -449,26 +482,7 @@ var _this = this;
 
 			this.element.trigger($.Event('next'), [this.element.val()]);
 
-		},	
-
-		_resetInputTime: function(){
-			this.element.removeData("firstDigits");
-			this.element.removeData("secondDigits");
-		},
-		_combineTime: function(startIdx, newTime, fullTime){
-			var timeText;
-			switch(startIdx) {
-				case 0:
-					timeText = newTime + fullTime.substring(2);
-					break;
-				case 3:
-					timeText = fullTime.substring(0, 3) + newTime + fullTime.substring(5);
-					break;
-				case 6:
-					timeText = fullTime.substring(0, 6) + newTime;
-			}
-			return timeText;
-		},
+		},			
 
 		/* Validators */
 		_tmpCheck: function (position) {
@@ -558,7 +572,7 @@ var _this = this;
 			return pad(this.orgH, 2) + splitter + pad(this.orgM, 2) + splitter + pad(this.orgS, 2);
 		},
 
-		_showField: function( position ) {
+		_showField: function ( position ) {
 			var _this = this;
 			this.input.setSelectionRange(position.start, position.end);
 			setTimeout(function () {				
@@ -566,7 +580,7 @@ var _this = this;
 			}, 20);
 		},
 
-		showField: function(indicate) {
+		showField: function (indicate) {
 			if (indicate === 'H') this._showField(H_POS);
 			if (indicate === 'M') this._showField(M_POS);
 			if (indicate === 'S') this._showField(S_POS);
@@ -594,6 +608,7 @@ var _this = this;
 	$.fn.timepickerBehavior.defaults = {
 
 	};	
+
 })(jQuery);
 
 // DatePicker Behavior Plugin
@@ -717,19 +732,20 @@ var _this = this;
 			this.element
 				.on('click', $.proxy(this._doEdit, this))
 				.on('keydown', $.proxy(this._doKeydown, this))
-				.on('blur', $.proxy(this._doBlur, this));
+				.on('blur', $.proxy(this._doBlur, this))				
+				.on('focus', $.proxy(this._doFocus, this));
 
 			$(document).on('click', $.proxy(this._doUnEdit, this));
 
 		},
 
 		_doEdit: function (e) {
-
+			
 			var input = this.element;
 			var value = input.val();
 			var start = input.prop('selectionStart');
 			var end = input.prop('selectionEnd');
-			var position = getChunkPosition(start, end);	
+			var position = getChunkPosition(start, end);
 
 			if (!this._tmpCheck(position)) {
 
@@ -759,7 +775,7 @@ var _this = this;
 				this._unedit();
 			}
 
-		},
+		},		
 
 		_doKeydown: function (e) {
 
@@ -779,12 +795,15 @@ var _this = this;
 
 				// Tab and Left/Right arrow Key to move selected position
 				if (e.keyCode == 39) {
-					this._doLeftRight(KEY.RIGHT, position);
+					return this._doLeftRight(KEY.RIGHT, position);
 				} else if (e.keyCode == 37) {
-					this._doLeftRight(KEY.LEFT, position);
+					return this._doLeftRight(KEY.LEFT, position);
 				} else if (e.keyCode == 9) {
-					if (e.shiftKey === true) this._doLeftRight(KEY.LEFT, position);
-						else this._doLeftRight(KEY.RIGHT, position);
+					if (e.shiftKey === true) {
+						return this._doLeftRight(KEY.LEFT, position);
+					} else {
+						return this._doLeftRight(KEY.RIGHT, position);
+					}
 				}
 				
 				// Insert Number
@@ -854,12 +873,16 @@ var _this = this;
 		
 		_doLeftRight: function (direction, position) {
 
+			var tabable = false;
+
 			if (position.indicate === 'Y') { // Selected on year position	
 
 				if(direction === KEY.RIGHT) {
 					this._correctVal(Y_POS);									
 					this._showField(Y_POS.next());
+
 				} else {
+					tabable = true;
 					this._prev();
 				}
 
@@ -876,10 +899,14 @@ var _this = this;
 					this._correctVal(D_POS);
 					this._showField(D_POS.prev());
 				} else {
+					tabable = true;
 					this._next();
 				}
 
-			} 			
+			} 	
+
+			return tabable;
+
 		},
 
 		_doInsertNumber: function (enterNum, position) {
@@ -986,16 +1013,25 @@ var _this = this;
 		},
 
 		_doFocus: function (e) {
-			// var input = this.element;//.addClass('input-focus');
-			// var value = input.val();
-			// var start = input.prop('selectionStart');
-			// var end = input.prop('selectionEnd');
-			// console.log(start, end)
+			
+			var input = this.element;
+			var value = input.val();
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = getChunkPosition(start, end);	
+
+			if (start === 0 && end === 0) {
+
+			} else {
+				this._showField(Y_POS);
+				this._doEdit();
+			}
+
 		},
 		
 		_doBlur: function (e) {
 
-			this._tmpCheck({});		
+			this._tmpCheck({});			
 
 		},	
 

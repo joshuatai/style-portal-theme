@@ -1,5 +1,4 @@
 var container = this;
-var dateTimeRangeDropdown = $('#date-time-range-dropdown', container);
 
 var dateStartInput = $('#pane-date-start-input', container);
 var dateEndInput = $('#pane-date-end-input', container);
@@ -9,6 +8,10 @@ var datePickerPaneEnd = $('#date-pane-date-end', container);
 
 var timePickerStartInput = $('#pane-time-start-input', container);
 var timePickerEndInput = $('#pane-time-end-input', container);
+
+var dateTimeRangeDropdown = $('#date-time-range-dropdown', container);
+var datePickerPane = $('.date-picker-pane');
+var datePickerPaneButtons = $('.date-picker-pane-footer .btn');
 
 var today = moment().format('YYYY-MM-DD');
 var lastweek = moment().add(-7, 'd').format('YYYY-MM-DD');
@@ -23,27 +26,11 @@ function isStartTimeGreaterThanEndTime () {
 	return false;
 }
 
-dateTimeRangeDropdown
-	.on('shown.bs.dropdown', function () {
-	  $('.dropdown-menu>li>a').removeClass('focus');
-	})
-	.on('hidden.bs.dropdown', function () {
-		$('.date-picker-pane').removeClass('show');
-	});
-
 dateStartInput
 	.val(lastweek)
 	.datepickerBehavior()
 	.on('change', function (e, date) {
 		datePickerPaneStart.datepicker('update', date);
-	})
-	.on('next', function (e, date) {
-		
-		timePickerStartInput
-			.trigger('focus')
-			.timepickerBehavior('showField', 'H')
-			.trigger('click');
-		
 	});
 
 dateEndInput
@@ -51,14 +38,6 @@ dateEndInput
 	.datepickerBehavior()
 	.on('change', function (e, date) {
 		datePickerPaneEnd.datepicker('update', date);
-	})
-	.on('next', function (e, date) {
-		
-		timePickerEndInput
-			.trigger('focus')
-			.timepickerBehavior('showField', 'H')
-			.trigger('click');
-		
 	});
 
 datePickerPaneStart
@@ -81,7 +60,6 @@ datePickerPaneStart
 		}		
 	});
 
-	
 datePickerPaneEnd
 	.data('date', today)
 	.datepicker({
@@ -104,39 +82,42 @@ datePickerPaneEnd
 
 timePickerStartInput	
 	.val('12:00:00')	
-	.timepickerBehavior()
-	.on('prev', function (e, time) {
-		
-		dateStartInput
-			.trigger('focus')
-			.datepickerBehavior('showField', 'Y')
-			.trigger('click');
-		
-	});
+	.timepickerBehavior();	
 
 timePickerEndInput	
 	.val('12:00:00')
-	.timepickerBehavior()
-	.on('prev', function (e, time) {
-		
-		dateEndInput
-			.trigger('focus')
-			.datepickerBehavior('showField', 'Y')
-			.trigger('click');
-		
-	});
+	.timepickerBehavior();
 
+$('label', datePickerPane).on('click', function (e) {
+	e.stopPropagation();	
+});
+
+datePickerPane.on('click', function (e) {
+	
+	if (!datePickerPaneButtons.is($(e.target))) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+
+});
+
+dateTimeRangeDropdown
+	.on('shown.bs.dropdown', function (e) {
+	  $('.dropdown-menu>li>a').removeClass('focus');
+	})
+	.on('hidden.bs.dropdown', function (e) {		
+		datePickerPane.removeClass('show');
+	});
 
 $(".prev", datePickerPaneStart).add($(".prev", datePickerPaneEnd)).find("i").attr('class', 'fa fa-angle-left');
 $(".next", datePickerPaneStart).add($(".next", datePickerPaneEnd)).find("i").attr('class', 'fa fa-angle-right');
 
-
-$('.custom-range').on('click', function(e){
+$('.custom-range').on('click', function(e) {
 	e.stopPropagation();
 	$(this).addClass('focus');
-	$('.date-picker-pane').addClass('show');
+	datePickerPane.addClass('show');
 });
 
-$('.predefine-range').on('click', function(event){
+$('.predefine-range').on('click', function(event) {
 	$('#date-time-range-text').text($(this).text());
 });
