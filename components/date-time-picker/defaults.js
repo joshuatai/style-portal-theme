@@ -404,12 +404,12 @@ var _this = this;
 
 			} else if (position.indicate === 'S') {
 
-				if ((tmpNumber > 5 && tmpNumber < 10) || tmp.length === 2) {
+				if (tmp.length === 2) {
 
 					this[`org${position.indicate}`] = tmpNumber;
 
-					if (tmpNumber > MAX_SECOND) this.orgM = MAX_SECOND;
-					if (tmpNumber < MIN_SECOND)  this.orgM = MIN_SECOND;
+					if (tmpNumber > MAX_SECOND) this.orgS = MAX_SECOND;
+					if (tmpNumber < MIN_SECOND)  this.orgS = MIN_SECOND;
 
 					timeText = this._autoCorrect(position.indicate);
 					this.element.val(timeText);
