@@ -74,3 +74,8 @@
 .datepicker tfoot {
   display: none;
 }
+
+.datepicker-inline.dropdown-menu {
+  position: static;
+  display: block;
+}
