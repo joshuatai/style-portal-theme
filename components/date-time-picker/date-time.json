@@ -4,8 +4,7 @@
   "location": "date-time-picker/date-time.html",
   "dependencies": [
   	"bootstrap-datepicker",
-    "jquery.plugin.timeentry.package-2.0.1",
-    "jquery.timeentry.package-2.0.1"
+    "moment-2.18.1"
   ],
   "type": "draggable",
   "grid": {

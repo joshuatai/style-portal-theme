@@ -3,7 +3,8 @@
   "name": "Date Range",
   "location": "date-time-picker/date-range.html",
   "dependencies": [
-    "bootstrap-datepicker"
+    "bootstrap-datepicker",
+    "moment-2.18.1"
   ],
   "actions": [
     {

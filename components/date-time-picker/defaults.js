@@ -404,7 +404,7 @@ var _this = this;
 
 			} else if (position.indicate === 'S') {
 
-				if (tmp.length === 2) {
+				if ((tmpNumber > 5 && tmpNumber < 10) || tmp.length === 2) {
 
 					this[`org${position.indicate}`] = tmpNumber;
 

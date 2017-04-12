@@ -1,7 +1,7 @@
 {
-  "id": "44693e7b-0c49-4264-8640-5f765ebded82",
-  "name": "Custom Time Range",
-  "location": "date-time-picker/custom-time-range.html",
+  "id": "16165a7c-77ff-45b8-b28b-51c21804fdbf",
+  "name": "Disabled Date",
+  "location": "date-time-picker/disable-hint-date-picker.html",
   "dependencies": [
     "bootstrap-datepicker",
     "moment-2.18.1"
@@ -15,6 +15,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-9"
+    "row": "row-md-7"
   }
 }
