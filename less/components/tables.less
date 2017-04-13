@@ -272,11 +272,23 @@ th {
 }
 
 // Scrollable
-.table-with-pagination .table-scrollable { 
-  max-height: 149px;
-  overflow-y: auto;
+.table-with-scrollbar {
+  .table-scrollable { 
+    max-height: 149px;
+    overflow-y: auto;
+  }
+  .table-horizontal-scrollable {
+    overflow-x: auto;
+    &.fixed-column {
+      .table {
+        > thead > tr > th,
+        > tbody > tr > td {
+          border-right: 1px solid #bbbbbb;
+        }
+      }
+    }
+  }
 }
-
 // No-data
 .table-no-data {
   tbody > tr {

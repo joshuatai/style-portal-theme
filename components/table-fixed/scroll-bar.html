@@ -1,0 +1,290 @@
+<section class="css-reference">
+  <h5>Horizontal scroll bar</h5>
+  <pre data-title="Fixed columns border">
+    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.fixed-column .table > thead > tr > th"></style>
+  </pre>
+</section>
+<section class="fixed-header-example">
+  <p>A scroll bar enables content to be displayed in a smaller area than its actual size.</p>
+  <ul>
+      <li>
+        <strong>Vertical scroll bar:</strong> A table header and footer (pagination) remains visible as the table body is scrolled.
+      </li>
+       <li>
+        <strong>Horizontal scroll bar:</strong> If you must need to shows large columns in a table, freezes identifiable attribute columns to the side of the table to help users read tables. It should change vertical border color at right side of fixed columns boundary to indicate that columns are freeze.
+      </li>
+  </ul>
+  <div class="table-with-scrollbar">
+    <div class="div-header">
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Deployment Plan</th>
+              <th>Type</th>
+              <th>Appliance</th>
+              <th>Deployed</th>
+              <th>Creator</th>
+            </tr>
+          </thead>
+      </table>
+    </div>
+    <div class="table-scrollable mCustomScrollbar mCustomScrollbar-dragger-hover">
+      <table class="table table-bordered table-hover">
+        <tbody>
+          <tr>
+            <td>Hotfix_DDEI</td>
+            <td>Hotfix</td>
+            <td>8</td>
+            <td>2016-06-02 23:15:00</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td>Hotfix_DDI_01</td>
+            <td>Virtual Analyzer image</td>
+            <td>12</td>
+            <td>2016-04-18 23:17:20</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td>TW_Patch_01_DDI</td>
+            <td>Firmware</td>
+            <td>29</td>
+            <td>2016-04-17 21:20:18</td>
+            <td>Operator</td>
+          </tr>
+          <tr>
+            <td>Patch_02_DDI</td>
+            <td>Hotfix</td>
+            <td>10</td>
+            <td>2016-03-20 21:00:55</td>
+            <td>Operator</td>
+          </tr>
+          <tr>
+            <td>JP_Hotfix_DDI</td>
+            <td>Hotfix</td>
+            <td>7</td>
+            <td>2016-03-11 12:34:02</td>
+            <td>Operator</td>
+          </tr>
+          <tr>
+            <td>JP_Hotfix_DDEI_01</td>
+            <td>Firmware</td>
+            <td>2</td>
+            <td>2016-03-10 10:12:36</td>
+            <td>Operator</td>
+          </tr>
+          <tr>
+            <td>TW_VA Image_DDAN</td>
+            <td>Virtual Analyzer image</td>
+            <td>22</td>
+            <td>2016-03-08 20:12:22</td>
+            <td>Operator</td>
+          </tr>
+          <tr>
+            <td>CN_Hotfix_DDI</td>
+            <td>Hotfix</td>
+            <td>86</td>
+            <td>2016-03-05 05:20:15</td>
+            <td>Administrator</td>
+          </tr>
+          <tr>
+            <td>CN_Patch_01_DDAN</td>
+            <td>Hotfix</td>
+            <td>2</td>
+            <td>2016-02-20 21:00:01</td>
+            <td>Operator</td>
+          </tr>
+          <tr>
+            <td>CN_Patch_02_DDEI</td>
+            <td>Firmware</td>
+            <td>6</td>
+            <td>2016-02-18 12:50:32</td>
+            <td>Operator</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class= "table-pagination">
+      <div class="table-pagination-block">
+        <div class="pagination-records">Records: 1-10 / 200</div>
+        <div class="dropdown">
+          <button class="btn btn-xs btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+            <span class="caret"></span>10 per page
+          </button>
+          <ul class="dropdown-menu dropdown-menu-multi-select">
+            <li class="selected"><a href="javascript:;">10</a></li>
+            <li><a href="javascript:;">25</a></li>
+            <li><a href="javascript:;">50</a></li>
+            <li><a href="javascript:;">100</a></li>
+          </ul>
+        </div>
+        <div class="pagination-input"><input type="text" value="1"> / 20</div>
+        <div>
+          <ul class="pagination">
+            <li>
+              <a href="javascript:;" aria-label="Previous">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;" aria-label="Next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-with-scrollbar">
+    <div class="table-horizontal-scrollable fixed-column">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Display Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-link"><a href="javascript:;">DDAN-CLUSTERS-01</a></td>
+          </tr>
+          <tr>
+            <td class="td-link"><a href="javascript:;">DDAN-HA-MASTER-01</a></td>
+          </tr>
+          <tr>
+            <td class="td-link"><a href="javascript:;">DDI-01</a></td>
+          </tr>
+          <tr>
+            <td class="td-link"><a href="javascript:;">DDI-02</a></td>
+          </tr>
+          <tr>
+            <td class="td-link"><a href="javascript:;">DDEI-01</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-horizontal-scrollable mCustomHorizontalScrollbar mCustomScrollbar-dragger-hover">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>VA Image Name - 1</th>
+            <th>VA Platform - 1</th>
+            <th>VA Image Name - 2</th>
+            <th>VA Platform - 2</th>
+            <th>VA Image Name - 3</th>
+            <th>VA Platform - 3</th>
+            <th>Last Deployed Plan</th>
+            <th>Product Name</th>
+            <th>Agent Version</th>
+            <th>Product GUID</th>
+            <th>Registered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>31.8.0.1</td>
+            <td>Windows_7_SP1_x86.ova</td>
+            <td>Microsoft Windows 7 Professional SP1 Build 7601 32bit</td>
+            <td>Windows_8.1_x64.ova</td>
+            <td>Microsoft Windows 8.1 Enterprise Build 9600 64bit</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td class="td-link"><a href="javascript:;">DDAN 5.8</a></td>
+            <td>Deep Discovery Analyzer</td>
+            <td>1.1.0.1048</td>
+            <td>1F57E0DE-D7CC-4614-B9A8-66BD45F49C88</td>
+            <td>2016-06-02 23:15:00</td> 
+          </tr>
+          <tr>
+            <td>31.8.0.1</td>
+            <td>Windows_7_SP1_x86.ova</td>
+            <td>Microsoft Windows 7 Professional SP1 Build 7601 32bit</td>
+            <td>Windows_8.1_x64.ova</td>
+            <td>Microsoft Windows 8.1 Enterprise Build 9600 64bit</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td class="td-link"><a href="javascript:;">DDAN 6.0</a></td>
+            <td>Deep Discovery Analyzer</td>
+            <td>1.1.0.1048</td>
+            <td>9CC8C72A-8841-4B2A-9227-893B87933836</td>
+            <td>2016-04-18 23:17:20</td>
+          </tr>
+          <tr>
+            <td>1.54.0.1</td>
+            <td>Windows_7_SP1_x86.ova</td>
+            <td>Microsoft Windows 7 Professional SP1 Build 7601 32bit</td>
+            <td>Windows_8.1_x64.ova</td>
+            <td>Microsoft Windows 8.1 Enterprise Build 9600 64bit</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td class="td-link"><a href="javascript:;">DDI 3.8 SP5</a></td>
+            <td>Deep Discovery Inspector</td>
+            <td>1.1.0.1048</td>
+            <td>5CB2E852-C419-4182-B05D-D03CB5E451C0</td>
+            <td>2016-04-17 21:20:18</td>
+          </tr>
+          <tr>
+            <td>1.54.0.2</td>
+            <td>win7sp1-en</td>
+            <td>Microsoft Windows 7 Professional SP1 Build 7601 32bit</td>
+            <td>Windows_8.1_x64.ova</td>
+            <td>Microsoft Windows 8.1 Enterprise Build 9600 64bit</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td class="td-link"><a href="javascript:;">DDI 3.8 SP5</a></td>
+            <td>Deep Discovery Inspector</td>
+            <td>1.1.0.1048</td>
+            <td>6BD8F4059EBF-442B9728-3CA4-8AF4-1538</td>
+            <td>2016-03-20 21:00:55</td>
+          </tr>
+          <tr>
+            <td>1.56.0.1</td>
+            <td>MAK_win7sp1en_offices_noab_ID8</td>
+            <td>N/A</td>
+            <td>xp-sp3</td>
+            <td>Microsoft Windows 8.1 Enterprise Build 9600 64bit</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td class="td-link"><a href="javascript:;">DDEI 2.6</a></td>
+            <td>Deep Discovery Email Inspector</td>
+            <td>1.1.0.1048</td>
+            <td>A975331E-D564-4500-AEA5-05486AA6FEEE</td>
+            <td>2016-03-11 12:34:02</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class= "table-pagination">
+      <div class="table-pagination-block">
+        <div class="pagination-records">Records: 1-10 / 200</div>
+        <div class="dropdown">
+          <button class="btn btn-xs btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+            <span class="caret"></span>10 per page
+          </button>
+          <ul class="dropdown-menu dropdown-menu-multi-select">
+            <li class="selected"><a href="javascript:;">10</a></li>
+            <li><a href="javascript:;">25</a></li>
+            <li><a href="javascript:;">50</a></li>
+            <li><a href="javascript:;">100</a></li>
+          </ul>
+        </div>
+        <div class="pagination-input"><input type="text" value="1"> / 20</div>
+        <div>
+          <ul class="pagination">
+            <li>
+              <a href="javascript:;" aria-label="Previous">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;" aria-label="Next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
