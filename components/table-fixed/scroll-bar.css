@@ -1,6 +1,6 @@
 .fixed-header-example .table-with-scrollbar .table-pagination {
 	width: 100%;
-	display: table;
+	vertical-align: top;
 }
 .fixed-header-example .table-with-scrollbar .table-pagination .table-pagination-block .pagination {
 	margin-bottom: 0;
