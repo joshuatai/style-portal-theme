@@ -22,6 +22,9 @@
 	border: 1px solid #ddd;
     border-left: 0;
 }
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable {
+	float: left;
+}
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table {
 	table-layout: auto;
 }
