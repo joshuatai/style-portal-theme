@@ -1,0 +1,96 @@
+body {
+	background: #EEE;
+    left: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+.banner {
+	padding-left: 24px;
+	height: 65px;
+	line-height: 60px;
+    background-color: #fff;
+    border-top: 4px solid #DB3D44;
+    border-bottom: 1px solid #CCC;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+}
+.brand-logo {
+	display: inline-block;
+}
+.brand h1 {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    line-height: 26px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+.container-fluid {
+    text-align: center;
+    padding-bottom: 41px;
+}
+.warning-page {
+    width: 550px;
+    margin: 70px auto 170px;
+}
+.container-heading {
+    margin-bottom: 20px;
+}
+.icon-warning {
+    background: url(../images/ico_warning.png) no-repeat center center transparent;
+    width: 144px;
+    height: 144px;
+    margin: 0 auto;
+}
+.content {
+    margin-top: 28px;
+    text-align: left;
+}
+.content a {
+    text-decoration: none;
+}
+.content a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 40px;
+    font-size: 12px;
+    text-align: left;
+    background: #f5f5f5;
+    padding: 0 24px; 
+    border-top: 1px solid #dddddd;
+    color: #666666;
+}
+footer .copyright {	
+	margin: 10px 0;
+	display: inline-block;
+}
+footer .footer-logo {
+	float: right;
+	margin: 6px 0;
+}
+
+footer .footer-links {
+	display: inline;
+	padding: 0;
+    margin-left: 20px;
+}
+footer .footer-links li:first-child {
+	margin-left: 0;
+}
+footer .footer-links li {
+	display: inline;
+    margin-left: 20px;
+}
+footer .footer-links li a {
+    text-decoration: none;
+}
