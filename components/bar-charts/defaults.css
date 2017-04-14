@@ -1,0 +1,13 @@
+.bar-chart-container {
+  min-width: 310px; 
+  height: 400px; 
+  margin: 0 auto;
+}
+.chart-title {
+	text-align: right;
+  	line-height: 30px;
+  	font-size: 12px;
+  	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  	color: #666666;
+    margin-right: 8px;
+}
