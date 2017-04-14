@@ -2,31 +2,25 @@ $(function () {
     var series = [
         {
             name: 'Ransomware',
-            data: [8, 5, 11, 17, 22, 24, 24]
-        }, 
+            data: [33, 66, 230, 130, 95]
+        },
         {
             name: 'Anti-spyware',
-            data: [7, 6, 9, 14, 18, 21, 25]
-        },  
+            data: [66, 133, 350, 195, 120]
+        },
         {
             name: 'Web Reputation',
-            data: [6, 3, 8, 13, 16, 18, 17]
-        }, 
-        {
-            name: 'Virus/Malware',
-            data: [3, 4, 5, 8, 11, 15, 17]
+            data: [180, 220, 510, 330, 230]
         }
-      ];
+    ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
-    
-    Highcharts.chart('percentage-area-container', {
+    Highcharts.chart('stacked-percent-bar-chart-container', {
         chart: {
-            type: 'area',
-            spacingTop: 15,
+            type: 'bar',
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".percentage-area-chart .legend");
+                var legend = $(".stacked-percent-bar-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
@@ -51,32 +45,30 @@ $(function () {
           enabled: false
         },
         xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats:{
-                day: '%m/%d'
+            categories: ['2013', '2014', '2015', '2016', '2017'],
+            labels: {
+                style: {
+                  fontSize: '12px',
+                  fontWeight: 'normal'
+                }
+            },
+            tickWidth: 0,
+            lineColor: '#e6e6e6'
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: null
             },
             labels: {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal',
-                  paddingBottom: '10px'
-                }
-            },
-            tickWidth: 0,
-            lineColor: '#e6e6e6',
-            crosshair: {
-                width: 1,
-                color: "#dddddd"
-            }
-        },
-        yAxis: {
-            title: {
-                text: 'Percentage'
-            },
-            labels: {
-                style: {
-                  fontSize: '12px',
-                  fontWeight: 'normal'
+                  padding: "10px 0",
+                  textOverflow: 'none'
+                },
+                formatter: function() {
+                    return this.value+"%";
                 }
             }
         },
@@ -85,32 +77,15 @@ $(function () {
         },
         series: series,
         plotOptions: {
-            area: {
-                stacking: 'percent'
-            },
             series: {
-                pointStart: Date.UTC(2016, 9, 10),
-                pointIntervalUnit: 'day',
-                fillOpacity: 0.25,
-                marker: {  
-                    radius: 4,
-                    symbol: 'circle',
+                stacking: 'percent',
+                pointWidth: 25,
                 states: {
                     hover: {
-                        lineWidth: 3,
-                        radius: 5
-                    }
-                }
-            },
-            states: {
-                hover: {
-                    halo: {
-                        size: 13,
-                        opacity: 0.2
+                        brightness: 0.12
                     }
                 }
             }
-          }
         },
         tooltip: {
             shared: true,
@@ -118,14 +93,14 @@ $(function () {
             borderColor: '#BBBBBB',
             padding: 16,
             useHTML: true,
-            headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
+            headerFormat: '<table><thead><tr><td>{point.x}</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
                 '<td>{point.y:,.0f} <span>({point.percentage:.1f}%)</span></td></tr>',
             footerFormat: '</table>'
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.percentage-area-chart .legend li', function (event) {
+        $(document).on('click', '.stacked-percent-bar-chart .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];

@@ -157,7 +157,8 @@ $(function () {
                   fontWeight: 'normal'
                 }
             },
-            tickWidth: 0
+            tickWidth: 0,
+            lineColor: '#e6e6e6'
         },
         yAxis: {
             title: {

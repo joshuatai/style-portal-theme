@@ -6,6 +6,10 @@
   height: 350px; 
   margin: 0 auto;
 }
+.bar-chart-container { 
+  height: 400px; 
+  margin: 0 auto;
+}
 
 .style-portal {
   .highcharts {
@@ -21,6 +25,13 @@
       }
       &.yAxis {
         border: 1px solid #e6e6e6;
+      }
+      .chart-title {
+          text-align: right;
+          line-height: 30px;
+          font-size: 12px;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+          color: #666666;
       }
     }
     .series {
@@ -47,6 +58,20 @@
     .area-tooltips {
       border: 1px solid #bbbbbb;
     }
+    .bar-chart {
+      .series {
+        width: 24px;
+        &.grouped {
+          width: 8px;
+          .bar-grouped {
+            height: 6px;
+          }
+        }
+        &.stacked {
+          border: 1px solid #ffffff;
+        }
+      }
+    }
   }
 }
 
@@ -59,12 +84,17 @@
   }
   > thead > tr > td{
     padding-bottom: 4px;
+    font-weight: bold;
   }
   > tbody > tr > td:first-child {
     padding-right: 16px;
   }
   > tbody > tr > td:last-child {
     text-align: right;
+    font-weight: bold;
+    > span {
+      font-weight: normal;
+    }
   }
 }
 

@@ -1,0 +1,17 @@
+{
+  "id": "5a863496-b0ab-4989-bb55-e1c8daa17fc0",
+  "name": "Bar Chart",
+  "location": "bar-charts/structure.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}
