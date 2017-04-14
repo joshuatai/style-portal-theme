@@ -1,0 +1,52 @@
+
+.templates .segment-panel {
+  height: auto;
+  min-height: 400px;
+}
+
+.templates .segment-content {
+  position: static;
+}
+
+.template {
+  float: left;
+  margin: 0 24px 24px 0;
+}
+
+.template:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .template {
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 996px) {
+  .template {
+    width: 350px;  /* TODO: calc(50% - 24px) */
+  }
+}
+
+.template-screenshot-link {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  height: 269px; /* TODO: Height should be flexiable for RWD */
+  padding: 12px;
+}
+
+.template-screenshot-link:hover {
+  border: 1px solid #999;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.template-screenshot-image {
+  width: 100%;
+}
+
+.template-description {
+  height: 60px;
+  margin-bottom: 24px;
+}

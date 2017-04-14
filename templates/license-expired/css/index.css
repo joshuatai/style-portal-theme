@@ -35,10 +35,10 @@ body {
 }
 .error-page {
     width: 550px;
-    margin: 70px auto 170px;
+    margin: 72px auto 170px;
 }
 .container-heading {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .icon-error {
     background: url(../images/ico_error.png) no-repeat center center transparent;
@@ -47,14 +47,11 @@ body {
     margin: 0 auto;
 }
 .content {
-    margin-top: 28px;
+    margin-top: 24px;
     text-align: left;
 }
 .content a {
     text-decoration: none;
-}
-.content a:hover {
-    text-decoration: underline;
 }
 
 footer {
