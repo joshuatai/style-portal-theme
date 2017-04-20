@@ -1,0 +1,17 @@
+{
+  "id": "f5041711-7d85-4245-80bb-fc1e273c5dcc",
+  "name": "Column Chart",
+  "location": "column-charts/structure.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

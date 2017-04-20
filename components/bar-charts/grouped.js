@@ -64,7 +64,7 @@ $(function () {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal',
-                  padding: "10px 0"
+                  paddingBottom: '10px'
                 }
             }
         },

@@ -11,16 +11,20 @@ $(function () {
         {
             name: 'Web Reputation',
             data: [180, 220, 510, 330, 230]
+        },
+        {
+            name: 'Virus/Malware',
+            data: [40, 70, 450, 250, 110]
         }
     ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
-    Highcharts.chart('stacked-bar-chart-container', {
+    Highcharts.chart('grouped-column-chart-container', {
         chart: {
-            type: 'bar',
+            type: 'column',
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".stacked-bar-chart .legend");
+                var legend = $(".grouped-column-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
@@ -49,7 +53,8 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  paddingBottom: '10px'
                 }
             },
             tickWidth: 0,
@@ -58,14 +63,12 @@ $(function () {
         yAxis: {
             min: 0,
             title: {
-                text: null
+                text: 'Total Scanned Traffic (GB)'
             },
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal',
-                  paddingBottom: '10px',
-                  textOverflow: 'none'
+                  fontWeight: 'normal'
                 }
             }
         },
@@ -75,8 +78,9 @@ $(function () {
         series: series,
         plotOptions: {
             series: {
-                stacking: 'normal',
-                pointWidth: 25,
+                pointWidth: 8,
+                borderWidth: 0,
+                groupPadding: 0.25,
                 states: {
                     hover: {
                         brightness: 0.12
@@ -97,7 +101,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.stacked-bar-chart .legend li', function (event) {
+        $(document).on('click', '.grouped-column-chart .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];

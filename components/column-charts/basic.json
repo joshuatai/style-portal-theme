@@ -1,0 +1,19 @@
+{
+  "id": "26b50ba8-99d9-468c-bd1b-de7488b50883",
+  "name": "Basic Column Chart",
+  "location": "column-charts/basic.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-8"
+  }
+}

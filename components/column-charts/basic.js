@@ -2,25 +2,17 @@ $(function () {
     var series = [
         {
             name: 'Ransomware',
-            data: [33, 66, 230, 130, 95]
-        },
-        {
-            name: 'Anti-spyware',
-            data: [66, 133, 350, 195, 120]
-        },
-        {
-            name: 'Web Reputation',
-            data: [180, 220, 510, 330, 230]
+            data: [75, 95, 110, 230, 175, 120, 95, 80, 115, 140, 115, 80]
         }
     ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
-    Highcharts.chart('stacked-bar-chart-container', {
+    Highcharts.chart('basic-column-chart-container', {
         chart: {
-            type: 'bar',
+            type: 'column',
             spacingBottom: 0,
-            events: {
+            /*events: {
               load: function () {
-                var legend = $(".stacked-bar-chart .legend");
+                var legend = $(".basic-column-chart .legend");
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
@@ -32,7 +24,7 @@ $(function () {
                     }
                 }
               }
-            },
+            },*/
             style: {
               fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif'
             }
@@ -45,11 +37,25 @@ $(function () {
           enabled: false
         },
         xAxis: {
-            categories: ['2013', '2014', '2015', '2016', '2017'],
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+            ],
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  paddingBottom: '10px'
                 }
             },
             tickWidth: 0,
@@ -58,14 +64,12 @@ $(function () {
         yAxis: {
             min: 0,
             title: {
-                text: null
+                text: 'Total Scanned Traffic (GB)'
             },
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal',
-                  paddingBottom: '10px',
-                  textOverflow: 'none'
+                  fontWeight: 'normal'
                 }
             }
         },
@@ -75,7 +79,6 @@ $(function () {
         series: series,
         plotOptions: {
             series: {
-                stacking: 'normal',
                 pointWidth: 25,
                 states: {
                     hover: {
@@ -85,9 +88,7 @@ $(function () {
             }
         },
         tooltip: {
-            shared: true,
             backgroundColor: '#FFFFFF',
-            borderColor: '#BBBBBB',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x}</td></tr></thead>',
@@ -97,7 +98,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.stacked-bar-chart .legend li', function (event) {
+        /*$(document).on('click', '.basic-column-chart .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];
@@ -110,6 +111,6 @@ $(function () {
                 series.show();
               }
             }
-        });
+        });*/
     });
 });
