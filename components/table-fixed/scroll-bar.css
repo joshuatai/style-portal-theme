@@ -19,8 +19,7 @@
 }
 .fixed-header-example .table-with-scrollbar .mCustomScrollbar-dragger-hover .mCSB_draggerRail {
 	background-color: #e6e6e6;
-	border: 1px solid #ddd;
-    border-left: 0;
+    border-right: 1px solid #dddddd;
 }
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable {
 	float: left;
@@ -33,6 +32,9 @@
     white-space: nowrap;
     text-align: left;
 }
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table > tbody > tr.hover {
+    background-color: #e6f4fc;
+}
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.fixed-column {
 	width: 240px;
 }
@@ -41,8 +43,9 @@
     height: 8px;
     width: 240px;
     display: block;
-	background-color: #e6e6e6;
+	background-color: rgba(230, 230, 230, 0.8);
 	border-right: 1px solid #bbbbbb;
+	border-left: 1px solid #dddddd;
 }
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar {
 	max-width: calc(100% - 240px);
@@ -73,8 +76,5 @@
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
 	height: 8px;
 	margin: 0;
+	border: 0;
 }
-.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .mCustomScrollbar-dragger-hover .mCSB_draggerRail {
-	background-color: #e6e6e6;
-}
-
