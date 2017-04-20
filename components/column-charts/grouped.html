@@ -1,0 +1,38 @@
+<section class="css-reference">
+	<h5>Series Bar Markers</h5>
+	<pre>
+		<style data-selector=".style-portal .highcharts .bar-chart .series.grouped"></style>
+	</pre>
+	<pre>
+		<style data-selector=".style-portal .highcharts .bar-chart .series.grouped .column-grouped">Space between the bar maker in every category.</style>
+	</pre>
+	<h5>Legend Wrapper</h5>
+  	<pre>
+    	<style data-selector="section.legend"></style>
+	</pre>
+	<h5>Legend Container</h5>
+	  	<p>Wrap all the symbols and names of the series with a <code data-tag="ul"></code> element.</p>
+	<pre>
+	    <style data-selector="section.legend ul"></style>
+	</pre>
+	<h5>Legend</h5>
+		<p>Use <code data-tag="li"></code> for each series under the <code data-tag="ul"></code> element.</p>
+	<pre>
+	    <style data-selector="section.legend ul li"></style>
+	</pre>
+	<pre data-title="More than one legends in a row:">
+	    <style data-selector="section.legend ul li + li"></style>
+	</pre>
+	<pre data-title="Mute state:">
+	    <style data-selector="section.legend ul li.mute"></style>
+	</pre>
+	<pre data-title=":before">
+	    <style data-selector="section.legend ul li:before"></style>
+	</pre>
+</section>
+<section class="column-charts-example grouped-column-chart">
+	<div id="grouped-column-chart-container" class="column-chart-container"></div>
+	<section class="legend">
+        <ul></ul>
+    </section>
+</section>
