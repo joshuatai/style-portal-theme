@@ -1,7 +1,7 @@
 {
   "id": "f882c6c6-2a88-43a2-898b-a7c8fb01fdc6",
   "from": ["ed131974-58a7-408b-b724-b24bd9831cbe"],
-  "name": "Row selection",
+  "name": "Row Selection",
   "location": "table-basic/row-selection.html",
   "dependencies": [],
   "actions": [

@@ -1,7 +1,7 @@
 {
   "id": "5c28cda7-972c-4b7c-94ec-b105b79ad7b9",
   "from": ["ed131974-58a7-408b-b724-b24bd9831cbe"],
-  "name": "Tables without data",
+  "name": "Tables without Data",
   "location": "table-basic/table-without-data.html",
   "dependencies": [],
   "actions": [
