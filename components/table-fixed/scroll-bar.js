@@ -4,9 +4,14 @@ $(container).children().css('z-index', 2);
 $(".mCustomScrollbar").mCustomScrollbar();
 
 $(".mCustomHorizontalScrollbar").mCustomScrollbar({
-	axis:"x"
-});  
-
+    axis:"x"
+}); 
+$(".mCustomHorizontalScrollbar .mCSB_container").on("mousewheel", function(e){     
+    if(!e.shiftKey) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});
 
 $('.table-horizontal-scrollable .table > tbody > tr').each(function() {
     var index = $(this).index();
