@@ -1,3 +1,6 @@
+var container = this;
+$(container).children().css('z-index', 2);
+
 $(".mCustomScrollbar").mCustomScrollbar();
 
 $(".mCustomHorizontalScrollbar").mCustomScrollbar({
