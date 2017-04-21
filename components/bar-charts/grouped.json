@@ -1,6 +1,6 @@
 {
   "id": "8cc80a01-3e2e-43dc-8713-608c5b32644a",
-  "name": "Bar Chart with Multiple Data Groups",
+  "name": "Grouped Bar Chart",
   "location": "bar-charts/grouped.html",
   "dependencies": [
     "highcharts-5.0.6"

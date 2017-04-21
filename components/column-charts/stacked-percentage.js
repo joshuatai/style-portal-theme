@@ -108,7 +108,7 @@ $(function () {
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x}</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
-                '<td>{point.y:,.0f} <span>({point.percentage:.1f}%)</span></td></tr>',
+                '<td>{point.y:,.0f} GB <span>({point.percentage:.1f}%)</span></td></tr>',
             footerFormat: '</table>'
         }
     }, function (chart) {

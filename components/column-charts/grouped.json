@@ -1,6 +1,6 @@
 {
   "id": "2ad1fad3-fa9d-4030-993d-2b1bf31b28df",
-  "name": "Grouped Column Chart with Legends",
+  "name": "Grouped Column Chart",
   "location": "column-charts/grouped.html",
   "dependencies": [
     "highcharts-5.0.6"

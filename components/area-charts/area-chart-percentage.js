@@ -71,12 +71,15 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'Percentage'
+                text: null
             },
             labels: {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal'
+                },
+                formatter: function() {
+                    return this.value+"%";
                 }
             }
         },

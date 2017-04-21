@@ -1,6 +1,6 @@
 {
   "id": "a26a5096-fe96-4155-94ba-ddfab3f6de9b",
-  "name": "Basic Stacked Bar Chart",
+  "name": "Stacked Bar Chart",
   "location": "bar-charts/stacked.html",
   "dependencies": [
     "highcharts-5.0.6"

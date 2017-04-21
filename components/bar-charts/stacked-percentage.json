@@ -1,6 +1,6 @@
 {
   "id": "943cf8b9-cd98-4134-9688-d222c2cd1a8f",
-  "name": "Stacked Bar Chart That Adds Up to 100%",
+  "name": "Percentage Stacked Bar Chart",
   "location": "bar-charts/stacked-percentage.html",
   "dependencies": [
     "highcharts-5.0.6"

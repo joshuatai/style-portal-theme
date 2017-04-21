@@ -1,6 +1,6 @@
 {
   "id": "7fcb143b-5bfc-4bde-97cc-b0b5033c5c07",
-  "name": "Stacked Percentage Column Chart with Legends",
+  "name": "Percentage Stacked Column Chart",
   "location": "column-charts/stacked-percentage.html",
   "dependencies": [
     "highcharts-5.0.6"
