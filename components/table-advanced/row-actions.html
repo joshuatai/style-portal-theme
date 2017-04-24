@@ -1,0 +1,134 @@
+<section class="css-reference">
+	<h5>Table cells with action buttons</h5>
+	<pre>
+    <style data-selector=".table > tbody > tr > td.td-actions"></style>
+  </pre>
+
+	<h5>Action button group</h5>
+	<p>Create a class to define a group which wraps the action buttons or button group.</p>
+	<pre>
+    <style data-selector=".table-row-actions"></style>
+  </pre>
+	<pre data-title="Nested button groups">
+    <style data-selector=".table-row-actions > .table-row-actions"></style>
+  </pre>
+
+	<h5>Action button class</h5>
+	<p>This button class can be used for <code data-tag="button"></code>, and <code data-tag="input"></code> elements.</p>
+	<pre data-title="Button class within action button group">
+    <style data-selector=".btn-table-row-action"></style>
+  </pre>
+	<pre data-title=":active, :focus">
+    <style data-selector=".btn-table-row-action:focus"></style>
+  </pre>
+	<pre data-title="More than one button or button groups">
+    <style data-selector=".table-row-actions .btn-table-row-action + .btn-table-row-action"></style>
+  </pre>
+
+	<h5>Icon color</h5>
+	<p>Change icon color when hovering or focusing the button</p>
+	<pre data-title=":hover, :focus">
+    <style data-selector=".btn-table-row-action:hover .fa"></style>
+  </pre>
+</section>
+
+<section class="tables-basic-example">
+	<p>These actions will allow users to take actions only affect that row within the table since some use case that actions cannot workable when multiple items are selected. </p>
+
+	<ul>
+		<li>When hovering over an icon button, show the icon in another color and display the action name in a tooltip.</li>
+		<li> In the event that more than three additional actions are needed, used to highlight one main actions by collapsing less important ones under the ellipsis.<span class="help-block">Note: The following example shows one possible actions for demo purposes.</span></li>
+	</ul>
+
+	<table class="table table-bordered table-hover table-row-actions-example">
+		<thead>
+			<tr>
+				<th>Deployment Plan</th>
+				<th>Type</th>
+				<th>Appliance</th>
+				<th>Deployed</th>
+				<th>Creator</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>
+				<td>8</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+				<td class="td-actions">
+					<div class="table-row-actions" role="group">
+						<button class="btn-table-row-action" data-placement="top" data-container="body" title="Edit">
+							<span class="fa fa-pencil"></span>
+						</button>
+
+						<div class="table-row-actions" role="group">
+							<button class="btn-table-row-action dropdown-toggle" data-toggle="dropdown" data-placement="top" title="More">
+								<span class="fa fa-ellipsis-v"></span>
+							</button>
+
+							<ul class="dropdown-menu pull-right">
+								<li><a href="javascript:;">Delete</a></li>
+								<li><a href="javascript:;">Copy</a></li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td>12</td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+				<td class="td-actions">
+					<div class="table-row-actions" role="group">
+						<button class="btn-table-row-action" data-placement="top" data-container="body" title="Edit">
+							<span class="fa fa-pencil"></span>
+						</button>
+
+						<div class="table-row-actions" role="group">
+							<button class="btn-table-row-action dropdown-toggle" data-toggle="dropdown" data-placement="top" title="More">
+								<span class="fa fa-ellipsis-v"></span>
+							</button>
+
+							<ul class="dropdown-menu pull-right">
+								<li><a href="javascript:;">Delete</a></li>
+								<li><a href="javascript:;">Copy</a></li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>29</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+				<td class="td-actions">
+					<div class="table-row-actions" role="group">
+						<button class="btn-table-row-action" data-placement="top" data-container="body" title="Edit">
+							<span class="fa fa-pencil"></span>
+						</button>
+
+						<div class="table-row-actions" role="group">
+							<button class="btn-table-row-action dropdown-toggle" data-toggle="dropdown" data-placement="top" title="More">
+								<span class="fa fa-ellipsis-v"></span>
+							</button>
+
+							<ul class="dropdown-menu pull-right">
+								<li><a href="javascript:;">Delete</a></li>
+								<li><a href="javascript:;">Copy</a></li>
+							</ul>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
