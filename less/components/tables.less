@@ -40,9 +40,15 @@ th {
         vertical-align: top;
         overflow: hidden;
 
+        &.td-link {
+          padding: 0;
+        }
+
         //line-height: @line-height-base;
         a {
+          display: block;
           text-decoration: none;
+          padding: @table-cell-padding;
         }
       }
     }
@@ -244,15 +250,6 @@ th {
   > tbody > tr:hover {
     background-color: @table-bg-hover;
   }
-  > tbody > tr > td.td-link {
-    &:hover {
-      cursor: pointer;
-      a {
-        text-decoration: underline;
-        color: #db3d44;
-      }
-    }
-  }
 }
 
 // Sortable effect
@@ -309,6 +306,10 @@ th {
       > th,
       > td {
         padding: 4px 12px;
+
+        a {
+          padding: 4px 12px;
+        }
       }
     }
   }
@@ -323,6 +324,10 @@ th {
       > th,
       > td {
         padding: 12px 12px;
+
+        a {
+          padding: 12px 12px;
+        }
       }
     }
   }
