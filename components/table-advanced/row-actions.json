@@ -1,6 +1,6 @@
 {
   "id": "27557042-0d0f-41f9-a1a2-2092af954d7f",
-  "name": "Single Row Actions",
+  "name": "Single Row Actions with an Icon",
   "location": "table-advanced/row-actions.html",
   "dependencies": [],
   "actions": [
