@@ -6,18 +6,23 @@
 	<pre data-title="Drag state">
 		<style data-selector=".JCLRgripDrag"></style>
 	</pre>
+
+	<h5>Column minimum width</h5>
+	<p>Use a minimum width for resizable columns if full content does not have to be shown.</p>
+	<pre>
+		<style data-selector=".table-col-min-width"></style>
+	</pre>
 </section>
 
 <section class="tables-advanced-example">
 	<p>Resize table columns by dragging the border between any table headers.</p>
 	<ul>
 		<li>When hovering over the borders of any resizable table headers, display a col-resize cursor and show the border in another color to indicate resizability. Add a translucent border when users drag the border.</li>
-		<li>Use a minimum width of 56px for resizable columns if full content does not have to be shown.</li>
 		<li>It is recommended to support automatic column resizing to display the longest entry of the column in one line by double clicking the right border of its table header.</li>
 	</ul>
 	<table id="resize" class="table table-bordered table-longtext-truncated table-hover table-resize">
 		<thead>
-			<tr>          
+			<tr>
 				<th>Deployment Plan</th>
 				<th>Type</th>
 				<th>Appliance</th>
@@ -26,21 +31,21 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>          
+			<tr>
 				<td>Hotfix_DDEI</td>
-				<td>Hotfix</td>          
+				<td>Hotfix</td>
 				<td>8</td>
 				<td>2016-06-02 23:15:00</td>
 				<td>Administrator</td>
 			</tr>
-			<tr>          
+			<tr>
 				<td>Hotfix_DDI_01</td>
 				<td>Virtual Analyzer image</td>
 				<td>12</td>
 				<td>2016-04-18 23:17:20</td>
 				<td>Administrator</td>
 			</tr>
-			<tr>          
+			<tr>
 				<td>TW_Patch_01_DDI</td>
 				<td>Firmware</td>
 				<td>29</td>
