@@ -26,3 +26,6 @@
 	position: absolute;
 	z-index: 1070;
 }
+.table + .table {
+	margin-top: 24px;
+}
