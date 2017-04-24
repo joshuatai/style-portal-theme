@@ -44,8 +44,12 @@ th {
           padding: 0;
         }
 
+        &.td-actions {
+          overflow: visible;
+        }
+
         //line-height: @line-height-base;
-        a {
+        > a {
           display: block;
           text-decoration: none;
           padding: @table-cell-padding;
@@ -307,7 +311,7 @@ th {
       > td {
         padding: 4px 12px;
 
-        a {
+        > a {
           padding: 4px 12px;
         }
       }
@@ -325,7 +329,7 @@ th {
       > td {
         padding: 12px 12px;
 
-        a {
+        > a {
           padding: 12px 12px;
         }
       }
@@ -434,6 +438,60 @@ table {
         }
       }
 
+    }
+  }
+}
+
+// Row action buttons
+
+// Make the div behave like a button
+.table-row-actions {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.table-row-actions {
+  .btn-table-row-action + .btn-table-row-action,
+  .btn-table-row-action + .table-row-actions,
+  .table-row-actions + .btn-table-row-action,
+  .table-row-actions + .table-row-actions {
+    margin-left: 4px;
+  }
+
+  > .table-row-actions {
+    float: left;
+  }
+}
+
+.btn-table-row-action {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  white-space: nowrap;
+  padding: 0;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  float: left;
+
+  &:active,
+  &:focus, {
+    background: none;
+    outline: none;
+  }
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    .fa {
+      color: @btn-default-color;
     }
   }
 }
