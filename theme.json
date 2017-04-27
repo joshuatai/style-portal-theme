@@ -17,6 +17,16 @@
     "icon": [
       "images/icon/form.png",
       "images/icon/home.png"
+    ],
+    "fonts": [
+      "fonts/Interstate-ExtraLight-webfont.eot",
+      "fonts/Interstate-ExtraLight-webfont.svg",
+      "fonts/Interstate-ExtraLight-webfont.ttf",
+      "fonts/Interstate-ExtraLight-webfont.woff",
+      "fonts/Interstate-Light-webfont.eot",
+      "fonts/Interstate-Light-webfont.svg",
+      "fonts/Interstate-Light-webfont.ttf",
+      "fonts/Interstate-Light-webfont.woff"
     ]
   }
 }
