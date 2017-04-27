@@ -359,6 +359,7 @@
       "3492581d-a555-4690-911f-67a93999693a",
       "16daf5af-4379-4a21-869d-b625f3f22f66",
       "84ac9650-408c-4c4a-a5a6-62e49e39e9aa",
+      "16165a7c-77ff-45b8-b28b-51c21804fdbf",
       "44693e7b-0c49-4264-8640-5f765ebded82"
     ]
   },
@@ -378,7 +379,28 @@
       "bar chart",
       "chart"
     ],
-    "segments": []
+    "segments": [
+      "5a863496-b0ab-4989-bb55-e1c8daa17fc0",
+      "e9d3bf97-faac-4568-b239-4fdd87a212ff",
+      "8cc80a01-3e2e-43dc-8713-608c5b32644a",
+      "a26a5096-fe96-4155-94ba-ddfab3f6de9b",
+      "943cf8b9-cd98-4134-9688-d222c2cd1a8f"
+    ]
+  },
+  {
+    "id": "3adc8bca-8ab1-40d5-b447-97ed0a8899c4",
+    "name": "Column Charts",
+    "keywords": [
+      "column chart",
+      "chart"
+    ],
+    "segments": [
+      "f5041711-7d85-4245-80bb-fc1e273c5dcc",
+      "26b50ba8-99d9-468c-bd1b-de7488b50883",
+      "2ad1fad3-fa9d-4030-993d-2b1bf31b28df",
+      "c1fe19f5-76c2-402d-a04a-d7d3a76893bb",
+      "7fcb143b-5bfc-4bde-97cc-b0b5033c5c07"
+    ]
   },
   {
     "id": "ccf72043-8aee-4dfd-b976-888dbb12ef7b",
@@ -429,10 +451,18 @@
   },
   {
     "id": "510755b0-3de5-45ef-a288-f59b51051444",
-    "name": "Common Templates",
+    "name": "Log On",
     "keywords": null,
     "segments": [
       "f0d4e63c-729c-4feb-b18f-2af7f40f0d12"
+    ]
+  },
+  {
+    "id": "473c91cd-3ff7-478b-bde5-d46298d736e8",
+    "name": "Service Status",
+    "keywords": null,
+    "segments": [
+      "2b8e3649-9e95-44a4-9cb1-83a23bfa975f"
     ]
   },
   {
@@ -487,7 +517,8 @@
     "segments": [
       "e26756ec-9811-4429-8435-6fb6f24c4e95",
       "8f8315e8-d95a-4cef-92bd-dcb90f28f3ea",
-      "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df"
+      "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df",
+      "27557042-0d0f-41f9-a1a2-2092af954d7f"
     ]
   },
   {
@@ -499,6 +530,7 @@
       "table"
     ],
     "segments": [
+      "c7ddc689-9f5e-40d2-8614-40ddfd5b3753",
       "6e87a4d1-0e5e-44f0-8550-eed86ad72b86"
     ]
   },

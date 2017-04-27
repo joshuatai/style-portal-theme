@@ -158,6 +158,7 @@ $(function () {
                 }
             },
             tickWidth: 0,
+            lineColor: '#e6e6e6',
             crosshair: {
                 width: 1,
                 color: "#dddddd"

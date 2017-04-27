@@ -1,0 +1,48 @@
+<section class="css-reference">
+  <h5>Series Bar Markers</h5>
+  <pre>
+		<style data-selector=".style-portal .highcharts .bar-chart .series.grouped"></style>
+	</pre>
+  <pre>
+		<style data-selector=".style-portal .highcharts .bar-chart .series.grouped .bar-grouped">Space between the bar maker in every category.</style>
+	</pre>
+  <h5>Tooltip Wrapper for Bar Chart with Multiple Data Groups</h5>
+  <pre>
+    <style data-selector=".style-portal .highcharts .area-tooltips"></style>
+  </pre>
+  <h5>Legend Wrapper</h5>
+  <pre>
+    <style data-selector=".legend"></style>
+	</pre>
+  <pre>
+		<style data-selector=".legend:not(.legend-vertical)">Bottom legend</style>
+	</pre>
+  <h5>Legend Container</h5>
+  <p>Wrap all the symbols and names of the series with a <code data-tag="ul"></code> element.</p>
+  <pre>
+    <style data-selector=".legend ul"></style>
+	</pre>
+  <h5>Legend</h5>
+  <p>Use <code data-tag="li"></code> for each series under the <code data-tag="ul"></code> element.</p>
+  <pre>
+    <style data-selector=".legend ul li"></style>
+	</pre>
+  <pre data-title="More than one legends in a row:">
+    <style data-selector=".legend ul li + li"></style>
+	</pre>
+  <pre data-title="Mute state:">
+    <style data-selector=".legend ul li.mute"></style>
+	</pre>
+  <pre data-title=":before">
+    <style data-selector=".legend ul li:before"></style>
+	</pre>
+</section>
+<section class="bar-charts-example grouped-bar-chart">
+  <div id="grouped-bar-chart-container" class="bar-chart-container bar-chart-container"></div>
+  <section class="chart-title">
+    <span>Total Scanned Traffic (GB)</span>
+  </section>
+  <section class="legend">
+    <ul></ul>
+  </section>
+</section>

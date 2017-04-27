@@ -1,0 +1,17 @@
+{
+  "id": "f0d4e63c-729c-4feb-b18f-2af7f40f0d12",
+  "name": "Log On",
+  "location": "log-on/log-on.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-xs-12 templates",
+    "row": "row-md-6"
+  }
+}

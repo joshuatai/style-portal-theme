@@ -1,0 +1,19 @@
+{
+  "id": "e9d3bf97-faac-4568-b239-4fdd87a212ff",
+  "name": "Basic Bar Chart",
+  "location": "bar-charts/basic.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-8"
+  }
+}

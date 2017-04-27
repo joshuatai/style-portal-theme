@@ -63,6 +63,7 @@ $(function () {
                 }
             },
             tickWidth: 0,
+            lineColor: '#e6e6e6',
             crosshair: {
                 width: 1,
                 color: "#dddddd"
@@ -70,12 +71,15 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'Percentage'
+                text: null
             },
             labels: {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal'
+                },
+                formatter: function() {
+                    return this.value+"%";
                 }
             }
         },
@@ -119,7 +123,7 @@ $(function () {
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {series.name} </td>' +
-                '<td>{point.percentage:.1f}% ({point.y:,.0f})</td></tr>',
+                '<td>{point.y:,.0f} <span>({point.percentage:.1f}%)</span></td></tr>',
             footerFormat: '</table>'
         }
     }, function (chart) {

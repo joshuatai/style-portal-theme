@@ -1,25 +1,25 @@
 <section class="css-reference">
-  <h3>A selected table cell</h3>
-  <pre>
+	<h5>A selected table cell</h5>
+	<pre>
     <style data-selector=".table > tbody > tr.active > td"></style>
   </pre>
-  <h5>Table columns with icons</h5>
-  <pre>
+	<h5>Table columns with icons</h5>
+	<pre>
     <style data-selector=".table > thead > tr > th.gutter">Set width on the table header cell</style>
   </pre>
 </section>
 
 <section class="tables-basic-example">
+	<p>Change the color of a table row when it is selected.</p>
 	<ul>
-		<li>Change the color of a table row when it is selected.</li>
-		<li>Row selection should take effect when users click anywhere in a row, except for table cells that contain hyperlinks. (Note: In the following example, several checkboxes are greyed out for demo purposes.)</li>
+		<li>Row selection should take effect when users click anywhere in a row, except for table cells that contain hyperlinks.<span class="help-block">Note: In the following example, several checkboxes are greyed out for demo purposes.</span></li>
 	</ul>
 	<table class="table table-bordered table-hover table-row-selection">
 		<thead>
 			<tr>
 				<th class="gutter">
 					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="tablecheckboxs1" class="input-checkbox checkbox-partial">
+						<input type="checkbox" name="tablecheckboxs" id="tablecheckboxs1" class="input-checkbox checkbox-partial" disabled>
 						<label for="tablecheckboxs1"></label>
 					</div>
 				</th>
@@ -67,6 +67,65 @@
 				<td>TW_Patch_01_DDI</td>
 				<td>Firmware</td>
 				<td>29</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table-bordered table-hover table-row-selection table-selectable">
+		<thead>
+			<tr>
+				<th class="gutter">
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-checkbox-ctrl-2" class="input-checkbox">
+						<label for="table-checkbox-ctrl-2"></label>
+					</div>
+				</th>
+				<th>Deployment Plan</th>
+				<th>Type</th>
+				<th>Appliance</th>
+				<th>Deployed</th>
+				<th>Creator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td scope="row">
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="row-2-1" class="input-checkbox">
+						<label for="row-2-1"></label>
+					</div>
+				</td>
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>
+				<td class="td-link"><a href="javascript:;">8</a></td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td scope="row">
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="row-2-2" class="input-checkbox">
+						<label for="row-2-2"></label>
+					</div>
+				</td>
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td class="td-link"><a href="javascript:;">12</a></td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td scope="row">
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="row-2-3" class="input-checkbox">
+						<label for="row-2-3"></label>
+					</div>
+				</td>
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td class="td-link"><a href="javascript:;">29</a></td>
 				<td>2016-04-17 21:20:18</td>
 				<td>Operator</td>
 			</tr>

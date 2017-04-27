@@ -1,1 +1,0 @@
-$(".mCustomScrollbar", this).mCustomScrollbar();

@@ -1,0 +1,19 @@
+{
+  "id": "7fcb143b-5bfc-4bde-97cc-b0b5033c5c07",
+  "name": "Percentage Stacked Column Chart",
+  "location": "column-charts/stacked-percentage.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-8"
+  }
+}

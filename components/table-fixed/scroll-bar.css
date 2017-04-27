@@ -1,0 +1,80 @@
+.fixed-header-example .table-with-scrollbar .table-pagination {
+	width: 100%;
+	vertical-align: top;
+}
+.fixed-header-example .table-with-scrollbar .table-pagination .table-pagination-block .pagination {
+	margin-bottom: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-scrollable .table {
+	border: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-scrollable .table > tbody > tr:first-child > td {
+	border-top: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-scrollable .table > tbody > tr:last-child > td {
+	border-bottom: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-scrollable .mCSB_inside > .mCSB_container {
+	margin-right: 0;
+}
+.fixed-header-example .table-with-scrollbar .mCustomScrollbar-dragger-hover .mCSB_draggerRail {
+	background-color: #e6e6e6;
+    border-right: 1px solid #dddddd;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable {
+	float: left;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table {
+	table-layout: auto;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table > thead > tr > th,
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table > tbody > tr > td {
+    white-space: nowrap;
+    text-align: left;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table > tbody > tr.hover {
+    background-color: #e6f4fc;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.fixed-column {
+	width: 240px;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.fixed-column:after {
+	content: "";
+    height: 8px;
+    width: 240px;
+    display: block;
+	background-color: rgba(230, 230, 230, 0.8);
+	border-right: 1px solid #bbbbbb;
+	border-left: 1px solid #dddddd;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar {
+	max-width: calc(100% - 240px);
+	border-right: 1px solid #dddddd;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table {
+	border-left: 0;
+	border-right: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > thead > tr > th:first-child,
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody > tr > td:first-child {
+	border-left: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > thead > tr > th:last-child,
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody> tr > td:last-child {
+	border-right: 0;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+	height: 8px;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .mCSB_horizontal.mCSB_inside > .mCSB_container {
+	margin-bottom: 8px;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+	margin: 0 auto;
+	height: 8px;
+}
+.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+	height: 8px;
+	margin: 0;
+	border: 0;
+}

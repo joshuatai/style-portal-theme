@@ -1,12 +1,78 @@
 <section class="css-reference">
+  <h5>Chart Wrapper</h5>
+  <pre>
+    <style data-selector=".chart-container"></style>
+  </pre>
+  <h5>Axes</h5>
+  <pre data-title="Axis Label">
+    <style data-selector=".style-portal .highcharts .axis"></style>
+  </pre>
+  <pre data-title="Chart grid line">
+     <style data-selector=".style-portal .highcharts .axis.yAxis"></style>
+  </pre>
+  <pre data-title="xAxis">
+     <style data-selector=".style-portal .highcharts .axis.xAxis"></style>
+  </pre>
+  <h5>Series Point Markers</h5>
+  <pre>
+     <style data-selector=".style-portal .highcharts .series"></style>
+  </pre>
+  <pre data-title=":hover">
+     <style data-selector=".style-portal .highcharts .series.hover .stroke">Stroke white circle overlapping the series</style>
+  </pre>
+  <pre>
+     <style data-selector=".style-portal .highcharts .series.hover .outer-glow">Series outer glow circle</style>
+  </pre>
   <h5>Series Stacked Area</h5>
   <pre>
      <style data-selector=".style-portal .highcharts .series.stacked"></style>
   </pre>
+  <h5>Tooltip Wrapper</h5>
+  <pre>
+     <style data-selector=".highcharts-tooltip > span > table"></style>
+  </pre>
+  <h5>Tooltip Title</h5>
+  <pre>
+     <style data-selector=".highcharts-tooltip > span > table > thead > tr > td"></style>
+  </pre>
+  <h5>Tooltip Series Name</h5>
+  <pre>
+     <style data-selector=".highcharts-tooltip > span > table > tbody > tr > td:first-child"></style>
+  </pre>
+  <h5>Tooltip Series Value</h5>
+  <pre>
+     <style data-selector=".highcharts-tooltip > span > table > tbody > tr > td:last-child"></style>
+  </pre>
+  <h5>Legend Wrapper</h5>
+  <pre>
+     <style data-selector=".legend"></style>
+  </pre>
+  <pre>
+     <style data-selector=".legend:not(.legend-vertical)">Bottom legend</style>
+  </pre>
+  <h5>Legend Container</h5>
+  <p>Wrap all the symbols and names of the series with a <code data-tag="ul"></code> element.</p>
+  <pre>
+     <style data-selector=".legend ul"></style>
+  </pre>
+  <h5>Legend</h5>
+  <p>Use <code data-tag="li"></code> for each series under the <code data-tag="ul"></code> element.</p>
+  <pre>
+     <style data-selector=".legend ul li"></style>
+  </pre>
+  <pre data-title="More than one legends in a row:">
+     <style data-selector=".legend ul li + li"></style>
+  </pre>
+  <pre data-title="Mute state:">
+     <style data-selector=".legend ul li.mute"></style>
+  </pre>
+  <pre data-title=":before">
+     <style data-selector=".legend ul li:before"></style>
+  </pre>
 </section>
 
 <section class="area-charts-example standard-area-chart">
-	<div id="area-chart-container" class="chart-container"></div>
+	<div id="area-chart-container" class="chart-container area-chart-container"></div>
 	<section class="legend">
     <ul></ul>
   </section>

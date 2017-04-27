@@ -1,0 +1,20 @@
+{
+  "id": "16165a7c-77ff-45b8-b28b-51c21804fdbf",
+  "name": "Disabled Date",
+  "location": "date-time-picker/disable-hint-date-picker.html",
+  "dependencies": [
+    "bootstrap-datepicker",
+    "moment-2.18.1"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7"
+  }
+}

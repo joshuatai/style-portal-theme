@@ -1,0 +1,19 @@
+{
+  "id": "c1fe19f5-76c2-402d-a04a-d7d3a76893bb",
+  "name": "Stacked Column Chart",
+  "location": "column-charts/stacked.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-8"
+  }
+}

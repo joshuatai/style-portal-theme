@@ -1,0 +1,10 @@
+
+/* With legend at bottom only */
+.column-chart-container-with-bottom-legend {
+	height: 432px;
+}
+
+/* With no legend and xaxis title */
+.column-chart-container-plain {
+	height: 470px;
+}

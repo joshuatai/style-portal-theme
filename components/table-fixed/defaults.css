@@ -22,3 +22,6 @@
 .fixed-header-example .table > tbody > tr > td:nth-child(5) {
 	width: 11.77%;
 }
+.fixed-header-example .table-with-scrollbar + .table-with-scrollbar {
+	margin-top: 24px;
+}

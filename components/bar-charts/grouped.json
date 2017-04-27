@@ -1,0 +1,19 @@
+{
+  "id": "8cc80a01-3e2e-43dc-8713-608c5b32644a",
+  "name": "Grouped Bar Chart",
+  "location": "bar-charts/grouped.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-8"
+  }
+}

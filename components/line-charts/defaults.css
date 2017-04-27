@@ -1,7 +1,10 @@
-.chart-container {
-  min-width: 310px; 
-  height: 350px; 
-  margin: 0 auto;
+
+.line-chart-container {
+	height: 362px;
+}
+
+.line-chart-container-plain {
+	height: 400px;
 }
 
 .legend-page {
@@ -15,25 +18,21 @@
 	display: inline-block;
 }
 
-section.legend ul {
-	margin: 0;
-}
-
-section.legend.scrollable {
+.legend.scrollable {
 	overflow-y: hidden;
 	padding-right: 70px;
 }
 
-section.legend-vertical.scrollable {
+.legend-vertical.scrollable {
 	overflow-y: hidden;
 	padding: 0;
 }
 
-section.legend-vertical ul li + li {
+.legend-vertical ul li + li {
 	margin-left: 0;
 }
 
 .with-vertical-legend .legend-page {
 	top: 334px;
-    right: 106px;
+	right: 106px;
 }

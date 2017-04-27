@@ -1,0 +1,27 @@
+
+.tables-basic-example .table-row-actions-example > thead > tr > th:nth-child(1),
+.tables-basic-example .table-row-actions-example > tbody > tr > td:nth-child(1) {
+	width: 35.3%;
+}
+.tables-basic-example .table-row-actions-example > thead > tr > th:nth-child(2),
+.tables-basic-example .table-row-actions-example > tbody > tr > td:nth-child(2) {
+	width: 23.53%;
+	text-align: left;
+}
+.tables-basic-example .table-row-actions-example > thead > tr > th:nth-child(3),
+.tables-basic-example .table-row-actions-example > tbody > tr > td:nth-child(3) {
+	width: 11.76%;
+	text-align: right;
+}
+.tables-basic-example .table-row-actions-example > thead > tr > th:nth-child(4),
+.tables-basic-example .table-row-actions-example > tbody > tr > td:nth-child(4) {
+	width: 17.64%;
+}
+.tables-basic-example .table-row-actions-example > thead > tr > th:nth-child(5),
+.tables-basic-example .table-row-actions-example > tbody > tr > td:nth-child(5) {
+	width: 11.77%;
+}
+.tables-basic-example .table-row-actions-example > thead > tr > th:nth-child(6),
+.tables-basic-example .table-row-actions-example > tbody > tr > td:nth-child(6) {
+	width: 78px;
+}

@@ -7,560 +7,1042 @@ var _this = this;
 	// Extend the third party "TimeEntry"
 	// ========================
 	// In order to make sure the user only enter the one digite and move to next chunk, add resetInputTime() at case37 and case39 to clear the data of the input.
-	var _this = this;
-	var plugin = $.timeEntry;
-    var extensionKeydown = {
-		_doKeyDown: function(event){
-			if (event.keyCode >= 48) { // >= '0'
-				return true;
-			}
-			var inst = plugin._getInst(event.target);
-			switch (event.keyCode) {
-				case 9: return (inst.options.tabToExit ? true : (event.shiftKey ?
-							// Move to previous time field, or out if at the beginning
-							plugin._changeField(inst, -1, true) :
-							// Move to next time field, or out if at the end
-							plugin._changeField(inst, +1, true)));
-				case 35: if (event.ctrlKey) { // Clear time on ctrl+end
-							plugin._setValue(inst, '');
-						}
-						else { // Last field on end
-							inst._field = Math.max(1, inst._secondField, inst._ampmField);
-							plugin._adjustField(inst, 0);
-						}
-						break;
-				case 36: if (event.ctrlKey) { // Current time on ctrl+home
-							plugin._setTime(inst);
-						}
-						else { // First field on home
-							inst._field = 0;
-							plugin._adjustField(inst, 0);
-						}
-						break;
-				case 37: plugin._resetInputTime(); plugin._changeField(inst, -1, false); break; // Previous field on left
-				case 38: plugin._adjustField(inst, +1); break; // Increment time field on up
-				case 39: plugin._resetInputTime(); plugin._changeField(inst, +1, false); break; // Next field on right
-				case 40: plugin._adjustField(inst, -1); break; // Decrement time field on down
-				case 46: plugin._setValue(inst, ''); break; // Clear time on delete
-				case 8: inst._lastChr = ''; // Fall through
-				default: return true;
-			}
-			return false;
-		},
-		_resetInputTime: function(){
-			var inst = plugin._getInst(event.target);
-			inst.elem.removeData("firstDigits");
-			inst.elem.removeData("secondDigits");
-		}
-    };
-    $.extend(true, $.timeEntry.__proto__, extensionKeydown);
+	// var _this = this;
+	// var plugin = $.timeEntry;
+ //    var extensionKeydown = {
+	// 	_doKeyDown: function(event) {
 
+	// 		if (event.keyCode >= 48) { // >= '0'
+	// 			return true;
+	// 		}
+	// 		var inst = plugin._getInst(event.target);
+	// 		switch (event.keyCode) {
+	// 			case 9: return (inst.options.tabToExit ? true : (event.shiftKey ?
+	// 						// Move to previous time field, or out if at the beginning
+	// 						plugin._changeField(inst, -1, true) :
+	// 						// Move to next time field, or out if at the end
+	// 						plugin._changeField(inst, +1, true)));
+	// 			case 35: if (event.ctrlKey) { // Clear time on ctrl+end
+	// 						plugin._setValue(inst, '');
+	// 					}
+	// 					else { // Last field on end
+	// 						inst._field = Math.max(1, inst._secondField, inst._ampmField);
+	// 						plugin._adjustField(inst, 0);
+	// 					}
+	// 					break;
+	// 			case 36: if (event.ctrlKey) { // Current time on ctrl+home
+	// 						plugin._setTime(inst);
+	// 					}
+	// 					else { // First field on home
+	// 						inst._field = 0;
+	// 						plugin._adjustField(inst, 0);
+	// 					}
+	// 					break;
+	// 			case 37: plugin._resetInputTime(); plugin._changeField(inst, -1, false); break; // Previous field on left
+	// 			case 38: plugin._adjustField(inst, +1); break; // Increment time field on up
+	// 			case 39: plugin._resetInputTime(); plugin._changeField(inst, +1, false); break; // Next field on right
+	// 			case 40: plugin._adjustField(inst, -1); break; // Decrement time field on down
+	// 			case 46: plugin._setValue(inst, ''); break; // Clear time on delete
+	// 			case 8: inst._lastChr = ''; // Fall through
+	// 			default: return true;
+	// 		}
+	// 		return false;
+	// 	}/*,
+	// 	_resetInputTime: function(){
+	// 		var inst = plugin._getInst(event.target);
+	// 		inst.elem.removeData("firstDigits");
+	// 		inst.elem.removeData("secondDigits");
+	// 	}*/
+ //    };
+ //    $.extend(true, $.timeEntry.__proto__, extensionKeydown);
+ 	const MIN_HOUR = 0;
+ 	const MAX_HOUR = 23;
+ 	const MIN_MINUTE = 0;
+ 	const MAX_MINUTE = 59;
+ 	const MIN_SECOND = 0;
+ 	const MAX_SECOND = 59;
+
+ 	const TIME_REG = /\d{2}(\D{1})\d{2}(\D{1})\d{2}/;
+ 	const KEY = {
+		DOWN: 'D',
+		UP: 'U',
+		LEFT: 'L',
+		RIGHT: 'R',
+		TAB: 'T'
+	}
+	const H_POS = {
+		start: 0,
+		end: 2,
+		length: 2,
+		indicate: 'H',
+		prev: () => null,
+		next: () => M_POS
+	}
+	const M_POS = {
+		start: 3,
+		end: 5,
+		length: 2,
+		indicate: 'M',
+		prev: () => H_POS,
+		next: () => S_POS	
+	}
+	const S_POS = {
+		start: 6,
+		end: 8,
+		length: 2,
+		indicate: 'S',
+		prev: () => M_POS,
+		next: () => null	
+	}
+
+	/* Utilities */
+	function pad (num, n) {
+
+		var len = num.toString().length;
+		while (len < n) {
+			num = "0" + num;
+			len++;
+		}
+		return num; 
+
+	}
+
+	function getChunkPosition (start, end) {
+
+		var position = {};
+		if (start >= H_POS.start && start <= H_POS.end && end >= H_POS.start && end <= H_POS.end) {
+			position = H_POS;
+		} else if (start >= M_POS.start && start <= M_POS.end && end >= M_POS.start && end <= M_POS.end) {
+			position = M_POS;	
+		} else if (start >= S_POS.start && start <= S_POS.end && end >= S_POS.start && end <= S_POS.end) {
+			position = S_POS;
+		}
+		return position;
+
+	}
+
+	function getChunkNumber (value, position) {
+
+		return parseInt(value.substring(position.start, position.end), 10);
+
+	}
+
+	function textReplace (hour, minute, second, splitter) {
+		
+		return pad(hour, 2) + splitter + pad(minute, 2) + splitter + pad(second, 2);
+	
+	}
 
     // TimePickerBehavior
 	// ========================
 	var TimepickerBehavior = function(element, option) {
 
+		this.options = option;
 		this.input = element;   // Original javascript DOM
 		this.element = $(element);  // jQuery DOM
-		this.setTime = option.setTime;
+		this.iconLabel = this.element.next(); // Dependent DOM
+
+		var value = this.element.val();
+
+		// To extract user splitter
+		value.match(TIME_REG,'$1');
+		this.splitter = RegExp.$1;
+		
+		// Initial varaibles
+		this.orgH = getChunkNumber(value, H_POS);
+		this.orgM = getChunkNumber(value, M_POS);
+		this.orgS = getChunkNumber(value, S_POS);
+		this.tmpH = [];
+		this.tmpM = [];
+		this.tmpS = [];
+
+		// Bind events
 		this._attachEvents();
+
 	};
 
-	
 	TimepickerBehavior.prototype = {
+
 		constructor: TimepickerBehavior,
-		_attachEvents: function(){
-			this.element.on("keydown", $.proxy(this._doKeydown, this));
-		},
-		_doKeydown: function(ev) {
-			var timeText;
-			var input = $(this.element);
-			var value = input.val();            // Get value of time input 
-			var getHours = value.substring(0,2);      // Get Hours value
-			var getMinutes = value.substring(3,5);        // Get Minutes value
-			var getSeconds = value.substring(6,8);      // Get Seconds value
-			var start = input.prop('selectionStart');   // Get the keydown start position
-			var enterNum = ev.key; // Get the digits 
-			var hoursPosition = 0;              // Get input hours position index
-			var minutesPosition = 3;              // Get input minutes position index
-			var secondsPosition = 6;             // Get input seconds position index
 
-			// Allow: Ctrl/cmd+C
-			if (ev.keyCode == 67 && (ev.ctrlKey === true || ev.metaKey === true)){
-			  	return;
+		_attachEvents: function() {
+
+			var _this = this;
+
+			this.element
+				.on('click', $.proxy(this._doEdit, this))
+				.on('keydown', $.proxy(this._doKeydown, this))
+				.on('focus', $.proxy(this._doFocus, this))
+				.on('blur', $.proxy(this._doBlur, this));
+
+			$(document).on('click', $.proxy(this._doUnEdit, this));
+		
+		},
+
+		_doEdit: function (e) {
+
+			var input = this.element;
+			var value = input.val();
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+
+			var position = getChunkPosition(start, end);
+			
+			if (!this._tmpCheck(position)) {
+
+				this.orgH = getChunkNumber(value, H_POS);
+				this.orgM = getChunkNumber(value, M_POS);
+				this.orgS = getChunkNumber(value, S_POS);
+				this.tmpH = [];
+				this.tmpM = [];
+				this.tmpS = [];
+
 			}
 
-			if ((ev.shiftKey || (ev.keyCode < 48 || ev.keyCode > 57)) && (ev.keyCode < 96 || ev.keyCode > 105)) {
-				ev.preventDefault();
+			if (position.indicate) {
+				this._showField(position);
+				this._edit(input.val());				
+			}
+
+		},
+
+		_doUnEdit: function (e) {
+
+			var target = $(e.target);
+			var container = target.closest('.input-icon-group');
+			var timepickerInput = container.children('input');
+
+			if(target.is('.input-icon-group') || timepickerInput.length === 0 || !timepickerInput.is(this.element)) {
+				this._unedit();
+			}
+
+		},
+
+		_doKeydown: function (e) {
+
+			var input = this.element;			
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = getChunkPosition(start, end);
+			var enterNum = e.key;
+			var splitter = this.splitter;
+			var timeText;
+			
+			if (position.indicate) {
+
+				// Up/Down arrow Key to change the digits
+				if (e.keyCode == 40) this._doUpDown(KEY.DOWN, position);
+				else if (e.keyCode == 38) this._doUpDown(KEY.UP, position);
+
+				// Tab and Left/Right arrow Key to move selected position
+				if (e.keyCode == 39) {
+					return this._doLeftRight(KEY.RIGHT, position);
+				} else if (e.keyCode == 37) {
+					return this._doLeftRight(KEY.LEFT, position);
+				} else if (e.keyCode == 9) {
+					if (e.shiftKey === true) {
+						return this._doLeftRight(KEY.LEFT, position);
+					} else {
+						return this._doLeftRight(KEY.RIGHT, position);
+					}
+				}
+				
+				// Insert Number
+				if (/^\d$/.test(enterNum)) {
+
+					this._doInsertNumber(enterNum, position);
+
+			    } else {
+			    	// Allow: Ctrl/cmd+C
+					if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+
+					e.preventDefault();
+					return false;
+
+				// 	// // Allow: Delete/Backword
+				// 	// // if (e.keyCode === 8 || e.keyCode === 46) {
+				// 	// // 	this._doBack(position);
+				// 	// // }
+				// 	// e.preventDefault();
+			 //  //   	return false;
+			    }
+
 			} else {
-				ev.preventDefault();
 
-				if(start == hoursPosition) {
+				// Allow: Ctrl/cmd+C
+				if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
 
-				  var hours = input.data();
-				  if (hours.firstDigits == null) {
-				    hours.firstDigits = enterNum;
-				    var newHours = `0${hours.firstDigits}`;
-				  } else {
-				    hours.secondDigits = enterNum;
-				    var newHours = hours.firstDigits + hours.secondDigits;
-				    if (parseInt(newHours) > 23) {
-				      newHours = 23;
-				    }
-				  }
-				  // Update time value
-				  timeText = this._combineTime(hoursPosition, newHours, value);
-				  this.setTime(timeText);
-				  // Change Position
-				  if (hours.secondDigits == null) {
-				    this._showTimeField(hoursPosition);
-				  } 
-				  else {
-				    this._showTimeField(minutesPosition);
-				    input.trigger('click.timeEntry');
-				    this._resetInputTime();
-				  }
-				}
-				else if(start == minutesPosition){   
+				e.preventDefault();
+		    	return false;
 
-				  var minutes = input.data();
-				  if (minutes.firstDigits == null) {
-				    minutes.firstDigits = enterNum;
-				    var newMinutes = `0${minutes.firstDigits}`;
-				  } else {
-				    minutes.secondDigits = enterNum;
-				    var newMinutes = minutes.firstDigits + minutes.secondDigits;
-				    if (parseInt(newMinutes) > 59) {
-				      newMinutes = "00";
-				    }
-				  }
-				   // Update time value
-				  timeText = this._combineTime(minutesPosition, newMinutes, value);
-				  this.setTime(timeText);
-				  // Change Position
-				  if (minutes.secondDigits == null) {
-				    this._showTimeField(minutesPosition);
-				  } 
-				  else {
-				    this._showTimeField(secondsPosition);
-				    input.trigger('click.timeEntry');
-				    this._resetInputTime();
-				  }
-				}
-				else if(start == secondsPosition){
-				  var seconds = input.data();
-				  if (seconds.firstDigits == null) {
-				    seconds.firstDigits = enterNum;
-				    var newSeconds = `0${seconds.firstDigits}`;
-				  } else {
-				    seconds.secondDigits = enterNum;
-				    var newSeconds = seconds.firstDigits + seconds.secondDigits;
-				    if (parseInt(newSeconds) > 59) {
-				      newSeconds = "00";
-				    }
-				  }
-				  // Update time value
-				    timeText = this._combineTime(secondsPosition, newSeconds, value);
-				    this.setTime(timeText);
-				  // Change Position
-				  if (seconds.secondDigits != null) {
-				    this._showTimeField(secondsPosition);
-				    this._resetInputTime();
-				  }
-				}
 			}
+
+			return false;
 		},
-		_resetInputTime: function(){
-			this.element.removeData("firstDigits");
-			this.element.removeData("secondDigits");
-		},
-		_combineTime: function(startIdx, newTime, fullTime){
+
+		_doUpDown: function (direction, position) {
+
 			var timeText;
-			switch(startIdx) {
-				case 0:
-					timeText = newTime + fullTime.substring(2);
-					break;
-				case 3:
-					timeText = fullTime.substring(0, 3) + newTime + fullTime.substring(5);
-					break;
-				case 6:
-					timeText = fullTime.substring(0, 6) + newTime;
+			
+			this._applyTemp(position.indicate);
+			if (position.indicate === 'H') {
+
+				if (direction === KEY.DOWN) this.orgH > MIN_HOUR ? this.orgH-- : this.orgH === MIN_HOUR ? this.orgH = MAX_HOUR : this.orgH = MIN_HOUR;
+					else this.orgH < MAX_HOUR ? this.orgH++ : this.orgH === MAX_HOUR ? this.orgH = MIN_HOUR : this.orgH = MAX_HOUR;
+
+			} else if (position.indicate === 'M') {
+
+				if (direction === KEY.DOWN) this.orgM > MIN_MINUTE ? this.orgM-- : this.orgM === MIN_MINUTE ? this.orgM = MAX_MINUTE : this.orgM = MIN_MINUTE;
+					else this.orgM < MAX_MINUTE ? this.orgM++ : this.orgM === MAX_MINUTE ? this.orgM = MIN_MINUTE : this.orgM = MAX_MINUTE;
+
+			} else if (position.indicate === 'S') {
+
+				if (direction === KEY.DOWN) this.orgS > MIN_SECOND ? this.orgS-- : this.orgS === MIN_SECOND ? this.orgS = MAX_SECOND : this.orgS = MIN_SECOND;
+					else this.orgS < MAX_SECOND ? this.orgS++ : this.orgS === MAX_SECOND ? this.orgS = MIN_SECOND : this.orgS = MAX_SECOND;
+
 			}
-			return timeText;
+
+			timeText = this._autoCorrect(position.indicate);
+
+			this.element.val(timeText);
+			this._showField(position);
+			this._change(timeText);
+				
 		},
-		_showTimeField: function( startIdx ) {
-			var start = 0;
-			var end = 0
-			var hoursPosition = 0;              // Get input hours position index
-			var minutesPosition = 3;              // Get input minutes position index
-			var secondsPosition = 6;             // Get input seconds position index
-			switch(startIdx) {
-			case 0:
-				start = hoursPosition;
-				end = start + 2;
-				break;
-			case 3:
-				start = minutesPosition;
-				end = start + 2;
-				break;
-			case 6:
-				start = secondsPosition;
-				end = start + 2;
+
+		_doLeftRight: function (direction, position) {
+
+			var tabable = false;
+
+			if (position.indicate === 'H') { // Selected on year position	
+
+				if(direction === KEY.RIGHT) {
+					this._correctVal(H_POS);								
+					this._showField(H_POS.next());
+				} else {
+					tabable = true;
+					this._prev();
+				}
+
+			} else if (position.indicate === 'M') { // Selected on month position	
+
+				this._correctVal(M_POS);
+
+				if(direction === KEY.RIGHT) this._showField(M_POS.next());
+					else this._showField(M_POS.prev());
+				
+			} else if (position.indicate === 'S') { // Selected on day position
+
+				if(direction === KEY.LEFT) {						
+					this._correctVal(S_POS);
+					this._showField(S_POS.prev());
+				} else {
+					tabable = true;
+					this._next();
+				}
+
+			} 	
+
+			return tabable;		
+		},
+
+		_doInsertNumber: function (enterNum, position) {
+
+			var timeText;
+			var splitter = this.splitter;
+			var tmp = this[`tmp${position.indicate}`];
+			tmp.push(enterNum);
+
+			var tmpString = tmp.join('');
+			var tmpNumber = parseInt(tmpString, 10);			
+
+			if(position.indicate === 'H') {
+
+				if ((tmpNumber > 2 && tmpNumber < 10) || tmp.length === 2) {
+
+					this[`org${position.indicate}`] = tmpNumber;
+
+					if (tmpNumber > MAX_HOUR) this.orgM = MAX_HOUR;
+					if (tmpNumber < MIN_HOUR)  this.orgM = MIN_HOUR;
+
+					timeText = this._autoCorrect(position.indicate);
+					this.element.val(timeText);
+					this._showField(position.next());
+					this._change(timeText);
+
+				} else {
+					
+					timeText = textReplace(tmpString, this.orgM, this.orgS, splitter);				
+					this.element.val(timeText);
+					this._showField(position);
+					this._change(timeText);
+
+				}	
+
+			} else if(position.indicate === 'M') {
+				
+				if ((tmpNumber > 5 && tmpNumber < 10) || tmp.length === 2) {
+
+					this[`org${position.indicate}`] = tmpNumber;
+
+					if (tmpNumber > MAX_MINUTE) this.orgM = MAX_MINUTE;
+					if (tmpNumber < MIN_MINUTE)  this.orgM = MIN_MINUTE;
+
+					timeText = this._autoCorrect(position.indicate);
+					this.element.val(timeText);
+					this._showField(position.next());
+					this._change(timeText);
+
+				} else {
+					
+					timeText = textReplace(this.orgH, tmpString, this.orgS, splitter);				
+					this.element.val(timeText);
+					this._showField(position);
+					this._change(timeText);									
+
+				}	
+
+			} else if (position.indicate === 'S') {
+
+				if ((tmpNumber > 5 && tmpNumber < 10) || tmp.length === 2) {
+
+					this[`org${position.indicate}`] = tmpNumber;
+
+					if (tmpNumber > MAX_SECOND) this.orgS = MAX_SECOND;
+					if (tmpNumber < MIN_SECOND)  this.orgS = MIN_SECOND;
+
+					timeText = this._autoCorrect(position.indicate);
+					this.element.val(timeText);
+					this._showField(position);
+					this._change(timeText);
+
+				} else {
+					
+					timeText = textReplace(this.orgH, this.orgM, tmpString, splitter);				
+					this.element.val(timeText);
+					this._showField(position);
+					this._change(timeText);
+
+				}	
+
 			}
-			this.input.setSelectionRange(start, end);
+
+		},
+
+		_doFocus: function (e) {
+			
+			var input = this.element;
+			var value = input.val();
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = getChunkPosition(start, end);	
+
+			if (start === 0 && end === 0) {
+
+			} else {
+				this._showField(H_POS);
+				this._doEdit();
+			}
+
+		},
+
+		_doBlur: function (e) {
+
+			this._tmpCheck({});
+
+		},	
+
+		/* Events Triggerer */
+
+		_edit: function (time) {
+
+			this.element.trigger($.Event('edit'), [time]);
+
+		},
+
+		_unedit: function () {
+
+			this.element.trigger($.Event('unedit'));
+
+		},
+
+		_change: function (time) {
+
+    		this.element.trigger($.Event('change'), [time]);
+
+		},
+
+		_prev: function () {
+
+			this.element.trigger($.Event('prev'), [this.element.val()]);
+
+		},
+
+		_next: function () {
+
+			this.element.trigger($.Event('next'), [this.element.val()]);
+
+		},			
+
+		/* Validators */
+		_tmpCheck: function (position) {
+
+			var indicate = position.indicate;
+
+			if (this.tmpH.length > 0 || this.tmpM.length > 0 || this.tmpS.length > 0) {
+
+				if (indicate) {
+					if (indicate !== 'H' && this.tmpH.length > 0) {
+						this._correctVal(H_POS);
+						return true;
+					}
+					if (indicate !== 'M' && this.tmpM.length > 0) {
+						this._correctVal(M_POS);
+						return true;
+					}
+					if (indicate !== 'S' && this.tmpS.length > 0) {
+						this._correctVal(S_POS);
+						return true;
+					}
+				} else {
+					if (this.tmpH.length > 0) this._correctVal(H_POS);
+					if (this.tmpM.length > 0) this._correctVal(M_POS);
+					if (this.tmpS.length > 0) this._correctVal(S_POS);
+				}
+
+			}
+
+			return false;
+
+		},
+
+		_correctVal: function (position) {
+
+			var timeText;
+			if (this._applyTemp(position.indicate) != undefined) {
+				timeText = this._autoCorrect(position.indicate);	
+				this.element.val(timeText);
+				this._change(timeText);
+			}
+
+		},
+
+		_applyTemp: function (indicate) {
+
+			var tmp = this['tmp' + indicate];			
+
+			if (tmp.length > 0) {
+				this['org' + indicate] = parseInt(tmp.join(''), 10);
+				this['tmp' + indicate] = [];
+				return true;
+			}
+
+			return false;
+
+		},
+
+		_autoCorrect: function (indicate) {
+
+			var splitter = this.splitter;
+			var lastDate;
+			
+			if (indicate === 'H') {
+
+				if (this.orgH < MIN_HOUR) this.orgH = MIN_HOUR;
+				if (this.orgH > MAX_HOUR) this.orgH = MAX_HOUR;
+
+			}
+
+		    if (indicate === 'M') {
+
+		    	if (this.orgM < MIN_MINUTE) this.orgH = MIN_MINUTE;
+				if (this.orgM > MAX_MINUTE) this.orgH = MAX_MINUTE;	    		
+
+			}
+
+			if (indicate === 'S') {
+
+				if (this.orgS < MIN_SECOND) this.orgS = MIN_SECOND;
+				if (this.orgS > MAX_SECOND) this.orgS = MAX_SECOND;
+				
+			}
+
+			this[`tmp${indicate}`] = [];
+
+			return pad(this.orgH, 2) + splitter + pad(this.orgM, 2) + splitter + pad(this.orgS, 2);
+		},
+
+		_showField: function ( position ) {
+			var _this = this;
+			this.input.setSelectionRange(position.start, position.end);
+			setTimeout(function () {				
+				_this.input.setSelectionRange(position.start, position.end);							
+			}, 20);
+		},
+
+		showField: function (indicate) {
+			if (indicate === 'H') this._showField(H_POS);
+			if (indicate === 'M') this._showField(M_POS);
+			if (indicate === 'S') this._showField(S_POS);
 		}
 	};
 
 	$.fn.timepickerBehavior = function (option) {
+		var args = Array.apply(null, arguments);
+		args.shift();
 
-		return this.each(function () {
-	      var $this   = $(this);
-	      var data    = $this.data('timepickerBehavior');
-	      var options = typeof option == 'object' && option;
-	      if (!data) $this.data('timepickerBehavior', (data = new TimepickerBehavior(this, options)));
+	    return this.each(function () {
+			var $this   = $(this);
+			var data    = $this.data('timepickerBehavior');
+			var options = typeof option == 'object' && option;
+			if (!data) $this.data('timepickerBehavior', (data = new TimepickerBehavior(this, $.extend({}, $.fn.timepickerBehavior.defaults, options))));	      
+			if (typeof option == 'string' && typeof data[option] == 'function') {
+				data[option].apply(data, args);
+			}
 	    });
 	};
+
+	// Bind constructor on the plugin
+	$.fn.timepickerBehavior.Constructor = TimepickerBehavior;
+
+	$.fn.timepickerBehavior.defaults = {
+
+	};	
 
 })(jQuery);
 
 // DatePicker Behavior Plugin
 // ========================
-(function($) {	
-	var minYear = 1900;
-	var maxYear = 9999;
-	var dateReg = /\d{4}(\D{1})\d{2}(\D{1})\d{2}/;
-    var pad = function (num, n) {
+(($) => {
+
+	const MIN_YEAR = 1900;
+	const MAX_YEAR = 9999;
+	const DATE_REG = /\d{4}(\D{1})\d{2}(\D{1})\d{2}/;
+	const KEY = {
+		DOWN: 'D',
+		UP: 'U',
+		LEFT: 'L',
+		RIGHT: 'R',
+		TAB: 'T'
+	}
+	const Y_POS = {
+		start: 0,
+		end: 4,
+		length: 4,
+		indicate: 'Y',
+		prev: () => null,
+		next: () => M_POS
+	}
+	const M_POS = {
+		start: 5,
+		end: 7,
+		length: 2,
+		indicate: 'M',
+		prev: () => Y_POS,
+		next: () => D_POS	
+	}
+	const D_POS = {
+		start: 8,
+		end: 10,
+		length: 2,
+		indicate: 'D',
+		prev: () => M_POS,
+		next: () => null
+	}
+	
+	/* Utilities */
+	function pad (num, n) {
+
 		var len = num.toString().length;
-		while(len < n) {
+		while (len < n) {
 			num = "0" + num;
 			len++;
 		}
 		return num; 
-	}
-	var yearPosition = {
-		start: 0,
-		end: 4,
-		length: 4,
-		indicate: 'Y'
-	}
-	var monthPosition = {
-		start: 5,
-		end: 7,
-		length: 2,
-		indicate: 'M'
-	}
-	var datePosition = {
-		start: 8,
-		end: 10,
-		length: 2,
-		indicate: 'D'
-	}	
 
-	var DatepickerBehavior = function(element, option) {
+	}
+
+	function getChunkPosition (start, end) {
+
+		var position = {};
+		if (start >= Y_POS.start && start <= Y_POS.end && end >= Y_POS.start && end <= Y_POS.end) {
+			position = Y_POS;				
+		} else if (start >= M_POS.start && start <= M_POS.end && end >= M_POS.start && end <= M_POS.end) {
+			position = M_POS;	
+		} else if (start >= D_POS.start && start <= D_POS.end && end >= D_POS.start && end <= D_POS.end) {
+			position = D_POS;
+		}
+		return position;
+
+	}
+
+	function getChunkNumber (value, position) {
+
+		return parseInt(value.substring(position.start, position.end), 10);
+
+	}
+
+	function getLastDate (year, month) {
+		
+		return moment(`${pad(year, 4)}-${pad(month, 2)}-01`).endOf('month')._d.getDate();
+
+	}
+	
+	function textReplace (year, month, date, splitter) {
+		
+		return pad(year, 4) + splitter + pad(month, 2) + splitter + pad(date, 2);
+	
+	}
+
+	// Constructor
+	function DatepickerBehavior (element, option) {
+
 		this.options = option;
 		this.input = element;   // Original javascript DOM
 		this.element = $(element);  // jQuery DOM
-		this.iconLabel = this.element.next();
-		//this.change = option.change || function () {};
-		var value = this.element.val();
-		value.match(dateReg,'$1');
+		this.iconLabel = this.element.next(); // Dependent DOM
 
-		this.splitter = RegExp.$1;		
-		//this.picker = option.picker? option.picker : $();
-		//this.pickerFocus = false;
-		this.orgY = parseInt(value.substring(0,4), 10);
-		this.orgM = parseInt(value.substring(5,7), 10); 
-		this.orgD = parseInt(value.substring(8,10), 10);
+		var value = this.element.val();
+
+		// To extract user splitter
+		value.match(DATE_REG,'$1');
+		this.splitter = RegExp.$1;
+		
+		// Initial varaibles
+		this.orgY = getChunkNumber(value, Y_POS);
+		this.orgM = getChunkNumber(value, M_POS);
+		this.orgD = getChunkNumber(value, D_POS);
 		this.tmpY = [];
 		this.tmpM = [];
 		this.tmpD = [];
-		this._attachEvents();
-		/*
-		this.picker
-			.on('mousehover', function () {
-				this.pickerFocus = true;
-			})
-			.on('mouseout', function () {
-				this.pickerFocus = false;
-			})*/
 
-		
-		//this._iconChange();
+		// Bind events
+		this._attachEvents();
+
 	};
 	
 	DatepickerBehavior.prototype = {
 
 		constructor: DatepickerBehavior,
 
-		_attachEvents: function(){
+		_attachEvents: function() {
+
 			var _this = this;
 
 			this.element
-				// .on('focus', function (e) {				
-				// 	e.preventDefault();
-				// 	e.stopPropagation();
-				// })
-				// .on('select', function (e) {					
-				// 	e.preventDefault();
-				// 	e.stopPropagation();
-				// })
-				// .on('focus', $.proxy(this._doFocus, this))							
-				.on('click', $.proxy(this._doClick, this))				
+				.on('click', $.proxy(this._doEdit, this))
 				.on('keydown', $.proxy(this._doKeydown, this))
-				.on('blur', $.proxy(this._doBlur, this));
-			//this.element							 .on('copy', $.proxy(this._doCopy, this))	
-			// 			.on('paste', $.proxy(this._doPaste, this))
-			 			//.on("keydown", $.proxy(this._doKeydown, this));				
-						
-			//$(document).on('click', $.proxy(this._doBlur, this));
-			$(document).on('click', function (e) {
-				var target = $(e.target);
-				var container = target.closest('.input-icon-group');
-				var datepickerInput = container.children('input');
-				if(target.is('.input-icon-group') || datepickerInput.length === 0 || !datepickerInput.is(_this.element)) {
-					_this.element.trigger($.Event('unedit'));
-				}
-			});
+				.on('blur', $.proxy(this._doBlur, this))				
+				.on('focus', $.proxy(this._doFocus, this));
+
+			$(document).on('click', $.proxy(this._doUnEdit, this));
 
 		},
-		_doFocus: function (e) {
-			// var input = this.element;//.addClass('input-focus');
-			// var value = input.val();
-			// var start = input.prop('selectionStart');
-			// var end = input.prop('selectionEnd');
-			// console.log(start, end)
-		},
-		_doClick: function (e) {			
+
+		_doEdit: function (e) {
+			
 			var input = this.element;
 			var value = input.val();
 			var start = input.prop('selectionStart');
 			var end = input.prop('selectionEnd');
-			var position = this._getChunkPosition(start, end);			
+			var position = getChunkPosition(start, end);
+
 			if (!this._tmpCheck(position)) {
-				this.orgY = parseInt(value.substring(0,4), 10); 				// Get year value
-				this.orgM = parseInt(value.substring(5,7), 10);  			// Get month value
-				this.orgD = parseInt(value.substring(8,10), 10); 			// Get day value
+
+				this.orgY = getChunkNumber(value, Y_POS);
+				this.orgM = getChunkNumber(value, M_POS);
+				this.orgD = getChunkNumber(value, D_POS);
 				this.tmpY = [];
 				this.tmpM = [];
 				this.tmpD = [];
-			} 
+
+			}
+
 			if (position.indicate) {
 				this._showField(position);
-				this.element.trigger($.Event('edit'), [value]);
-			}						
-		},		
-		_getChunkPosition: function (start, end) { //lock
-			var position = {};			
-			if (start >= 0 && start <= 4 && end >= 0 && end <= 4) {
-				position = yearPosition;				
-			} else if (start >= 5 && start <= 7 && end >= 5 && end <= 7) {
-				position = monthPosition;	
-			} else if (start >= 8 && start <= 10 && end >= 8 && end <= 10) {
-				position = datePosition;
-			}			
-			return position;
+				this._edit(input.val());				
+			}
+
 		},
-		_doBlur: function (e) { //lock
+
+		_doUnEdit: function (e) {
+
 			var target = $(e.target);
-			this._tmpCheck({});			
+			var container = target.closest('.input-icon-group');
+			var datepickerInput = container.children('input');
+
+			if(target.is('.input-icon-group') || datepickerInput.length === 0 || !datepickerInput.is(this.element)) {
+				this._unedit();
+			}
+
 		},		
-		_doPaste: function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			return false;
-		},
-		_change: function (date) {			
-    		this.element.trigger($.Event('change'), [date]);
-		},
-		_insertCompleted: function (indicate) {
-			var indicator = indicate === 'Y'? 'Year' : 'Date';
-			this.element.trigger($.Event('insertCompleted'), [indicator, this.element.val()]);
-		},
-		_tmpCheck: function (position) {//lock
-			var indicate = position.indicate;
-			if ((this.tmpY && this.tmpY.length > 0) || (this.tmpM && this.tmpM.length > 0) || (this.tmpD && this.tmpD.length > 0)) {
-				if (indicate) {
-					if (indicate !== 'Y' && this.tmpY.length > 0) {
-						this._correctVal(yearPosition);
-						return true;
-					}
-					if (indicate !== 'M' && this.tmpM.length > 0) {
-						this._correctVal(monthPosition);
-						return true;
-					}
-					if (indicate !== 'D' && this.tmpD.length > 0) {
-						this._correctVal(datePosition);	
-						return true;
-					}
-				} else {
-					if (this.tmpY.length > 0) this._correctVal(yearPosition);
-					if (this.tmpM.length > 0) this._correctVal(monthPosition);
-					if (this.tmpD.length > 0) this._correctVal(datePosition);
-				}				
-			}
-			return false;
-		},
-		_correctVal: function(position) {//lock
-			var dateText;
-			if (this._useTemp(position.indicate) != undefined) {
-				dateText = this._calculator(position.indicate);				
-				this.element.val(dateText);
-				this._change(dateText);				
-			}
-		},
-		_useTemp: function (indicate) { //lock
-			var tmp = this['tmp' + indicate];
-			var returnVal;
-			if (tmp.length > 0) {				
-				this['org' + indicate] = returnVal = parseInt(tmp.join(''), 10);
-				this['tmp' + indicate] = [];			
-			}
-			return returnVal;
-		},
-		_doUpDown: function (e, position) {//lock
-			var dateText;
-			if (position.indicate === 'Y') {				
-				this._useTemp('Y');
-				if (e.keyCode == '40') { // keydown
-					this.orgY--;
-				} 
-				else { // keyup
-					this.orgY++;
-				}				
-			} else if (position.indicate === 'M') {								
-				this._useTemp('M');
-				if (e.keyCode == '40') { //keydown
-					this.orgM--;
-				} else { //keyup
-					this.orgM++;
-				}
-			} else if (position.indicate === 'D') {							
-				this._useTemp('D');
-				if (e.keyCode == '40') { //keydown
-					this.orgD--;
-				} else { //keyup
-					this.orgD++;
-				} 
-			}
-			dateText = this._calculator(position.indicate);
-			this.element.val(dateText);
-			this._change(dateText);
-			this._showField(position);		
-		},
-		_doLeftRight: function (e, position) {//lock
-			if (position.indicate === 'Y') { // Selected on year position					
-				if(e.keyCode == '9' || e.keyCode == '39') {
-					this._correctVal(yearPosition);									
-					this._showField(monthPosition);
-				} else {
-					this._insertCompleted('Y');
-				}
-			} else if (position.indicate === 'M') { // Selected on month position				
-				this._correctVal(monthPosition);
-				if(e.keyCode == '37') {						
-					this._showField(yearPosition);
-				} else {	
-					this._showField(datePosition);
-				}
-			} else if (position.indicate === 'D') { // Selected on day position
-				if(e.keyCode == '37') {						
-					this._correctVal(datePosition);
-					this._showField(monthPosition);
-				} else {
-					this._insertCompleted('D');
-				}
-			} 			
-		},
-		_doKeyNumber: function (enterNum, position) {//lock
-			var dateText;			
+
+		_doKeydown: function (e) {
+
+			var input = this.element;			
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = getChunkPosition(start, end);	
+			var enterNum = e.key;
 			var splitter = this.splitter;
-			var insertCompleted = false;
-			if(position.indicate === 'Y'){
-				var year = this.tmpY;	
-				if (enterNum) {
-					if(!year[0]) {						
-						year[0] = enterNum;						
-					} else if (!year[1]) {
-						year[1] = enterNum;						
-					} else if (!year[2]) {
-						year[2] = enterNum;
-					} else if (!year[3]) {
-						year[3] = enterNum;
+			var dateText;
+			
+			if (position.indicate) {
+
+				// Up/Down arrow Key to change the digits
+				if (e.keyCode == 40) this._doUpDown(KEY.DOWN, position);
+				else if (e.keyCode == 38) this._doUpDown(KEY.UP, position);
+
+				// Tab and Left/Right arrow Key to move selected position
+				if (e.keyCode == 39) {
+					return this._doLeftRight(KEY.RIGHT, position);
+				} else if (e.keyCode == 37) {
+					return this._doLeftRight(KEY.LEFT, position);
+				} else if (e.keyCode == 9) {
+					if (e.shiftKey === true) {
+						return this._doLeftRight(KEY.LEFT, position);
+					} else {
+						return this._doLeftRight(KEY.RIGHT, position);
 					}
 				}
-				if (year.length === 4) {
-					this.orgY = year.join('');
-					dateText = this._calculator(position.indicate);	
-					position = monthPosition;					
-					this.tmpY = [];	
-					this._change(dateText);				
-				} else {
-					dateText = pad(year.join(''), 4) + splitter + pad(this.orgM, 2) + splitter + pad(this.orgD, 2);
-				}
-			} else if(position.indicate === 'M') {
-				var month = this.tmpM;
-				if (enterNum) {
-					if(!month[0]) {
-						month[0] = enterNum;												
-					} else if (!month[1]) {
-						month[1] = enterNum;
-					}
-				}
-				if ((month[0] > 1 && month[0] < 10) || month.length === 2) {
-					this.orgM = month.join('');
-					dateText = this._calculator(position.indicate);	
-					position = datePosition;					
-					this.tmpM = [];		
-					this._change(dateText);			
-				} else {					
-					dateText = pad(this.orgY, 4) + splitter + pad(month[0], 2) + splitter + pad(this.orgD, 2);					
-					if (month[0] == 1) {
-						this._change(dateText);
-					}
-				}					
+				
+				// Insert Number
+				if (/^\d$/.test(enterNum)) {
+
+					this._doInsertNumber(enterNum, position);
+
+			    } else {
+				  	// Allow: Ctrl/cmd+C
+					if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+
+					e.preventDefault();
+					return false;
+					// // Allow: Delete/Backword
+					// // if (e.keyCode === 8 || e.keyCode === 46) {
+					// // 	this._doBack(position);
+					// // }
+					// e.preventDefault();
+			  //   	return false;
+			    }
+
+			} else {
+
+				// Allow: Ctrl/cmd+C
+				if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+
+				e.preventDefault();
+		    	return false;
+			}			
+
+			return false;
+		},
+
+		_doUpDown: function (direction, position) {
+
+			var dateText;
+			var lastDate;
+
+			this._applyTemp(position.indicate);
+
+			if (position.indicate === 'Y') {
+
+				if (direction === KEY.DOWN) this.orgY > MIN_YEAR ? this.orgY-- : this.orgY === MIN_YEAR ? this.orgY = MAX_YEAR : this.orgY = MIN_YEAR;
+					else this.orgY < MAX_YEAR ? this.orgY++ : this.orgY === MAX_YEAR ? this.orgY = MIN_YEAR : this.orgY = MAX_YEAR;
+
+			} else if (position.indicate === 'M') {
+
+				if (direction === KEY.DOWN) this.orgM > 1 ? this.orgM-- : this.orgM === 1 ? this.orgM = 12 : this.orgM = 1;	
+					else this.orgM < 12 ? this.orgM++ : this.orgM === 12 ? this.orgM = 1 : this.orgM = 12;
+
 			} else if (position.indicate === 'D') {
-				var date = this.tmpD;
-				if (enterNum) {
-					if(!date[0]) {
-						date[0] = enterNum;
-					} else if (!date[1]) {
-						date[1] = enterNum;
-					}
-				}				
-				if (date.length === 2) {
-					this.orgD = date.join('');
-					dateText = this._calculator(position.indicate);
-					position = datePosition;					
-					this.tmpD = [];		
-					this._change(dateText);	
-					insertCompleted = true;
+
+				lastDate = getLastDate(this.orgY, this.orgM);
+
+				if (direction === KEY.DOWN) this.orgD > 1 ? this.orgD-- : this.orgD === 1 ? this.orgD = lastDate : this.orgD = 1;
+					else this.orgD < lastDate ? this.orgD++ : this.orgD === lastDate ? this.orgD = 1 : this.orgD = lastDate;
+
+			}
+
+			dateText = this._autoCorrect(position.indicate);
+
+			this.element.val(dateText);
+			this._showField(position);
+			this._change(dateText);
+				
+		},
+		
+		_doLeftRight: function (direction, position) {
+
+			var tabable = false;
+
+			if (position.indicate === 'Y') { // Selected on year position	
+
+				if(direction === KEY.RIGHT) {
+					this._correctVal(Y_POS);									
+					this._showField(Y_POS.next());
+
 				} else {
-					dateText = pad(this.orgY, 4) + splitter + pad(this.orgM, 2) + splitter + pad(date[0], 2);
-					var lastDate = moment(this.orgY + '/' + this.orgM).endOf('month')._d.getDate();
+					tabable = true;
+					this._prev();
+				}
+
+			} else if (position.indicate === 'M') { // Selected on month position	
+
+				this._correctVal(M_POS);
+
+				if(direction === KEY.RIGHT) this._showField(M_POS.next());
+					else this._showField(M_POS.prev());
+				
+			} else if (position.indicate === 'D') { // Selected on day position
+
+				if(direction === KEY.LEFT) {						
+					this._correctVal(D_POS);
+					this._showField(D_POS.prev());
+				} else {
+					tabable = true;
+					this._next();
+				}
+
+			} 	
+
+			return tabable;
+
+		},
+
+		_doInsertNumber: function (enterNum, position) {
+
+			var dateText;
+			var splitter = this.splitter;
+			var tmp = this[`tmp${position.indicate}`];
+			tmp.push(enterNum);
+
+			var tmpString = tmp.join('');
+			var tmpNumber = parseInt(tmpString, 10);
+			var lastDate;
+
+			if(position.indicate === 'Y') {
+
+				if (tmp.length === 4) {
+
+					this[`org${position.indicate}`] = tmpNumber;
+					dateText = this._autoCorrect(position.indicate);
+					this.element.val(dateText);
+					this._showField(position.next());
+					this._change(dateText);
+
+				} else {
+					
+					dateText = textReplace(tmpString, this.orgM, this.orgD, splitter);
+					this.element.val(dateText);
+					this._showField(position);
+
+				}				
+
+			} else if(position.indicate === 'M') {
+				
+				if ((tmpNumber > 1 && tmpNumber < 10) || tmp.length === 2) {
+
+					this[`org${position.indicate}`] = tmpNumber;
+
+					if (tmpNumber > 12) this.orgM = 12;
+					if (tmpNumber < 1)  this.orgM = 1;
+
+					dateText = this._autoCorrect(position.indicate);
+					this.element.val(dateText);
+					this._showField(position.next());
+					this._change(dateText);
+
+				} else {
+					
+					dateText = textReplace(this.orgY, tmpString, this.orgD, splitter);					
+					this.element.val(dateText);
+					this._showField(position);
+
+					if (tmpNumber == 1) {
+						this._change(dateText);
+					}				
+
+				}	
+
+			} else if (position.indicate === 'D') {
+
+				lastDate = getLastDate(this.orgY, this.orgM);
+
+				if (tmp.length === 2) {
+
+					this[`org${position.indicate}`] = tmpNumber;
+
+					if (tmpNumber > lastDate) this[`org${position.indicate}`] = lastDate;
+					if (tmpNumber < 1)  this[`org${position.indicate}`] = 1;
+
+					dateText = this._autoCorrect(position.indicate);
+
+					this.element.val(dateText);
+					this._showField(position);
+					this._change(dateText);
+
+				} else {
+
+					dateText = textReplace(this.orgY, this.orgM, tmpString, splitter);				
+
+					var lastDate = getLastDate(this.orgY, this.orgM);
 					var canContinue = false;
-					for (var i = 0; i < 10; i++) {
-						var targetDate = parseInt(date[0] + i.toString(), 10);
+
+					for (var i = 0; i < 10; i++) {						
+						var targetDate = parseInt(tmpString + i.toString(), 10);						
 						if (targetDate <= lastDate) canContinue = true;
 					}
+					
 					if (canContinue) {
-						if (date[0] > 0) {
+						this.element.val(dateText);
+						this._showField(position);
+						if (tmpNumber > 0) {
 							this._change(dateText);
 						}
 					} else {
-						this.orgD = date.join('');
-						dateText = this._calculator(position.indicate);
-						position = datePosition;					
-						this.tmpD = [];		
+						this.orgD = tmpNumber;
+						dateText = this._autoCorrect(position.indicate);
+						this.element.val(dateText);
+						this._showField(position);
 						this._change(dateText);
-						insertCompleted = true;
 					}
-				}				
+				}
+
 			}
-			// Update date value						
-			this.element.val(dateText);			
-			this._showField(position);
-			if (insertCompleted === true) this._insertCompleted('D');
+
 		},
+
+		_doFocus: function (e) {
+			
+			var input = this.element;
+			var value = input.val();
+			var start = input.prop('selectionStart');
+			var end = input.prop('selectionEnd');
+			var position = getChunkPosition(start, end);	
+
+			if (start === 0 && end === 0) {
+
+			} else {
+				this._showField(Y_POS);
+				this._doEdit();
+			}
+
+		},
+		
+		_doBlur: function (e) {
+
+			this._tmpCheck({});			
+
+		},	
+
+		_denyPaste: function(e) {
+
+			e.preventDefault();
+			e.stopPropagation();
+			return false;
+
+		},
+
 		_doBack: function (position) {
 			
 			// var indicate = position.indicate;
@@ -574,80 +1056,141 @@ var _this = this;
 			// }
 			// this._doKeyNumber(null, position);
 		},
-		_doKeydown: function (e) {			
-			var input = this.element;//.addClass('input-focus');			
-			var start = input.prop('selectionStart');
-			var end = input.prop('selectionEnd');
-			var position = this._getChunkPosition(start, end);			
-			var enterNum = e.key;			
-			var splitter = this.splitter;
-			var dateText;
-			var showFieldPosition;			
 
-			if (position.indicate) {
-				// Up/Down arrow Key to change the digits
-				if (e.keyCode == 40 || e.keyCode == 38) { //lock
-					this._doUpDown(e, position);
-				}
-				// Tab and Left/Right arrow Key to move selected position
-				if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 39) {				
-					this._doLeftRight(e, position);
-				}
-				// Insert Number
+		/* Events Triggerer */
 
-				if (/^\d$/.test(enterNum)) {
-					this._doKeyNumber(enterNum, position);
-			    } else {
-			    	// Allow: Ctrl/cmd+C
-					if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+		_edit: function (date) {
 
-					// Allow: Delete/Backword
-					// if (e.keyCode === 8 || e.keyCode === 46) {
-					// 	this._doBack(position);
-					// }
-					e.preventDefault();
-			    	return false;
-			    }
-			} else {
-				// // Allow: Ctrl/cmd+C
-				if (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) return true;
+			this.element.trigger($.Event('edit'), [date]);
 
-				e.preventDefault();
-		    	return false;
-			}			
-			return false;
+		},
+
+		_unedit: function () {
+
+			this.element.trigger($.Event('unedit'));
+
+		},
+		
+		_change: function (date) {
+
+    		this.element.trigger($.Event('change'), [date]);
+
+		},
+
+		_prev: function () {
+
+			this.element.trigger($.Event('prev'), [this.element.val()]);
+
+		},
+
+		_next: function () {
+
+			this.element.trigger($.Event('next'), [this.element.val()]);
+
 		},		
-		_calculator: function (indicate) { //lock
+
+		/* Validators */
+		_tmpCheck: function (position) {
+
+			var indicate = position.indicate;
+
+			if (this.tmpY.length > 0 || this.tmpM.length > 0 || this.tmpD.length > 0) {
+
+				if (indicate) {
+					if (indicate !== 'Y' && this.tmpY.length > 0) {
+						this._correctVal(Y_POS);
+						return true;
+					}
+					if (indicate !== 'M' && this.tmpM.length > 0) {
+						this._correctVal(M_POS);
+						return true;
+					}
+					if (indicate !== 'D' && this.tmpD.length > 0) {
+						this._correctVal(D_POS);	
+						return true;
+					}
+				} else {
+					if (this.tmpY.length > 0) this._correctVal(Y_POS);
+					if (this.tmpM.length > 0) this._correctVal(M_POS);
+					if (this.tmpD.length > 0) this._correctVal(D_POS);
+				}
+
+			}
+
+			return false;
+
+		},
+
+		_correctVal: function (position) {
+
+			var dateText;
+			if (this._applyTemp(position.indicate) != undefined) {
+				dateText = this._autoCorrect(position.indicate);				
+				this.element.val(dateText);
+				this._change(dateText);				
+			}
+
+		},
+
+		_applyTemp: function (indicate) {
+
+			var tmp = this['tmp' + indicate];			
+
+			if (tmp.length > 0) {
+				this['org' + indicate] = parseInt(tmp.join(''), 10);
+				this['tmp' + indicate] = [];
+				return true;
+			}
+
+			return false;
+
+		},
+
+		_autoCorrect: function (indicate) {
+
 			var splitter = this.splitter;
 			var lastDate;
 			
 			if (indicate === 'Y') {
-				if (this.orgY < minYear) this.orgY = minYear;
-				if (this.orgY > maxYear) this.orgY = maxYear;
-			} 
-		    if (indicate === 'M') {		    	
+
+				if (this.orgY < MIN_YEAR) this.orgY = MIN_YEAR;
+				if (this.orgY > MAX_YEAR) this.orgY = MAX_YEAR;
+
+				lastDate = getLastDate(this.orgY, this.orgM);
+	    		if (this.orgD > lastDate) this.orgD = lastDate;
+
+			}
+
+		    if (indicate === 'M') {
+
 		    	if (this.orgM < 1) {
-		    		if (this.orgY > minYear) {
-		    			this.orgM = 12;
+		    		if (this.orgY > MIN_YEAR) {
 		    			this.orgY--;
+		    			this.orgM = 12;		    			
 		    		} else {
 		    			this.orgM = 1;
 		    		}
 		    	}
+
 		    	if (this.orgM > 12) {
-		    		if (this.orgY < maxYear) {
+		    		if (this.orgY < MAX_YEAR) {
 		    			this.orgM = 1;
 		    			this.orgY++;
 		    		} else {
 		    			this.orgM = 12;
 		    		}
-		    	}		    	
-	    		lastDate = moment(this.orgY + '/' + this.orgM).endOf('month')._d.getDate();
-	    		if (this.orgD > lastDate) this.orgD = lastDate;		    	
+		    	}
+
+	    		lastDate = getLastDate(this.orgY, this.orgM);
+	    		if (this.orgD > lastDate) this.orgD = lastDate;		
+
 			}
+
 			if (indicate === 'D') {
+
 				if (this.orgD < 1) {
-					if (this.orgY === minYear && this.orgM === 1) {
+
+					if (this.orgY === MIN_YEAR && this.orgM === 1) {
 						this.orgD = 1;
 					} else {
 						if (this.orgM === 1) {
@@ -656,28 +1199,49 @@ var _this = this;
 							this.orgD = 31;
 						} else {
 							this.orgM--;
-							this.orgD = moment(this.orgY + '-' + this.orgM).endOf('month')._d.getDate();
+							this.orgD = getLastDate(this.orgY, this.orgM);
 						}
 					}
-				}
-				lastDate = moment(this.orgY + '/' + this.orgM).endOf('month')._d.getDate();
-				if (this.orgD > lastDate) {
-					if (this.orgY === maxYear && this.orgM === 12) {
-						this.orgD = 31;
-					} else {
-						if (this.orgM === 12) {
-							this.orgY++;
-							this.orgM = 1;
+
+				} else {
+
+					lastDate = getLastDate(this.orgY, this.orgM);
+
+					if (this.orgD > lastDate) {
+						if (this.orgY === MAX_YEAR && this.orgM === 12) {
 							this.orgD = 31;
 						} else {
-							this.orgM++;
-							this.orgD = 1;
+							if (this.orgM === 12) {
+								this.orgY++;
+								this.orgM = 1;
+								this.orgD = 31;
+							} else {
+								this.orgM++;
+								this.orgD = 1;
+							}
 						}
 					}
+
 				}
-			}			
+			}
+
+			this[`tmp${indicate}`] = [];
+
 			return pad(this.orgY, 4) + splitter + pad(this.orgM, 2) + splitter + pad(this.orgD, 2);
 		},
+
+		_validateTmp: function (indicate) {
+			// var splitter = this.splitter;
+			// var lastDate;
+			// var tmp = this[`tmp${indicate}`];
+			// console.log(tmp);
+			// if (indicate === 'Y') {
+
+			// 	// if (this.orgY < MIN_YEAR) this.orgY = MIN_YEAR;
+			// 	// if (this.orgY > MAX_YEAR) this.orgY = MAX_YEAR;
+			// }
+		},
+
 		_showField: function( position ) { //lock
 			var _this = this;
 			this.input.setSelectionRange(position.start, position.end);
@@ -685,21 +1249,34 @@ var _this = this;
 				_this.input.setSelectionRange(position.start, position.end);							
 			}, 20);
 		},
-		showField: function(indicate) {
-			if (indicate === 'Y') this._showField(yearPosition);
-			if (indicate === 'M') this._showField(monthPosition);
-			if (indicate === 'D') this._showField(datePosition);
-		}
-	};
 
-	$.fn.datepickerBehavior = function (option, param) {
+		showField: function(indicate) {
+			if (indicate === 'Y') this._showField(Y_POS);
+			if (indicate === 'M') this._showField(M_POS);
+			if (indicate === 'D') this._showField(D_POS);
+		}
+	}; 
+
+	$.fn.datepickerBehavior = function (option) {
+		var args = Array.apply(null, arguments);
+		args.shift();
+
 		return this.each(function () {
 			var $this   = $(this);
 			var data    = $this.data('datepickerBehavior');
 			var options = typeof option == 'object' && option;
-			if (!data) $this.data('datepickerBehavior', (data = new DatepickerBehavior(this, options)));	      
-			if (option === 'showField') data.showField(param);
+			if (!data) $this.data('datepickerBehavior', (data = new DatepickerBehavior(this, $.extend({}, $.fn.datepickerBehavior.defaults, options))));	      
+			if (typeof option == 'string' && typeof data[option] == 'function') {
+				data[option].apply(data, args);
+			}
 	    });
 	};
+
+	// Bind constructor on the plugin
+	$.fn.datepickerBehavior.Constructor = DatepickerBehavior;
+
+	$.fn.datepickerBehavior.defaults = {
+
+	};	
 
 })(jQuery);

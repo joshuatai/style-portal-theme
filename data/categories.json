@@ -75,7 +75,9 @@
     "components": [
       "dffba378-6723-4701-9087-3d527c831509",
       "ccf72043-8aee-4dfd-b976-888dbb12ef7b",
-      "7d8c26cf-c8fc-454d-92c5-2c4ca6cdbeeb"
+      "7d8c26cf-c8fc-454d-92c5-2c4ca6cdbeeb",
+      "c6f1ea57-cdd6-4190-bfd9-4bcc0673b1df",
+      "3adc8bca-8ab1-40d5-b447-97ed0a8899c4"
     ]
   },
   {
@@ -83,6 +85,9 @@
     "name": "Templates",
     "icon": "templates",
     "segments": [],
-    "components": ["510755b0-3de5-45ef-a288-f59b51051444"]
+    "components": [
+      "510755b0-3de5-45ef-a288-f59b51051444",
+      "473c91cd-3ff7-478b-bde5-d46298d736e8"
+    ]
   }
 ]

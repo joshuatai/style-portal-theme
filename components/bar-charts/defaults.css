@@ -1,0 +1,24 @@
+
+/* With X asis title and legend at bottom */
+.bar-chart-container {
+	height: 410px;
+}
+
+/* With X asis title only */
+.bar-chart-container-with-xaxis-title {
+	height: 440px;
+}
+
+/* With legend at bottom only */
+.bar-chart-container-with-bottom-legend {
+	height: 432px;
+}
+
+.chart-title {
+	text-align: right;
+	line-height: 30px;
+	font-size: 12px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #666666;
+	margin-right: 8px;
+}

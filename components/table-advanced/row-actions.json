@@ -1,0 +1,17 @@
+{
+  "id": "27557042-0d0f-41f9-a1a2-2092af954d7f",
+  "name": "Action Icons for Single Rows",
+  "location": "table-advanced/row-actions.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-7 row-lg-6"
+  }
+}

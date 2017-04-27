@@ -33,22 +33,13 @@ datepickerStartInput
 		datepickerStartInput.addClass('input-focus');
 		datePickerStartContainer.show();
 	})
-	.on('unedit', function (e) {
+	.on('unedit next prev', function (e) {
 		datepickerStartInput.removeClass('input-focus');
 		datePickerStartContainer.hide();
 	})
 	.on('change', function (e, date) {
 		datePickerStartContainer.datepicker('update', date);
-	})
-	.on('insertCompleted', function (e, indicate, date) {
-		if (indicate === 'Date') {
-			datepickerEndInput
-				.trigger('focus')
-				.datepickerBehavior('showField', 'Y')
-				.trigger('click');
-		}
 	});
-
 
 datePickerEndContainer
 	.data('date', today)
@@ -75,21 +66,14 @@ datepickerEndInput
 		datepickerEndInput.addClass('input-focus');
 		datePickerEndContainer.show();
 	})
-	.on('unedit', function (e) {
+	.on('unedit next prev', function (e) {
 		datepickerEndInput.removeClass('input-focus');
 		datePickerEndContainer.hide();
 	})
 	.on('change', function (e, date) {
 		datePickerEndContainer.datepicker('update', date);
-	})
-	.on('insertCompleted', function (e, indicate, date) {
-		if (indicate === 'Year') {
-			datepickerStartInput
-				.trigger('focus')
-				.datepickerBehavior('showField', 'Y')
-				.trigger('click');
-		}
 	});
+	
 
 $(".prev", datePickerStartContainer).add($(".prev", datePickerEndContainer)).find("i").attr('class', 'fa fa-angle-left');
 $(".next", datePickerStartContainer).add($(".next", datePickerEndContainer)).find("i").attr('class', 'fa fa-angle-right');

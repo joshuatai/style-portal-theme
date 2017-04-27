@@ -1,6 +1,6 @@
 {
   "id": "8abcf592-3bc5-4ed0-b60f-9c8227d9b115",
-  "name": "100% stacked Area Chart",
+  "name": "Percentage Stacked Area Chart",
   "location": "area-charts/area-chart-percentage.html",
   "dependencies": [
     "highcharts-5.0.6"

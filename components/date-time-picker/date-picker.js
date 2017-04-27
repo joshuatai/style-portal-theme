@@ -26,10 +26,10 @@ datepickerInput
 		datepickerInput.addClass('input-focus');
 		datePickerContainer.show();
 	})
-	.on('unedit', function (e) {
+	.on('unedit next prev', function (e) {
 		datepickerInput.removeClass('input-focus');
 		datePickerContainer.hide();
 	})
 	.on('change', function (e, date) {
 		datePickerContainer.datepicker('update', date);
-	});
+	});	

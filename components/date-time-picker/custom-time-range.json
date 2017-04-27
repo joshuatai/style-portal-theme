@@ -3,9 +3,8 @@
   "name": "Custom Time Range",
   "location": "date-time-picker/custom-time-range.html",
   "dependencies": [
-    "jquery.plugin.timeentry.package-2.0.1",
-    "jquery.timeentry.package-2.0.1",
-    "bootstrap-datepicker"
+    "bootstrap-datepicker",
+    "moment-2.18.1"
   ],
   "actions": [
     {
