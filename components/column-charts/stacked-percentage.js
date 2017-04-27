@@ -24,7 +24,7 @@ $(function () {
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {
@@ -72,7 +72,7 @@ $(function () {
         yAxis: {
             min: 0,
             title: {
-                text: 'Total Scanned Traffic (GB)'
+                text: null
             },
             labels: {
                 style: {
