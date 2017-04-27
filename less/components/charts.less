@@ -2,12 +2,7 @@
 // Charts
 // --------------------------------------------------
 
-.chart-container { 
-  height: 350px; 
-  margin: 0 auto;
-}
-.bar-chart-container { 
-  height: 400px; 
+.chart-container {
   margin: 0 auto;
 }
 
@@ -102,12 +97,18 @@
   }
 }
 
-section.legend {
+.legend {
   height: 30px;
   text-align: center;
   position: relative;
+
+  &:not(.legend-vertical) {
+    margin-top: 8px;
+  }
+
   ul {
     list-style: none;
+    margin: 0;
     padding: 0 36px;
     line-height: 30px;
     transition: all 0.5s;
@@ -136,7 +137,11 @@ section.legend {
   .make-lagend-list-style();
 }
 
-section.legend-vertical {
+.chart-title + .legend {
+  margin-top: 0;
+}
+
+.legend-vertical {
   position: absolute;
   top: 0;
   right: 0;
@@ -149,7 +154,7 @@ section.legend-vertical {
       text-align: left;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis; 
+      text-overflow: ellipsis;
       padding: 4px 0;
     }
   }
