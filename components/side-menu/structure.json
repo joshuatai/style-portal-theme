@@ -1,0 +1,17 @@
+{
+  "id": "9b322fd1-6e3d-461f-97c9-850e678d4e64",
+  "name": "Side Menu",
+  "location": "side-menu/structure.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "0f86c54d-46b2-42f3-ab2b-0b101cbc7608",
+  "name": "Basic Side Menu",
+  "location": "side-menu/basic-side-menu.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-6",
+    "row": "row-md-4"
+  }
+}
