@@ -192,97 +192,99 @@ header {
 // -------------------------
 .nav-pills {
   > li {
-    // Links rendered as pills
     > a {
       //border-radius: @nav-pills-border-radius;
       font-family: @font-family-arial;
       font-size: @font-size-base;
       color: @nav-tabs-normal-link-hover-color;
-      min-width: 80px;
       text-align: center;
     }
   }
-  &.heronizal {
-    > li {
-      float: left;
-      > a {
-        padding: 12px 16px;
-        &:hover {
-          color: @nav-tabs-normal-link-hover-color;
-          background-color: #fff;
-          border-bottom : 2px solid #bbb;
-          padding-bottom: 10px;
-        }
-        &:focus {
-          background-color: #fff;
-        }
+}
+.nav-pills-horizontal {
+  > li {
+    float: left;
+    > a {
+      padding: 12px 16px;
+      min-width: 80px;
+      &:hover {
+        color: @nav-tabs-normal-link-hover-color;
+        background-color: #fff;
+        border-bottom : 2px solid #bbb;
+        padding-bottom: 10px;
       }
-      + li {
-        margin-left: 1px;
+      &:focus {
+        background-color: #fff;
       }
-        // Active state
-      &.active > a {
-        &,
-        &:hover,
-        &:focus {
-          color: @nav-tabs-active-link-hover-color;
-          font-weight: bold;
-          background-color: @nav-pills-active-link-hover-bg;
-          border-bottom : 2px solid @nav-tabs-active-link-hover-border-top-color;
-          padding-bottom: 10px;
-        }
+    }
+    + li {
+      margin-left: 1px;
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-active-link-hover-color;
+        font-weight: bold;
+        background-color: @nav-pills-active-link-hover-bg;
+        border-bottom : 2px solid @nav-tabs-active-link-hover-border-top-color;
+        padding-bottom: 10px;
       }
     }
   }
-  &.vertical-basic {
-    > li {
-      display: block;
-      > a {
-        padding: 9px 16px;
-        &:hover {
-          background-color: #ffffff;
-          border-left: 2px solid #bbbbbb;
-          padding-left: 14px;
-        }
-        &:focus {
-          background-color: #ffffff;
-        }
+}
+.nav-pills-vertical-basic {
+  display: inline-block;
+  min-width: 80px;
+  > li {
+    > a {
+      padding: 9px 16px;
+      &:hover {
+        background-color: #ffffff;
+        border-left: 2px solid #bbbbbb;
+        padding-left: 14px;
       }
-      + li {
-        margin-top: 1px;
+      &:focus {
+        background-color: #ffffff;
       }
-      // Active state
-      &.active > a {
-        &,
-        &:hover,
-        &:focus {
-          font-weight: bold;
-          color: #222222;
-          border-left: 2px solid @nav-tabs-active-link-hover-border-top-color;
-          padding-left: 14px;
-          background-color: #f4f4f4;
-        }
+    }
+    + li {
+      margin-top: 1px;
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        font-weight: bold;
+        color: #222222;
+        border-left: 2px solid @nav-tabs-active-link-hover-border-top-color;
+        padding-left: 14px;
+        background-color: #f4f4f4;
       }
     }
   }
-  &.vertical-light {
-    > li {
-      > a {
-        padding: 9px 16px;
-        &:hover,
-        &:focus {
-          background-color: #f4f4f4;
-        }
+}
+.nav-pills-vertical-light {
+  display: inline-block;
+  min-width: 80px;
+  > li {
+    > a {
+      padding: 9px 16px;
+      &:hover,
+      &:focus {
+        background-color: #f4f4f4;
       }
-      // Active state
-      &.active > a {
-        &,
-        &:hover,
-        &:focus {
-          background-color: #ffffff;
-          font-weight: bold;
-          color: @nav-tabs-active-link-hover-border-top-color;
-        }
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: #ffffff;
+        font-weight: bold;
+        color: @nav-tabs-active-link-hover-border-top-color;
       }
     }
   }
