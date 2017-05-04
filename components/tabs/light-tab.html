@@ -10,32 +10,35 @@
   <h5>Light tabs</h5>
   <p>Use <code data-tag="li"></code> for each tab under the <code data-tag="ul"></code> elements.</p>
   <pre>
-    <style data-selector=".nav-pills > li"></style>
+    <style data-selector=".nav-pills-horizontal > li"></style>
   </pre>
   <pre data-title=":not(:first-child) or li + li (as a bootstrap tabs)">
-    <style data-selector=".nav-pills > li + li">Separate the tabs when tabs are next to each other</style>
+    <style data-selector=".nav-pills-horizontal > li + li">Separate the tabs when tabs are next to each other</style>
   </pre>
   <h5>Light tab links</h5>
   <p>Use <code data-tag="a"></code> for each tab link under <code data-tag="li"></code> elements.</p>
   <pre>
     <style data-selector=".nav-pills > li > a"></style>
   </pre>
+  <pre>
+    <style data-selector=".nav-pills-horizontal > li > a"></style>
+  </pre>
   <pre data-title=":hover">
-    <style data-selector=".nav-pills > li > a:hover"></style>
+    <style data-selector=".nav-pills-horizontal > li > a:hover"></style>
   </pre>
   <pre data-title=":focus">
-    <style data-selector=".nav-pills > li > a:focus"></style>
+    <style data-selector=".nav-pills-horizontal > li > a:focus"></style>
   </pre>
   <h5>Light tab style when focused</h5>
   <pre data-title=":hover, :focus">
-    <style data-selector=".nav-pills > li.active > a:hover"></style>
+    <style data-selector=".nav-pills-horizontal > li.active > a:hover"></style>
   </pre>
 </section>
 
 <section class="tab-example">
   <p>Use when the tabs need less emphasis in reltion to other navigational elements.</p>
 
-	<ul class="nav nav-pills">
+	<ul class="nav nav-pills nav-pills-horizontal">
 		<li class="active"><a href="#Item1" aria-controls="Item1" role="tab" data-toggle="tab">Item1</a></li>
 		<li><a href="#Item2" aria-controls="Item2" role="tab" data-toggle="tab">Item2</a></li>
 		<li><a href="#Item3" aria-controls="Item3" role="tab" data-toggle="tab">Item3</a></li>

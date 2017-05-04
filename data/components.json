@@ -560,5 +560,18 @@
       "table"
     ],
     "segments": []
+  },
+  {
+    "id": "e70a6361-a194-44e2-8b6f-be42f78efe35",
+    "name": "Side Menu",
+    "keywords": [
+      "side menu",
+      "side bar"
+    ],
+    "segments": [
+      "9b322fd1-6e3d-461f-97c9-850e678d4e64",
+      "0f86c54d-46b2-42f3-ab2b-0b101cbc7608",
+      "5f498370-0687-4136-94c0-5aa5b4abb1c8"
+    ]
   }
 ]
