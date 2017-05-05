@@ -2,19 +2,19 @@ $(function () {
     var series = [
         {
             name: 'Ransomware',
-            data: [8, 5, 11, 17, 22, 24, 24]
+            data: [13, 15, 13, 17, 22, 21, 24, 26, 25, 24, 22, 23, 21, 24, 23, 25, 24, 21, 22, 23, 25, 26, 28, 27, 23, 22, 22, 21, 24, 25]
         }, 
         {
             name: 'Anti-spyware',
-            data: [7, 6, 9, 14, 18, 21, 25]
+            data: [14, 13, 15, 14, 18, 21, 25, 22, 23, 21, 24, 24, 25, 26, 23, 21, 23, 21, 25, 24, 22, 25, 26, 25, 22, 24, 25, 26, 27, 26]
         },  
         {
             name: 'Web Reputation',
-            data: [6, 3, 8, 13, 16, 18, 17]
+            data: [15, 14, 16, 15, 16, 19, 22, 24, 24, 23, 20, 21, 22, 23, 25, 24, 21, 20, 22, 25, 24, 26, 27, 26, 24, 23, 24, 25, 26, 24]
         }, 
         {
             name: 'Virus/Malware',
-            data: [3, 4, 5, 8, 11, 15, 17]
+            data: [12, 14, 17, 18, 17, 20, 21, 23, 22, 24, 21, 22, 21, 24, 26, 25, 20, 22, 24, 26, 25, 27, 29, 26, 25, 24, 21, 22, 25, 27]
         }
     ];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
@@ -50,8 +50,10 @@ $(function () {
         },
         xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats:{
-                day: '%m/%d'
+            tickInterval: 7 * 24 * 3600 * 1000,
+            startOfWeek: 0,
+            dateTimeLabelFormats: {
+                week: '%m/%d'
             },
             labels: {
                 style: {
@@ -80,7 +82,7 @@ $(function () {
         series: series,
         plotOptions: {
           series: {
-            pointStart: Date.UTC(2016, 9, 10),
+            pointStart: Date.UTC(2016, 9, 1),
             pointIntervalUnit: 'day',
             marker: {  
               radius: 4,
