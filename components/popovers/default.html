@@ -1,13 +1,19 @@
 <section class="css-reference">
   <h5>Popover class</h5>
-  <p>Use the popover class on a <code data-tag="div"></code> or <code data-tag="span"></code> element. For example, <code>.popover</code></p>
+  <p>Use the popover class on a <code data-tag="div"></code> element. For example, <code>.popover</code></p>
   <pre>
     <style data-selector=".popover"></style>
   </pre>
   <pre data-title="Position the popover">
     <style data-selector=".popover.top">Top, Top-left, Top-right</style>
+  </pre>
+  <pre data-title="Position the popover">
     <style data-selector=".popover.right">Right, Right-top, Right-bottom</style>
+  </pre>
+  <pre data-title="Position the popover">
     <style data-selector=".popover.bottom">Bottom, Bottom-left, Bottom-right</style>
+  </pre>
+  <pre data-title="Position the popover">
     <style data-selector=".popover.left">Left, Left-top, Left-bottom</style>
   </pre>
 
@@ -16,25 +22,65 @@
   <pre data-title="Popover arrow">
     <style data-selector=".popover > .arrow"></style>
   </pre>
-  <pre data-title="Popover arrow ::after pseudo-elements">
+  <pre data-title="::after">
     <style data-selector=".popover > .arrow:after"></style>
-    <style data-selector=".popover.top > .arrow">Top</style>
-    <style data-selector=".popover.top-left > .arrow">Top-left</style>
-    <style data-selector=".popover.top-right > .arrow">Top-right</style>
-    <style data-selector=".popover.top > .arrow:after">Popover arrow ::after pseudo-elements for Popover Top, Top-left, Top-right</style>
-    <style data-selector=".popover.right > .arrow">Right</style>
-    <style data-selector=".popover.right-top > .arrow">Right-top</style>
-    <style data-selector=".popover.right-bottom > .arrow">Right-bottom</style>
-    <style data-selector=".popover.right > .arrow:after">Popover arrow ::after pseudo-elements for Popover Right, Right-top, Right-bottom</style>
-    <style data-selector=".popover.bottom > .arrow">Bottom</style>
-    <style data-selector=".popover.bottom-left > .arrow">Bottom-left</style>
-    <style data-selector=".popover.bottom-right > .arrow">Bottom-right</style>
-    <style data-selector=".popover.bottom > .arrow:after">Popover arrow ::after pseudo-elements for Popover Bottom, Bottom-left, Bottom-right</style>
-    <style data-selector=".popover.left > .arrow">Left, Left-top, Left-bottom</style>
-    <style data-selector=".popover.left-top > .arrow">Left-top</style>
-    <style data-selector=".popover.left-bottom > .arrow">Left-bottom</style>
-    <style data-selector=".popover.left > .arrow:after">Popover arrow ::after pseudo-elements for Popover Left, Left-top, Left-bottom</style>
   </pre>
+
+  <h5>Arrow class for popover top, top-left, top-right</h5>
+  <pre data-title="top">
+    <style data-selector=".popover.top > .arrow"></style>
+	</pre>
+  <pre data-title="top-left">
+    <style data-selector=".popover.top-left > .arrow"></style>
+	</pre>
+  <pre data-title="top-right">
+    <style data-selector=".popover.top-right > .arrow"></style>
+	</pre>
+  <pre data-title="::after pseudo-elements for popover top, top-left, top-right">
+    <style data-selector=".popover.top > .arrow:after"></style>
+	</pre>
+
+  <h5>Arrow class for popover right, right-top, right-bottom</h5>
+  <pre data-title="right">
+    <style data-selector=".popover.right > .arrow"></style>
+	</pre>
+  <pre data-title="right-top">
+    <style data-selector=".popover.right-top > .arrow"></style>
+	</pre>
+  <pre data-title="right-bottom">
+    <style data-selector=".popover.right-bottom > .arrow"></style>
+	</pre>
+  <pre data-title="::after pseudo-elements for popover right, right-top, right-bottom">
+    <style data-selector=".popover.right > .arrow:after"></style>
+	</pre>
+
+  <h5>Arrow class for popover bottom, bottom-left, bottom-right</h5>
+  <pre data-title="bottom">
+    <style data-selector=".popover.bottom > .arrow"></style>
+	</pre>
+  <pre data-title="bottom-left">
+    <style data-selector=".popover.bottom-left > .arrow"></style>
+	</pre>
+  <pre data-title="bottom-right">
+    <style data-selector=".popover.bottom-right > .arrow"></style>
+	</pre>
+  <pre data-title="::after pseudo-elements for popover bottom, bottom-left, bottom-right">
+    <style data-selector=".popover.bottom > .arrow:after"></style>
+	</pre>
+
+  <h5>Arrow class for popover left, left-top, left-bottom</h5>
+  <pre data-title="left">
+    <style data-selector=".popover.left > .arrow"></style>
+	</pre>
+  <pre data-title="left-top">
+    <style data-selector=".popover.left-top > .arrow"></style>
+	</pre>
+  <pre data-title="left-bottom">
+    <style data-selector=".popover.left-bottom > .arrow"></style>
+	</pre>
+  <pre data-title="::after pseudo-elements for popover left, left-top, left-bottom">
+    <style data-selector=".popover.left > .arrow:after"></style>
+	</pre>
 
   <h5>Popover content class</h5>
   <p>Wrap the content within a <code data-tag="div"></code> or <code data-tag="span"></code> element under the popover element. For example, <code>.popover-content</code></p>
@@ -60,7 +106,7 @@
 			<div class="popover-content">
 				<span>Popover Top</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover top-left popover-example popover-example-rwd">
@@ -68,7 +114,7 @@
 			<div class="popover-content">
 				<span>Popover Top-left</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover top-right popover-example popover-example-rwd">
@@ -76,7 +122,7 @@
 			<div class="popover-content">
 				<span>Popover Top-right</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<!-- popover right -->
@@ -85,7 +131,7 @@
 			<div class="popover-content">
 				<span>Popover Right</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover right-top popover-example popover-example-rwd">
@@ -93,7 +139,7 @@
 			<div class="popover-content">
 				<span>Popover Right-top</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover right-bottom popover-example popover-example-rwd">
@@ -101,7 +147,7 @@
 			<div class="popover-content">
 				<span>Popover Right-bottom</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<!-- popover bottom -->
@@ -110,7 +156,7 @@
 			<div class="popover-content">
 				<span>Popover Bottom</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover bottom-left popover-example popover-example-rwd">
@@ -118,7 +164,7 @@
 			<div class="popover-content">
 				<span>Popover Bottom-left</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover bottom-right popover-example popover-example-rwd">
@@ -126,7 +172,7 @@
 			<div class="popover-content">
 				<span>Popover Bottom-right</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<!-- popover left -->
@@ -135,7 +181,7 @@
 			<div class="popover-content">
 				<span>Popover Left</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover left-top popover-example popover-example-rwd">
@@ -143,7 +189,7 @@
 			<div class="popover-content">
 				<span>Popover Left-top</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 
 		<div class="popover left-bottom popover-example popover-example-rwd">
@@ -151,7 +197,7 @@
 			<div class="popover-content">
 				<span>Popover Left-bottom</span><br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Duis mollis, est non commod luctus, nisi erat porttitor ligula, eget lacinia.
-			</div> 
+			</div>
 		</div>
 	</div>
 </section>
