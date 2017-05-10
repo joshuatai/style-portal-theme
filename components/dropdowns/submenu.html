@@ -4,6 +4,9 @@
   <pre>
     <style data-selector=".dropdown-submenu"></style>
   </pre>
+  <pre data-title="For links have a submenu">
+    <style data-selector=".dropdown-menu > li.dropdown-submenu > a"></style>
+  </pre>
 
   <h5>Submenu caret</h5>
   <p>Display a right-direction triangle to indicate a submenu.</p>
@@ -19,6 +22,12 @@
   <pre data-title="Hover submenu">
     <style data-selector=".dropdown-submenu:hover > .dropdown-menu">Display submenu as a block element</style>
   </pre>
+  </pre>
+
+  <h5>Align submenus to the left</h5>
+  <pre>
+    <style data-selector=".dropdown-submenu.pull-left > .dropdown-menu"></style>
+  </pre>
 </section>
 
 <section class="dropdown-example dropdown-submenu-example">
@@ -28,7 +37,7 @@
       <button class="btn btn-border dropdown-toggle" type="button">
         <span class="caret"></span>Select an option
       </button>
-      
+
       <ul class="dropdown-menu">
         <li><a href="javascript:;">Menu item one</a></li>
         <li><a href="javascript:;">Menu item two</a></li>
@@ -36,7 +45,7 @@
         <li role="separator" class="divider"></li>
         <li class="dropdown-submenu open">
           <a href="javascript:;">Menu item four</a>
-		  
+
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Second level item one</a></li>
             <li><a href="javascript:;">Second level item two</a></li>
