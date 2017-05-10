@@ -7,35 +7,35 @@
 
   <h5>Pagination items</h5>
   <p>Put <code data-tag="li"></code> under the <code data-tag="ul"></code> element.</p>
-  <pre data-title="li">
-    <style data-selector=".pagination > li">Remove list-style and block-level defaults</style>
+  <pre>
+    <style data-selector=".pagination > li"></style>
   </pre>
 
   <h5>Pagination text</h5>
   <p>Use <code data-tag="a"></code> for pagination text under a <code data-tag="li"></code> element.</p>
-  <pre data-title="a">
+  <pre>
     <style data-selector=".pagination > li > a"></style>
   </pre>
-  <pre data-title="li:first-child > a">
-    <style data-selector=".pagination > li:first-child > a">Use on first pages items</style>
+  <pre data-title="Use on first pages items, such as li:first-child > a">
+    <style data-selector=".pagination > li:first-child > a"></style>
   </pre>
-  <pre data-title="li:last-child > a">
-    <style data-selector=".pagination > li:last-child > a">Use on last pages items</style>
+  <pre data-title="Use on last pages items, such as li:last-child > a">
+    <style data-selector=".pagination > li:last-child > a"></style>
+  </pre>
+  <pre data-title=":hover, :focus">
+    <style data-selector=".pagination > li > a:hover"></style>
   </pre>
 
   <h5>Pagination items state</h5>
-  <p>Use the activated state to indicate the current selected page. For example, <code>.active</code> is used in Bootstrap for this purpose. Use the disabled state to indicate that the item is inaccessible. For example, <code>.disabled</code> is used in Bootstrap.</p>
-  <pre data-title="Active state">
-    <style data-selector=".pagination > .active > a">For current page</style>
+  <p>Use the activated state to indicate the current selected page. For example, <code>.active</code> is used in Bootstrap. Use the disabled state to indicate that the item is inaccessible. For example, <code>.disabled</code> is used in Bootstrap.</p>
+  <pre data-title="Active">
+    <style data-selector=".pagination > .active > a"></style>
   </pre>
-  <pre data-title="Disabled state">
+  <pre data-title=":hover, :focus on active item">
+    <style data-selector=".pagination > li > a:active:hover"></style>
+  </pre>
+  <pre data-title="Disabled">
     <style data-selector=".pagination > .disabled > a"></style>
-  </pre>
-  <pre data-title=":hover , :focus">
-    <style data-selector=".pagination > li > a:hover"></style>
-  </pre>
-  <pre data-title=":active">
-    <style data-selector=".pagination > li > a:active">For active behavior</style>
   </pre>
 
   <h5>Icons as pagination items</h5>
@@ -52,7 +52,7 @@
 			<li>Provide navigations for previous or next pages.</li>
 		</ul>
 	</div>
-	<p>	
+	<p>
 		<ul class="pagination">
 			<li class="disabled">
 				<a href="javascript:;" aria-label="Previous">
@@ -71,7 +71,7 @@
 			</li>
 		</ul>
 	</p>
-	<p>	
+	<p>
 		<ul class="pagination">
 			<li>
 				<a href="javascript:;" aria-label="Previous">
