@@ -8,12 +8,14 @@
   <h5>Pagination item container</h5>
   <p>Use a block-level element to wrap pagination items.</p>
   <pre>
-    <style data-selector=".table-pagination .table-pagination-block">Set position in pagination block</style>
+    <style data-selector=".table-pagination .table-pagination-block"></style>
   </pre>
 
   <h5>Individual item container</h5>
   <pre>
     <style data-selector=".table-pagination .table-pagination-block > div">Leave a space between each feature</style>
+  </pre>
+  <pre>
     <style data-selector=".table-pagination .table-pagination-block > div + div">More than one feature in a row</style>
   </pre>
   <pre data-title="Record feature block">
@@ -23,7 +25,7 @@
     <style data-selector=".table-pagination .table-pagination-block .dropdown"></style>
   </pre>
   <pre data-title="Dropdown feature block after a Record feature block">
-    <style data-selector=".table-pagination .table-pagination-block .pagination-records + .dropdown">Vertical line between Record and dropdown</style>
+    <style data-selector=".table-pagination .table-pagination-block .pagination-records + .dropdown"></style>
   </pre>
   <pre data-title="Input feature block">
     <style data-selector=".table-pagination .table-pagination-block .pagination-input"></style>
@@ -32,14 +34,16 @@
   <h5>Button dropdown</h5>
   <ul>
     <li>Use the link style with the extra small button size.</li>
-    <li>Refer to the Button section of the Style Portal for detailed guidelines.</li>
+    <li>Refer to the <a href="#/styles/{{theme}}/{{version}}/e5bd7778-d707-420b-ac64-4a55da161b83">Buttons</a> of the Style Portal for detailed guidelines.</li>
   </ul>
   <pre>
     <style data-selector=".table-pagination .table-pagination-block .dropdown .btn"></style>
   </pre>
   <pre data-title=":hover">
     <style data-selector=".table-pagination .table-pagination-block .dropdown .btn:hover"></style>
-    <style data-selector=".table-pagination .table-pagination-block .dropdown .btn:hover .caret">caret :hover</style>
+  </pre>
+  <pre data-title="Caret style when being hovered on button">
+    <style data-selector=".table-pagination .table-pagination-block .dropdown .btn:hover .caret"></style>
   </pre>
 
   <h5>Button dropdown menu</h5>
@@ -48,7 +52,7 @@
   </pre>
 
   <h5>User-specified page</h5>
-  <pre>
+  <pre data-title="Input field">
     <style data-selector=".table-pagination .table-pagination-block .pagination-input > input"></style>
   </pre>
   <pre data-title=":focus">
@@ -57,7 +61,7 @@
 
   <h5>Prev/Next buttons</h5>
   <pre>
-    <style data-selector=".table-pagination .table-pagination-block .pagination">Use pagination in pagination block should add this style to remove the bottom space of the pagination</style>
+    <style data-selector=".table-pagination .table-pagination-block .pagination"></style>
   </pre>
 </section>
 
@@ -66,7 +70,7 @@
 	<p>Consider users' needs, data type, and layout of the content to decide which of the following features to include:</p>
 	<div class="lists-unordered">
 		<ul>
-			<li>Prev/Next page navigation</li>			
+			<li>Prev/Next page navigation</li>
 			<li>User-specified page switch</li>
 			<li>User-configurable maximum number of entries</li>
 			<li>Total number of hit/entries</li>
@@ -105,7 +109,7 @@
 			</div>
 		</div>
 	</p>
-	
+
 		<div class="example">
 			<h5>Full</h5>
 			<div class= "table-pagination">
@@ -193,5 +197,5 @@
 				</div>
 			</div>
 		</div>
-	
+
 </section>
