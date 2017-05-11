@@ -1,22 +1,13 @@
 <section class="css-reference">
-  <h5>Light tab wrapper</h5>
-  <p>Wrap all tabs with a <code data-tag="ul"></code> element. Extend a nav class to define the tab style.</p>
-  <pre data-title=":before">
-    <style data-selector=".nav:before"></style>
-  </pre>
-  <pre data-title=":after">
-    <style data-selector=".nav:after"></style>
-  </pre>
   <h5>Light tabs</h5>
-  <p>Use <code data-tag="li"></code> for each tab under the <code data-tag="ul"></code> elements.</p>
   <pre>
     <style data-selector=".nav-pills-horizontal > li"></style>
   </pre>
-  <pre data-title=":not(:first-child) or li + li (as a bootstrap tabs)">
-    <style data-selector=".nav-pills-horizontal > li + li">Separate the tabs when tabs are next to each other</style>
+  <pre data-title="Leave space between tabs">
+    <style data-selector=".nav-pills-horizontal > li + li"></style>
   </pre>
+
   <h5>Light tab links</h5>
-  <p>Use <code data-tag="a"></code> for each tab link under <code data-tag="li"></code> elements.</p>
   <pre>
     <style data-selector=".nav-pills > li > a"></style>
   </pre>
@@ -29,8 +20,7 @@
   <pre data-title=":focus">
     <style data-selector=".nav-pills-horizontal > li > a:focus"></style>
   </pre>
-  <h5>Light tab style when focused</h5>
-  <pre data-title=":hover, :focus">
+  <pre data-title="When a tab is active">
     <style data-selector=".nav-pills-horizontal > li.active > a:hover"></style>
   </pre>
 </section>
