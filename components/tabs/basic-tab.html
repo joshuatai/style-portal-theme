@@ -1,38 +1,33 @@
 <section class="css-reference">
-  <h5>Navigation wrapper</h5>
+  <h5>Tabs wrapper</h5>
   <p>Create a nav wrapper using a <code data-tag="ul"></code> element.</p>
   <pre>
     <style data-selector=".nav"></style>
   </pre>
+  <pre data-title="::before">
+    <style data-selector=".nav:before"></style>
+  </pre>
+  <pre data-title="::after">
+    <style data-selector=".nav:after"></style>
+  </pre>
+
   <h5>Tabs</h5>
   <p>Use <code data-tag="li"></code> for each tab under the <code data-tag="ul"></code> elements.</p>
   <pre>
     <style data-selector=".nav > li"></style>
   </pre>
-  <h5>Menu items</h5>
+  <pre>
+    <style data-selector=".nav-tabs > li"></style>
+  </pre>
+  <pre data-title="Prevent double borders between tabs">
+    <style data-selector=".nav-tabs > li + li"></style>
+  </pre>
+
+  <h5>Tab links</h5>
   <p>Use <code data-tag="a"></code> for each item under <code data-tag="li"></code> elements.</p>
   <pre>
     <style data-selector=".nav > li > a"></style>
   </pre>
-  <h5>Tab wrapper</h5>
-  <p>Wrap all tabs with a <code data-tag="ul"></code> element. Extend the nav class to define the tab style.</p>
-  <pre data-title=":before">
-    <style data-selector=".nav:before"></style>
-  </pre>
-  <pre data-title=":after">
-    <style data-selector=".nav:after"></style>
-  </pre>
-
-  <h5>Menu items</h5>
-  <p>Use <code data-tag="li"></code> for each menu item under the <code data-tag="ul"></code> elements.</p>
-  <pre>
-    <style data-selector=".nav-tabs > li"></style>
-  </pre>
-  <pre data-title=":not(:first-child) or li + li (as a bootstrap tabs)">
-    <style data-selector=".nav-tabs > li + li">Prevent double borders when tabs are next to each other</style>
-  </pre>
-  <h5>Menu item links</h5>
-  <p>Use <code data-tag="a"></code> for each menu item under <code data-tag="li"></code> elements.</p>
   <pre>
     <style data-selector=".nav-tabs > li > a"></style>
   </pre>
@@ -42,9 +37,8 @@
   <pre data-title=":active">
     <style data-selector=".nav-tabs > li > a:active"></style>
   </pre>
-  <h5>Tab style when focused</h5>
-  <pre data-title=":hover, :focus">
-    <style data-selector=".nav-tabs > li.active > a:hover"></style>
+  <pre data-title="When a tab is active">
+    <style data-selector=".nav-tabs > li.active > a"></style>
   </pre>
 </section>
 
