@@ -1,6 +1,6 @@
 <section class="css-reference">
-  <h5>Date inputs with form control</h5>
-  <p>About the inputs style and state, please refer to form elements style. About the input with icon style, please refer to input group style.</p>
+  <h5>Date inputs</h5>
+  <p>About the inputs style and state, please refer to <a href="#/styles/{{theme}}/{{version}}/206355af-1c26-49d7-b878-d3d6f094990f">Form Elements</a>. About the input with icon style, please refer to <a href="#/styles/{{theme}}/{{version}}/4ec8071d-3dc0-4c63-90d7-9b41cb87a423">Input Groups</a>.</p>
   <pre data-title="Date inputs field width">
     <style data-selector=".input-width-xs"></style>
   </pre>
@@ -27,25 +27,28 @@
   <pre>
     <style data-selector=".datepicker table td"></style>
   </pre>
-  <pre>
-    <style data-selector=".datepicker table tr td.old">Not currently month days</style>
-  </pre>
-  <pre>
-    <style data-selector=".datepicker table tr td.today">Today day</style>
-  </pre>
-  <pre data-title=":hover">
+  <pre data-title="Being hovered on dates">
     <style data-selector=".datepicker table tr td.day:hover"></style>
   </pre>
-  <pre data-title="Selected state">
+  <pre data-title="Not current month dates">
+    <style data-selector=".datepicker table tr td.old"></style>
+  </pre>
+  <pre data-title="Today">
+    <style data-selector=".datepicker table tr td.today"></style>
+  </pre>
+  <pre data-title="Selected date">
     <style data-selector=".datepicker table tr td.active"></style>
   </pre>
-  <pre data-title="The month/year header cell">
-    <style data-selector=".datepicker table th.switch">Also need to use the colspan attribute on the element</style>
+  <pre data-title="The month/year header cells">
+    <style data-selector=".datepicker table th.switch">Colspan attribute on the element is needed</style>
   </pre>
-  <pre data-title=":hover">
+  <pre data-title="Width of the month/year header cells">
+    <style data-selector=".datepicker div.datepicker-months th.switch"></style>
+  </pre>
+  <pre data-title="Being hovered the month/year header cells">
     <style data-selector=".datepicker thead tr:first-child th:hover"></style>
   </pre>
-  <pre data-title="The week header cell">
+  <pre data-title="The week header cells">
     <style data-selector=".datepicker .dow"></style>
   </pre>
 
@@ -54,28 +57,26 @@
     <style data-selector=".datepicker div.datepicker-months tbody > tr > td"></style>
   </pre>
 
-
   <h5>Datepicker-months, datepicker-years</h5>
-  <p>A datepicker-months, datepicker-years block can created with a <code data-tag="span"></code> element within <code data-tag="td"></code></p>
+  <p>A datepicker-months, datepicker-years block can created with a <code data-tag="span"></code> element within <code data-tag="td"></code>.</p>
   <pre>
     <style data-selector=".datepicker table tr td span"></style>
   </pre>
   <pre>
-    <style data-selector=".datepicker table tr td span.old">The year not in the range</style>
+    <style data-selector=".datepicker table tr td span.old">The years not in the range</style>
   </pre>
   <pre data-title=":hover">
     <style data-selector=".datepicker table tr td span:hover"></style>
   </pre>
-  <pre data-title="Selected state">
+  <pre data-title="Selected">
     <style data-selector=".datepicker table tr td span.active"></style>
   </pre>
 
   <h5>Icon class</h5>
   <p>Icon class should only be used on elements that do not contain either text or child elements. We recommend wrapping <code data-tag="span"></code> or <code data-tag="i"></code>.</p>
-  <pre data-title="For font-awesome arrow icon:">
+  <pre data-title="For font-awesome arrow icon">
     <style data-selector=".datepicker thead tr:first-child th.prev .fa"></style>
   </pre>
-
 </section>
 
 <section class="date-time-picker-example">
@@ -129,5 +130,5 @@
         <i class="fa fa-calendar"></i>
       </label>
       <div id="datepicker-container" class="dropdown-menu"></div>
-  </div>  
+  </div>
 </section>
