@@ -30,7 +30,6 @@
       }
       .caret {
         margin-left: 4px;
-        border-top: 4px dashed #fff;
       }
     }
 
@@ -73,16 +72,14 @@
   > li > a > img {
     max-width: none;
   }
-
-  header & {
+}
+header {
+  .nav {
     > li {
       border-right: 0;
       border-left: 1px solid #eee;
       > a {
-        padding: 22px 24px;
-        .caret {
-          border-top: 4px dashed #666;
-        }
+        padding: 21px 24px 22px;
         .icon {
           vertical-align: top;
         }
@@ -105,6 +102,12 @@
       }
     }
   }
+  &.header-with-navbar {
+    border-bottom: 0;
+    .navbar-nav > li > a {
+      padding: 22px 24px;
+    }
+  }
 }
 
 .affix {
@@ -116,7 +119,7 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  //border-bottom: 1px solid @nav-tabs-border-color; 
+  //border-bottom: 1px solid @nav-tabs-border-color;
   > li {
     float: left;
     // Make the list-items overlay the bottom border
@@ -184,17 +187,21 @@
 // -------------------------
 .nav-pills {
   > li {
-    float: left;
-
-    // Links rendered as pills
     > a {
       //border-radius: @nav-pills-border-radius;
       font-family: @font-family-arial;
       font-size: @font-size-base;
       color: @nav-tabs-normal-link-hover-color;
+      text-align: center;
+    }
+  }
+}
+.nav-pills-horizontal {
+  > li {
+    float: left;
+    > a {
       padding: 12px 16px;
       min-width: 80px;
-      text-align: center;
       &:hover {
         color: @nav-tabs-normal-link-hover-color;
         background-color: #fff;
@@ -208,7 +215,6 @@
     + li {
       margin-left: 1px;
     }
-
     // Active state
     &.active > a {
       &,
@@ -219,6 +225,61 @@
         background-color: @nav-pills-active-link-hover-bg;
         border-bottom : 2px solid @nav-tabs-active-link-hover-border-top-color;
         padding-bottom: 10px;
+      }
+    }
+  }
+}
+.nav-pills-vertical-basic {
+  display: inline-block;
+  min-width: 80px;
+  > li {
+    > a {
+      padding: 9px 16px;
+      &:hover {
+        background-color: #ffffff;
+        border-left: 2px solid #bbbbbb;
+        padding-left: 14px;
+      }
+      &:focus {
+        background-color: #ffffff;
+      }
+    }
+    + li {
+      margin-top: 1px;
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        font-weight: bold;
+        color: #222222;
+        border-left: 2px solid @nav-tabs-active-link-hover-border-top-color;
+        padding-left: 14px;
+        background-color: #f4f4f4;
+      }
+    }
+  }
+}
+.nav-pills-vertical-light {
+  display: inline-block;
+  min-width: 80px;
+  > li {
+    > a {
+      padding: 9px 16px;
+      &:hover,
+      &:focus {
+        background-color: #f4f4f4;
+      }
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: #ffffff;
+        font-weight: bold;
+        color: @nav-tabs-active-link-hover-border-top-color;
       }
     }
   }
@@ -266,7 +327,7 @@
       }
     }
     + li > a {
-      border-left: 1px solid #ddd;  
+      border-left: 1px solid #ddd;
     }
     // Active state
     &.active > a {
