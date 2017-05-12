@@ -134,6 +134,10 @@
       }
     }
   }
+  &.scrollable {
+    overflow-y: hidden;
+    padding-right: 70px;
+  }
   .make-lagend-list-style();
 }
 
@@ -156,11 +160,22 @@
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 4px 0;
+      + li {
+        margin-left: 0;
+      }
     }
+  }
+  &.scrollable {
+    overflow-y: hidden;
+    padding: 0;
   }
 }
 
 .legend-page {
+  position: absolute;
+  display: none;
+  right: 12px;
+  top: 5px;
   .fa {
     color: #9c9c9c;
     cursor: pointer;
@@ -175,10 +190,17 @@
     cursor: default;
     color: #DDDDDD;
   }
+  &.show {
+    display: inline-block;
+  }
 }
 
 .with-vertical-legend {
   position: relative;
+  .legend-page {
+    top: 334px;
+    right: 106px;
+  }
   .chart-container {
     position: relative;
     margin-right: 180px;
