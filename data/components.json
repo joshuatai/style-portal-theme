@@ -433,12 +433,20 @@
   },
   {
     "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
-    "name": "Pie Charts",
+    "name": "Pie & Donut Charts",
     "keywords": [
       "pie chart",
+      "donut chart",
       "chart"
     ],
-    "segments": []
+    "segments": [
+      "de961f15-b8c0-4338-bd21-e3d5f31c55dc",
+      "eec81977-26cb-4cbb-8a5b-5b6034742cb2",
+      "c122d2eb-b035-427f-99e7-248efedee3eb",
+      "5975946d-eb73-46f4-bbb1-a41a796452dc",
+      "a8a68fc1-13a9-4a22-8389-6fef1cf5577f",
+      "eb117673-cc7a-46bd-be5f-314fd55102f1"
+    ]
   },
   {
     "id": "64d00b7c-ae9b-4bcf-83f1-c8e58328ce81",
