@@ -1,24 +1,27 @@
 <section class="css-reference">
   <h5>Table row status</h5>
   <pre>
-    <style data-selector=".table-hover > tbody > tr:hover">:hover</style>
+    <style data-selector=".table-hover > tbody > tr:hover">Hovered state</style>
   </pre>
   <pre>
     <style data-selector=".table > tbody > tr.active > td">Selected state</style>
   </pre>
 
-  <h5>Table column only with icon</h5>
+  <h5>Table column for checkbox</h5>
   <pre>
-    <style data-selector=".table > thead > tr > th.gutter">Set width on the table header cell</style>
+    <style data-selector=".table > thead > tr > th.gutter">Set a certain width on the table header cell</style>
   </pre>
 
   <h5>Table cell with hyperlink</h5>
   <pre>
     <style data-selector=".table-hover > tbody > tr > td.td-link:hover">:hover</style>
   </pre>
-   <pre>
-    <style data-selector=".table-hover > tbody > tr > td.td-link:hover a">Link text</style>
+  <pre>
+    <style data-selector=".table > tbody > tr > td a">Link text</style>
+    <style data-selector=".table-hover > tbody > tr > td.td-link:hover a">Link text :hover</style>
   </pre>
+
+
 
   <h5>Table header sortable status</h5>
   <pre>
@@ -28,17 +31,21 @@
     <style data-selector=".table-sortable .sortabled">Sortabled state</style>
   </pre>
 
-  <h5>Icon class</h5>
+  <h5>Icon class for sorted column</h5>
   <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
   <pre data-title="For Image icon:">
     <style data-selector=".icon">Default size of icon</style>
   </pre>
-
-  <h5>Sort descending icon</h5>
   <pre>
     <style data-selector=".table-sortable .sortabled .icon_sortDescending"></style>
-    <style data-selector=".icon_sortDescending"></style>
   </pre>
+  <pre>
+    <style data-selector=".icon_sortDescending">Sort descending icon</style>
+  </pre>
+  <pre>
+    <style data-selector=".icon-sortAscending">Sort ascending icon</style>
+  </pre>
+
 
 </section>
 
@@ -192,7 +199,7 @@
   </ul>
   <table class="table table-bordered table-hover table-sortable">
       <thead>
-        <tr>          
+        <tr>
           <th class="sortabled">Deployment Plan<span class="icon icon_sortDescending"></span></th>
           <th>Type</th>
           <th>Appliance</th>
@@ -201,21 +208,21 @@
         </tr>
       </thead>
       <tbody>
-        <tr>          
+        <tr>
           <td>Hotfix_DDEI</td>
-          <td>Hotfix</td>          
+          <td>Hotfix</td>
           <td>8</td>
           <td>2016/06/02 23:15:00</td>
           <td>Administrator</td>
         </tr>
-        <tr>          
+        <tr>
           <td>Hotfix_DDI_01</td>
           <td>Virtual Analyzer image</td>
           <td>12</td>
           <td>2016/04/18 23:17:20</td>
           <td>Administrator</td>
         </tr>
-        <tr>          
+        <tr>
           <td>TW_Patch_01_DDI</td>
           <td>Firmware</td>
           <td>29</td>
