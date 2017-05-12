@@ -30,7 +30,6 @@
       }
       .caret {
         margin-left: 4px;
-        border-top: 4px dashed #fff;
       }
     }
 
@@ -72,7 +71,7 @@
   // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
   > li > a > img {
     max-width: none;
-  } 
+  }
 }
 header {
   .nav {
@@ -81,9 +80,6 @@ header {
       border-left: 1px solid #eee;
       > a {
         padding: 21px 24px 22px;
-        .caret {
-          border-top: 4px dashed #666;
-        }
         .icon {
           vertical-align: top;
         }
@@ -104,13 +100,12 @@ header {
             margin-right: 8px;
         }
       }
-    }    
+    }
   }
-  &.header-with-navbar,
-  &.header-with-breadcrumbs { 
+  &.header-with-navbar {
     border-bottom: 0;
     .navbar-nav > li > a {
-      padding: 22px 24px 22px;
+      padding: 22px 24px;
     }
   }
 }
@@ -124,7 +119,7 @@ header {
 
 // Give the tabs something to sit on
 .nav-tabs {
-  //border-bottom: 1px solid @nav-tabs-border-color; 
+  //border-bottom: 1px solid @nav-tabs-border-color;
   > li {
     float: left;
     // Make the list-items overlay the bottom border
@@ -274,7 +269,7 @@ header {
       }
     }
     + li > a {
-      border-left: 1px solid #ddd;  
+      border-left: 1px solid #ddd;
     }
     // Active state
     &.active > a {
