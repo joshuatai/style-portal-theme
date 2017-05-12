@@ -1,0 +1,19 @@
+{
+  "id": "a8a68fc1-13a9-4a22-8389-6fef1cf5577f",
+  "name": "Donut Chart with Legends in Right",
+  "location": "pie-donut-charts/donut-chart-legends.html",
+  "dependencies": [
+    "highcharts-5.0.6"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6"
+  }
+}
