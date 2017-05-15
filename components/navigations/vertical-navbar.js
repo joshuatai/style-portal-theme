@@ -5,15 +5,15 @@ var object = [
     "name": "Getting Home",
     "icon": "getting-home",
     "bower-search":null,
-    "segments": [],    
+    "segments": [],
     "components": []
   },
   {
-    
+
     "id": "2",
-    "name": "Styles",  
+    "name": "Styles",
     "icon": "styles",
-    "bower-search":null, 
+    "bower-search":null,
     "segments": [],
     "components": [
       {
@@ -27,23 +27,23 @@ var object = [
       {
         "id":"2-2",
         "name": "Layout",
-        "bower-search": null,      
+        "bower-search": null,
         "segments": [],
         "parent": "2"
       },
       {
         "id":"2-3",
         "name": "Typography",
-        "bower-search": null,        
+        "bower-search": null,
         "segments": [],
         "parent": "2"
       },
-      {        
+      {
         "id":"2-4",
         "name": "Icons",
         "bower-search": null,
         "segments": [],
-        "parent": "2"        
+        "parent": "2"
       }
     ]
   }
@@ -71,13 +71,12 @@ $('.vertical-nav-example .navigation')
       $('[data-parent="#sidebarExample"]', $nav).attr('data-toggle', 'collapse');
     } else {
       $nav.addClass('collapsed').removeClass('expand');
-      $('[data-parent="#sidebarExample"]', $nav).removeAttr('data-toggle'); 
+      $('[data-parent="#sidebarExample"]', $nav).removeAttr('data-toggle');
       $('.sub-nav', $nav).css('height', 'auto');
     }
 
-  })  
-  .on('show.bs.collapse', '.sub-nav', function (e) {    
-    console.log($subNav);
+  })
+  .on('show.bs.collapse', '.sub-nav', function (e) {
     var $subNav = $(this);
     var $navItems = $subNav.closest(".navigation-items");
     $('.sub-nav.in', $navItems).collapse('toggle');
