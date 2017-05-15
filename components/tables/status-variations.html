@@ -1,27 +1,24 @@
 <section class="css-reference">
   <h5>Table row status</h5>
   <pre>
-    <style data-selector=".table-hover > tbody > tr:hover">Hovered state</style>
+    <style data-selector=".table-hover > tbody > tr:hover">:hover</style>
   </pre>
   <pre>
     <style data-selector=".table > tbody > tr.active > td">Selected state</style>
   </pre>
 
-  <h5>Table column for checkbox</h5>
+  <h5>Table column only with icon</h5>
   <pre>
-    <style data-selector=".table > thead > tr > th.gutter">Set a certain width on the table header cell</style>
+    <style data-selector=".table > thead > tr > th.gutter">Set width on the table header cell</style>
   </pre>
 
   <h5>Table cell with hyperlink</h5>
   <pre>
     <style data-selector=".table-hover > tbody > tr > td.td-link:hover">:hover</style>
   </pre>
-  <pre>
-    <style data-selector=".table > tbody > tr > td a">Link text</style>
-    <style data-selector=".table-hover > tbody > tr > td.td-link:hover a">Link text :hover</style>
+   <pre>
+    <style data-selector=".table-hover > tbody > tr > td.td-link:hover a">Link text</style>
   </pre>
-
-
 
   <h5>Table header sortable status</h5>
   <pre>
@@ -31,21 +28,35 @@
     <style data-selector=".table-sortable .sortabled">Sortabled state</style>
   </pre>
 
-  <h5>Icon class for sorted column</h5>
+  <h5>Icon class</h5>
   <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
   <pre data-title="For Image icon:">
     <style data-selector=".icon">Default size of icon</style>
   </pre>
+
+  <h5>Sort descending icon</h5>
   <pre>
     <style data-selector=".table-sortable .sortabled .icon_sortDescending"></style>
-  </pre>
-  <pre>
-    <style data-selector=".icon_sortDescending">Sort descending icon</style>
-  </pre>
-  <pre>
-    <style data-selector=".icon-sortAscending">Sort ascending icon</style>
+    <style data-selector=".icon_sortDescending"></style>
   </pre>
 
+  <h5>Table wrapper for loader overlay</h5>
+  <p>Wrap the table and loader overlay with a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".table-container"></style>
+  </pre>
+  <h5>Loader</h5>
+  <p>About the loader style, Please refer to <a href="#/styles/{{theme}}/{{version}}/4cd601bb-d7a7-4b4a-8d4d-d087a630929a">Components > Loader</a>
+  <pre data-title="Loader overlay to wrap a large loader">
+    <style data-selector=".loader-overlay"></style>
+  </pre>
+  <pre>
+    <style data-selector=".table + .loader-overlay"></style>
+  </pre>
+  <h5>Column for table without data</h5>
+  <pre>
+    <style data-selector=".table-no-data tbody > tr td"></style>
+  </pre>
 
 </section>
 
@@ -246,7 +257,6 @@
               <th>Appliance</th>
               <th>Deployed</th>
               <th>Creator</th>
-              <th></th>
             </tr>
           </thead>
       </table>
