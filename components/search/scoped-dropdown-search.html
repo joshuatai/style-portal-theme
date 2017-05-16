@@ -4,17 +4,29 @@
   <pre>
     <style data-selector=".input-group"></style>
   </pre>
-
-  <h5>Search container with an icon</h5>
+  <h5>Dropdowns container</h5>
   <pre>
+    <style data-selector=".input-group-btn">Use span element to wrap the dropdowns</style>
+  </pre>
+  <h5>Dropdown toogle</h5>
+  <p>About dropdown toggle style. Please refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Components > Drop-downs</a>.</p>
+  <pre>
+    <style data-selector=".input-group-btn > .btn"></style>
+    <style data-selector=".input-group-btn:first-child > .dropdown-toggle">Negative margin to only have a 1px border between the two</style>
+  </pre>
+  <pre data-title="Dropdown Caret">
+    <style data-selector=".input-group-btn .dropdown-toggle .caret">Put the caret icon behind the text</style>
+  </pre>
+  <h5>Drop-down menus</h5>
+  <p>About dropdown menu style. Please refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Components > Drop-downs</a>.</p>
+  <h5>Container for input with an icon</h5>
+  <pre>
+    <style data-selector=".input-icon-group"></style>
     <style data-selector=".input-group .input-icon-group"></style>
+    <style data-selector=".input-group .input-icon-group:not(:first-child):not(:last-child)"></style>
   </pre>
-  <pre data-title="Input tag">
-    <style data-selector=".input-group .input-icon-group > .form-control"></style>
-    <style data-selector=".input-group .input-icon-group > .icon">Icon stack order</style>
-  </pre>
-
   <h5>Input with form control</h5>
+  <p>About input style. Please refer to <a href="#/styles/{{theme}}/{{version}}/206355af-1c26-49d7-b878-d3d6f094990f">Forms > Form Elements</a>.</p>
   <pre>
     <style data-selector=".input-group .form-control"></style>
   </pre>
@@ -22,24 +34,29 @@
     <style data-selector=".input-group .form-control:focus"></style>
   </pre>
   <pre data-title=":not(:first-child):not(:last-child)">
-    <style data-selector=".input-group .form-control:not(:first-child):not(:last-child)"></style>
+    <style data-selector=".input-group .input-icon-group:not(:first-child):not(:last-child) .form-control"></style>
   </pre>
-
-  <h5>Drop-down menus</h5>
+  <pre data-title="Input with cancel icon">
+    <style data-selector=".input-group .input-icon-group > .form-control"></style>
+  </pre>
+  <h5>Cancel icon</h5>
   <pre>
-    <style data-selector=".input-group-btn">Use div element to wrap the dropdown</style>
+    <style data-selector=".input-group .input-icon-group > .icon">Icon stack order</style>
   </pre>
-  <pre data-title="Dropdown Class">
-    <style data-selector=".input-group-btn > .btn">About the dropdown style, please refer to dropdowns component</style>
+  <h5>Search button container</h5>
+  <pre>
+    <style data-selector=".input-group-btn">Use span element to wrap the button</style>
+  </pre>
+  <h5>Search button</h5>
+  <p>About the button with icon style, please refer to <a href="#/styles/{{theme}}/{{version}}/e5bd7778-d707-420b-ac64-4a55da161b83">Components > Buttons</a>.</p>
+  <pre data-title="Button Class">
+    <style data-selector=".input-group-btn > .btn"></style>
+  </pre>
+  <pre data-title=":last-child">
+    <style data-selector=".input-group-btn:last-child > .btn">Negative margin to only have a 1px border between the two</style>
   </pre>
   <pre data-title=":focus :active">
     <style data-selector=".input-group-btn > .btn:focus"></style>
-  </pre>
-  <pre data-title=":first-child">
-    <style data-selector=".input-group-btn:first-child > .dropdown-toggle">Negative margin to only have a 1px border between the two</style>
-  </pre>
-  <pre data-title="Dropdown Caret">
-    <style data-selector=".input-group-btn .dropdown-toggle .caret">Put the caret icon behind the text</style>
   </pre>
 </section>
 
