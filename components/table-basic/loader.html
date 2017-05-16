@@ -1,5 +1,17 @@
 <section class="css-reference">
-	<p>For loader style guidelines, go to Components > Loader > <a href="#/styles/{{theme}}/{{version}}/4cd601bb-d7a7-4b4a-8d4d-d087a630929a">Loader</a> overlay in the Style Portal.</p>
+	<p>About the loader style, Please refer to <a href="#/styles/{{theme}}/{{version}}/4cd601bb-d7a7-4b4a-8d4d-d087a630929a">Components > Loader</a>
+	<h5>Table wrapper for loader overlay</h5>
+  <p>Wrap the table and loader overlay with a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".table-container"></style>
+  </pre>
+	<h5>Loader</h5>
+	<pre data-title="Loader overlay to wrap a large loader">
+    <style data-selector=".loader-overlay"></style>
+  </pre>
+  <pre>
+    <style data-selector=".table + .loader-overlay"></style>
+  </pre>
 </section>
 
 <section class="tables-basic-example">

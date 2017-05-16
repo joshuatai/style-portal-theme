@@ -59,30 +59,13 @@
         margin-left: -1px;
         padding-top: 1px;
       }
-      .icon { 
+      .icon {
         width: 14px;
         height: 14px;
       }
     }
   }
 }
-
-// Sizing options
-//
-// Remix the default form control sizing classes into new ones for easier
-// manipulation.
-
-.input-group-lg > .form-control,
-.input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn {
-  //.input-lg();
-}
-.input-group-sm > .form-control,
-.input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn {
-  //.input-sm();
-}
-
 
 // Display as table-cell
 // -------------------------
@@ -148,18 +131,14 @@
   }
 
   &:not(:first-child):not(:last-child) {
-    border-right: 0; 
+    border-right: 0;
     border-left: 0;
     padding: @padding-base-vertical 8px;
   }
   + .form-control {
-    /*
-    border-left: 0;   */
     border-left-color: #e6e6e6;
   }
-  /*+ .form-control:focus {
-    border-left: 1px #0096cc solid;    
-  }*/
+
   + .form-control:not(:last-child) {
     border-right-color: #e6e6e6;
     &:focus {
@@ -254,29 +233,38 @@
 .touchspin-example-1.focused {
   .form-control {
     border-color: @btn-default-focus-border #ccc @btn-default-focus-border @btn-default-focus-border;
-    &:focus {
-      z-index: 2;
-    }
+    z-index: 2;
   }
+
   .btn {
-    &:hover {
-      z-index: 3;
-    }
-    &:focus {
-      border-left-color: #ccc;
-    }
     &:first-child {
       border-top-color: @btn-default-focus-border;
       border-right-color: @btn-default-focus-border;
-      &:focus {
-        border-bottom-color: #ccc;
+      border-left-color: #ccc;
+      border-bottom-color: #ccc;
+      &:hover {
+        border-left-color: #999;
+        border-bottom-color: #999;
+        z-index: 4;
+      }
+      &:focus:hover {
+        border-left-color: #999;
+        border-bottom-color: #999;
       }
     }
     &:last-child {
       border-bottom-color: @btn-default-focus-border;
       border-right-color: @btn-default-focus-border;
-      &:focus {
-        border-top-color: #ccc;
+      border-left-color: #ccc;
+      border-top-color: #ccc;
+      &:hover {
+        border-left-color: #999;
+        border-top-color: #999;
+        z-index: 3;
+      }
+      &:focus:hover {
+        border-left-color: #999;
+        border-top-color: #999;
       }
     }
   }
@@ -284,40 +272,33 @@
 .touchspin-example-2.focused {
   .form-control {
     border-color: @btn-default-focus-border #ccc;
-    &:focus {
-      z-index: 2;
-    }
+    z-index: 2;
   }
-  .input-group-btn .btn {
+  .input-group-btn:first-child .btn {
     border-top-color: @btn-default-focus-border;
     border-bottom-color: @btn-default-focus-border;
-    &:focus {
+    border-left-color: @btn-default-focus-border;
+    border-right-color: #ccc;
+    &:hover {
+      border-right-color: #999;
       z-index: 3;
     }
-  }
-  .input-group-btn:first-child .btn{
-    border-left-color: @btn-default-focus-border;
-    &:focus{
-      border-right-color: #ccc;
+    &:focus:hover {
+      border-right-color: #999;
     }
   }
-  .input-group-btn:last-child .btn{
+  .input-group-btn:last-child .btn {
+    border-top-color: @btn-default-focus-border;
+    border-bottom-color: @btn-default-focus-border;
     border-right-color: @btn-default-focus-border;
-    &:focus {
-      border-left-color: #ccc;
+    border-left-color: #ccc;
+    &:hover {
+      border-left-color: #999;
+      z-index: 3;
+    }
+    &:focus:hover {
+      border-left-color: #999;
     }
   }
-  
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
