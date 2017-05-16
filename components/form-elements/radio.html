@@ -4,10 +4,6 @@
   <pre>
     <style data-selector=".radio"></style>
   </pre>
-  <pre data-title="Disabled Class">
-    <style data-selector=".radio.disabled label"></style>
-  </pre>
-
   <h5>Input radio</h5>
   <p>The input element should be wrapped a radio container.</p>
   <pre>
@@ -19,20 +15,22 @@
   <pre>
     <style data-selector=".radio label"></style>
   </pre>
-
+	<pre data-title="Disabled Class">
+    <style data-selector=".radio.disabled label"></style>
+  </pre>
   <h5>Customizing a radio button</h5>
-  <p>To customize a radio button, replace the hidden radio button with the pseudo-element <code data-html=":before{/code}. E.g. {code}label:before"></code></p>
+  <p>To customize a radio button, replace the hidden radio button with the pseudo-element.</p>
   <pre>
     <style data-selector=".input-radio + label:before"></style>
     <style data-selector=".radio label:before">Add this style with a radius size half of the height and width</style>
   </pre>
-  <pre data-title=":hover::before">
+  <pre data-title=":hover">
     <style data-selector=".input-radio + label:hover::before"></style>
   </pre>
   <pre data-title=":checked">
     <style data-selector=".input-radio:checked + label:before">Add HTML character to content property on label class pseudo-element :before</style>
   </pre>
-  <pre data-title=":checked:hover">
+  <pre data-title=":checked and :hover">
     <style data-selector=".radio .checked-hover + label:before"></style>
   </pre>
   <pre data-title="Disabled Style">
@@ -43,10 +41,13 @@
   <pre>
     <style data-selector=".radio + .radio">Such as Bootstrap radio of a stacked: .radio + .radio</style>
   </pre>
-
   <h5>Inline radio buttons</h5>
   <pre>
+		<style data-selector=".radio-inline"></style>
     <style data-selector=".radio-inline + .radio-inline">Such as Bootstrap radio in a row: .radio-inline + .radio-inline</style>
+  </pre>
+	<pre>
+    <style data-selector=".radio-inline.disabled">Disabled</style>
   </pre>
 </section>
 
