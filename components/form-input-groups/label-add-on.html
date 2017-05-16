@@ -17,17 +17,19 @@
   </pre>
 
   <h5>Input with form controls</h5>
+  <p>About input style. Please refer to <a href="#/styles/{{theme}}/{{version}}/206355af-1c26-49d7-b878-d3d6f094990f">Forms > Form Elements</a>.</p>
   <pre>
     <style data-selector=".input-group .form-control"></style>
   </pre>
-  <pre data-title=":focus">
-    <style data-selector=".input-group .form-control:focus"></style>
+  <pre data-title=":hover or :focus">
+    <style data-selector=".input-group .form-control:hover"></style>
   </pre>
   <pre data-title="Input after the label">
     <style data-selector=".input-group-addon + .form-control"></style>
   </pre>
   <pre data-title="Input between two labels">
     <style data-selector=".input-group-addon + .form-control:not(:last-child)"></style>
+    <style data-selector=".input-group-addon + .form-control:not(:last-child):focus">:focus</style>
   </pre>
 </section>
 <section class="form-input-groups-example">
@@ -43,7 +45,7 @@
   <div class="input-group">
     <span class="input-group-addon">IP address</span>
     <input type="text" class="form-control">
-    <span class="input-group-addon">~</span>
+    <span class="input-group-addon">to</span>
     <input type="text" class="form-control">
   </div>
 </section>

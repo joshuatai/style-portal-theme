@@ -3,41 +3,44 @@
   <p>Wrap an <code>input</code> and a <code>div</code> within an element, such as <code>label</code></p>
   <pre>
     <style data-selector="label.switch"></style>
+  </pre>
+	<pre>
     <style data-selector="label.switch-sm">Small Class</style>
   </pre>
-
   <h5>Checkbox class</h5>
   <p>Use the checkbox class on an <code>input</code> element, and the type attribute is checkbox.</p>
   <pre>
     <style data-selector="label.switch input">In order to customized toggle switch, hide the input checkbox type</style>
   </pre>
-
   <h5>Toggle class</h5>
   <p>Use the toggle class on a <code>div</code> element.</p>
   <pre>
     <style data-selector=".toggle">Default toggle switch state is OFF</style>
     <style data-selector=".toggle.round"></style>
-    <style data-selector=".toggle-sm.round">Small Class</style>
   </pre>
-  <pre data-title=":hover">
+	<pre data-title=":hover">
     <style data-selector=".toggle:hover"></style>
   </pre>
-
+	<pre data-title=":checked">
+    <style data-selector="input:checked + .toggle">Change toggle class background color when toggle switch turn on</style>
+	</pre>
+	<pre data-title="[disabled]">
+    <style data-selector="label.switch .disabled"></style>
+  </pre>
+	<pre>
+    <style data-selector=".toggle-sm.round">Small Class</style>
+  </pre>
   <h5>Toggle button class</h5>
-  <p>Add the pseudo-element, for example, <code data-html=".toggle:before"></code> on the toggle class.</p>
+  <p>Add the pseudo-element on the toggle class.</p>
   <pre>
     <style data-selector=".toggle:before"></style>
+  </pre>
+	<pre data-title=":checked">
+    <style data-selector="input:checked + .toggle:before">In order to move the toggle button position, add the style on toggle class pseudo-element.</style>
+  </pre>
+	<pre>
     <style data-selector=".toggle-sm:before">Small Class</style>
-  </pre>
-
-  <h5>Toggle switch state</h5>
-  <pre data-title=":checked">
-    <style data-selector="input:checked + .toggle">Change toggle class background color when toggle switch turn on</style>
-    <style data-selector="input:checked + .toggle:before">In order to move the toggle button position, add the style on toggle class pseudo-element :before</style>
-    <style data-selector="input:checked + .toggle-sm:before">Small Class</style>
-  </pre>
-  <pre data-title="[disabled]">
-    <style data-selector="label.switch .disabled"></style>
+		<style data-selector="input:checked + .toggle-sm:before">Small Class for :checked</style>
   </pre>
 </section>
 
