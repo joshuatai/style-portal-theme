@@ -1,13 +1,25 @@
 <section class="css-reference">
   <h5>Tooltip class</h5>
-  <p>Use <code data-tag="div"></code> or <code data-tag="span"></code> to create a tooltip class. For example, <code>.tooltip</code> is used in Bootstrap.</p>
+  <p>Use <code data-tag="div"></code> to create a tooltip class. For example, <code>.tooltip</code> is used in Bootstrap.</p>
   <pre>
     <style data-selector=".tooltip"></style>
   </pre>
+  <pre data-title="Common fade class">
+    <style data-selector=".fade"></style>
+  </pre>
+  <pre data-title="Tooltip fade in">
+    <style data-selector=".tooltip.in"></style>
+  </pre>
   <pre data-title="Position the tooltip">
     <style data-selector=".tooltip.top">top</style>
+  </pre>
+  <pre>
     <style data-selector=".tooltip.bottom">bottom</style>
+  </pre>
+  <pre>
     <style data-selector=".tooltip.left">left</style>
+  </pre>
+  <pre>
     <style data-selector=".tooltip.right">right</style>
   </pre>
 
@@ -16,11 +28,17 @@
   <pre data-title="Tooltip arrow">
     <style data-selector=".tooltip-arrow"></style>
   </pre>
-  <pre data-title="Four directions">
-    <style data-selector=".tooltip.top .tooltip-arrow">top</style>
-    <style data-selector=".tooltip.bottom .tooltip-arrow">bottom</style>
-    <style data-selector=".tooltip.left .tooltip-arrow">left</style>
-    <style data-selector=".tooltip.right .tooltip-arrow">right</style>
+  <pre data-title="Arrow directions">
+    <style data-selector=".tooltip.top .tooltip-arrow">For top tooltip</style>
+  </pre>
+  <pre>
+    <style data-selector=".tooltip.bottom .tooltip-arrow">For bottom tooltip</style>
+  </pre>
+  <pre>
+    <style data-selector=".tooltip.left .tooltip-arrow">For left tooltip</style>
+  </pre>
+  <pre>
+    <style data-selector=".tooltip.right .tooltip-arrow">For right tooltip</style>
   </pre>
 
   <h5>Tooltip text class</h5>
@@ -45,7 +63,7 @@
 			<div class="tooltip-arrow"></div>
 			<div class="tooltip-inner">Top tooltip</div>
 		</div>
-		
+
 		<div class="tooltip bottom tooltip-example" role="tooltip">
 			<div class="tooltip-arrow"></div>
 			<div class="tooltip-inner">Bottom tooltip</div>

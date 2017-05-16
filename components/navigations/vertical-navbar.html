@@ -1,11 +1,11 @@
 <section class="css-reference">
   <h5>Vertical navigation bar</h5>
-  <p>Create a vertical navigation bar using a <code data-tag="div"></code> element.</p>
+  <p>Create a vertical navigation bar using a <code data-tag="nav"></code> element.</p>
   <pre>
     <style data-selector=".navigation"></style>
   </pre>
-  <pre data-title="Expand State">
-    <style data-selector=".navigation.expand">Click toggle button to expand the vertical navigation bar</style>
+  <pre data-title="Expand state">
+    <style data-selector=".navigation.expand"></style>
   </pre>
 
   <h5>Toggle button</h5>
@@ -20,18 +20,25 @@
   <h5>Hamburger menu icon</h5>
   <p>Create a hamburger menu icon with three <code data-tag="span"></code> elements.</p>
   <pre>
-    <style data-selector=".sidebar-toggle span"></style>
     <style data-selector=".sidebar-toggle .icon-bar"></style>
-    <style data-selector=".sidebar-toggle .icon-bar + .icon-bar">Second and third span elements</style>
+  </pre>
+  <pre>
+    <style data-selector=".sidebar-toggle .icon-bar + .icon-bar">Second and third &lt;span&gt; elements</style>
   </pre>
   <pre data-title=":hover">
-    <style data-selector=".sidebar-toggle:hover span"></style>
+    <style data-selector=".sidebar-toggle:hover .icon-bar"></style>
   </pre>
-  <pre data-title="Expand State">
-    <style data-selector=".navigation.expand .sidebar-toggle span"></style>
-    <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(2)">First span</style>
-    <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(3)">Second span</style>
-    <style data-selector=".navigation.expand .sidebar-toggle span:nth-child(4)">Third span</style>
+  <pre data-title="Expand state">
+    <style data-selector=".navigation.expand .sidebar-toggle .icon-bar"></style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .sidebar-toggle .icon-bar:nth-child(2)">First span</style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .sidebar-toggle .icon-bar:nth-child(3)">Second span</style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .sidebar-toggle .icon-bar:nth-child(4)">Third span</style>
   </pre>
 
   <h5>Vertical navigation bar wrapper</h5>
@@ -45,108 +52,147 @@
   <pre>
     <style data-selector=".navigation-items > li"></style>
   </pre>
-  <!--pre data-title="Expand State">
-    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true]::after">::after</style>
-  </pre>
-  <pre data-title="selected">
-    <style data-selector=".navigation.expand .navigation-items > li.selected > [aria-expanded=true]::after"></style>
-  </pre-->
 
-  <h5>Menu item link</h5>
+  <h5>Menu item links</h5>
   <p>Use <code data-tag="a"></code> for each menu item under <code data-tag="li"></code> elements.</p>
   <pre>
     <style data-selector=".navigation-items > li > a"></style>
-    <style data-selector=".navigation-items > li.selected > a">Menu item under a selected li</style>
-    <style data-selector=".navigation-items > li.selected > a[data-parent=#navigation-items]">Menu item under a selected li which contains a sub-menu</style>
   </pre>
-  <pre data-title="::after">
+  <pre data-title="Selected">
+    <style data-selector=".navigation-items > li.selected > a"></style>
+  </pre>
+  <pre data-title="Selected and contains a submenu">
+    <style data-selector=".navigation-items > li.selected > a[data-toggle=collapse]"></style>
+  </pre>
+  <pre data-title="Add background layer using ::after">
     <style data-selector=".navigation-items > li > a::after"></style>
-    <style data-selector=".navigation-items > li:hover > a::after">:after under a hovered li</style>
-    <style data-selector=".navigation-items > li.selected > a::after">:after under a selected li</style>
-  </pre>  
-  <pre data-title="::after under an expaned navigation bar">
-    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true]::after">:after of an sub-nav expanded menu item</style>
-    <style data-selector=".navigation.expand .navigation-items > li.selected > [aria-expanded=true]::after">:after of an sub-nav expanded menu item which under a selected li</style>
-  </pre>   
+  </pre>
+  <pre data-title="Change background color when a tab is being hovered">
+    <style data-selector=".navigation-items > li:hover > a::after"></style>
+  </pre>
+  <pre data-title="Change background color when a tab is being selected">
+    <style data-selector=".navigation-items > li.selected > a::after"></style>
+  </pre>
+  <pre data-title="Change background color when navigation bar and submenu are expanded">
+    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true]::after"></style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .navigation-items > li.selected > [aria-expanded=true]::after">When a tab is selected</style>
+  </pre>
+
   <h5>Icons in tab menu items</h5>
-  <pre data-title="Icon Class">
+  <pre data-title="Icon class">
     <style data-selector=".navigation-items > li > a > i"></style>
-    <style data-selector=".navigation-items > li:hover > a > i">Icon class under a hovered li</style>
-    <style data-selector=".navigation-items > li.selected > a > i">Icon class under a selected li</style>
   </pre>
-  <pre data-title="Icon class under an expaned navigation bar">
-    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true] > i">Icon under an sub-nav expanded menu item</style>
+  <pre data-title="When a tab is being hovered">
+    <style data-selector=".navigation-items > li:hover > a > i"></style>
   </pre>
+  <pre data-title="When a tab is being selected">
+    <style data-selector=".navigation-items > li.selected > a > i"></style>
+  </pre>
+  <pre data-title="When navigation bar and submenu are expanded">
+    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true] > i"></style>
+  </pre>
+
   <h5>Text in tab menu items</h5>
-  <pre data-title="Text Class">
-    <style data-selector=".navigation-items > li > a > i + span">Text elemenet after an icon</style>
-    <style data-selector=".navigation-items > li:hover > a > span">Text elemenet under a hovered li</style>
-    <style data-selector=".navigation-items > li.selected > a > span">Text elemenet under a selected li</style>
+  <p>Use <code data-tag="span"></code> for each menu item text under <code data-tag="a"></code> elements.</p>
+  <pre data-title="Text after an icon">
+    <style data-selector=".navigation-items > li > a > i + span"></style>
   </pre>
-  <pre data-title="Text under an expaned navigation bar">
-    <style data-selector=".navigation.expand .navigation-items > li i + span">Text elemenet after an icon</style>
-    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true] > span">Text under an sub-nav expanded menu item</style>
+  <pre data-title="When a tab is being hovered">
+    <style data-selector=".navigation-items > li:hover > a > span"></style>
   </pre>
+  <pre data-title="When a tab is being selected">
+    <style data-selector=".navigation-items > li.selected > a > span"></style>
+  </pre>
+  <pre data-title="When navigation bar is expanded">
+    <style data-selector=".navigation.expand .navigation-items > li i + span"></style>
+  </pre>
+  <pre data-title="When navigation bar and submenu are expanded">
+    <style data-selector=".navigation.expand .navigation-items > li > [aria-expanded=true] > span"></style>
+  </pre>
+
   <h5>Sub-menus</h5>
   <p>Wrap a sub-menu with a <code data-tag="ul"></code> element.</p>
   <pre>
-    <style data-selector="ul.sub-nav"></style>    
+    <style data-selector=".sub-nav"></style>
   </pre>
-  <pre data-title="Sub-menus under a collapsed navigation bar">
-    <style data-selector=".navigation.collapsed .navigation-items ul.sub-nav">Sub-menu under a normal li</style>
-    <style data-selector=".navigation.collapsed .navigation-items > li:hover > ul.sub-nav">Sub-menu under a hovered li</style>
+  <pre data-title="When navigation bar is collapsed">
+    <style data-selector=".navigation.collapsed .navigation-items .sub-nav"></style>
   </pre>
-  <pre data-title="Sub-menus under an expanded navigation bar">
-    <style data-selector=".navigation.expand ul.sub-nav"></style>
-  </pre>
-  <h5>Sub-menu items</h5>
-  <p>Use <code data-tag="li"></code> for each sub-menu item under the sub-menu <code data-tag="ul"></code> element.</p>
   <pre>
-    <style data-selector="ul.sub-nav > li:nth-child(2)">The first item of the sub-menu</style>
-    <style data-selector="ul.sub-nav > li:last-child">The last item of the sub-menu</style>    
+    <style data-selector=".navigation.collapsed .navigation-items > li:hover > .sub-nav">When a tab is being hovered</style>
   </pre>
-  <pre data-title="Sub-menus items under an expanded navigation bar">
-    <style data-selector=".navigation.expand ul.sub-nav > li"></style>
+  <pre data-title="When navigation bar is expanded">
+    <style data-selector=".navigation.expand .sub-nav"></style>
   </pre>
-  <pre data-title="::before of the Sub-menus items under an expanded navigation bar">
-    <style data-selector=".navigation.expand ul.sub-nav > li::before"></style>
-    <style data-selector=".navigation.expand ul.sub-nav > li:hover::before">:hover</style>
-  </pre>
-  <pre data-title="Sub-menus is only with a item title and without any options">
-    <style data-selector="ul.sub-nav.without-page > li"></style>
-  </pre>    
+
   <h5>Sub-menu title item</h5>
   <p>Use <code data-tag="li"></code> for the first element of a sub-menu item.</p>
-  <pre data-title="Title item under an expanded navigation bar">
-    <style data-selector=".navigation.expand ul.sub-nav > li:first-child"></style>
-  </pre> 
+  <pre data-title="When navigation bar is expanded">
+    <style data-selector=".navigation.expand .sub-nav > li:first-child"></style>
+  </pre>
+
   <h5>Sub-menu title</h5>
   <p>Use a heading element, such as <code data-tag="h4"></code>, for the title under the sub-menu title item.</p>
   <pre data-title="Title of the sub-menu">
-    <style data-selector="ul.sub-nav > li:first-child h4"></style>
-  </pre>  
-  <pre data-title="Sub-menus without any options and only with sub-menu title">    
-    <style data-selector="ul.sub-nav.without-page > li > h4">Only one option</style>
-  </pre>  
-  <h5>Sub-menu item link</h5>
+    <style data-selector=".sub-nav > li:first-child h4"></style>
+  </pre>
+  <pre data-title="Sub-menus without any options and only with sub-menu title">
+    <style data-selector=".sub-nav.without-page > li > h4"></style>
+  </pre>
+
+  <h5>Sub-menu items</h5>
+  <p>Use <code data-tag="li"></code> for each sub-menu item under the sub-menu <code data-tag="ul"></code> element.</p>
+  <pre data-title="The first item next to title item">
+    <style data-selector=".sub-nav > li:nth-child(2)"></style>
+  </pre>
+  <pre data-title="The last item">
+    <style data-selector=".sub-nav > li:last-child">The last item of the sub-menu</style>
+  </pre>
+  <pre data-title="When navigation bar is expanded">
+    <style data-selector=".navigation.expand .sub-nav > li"></style>
+  </pre>
+  <pre data-title="Add background layer using ::before">
+    <style data-selector=".navigation.expand .sub-nav > li::before"></style>
+  </pre>
+  <pre data-title="Change background color when an item is being hovered">
+    <style data-selector=".navigation.expand .sub-nav > li:hover::before">:hover</style>
+  </pre>
+  <pre data-title="Sub-menus without any options and only with sub-menu title">
+    <style data-selector=".sub-nav.without-page > li"></style>
+  </pre>
+
+  <h5>Sub-menu item links</h5>
   <p>Use <code data-tag="a"></code> for each sub-menu item under <code data-tag="li"></code> elements.</p>
   <pre>
-    <style data-selector="ul.sub-nav > li > a"></style>
-    <style data-selector="ul.sub-nav > li:hover > a">Sub-menu item link under a hovered sub-menu item</style>
-    <style data-selector="ul.sub-nav > li.selected > a">Sub-menu item link under a selected sub-menu item</style>    
+    <style data-selector=".sub-nav > li > a"></style>
   </pre>
-  <pre data-title="Sub-menus under an expanded navigation bar">    
-    <style data-selector=".navigation.expand ul.sub-nav > li > a"></style>
-    <style data-selector=".navigation.expand ul.sub-nav > li:hover > a">Sub-menu item link under a hovered sub-menu item</style>  
-    <style data-selector=".navigation.expand ul.sub-nav > li.selected > a">Sub-menu item link under a selected sub-menu item</style>
-    <style data-selector=".navigation.expand ul.sub-nav > li.selected > a::before">::before of the sub-menu item link under a selected sub-menu item</style>    
+  <pre data-title="When a sub-menu item being hovered">
+    <style data-selector=".sub-nav > li:hover > a"></style>
+  </pre>
+  <pre data-title="When a sub-menu item being selected">
+    <style data-selector=".sub-nav > li.selected > a"></style>
+  </pre>
+  <pre data-title="When navigation bar is expanded">
+    <style data-selector=".navigation.expand .sub-nav > li > a"></style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .sub-nav > li:hover > a">When a sub-menu item being hovered</style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .sub-nav > li.selected > a">When a sub-menu item being selected</style>
+  </pre>
+  <pre>
+    <style data-selector=".navigation.expand .sub-nav > li.selected > a::before">Change background color when a sub-menu item is being hovered</style>
   </pre>
 </section>
+
 <section class="navbar-example">
   <p>A vertical navigation bar is one that has tabs put vertically on the side.</p>
-  
+
   <div class="vertical-nav-example">
-    <div class="navigation collapsed">
+    <nav class="navigation collapsed">
       <button class="sidebar-toggle" type="button">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -154,14 +200,14 @@
           <span class="icon-bar"></span>
       </button>
       <ul id="sidebarExample" class="navigation-items"></ul>
-    </div>
-    
+    </nav>
+
     <header class="site-header">
       <a href="javascript:;" class="banner">
         <!--img src="dist/img/tball.svg" alt="Style Portal"-->
         <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
         <h1 class="site-title">Product Name</h1>
-      </a>             
+      </a>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
         <li class="dropdown">
