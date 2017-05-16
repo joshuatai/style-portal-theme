@@ -4,9 +4,6 @@
   <pre>
     <style data-selector=".table"></style>
   </pre>
-  <pre>
-    <style data-selector=".table .table"></style>
-  </pre>
 
   <h5>Standard table header</h5>
   <p>A standard table header can created with a <code data-tag="th"></code> tag within a <code data-tag="tr">.</code></p>
@@ -30,7 +27,7 @@
   </pre>
 
   <h5>Plain table</h5>
-  <p>Extend stansard table style to define plain table.</p>
+  <p>Extend <code data-tag="table"></code> tag style of the stansard table to define plain table.</p>
   <pre>
     <style data-selector=".table-minimalism"></style>
   </pre>
@@ -39,6 +36,9 @@
   <p>A plain table header can created with a <code data-tag="th"></code> tag within a <code data-tag="tr">.</code></p>
   <pre>
     <style data-selector=".table-minimalism > thead > tr > th"></style>
+  </pre>
+  <pre>
+    <style data-selector=".table > thead > tr > th"></style>
   </pre>
   <pre>
     <style data-selector=".table > thead:first-child > tr:first-child > th"></style>
