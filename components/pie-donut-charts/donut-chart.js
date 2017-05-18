@@ -47,14 +47,22 @@ $(function () {
         },
         colors: colors,
         title: {
-            text: '<span class="main-title">2963</span><br><span class="subtitle">Ransomware Detections</span>',
+            text: '<span class="donut-chart-title">2963</span>',
+            style: {
+                color: '#222222',
+                fontSize: '32px'
+            },
+            verticalAlign: 'top',
+            y: 136
+        },
+        subtitle: {
+            text: '<span class="donut-chart-subtitle">Ransomware Detections</span>',
             style: {
                 color: '#222222',
                 fontSize: '13px'
             },
             verticalAlign: 'top',
-            y: 133
-            //y: 117
+            y: 155
         },
         credits: {
             enabled: false

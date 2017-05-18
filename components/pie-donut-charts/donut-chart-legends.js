@@ -28,32 +28,17 @@ $(function () {
             name: 'Safe Circle',
             y: 2
         },{
-            name: 'Cloud App Security',
-            y: 981
+            name: 'TMRM',
+            y: 1
         }, {
-            name: 'Cloud Edge',
-            y: 652
+            name: 'SafeSync',
+            y: 0.8
         }, {
-            name: 'Hosted Email Security',
-            y: 248
+            name: 'License Management',
+            y: 0.8
         }, {
-            name: 'InterScan Web Security as a Services',
-            y: 150
-        },{
-            name: 'Worry-Free Business Security',
-            y: 90
-        },{
-            name: 'Worry-Free Business Security Services',
-            y: 80
-        },{
-            name: 'Officescan',
-            y: 75
-        },{
-            name: 'Remote Marager',
-            y: 60
-        },{
-            name: 'Safe Circle',
-            y: 2
+            name: 'License Usage',
+            y: 0.8
         }]
     }];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
@@ -70,9 +55,9 @@ $(function () {
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".pie-donut-charts-example.with-vertical-legend .legend");
+                var legend = $(".pie-donut-charts-example .legend-vertical-container .legend");
                 var legendContainer = $('ul', legend);
-                var legend_page = $(".pie-donut-charts-example.with-vertical-legend .legend-page");
+                var legend_page = $(".pie-donut-charts-example .legend-vertical-container .legend-page");
                 var page_up = $(".fa-caret-up", legend_page);
                 var page_down = $(".fa-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
@@ -133,13 +118,22 @@ $(function () {
         },
         colors: colors,
         title: {
-            text: '<span class="main-title">3095</span><br><span class="subtitle">Ransomware Detections</span>',
+            text: '<span class="donut-chart-title">3095</span>',
+            style: {
+                color: '#222222',
+                fontSize: '32px'
+            },
+            verticalAlign: 'top',
+            y: 136
+        },
+        subtitle: {
+            text: '<span class="donut-chart-subtitle">Ransomware Detections</span>',
             style: {
                 color: '#222222',
                 fontSize: '13px'
             },
             verticalAlign: 'top',
-            y: 133
+            y: 155
         },
         credits: {
           enabled: false
@@ -178,15 +172,15 @@ $(function () {
         },
     }, function (chart) {
         //Set percentage value at the end of each legend.
-        var legend = $(".pie-donut-charts-example.with-vertical-legend .legend");
+        var legend = $(".donut-legend-container .legend");
         var legendContainer = $('ul', legend);
 
         for (var i = 0; i < series[0].data.length; i++) {
             var color_idx = i%10;
             var percentageValue = chart.series[0].data[i].percentage.toFixed(1);
-            var percentageText = `(${percentageValue}%)`;
-            var seriesText = "<span>" + series[0].data[i].y + "</span>"
-            var newItem = $('<li>' + series[0].data[i].name + ': ' + seriesText + " " +percentageText + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+            var seriesName = "<span class='legend-series-name'>" + series[0].data[i].name + ":&nbsp;" + "</span>"
+            var seriesValue = "<span>" + "<span class='legend-series-value'>" + series[0].data[i].y + "</span>" + "&nbsp;" + `(${percentageValue}%)` + "</span>"
+            var newItem = $('<li>' + seriesName + seriesValue + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
             legendContainer.append(newItem);
             newItem[0].series = series[0].data[i];
             if (series[0].data[i].visible == false) {
@@ -194,16 +188,7 @@ $(function () {
             }
         }
 
-        // for (var i = 0; i < series.length; i++) {
-        //     var newItem = $('<li>' + series[0].data[i].name + ': ' + series[0].data[i].y +'</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
-        //     legendContainer.append(newItem);
-        //     newItem[0].series = series[0].data[i];
-        //     if (series[0].data[i].visible == false) {
-        //         newItem.addClass("mute");
-        //     }
-        // }
-        //bind events to your own custom legend
-        $(document).on('click', '.pie-donut-charts-example.with-vertical-legend .legend li', function (event) {
+        $(document).on('click', '.donut-legend-container .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[0].data[target_idx];
@@ -213,6 +198,21 @@ $(function () {
                 target.className += ' mute';
               } else {
                 target.className = target.className.replace(' mute', '')
+                series.setVisible(true);
+              }
+            }
+        });
+        $(document).on('click', '.donut-legend-container .legend li span', function (event) {
+            var target = $(this).parent();
+            var target_idx = target.index();
+            var series = chart.series[0].data[target_idx];
+            if (target[0].nodeName === 'LI' && series) {
+                console.log(series.visible);
+              if (series.visible === true) {
+                series.setVisible(false);
+                target.addClass('mute');
+              } else {
+                target.removeClass('mute ')
                 series.setVisible(true);
               }
             }

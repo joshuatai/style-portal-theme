@@ -1,31 +1,10 @@
 .pie-donut-charts-container {
 	height: 264px;
+	margin-top: 12px;
 }
-.highcharts-title {
-	text-align: center;
-	color: #222222;
-	font-size: 13px;
-	vertical-align: middle;
-}
-.highcharts-title .main-title {
-	font-size: 32px;
+.highcharts-title .donut-chart-title {
 	font-family: Interstate-Light, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
 }
-.pie-donut-charts-example.with-vertical-legend .pie-donut-charts-container {
-	width: 50%;
-	float: left;
-}
-.pie-donut-charts-example.with-vertical-legend .legend-vertical {
-	width: 50%;
-	height: 252px;
-}
-.pie-donut-charts-example.with-vertical-legend .legend-vertical ul{
-	padding: 0;
-}
-.pie-donut-charts-example.with-vertical-legend .legend-vertical ul li span{
-	font-weight: bold;
-}
-.pie-donut-charts-example.with-vertical-legend .legend-page {
-	top: 252px;
-    left: 50%;
+.highcharts-title .donut-chart-subtitle {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }

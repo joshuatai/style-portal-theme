@@ -44,13 +44,22 @@ $(function () {
         },
         colors: colors,
         title: {
-            text: '<span class="main-title">2486</span><br><span class="subtitle">Threat</span>',
+            text: '<span class="donut-chart-title">2486</span>',
+            style: {
+                color: '#222222',
+                fontSize: '32px'
+            },
+            verticalAlign: 'top',
+            y: 169
+        },
+        subtitle: {
+            text: '<span class="donut-chart-subtitle">Threat</span>',
             style: {
                 color: '#222222',
                 fontSize: '13px'
             },
-            verticalAlign: 'middle',
-            y: 40
+            verticalAlign: 'top',
+            y: 188
         },
         credits: {
             enabled: false

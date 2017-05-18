@@ -70,6 +70,50 @@
         }
       }
     }
+    .pie-chart {
+      .pie-diameter {
+        width: 250px;
+      }
+      .pie-slices {
+        border: 1px solid #ffffff;
+        &:hover {
+          width: 6px;
+        }
+      }
+    }
+    .donut-chart {
+      .donut-diameter {
+        width: 250px;
+      }
+      .donut-inner-diameter {
+        width: 186px;
+      }
+      .semi-donut-diameter {
+        width: 280px;
+      }
+      .semi-donut-inner-diameter {
+        width: 184px;
+      }
+      .donut-slices {
+        border: 1px solid #ffffff;
+        &:hover {
+          width: 6px;
+        }
+      }
+      .donut-chart-title {
+        color: #222222;
+        font-size: 32px;
+        font-family: @font-family-interstate-light;
+        + .donut-chart-title {
+          hight: 8px;
+        }
+      }
+      .donut-chart-subtitle {
+        color: #222222;
+        font-size: 13px;
+        font-family: @font-family-arial;
+      }
+    }
   }
 }
 
@@ -195,7 +239,7 @@
   }
 }
 
-.with-vertical-legend {
+.legend-vertical-container {
   position: relative;
   .legend-page {
     top: 334px;
@@ -206,3 +250,42 @@
     margin-right: 180px;
   }
 }
+
+.donut-legend-container {
+  .pie-donut-charts-container {
+    width: 50%;
+  }
+  .legend-vertical {
+    width: 50%;
+    height: 252px;
+    ul {
+      padding: 0;
+      li {
+        span {
+          display: inline-block;
+          vertical-align: top;
+        }
+        .legend-series-name {
+          max-width: 70%;
+          overflow: hidden;
+          text-overflow : ellipsis;
+          white-space : nowrap;
+        }
+        .legend-series-value {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .legend-page {
+    top: 252px;
+    left: 50%;
+  }
+}
+
+
+
+
+
+
+

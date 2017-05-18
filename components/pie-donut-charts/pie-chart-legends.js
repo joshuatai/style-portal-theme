@@ -12,6 +12,12 @@ $(function () {
         }, {
             name: 'Virus/Malware',
             y: 5
+        }, {
+            name: 'Malicious',
+            y: 8
+        }, {
+            name: 'Network Virus',
+            y: 4
         }]
     }];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];

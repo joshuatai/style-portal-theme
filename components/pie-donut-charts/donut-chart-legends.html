@@ -1,7 +1,56 @@
-<section class="pie-donut-charts-example with-vertical-legend">
-	<div id="donut-legend-right-container" class="pie-donut-charts-container"></div>
-	<section class="legend legend-vertical">
-        <ul></ul>
-    </section>
+<section class="css-reference">
+  <h5>Chart with legend wrapper</h5>
+  <p>Use a block-level element to wrap the chart and the vertical legend.</p>
+  <pre>
+    <style data-selector=".legend-vertical-container"></style>
+  </pre>
+  <h5>Donut chart wrapper</h5>
+  <pre>
+     <style data-selector=".donut-legend-container .pie-donut-charts-container"></style>
+  </pre>
+  <h5>Vertical legend wrapper</h5>
+  <pre>
+     <style data-selector=".donut-legend-container .legend-vertical">Please according to product requirements to determine height style.</style>
+  </pre>
+  <h5>Vertical legend container</h5>
+  <p>Wrap all vertical legends with a <code data-tag="ul"></code> element.</p>
+  <pre>
+     <style data-selector=".donut-legend-container .legend-vertical ul"></style>
+  </pre>
+  <h5>Vertical legend</h5>
+  <p>Use <code data-tag="li"></code> for each vertical legend under the <code data-tag="ul"></code> element.</p>
+  <pre>
+     <style data-selector=".legend-vertical ul li"></style>
+  </pre>
+  <h5>Series name in vertical legend</h5>
+  <pre>
+     <style data-selector=".donut-legend-container .legend-vertical ul li .legend-series-name"></style>
+  </pre>
+  <h5>Series value in vertical legend</h5>
+  <pre>
+     <style data-selector=".donut-legend-container .legend-vertical ul li .legend-series-value"></style>
+  </pre>
+  <h5>Caret</h5>
+  <pre>
+     <style data-selector=".legend-page .fa"></style>
+  </pre>
+  <pre data-title="Caret up">
+     <style data-selector=".legend-page .fa-caret-up"></style>
+  </pre>
+  <pre data-title="Caret down">
+     <style data-selector=".legend-page .fa-caret-down"></style>
+  </pre>
+  <pre data-title="Unable state:">
+     <style data-selector=".legend-page .unable"></style>
+  </pre>
+</section>
+
+<section class="pie-donut-charts-example ">
+	<div class="donut-legend-container legend-vertical-container">
+		<div id="donut-legend-right-container" class="pie-donut-charts-container"></div>
+		<div class="legend legend-vertical"> 
+      <ul></ul>
+    </div>
     <div class="legend-page"><i class="fa fa-caret-up"></i><span class="now"></span> / <span class="total"></span><i class="fa fa-caret-down"></i></div>
+  </div>
 </section>
