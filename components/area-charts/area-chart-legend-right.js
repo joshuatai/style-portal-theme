@@ -69,9 +69,9 @@ $(function () {
             spacingBottom: 0,
             events: {
               load: function () {
-                var legend = $(".area-charts-example.with-vertical-legend .legend");
+                var legend = $(".area-charts-example.legend-vertical-container .legend");
                 var legendContainer = $('ul', legend);
-                var legend_page = $(".area-charts-example.with-vertical-legend .legend-page");
+                var legend_page = $(".area-charts-example.legend-vertical-container .legend-page");
                 var page_up = $(".fa-caret-up", legend_page);
                 var page_down = $(".fa-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
@@ -220,7 +220,7 @@ $(function () {
         }
     }, function (chart) {
         // bind events to your own custom legend
-        $(document).on('click', '.area-charts-example.with-vertical-legend .legend li', function (event) {
+        $(document).on('click', '.area-charts-example.legend-vertical-container .legend li', function (event) {
             var target = event.target || event.srcElement;
             var target_idx = $(this).index();
             var series = chart.series[target_idx];
