@@ -30,15 +30,6 @@ $(function () {
         },{
             name: 'TMRM',
             y: 1
-        }, {
-            name: 'SafeSync',
-            y: 0.8
-        }, {
-            name: 'License Management',
-            y: 0.8
-        }, {
-            name: 'License Usage',
-            y: 0.8
         }]
     }];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
@@ -164,7 +155,7 @@ $(function () {
             backgroundColor: '#FFFFFF',
             padding: 16,
             useHTML: true,
-            headerFormat: '<table><thead><tr><td>Threat</td></tr></thead>',
+            headerFormat: '<table><thead><tr><td>Ransomware Detections</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {point.name} </td>' +
                 '<td>{point.y:,.0f} <span>({point.percentage:.1f}%)</span></td></tr>',
             footerFormat: '</table>'

@@ -1,17 +1,14 @@
 $(function () {
     var series = [{
         data: [{
-            name: 'Ransomware',
-            y: 56
+            name: 'Officescan',
+            y: 981
         }, {
-            name: 'Anti-spyware',
-            y: 24
+            name: 'Remote Marager',
+            y: 672
         }, {
-            name: 'Web Reputation',
-            y: 10
-        }, {
-            name: 'Virus/Malware',
-            y: 5
+            name: 'Safe Circle',
+            y: 281
         }]
     }];
     var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
@@ -93,7 +90,7 @@ $(function () {
             backgroundColor: '#FFFFFF',
             useHTML: true,
             padding: 16,
-            headerFormat: '<table><thead><tr><td>Threat</td></tr></thead>',
+            headerFormat: '<table><thead><tr><td>Ransomware Detections</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {point.name} </td>' +
                 '<td>{point.y:,.0f} <span>({point.percentage:.1f}%)</span></td></tr>',
             footerFormat: '</table>'
