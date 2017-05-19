@@ -70,18 +70,20 @@
         }
       }
     }
-    .pie-chart {
+    .pie-donut-chart {
       .pie-diameter {
         width: 250px;
       }
-      .pie-slices {
+      .pie-slices,
+      .donut-slices {
         border: 1px solid #ffffff;
-        &:hover {
+        &.hover {
           width: 6px;
         }
+        &.brightness {
+          filter: brightness(12%);
+        }
       }
-    }
-    .donut-chart {
       .donut-diameter {
         width: 250px;
       }
@@ -93,12 +95,6 @@
       }
       .semi-donut-inner-diameter {
         width: 184px;
-      }
-      .donut-slices {
-        border: 1px solid #ffffff;
-        &:hover {
-          width: 6px;
-        }
       }
       .donut-chart-title {
         color: #222222;

@@ -157,8 +157,7 @@ $(function () {
                         },
                         brightness: 0.12
                     }
-                },
-                center: ['50%', '50%']
+                }
             }
         },
         tooltip: {
