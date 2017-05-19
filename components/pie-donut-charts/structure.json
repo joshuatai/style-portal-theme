@@ -1,0 +1,17 @@
+{
+  "id": "de961f15-b8c0-4338-bd21-e3d5f31c55dc",
+  "name": "Pie Chart & Donut Chart",
+  "location": "pie-donut-charts/structure.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-4"
+  }
+}

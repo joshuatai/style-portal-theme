@@ -1,38 +1,6 @@
-
 .area-chart-container {
 	height: 362px;
 }
-
 .area-chart-container-plain {
 	height: 400px;
-}
-
-.legend-page {
-	position: absolute;
-	right: 12px;
-	top: 5px;
-	display: none;
-}
-
-.legend-page.show {
-	display: inline-block;
-}
-
-.legend.scrollable {
-	overflow-y: hidden;
-	padding-right: 70px;
-}
-
-.legend-vertical.scrollable {
-	overflow-y: hidden;
-	padding: 0;
-}
-
-.legend-vertical ul li + li {
-	margin-left: 0;
-}
-
-.with-vertical-legend .legend-page {
-	top: 334px;
-	right: 106px;
 }
