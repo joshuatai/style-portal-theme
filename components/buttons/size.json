@@ -1,6 +1,10 @@
 {
   "id": "4534d75a-66fc-4a44-8bf9-972198f870fc",
   "name": "Button Sizes",
+  "keywords": [
+    "buttons",
+    "sizes"
+  ],
   "location": "buttons/size.html",
   "dependencies": [],
   "actions": [
