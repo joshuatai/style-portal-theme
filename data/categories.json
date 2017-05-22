@@ -12,8 +12,8 @@
     "icon": "type",
     "segments": [],
     "components": [
-      "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",     
-      "aca6f1ac-609a-431c-8fca-739b6c060299"     
+      "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",
+      "aca6f1ac-609a-431c-8fca-739b6c060299"
     ]
   },
   {
@@ -35,7 +35,7 @@
       "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
       "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
       "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f",
-      "e70a6361-a194-44e2-8b6f-be42f78efe35"      
+      "e70a6361-a194-44e2-8b6f-be42f78efe35"
     ]
   },
   {
@@ -89,7 +89,8 @@
     "segments": [],
     "components": [
       "510755b0-3de5-45ef-a288-f59b51051444",
-      "473c91cd-3ff7-478b-bde5-d46298d736e8"
+      "473c91cd-3ff7-478b-bde5-d46298d736e8",
+      "a54681ca-16e3-43b8-a060-6fc7ed8cab73"
     ]
   }
 ]
