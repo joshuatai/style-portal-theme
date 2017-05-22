@@ -1,6 +1,11 @@
 {
   "id": "0be96478-bceb-4410-b5e7-afbaa331379c",
   "name": "Toast Notifications",
+  "keywords": [
+    "alerts",
+    "notifications",
+    "toasts"
+  ],
   "location": "notifications/toast.html",
   "dependencies": [],
   "actions": [
