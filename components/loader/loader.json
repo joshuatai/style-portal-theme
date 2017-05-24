@@ -1,6 +1,18 @@
 {
   "id": "377a1cfd-6256-4ea0-900e-8325c785f184",
   "name": "Loaders",
+  "keywords": [
+    "icons",
+    "indicator",
+    "inprogress",
+    "loaders",
+    "loading",
+    "processing",
+    "progress",
+    "rotate",
+    "spinner",
+    "waiting"
+  ],
   "location": "loader/loader.html",
   "dependencies": [],
   "actions": [

@@ -1,6 +1,13 @@
 {
   "id": "f7c8d8ac-9bad-462b-b89a-885eec6425fc",
   "name": "Popovers with Headers",
+  "keywords": [
+    "header",
+    "popovers",
+    "tips",
+    "title",
+    "tooltips"
+  ],
   "location": "popovers/header.html",
   "dependencies": [],
   "actions": [

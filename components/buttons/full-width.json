@@ -1,6 +1,12 @@
 {
   "id": "4ebd3d3a-5ca6-42a9-86b2-38735dcf99e7",
   "name": "Full-width Buttons",
+  "keywords": [
+    "block",
+    "buttons",
+    "full-width",
+    "large"
+  ],
   "location": "buttons/full-width.html",
   "dependencies": [],
   "actions": [

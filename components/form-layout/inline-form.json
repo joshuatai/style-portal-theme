@@ -1,6 +1,12 @@
 {
   "id": "171a4d94-9890-4e85-81d5-124d98814bdb",
   "name": "Inline Form",
+  "keywords": [
+    "forms",
+    "inline",
+    "input",
+    "layout"
+  ],
   "location": "form-layout/inline-form.html",
   "dependencies": [],
   "actions": [

@@ -1,6 +1,13 @@
 {
   "id": "9123b711-5477-43cb-a47d-e9940d810a57",
   "name": "Horizontal Description List",
+  "keywords": [
+    "description",
+    "dl",
+    "label",
+    "list",
+    "typography"
+  ],
   "location": "typography/horizontal-description-list.html",
   "dependencies": [],
   "actions": [

@@ -1,6 +1,13 @@
 {
   "id": "ae99aa05-15da-43c6-a256-7eec3bcf2c70",
   "name": "Icon Addon",
+  "keywords": [
+    "addon",
+    "forms",
+    "groups",
+    "icons",
+    "inputs"
+  ],
   "location": "form-input-groups/icon-add-on.html",
   "dependencies": [],
   "actions": [

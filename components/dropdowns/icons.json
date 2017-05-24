@@ -1,6 +1,17 @@
 {
   "id": "ab5754fc-9376-4e77-b27d-c480cad65d46",
   "name": "Icons",
+  "keywords": [
+    "buttons",
+    "drop-downs",
+    "dropdowns",
+    "graphy",
+    "icons",
+    "image",
+    "menu",
+    "options",
+    "selection"
+  ],
   "location": "dropdowns/icons.html",
   "dependencies": [],
   "actions": [
