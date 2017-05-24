@@ -1,6 +1,10 @@
 {
   "id": "9bb5afb1-9dd0-4835-9e02-5d5a8ce1c57c",
   "name": "In-Panel Tabs",
+  "keywords": [
+    "panels",
+    "tabs"
+  ],
   "location": "tabs/tabs-in-panel.html",
   "dependencies": [],
   "actions": [

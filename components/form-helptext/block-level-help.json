@@ -1,6 +1,17 @@
 {
   "id": "d53ab415-61ec-4f6c-bbfa-03ed1968500e",
   "name": "Block-Level Help",
+  "keywords": [
+    "footnote",
+    "forms",
+    "help",
+    "hint",
+    "input",
+    "placeholder",
+    "text",
+    "tips",
+    "tooltips"
+  ],
   "location": "form-helptext/block-level-help.html",
   "dependencies": [],
   "actions": [

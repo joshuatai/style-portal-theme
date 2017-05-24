@@ -1,6 +1,17 @@
 {
   "id": "92ae9e63-5bf0-408c-9c06-2e4e8175cc24",
   "name": "Search",
+  "keywords": [
+    "autocomplete",
+    "buttons",
+    "drop-downs",
+    "dropdowns",
+    "filter",
+    "menu",
+    "options",
+    "search",
+    "selection"
+  ],
   "location": "dropdowns/filter.html",
   "dependencies": [],
   "actions": [

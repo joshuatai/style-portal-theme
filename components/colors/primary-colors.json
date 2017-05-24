@@ -1,6 +1,13 @@
 {
   "id": "087c0ced-6fb5-4d8d-aed5-adf2457fbbc3",
   "name": "Primary Colors",
+  "keywords": [
+    "colors",
+    "colours",
+    "hex",
+    "rgb",
+    "theme"
+  ],
   "location": "colors/primary-colors.html",
   "dependencies": [],
   "actions": [],

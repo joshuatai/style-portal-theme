@@ -1,6 +1,12 @@
 {
   "id": "84ac9650-408c-4c4a-a5a6-62e49e39e9aa",
   "name": "Simple Date Time",
+  "keywords": [
+    "calendar",
+    "datepicker",
+    "picker",
+    "timepicker"
+  ],
   "location": "date-time-picker/date-time.html",
   "dependencies": [
   	"bootstrap-datepicker",

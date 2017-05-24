@@ -1,6 +1,12 @@
 {
   "id": "e7cfb35a-1e2b-4329-b0e2-fbf15a0fcaae",
   "name": "Palette Overview",
+  "keywords": [
+    "charts",
+    "colors",
+    "colours",
+    "palette"
+  ],
   "location": "chart-colors/palette-overview.html",
   "dependencies": [],
   "actions": [],

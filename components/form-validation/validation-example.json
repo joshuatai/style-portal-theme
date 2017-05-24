@@ -1,6 +1,19 @@
 {
   "id": "a4f8ef6c-2d59-4431-956c-0a72e242a7d4",
   "name": "Examples",
+  "keywords": [
+    "check",
+    "error",
+    "forms",
+    "handling",
+    "inputs",
+    "invalid",
+    "message",
+    "states",
+    "status",
+    "validations",
+    "verify"
+  ],
   "location": "form-validation/validation-example.html",
   "dependencies": [],
   "actions": [],
