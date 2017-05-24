@@ -1,6 +1,14 @@
 {
   "id": "9b322fd1-6e3d-461f-97c9-850e678d4e64",
   "name": "Side Menu",
+  "keywords": [
+    "left",
+    "menu",
+    "navigation",
+    "sidebar",
+    "submenu",
+    "tabs"
+  ],
   "location": "side-menu/structure.html",
   "dependencies": [],
   "actions": [
