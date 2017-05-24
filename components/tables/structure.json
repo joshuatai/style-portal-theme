@@ -1,6 +1,11 @@
 {
   "id": "81835958-3c59-4f98-be96-d5023690e495",
   "name": "Structure",
+  "keywords": [
+    "grids",
+    "styles",
+    "tables"
+  ],
   "location": "tables/structure.html",
   "dependencies": [],
   "actions": [

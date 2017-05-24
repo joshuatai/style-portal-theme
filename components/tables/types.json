@@ -1,6 +1,11 @@
 {
   "id": "65180e50-d1c2-4fe0-ab86-55e4abb5ca44",
   "name": "Types",
+  "keywords": [
+    "grids",
+    "styles",
+    "tables"
+  ],
   "location": "tables/types.html",
   "dependencies": [],
   "actions": [
