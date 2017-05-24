@@ -1,6 +1,15 @@
 {
   "id": "99710ff0-af7f-43ac-8044-3b333f3aa261",
   "name": "Line Chart with Paginated Legends",
+  "keywords": [
+    "charts",
+    "legend",
+    "line",
+    "pages",
+    "paginated",
+    "pagination",
+    "scrollable"
+  ],
   "location": "line-charts/line-chart-legend-scroll.html",
   "dependencies": [
     "highcharts-5.0.6"
