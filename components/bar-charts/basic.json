@@ -1,6 +1,10 @@
 {
   "id": "e9d3bf97-faac-4568-b239-4fdd87a212ff",
   "name": "Basic Bar Chart",
+  "keywords": [
+    "bar",
+    "charts"
+  ],
   "location": "bar-charts/basic.html",
   "dependencies": [
     "highcharts-5.0.6"

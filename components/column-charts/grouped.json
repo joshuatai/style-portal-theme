@@ -1,6 +1,14 @@
 {
   "id": "2ad1fad3-fa9d-4030-993d-2b1bf31b28df",
   "name": "Grouped Column Chart",
+  "keywords": [
+    "bar",
+    "charts.",
+    "column",
+    "grouped",
+    "groups",
+    "legend"
+  ],
   "location": "column-charts/grouped.html",
   "dependencies": [
     "highcharts-5.0.6"

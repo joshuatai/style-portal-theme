@@ -1,6 +1,11 @@
 {
   "id": "26b50ba8-99d9-468c-bd1b-de7488b50883",
   "name": "Basic Column Chart",
+  "keywords": [
+    "bar",
+    "charts",
+    "column"
+  ],
   "location": "column-charts/basic.html",
   "dependencies": [
     "highcharts-5.0.6"
