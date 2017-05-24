@@ -1,6 +1,14 @@
 {
-  "id": "b4c96107-a075-4c9d-8baf-526072649ac6",
+  "id": "a416d05d-f201-46c3-8126-87295d77ab20",
   "name": "Menu Controls",
+  "keywords": [
+    "buttons",
+    "drop-downs",
+    "dropdowns",
+    "menu",
+    "options",
+    "selection"
+  ],
   "location": "dropdowns/multi-select.html",
   "dependencies": [],
   "actions": [
@@ -12,6 +20,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12 col-lg-6 col-xl-4",
-    "row": "row-md-6 row-xl-5"
+    "row": "row-md-6 row-xl-6"
   }
 }
