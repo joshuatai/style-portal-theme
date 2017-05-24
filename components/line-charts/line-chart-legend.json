@@ -1,6 +1,11 @@
 {
   "id": "9a79c8cc-21f5-4404-9b24-aa33a082c06c",
   "name": "Line Chart with Legends at the Bottom",
+  "keywords": [
+    "charts",
+    "legend",
+    "line"
+  ],
   "location": "line-charts/line-chart-legend.html",
   "dependencies": [
     "highcharts-5.0.6"
