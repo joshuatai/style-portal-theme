@@ -1,6 +1,14 @@
 {
   "id": "c7ddc689-9f5e-40d2-8614-40ddfd5b3753",
   "name": "Scroll Bars with Fixed Elements",
+  "keywords": [
+    "bar",
+    "fixed",
+    "grids",
+    "header",
+    "scrollbar",
+    "tables"
+  ],
   "location": "table-fixed/scroll-bar.html",
   "dependencies": [],
   "actions": [
