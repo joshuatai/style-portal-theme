@@ -1,6 +1,14 @@
 {
   "id": "211f114e-5c79-4171-8750-a5097bbb8a35",
   "name": "Radio Buttons",
+  "keywords": [
+    "buttons",
+    "form",
+    "inputs",
+    "radios",
+    "select",
+    "switch"
+  ],
   "location": "form-elements/radio.html",
   "dependencies": [],
   "actions": [

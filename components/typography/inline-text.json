@@ -1,6 +1,19 @@
 {
   "id": "57b01452-280b-47d8-b4f7-c22ed0f2e364",
   "name": "Inline Text Elements",
+  "keywords": [
+    "abbr",
+    "bold",
+    "deleted",
+    "font",
+    "highlighted",
+    "hyperlinks",
+    "links",
+    "marked",
+    "styles",
+    "text",
+    "typography"
+  ],
   "location": "typography/inline-text.html",
   "dependencies": [],
   "actions": [

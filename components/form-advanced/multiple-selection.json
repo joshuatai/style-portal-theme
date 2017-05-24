@@ -1,6 +1,13 @@
 {
   "id": "b275b05f-c3c7-4552-a8a8-94c42e4ed066",
   "name": "Multiple Selection",
+  "keywords": [
+    "form",
+    "multi-select",
+    "multiselect",
+    "mutiple",
+    "selection"
+  ],
   "location": "form-advanced/multiple-selection.html",
   "dependencies": ["jquery.multi-select"],
   "actions": [

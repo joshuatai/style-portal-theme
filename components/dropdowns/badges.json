@@ -1,6 +1,17 @@
 {
   "id": "4fe80c77-a90b-45e7-9645-6663b2ea527c",
   "name": "Badges",
+  "keywords": [
+    "badges",
+    "buttons",
+    "counter",
+    "drop-downs",
+    "dropdowns",
+    "indicators",
+    "menu",
+    "options",
+    "selection"
+  ],
   "location": "dropdowns/badges.html",
   "dependencies": [],
   "actions": [

@@ -1,6 +1,11 @@
 {
   "id": "33c9a987-edff-43ae-8963-1bd3992ea404",
   "name": "Color Palette",
+  "keywords": [
+    "colors",
+    "colours",
+    "palette"
+  ],
   "location": "colors/color-palette.html",
   "dependencies": [
     "tinycolor-1.4.1",

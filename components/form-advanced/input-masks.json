@@ -1,6 +1,14 @@
 {
   "id": "a3246c06-0d15-41f0-a52e-4683be4ff47f",
   "name": "Input Masks",
+  "keywords": [
+    "format",
+    "hint",
+    "inputs",
+    "masks",
+    "text",
+    "validation"
+  ],
   "location": "form-advanced/input-masks.html",
   "dependencies": ["jquery-inputmask"],
   "actions": [

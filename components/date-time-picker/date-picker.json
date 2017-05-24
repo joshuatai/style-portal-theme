@@ -1,6 +1,14 @@
 {
   "id": "e5150e3b-e93b-4fed-a1f3-0652135b6066",
   "name": "Date Picker",
+  "keywords": [
+    "calendar",
+    "datepicker",
+    "datetime",
+    "picker",
+    "selector",
+    "time"
+  ],
   "location": "date-time-picker/date-picker.html",
   "dependencies": [
     "bootstrap-datepicker"

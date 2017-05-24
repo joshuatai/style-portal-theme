@@ -1,6 +1,13 @@
 {
   "id": "64760149-30ad-41cc-bb07-e2e98e6d6c7b",
   "name": "Navigation Bar",
+  "keywords": [
+    "bar",
+    "horizontal",
+    "menu",
+    "navbar",
+    "navigation"
+  ],
   "location": "navigations/navbar.html",
   "dependencies": [],
   "actions": [],
