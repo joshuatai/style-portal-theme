@@ -1,6 +1,19 @@
 {
   "id": "ce880094-f93a-462d-b476-5290e2ae4d45",
   "name": "Validation Styles",
+  "keywords": [
+    "check",
+    "error",
+    "forms",
+    "handling",
+    "inputs",
+    "invalid",
+    "message",
+    "states",
+    "status",
+    "validations",
+    "verify"
+  ],
   "location": "form-validation/validation-style.html",
   "dependencies": [],
   "actions": [

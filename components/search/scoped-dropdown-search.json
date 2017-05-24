@@ -1,6 +1,11 @@
 {
   "id": "27a7e158-ec25-440a-9c36-c73cba471f42",
   "name": "Search Box with Drop-down Menus",
+  "keywords": [
+    "filter",
+    "inputs",
+    "search"
+  ],
   "location": "search/scoped-dropdown-search.html",
   "dependencies": [],
   "actions": [

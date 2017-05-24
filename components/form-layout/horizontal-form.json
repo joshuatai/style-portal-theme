@@ -1,6 +1,13 @@
 {
   "id": "34a4ed5e-03c3-4c22-83cd-bc688d4c4f51",
   "name": "Horizontal Form",
+  "keywords": [
+    "forms",
+    "horizontal",
+    "inputs",
+    "labels",
+    "layout"
+  ],
   "location": "form-layout/horizontal-form.html",
   "dependencies": [],
   "actions": [

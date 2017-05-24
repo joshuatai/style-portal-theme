@@ -2,9 +2,12 @@
   "id": "6e8391d2-5d9c-4544-aabf-b3cbd9633753",
   "name": "Infotip",
   "keywords": [
+    "alt",
+    "help",
+    "information",
+    "infotips",
     "tips",
-    "tooltips",
-    "infotips"
+    "tooltips"
   ],
   "location": "tooltips/infotip.html",
   "dependencies": [],

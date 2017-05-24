@@ -1,6 +1,17 @@
 {
   "id": "8dad46f6-ea13-4746-ba77-5e428e8684bc",
   "name": "Touchspin",
+  "keywords": [
+    "add",
+    "decrease",
+    "forms",
+    "increase",
+    "inputs",
+    "minus",
+    "number",
+    "spin",
+    "touchspin"
+  ],
   "location": "form-input-groups/touchspin.html",
   "dependencies": [],
   "actions": [

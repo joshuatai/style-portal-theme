@@ -1,6 +1,10 @@
 {
   "id": "b1118ae9-ed8f-4da7-a401-a0ad910ca3a8",
   "name": "Tabs",
+  "keywords": [
+    "tabs",
+    "wizard"
+  ],
   "location": "tabs/basic-tab.html",
   "dependencies": [],
   "actions": [

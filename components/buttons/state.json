@@ -2,12 +2,12 @@
   "id": "fcd98d30-d6bf-4b30-b50d-fafe594cf7bc",
   "name": "Button States",
   "keywords": [
-    "buttons",
-    "states",
-    "hover",
     "active",
+    "buttons",
+    "disabled",
     "focus",
-    "disabled"
+    "hover",
+    "states"
   ],
   "location": "buttons/state.html",
   "dependencies": [],

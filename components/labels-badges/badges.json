@@ -1,6 +1,10 @@
 {
   "id": "1a9b33f7-1fc1-48d1-a1ae-2b1527ec8031",
   "name": "Badges",
+  "keywords": [
+    "badges",
+    "icons"
+  ],
   "location": "labels-badges/badges.html",
   "dependencies": [],
   "actions": [

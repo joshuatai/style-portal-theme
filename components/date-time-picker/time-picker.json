@@ -1,6 +1,11 @@
 {
   "id": "3492581d-a555-4690-911f-67a93999693a",
   "name": "Time Picker",
+  "keywords": [
+    "picker",
+    "selector",
+    "timepicker"
+  ],
   "location": "date-time-picker/time-picker.html",
   "dependencies": [
     "jquery.plugin.timeentry.package-2.0.1",
