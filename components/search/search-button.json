@@ -1,6 +1,11 @@
 {
   "id": "856dcb17-52f2-47ab-acae-462ce182986c",
   "name": "Search Box with a Button",
+  "keywords": [
+    "filter",
+    "inputs",
+    "search"
+  ],
   "location": "search/search-button.html",
   "dependencies": [],
   "actions": [

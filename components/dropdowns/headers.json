@@ -1,6 +1,17 @@
 {
   "id": "7491e967-a72b-4303-aa43-7ff901458ad2",
   "name": "Headers",
+  "keywords": [
+    "buttons",
+    "drop-downs",
+    "dropdowns",
+    "groups",
+    "headers",
+    "menu",
+    "options",
+    "selection",
+    "title"
+  ],
   "location": "dropdowns/headers.html",
   "dependencies": [],
   "actions": [

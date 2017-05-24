@@ -1,6 +1,15 @@
 {
   "id": "47013de3-7aaa-49e2-b640-7052858cb542",
   "name": "Multi File Upload",
+  "keywords": [
+    "files",
+    "forms",
+    "inputs",
+    "multiple",
+    "mutiple",
+    "select",
+    "upload"
+  ],
   "location": "file-upload/multi-file-upload.html",
   "dependencies": [
     "jquery-ui-1.12.1",
