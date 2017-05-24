@@ -1,6 +1,16 @@
 {
   "id": "9640a7c2-fcd6-4f43-a127-4feee5cf8ce0",
   "name": "Stacked Area Chart with Paginated Legends",
+  "keywords": [
+    "area",
+    "charts",
+    "legend",
+    "pages",
+    "paginated",
+    "pagination",
+    "scrollable",
+    "stacked"
+  ],
   "location": "area-charts/area-chart-legend-scroll.html",
   "dependencies": [
     "highcharts-5.0.6"

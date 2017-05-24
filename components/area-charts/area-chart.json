@@ -1,6 +1,10 @@
 {
   "id": "6f3679a2-0c93-4772-8036-b2dd86f0d696",
   "name": "Area Chart",
+  "keywords": [
+    "area",
+    "charts"
+  ],
   "location": "area-charts/area-chart.html",
   "dependencies": [],
   "actions": [
