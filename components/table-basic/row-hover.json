@@ -1,7 +1,16 @@
 {
   "id": "3bbddab9-2501-42cf-9cb4-4581b1b03564",
   "from": ["ed131974-58a7-408b-b724-b24bd9831cbe"],
-  "name": "Row hover",
+  "name": "Row Hover",
+  "keywords": [
+    "grids",
+    "hover",
+    "mouseover",
+    "row",
+    "states",
+    "status",
+    "tables"
+  ],
   "location": "table-basic/row-hover.html",
   "dependencies": [],
   "actions": [
