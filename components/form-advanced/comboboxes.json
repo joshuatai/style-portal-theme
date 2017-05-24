@@ -1,6 +1,14 @@
 {
   "id": "6fe1c2de-7b54-4ed4-94f1-6895f573b0dc",
   "name": "Combo Box",
+  "keywords": [
+    "autocomplete",
+    "boxes",
+    "combo-box",
+    "comboboxes",
+    "form",
+    "select"
+  ],
   "location": "form-advanced/comboboxes.html",
   "dependencies": [
     "jquery-editable-select"

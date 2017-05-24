@@ -1,6 +1,15 @@
 {
   "id": "cd872a06-e1ed-46fc-92ec-3aa4b85ebd18",
   "name": "Vertical Navigation Bar",
+  "keywords": [
+    "bar",
+    "drawer",
+    "menu",
+    "navbar",
+    "navigation",
+    "sidebar",
+    "vertical"
+  ],
   "location": "navigations/vertical-navbar.html",
   "dependencies": [],
   "actions": [

@@ -1,6 +1,10 @@
 {
   "id": "d715316d-b355-4029-b041-c5efb4f4dc01",
   "name": "Light Tab",
+  "keywords": [
+    "float",
+    "tabs"
+  ],
   "location": "tabs/light-tab.html",
   "dependencies": [],
   "actions": [

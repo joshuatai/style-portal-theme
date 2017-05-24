@@ -1,6 +1,16 @@
 {
   "id": "53677489-3466-4dcd-b724-a9670cc1ca23",
   "name": "Banner Notifications",
+  "keywords": [
+    "alerting",
+    "alerts",
+    "banner",
+    "confirmation",
+    "error",
+    "message",
+    "notifications",
+    "warning"
+  ],
   "location": "notifications/banner.html",
   "dependencies": [],
   "actions": [

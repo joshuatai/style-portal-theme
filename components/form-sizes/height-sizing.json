@@ -1,6 +1,13 @@
 {
   "id": "09f2aeb2-4447-4f9c-b36d-d517b1b6750f",
   "name": "Height",
+  "keywords": [
+    "forms",
+    "height",
+    "inputs",
+    "label",
+    "sizes"
+  ],
   "location": "form-sizes/height-sizing.html",
   "dependencies": [],
   "actions": [

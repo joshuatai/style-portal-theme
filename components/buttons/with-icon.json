@@ -1,6 +1,13 @@
 {
   "id": "111d3211-7358-42c8-be48-da90f4ca60df",
   "name": "Buttons with an Icon",
+  "keywords": [
+    "buttons",
+    "icons",
+    "loader",
+    "loading",
+    "spinner"
+  ],
   "location": "buttons/with-icon.html",
   "dependencies": [],
   "actions": [
