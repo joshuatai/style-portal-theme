@@ -1,6 +1,13 @@
 {
   "id": "c122d2eb-b035-427f-99e7-248efedee3eb",
   "name": "Pie Chart with Legends",
+  "keywords": [
+    "charts",
+    "legend",
+    "paginated",
+    "pagination",
+    "pie"
+  ],
   "location": "pie-donut-charts/pie-chart-legends.html",
   "dependencies": [
     "highcharts-5.0.6"

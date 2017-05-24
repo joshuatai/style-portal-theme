@@ -1,6 +1,11 @@
 {
   "id": "eb117673-cc7a-46bd-be5f-314fd55102f1",
   "name": "Semi Circle Donut Chart with Legends",
+  "keywords": [
+    "charts",
+    "donut",
+    "legend"
+  ],
   "location": "pie-donut-charts/semi-donut-chart-legends.html",
   "dependencies": [
     "highcharts-5.0.6"

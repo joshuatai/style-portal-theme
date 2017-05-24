@@ -1,6 +1,11 @@
 {
   "id": "de961f15-b8c0-4338-bd21-e3d5f31c55dc",
   "name": "Pie Chart & Donut Chart",
+  "keywords": [
+    "charts",
+    "donut",
+    "pie"
+  ],
   "location": "pie-donut-charts/structure.html",
   "dependencies": [],
   "actions": [
