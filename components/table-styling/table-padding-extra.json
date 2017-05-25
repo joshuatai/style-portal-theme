@@ -2,6 +2,12 @@
   "id": "379e15bf-7e46-475c-abec-084a5507a27f",
   "from": ["ff7bf402-d9ee-4b4f-a37c-be3a3997c8fe"],
   "name": "Extra Padding",
+  "keywords": [
+    "grids",
+    "height",
+    "styles",
+    "tables"
+  ],
   "location": "table-styling/table-padding-extra.html",
   "dependencies": [],
   "actions": [

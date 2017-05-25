@@ -1,6 +1,13 @@
 {
   "id": "943cf8b9-cd98-4134-9688-d222c2cd1a8f",
   "name": "Percentage Stacked Bar Chart",
+  "keywords": [
+    "bar",
+    "charts",
+    "legend",
+    "percentage",
+    "stacked"
+  ],
   "location": "bar-charts/stacked-percentage.html",
   "dependencies": [
     "highcharts-5.0.6"

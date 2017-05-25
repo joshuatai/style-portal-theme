@@ -1,6 +1,11 @@
 {
   "id": "8c1d18c5-1651-4fd2-af26-1c85fb177b56",
   "name": "Basic Color Rules",
+  "keywords": [
+    "charts",
+    "colors",
+    "colours"
+  ],
   "location": "chart-colors/basic-color-rules.html",
   "dependencies": [],
   "actions": [],

@@ -1,6 +1,17 @@
 {
   "id": "4ed6f4d5-cc34-4e6f-9f3b-64204aaa1eef",
   "name": "Action",
+  "keywords": [
+    "actions",
+    "buttons",
+    "drop-downs",
+    "dropdowns",
+    "forms",
+    "groups",
+    "inputs",
+    "menu",
+    "search"
+  ],
   "location": "form-input-groups/action.html",
   "dependencies": [],
   "actions": [

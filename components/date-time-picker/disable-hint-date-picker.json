@@ -1,6 +1,14 @@
 {
   "id": "16165a7c-77ff-45b8-b28b-51c21804fdbf",
   "name": "Disabled Date",
+  "keywords": [
+    "calendar",
+    "datepicker",
+    "disabled",
+    "picker",
+    "states",
+    "time"
+  ],
   "location": "date-time-picker/disable-hint-date-picker.html",
   "dependencies": [
     "bootstrap-datepicker",

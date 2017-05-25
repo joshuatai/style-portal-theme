@@ -1,6 +1,18 @@
 {
   "id": "492875b0-89cc-4cb6-aaec-4bb46969239c",
   "name": "Font and Sizing",
+  "keywords": [
+    "face",
+    "family",
+    "font-face",
+    "font-family",
+    "font-size",
+    "fonts",
+    "sizes",
+    "styles",
+    "text",
+    "typography"
+  ],
   "location": "typography/font-and-sizing.html",
   "dependencies": [],
   "actions": [

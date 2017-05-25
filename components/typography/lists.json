@@ -1,6 +1,11 @@
 {
   "id": "fd6ac4ae-b42a-47c0-9e18-7d4788c0a3f1",
   "name": "Lists",
+  "keywords": [
+    "lists",
+    "ol",
+    "ul"
+  ],
   "location": "typography/lists.html",
   "dependencies": [],
   "actions": [

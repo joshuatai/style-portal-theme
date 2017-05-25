@@ -1,6 +1,12 @@
 {
   "id": "a8a68fc1-13a9-4a22-8389-6fef1cf5577f",
   "name": "Donut Chart with Legends in Right",
+  "keywords": [
+    "charts",
+    "donut",
+    "legend",
+    "side"
+  ],
   "location": "pie-donut-charts/donut-chart-legends.html",
   "dependencies": [
     "highcharts-5.0.6"

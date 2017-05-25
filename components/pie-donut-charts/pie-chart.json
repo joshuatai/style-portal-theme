@@ -1,6 +1,10 @@
 {
   "id": "eec81977-26cb-4cbb-8a5b-5b6034742cb2",
   "name": "Pie Chart",
+  "keywords": [
+    "charts",
+    "pie"
+  ],
   "location": "pie-donut-charts/pie-chart.html",
   "dependencies": [
     "highcharts-5.0.6"

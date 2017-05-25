@@ -1,6 +1,19 @@
 {
   "id": "e87f938a-48cd-4cfc-aaad-e38649d44430",
   "name": "Long Entries",
+  "keywords": [
+    "alt",
+    "ellipsis",
+    "grids",
+    "infotips",
+    "long",
+    "tables",
+    "text",
+    "tips",
+    "tooltips",
+    "truncate",
+    "truncation"
+  ],
   "location": "table-basic/long-entry.html",
   "dependencies": [],
   "actions": [

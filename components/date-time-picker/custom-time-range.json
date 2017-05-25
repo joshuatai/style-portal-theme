@@ -1,6 +1,14 @@
 {
   "id": "44693e7b-0c49-4264-8640-5f765ebded82",
   "name": "Custom Time Range",
+  "keywords": [
+    "calendar",
+    "datepicker",
+    "period",
+    "picker",
+    "range",
+    "time"
+  ],
   "location": "date-time-picker/custom-time-range.html",
   "dependencies": [
     "bootstrap-datepicker",

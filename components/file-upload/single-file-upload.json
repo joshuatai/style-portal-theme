@@ -1,6 +1,13 @@
 {
   "id": "53dc41a5-3f6f-4fbb-8571-d6a71fc01f06",
   "name": "Single File Upload",
+  "keywords": [
+    "files",
+    "forms",
+    "inputs",
+    "select",
+    "upload"
+  ],
   "location": "file-upload/single-file-upload.html",
   "dependencies": [
     "jquery-ui-1.12.1",

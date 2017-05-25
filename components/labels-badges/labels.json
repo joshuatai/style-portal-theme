@@ -1,6 +1,13 @@
 {
   "id": "6c400c9b-00b5-40ae-b2c1-4f17f9236dc9",
   "name": "Labels",
+  "keywords": [
+    "highlighted",
+    "highlights",
+    "icons",
+    "labels",
+    "tags"
+  ],
   "location": "labels-badges/labels.html",
   "dependencies": [],
   "actions": [

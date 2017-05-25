@@ -1,6 +1,14 @@
 {
   "id": "5a53d144-59ec-4280-8cff-f034ff445827",
   "name": "Toggle Switches",
+  "keywords": [
+    "form",
+    "off",
+    "on",
+    "switched",
+    "toggles",
+    "turn"
+  ],
   "location": "form-advanced/toggle-switches.html",
   "dependencies": [],
   "actions": [

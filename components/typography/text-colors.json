@@ -1,6 +1,14 @@
 {
   "id": "ce531d75-4d1c-4f45-986a-793ee0c958e0",
   "name": "Text Colors",
+  "keywords": [
+    "colors",
+    "colours",
+    "fonts",
+    "styles",
+    "text",
+    "typography"
+  ],
   "location": "typography/text-colors.html",
   "dependencies": [],
   "actions": [],
