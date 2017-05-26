@@ -10,7 +10,7 @@ $(function () {
             name: 'Hosted Email Security',
             y: 248
         }, {
-            name: 'InterScan Web Security as a Services',
+            name: 'InterScan Web Security as a Service',
             y: 150
         },{
             name: 'Worry-Free Business Security',
@@ -19,10 +19,10 @@ $(function () {
             name: 'Worry-Free Business Security Services',
             y: 80
         },{
-            name: 'Officescan',
+            name: 'OfficeScan',
             y: 75
         },{
-            name: 'Remote Marager',
+            name: 'Remote Manager',
             y: 60
         },{
             name: 'Safe Circle',
@@ -81,13 +81,13 @@ $(function () {
                     page_down.on("click", function(){
                         var now = parseInt(now_page.text()) + 1;
                         if(now == totally_page) {
-                            page_down.addClass("unable");  
+                            page_down.addClass("unable");
                         }
                         page_up.removeClass("unable");
-                        changePage(now);   
+                        changePage(now);
                     });
                 }
-                
+
                 function changePage (pages) {
                     var value = pages-1;
                     var margin_value = value * legend_height;
@@ -98,7 +98,7 @@ $(function () {
                     else {
                         now_page.text(pages); //change page
                         legendContainer.css("margin-top","-" + margin_value + "px"); //change legend
-                    } 
+                    }
                 }
 
               }
@@ -115,7 +115,7 @@ $(function () {
                 fontSize: '32px'
             },
             verticalAlign: 'top',
-            y: 136
+            y: 169
         },
         subtitle: {
             text: '<span class="donut-chart-subtitle">Ransomware Detections</span>',
@@ -124,7 +124,7 @@ $(function () {
                 fontSize: '13px'
             },
             verticalAlign: 'top',
-            y: 155
+            y: 188
         },
         credits: {
           enabled: false
@@ -170,7 +170,7 @@ $(function () {
             var percentageValue = chart.series[0].data[i].percentage.toFixed(1);
             var seriesName = "<span class='legend-series-name'>" + series[0].data[i].name + ":&nbsp;" + "</span>"
             var seriesValue = "<span>" + "<span class='legend-series-value'>" + series[0].data[i].y + "</span>" + "&nbsp;" + `(${percentageValue}%)` + "</span>"
-            var newItem = $('<li>' + seriesName + seriesValue + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+            var newItem = $('<li>' + seriesName + seriesValue + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
             legendContainer.append(newItem);
             newItem[0].series = series[0].data[i];
             if (series[0].data[i].visible == false) {

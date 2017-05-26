@@ -1,10 +1,10 @@
 $(function () {
     var series = [{
         data: [{
-            name: 'Officescan',
+            name: 'OfficeScan',
             y: 981
         }, {
-            name: 'Remote Marager',
+            name: 'Remote Manager',
             y: 672
         }, {
             name: 'Safe Circle',
@@ -29,7 +29,7 @@ $(function () {
             //     var legendContainer = $('ul', legend);
             //     for (var i = 0; i < series[0].data.length; i++) {
             //         var color_idx = i%10;
-            //         var newItem = $('<li>' + series[0].data[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+            //         var newItem = $('<li>' + series[0].data[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
             //         legendContainer.append(newItem);
             //         newItem[0].series = series[0].data[i];
             //         if (series[0].data[i].visible == false) {
@@ -50,7 +50,7 @@ $(function () {
                 fontSize: '32px'
             },
             verticalAlign: 'top',
-            y: 136
+            y: 169
         },
         subtitle: {
             text: '<span class="donut-chart-subtitle">Ransomware Detections</span>',
@@ -59,7 +59,7 @@ $(function () {
                 fontSize: '13px'
             },
             verticalAlign: 'top',
-            y: 155
+            y: 188
         },
         credits: {
             enabled: false

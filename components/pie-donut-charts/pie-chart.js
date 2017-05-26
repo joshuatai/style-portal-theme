@@ -4,7 +4,7 @@ $(function () {
             name: 'Ransomware',
             y: 56
         }, {
-            name: 'Anti-spyware',
+            name: 'Antispyware',
             y: 24
         }, {
             name: 'Web Reputation',
@@ -32,7 +32,7 @@ $(function () {
             //     var legendContainer = $('ul', legend);
             //     for (var i = 0; i < series[0].data.length; i++) {
             //         var color_idx = i%10;
-            //         var newItem = $('<li>' + series[0].data[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+            //         var newItem = $('<li>' + series[0].data[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
             //         legendContainer.append(newItem);
             //         newItem[0].series = series[0].data[i];
             //         if (series[0].data[i].visible == false) {
@@ -77,7 +77,7 @@ $(function () {
             backgroundColor: '#FFFFFF',
             padding: 16,
             useHTML: true,
-            headerFormat: '<table><thead><tr><td>Threat</td></tr></thead>',
+            headerFormat: '<table><thead><tr><td>Threats</td></tr></thead>',
             pointFormat: '<tr><td><span style="color:{point.color}">\u25CF</span> {point.name} </td>' +
                 '<td>{point.y:,.0f} <span>({point.percentage:.1f}%)</span></td></tr>',
             footerFormat: '</table>'
