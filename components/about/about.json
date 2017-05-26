@@ -1,0 +1,22 @@
+{
+  "id": "c3296091-10f0-4fa1-9bf7-d125edd30241",
+  "name": "About Pages",
+  "keywords": [
+    "abouts",
+    "information",
+    "templates"
+  ],
+  "location": "about/about.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-xs-12 templates",
+    "row": "row-md-6"
+  }
+}

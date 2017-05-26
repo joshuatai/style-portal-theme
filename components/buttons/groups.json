@@ -1,6 +1,13 @@
 {
   "id": "a33044fb-3210-43dc-9ac9-c896eadf3793",
   "name": "Button Groups",
+  "keywords": [
+    "buttons",
+    "groups",
+    "options",
+    "switch",
+    "toggle"
+  ],
   "location": "buttons/groups.html",
   "dependencies": [],
   "actions": [

@@ -6,26 +6,30 @@
   </pre>
 
   <h5>Input with form controls</h5>
+  <p>Use the <code data-tag="input"></code> element with certainly id attribute. For details on input fields, refer to <a href="#/styles/{{theme}}/{{version}}/206355af-1c26-49d7-b878-d3d6f094990f">Form Elements</a>.</p>
   <pre>
     <style data-selector=".input-icon-group > .form-control"></style>
   </pre>
-
+  <h5>Icon Wrapper</h5>
+  <p>Use the <code data-tag="label"></code> element with <code data-tag="for"></code> attribute which refer to <code data-tag="input"></code> ID.</p>
+  <pre data-title="Wrap icon into this label element">
+    <style data-selector=".input-icon-label"></style>
+  </pre>
   <h5>Icon class</h5>
   <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> element.</p>
-  <pre data-title="For font-awesome icon wrapper:">
-    <style data-selector=".input-icon-label">Wrap i into a label element.</style>
-  </pre>
-  <pre data-title=":hover">
+  <pre data-title=":focus">
     <style data-selector=".input-icon-group > .form-control:focus + .input-icon-label > i"></style>
   </pre>
-  <pre data-title="For image icon(svg or png):">
+  <pre data-title="For image icon (svg or png): loader and cancel icons">
     <style data-selector=".input-icon-group .loader"></style>
   </pre>
-  <pre data-title="Cancel Image Icon">
+  <h5>Loader icon</h5>
+  <p>Display a small icon to indicate progress. For details on loader styles, refer to <a href="#/styles/{{theme}}/{{version}}/4cd601bb-d7a7-4b4a-8d4d-d087a630929a">Loader</a>.</p>
+  <h5>Cancel icon</h5>
+  <pre>
+    <style data-selector=".icon-cancel"></style>
     <style data-selector=".input-icon-group .icon-cancel"></style>
-  </pre>
-  <pre data-title=":hover">
-    <style data-selector=".input-icon-group .icon-cancel:hover"></style>
+    <style data-selector=".input-icon-group .icon-cancel:hover">:hover</style>
   </pre>
 </section>
 

@@ -1,6 +1,14 @@
 {
   "id": "7eb7d51c-4197-4f6f-b4b3-e9512a1584db",
-  "name": "Field Widths",
+  "name": "Width",
+  "keywords": [
+    "align",
+    "forms",
+    "inputs",
+    "label",
+    "sizes",
+    "width"
+  ],
   "location": "form-sizes/field-widths.html",
   "dependencies": [],
   "actions": [

@@ -1,0 +1,73 @@
+body {
+	background: #EEE;
+    left: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+.container-fluid {
+    padding: 0 16px;
+}
+header.site-header {
+    padding: 0 24px;
+    padding-right: 0;
+}
+.site-header {
+    position: relative;
+    padding: 0 20px;
+    height: 64px;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 1px #ddd solid;
+}
+.navbar {
+    padding: 0;
+}
+.site-header a:link,
+.site-header a:hover,
+.site-header a:active,
+.site-header a:visited,
+.site-header a:focus {
+    color: #222;
+}
+.site-header .banner {
+    background: url(../images/tball.svg) center left no-repeat;
+    background-size: 32px;
+    float: left;
+    height: 63px;
+    padding: 0;
+}
+.site-header .banner,
+.site-header .banner :hover {
+    text-decoration: none;
+}
+.site-title {
+    margin: 14px 0 0 42px;
+    line-height: 36px;
+    font-family: "Interstate-Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+}
+.site-header .dropdown-toggle {
+    margin-top: 0;
+}
+.breadcrumb {
+    background: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.panel-body p:last-child {
+    margin-bottom: 0;
+}
+.panel-body a {
+    text-decoration: none;
+}
+.about-content {
+    max-width: 700px;
+}

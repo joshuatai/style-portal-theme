@@ -1,6 +1,15 @@
 {
   "id": "2da9337d-af76-49f9-adef-a12996c5a67f",
   "name": "Drop-down Buttons",
+  "keywords": [
+    "buttons",
+    "drop-downs",
+    "dropdowns",
+    "menu",
+    "options",
+    "selection",
+    "toggle"
+  ],
   "location": "dropdowns/dropdown.html",
   "dependencies": [],
   "actions": [

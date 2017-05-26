@@ -1,6 +1,10 @@
 {
   "id": "5a863496-b0ab-4989-bb55-e1c8daa17fc0",
   "name": "Bar Chart",
+  "keywords": [
+    "bar",
+    "charts"
+  ],
   "location": "bar-charts/structure.html",
   "dependencies": [],
   "actions": [

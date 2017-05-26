@@ -1,0 +1,39 @@
+.pie-donut-charts-container {
+	height: 330px;
+}
+.pie-donut-charts-example .highcharts-title .donut-chart-title {
+	font-family: Interstate-Light, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
+}
+.pie-donut-charts-example .highcharts-title .donut-chart-subtitle {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.pie-donut-charts-example .highcharts-container {
+	z-index: 1 !important;
+}
+.pie-donut-charts-example .highcharts-container,
+.pie-donut-charts-example .highcharts-container svg {
+    overflow: visible !important;
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+	.donut-legend-container .pie-donut-charts-container {
+		width: 55%;
+	}
+	.donut-legend-container .legend-vertical {
+		width: 45%;
+	}
+}
+@media (min-width: 1600px) and (max-width: 1680px) {
+	.donut-legend-container .pie-donut-charts-container {
+		width: 60%;
+	}
+	.donut-legend-container .legend-vertical {
+		width: 40%;
+	}
+	.donut-legend-container .legend-vertical ul li .legend-series-name {
+		max-width: 54%;
+	}
+}
+#semi-donut-chart-container,
+#pie-chart-legend-container {
+	height: 300px;
+}

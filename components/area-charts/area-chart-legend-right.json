@@ -1,6 +1,15 @@
 {
   "id": "46d34632-2cde-4b01-8fcf-a3695cb61cdc",
   "name": "Stacked Area Chart with Legends on the Right",
+  "keywords": [
+    "area",
+    "charts",
+    "legend",
+    "scrollable",
+    "side",
+    "stacked",
+    "vertical"
+  ],
   "location": "area-charts/area-chart-legend-right.html",
   "dependencies": [
     "highcharts-5.0.6"

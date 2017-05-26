@@ -1,6 +1,11 @@
 {
   "id": "c2a5d641-6a27-427f-bcf5-8df4547904aa",
   "name": "Select",
+  "keywords": [
+    "form",
+    "options",
+    "select"
+  ],
   "location": "form-elements/select.html",
   "dependencies": [],
   "actions": [

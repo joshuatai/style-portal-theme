@@ -4,59 +4,55 @@
   <pre>
     <style data-selector=".alert"></style>
   </pre>
-  <pre data-title="Stack Notifications:">
+  <pre data-title="Stack notifications">
     <style data-selector=".alert + .alert">Such as .alert + .alert</style>
   </pre>
 
-  <h5>Error notification class</h5>
-  <pre>
+  <h5>Contextual class</h5>
+  <pre data-title="Error">
     <style data-selector=".alert-danger"></style>
   </pre>
-
-  <h5>Warning notification class</h5>
-  <pre>
+  <pre data-title="Warning">
     <style data-selector=".alert-warning"></style>
   </pre>
-
-  <h5>Success notification class</h5>
-  <pre>
+  <pre data-title="Success">
     <style data-selector=".alert-success"></style>
   </pre>
-
-  <h5>Info notification class</h5>
-  <pre>
+  <pre data-title="Info">
     <style data-selector=".alert-info"></style>
   </pre>
 
-  <h5>Icon class</h5>
-  <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
-  <pre data-title="For Image icon:">
-    <style data-selector=".icon">Default size of icon</style>
-  </pre>
-
   <h5>Alert icon</h5>
+  <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class.</p>
+  <pre data-title="For image icon">
+    <style data-selector=".icon"></style>
+  </pre>
   <pre>
-    <style data-selector=".alert .icon">Leave a space between icon and text. Put an icon on the vertical center of the alert.</style>
+    <style data-selector=".alert .icon">Leave a space between icon and text.</style>
   </pre>
 
   <h5>Cancel icon</h5>
-  <pre data-title="Normal:">
-    <style data-selector=".pull-right">Cnacel icon should padding to the right of the alert.</style>
+  <pre data-title="Normal">
+    <style data-selector=".pull-right">Cancel icon should float to the right of the alert.</style>
+  </pre>
+  <pre>
     <style data-selector=".cancel"></style>
+  </pre>
+  <pre>
+    <style data-selector=".alert .icon-cancel">Because alert icon puts a right space. Cancel icon should remove the space.</style>
   </pre>
   <pre data-title=":hover">
     <style data-selector=".cancel:hover"></style>
-    <style data-selector=".alert .icon-cancel">Because alert icon puts a right space. Cancel icon should remove the space.</style>
   </pre>
 
-  <h5>Buttons within notifications (Optional)</h5>
-  <p>Buttons within notifications should be extra small in size. Refer to Components > Buttons > Button Sizes.</p>
+  <h5>Buttons within notifications (optional)</h5>
+  <p>Buttons within notifications should be extra small in size. Please refer to <a href="#/styles/{{theme}}/{{version}}/e5bd7778-d707-420b-ac64-4a55da161b83">Buttons</a></p>
   <pre>
     <style data-selector=".alert .btn-xs">Leave a space between button and text.</style>
   </pre>
 
-  <h5>Links within notifications (Optional)</h5>
-  <p>Alert inline link should be a link style. Please refer to Typography style.</p>
+  <h5>Links within notifications (optional)</h5>
+  <p>Links within notifications should use link style. Please refer to <a href="#/styles/{{theme}}/{{version}}/aca6f1ac-609a-431c-8fca-739b6c060299">Typography</a>.</p>
   <pre>
     <style data-selector=".alert a">Remove underline from link.</style>
   </pre>
@@ -83,7 +79,7 @@
 			<li><strong>Informational:</strong> This type of banner notifications are used to provide users with potentially useful, relevant informational.</li>
 		</ul>
 	</div>
-	<p>	
+	<p>
 		<div class="alert alert-danger fade in" role="alert">
 		  <span class="icon icon-danger"></span>Your license will expire in 3 days.<button class="btn btn-border btn-xs">Renew Now</button>
 		  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
@@ -103,7 +99,7 @@
 		  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		</div>
 	</p>
-	<div class="example">	
+	<div class="example">
 		<div class="banner-alert-example">
 			<div class="alert-banner">
 				<div class="placeholder" data-type="image" data-src="images/alert_img1_left.png"></div>
@@ -115,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="example">
 		<div class="banner-alert-example">
 			<h5>Stack notifications<small> (displayed by severity and group similar messages)</small></h5>

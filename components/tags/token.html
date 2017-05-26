@@ -7,16 +7,16 @@
     <style data-selector=".tag-editor.focused"></style>
   </pre>
 
-  <h5>Editable token container</h5>
-  <p>Extend the basic token container class.</p>
-  <pre data-title="Tag normal state in editable token container">
+  <h5>Editable text container</h5>
+  <p>Extend the text container of the tag components.</p>
+  <pre data-title="Normal state tag in editable text container">
     <style data-selector=".tag-editor .tag-editor-editTag"></style>
   </pre>
-  <pre data-title="Tag active state in editable token container">
+  <pre data-title="Active state tag in editable text container ">
     <style data-selector=".tag-editor .tag-editor-tag.active"></style>
   </pre>
 
-  <h5>Token container with input</h5>
+  <h5>Input wrapped within text container</h5>
   <pre>
     <style data-selector=".tag-editor input"></style>
   </pre>
@@ -32,7 +32,7 @@
   <pre>
     <style data-selector=".tokenize .tag-editor"></style>
   </pre>
-  <pre data-title=":after">
+  <pre data-title=":after for dropdown caret ">
     <style data-selector=".tokenize .tag-editor:after"></style>
   </pre>
 
@@ -41,19 +41,22 @@
   <pre data-title="For image icon(svg or png):">
     <style data-selector=".input-icon-group .icon"></style>
   </pre>
-  <pre data-title="Cancel Image Icon">
+  <h5>Remove icon</h5>
+  <p>Do not display the remove icon when the token with filter field is empty.</p>
+  <pre>
+    <style data-selector=".icon-cancel"></style>
     <style data-selector=".tokenize > .icon-cancel"></style>
   </pre>
   <pre data-title=":hover">
     <style data-selector=".tokenize > .icon-cancel:hover"></style>
   </pre>
 
-  <h5>Dropdown menu</h5>
-  <p>Dropdown menu should be a drop-down menu style. Please refer to Components > Drop-down Menus.</p>
+  <h5>Drop-down menu</h5>
+  <p>For details on drop-down control styles, refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
   <pre data-title="No matches list item">
     <style data-selector=".dropdown-menu .no-matches"></style>
   </pre>
-  <pre data-title=":hover">
+  <pre data-title=":hover for No matches list item">
     <style data-selector=".dropdown-menu .no-matches:hover"></style>
   </pre>
 </section>
@@ -75,5 +78,5 @@
 		</select>
 	</div>
 	<h5>Editable</h5>
-	<input type="text" data-input-tag="editTags">	
+	<input type="text" data-input-tag="editTags">
 </section>

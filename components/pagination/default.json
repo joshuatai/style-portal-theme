@@ -1,6 +1,11 @@
 {
   "id": "bfe746d2-6607-4bbe-9eb2-b2041c8a858e",
   "name": "General Pagination",
+  "keywords": [
+    "page",
+    "paginated",
+    "paginations"
+  ],
   "location": "pagination/default.html",
   "dependencies": [],
   "actions": [

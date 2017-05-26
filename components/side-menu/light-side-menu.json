@@ -1,0 +1,26 @@
+{
+  "id": "5f498370-0687-4136-94c0-5aa5b4abb1c8",
+  "name": "Light Side Menu",
+  "keywords": [
+    "left",
+    "menu",
+    "navigation",
+    "sidebar",
+    "stacked",
+    "submenu",
+    "tabs"
+  ],
+  "location": "side-menu/light-side-menu.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-6",
+    "row": "row-md-4"
+  }
+}

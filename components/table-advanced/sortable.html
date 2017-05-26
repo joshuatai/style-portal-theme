@@ -1,23 +1,26 @@
 <section class="css-reference">
 	<h5>Sortable table headers</h5>
 	<pre>
-		<style data-selector=".table-sortable > thead > tr > th:hover">:hover</style>
+		<style data-selector=".table-sortable > thead > tr > th:hover">Hovered state</style>
 	</pre>
 	<pre>
-		<style data-selector=".table-sortable .sortabled">Sortabled state</style>
+		<style data-selector=".table-sortable .sortabled">Sortable state</style>
 	</pre>
 	<h5>Icon class</h5>
-	<p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class. For example, <code data-html="<span class="icon"></span>Text"></code></p>
+	<p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class.</p>
 	<pre data-title="For Image icon:">
 		<style data-selector=".icon">Default size of icon</style>
 	</pre>
-	<h5>Descending icon</h5>
+	<h5>Sort icon</h5>
 	<pre>
 		<style data-selector=".table-sortable .sortabled .icon_sortDescending"></style>
 	</pre>
 	<pre>
-		<style data-selector=".icon_sortDescending"></style>
+		<style data-selector=".icon_sortDescending">Sort descending icon</style>
 	</pre>
+	<pre>
+	<style data-selector=".icon-sortAscending">Sort ascending icon</style>
+  </pre>
 </section>
 
 <section class="tables-advanced-example">
@@ -28,7 +31,7 @@
 	</ul>
 	<table class="table table-bordered table-hover table-sortable">
 		<thead>
-			<tr>          
+			<tr>
 				<th class="sortabled">Deployment Plan<span class="icon icon_sortDescending"></span></th>
 				<th>Type</th>
 				<th>Appliance</th>
@@ -37,23 +40,23 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>          
+			<tr>
 				<td>TW_Patch_01_DDI</td>
 				<td>Firmware</td>
 				<td>29</td>
 				<td>2016-04-17 21:20:18</td>
 				<td>Operator</td>
 			</tr>
-			<tr>          
+			<tr>
 				<td>Hotfix_DDI_01</td>
 				<td>Virtual Analyzer image</td>
 				<td>12</td>
 				<td>2016-04-18 23:17:20</td>
 				<td>Administrator</td>
 			</tr>
-			<tr>          
+			<tr>
 				<td>Hotfix_DDEI</td>
-				<td>Hotfix</td>          
+				<td>Hotfix</td>
 				<td>8</td>
 				<td>2016-06-02 23:15:00</td>
 				<td>Administrator</td>

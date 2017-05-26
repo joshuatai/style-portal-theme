@@ -2,6 +2,12 @@
   "id": "1d327acd-6d72-41a1-b462-afcbdbcbe9f3",
   "from": ["65180e50-d1c2-4fe0-ab86-55e4abb5ca44"],
   "name": "Plain Tables",
+  "keywords": [
+    "borderless",
+    "grids",
+    "styles",
+    "tables"
+  ],
   "location": "table-styling/table-plain.html",
   "dependencies": [],
   "actions": [

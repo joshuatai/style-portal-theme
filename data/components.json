@@ -336,7 +336,7 @@
   },
   {
     "id": "73243502-1317-451b-b3c9-e75f7e5fab81",
-    "name": "Tags",
+    "name": "Tags & Tokens",
     "keywords": [
       "tags",
       "token"
@@ -433,12 +433,20 @@
   },
   {
     "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
-    "name": "Pie Charts",
+    "name": "Pie & Donut Charts",
     "keywords": [
       "pie chart",
+      "donut chart",
       "chart"
     ],
-    "segments": []
+    "segments": [
+      "de961f15-b8c0-4338-bd21-e3d5f31c55dc",
+      "eec81977-26cb-4cbb-8a5b-5b6034742cb2",
+      "c122d2eb-b035-427f-99e7-248efedee3eb",
+      "5975946d-eb73-46f4-bbb1-a41a796452dc",
+      "a8a68fc1-13a9-4a22-8389-6fef1cf5577f",
+      "eb117673-cc7a-46bd-be5f-314fd55102f1"
+    ]
   },
   {
     "id": "64d00b7c-ae9b-4bcf-83f1-c8e58328ce81",
@@ -466,9 +474,17 @@
     ]
   },
   {
+    "id": "a54681ca-16e3-43b8-a060-6fc7ed8cab73",
+    "name": "About Pages",
+    "keywords": null,
+    "segments": [
+      "c3296091-10f0-4fa1-9bf7-d125edd30241"
+    ]
+  },
+  {
     "id": "36b0decb-5891-4683-a933-214cc0dd82b9",
     "from": ["93c477ed-5ac1-4d47-95ca-1ac03d4b5faa"],
-    "name": "Style",
+    "name": "Table Styles",
     "keywords": [
       "standard table",
       "plain table",
@@ -485,7 +501,7 @@
   {
     "id": "0dd091cf-6392-49d2-8a9d-5ccc45131f3d",
     "from": ["93c477ed-5ac1-4d47-95ca-1ac03d4b5faa"],
-    "name": "Basic Elements",
+    "name": "Basic Tables",
     "keywords": [
       "hover table",
       "selection table",
@@ -507,7 +523,7 @@
   {
     "id": "d343d2ac-67aa-44a4-a8ca-bd6f6cb490b8",
     "from": ["93c477ed-5ac1-4d47-95ca-1ac03d4b5faa"],
-    "name": "Advanced Elements",
+    "name": "Advanced Tables",
     "keywords": [
       "sortable table",
       "resize columns table",
@@ -524,7 +540,7 @@
   {
     "id": "f7017cfc-efff-457f-9457-cf4d34df4db1",
     "from": ["93c477ed-5ac1-4d47-95ca-1ac03d4b5faa"],
-    "name": "Fixed Elements",
+    "name": "Fixed Tables",
     "keywords": [
       "fixed header table",
       "table"
@@ -560,5 +576,18 @@
       "table"
     ],
     "segments": []
+  },
+  {
+    "id": "e70a6361-a194-44e2-8b6f-be42f78efe35",
+    "name": "Side Menu",
+    "keywords": [
+      "side menu",
+      "side bar"
+    ],
+    "segments": [
+      "9b322fd1-6e3d-461f-97c9-850e678d4e64",
+      "0f86c54d-46b2-42f3-ab2b-0b101cbc7608",
+      "5f498370-0687-4136-94c0-5aa5b4abb1c8"
+    ]
   }
 ]

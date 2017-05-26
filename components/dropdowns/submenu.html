@@ -1,23 +1,32 @@
 <section class="css-reference">
-  <h5>Submenu items</h5>
-  <p>Add submenu class to <code data-tag="li"></code> elements. E.g. <code>.dropdown-submenu</code></p>
+  <h5>Submenus</h5>
+  <p>Add submenu classes to <code data-tag="li"></code> elements. E.g. <code>.dropdown-submenu</code></p>
   <pre>
     <style data-selector=".dropdown-submenu"></style>
   </pre>
+  <pre data-title="For links have a submenu">
+    <style data-selector=".dropdown-menu > li.dropdown-submenu > a"></style>
+  </pre>
 
   <h5>Submenu caret</h5>
-  <p>Display a right-direction triangle to indicate a submenu.</p>
+  <p>Point the caret to the right to indicate a submenu.</p>
   <pre>
     <style data-selector=".dropdown-submenu > a:before"></style>
   </pre>
 
-  <h5>Submenus</h5>
+  <h5>Submenu items</h5>
   <p>Wrap the submenu items within an <code data-tag="ul"></code> element which under the <code data-tag="li"></code> element.</p>
   <pre data-title="Adjust position">
     <style data-selector=".dropdown-submenu > .dropdown-menu">Move submenu to the left side of its parent</style>
   </pre>
   <pre data-title="Hover submenu">
     <style data-selector=".dropdown-submenu:hover > .dropdown-menu">Display submenu as a block element</style>
+  </pre>
+  </pre>
+
+  <h5>Align submenu items to the left</h5>
+  <pre>
+    <style data-selector=".dropdown-submenu.pull-left > .dropdown-menu"></style>
   </pre>
 </section>
 
@@ -28,7 +37,7 @@
       <button class="btn btn-border dropdown-toggle" type="button">
         <span class="caret"></span>Select an option
       </button>
-      
+
       <ul class="dropdown-menu">
         <li><a href="javascript:;">Menu item one</a></li>
         <li><a href="javascript:;">Menu item two</a></li>
@@ -36,7 +45,7 @@
         <li role="separator" class="divider"></li>
         <li class="dropdown-submenu open">
           <a href="javascript:;">Menu item four</a>
-		  
+
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Second level item one</a></li>
             <li><a href="javascript:;">Second level item two</a></li>

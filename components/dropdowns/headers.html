@@ -1,7 +1,13 @@
 <section class="css-reference">
+  <h5>Headers</h5>
   <p>Add the header class to <code data-tag="li"></code> elements. E.g. <code>.dropdown-header</code></p>
   <pre>
     <style data-selector=".dropdown-header"></style>
+  </pre>
+
+  <h5>Drop-down menu item indention after header</h5>
+  <pre>
+    <style data-selector=".dropdown-header ~ li > a"></style>
   </pre>
 </section>
 
@@ -12,7 +18,7 @@
       <button class="btn btn-border dropdown-toggle" type="button">
         <span class="caret"></span>Select an option
       </button>
-      
+
       <ul class="dropdown-menu">
         <li class="dropdown-header">Dropdown header</li>
         <li><a href="javascript:;">Menu item one</a></li>

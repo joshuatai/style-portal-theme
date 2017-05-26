@@ -1,6 +1,18 @@
 {
   "id": "a416d05d-f201-46c3-8126-87295d77ab20",
   "name": "Menu Controls",
+  "keywords": [
+    "buttons",
+    "checkable",
+    "checkboxes",
+    "drop-downs",
+    "dropdowns",
+    "menu",
+    "multi-select",
+    "multiselect",
+    "options",
+    "selection"
+  ],
   "location": "dropdowns/multi-select.html",
   "dependencies": [],
   "actions": [

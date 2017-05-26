@@ -1,6 +1,15 @@
 {
   "id": "27ddafaf-b2d1-47f0-9b28-8c82ad8f8940",
   "name": "Popovers with Control Elements",
+  "keywords": [
+    "buttons",
+    "control",
+    "footer",
+    "popovers",
+    "tips",
+    "title",
+    "tooltips"
+  ],
   "location": "popovers/footer.html",
   "dependencies": [],
   "actions": [

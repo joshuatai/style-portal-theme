@@ -1,6 +1,15 @@
 {
   "id": "16daf5af-4379-4a21-869d-b625f3f22f66",
   "name": "Date Range",
+  "keywords": [
+    "calendar",
+    "datepicker",
+    "period",
+    "picker",
+    "range",
+    "selector",
+    "time"
+  ],
   "location": "date-time-picker/date-range.html",
   "dependencies": [
     "bootstrap-datepicker",

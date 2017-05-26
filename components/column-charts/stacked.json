@@ -1,6 +1,13 @@
 {
   "id": "c1fe19f5-76c2-402d-a04a-d7d3a76893bb",
   "name": "Stacked Column Chart",
+  "keywords": [
+    "bar",
+    "charts",
+    "column",
+    "legend",
+    "stacked"
+  ],
   "location": "column-charts/stacked.html",
   "dependencies": [
     "highcharts-5.0.6"

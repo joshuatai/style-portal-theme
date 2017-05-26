@@ -70,6 +70,46 @@
         }
       }
     }
+    .pie-donut-chart {
+      .pie-diameter {
+        width: 250px;
+      }
+      .pie-slices,
+      .donut-slices {
+        border: 1px solid #ffffff;
+        &.hover {
+          width: 6px;
+        }
+        &.brightness {
+          filter: brightness(12%);
+        }
+      }
+      .donut-diameter {
+        width: 250px;
+      }
+      .donut-inner-diameter {
+        width: 186px;
+      }
+      .semi-donut-diameter {
+        width: 280px;
+      }
+      .semi-donut-inner-diameter {
+        width: 184px;
+      }
+      .donut-chart-title {
+        color: #222222;
+        font-size: 32px;
+        font-family: @font-family-interstate-light;
+        + .donut-chart-title {
+          hight: 8px;
+        }
+      }
+      .donut-chart-subtitle {
+        color: #222222;
+        font-size: 13px;
+        font-family: @font-family-arial;
+      }
+    }
   }
 }
 
@@ -134,6 +174,10 @@
       }
     }
   }
+  &.scrollable {
+    overflow-y: hidden;
+    padding-right: 70px;
+  }
   .make-lagend-list-style();
 }
 
@@ -156,11 +200,22 @@
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 4px 0;
+      + li {
+        margin-left: 0;
+      }
     }
+  }
+  &.scrollable {
+    overflow-y: hidden;
+    padding: 0;
   }
 }
 
 .legend-page {
+  position: absolute;
+  display: none;
+  right: 12px;
+  top: 5px;
   .fa {
     color: #9c9c9c;
     cursor: pointer;
@@ -175,12 +230,59 @@
     cursor: default;
     color: #DDDDDD;
   }
+  &.show {
+    display: inline-block;
+  }
 }
 
-.with-vertical-legend {
+.legend-vertical-container {
   position: relative;
+  .legend-page {
+    top: 334px;
+    right: 106px;
+  }
   .chart-container {
     position: relative;
     margin-right: 180px;
   }
 }
+
+.donut-legend-container {
+  .pie-donut-charts-container {
+    width: 50%;
+  }
+  .legend-vertical {
+    padding-left: 1px;
+    width: 50%;
+    height: 330px;
+    ul {
+      padding: 0;
+      li {
+        span {
+          display: inline-block;
+          vertical-align: top;
+        }
+        .legend-series-name {
+          max-width: 70%;
+          overflow: hidden;
+          text-overflow : ellipsis;
+          white-space : nowrap;
+        }
+        .legend-series-value {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .legend-page {
+    top: 252px;
+    left: 50%;
+  }
+}
+
+
+
+
+
+
+

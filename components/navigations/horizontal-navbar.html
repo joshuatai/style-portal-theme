@@ -3,124 +3,158 @@
   <p>Create a navigation bar by extending a <code data-tag="nav"></code> element.</p>
   <pre>
     <style data-selector=".navbar"></style>
+  </pre>
+  <pre>
     <style data-selector=".navbar-default"></style>
   </pre>
-  <pre data-title=":before">
+  <pre data-title="::before">
     <style data-selector=".navbar:before"></style>
   </pre>
-  <pre data-title=":after">
+  <pre data-title="::after">
     <style data-selector=".navbar:after"></style>
+  </pre>
+
+  <h5>Navigation bar fixed to top</h5>
+  <p>Keep the navigation bar on the top of the UI when the page is scrolled.</p>
+  <pre>
+    <style data-selector=".affix"></style>
+  </pre>
+  <pre>
+    <style data-selector=".navbar.affix"></style>
   </pre>
 
   <h5>Navigation bar wrapper</h5>
   <p>Wrap all tabs with a <code data-tag="ul"></code> element.</p>
   <pre>
     <style data-selector=".nav"></style>
+  </pre>
+  <pre>
     <style data-selector=".navbar-nav"></style>
   </pre>
-  <pre data-title=":before">
+  <pre data-title="::before">
     <style data-selector=".nav:before"></style>
   </pre>
-  <pre data-title=":after">
+  <pre data-title="::after">
     <style data-selector=".nav:after"></style>
   </pre>
-  <pre data-title="Navigation bar container within banner">
+  <pre data-title="Within banner">
     <style data-selector=".navbar-right"></style>
   </pre>
-  <h5>Navigation bar tab</h5>
+
+  <h5>Navigation bar tabs</h5>
   <p>Use <code data-tag="li"></code> for each tab under the <code data-tag="ul"></code> elements.</p>
   <pre>
     <style data-selector=".nav > li"></style>
+  </pre>
+  <pre>
     <style data-selector=".navbar-nav > li"></style>
+  </pre>
+  <pre>
     <style data-selector=".navbar-default .navbar-nav > li"></style>
   </pre>
-  <pre data-title="Navigation bar tab within banner">
+  <pre data-title="Within banner">
     <style data-selector="header .nav > li"></style>
   </pre>
-  <h5>Menu item link</h5>
-  <p>Use <code data-tag="a"></code> under a <code data-tag="li"></code> element for each item in a tab menu.</p>
-  <pre>
-    <style data-selector=".nav > li > a"></style>
-    <style data-selector=".navbar-default .navbar-nav > li > a"></style>
-  </pre>
-  <pre data-title=":hover, :focus">
-    <style data-selector=".navbar-default .navbar-nav > li > a:hover"></style>
-  </pre>
-  <pre data-title="Active state">
-    <style data-selector=".navbar-default .navbar-nav > .active > a"></style>
-  </pre>
-  <pre data-title=":hover, :focus">
-    <style data-selector=".navbar-default .navbar-nav > .active > a:hover"></style>
-  </pre>
-  <pre data-title="Item icon without text">
-    <style data-selector=".navbar-nav .navbar-icon"></style>
-  </pre>
-  <pre data-title="Navigation bar tab item within banner">
-    <style data-selector="header .nav > li > a"></style>
-  </pre>
-  <pre data-title=":hover">
-    <style data-selector=".nav > li > a:hover"></style>
-  </pre>
-  <pre data-title=":active, :focus">
-    <style data-selector=".nav > li > a:focus"></style>
-  </pre>
-  <h5>Menu style</h5>
-  <p>For details, see Drop-downs.</p>
-  <pre>
-    <style data-selector=".navbar-nav > li > .dropdown-menu"></style>
-  </pre>
-  <pre data-title="Dropdown menu within banner">
-    <style data-selector="header .nav > li.dropdown .dropdown-menu"></style>
-  </pre>
-  <h5>Menu caret</h5>
-  <pre>
-    <style data-selector=".nav > li > a .caret"></style>
-  </pre>
-  <pre data-title="Dropdown menu caret within banner">
-    <style data-selector="header .nav > li > a .caret"></style>
-  </pre>
-  <h5>Menu item style</h5>
-  <p>For details, see Drop-downs.</p>
-  <pre>
-    <style data-selector=".navbar-nav > li > .dropdown-menu > li > a"></style>
-  </pre>
-  <pre data-title="Dropdown menu items within banner">
-    <style data-selector="header .navbar-nav > li > .dropdown-menu > li > a"></style>
-    <style data-selector="header .nav > li.dropdown .dropdown-menu > li"></style>
-  </pre>
-  <h5>Sub-menu item style</h5>
-  <p>For details, see Drop-downs.</p>
-  <h5>Icon class</h5>
-  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> elements.</p>
-  <pre data-title="For image icon(svg or png):">
-    <style data-selector=".icon"></style>
-  </pre>
-  <pre data-title="Icon within Banner">
-    <style data-selector="header .nav > li > a .icon"></style>
-  </pre>
-  <pre data-title="Icon In Banner with text">
-    <style data-selector="header .nav > li.dropdown .icon"></style>
-  </pre>
-  <pre data-title="Icon within navigation bar">
-    <style data-selector=".navbar-nav .icon-favorite"></style>
-  </pre>
-  <pre data-title="Icon favorite">
-    <style data-selector=".icon-favorite"></style>
-  </pre>
-  <pre data-title="Icon t-ball">
-    <style data-selector=".icon-t-ball-white"></style>
-  </pre>
-  <h5>Navigation bar animation</h5>
-  <p>The animated progress is created using CSS3 keyframes.</p>
-  <pre data-title="Navigation bar first tab">
+
+  <h5>Navigation bar first tab</h5>
+  <pre data-title="A first tab contains t-ball">
     <style data-selector=".affix-top .navbar-first"></style>
   </pre>
   <pre data-title="When navigation bar fiexd top">
     <style data-selector=".affix .navbar-first"></style>
   </pre>
+
+  <h5>Navigation bar animation</h5>
+  <p>The animated progress is created using CSS3 keyframes.</p>
+  <pre data-title="CSS3 keygrames">
+    <style data-keyframes="slideleft">slideleft</style>
+  </pre>
   <pre>
-    <style data-keyframes="slideleft"></style>
-    <style data-keyframes="slideright"></style>
+    <style data-keyframes="slideright">slideright</style>
+  </pre>
+
+  <h5>Menu item links</h5>
+  <p>Use <code data-tag="a"></code> under a <code data-tag="li"></code> element for each item in a tab menu.</p>
+  <pre>
+    <style data-selector=".nav > li > a"></style>
+  </pre>
+  <pre>
+    <style data-selector=".navbar-default .navbar-nav > li > a"></style>
+  </pre>
+  <pre data-title=":hover, :focus">
+    <style data-selector=".navbar-default .navbar-nav > li > a:hover"></style>
+  </pre>
+  <pre data-title="When a menu tab is active">
+    <style data-selector=".navbar-default .navbar-nav > .active > a"></style>
+  </pre>
+  <pre data-title="A menu tab only contains an icon">
+    <style data-selector=".navbar-nav .navbar-icon"></style>
+  </pre>
+  <pre data-title="A menu tab contains t-ball">
+    <style data-selector=".navbar-default .navbar-nav > li.navbar-first > a"></style>
+  </pre>
+  <pre data-title="Within banner">
+    <style data-selector="header.header-with-navbar .navbar-nav > li > a"></style>
+  </pre>
+  <pre data-title="Within banner which is not before navigation bar">
+    <style data-selector="header .nav > li > a"></style>
+  </pre>
+
+  <h5>Menu caret</h5>
+  <pre>
+    <style data-selector=".nav > li > a .caret"></style>
+  </pre>
+  <pre>
+    <style data-selector=".navbar-default .navbar-nav > li > a .caret"></style>
+  </pre>
+
+  <h5>Drop-down menu</h5>
+  <p>For details about drop-down menus and submenus, see <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
+  <pre>
+    <style data-selector=".navbar-nav > li > .dropdown-menu"></style>
+  </pre>
+  <pre data-title="When being hoverd on a menu tab">
+    <style data-selector=".navbar-default .navbar-nav > li:hover > .dropdown-menu"></style>
+  </pre>
+  <pre data-title="Within banner">
+    <style data-selector="header .nav > li.dropdown .dropdown-menu"></style>
+  </pre>
+
+  <h5>Drop-down menu items</h5>
+  <pre data-title="More than two menu items">
+    <style data-selector=".navbar-nav > li > .dropdown-menu > li + li"></style>
+  </pre>
+  <pre data-title="Within banner">
+    <style data-selector="header .nav > li.dropdown .dropdown-menu > li"></style>
+  </pre>
+
+  <h5>Drop-down menu item links</h5>
+  <pre>
+    <style data-selector=".navbar-nav > li > .dropdown-menu > li > a"></style>
+  </pre>
+  <pre data-title="Within banner">
+    <style data-selector="header .navbar-nav > li > .dropdown-menu > li > a"></style>
+  </pre>
+
+  <h5>Icon class</h5>
+  <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> elements.</p>
+  <pre data-title="For image icon (svg or png):">
+    <style data-selector=".icon"></style>
+  </pre>
+  <pre data-title="Within navigation bar">
+    <style data-selector=".navbar-default .navbar-nav > li > .navbar-icon > .icon"></style>
+  </pre>
+  <pre data-title="Within banner">
+    <style data-selector="header .nav > li > a .icon"></style>
+  </pre>
+  <pre data-title="Within banner with text">
+    <style data-selector="header .nav > li.dropdown .icon"></style>
+  </pre>
+  <pre data-title="Favorite icon">
+    <style data-selector=".icon-favorite"></style>
+  </pre>
+  <pre data-title="T-ball icon">
+    <style data-selector=".icon-t-ball-white"></style>
   </pre>
 </section>
 
@@ -132,12 +166,12 @@
       <a href="javascript:;" class="banner">
         <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
         <h1 class="site-title">Product Name</h1>
-      </a>             
+      </a>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
+            <span class="icon icon-user"></span>Admin_TW<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Change Password</a></li>
@@ -225,12 +259,12 @@
         <!--img src="dist/img/tball.svg" alt="Style Portal"-->
         <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
         <h1 class="site-title">Product Name</h1>
-      </a>             
+      </a>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="javascript:;"><span class="icon icon-alert"></span></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="caret"></span><span class="icon icon-user"></span>Admin_TW
+            <span class="icon icon-user"></span>Admin_TW<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Change Password</a></li>
@@ -245,7 +279,7 @@
         <li class="active"><a href="javascript:;">Link 1</a></li>
         <li><a href="javascript:;">Link 2</a></li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-togfgle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>link 3</a>
+          <a href="javascript:;" class="dropdown-toggle" data-togfgle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 3<span class="caret"></span></a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
@@ -261,7 +295,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-toggfle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>link 4</a>
+          <a href="javascript:;" class="dropdown-toggle" data-toggfle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 4<span class="caret"></span></a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
@@ -279,10 +313,10 @@
       </ul>
     </nav>
   </div>
-  
+
   <h5>Navigation bar animation</h5>
   <p>Always keep the navigation bar on the top of the UI when scrolling down the page.</p>
-  
+
   <!--iframe class="fixed-example" src="themes/components/navigations/fixed-top-example/index.html"></iframe-->
   <div class="placeholder" data-type="iframe" data-class="fixed-example" data-src="fixed-top-example.html"></div>
 </section>

@@ -1,0 +1,44 @@
+<section class="css-reference">
+  <h5>Basic side menu wrapper</h5>
+  <p>Wrap all menu items with a <code data-tag="ul"></code> element. Extend a nav class to define the basic side menu style.</p>
+  <pre>
+    <style data-selector=".nav-pills-vertical-basic"></style>
+  </pre>
+  <pre data-title=":before">
+    <style data-selector=".nav:before"></style>
+  </pre>
+  <pre data-title=":after">
+    <style data-selector=".nav:after"></style>
+  </pre>
+  <h5>Basic side menu items</h5>
+  <p>Use <code data-tag="li"></code> for each menu item under the <code data-tag="ul"></code> elements.</p>
+  <pre data-title=":not(:first-child) or li + li (as a bootstrap tabs)">
+    <style data-selector=".nav-pills-vertical-basic > li + li">Separate the items when items are behind each other</style>
+  </pre>
+  <h5>Links for basic side menu items</h5>
+  <p>Use <code data-tag="a"></code> for each item link under the <code data-tag="li"></code> element.</p>
+  <pre>
+    <style data-selector=".nav-pills > li > a"></style>
+  </pre>
+  <pre>
+    <style data-selector=".nav-pills-vertical-basic > li > a"></style>
+  </pre>
+  <pre data-title=":hover">
+    <style data-selector=".nav-pills-vertical-basic > li > a:hover"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".nav-pills-vertical-basic > li > a:focus"></style>
+  </pre>
+  <h5>Style for basic side menu items when focused</h5>
+  <pre data-title=":hover, :focus">
+    <style data-selector=".nav-pills-vertical-basic > li.active > a:hover"></style>
+  </pre>
+</section>
+
+<section class="side-menu-example">
+  <ul class="nav nav-pills nav-pills-vertical-basic">
+    <li class="active"><a href="#Item1" aria-controls="Item1" role="tab" data-toggle="tab">Item1</a></li>
+    <li><a href="#Item2" aria-controls="Item2" role="tab" data-toggle="tab">Item2</a></li>
+    <li><a href="#Item3" aria-controls="Item3" role="tab" data-toggle="tab">Item3</a></li>
+  </ul>
+</section>

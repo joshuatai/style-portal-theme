@@ -1,26 +1,17 @@
 <section class="css-reference">
-  <h5>Dropdown class</h5>
-  <p>Wrap the dropdown trigger and the dropdown menu within an element that declares <code data-html="position: relative;"></code>. E.g. <code>.dropdown</code></p>
-  <pre>
-    <style data-selector=".dropdown"></style>
-  </pre>
-
-  <h5>Dropdown toggle class</h5>
-  <p>Use the dropdown toggle class on an <code data-tag="a"></code>, <code data-tag="button"></code>, or <code data-tag="input"></code> element. E.g. <code>.dropdown-toggle</code></p>
-  <pre data-title="Unset min width">
-    <style data-selector=".dropdown-toggle"></style>
-  </pre>
-
-  <h5>Dropdown menu</h5>
-  <p>Wrap the dropdown menu items within an <code data-tag="ul"></code> element. E.g. <code>.dropdown-menu</code></p>
+  <h5>Drop-down menu</h5>
+  <p>Wrap the drop-down menu items within a <code data-tag="ul"></code> element. E.g. <code>.dropdown-menu</code></p>
   <pre>
     <style data-selector=".dropdown-menu"></style>
   </pre>
   <pre data-title="When dropdown is active">
-    <style data-selector=".open > .dropdown-menu">Display dropdown menu as a block element</style>
+    <style data-selector=".open > .dropdown-menu"></style>
+  </pre>
+  <pre data-title="Align the menu to the right">
+    <style data-selector=".dropdown-menu-right"></style>
   </pre>
 
-  <h5>Dropdown menu items</h5>
+  <h5>Drop-down menu items</h5>
   <p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
   <pre data-title="Links within the dropdown menu">
     <style data-selector=".dropdown-menu > li > a"></style>
@@ -31,13 +22,13 @@
 </section>
 
 <section class="dropdown-example">
-  <p>A drop-down menu is used to provide a list of options for the user. Use sentence case for menu options.</p>
+  <p>Drop-down menus are used to provide a list of options for the user. Use sentence case for menu options.</p>
   <p>
     <div class="dropdown open">
       <button class="btn btn-border dropdown-toggle" type="button">
         <span class="caret"></span>Select an option
       </button>
-      
+
       <ul class="dropdown-menu">
         <li><a href="javascript:;">Menu item one</a></li>
         <li><a href="javascript:;">Menu item two</a></li>
