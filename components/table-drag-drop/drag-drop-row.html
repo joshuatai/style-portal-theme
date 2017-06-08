@@ -1,0 +1,91 @@
+<section class="drag-drop-row-example">
+	<p>Tables with draggable rows allow users to rearrange the order of records within tables.</p>
+    <div class="lists-unordered">
+		<ul>
+			<li>Only allow one row to be dragged at a time.</li>
+			<li>Display a visual hint (a handle icon) while hovering over a draggable row.</li>
+			<li>Display a moving cursor while dragging a row.</li>
+            <li>Display a visual hint (a blue line) to indicate where a dragged row will be dropped.</li>
+            <li>Display a visual hint (a not-allowed cursor) if a row is dragged somewhere it cannot be dropped.</li>
+            <li>Return a row to its original position in the table if the row is dropped where it cannot be dropped.</li>
+            <li>Drag-and-drop tables should have less than 100 rows and not display pagination controls.</li>
+		</ul>
+	</div>
+    <table class="table table-bordered table-hover table-row-selection table-row-draggable">
+		<thead>
+			<tr>
+				<th class="gutter">
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-ctrl" class="input-checkbox">
+						<label for="table-draggable-checkbox-ctrl"></label>
+					</div>
+				</th>
+				<th>Priority</th>
+				<th>User</th>
+				<th>Applied Rules</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td scope="row">
+                    <span class="icon icon-indicator"></span>
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-1" class="input-checkbox">
+						<label for="table-draggable-checkbox-row-1"></label>
+					</div>
+				</td>
+				<td>1</td>
+				<td class="td-link"><a href="javascript:;">Alice_Hacker, Tome Random, Juan Castrol</a></td>
+				<td>1 Block, 2 Allow</td>
+			</tr>
+			<tr>
+				<td scope="row">
+                    <span class="icon icon-indicator"></span>
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-2" class="input-checkbox">
+						<label for="table-draggable-checkbox-row-2"></label>
+					</div>
+				</td>
+				<td>2</td>
+				<td class="td-link"><a href="javascript:;">Any</a></td>
+				<td>1 Block</td>
+			</tr>
+			<tr>
+				<td scope="row">
+                    <span class="icon icon-indicator"></span>
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-3" class="input-checkbox">
+						<label for="table-draggable-checkbox-row-3"></label>
+					</div>
+				</td>
+				<td>3</td>
+				<td class="td-link"><a href="javascript:;">Betty_Chen, Tim_Huang</a></td>
+				<td>1 Block, 1 Allow</td>
+			</tr>
+            <tr>
+				<td scope="row">
+                    <span class="icon icon-indicator"></span>
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-4" class="input-checkbox">
+						<label for="table-draggable-checkbox-row-4"></label>
+					</div>
+				</td>
+				<td>4</td>
+				<td class="td-link"><a href="javascript:;">Cindy_Wang, Katy_Chiang</a></td>
+				<td>1 Block, 1 Allow</td>
+			</tr>
+            <tr>
+				<td scope="row">
+                    <span class="icon icon-indicator"></span>
+					<div class="checkbox">
+						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-5" class="input-checkbox">
+						<label for="table-draggable-checkbox-row-5"></label>
+					</div>
+				</td>
+				<td>5</td>
+				<td class="td-link"><a href="javascript:;">Danny_Random</a></td>
+				<td>1 Allow</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

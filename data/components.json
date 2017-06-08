@@ -538,6 +538,18 @@
     ]
   },
   {
+    "id": "e8bb3b3e-0ea9-4152-b74c-c413922210ca",
+    "from": ["93c477ed-5ac1-4d47-95ca-1ac03d4b5faa"],
+    "name": "Drag-and-Drop Tables",
+    "keywords": [
+      "drag and drop table",
+      "table"
+    ],
+    "segments": [
+      "2f551841-42d2-48d0-8a29-c94c4fa67f74"
+    ]
+  },
+  {
     "id": "f7017cfc-efff-457f-9457-cf4d34df4db1",
     "from": ["93c477ed-5ac1-4d47-95ca-1ac03d4b5faa"],
     "name": "Fixed Tables",
