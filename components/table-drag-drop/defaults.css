@@ -17,10 +17,11 @@
 .drag-drop-row-example .table-draggable-placeholder {
 	background-color: #F4F4F4;
 }
-.drag-drop-row-example .ui-sortable-helper {
+.drag-drop-row-example .ui-draggable-dragging {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+	background-color: #e6f4fc;
 }
-.drag-drop-row-example .ui-sortable-helper td {
+.drag-drop-row-example .ui-draggable-dragging td {
 	border: 1px solid #cccccc;
 }
 .drag-drop-row-example .input-radio + label:before, .input-checkbox + label:before {
