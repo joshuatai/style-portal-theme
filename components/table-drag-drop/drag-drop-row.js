@@ -9,53 +9,46 @@ function getSelectedText () {
 		return document.selection.createRange().text;
 	}
 }
-var fixHelper = function() {
-	var originals = $(this).children();
-	var helper = $(this).clone();
-	helper.children().each(function(idx)
-	{
-		$(this).width(originals.eq(idx).outerWidth())
-	});
-	return helper;
+
+var fixHelper = function(e, ui) {
+    ui.children().each(function() {
+        $(this).width($(this).width());
+    });
+    return ui;
 };
 
-// $('.table-row-draggable tbody').sortable({
-//     placeholder: "table-draggable-placeholder",
-//     cursor: 'move',
-//     appendTo: "parent",
-//     helper: fixHelper,
-//     start: function( event, ui ) {
-//         $(ui.placeholder).removeClass("ui-sortable-placeholder");
-//     }
-// }).disableSelection();
+$('.table-row-draggable tbody').sortable({
+    placeholder: "table-draggable-placeholder",
+    cursor: 'move',
+    appendTo: "parent",
+    helper: fixHelper,
+	start: function (e, ui) {
+      var $target = $(ui.item);
+      var span = $target.find('td').length;
+      var $row = $('<tr class="table-shadow">');
+      var $cell = $('<td>').attr('colspan', span).html('&nbsp;');
 
-$('.table-row-draggable tbody tr').draggable({
-	cursor: 'move',
-	helper: fixHelper,
-	revert: true,
-	start: function(event, ui) {
-		event.target.style.backgroundColor = '#F4F4F4';
-		$(event.target).children().each(function(){
-			$(this).html("&nbsp");
-		})
-	}
-});
+      $target.prev().addClass('table-draggable-sibling');
+      $row.append($cell).height($target.height());
+      $target.before($row);
+      //$target.insertAfter($('.table tbody tr').last());
 
-$(".table-row-draggable tbody").droppable({
-	drop: function(event, ui) { 
-		console.log(ui.draggable);
-		$(this).append($(ui.draggable));
-	}
-});
+	  var $container = $target.parents(".table-draggable-container");
+	  var $helper = $container.find(".table-helper");
 
-$('.table-row-draggable tbody tr').hover(function() {
-    var indicator = $(this).find('.icon-indicator');
-    indicator.addClass("show");
-    }, function() {
-        var indicator = $(this).find('.icon-indicator');
-        indicator.removeClass("show");
+	  $target.appendTo($helper);
+
+    },
+	sort: function(e, ui) {
+		var idx = $(ui.placeholder).index();
+		$('.table-row-draggable thead tr th').css('border-bottom-width', idx ? '2px' : '1px');
+    },
+	stop: function () {
+      $('.table-row-draggable tbody .table-shadow').remove();
+      $('.table-row-draggable tbody .table-draggable-sibling').removeClass('table-draggable-sibling');
     }
-);
+});
+
 
 $('.table-row-draggable').on('click', 'thead > tr > th.gutter > .checkbox', (e) => {
 	e.preventDefault();

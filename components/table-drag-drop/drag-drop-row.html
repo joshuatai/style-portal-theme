@@ -1,3 +1,32 @@
+<section class="css-reference">
+  <h5>Draggable table cells</h5>
+  <pre>
+    <style data-selector=".table-draggable-container .table > thead > tr th:nth-child(1)">Set a extra padding on the first cell of the row</style>
+  </pre>
+  <pre>
+    <style data-selector=".table-draggable-container .table > thead > tr th.gutter">first cell with check box</style>
+  </pre>
+  
+  <h5>Draggable row class</h5>
+  <pre data-title = ":hover">
+    <style data-selector=".table-draggable-container .ui-sortable-handle:hover td:nth-child(1):before">::before</style>
+  </pre>
+  <h5>Dragged row class</h5>
+  <pre data-title="The dragged table row original position">
+    <style data-selector=".table-row-draggable .table-shadow td"></style>
+  </pre>
+  <pre data-title="The dragging table row">
+    <style data-selector=".table-draggable-container .ui-sortable-helper"></style>
+  </pre>
+  <pre data-title="The dragging table cell">
+    <style data-selector=".table-draggable-container .ui-sortable-helper td"></style>
+  </pre>
+  <h5>Droppable placeholder class</h5>
+  <pre>
+    <style data-selector=".table-row-draggable .table-draggable-placeholder td"></style>
+  </pre>
+</section>
+
 <section class="drag-drop-row-example">
 	<p>Tables with draggable rows allow users to rearrange the order of records within tables.</p>
     <div class="lists-unordered">
@@ -11,81 +40,80 @@
             <li>Drag-and-drop tables should have less than 100 rows and not display pagination controls.</li>
 		</ul>
 	</div>
-    <table class="table table-bordered table-hover table-row-selection table-row-draggable">
-		<thead>
-			<tr>
-				<th class="gutter">
-					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-ctrl" class="input-checkbox">
-						<label for="table-draggable-checkbox-ctrl"></label>
-					</div>
-				</th>
-				<th>Priority</th>
-				<th>User</th>
-				<th>Applied Rules</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td scope="row">
-                    <span class="icon icon-indicator"></span>
-					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-1" class="input-checkbox">
-						<label for="table-draggable-checkbox-row-1"></label>
-					</div>
-				</td>
-				<td>1</td>
-				<td class="td-link"><a href="javascript:;">Alice_Hacker, Tome Random, Juan Castrol</a></td>
-				<td>1 Block, 2 Allow</td>
-			</tr>
-			<tr>
-				<td scope="row">
-                    <span class="icon icon-indicator"></span>
-					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-2" class="input-checkbox">
-						<label for="table-draggable-checkbox-row-2"></label>
-					</div>
-				</td>
-				<td>2</td>
-				<td class="td-link"><a href="javascript:;">Any</a></td>
-				<td>1 Block</td>
-			</tr>
-			<tr>
-				<td scope="row">
-                    <span class="icon icon-indicator"></span>
-					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-3" class="input-checkbox">
-						<label for="table-draggable-checkbox-row-3"></label>
-					</div>
-				</td>
-				<td>3</td>
-				<td class="td-link"><a href="javascript:;">Betty_Chen, Tim_Huang</a></td>
-				<td>1 Block, 1 Allow</td>
-			</tr>
-            <tr>
-				<td scope="row">
-                    <span class="icon icon-indicator"></span>
-					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-4" class="input-checkbox">
-						<label for="table-draggable-checkbox-row-4"></label>
-					</div>
-				</td>
-				<td>4</td>
-				<td class="td-link"><a href="javascript:;">Cindy_Wang, Katy_Chiang</a></td>
-				<td>1 Block, 1 Allow</td>
-			</tr>
-            <tr>
-				<td scope="row">
-                    <span class="icon icon-indicator"></span>
-					<div class="checkbox">
-						<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-5" class="input-checkbox">
-						<label for="table-draggable-checkbox-row-5"></label>
-					</div>
-				</td>
-				<td>5</td>
-				<td class="td-link"><a href="javascript:;">Danny_Random</a></td>
-				<td>1 Allow</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="table-draggable-container">
+		<table class="table table-bordered table-hover table-row-selection table-helper">
+		</table>
+		<table class="table table-bordered table-hover table-row-selection table-row-draggable">
+			<thead>
+				<tr>
+					<th class="gutter">
+						<div class="checkbox">
+							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-ctrl" class="input-checkbox">
+							<label for="table-draggable-checkbox-ctrl"></label>
+						</div>
+					</th>
+					<th>Priority</th>
+					<th>User</th>
+					<th>Applied Rules</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">
+						<div class="checkbox">
+							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-1" class="input-checkbox">
+							<label for="table-draggable-checkbox-row-1"></label>
+						</div>
+					</td>
+					<td>1</td>
+					<td class="td-link"><a href="javascript:;">Alice_Hacker, Tome Random, Juan Castrol</a></td>
+					<td>1 Block, 2 Allow</td>
+				</tr>
+				<tr>
+					<td scope="row">
+						<div class="checkbox">
+							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-2" class="input-checkbox">
+							<label for="table-draggable-checkbox-row-2"></label>
+						</div>
+					</td>
+					<td>2</td>
+					<td class="td-link"><a href="javascript:;">Any</a></td>
+					<td>1 Block</td>
+				</tr>
+				<tr>
+					<td scope="row">
+						<div class="checkbox">
+							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-3" class="input-checkbox">
+							<label for="table-draggable-checkbox-row-3"></label>
+						</div>
+					</td>
+					<td>3</td>
+					<td class="td-link"><a href="javascript:;">Betty_Chen, Tim_Huang</a></td>
+					<td>1 Block, 1 Allow</td>
+				</tr>
+				<tr>
+					<td scope="row">
+						<div class="checkbox">
+							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-4" class="input-checkbox">
+							<label for="table-draggable-checkbox-row-4"></label>
+						</div>
+					</td>
+					<td>4</td>
+					<td class="td-link"><a href="javascript:;">Cindy_Wang, Katy_Chiang</a></td>
+					<td>1 Block, 1 Allow</td>
+				</tr>
+				<tr>
+					<td scope="row">
+						<div class="checkbox">
+							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-5" class="input-checkbox">
+							<label for="table-draggable-checkbox-row-5"></label>
+						</div>
+					</td>
+					<td>5</td>
+					<td class="td-link"><a href="javascript:;">Danny_Random</a></td>
+					<td>1 Allow</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </section>

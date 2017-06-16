@@ -1,29 +1,8 @@
-.drag-drop-row-example .table-row-selection > thead > tr > th.gutter,
-.drag-drop-row-example .table-row-selection > tbody > tr > td:nth-child(1) {
-	position: relative;
-	width: 50px;
-	padding: 8px 18px;
-}
-.drag-drop-row-example .table-row-selection > thead > tr > th:nth-child(2),
+.drag-drop-row-example .table-row-draggable > thead > tr > th:nth-child(2),
 .drag-drop-row-example .table-row-selection > tbody > tr > td:nth-child(2) {
 	width: 11.76%;
 }
-.drag-drop-row-example .table-row-selection > thead > tr > th:nth-child(3),
-.drag-drop-row-example .table-row-selection > tbody > tr > td:nth-child(3) {
+.drag-drop-row-example .table-row-draggable > thead > tr > th:nth-child(3),
+.drag-drop-row-example .table-row-draggable > tbody > tr > td:nth-child(3) {
 	width: 60.53%;
-}
-
-
-.drag-drop-row-example .table-draggable-placeholder {
-	background-color: #F4F4F4;
-}
-.drag-drop-row-example .ui-draggable-dragging {
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-	background-color: #e6f4fc;
-}
-.drag-drop-row-example .ui-draggable-dragging td {
-	border: 1px solid #cccccc;
-}
-.drag-drop-row-example .input-radio + label:before, .input-checkbox + label:before {
-	margin-right: 0;
 }
