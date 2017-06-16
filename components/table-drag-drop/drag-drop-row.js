@@ -31,7 +31,6 @@ $('.table-row-draggable tbody').sortable({
       $target.prev().addClass('table-draggable-sibling');
       $row.append($cell).height($target.height());
       $target.before($row);
-      //$target.insertAfter($('.table tbody tr').last());
 
 	  var $container = $target.parents(".table-draggable-container");
 	  var $helper = $container.find(".table-helper");
