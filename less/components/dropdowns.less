@@ -61,11 +61,11 @@
   > li.dropdown-submenu > a {
     padding-right: 32px;
   }
-  
+
   .fa {
     margin-right: @base-space;
   }
-  
+
   .badge {
     float: right;
     margin-left: 24px;
@@ -220,35 +220,17 @@
   }
 }
 
-/*
-// Component alignment
-//
-// Reiterate per navbar.less and the modified component alignment there.
-
-@media (min-width: @grid-float-breakpoint) {
-  .navbar-right {
-    .dropdown-menu {
-      .dropdown-menu-right();
-    }
-    // Necessary for overrides of the default right aligned menu.
-    // Will remove come v4 in all likelihood.
-    .dropdown-menu-left {
-      .dropdown-menu-left();
-    }
-  }
-}
-*/
 
 // Submenus
 .dropdown-submenu {
   position: relative;
-  
+
   > .dropdown-menu {
     top: 0;
     left: 100%;
     margin-top: 0;
   }
-  
+
   > a:before {
     display: block;
     content: " ";
@@ -260,12 +242,12 @@
     border-left-color: @dropdown-caret-color;
     margin: 6px -16px 6px 0;
   }
-  
+
   &:hover > .dropdown-menu,
   &.open > .dropdown-menu {
     display: block;
   }
-  
+
   &.pull-left {
     float: none;
   }
@@ -290,7 +272,7 @@
 	max-height: 148px;
   overflow-y: auto;
   border-top: 1px solid @dropdown-divider-bg;
-  
+
   .dropdown-menu {
     position: static;
     border: 0;

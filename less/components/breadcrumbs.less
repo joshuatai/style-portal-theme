@@ -1,13 +1,7 @@
 //
 // Breadcrumbs
 // --------------------------------------------------
-.icon-t-ball {
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/tball.svg);
-  background-size: 24px 24px;
-}
+
 nav {
   &.affix {
     width: auto;
@@ -24,9 +18,9 @@ nav {
   }
 }
 .breadcrumb-header {
-  float: left;  
+  float: left;
   margin-left: -54px;
-  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;  
+  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
   line-height: @breadcrumb-line-height;
   margin-right: 12px;
   transition: margin .2s ease-out;
@@ -34,14 +28,14 @@ nav {
     float: left;
   }
 }
-.breadcrumb {    
-  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;  
+.breadcrumb {
+  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
   list-style: none;
-  background-color: @breadcrumb-bg;  
+  background-color: @breadcrumb-bg;
   margin-bottom: @breadcrumb-margin;
 
   &:extend(.clearfix all);
-  
+
   &.with-line {
     border-bottom: @breadcrumb-border-width @breadcrumb-border-color solid;
     margin-bottom: (@base-space * 2);

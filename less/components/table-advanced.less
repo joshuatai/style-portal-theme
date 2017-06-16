@@ -1,0 +1,137 @@
+
+// Sortable effect
+
+.table-sortable {
+  > thead > tr > th:hover {
+    background-color: #e6e6e6;;
+    cursor: pointer;
+  }
+  .sortabled{
+    color: #222;
+    .icon_sortDescending {
+      vertical-align: top;
+      margin-top: 1px;
+    }
+  }
+}
+
+
+// Resizable
+
+.table-col-min-width {
+  min-width: 56px;
+}
+
+.JCLRgripDrag {
+  border-right: 4px solid rgba(34, 34, 34, .08);
+  border-left: 1px solid #999;
+}
+.JCLRgrip:hover {
+  border-left: 1px solid #999;
+  cursor: col-resize;
+}
+
+
+// Toolbar
+.table-with-header {
+  .toolbar {
+    background-color: #f8f8f8;
+    border: 1px solid @table-border-color;
+    border-bottom: none;
+    .items-block {
+      padding: 8px 12px;
+      float: left;
+      + .items-block {
+        &:before {
+          content: ' ';
+          display: block;
+          height: 22px;
+          vertical-align: top;
+          margin-left: -12px;
+          float: left;
+          margin-right: 12px;
+          margin-top: 5px;
+          border-left: 1px solid @table-border-color;
+        }
+      }
+      .selected-records {
+        color: #666666;
+        font-size: 12px;
+        display: inline-block;
+        margin-left: 12px;
+        vertical-align: middle;
+        .count {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  &.plain-header {
+    .toolbar {
+      background-color: #ffffff;
+      box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid #dddddd;
+    }
+  }
+}
+
+
+// Row action buttons
+
+// Make the div behave like a button
+.table-row-actions {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.table-row-actions {
+  .btn-table-row-action + .btn-table-row-action,
+  .btn-table-row-action + .table-row-actions,
+  .table-row-actions + .btn-table-row-action,
+  .table-row-actions + .table-row-actions {
+    margin-left: 4px;
+  }
+
+  > .table-row-actions {
+    float: left;
+  }
+}
+
+.btn-table-row-action {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  white-space: nowrap;
+  padding: 0;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  float: left;
+
+  &:active,
+  &:focus, {
+    background: none;
+    outline: none;
+  }
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    .fa {
+      color: @btn-default-color;
+    }
+  }
+}
