@@ -28,7 +28,15 @@
       "9123b711-5477-43cb-a47d-e9940d810a57",
       "57b01452-280b-47d8-b4f7-c22ed0f2e364",
       "ce531d75-4d1c-4f45-986a-793ee0c958e0"
-    ]
+    ],
+    "css": {
+      "name": "typography",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/type"
+      ]
+    }
   },
   {
     "id": "1811bd76-57b6-4fb9-930f-b6899313fa41",
@@ -46,7 +54,15 @@
     ],
     "segments": [
       "9c352cdc-f375-4f51-8d61-9cada00adc1e"
-    ]
+    ],
+    "css": {
+      "name": "breadcrumbs",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/breadcrumbs"
+      ]
+    }
   },
   {
     "id": "e5bd7778-d707-420b-ac64-4a55da161b83",
@@ -61,7 +77,18 @@
       "4ebd3d3a-5ca6-42a9-86b2-38735dcf99e7",
       "a33044fb-3210-43dc-9ac9-c896eadf3793",
       "111d3211-7358-42c8-be48-da90f4ca60df"
-    ]
+    ],
+    "css": {
+      "name": "buttons",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "core/buttons",
+        "components/button-groups",
+        "components/loader"
+      ]
+    }
   },
   {
     "id": "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
@@ -81,7 +108,21 @@
       "4fe80c77-a90b-45e7-9645-6663b2ea527c",
       "d20bf90d-1f20-4867-8876-85fca20ef8ea",
       "92ae9e63-5bf0-408c-9c06-2e4e8175cc24"
-    ]
+    ],
+    "css": {
+      "name": "dropdowns",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "core/buttons",
+        "core/forms",
+        "core/caret",
+        "core/scrollbar",
+        "components/badges",
+        "components/dropdowns"
+      ]
+    }
   },
   {
     "id": "37a6f43e-9194-4b29-94ad-e54bbc3f1b38",
@@ -93,7 +134,16 @@
     "segments": [
       "6c400c9b-00b5-40ae-b2c1-4f17f9236dc9",
       "1a9b33f7-1fc1-48d1-a1ae-2b1527ec8031"
-    ]
+    ],
+    "css": {
+      "name": "labels-and-badges",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/labels",
+        "components/badges"
+      ]
+    }
   },
   {
     "id": "4cd601bb-d7a7-4b4a-8d4d-d087a630929a",
@@ -104,7 +154,15 @@
     ],
     "segments": [
       "377a1cfd-6256-4ea0-900e-8325c785f184"
-    ]
+    ],
+    "css": {
+      "name": "loader",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/loader"
+      ]
+    }
   },
   {
     "id": "348487b9-82cc-4c06-98e4-ede8ac73a42b",
@@ -114,7 +172,17 @@
     ],
     "segments": [
       "7258a865-d31f-430c-8b78-a16fa083cbc1"
-    ]
+    ],
+    "css": {
+      "name": "modals",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/buttons",
+        "components/component-animations",
+        "components/modals"
+      ]
+    }
   },
   {
     "id": "a2fa8b5e-6dd7-4570-9352-eea232f1d5a0",
@@ -126,7 +194,17 @@
       "64760149-30ad-41cc-bb07-e2e98e6d6c7b",
       "74ab8123-c3c6-4272-b7de-0e3bff4fd08c",
       "cd872a06-e1ed-46fc-92ec-3aa4b85ebd18"
-    ]
+    ],
+    "css": {
+      "name": "navigation-bar",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "core/caret",
+        "components/navbar"
+      ]
+    }
   },
   {
     "id": "168263ea-0f3f-4782-8a37-f18334007680",
@@ -139,7 +217,17 @@
     "segments": [
       "53677489-3466-4dcd-b724-a9670cc1ca23",
       "0be96478-bceb-4410-b5e7-afbaa331379c"
-    ]
+    ],
+    "css": {
+      "name": "notifications",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "components/component-animations",
+        "components/alerts"
+      ]
+    }
   },
   {
     "id": "003ae527-8e9e-41fb-a275-ae2babcdf49e",
@@ -151,7 +239,19 @@
     "segments": [
       "bfe746d2-6607-4bbe-9eb2-b2041c8a858e",
       "aedc60e0-630c-4764-abf3-b13cd8edae22"
-    ]
+    ],
+    "css": {
+      "name": "paginations",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/buttons",
+        "core/forms",
+        "core/caret",
+        "components/dropdowns",
+        "components/pagination"
+      ]
+    }
   },
   {
     "id": "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
@@ -163,7 +263,16 @@
       "5ecc5ef6-4d48-4167-8792-aa0daf13b2c3",
       "f7c8d8ac-9bad-462b-b89a-885eec6425fc",
       "27ddafaf-b2d1-47f0-9b28-8c82ad8f8940"
-    ]
+    ],
+    "css": {
+      "name": "popovers",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/buttons",
+        "components/popovers"
+      ]
+    }
   },
   {
     "id": "31ac4e6c-120e-46dd-9c31-285e04543ddd",
@@ -183,7 +292,15 @@
       "b1118ae9-ed8f-4da7-a401-a0ad910ca3a8",
       "d715316d-b355-4029-b041-c5efb4f4dc01",
       "9bb5afb1-9dd0-4835-9e02-5d5a8ce1c57c"
-    ]
+    ],
+    "css": {
+      "name": "tabs-and-side-menu",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/navs"
+      ]
+    }
   },
   {
     "id": "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f",
@@ -196,7 +313,15 @@
     "segments": [
       "424d42ce-1476-4ea3-bc58-565cd12d923d",
       "6e8391d2-5d9c-4544-aabf-b3cbd9633753"
-    ]
+    ],
+    "css": {
+      "name": "tooltips",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/tooltip"
+      ]
+    }
   },
   {
     "id": "654e09d7-1bc4-42e6-816e-791c52f4308d",
@@ -222,7 +347,15 @@
       "211f114e-5c79-4171-8750-a5097bbb8a35",
       "a72d3fec-c151-492e-b03d-f3086c0b143c",
       "c2a5d641-6a27-427f-bcf5-8df4547904aa"
-    ]
+    ],
+    "css": {
+      "name": "forms",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/forms"
+      ]
+    }
   },
   {
     "id": "65ce6af3-87b9-45ed-b1e7-56f1b1ad3745",
@@ -238,7 +371,18 @@
       "6fe1c2de-7b54-4ed4-94f1-6895f573b0dc",
       "a3246c06-0d15-41f0-a52e-4683be4ff47f",
       "b275b05f-c3c7-4552-a8a8-94c42e4ed066"
-    ]
+    ],
+    "css": {
+      "name": "advanced-form",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/forms",
+        "components/toggle-switches",
+        "components/combobox",
+        "components/multiple-selection"
+      ]
+    }
   },
   {
     "id": "8de08a62-4895-4549-a71b-adb5d2008f53",
@@ -256,7 +400,16 @@
       "06521568-a35a-47cf-a99c-16661d212580",
       "171a4d94-9890-4e85-81d5-124d98814bdb",
       "ca9d6a55-c645-4a6e-9b56-19c3ef7ae783"
-    ]
+    ],
+    "css": {
+      "name": "form-layout",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/forms",
+        "core/form-layout"
+      ]
+    }
   },
   {
     "id": "b661774f-cb42-4ca4-9637-7da9bc5fb090",
@@ -268,7 +421,16 @@
     "segments": [
       "09f2aeb2-4447-4f9c-b36d-d517b1b6750f",
       "7eb7d51c-4197-4f6f-b4b3-e9512a1584db"
-    ]
+    ],
+    "css": {
+      "name": "form-size",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/forms",
+        "core/form-sizes"
+      ]
+    }
   },
   {
     "id": "13c93b6d-c0f4-4983-a2de-27a0f910caa8",
@@ -280,7 +442,10 @@
     "segments": [
       "ce880094-f93a-462d-b476-5290e2ae4d45",
       "a4f8ef6c-2d59-4431-956c-0a72e242a7d4"
-    ]
+    ],
+    "css": {
+      "name": "forms"
+    }
   },
   {
     "id": "f1cdc7cd-5ee2-436a-b7ae-60188c813881",
@@ -293,7 +458,17 @@
       "d53ab415-61ec-4f6c-bbfa-03ed1968500e",
       "18c998d0-5af3-42b0-ae9f-a66efd7bb5ed",
       "54c56eca-e598-4bd6-b2a0-cb1cd104b1bd"
-    ]
+    ],
+    "css": {
+      "name": "help-text",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/forms",
+        "components/tooltip",
+        "components/popovers"
+      ]
+    }
   },
   {
     "id": "4ec8071d-3dc0-4c63-90d7-9b41cb87a423",
@@ -307,7 +482,20 @@
       "e26b19c3-35fa-4b1e-ac7b-8e2d55311ab9",
       "4ed6f4d5-cc34-4e6f-9f3b-64204aaa1eef",
       "8dad46f6-ea13-4746-ba77-5e428e8684bc"
-    ]
+    ],
+    "css": {
+      "name": "input-groups-and-search",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "core/buttons",
+        "core/forms",
+        "core/caret",
+        "components/input-groups",
+        "components/dropdowns"
+      ]
+    }
   },
   {
     "id": "0448aa99-2fd0-4218-b960-4037f18e8bcb",
@@ -319,7 +507,17 @@
     "segments": [
       "53dc41a5-3f6f-4fbb-8571-d6a71fc01f06",
       "47013de3-7aaa-49e2-b640-7052858cb542"
-    ]
+    ],
+    "css": {
+      "name": "file-upload",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/buttons",
+        "core/forms",
+        "components/file-upload"
+      ]
+    }
   },
   {
     "id": "06f6ed7b-95c5-449d-a3c7-cd56ff037d66",
@@ -332,7 +530,10 @@
       "e1f3dcf0-359f-4207-9efd-af567a12ed5e",
       "856dcb17-52f2-47ab-acae-462ce182986c",
       "27a7e158-ec25-440a-9c36-c73cba471f42"
-    ]
+    ],
+    "css": {
+      "name": "input-groups-and-search"
+    }
   },
   {
     "id": "73243502-1317-451b-b3c9-e75f7e5fab81",
@@ -344,7 +545,16 @@
     "segments": [
       "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
       "954d9736-4abf-41b5-bc49-d32a6805bd20"
-    ]
+    ],
+    "css": {
+      "name": "tags-and-tokens",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "components/tags"
+      ]
+    }
   },
   {
     "id": "f67b16d7-2d35-4c9c-bc5a-02e2824e46c3",
@@ -361,7 +571,20 @@
       "84ac9650-408c-4c4a-a5a6-62e49e39e9aa",
       "16165a7c-77ff-45b8-b28b-51c21804fdbf",
       "44693e7b-0c49-4264-8640-5f765ebded82"
-    ]
+    ],
+    "css": {
+      "name": "date-time-picker",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "core/buttons",
+        "core/forms",
+        "components/input-groups",
+        "components/dropdowns",
+        "components/date-time-picker"
+      ]
+    }
   },
   {
     "id": "dffba378-6723-4701-9087-3d527c831509",
@@ -385,7 +608,15 @@
       "8cc80a01-3e2e-43dc-8713-608c5b32644a",
       "a26a5096-fe96-4155-94ba-ddfab3f6de9b",
       "943cf8b9-cd98-4134-9688-d222c2cd1a8f"
-    ]
+    ],
+    "css": {
+      "name": "charts",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/charts"
+      ]
+    }
   },
   {
     "id": "3adc8bca-8ab1-40d5-b447-97ed0a8899c4",
@@ -400,7 +631,10 @@
       "2ad1fad3-fa9d-4030-993d-2b1bf31b28df",
       "c1fe19f5-76c2-402d-a04a-d7d3a76893bb",
       "7fcb143b-5bfc-4bde-97cc-b0b5033c5c07"
-    ]
+    ],
+    "css": {
+      "name": "charts"
+    }
   },
   {
     "id": "ccf72043-8aee-4dfd-b976-888dbb12ef7b",
@@ -414,7 +648,10 @@
       "9a79c8cc-21f5-4404-9b24-aa33a082c06c",
       "99710ff0-af7f-43ac-8044-3b333f3aa261",
       "7213a163-7205-46e1-8283-f6df60ae9b16"
-    ]
+    ],
+    "css": {
+      "name": "charts"
+    }
   },
   {
     "id": "7d8c26cf-c8fc-454d-92c5-2c4ca6cdbeeb",
@@ -429,7 +666,10 @@
       "9640a7c2-fcd6-4f43-a127-4feee5cf8ce0",
       "46d34632-2cde-4b01-8fcf-a3695cb61cdc",
       "8abcf592-3bc5-4ed0-b60f-9c8227d9b115"
-    ]
+    ],
+    "css": {
+      "name": "charts"
+    }
   },
   {
     "id": "15c240c6-b25c-4bb6-8981-65c19c89711b",
@@ -446,7 +686,10 @@
       "5975946d-eb73-46f4-bbb1-a41a796452dc",
       "a8a68fc1-13a9-4a22-8389-6fef1cf5577f",
       "eb117673-cc7a-46bd-be5f-314fd55102f1"
-    ]
+    ],
+    "css": {
+      "name": "charts"
+    }
   },
   {
     "id": "64d00b7c-ae9b-4bcf-83f1-c8e58328ce81",
@@ -496,7 +739,18 @@
       "1d327acd-6d72-41a1-b462-afcbdbcbe9f3",
       "afc5cf8d-7b57-40ff-97e2-447481e58ba8",
       "379e15bf-7e46-475c-abec-084a5507a27f"
-    ]
+    ],
+    "css": {
+      "name": "tables",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/type",
+        "core/forms",
+        "components/tables",
+        "components/loader"
+      ]
+    }
   },
   {
     "id": "0dd091cf-6392-49d2-8a9d-5ccc45131f3d",
@@ -518,7 +772,10 @@
       "89a51fe8-e952-409a-9330-69deb0c268b4",
       "5c28cda7-972c-4b7c-94ec-b105b79ad7b9",
       "e87f938a-48cd-4cfc-aaad-e38649d44430"
-    ]
+    ],
+    "css": {
+      "name": "tables"
+    }
   },
   {
     "id": "d343d2ac-67aa-44a4-a8ca-bd6f6cb490b8",
@@ -535,7 +792,20 @@
       "8f8315e8-d95a-4cef-92bd-dcb90f28f3ea",
       "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df",
       "27557042-0d0f-41f9-a1a2-2092af954d7f"
-    ]
+    ],
+    "css": {
+      "name": "advanced-tables",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/icons",
+        "core/buttons",
+        "core/forms",
+        "components/tables",
+        "components/table-advanced",
+        "components/dropdowns"
+      ]
+    }
   },
   {
     "id": "f7017cfc-efff-457f-9457-cf4d34df4db1",
@@ -548,7 +818,23 @@
     "segments": [
       "c7ddc689-9f5e-40d2-8614-40ddfd5b3753",
       "6e87a4d1-0e5e-44f0-8550-eed86ad72b86"
-    ]
+    ],
+    "css": {
+      "name": "fixed-tables",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "core/type",
+        "core/buttons",
+        "core/forms",
+        "core/caret",
+        "core/scrollbar",
+        "components/tables",
+        "components/table-fixed",
+        "components/dropdowns",
+        "components/pagination"
+      ]
+    }
   },
   {
     "id": "5d77b5ec-a33b-4a6b-9a13-7c9107072d01",
@@ -588,6 +874,9 @@
       "9b322fd1-6e3d-461f-97c9-850e678d4e64",
       "0f86c54d-46b2-42f3-ab2b-0b101cbc7608",
       "5f498370-0687-4136-94c0-5aa5b4abb1c8"
-    ]
+    ],
+    "css": {
+      "name": "tabs-and-side-menu"
+    }
   }
 ]
