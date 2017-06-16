@@ -1,0 +1,46 @@
+// Combobox
+.combobox {
+  .form-control {
+    padding-right: 48px;
+    padding-left: 12px;
+  }
+  .icon {
+    right: 25px;
+  }
+  .dropdown-menu {
+    right: 0;
+    left: inherit;
+    width: 100%;
+    > li {
+      display: block;
+      padding: 4px 16px;
+      clear: both;
+      font-weight: normal;
+      line-height: 20px;
+      color: #222;
+      text-decoration: none;
+      white-space: nowrap;
+      &:hover {
+        color: #222;
+        text-decoration: none;
+        background-color: #eee;
+        cursor: pointer;
+      }
+      &.selected {
+        background: #f4f4f4;
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 32px;
+    width: 24px;
+    content: " ";
+    background: url(../images/icon/selectCaretDown.svg) no-repeat;
+    background-position-y: 7px;
+    background-position-x: left;
+    cursor: pointer;
+  }
+}
