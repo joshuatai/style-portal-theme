@@ -1,0 +1,8 @@
+.drag-drop-row-example .table-row-draggable > thead > tr > th:nth-child(2),
+.drag-drop-row-example .table-row-selection > tbody > tr > td:nth-child(2) {
+	width: 11.76%;
+}
+.drag-drop-row-example .table-row-draggable > thead > tr > th:nth-child(3),
+.drag-drop-row-example .table-row-draggable > tbody > tr > td:nth-child(3) {
+	width: 60.53%;
+}
