@@ -26,7 +26,12 @@ var draggableTable = $('.table-row-draggable tbody').sortable({
 		revert: true,
 		tolerance: "pointer",
     appendTo: ".table-draggable-container",
-    helper: fixHelper
+    helper: fixHelper,
+		stop: function () {
+			draggableTable.children().each(function (index, item) {
+				$(item).children().eq(1).text((index + 1));
+			})
+		}
 });
 
 
