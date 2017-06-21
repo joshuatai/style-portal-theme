@@ -1,66 +1,28 @@
 .table-row-draggable {
-    .table-shadow td {
-        background: #F4F4F4;
-    }
-    .table-draggable-placeholder {
-        td {
-            border-top: 2px solid #0096cc;
-        }
-    }
     .table-draggable-placeholder td {
-        border-bottom-color: transparent;
-        font-size: 0;
-        line-height: 0;
-        padding: 0 !important;
+        background: #F4F4F4;
+        border-left-color: #F4F4F4;
+        border-right-color: #F4F4F4;
     }
-    .table-draggable-sibling + .table-draggable-placeholder,
-    .table-shadow + .table-draggable-placeholder {
-        display: none;
-    } 
-}
-
-.table-draggable-container {
-    .table {
-        > thead,
-        > tbody, {
-            > tr {
-                th.gutter {
-                    width: 50px;
-                }
-                th:nth-child(1),
-                td:nth-child(1) {
-                    position: relative;
-                    padding: 8px 18px;
-                }
-            }
-        } 
+    .table-draggable-placeholder td:first-child {
+         border-left-color: #dddddd;
     }
-    .table-helper {
-        border: 0;
-        .input-radio + label:before,
-        .input-checkbox + label:before {
-            margin-right: 0;
-        }
+    .table-draggable-placeholder td:last-child {
+        border-right-color: #dddddd;
     }
-    .ui-sortable-helper {
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-        background: #E6F4FC;
-        cursor: move;
-        td {
-            border: 1px solid #cccccc;
-        }
-    }
-    .ui-sortable-helper,
     .ui-sortable-handle:hover {
-        td:nth-child(1):before {
-            content: "";
-            display: block;
-            background-image: url("../images/icon/icon_indicator.png");
-            width: 8px;
-            height: 32px;
-            position: absolute;
-            top: 2px;
-            left: 4px;
+        td:nth-child(1) {
+            background-image: url(../images/icon/icon_indicator.png);
+            background-repeat: no-repeat;
+            background-position: 2px center;
         }
+    }
+}
+.ui-sortable-helper {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    background: #E6F4FC;
+    cursor: move;
+    td {
+        border: 1px solid #cccccc;
     }
 }

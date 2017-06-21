@@ -11,41 +11,22 @@ function getSelectedText () {
 }
 
 var fixHelper = function(e, ui) {
-    ui.children().each(function() {
-        $(this).width($(this).width());
-    });
-    return ui;
+		var tableAlias = $('.table-row-draggable').clone().addClass('draggable-table-helper');
+		var tableAliasHead = tableAlias.find('thead');
+		var tableAliasBody = tableAlias.find('tbody');
+		tableAliasBody.html('');
+		tableAliasHead.find('th').html('');
+		tableAliasBody.append(ui.clone());
+		return tableAlias;
 };
 
-$('.table-row-draggable tbody').sortable({
+var draggableTable = $('.table-row-draggable tbody').sortable({
     placeholder: "table-draggable-placeholder",
     cursor: 'move',
-    appendTo: "parent",
-    helper: fixHelper,
-	start: function (e, ui) {
-      var $target = $(ui.item);
-      var span = $target.find('td').length;
-      var $row = $('<tr class="table-shadow">');
-      var $cell = $('<td>').attr('colspan', span).html('&nbsp;');
-
-      $target.prev().addClass('table-draggable-sibling');
-      $row.append($cell).height($target.height());
-      $target.before($row);
-
-	  var $container = $target.parents(".table-draggable-container");
-	  var $helper = $container.find(".table-helper");
-
-	  $target.appendTo($helper);
-
-    },
-	sort: function(e, ui) {
-		var idx = $(ui.placeholder).index();
-		$('.table-row-draggable thead tr th').css('border-bottom-width', idx ? '2px' : '1px');
-    },
-	stop: function () {
-      $('.table-row-draggable tbody .table-shadow').remove();
-      $('.table-row-draggable tbody .table-draggable-sibling').removeClass('table-draggable-sibling');
-    }
+		revert: true,
+		tolerance: "pointer",
+    appendTo: ".table-draggable-container",
+    helper: fixHelper
 });
 
 
