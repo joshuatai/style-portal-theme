@@ -1,0 +1,22 @@
+{
+  "id": "35cde4ef-16a8-42f8-bffd-f990b9091d23",
+  "name": "Progress Bar Height",
+  "keywords": [
+    "progress",
+    "bar",
+    "status"
+  ],
+  "location": "progress-bars/progress-bar-height.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4"
+  }
+}
