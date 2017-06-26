@@ -3,10 +3,10 @@
   .color {
     .for(@colors);
     .-each(@color) {
-      @name: e(replace("@{color}", "#", "", "gi"));
+      @name: ~`"@{color}".replace("#", "")`;
       &-@{name}:before {
         background: @color;
-      }       
+      }
     }
   }
 }
