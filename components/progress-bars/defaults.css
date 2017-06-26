@@ -1,0 +1,22 @@
+.progress-example,
+.progress-buffered-example,
+.indeterminate-determinate-example,
+.progress-bar-color-example {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.progress-example .progress-warpper,
+.progress-buffered-example .progress-warpper,
+.indeterminate-determinate-example .progress-warpper,
+.progress-bar-color-example .progress-warpper {
+  display: table-row;
+  height: 100%;
+}
+.progress-example .progress-container,
+.progress-buffered-example .progress-container,
+.indeterminate-determinate-example .progress-container,
+.progress-bar-color-example .progress-container {
+  display: table-cell;
+  vertical-align: middle;
+}

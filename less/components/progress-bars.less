@@ -1,0 +1,142 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes {
+  from  { width: 100%; }
+  to    { width: 0%; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+  from  { width: 100%; }
+  to    { width: 0%; }
+}
+
+// WebKit
+@-webkit-keyframes progress-bar-indeterminate {
+  from  { margin-left: 40%; }
+  to    { margin-left: 0%; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-indeterminate {
+  from  { margin-left: 40%; }
+  to    { margin-left: 0%; }
+}
+
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  // overflow: hidden;
+  height: @progress-height;
+  //margin-bottom: @line-height-computed;
+  background-color: @progress-bg;
+  position: relative;
+  // border-radius: @progress-border-radius;
+  // .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  &.progress-with-label {
+    margin-right: 40px;
+  }
+  &.progress-small {
+    height: @progress-small-height;
+  }
+  &.progress-medium {
+    height: @progress-medium-height;
+  }
+  &.progress-large {
+    height: @progress-large-height;
+  }
+}
+
+// Bar of progress
+.progress-bar {
+  // float: left;
+  width: 0%;
+  height: 100%;
+  font-size: @font-size-small;
+  line-height: @progress-height;
+  color: @progress-bar-color;
+  //text-align: center;
+  background-color: @progress-bar-bg;
+  // .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+  .transition(width .6s ease);
+  .progress-with-label & {
+    span {
+      position: absolute;
+      right: -40px;
+    }
+  }
+  &.progress-bar-buffered {
+    background-color: @progress-bar-buffered-bg;
+  }
+  .progress-bar-buffered + & {
+    margin-top: -8px;
+  }
+  &.progress-bar-indeterminate {
+    width: 60%;
+    .animation(progress-bar-indeterminate 1s linear infinite);
+  }
+}
+
+// Striped bars
+//
+// `.progress-striped .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar-striped` class, which you just add to an existing
+// `.progress-bar`.
+/*.progress-striped .progress-bar,
+.progress-bar-striped {
+  #gradient > .striped(rgba(255,255,255,.15); 90deg);
+  background-size: 50%;
+}*/
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  &:before {
+    height: 100%;
+    float: right;
+    position: relative;
+    display: block;
+    content: '';
+    background: #ffffff;
+    .opacity(.25);
+  }
+}
+// Call animation for the active one
+//
+// `.progress.active .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar.active` approach.
+.progress.active .progress-bar,
+.progress-bar.active {
+  &:before {
+    .animation(progress-bar-stripes 1s linear infinite);
+  }
+}
+
+
+// Variations
+// -------------------------
+
+// .progress-bar-success {
+//   .progress-bar-variant(@progress-bar-success-bg);
+// }
+
+.progress-bar-info {
+  background-color: @progress-bar-info-bg;
+}
+
+// .progress-bar-warning {
+//   .progress-bar-variant(@progress-bar-warning-bg);
+// }
+
+.progress-bar-danger {
+  background-color: @progress-bar-danger-bg;
+}
