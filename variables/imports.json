@@ -25,5 +25,6 @@
   "navbar",
   "form-status-alerts",
   "charts",
-  "panels"
+  "panels",
+  "progress-bars"
 ]

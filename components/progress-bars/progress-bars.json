@@ -1,0 +1,22 @@
+{
+  "id": "0164176a-9112-4bfc-9983-cf6a4278aa76",
+  "name": "Progress Bars",
+  "keywords": [
+    "progress",
+    "bar",
+    "status"
+  ],
+  "location": "progress-bars/progress-bars.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-3"
+  }
+}

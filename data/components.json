@@ -276,11 +276,20 @@
   },
   {
     "id": "31ac4e6c-120e-46dd-9c31-285e04543ddd",
-    "name": "Progress",
+    "name": "Progress Bars",
     "keywords": [
-      "progress"
+      "progress",
+      "bar",
+      "status"
     ],
-    "segments": []
+    "segments": [
+      "0164176a-9112-4bfc-9983-cf6a4278aa76",
+      "7e18d8d1-77c4-4e24-900e-a466073a311a",
+      "010ddc8c-969f-44f0-8829-b313b8cdb00a",
+      "6e769613-f9d9-4481-82b8-a49dc240866e",
+      "35cde4ef-16a8-42f8-bffd-f990b9091d23",
+      "74b2941d-7ac1-4a9b-bf2d-5e43047ea6f7"
+    ]
   },
   {
     "id": "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
