@@ -3,11 +3,12 @@
 // Make color palette by loopping
 
 .make-palette(@name; @colors; @index) when (iscolor(extract(@colors, @index))) and (@index =< length(@colors)) {
-  .make-palette(@name; @colors; (@index + 1)); // decrement.
- 
-  @color : extract(@colors, @index); 
-  .@{name} li:nth-child(@{index}) {
+  .make-palette(@name; @colors; @index + 1); // decrement.
+
+  @color : extract(@colors, @index);
+  @child : ~"li:nth-child(@{index})";
+  .@{name} @{child} {
     background-color: @color;
   }
- 
+
 }
