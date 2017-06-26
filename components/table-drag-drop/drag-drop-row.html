@@ -1,8 +1,11 @@
 <section class="css-reference">
   <h5>Draggable indicator</h5>
-	<p>Show an indicator at the first column once the mouse cursor hovers that column's row.</p>
+	<p>Wrap a indicator class using <code data-tag="span"></code> within the first column to indicate that the row can be draged.</p>
   <pre>
-    <style data-selector=".table-row-draggable .ui-sortable-handle:hover td:nth-child(1)"></style>
+    <style data-selector=".table-row-draggable .ui-sortable-handle:hover td .draggable-indicator"></style>
+  </pre>
+	<pre data-title=":before">
+    <style data-selector=".table-row-draggable .ui-sortable-handle:hover td .draggable-indicator:before"></style>
   </pre>
   <h5>Helper</h5>
 	<p>Styling for the dragging element.</p>
@@ -52,6 +55,7 @@
 			<tbody>
 				<tr>
 					<td scope="row">
+						<span class="draggable-indicator"></span>
 						<div class="checkbox">
 							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-1" class="input-checkbox">
 							<label for="table-draggable-checkbox-row-1"></label>
@@ -63,6 +67,7 @@
 				</tr>
 				<tr>
 					<td scope="row">
+						<span class="draggable-indicator"></span>
 						<div class="checkbox">
 							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-2" class="input-checkbox">
 							<label for="table-draggable-checkbox-row-2"></label>
@@ -74,6 +79,7 @@
 				</tr>
 				<tr>
 					<td scope="row">
+						<span class="draggable-indicator"></span>
 						<div class="checkbox">
 							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-3" class="input-checkbox">
 							<label for="table-draggable-checkbox-row-3"></label>
@@ -85,6 +91,7 @@
 				</tr>
 				<tr>
 					<td scope="row">
+						<span class="draggable-indicator"></span>
 						<div class="checkbox">
 							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-4" class="input-checkbox">
 							<label for="table-draggable-checkbox-row-4"></label>
@@ -96,6 +103,7 @@
 				</tr>
 				<tr>
 					<td scope="row">
+						<span class="draggable-indicator"></span>
 						<div class="checkbox">
 							<input type="checkbox" name="tablecheckboxs" id="table-draggable-checkbox-row-5" class="input-checkbox">
 							<label for="table-draggable-checkbox-row-5"></label>
