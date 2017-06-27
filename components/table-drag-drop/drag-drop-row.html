@@ -1,6 +1,6 @@
 <section class="css-reference">
   <h5>Draggable indicator</h5>
-	<p>Wrap a indicator class using <code data-tag="span"></code> within the first column to indicate that the row can be draged.</p>
+	<p>Wrap an indicator class using <code data-tag="span"></code> within the first column to indicate that a row can be dragged.</p>
   <pre>
     <style data-selector=".table-row-draggable .ui-sortable-handle:hover td .draggable-indicator"></style>
   </pre>
@@ -8,12 +8,12 @@
     <style data-selector=".table-row-draggable .ui-sortable-handle:hover td .draggable-indicator:before"></style>
   </pre>
   <h5>Helper</h5>
-	<p>Styling for the dragging element.</p>
+	<p>Use this style on the dragged row.</p>
 	<pre>
     <style data-selector=".ui-sortable-helper"></style>
   </pre>
 	<h5>Placeholder</h5>
-	<p>When you drag to a place where it can be placed, the position displays a gray row.</p>
+	<p>Use this style (gray background) to indicate where a dragged row will be dropped.</p>
   <pre>
     <style data-selector=".table-row-draggable .table-draggable-placeholder td"></style>
   </pre>
@@ -30,8 +30,9 @@
     <div class="lists-unordered">
 		<ul>
 			<li>Only allow one row to be dragged at a time.</li>
-			<li>Display a visual hint (a handle icon) while hovering over a draggable row.</li>
-			<li>Display a moving cursor while dragging a row.</li>
+			<li>Display a visual hint (a hand cursor) while hovering over a draggable row.</li>
+			<li>Display a visual hint (a move cursor) while dragging a row.</li>
+			<li>Display a visual hint (gray background) to indicate where a dragged row will be dropped.</li>
 			<li>Display a visual hint (a not-allowed cursor) if a row is dragged somewhere it cannot be dropped.</li>
 			<li>Return a row to its original position in the table if the row is dropped where it cannot be dropped.</li>
 			<li>Drag-and-drop tables should have less than 100 rows and not display pagination controls.</li>
