@@ -1,9 +1,38 @@
+<section class="css-reference">
+  <h5>Progress class</h5>
+  <p>Use <code data-tag="div"></code> element to create a progress class. For example, <code>.progress</code> is a progress class used in Bootstrap.</p>
+  <pre>
+    <style data-selector=".progress"></style>
+  </pre>
+  <pre data-title="Leave a space on the right side for the progress lable.">
+    <style data-selector=".progress.progress-with-label"></style>
+  </pre>
+  <h5>Determinate indicator</h5>
+  <p>Use a <code data-tag="div"></code> element wrapped within the progress class. Update its' width to indicate current progress</p>
+  <pre>
+    <style data-selector=".progress-bar"></style>
+  </pre>
+  <h5>Determinate indicator effect</h5>
+  <p>Show a transparent overlap for the indicator effect by adding a pseudo-element, for example, <code>:before</code>, on the determinate indicator.</p>
+  <pre data-title=":before">
+    <style data-selector=".progress-bar-animated:before"></style>
+  </pre>
+  <pre data-title="Show an animated effect until task completed.">
+    <style data-keyframes="progress-bar-animated">Keyframes definition for animated effect.</style>
+    <style data-selector=".progress-bar.active:before">Adopt above keyframes</style>
+  </pre>
+  <h5>Label</h5>
+  <p>A determinate indicator can contain a text value indicating current progress</p>
+  <pre>
+    <style data-selector=".progress-with-label .progress-bar span"></style>
+  </pre>
+</section>
 <section class="progress-example">
   <p>For operations where the percentage of the operation completed can determined, use a determinate indicator. They give users a quick sense of how long an operation will take.</p>
   <div class="progress-warpper">
     <div class="progress-container">
       <div class="progress progress-with-label">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+        <div class="progress-bar progress-bar-animated active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
           <span>75%</span>
         </div>
       </div>
