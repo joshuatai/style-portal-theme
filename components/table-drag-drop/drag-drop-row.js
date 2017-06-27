@@ -23,7 +23,7 @@ var fixHelper = function(e, ui) {
 var draggableTable = $('.table-row-draggable tbody').sortable({
     placeholder: "table-draggable-placeholder",
     cursor: 'move',
-		revert: true,
+		revert: 300,
 		tolerance: "pointer",
     appendTo: ".table-draggable-container",
     helper: fixHelper,
