@@ -1,0 +1,26 @@
+<section class="css-reference">
+  <h5>Buffer indicator</h5>
+  <p>Extend determinate indicator class to create a buffer indicator and put the buffer indicator element before the determinate indicator. Update its' width to indicate the buffered progress.</p>
+  <pre>
+    <style data-selector=".progress-bar.progress-bar-buffered"></style>
+  </pre>
+  <h5>Determinate indicator</h5>
+  <p>Adjust the determinate indicator position.</p>
+  <pre>
+    <style data-selector=".progress-bar-buffered + .progress-bar"></style>
+  </pre>
+</section>
+<section class="progress-buffered-example">
+  <p>Use a buffered progress bar for operations where you want to indicate some activity or loading from the server.</p>
+  <div class="progress-warpper">
+    <div class="progress-container">
+      <div class="progress progress-with-label">
+        <div class="progress-bar progress-bar-buffered" role="progressbar-buffered" aria-bufferednow="0" aria-bufferedmin="0" aria-bufferedmax="100">
+        </div>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <span>0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

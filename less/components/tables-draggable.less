@@ -1,0 +1,38 @@
+.table-row-draggable {
+    .table-draggable-placeholder td {
+        background: #F4F4F4;
+        border-left-color: #F4F4F4;
+        border-right-color: #F4F4F4;
+    }
+    .table-draggable-placeholder td:first-child {
+         border-left-color: #dddddd;
+    }
+    .table-draggable-placeholder td:last-child {
+        border-right-color: #dddddd;
+    }
+    .ui-sortable-handle:hover {
+        td .draggable-indicator {
+            position: relative;
+            &:before {
+                content: '';
+                width: 8px;
+                height: 36px;
+                top: -8px;
+                left: -10px;
+                cursor: move;
+                position: absolute;
+                background-image: url(../images/icon/icon_indicator.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+}
+.ui-sortable-helper {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    background: #cceaf5;
+    cursor: move;
+    td {
+        border: 1px solid #cccccc;
+    }
+}

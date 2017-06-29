@@ -1,0 +1,11 @@
+@keyframes progress-bar-determinate-animation {
+  0% { width: 0%; }
+  17.5% { width: 25%; }
+  35% { width: 50%; }
+  52.5% { width: 75%; }
+  70% { width: 100%; }
+  100% { width: 100%; }
+}
+.indeterminate-determinate-example .progress-bar-determinate.progress-bar-animated {
+  animation: progress-bar-determinate-animation 5s linear 1;
+}

@@ -1,0 +1,25 @@
+@keyframes progress-bar-normal-animation {
+  0% { width: 0%; }
+  20% { width: 20%; }
+  40% { width: 48%; }
+  60% { width: 75%; }
+  85% { width: 100%; }
+  100% { width: 100%; }
+}
+@keyframes progress-bar-buffered-animation {
+  0% { width: 0%; }
+  20% { width: 60%; }
+  40% { width: 70%; }
+  56% { width: 78%; }
+  63% { width: 88%; }
+  66% { width: 90%; }
+  68% { width: 91%; }
+  70% { width: 100%; }
+  100% { width: 100%; }
+}
+.progress-buffered-example .progress-bar:not(.progress-bar-buffered) {
+  animation: progress-bar-normal-animation 7s linear infinite;
+}
+.progress-buffered-example .progress-bar-buffered {
+  animation: progress-bar-buffered-animation 7s linear infinite;
+}

@@ -179,6 +179,53 @@
   right: 0;
 }
 
+// Input icon groups
+
+.input-icon-group {
+  position: relative;
+}
+
+.input-icon-group > .form-control {
+  padding-left: 30px;
+  padding-right: 36px;
+}
+
+.input-icon-label {
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  margin-top: -10px;
+  color: @input-inner-icon-color;
+}
+.input-icon-group .loader,
+.input-icon-group .icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -8px;
+}
+.input-icon-group .icon-cancel {
+  opacity: 0.4;
+}
+.input-icon-group .icon-cancel:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.input-icon-group > .form-control:focus + .input-icon-label > i,
+.input-icon-group > .form-control.input-focus + .input-icon-label > i,
+.input-icon-group > .input-icon-label .focus {
+  transition: all .2s linear 0s;
+  color: @input-inner-icon-focus-color;
+
+  i.fa,
+  span.fa {
+    color: @input-inner-icon-focus-color;
+    transition: color .2s linear;
+  }
+}
+
+
 // Button input groups
 // -------------------------
 .input-group-btn {

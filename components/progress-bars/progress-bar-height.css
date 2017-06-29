@@ -1,0 +1,9 @@
+.progress-bar-height-example {
+  width: 100%;
+}
+.progress-bar-height-example label {
+  margin-top: 10px;
+}
+.progress-bar-height-example label:first-of-type {
+  margin-top: 0;
+}

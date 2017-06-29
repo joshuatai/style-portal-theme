@@ -1,0 +1,22 @@
+{
+  "id": "74b2941d-7ac1-4a9b-bf2d-5e43047ea6f7",
+  "name": "Progress Bar Colors",
+  "keywords": [
+    "progress",
+    "bar",
+    "status"
+  ],
+  "location": "progress-bars/progress-bar-color.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4"
+  }
+}

@@ -1,0 +1,132 @@
+//
+// Icons
+// --------------------------------------------------
+
+.btn {
+  i,
+  span {
+    &.fa {
+      .btn-lg&,
+      .btn-sm&,
+      .btn-xs& {
+        font-size: inherit;
+      }
+    }
+    &.svg {
+      .btn-lg& {
+        width: 24px;
+        height: 24px;
+      }
+      .btn-sm&,
+      .btn-xs& {
+        width: @font-size-small;
+        height: @font-size-small;
+      }
+    }
+  }
+}
+i, span {
+  &.fa {
+      font-size: (@font-size-base + 1);
+      color: #666666;
+  }
+  &.svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.btn-primary,
+.btn-danger {
+  i.fa, span.fa {
+    color: #ffffff;
+  }
+}
+
+
+// Custom icons
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.icon-t-ball {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/tball.svg);
+  background-size: 24px 24px;
+}
+.icon-danger{
+  background-image: url("../images/icon/message_error.svg");
+}
+.icon-warn{
+  background-image: url("../images/icon/message_warn.svg");
+}
+.icon-success{
+  background-image: url("../images/icon/message_check.svg");
+}
+.icon-info{
+  background-image: url("../images/icon/message_info.svg");
+}
+.icon-cancel{
+  background-image: url("../images/icon/close_cancel.svg");
+}
+.icon-info-sign{
+  background-image: url("../images/icon/info.svg");
+}
+.icon-warning-red{
+  background-image: url("../images/icon/warning_red.svg");
+}
+.icon-minus {
+  background-image: url("../images/icon/minus.svg");
+}
+.icon-plus {
+  background-image: url("../images/icon/plus.svg");
+}
+.icon_angledown {
+  background-image: url("../images/icon/angledown.svg");
+}
+.icon_angleup {
+  background-image: url("../images/icon/angleup.svg");
+}
+.icon-modal-close {
+  background-image: url("../images/icon/modal_close.svg");
+}
+.icon-alert {
+  background-image: url("../images/icon/alert.svg");
+}
+.icon-favorite {
+  background-image: url("../images/icon/favorite.svg");
+}
+.icon-user {
+  background-image: url("../images/icon/user.svg");
+}
+.icon-t-ball-white {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjksMTJsMC4zLTAuOGMxLjItMC4zLDMuMi0xLDUuMS0yLjhsMC4xLDBoMUw3LDExLjFsMi4xLDBsLTAuNCwwLjhsLTIuMSwwYzAsMC0xLDEuOS0xLjMsMy4zDQoJCQljLTAuMywxLjUsMCwyLjcsMS40LDMuMWMwLjksMC4zLDEuOSwwLjIsMy4xLTAuMWMyLjctMC44LDUuNS0yLjcsNy42LTUuMWMzLjQtNCwzLjUtOC4xLDAuMi05LjFjLTIuMi0wLjctNS4yLDAuMS04LDEuNw0KCQkJYzMuNS0yLjMsNy40LTMuMywxMC0yLjVjMC41LDAuMiwwLjksMC40LDEuMywwLjZDMTguNywxLjUsMTUuNSwwLDEyLDBDNS40LDAsMCw1LjQsMCwxMmMwLDIuNCwwLjcsNC43LDIsNi42DQoJCQljLTAuNS0xLjItMC40LTIuNywwLjItNC4zYzAsMCwwLDAsMCwwYzAsMCwwLTAuMSwwLTAuMWMwLDAsMC0wLjEsMC0wLjFjMCwwLDAsMCwwLTAuMWMwLjItMC42LDAuNS0xLjEsMC44LTEuNw0KCQkJYzAtMC4xLDAuMS0wLjIsMC4xLTAuM0wxLjksMTJ6IE0yMi4yLDUuNmMwLjgsMi4yLTAuMiw1LjQtMyw4LjdDMTUsMTkuMSw4LjUsMjIsNC41LDIwLjhjLTAuNS0wLjItMC45LTAuNC0xLjMtMC42DQoJCQlDNS40LDIyLjUsOC41LDI0LDEyLDI0YzYuNiwwLDEyLTUuNCwxMi0xMkMyNCw5LjcsMjMuMyw3LjUsMjIuMiw1LjZ6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+) center left no-repeat
+}
+.icon-getting-started {
+  background-image: url("../images/icon/get_start.png");
+}
+.icon-style {
+  background-image: url("../images/icon/basic.png");
+}
+.icon-components {
+  background-image: url("../images/icon/component.png");
+}
+.icon-forms {
+  background-image: url("../images/icon/form.png");
+}
+.icon-charts {
+  background-image: url("../images/icon/chart.png");
+}
+.icon-templates {
+  background-image: url("../images/icon/template.png");
+}
+.icon-sortAscending {
+  background-image: url("../images/icon/icon_thSortAscending.svg");
+}
+.icon_sortDescending {
+  background-image: url("../images/icon/icon_thSortDescending.svg");
+}
+
+

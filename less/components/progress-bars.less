@@ -1,0 +1,195 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-animated {
+  0% {
+    width: 0%;
+    .opacity(.3);
+  }
+  20% {
+    width: 40%;
+  }
+  30% {
+    width: 45%;
+  }
+  40% {
+    width: 55%;
+  }
+  50% {
+    width: 68%;
+  }
+  65% {
+    .opacity(.3);
+  }
+  100% {
+    width: 100%;
+    .opacity(0);
+  }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-animated {
+  0% {
+    width: 0%;
+    .opacity(.3);
+  }
+  20% {
+    width: 40%;
+  }
+  30% {
+    width: 45%;
+  }
+  40% {
+    width: 55%;
+  }
+  50% {
+    width: 68%;
+  }
+  65% {
+    .opacity(.3);
+  }
+  100% {
+    width: 100%;
+    .opacity(0);
+  }
+}
+
+// WebKit
+@-webkit-keyframes progress-bar-indeterminate {
+  0%  {
+    width: 20%;
+    margin-left: 0%;
+  }
+  80% {
+    width: 35%;
+    margin-left: 65%;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-indeterminate {
+  0%  {
+    width: 20%;
+    margin-left: 0%;
+  }
+  80% {
+    width: 35%;
+    margin-left: 65%;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  // overflow: hidden;
+  height: @progress-height;
+  //margin-bottom: @line-height-computed;
+  background-color: @progress-bg;
+  position: relative;
+  // border-radius: @progress-border-radius;
+  // .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  &.progress-with-label {
+    margin-right: 40px;
+  }
+  &.progress-small {
+    height: @progress-small-height;
+  }
+  &.progress-medium {
+    height: @progress-medium-height;
+  }
+  &.progress-large {
+    height: @progress-large-height;
+  }
+}
+
+// Bar of progress
+.progress-bar {
+  // float: left;
+  width: 0%;
+  height: 100%;
+  // font-size: @font-size-small;
+  line-height: @progress-height;
+  color: @progress-bar-color;
+  //text-align: center;
+  background-color: @progress-bar-bg;
+  // .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+  .transition(width .6s ease);
+  .progress-with-label & {
+    span {
+      position: absolute;
+      right: -40px;
+    }
+  }
+  &.progress-bar-buffered {
+    background-color: @progress-bar-buffered-bg;
+  }
+  .progress-bar-buffered + & {
+    margin-top: -8px;
+  }
+  &.progress-bar-indeterminate {
+    width: 20%;
+    .animation(progress-bar-indeterminate 1.5s linear infinite);
+  }
+}
+
+// Animated bar effect
+.progress-animated .progress-bar,
+.progress-bar-animated {
+  &:before {
+    height: 100%;
+    float: left;
+    position: relative;
+    display: block;
+    content: '';
+    background: #ffffff;
+    .opacity(.3);
+  }
+}
+// Call animation for the active one
+//
+// `.progress.active .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar.active` approach.
+.progress.active .progress-bar,
+.progress-bar.active {
+  &:before {
+    .animation(progress-bar-animated 1.5s linear infinite);
+  }
+}
+
+
+// Variations
+// -------------------------
+
+// .progress-bar-success {
+//   .progress-bar-variant(@progress-bar-success-bg);
+// }
+
+.progress-bar-info {
+  background-color: @progress-bar-info-bg;
+}
+
+// .progress-bar-warning {
+//   .progress-bar-variant(@progress-bar-warning-bg);
+// }
+
+.progress-bar-danger {
+  background-color: @progress-bar-danger-bg;
+}
