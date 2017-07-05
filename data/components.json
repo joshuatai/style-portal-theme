@@ -289,7 +289,15 @@
       "6e769613-f9d9-4481-82b8-a49dc240866e",
       "35cde4ef-16a8-42f8-bffd-f990b9091d23",
       "74b2941d-7ac1-4a9b-bf2d-5e43047ea6f7"
-    ]
+    ],
+    "css": {
+      "name": "progress-bars",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/progress-bars"
+      ]
+    }
   },
   {
     "id": "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
