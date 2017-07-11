@@ -139,7 +139,7 @@ $.tokenize.prototype.tokenAdd = function(value, text, first) {
 
 var close_btn = '<span class="icon icon-cancel"></span>';
 var token = $('[data-token-field=token]', this);
-var $dropdowns = null;
+
 token.tokenize({
     displayDropdownOnFocus: true,
     placeholder: "Select...",
@@ -166,7 +166,7 @@ $('[data-token-field=initialize]', this).each(function() {
   $('.Placeholder').addClass('placeholder');
   $('.Tokenize').addClass('tokenize');
   $('.TokensContainer').addClass('tag-editor');
-  $dropdowns = $('.Dropdown').addClass('dropdown-menu').hide();
+  $('.Dropdown').addClass('dropdown-menu').hide();
 
 
   $('.tag-editor').find(".Token a ").html(close_btn);
