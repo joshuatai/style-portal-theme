@@ -1,5 +1,5 @@
 //Add a customize code at original search function.
-$.tokenize.prototype.search = function(){
+$.tokenize.prototype.search = function() {
     var $this = this;
     var count = 1;
 
@@ -73,13 +73,78 @@ $.tokenize.prototype.search = function(){
     }
 }
 
+$.tokenize.prototype.tokenAdd = function(value, text, first) {
+    value = this.escape(value).trim();
+
+    if(value == undefined || value == ''){
+        return this;
+    }
+
+    text = text || value;
+    first = first || false;
+
+    if(this.options.maxElements > 0 && $('li.Token', this.tokensContainer).length >= this.options.maxElements){
+        this.resetSearchInput();
+        return this;
+    }
+
+    var $this = this;
+    var close_btn = $('<a />')
+        .addClass('Close')
+        .html("&#215;")
+        .on('click', function(e){
+            e.stopImmediatePropagation();
+            $this.tokenRemove(value);
+        });
+
+    if($('option[value="' + value + '"]', this.select).length){
+        if(!first && ($('option[value="' + value + '"]', this.select).attr('selected') === true ||
+            $('option[value="' + value + '"]', this.select).prop('selected') === true)){
+            this.options.onDuplicateToken(value, text, this);
+        }
+        $('option[value="' + value + '"]', this.select).attr('selected', true).prop('selected', true);
+    } else if(this.options.newElements || (!this.options.newElements && $('li[data-value="' + value + '"]', this.dropdown).length > 0)) {
+        var option = $('<option />')
+            .attr('selected', true)
+            .attr('value', value)
+            .attr('data-type', 'custom')
+            .prop('selected', true)
+            .html(text);
+        this.select.append(option);
+    } else {
+        this.resetSearchInput();
+        return this;
+    }
+
+    if($('li.Token[data-value="' + value + '"]', this.tokensContainer).length > 0) {
+        return this;
+    }
+
+    $('<li />')
+        .addClass('Token')
+        .attr('data-value', value)
+        .append('<span>' + text + '</span>')
+        .prepend(close_btn)
+        .insertBefore(this.searchToken);
+
+    if(!first){
+        this.options.onAddToken(value, text, this);
+    }
+    this.updateOrder();
+    this.search();
+    this.updatePlaceholder();
+    return this;
+
+}
+
 var close_btn = '<span class="icon icon-cancel"></span>';
 var token = $('[data-token-field=token]', this);
+var $dropdowns = null;
 token.tokenize({
     displayDropdownOnFocus: true,
     placeholder: "Select...",
     newElements: false,
-    onAddToken: function(value, text, first){
+    onAddToken: function(value, text, first) {
       $('.tokenize > .icon-cancel').show();
       $('.tag-editor').find(".Token a ").html(close_btn);
     },
@@ -92,6 +157,7 @@ token.tokenize({
       o.dropdown.append("<li class=\"no-matches\">No matches found.</li>").show();
     }
 });
+
 if (token.length > 0) {
   $(this).parent().addClass("overflow");
 }
@@ -100,7 +166,7 @@ $('[data-token-field=initialize]', this).each(function() {
   $('.Placeholder').addClass('placeholder');
   $('.Tokenize').addClass('tokenize');
   $('.TokensContainer').addClass('tag-editor');
-  $('.Dropdown').addClass('dropdown-menu');
+  $dropdowns = $('.Dropdown').addClass('dropdown-menu').hide();
 
 
   $('.tag-editor').find(".Token a ").html(close_btn);
