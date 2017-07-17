@@ -168,7 +168,7 @@ output {
   &[readonly],
   fieldset[disabled] & {
     background-color: @input-bg-disabled;
-    opacity: 0.4; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    opacity: 0.5; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
   }
 
   &[disabled],
@@ -256,7 +256,7 @@ form {
   .icon-info-sign{
     vertical-align: top;
     margin-left: 12px;
-    opacity: 0.4;
+    opacity: 0.5;
   }
   .icon-info-sign:hover{
     opacity: 1;
@@ -341,7 +341,7 @@ input[type="checkbox"] {
   &.disabled,
   fieldset[disabled] & {
     label {
-      opacity: 0.4;
+      opacity: 0.5;
       cursor: @cursor-disabled;
     }
   }
