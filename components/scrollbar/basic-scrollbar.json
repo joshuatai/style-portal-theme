@@ -1,0 +1,22 @@
+{
+  "id": "aa8b7cdb-389a-4ac4-a32d-451745bc15b0",
+  "name": "Basic Scroll Bars",
+  "keywords": [
+    "scroll bar"
+  ],
+  "location": "scrollbar/basic-scrollbar.html",
+  "dependencies": [
+    "mcustom-scrollbar-3.1.5"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-8"
+  }
+}

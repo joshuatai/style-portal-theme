@@ -916,5 +916,20 @@
     "css": {
       "name": "tabs-and-side-menu"
     }
+  },
+  {
+    "id": "5d7725aa-ff52-4035-95d6-8220342da195",
+    "name": "Scroll Bars",
+    "keywords": [
+      "scroll bar",
+      "hidden scroll bar"
+    ],
+    "segments": [
+      "aa8b7cdb-389a-4ac4-a32d-451745bc15b0",
+      "23c3e47a-96b7-42ae-ac80-4325103352d9"
+    ],
+    "css": {
+      "name": "scrollbar"
+    }
   }
 ]

@@ -1,0 +1,17 @@
+.hidden-scrollbar-example-container {
+    height: 340px;
+    border: 1px solid #cccccc;
+    display: flex;
+}
+.hidden-scrollbar-example-container .hidden-scrollbar {
+    overflow-y: auto;
+    width: 281px;
+}
+
+.hidden-scrollbar-example-container .hidden-scrollbar-text {
+    flex: 1;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+    line-height: 340px;
+}

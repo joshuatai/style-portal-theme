@@ -3,40 +3,55 @@
 // --------------------------------------------------
 
 .mCSB_inside > .mCSB_container {
-	margin-right: 8px;
+	margin-right: 0;
 }
 
+.mCS-autoHide {
+  &:hover {
+    > .mCustomScrollBox {
+      .mCSB_scrollTools {
+        opacity: 1;
+      }
+    }
+  }
+  > .mCustomScrollBox {
+    .mCSB_scrollTools {
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+
 .mCSB_scrollTools {
-	width: 8px;
+  width: 8px;
+  opacity: 1;
 
   .mCSB_draggerRail {
     width: 8px;
     border-radius: 0;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
   }
   
   .mCSB_dragger .mCSB_dragger_bar {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .3); 
     border: 1px solid rgba(0, 0, 0, .15);
     width: 8px;
     border-radius: 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
   }
 
   .mCSB_dragger .mCSB_dragger_bar:hover {
-    background-color: rgba(0, 0, 0, .35);
-    border: 1px solid rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .45);
+    border: 1px solid rgba(0, 0, 0, .3);
   }
 
   .mCSB_dragger:active .mCSB_dragger_bar,
   .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-    background-color: rgba(0, 0, 0, .35);
-    border: 1px solid rgba(0, 0, 0, .25);
-  }
-}
-
-.mCustomScrollbar-box-hover,
-.mCustomScrollbar-dragger-hover {
-  .mCSB_draggerRail {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, .45);
+    border: 1px solid rgba(0, 0, 0, .3);
   }
 }
 
