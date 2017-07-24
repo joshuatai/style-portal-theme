@@ -13,6 +13,14 @@
 	<pre data-title=":hover">
 		<style data-selector=".mCustomScrollbar-dragger-hover .mCSB_draggerContainer:hover .mCSB_draggerRail"></style>
 	</pre>
+
+	<h5>Hidden Scroll bar container</h5>
+	<pre>
+		<style data-selector=".mCS-autoHide > .mCustomScrollBox .mCSB_scrollTools"></style>
+	</pre>
+	<pre data-title=":hover">
+		<style data-selector=".mCS-autoHide:hover > .mCustomScrollBox .mCSB_scrollTools">Change the opacity property when  cursor hovers over a scrollable area.</style>
+	</pre>
 </section>
 
 
@@ -25,8 +33,9 @@
 	</ul>
 
 	<div class="example">
-        <h6>Basic scroll bar for a drop-down menu</h6>
+        
 		<div class="basic-scrollbar-example-container">
+			<h6>Basic scroll bar for a drop-down menu</h6>
 			<div class="dropdown dropdown-filter open">
 				<button class="btn btn-border dropdown-toggle" type="button">
 					<span class="caret"></span>Sample
@@ -57,6 +66,16 @@
 					</div>
 				</div>
 				</div>
+		</div>
+
+		<div class="hidden-scrollable-example">
+			<h6>Hidden scroll bar for a tree view component</h6>
+			<div class="hidden-scrollable-container">
+				<div class="hidden-scrollable mCustomScrollbar mCustomScrollbar-dragger-hover">
+					<div class="placeholder" data-type="image" data-src="images/scrollbar_img1_treeview.png"></div>
+				</div>
+				<div class="hidden-scrollbar-text">Please hover your mouse over the tree view example to see how the hidden scroll bar is presented on the UI.</div>
+			</div>
 		</div>
 	</div>
 </section>
