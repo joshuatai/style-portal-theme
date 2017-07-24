@@ -1,0 +1,69 @@
+<section class="tables-advanced-example">
+	<p>Entries within a column can be sorted by clicking their column header.</p>
+	<ul>
+		<li>The first click should sort entries in descending order, and the second click in ascending order.</li>
+		<li>When such headers are hovered over, display a pointer and show the header in another color to indicate sortability.</li>
+	</ul>
+	<table class="table table-bordered table-hover table-sortable">
+		<thead>
+			<tr>
+				<th class="sortabled th-action">
+                    Deployment Plan
+                    <span class="icon icon_sortDescending"></span>
+                    <div class="table-row-actions" role="group">
+						<div class="table-row-actions" role="group">
+							<button class="btn-table-row-action dropdown-toggle" data-toggle="dropdown">
+								<span class="fa fa-ellipsis-v"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="javascript:;">Delete</a></li>
+								<li><a href="javascript:;">Copy</a></li>
+							</ul>
+						</div>
+					</div>
+                </th>
+				<th>Type</th>
+				<th class="sortabled th-action">
+                    Appliance
+                    <span class="icon icon_sortDescending"></span>
+                    <div class="table-row-actions" role="group">
+						<div class="table-row-actions" role="group">
+							<button class="btn-table-row-action dropdown-toggle" data-toggle="dropdown">
+								<span class="fa fa-ellipsis-v"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li><a href="javascript:;">Delete</a></li>
+								<li><a href="javascript:;">Copy</a></li>
+							</ul>
+						</div>
+					</div>
+                </th>
+				<th>Deployed</th>
+				<th>Creator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>29</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+			<tr>
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td>12</td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>
+				<td>8</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

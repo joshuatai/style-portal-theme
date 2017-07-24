@@ -1,0 +1,29 @@
+{
+  "id": "a318cffd-dfd8-474f-8431-8b3f668da1c4",
+  "name": "Multiple Sortable Entries",
+  "keywords": [
+    "ascending",
+    "descending",
+    "grids",
+    "ranking",
+    "reorder",
+    "sortable",
+    "sorting",
+    "tables",
+    "multi sortable",
+    "multi sorting"
+  ],
+  "location": "table-advanced/multi-sortable.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-5"
+  }
+}

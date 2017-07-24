@@ -31,3 +31,17 @@
 	position: absolute;
 	z-index: 1070;
 }
+
+
+.tables-advanced-example .sortabled .table-row-actions {
+	float: right;
+	margin-top: 1px;
+	display: none;
+}
+.tables-advanced-example .sortabled:hover .table-row-actions {
+	display: block;
+}
+.tables-advanced-example .sortabled .table-row-actions .btn-table-row-action {
+	width: 16px;
+	height: 16px;
+}
