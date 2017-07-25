@@ -6,12 +6,30 @@
     background-color: #e6e6e6;;
     cursor: pointer;
   }
-  .sortabled{
+  .sortabled {
     overflow: visible;
     color: #222;
     .icon_sortDescending {
       vertical-align: top;
       margin-top: 1px;
+    }
+    .table-row-actions {
+      float: right;
+      display: none;
+      .dropdown-toggle  {
+        .caret {
+          margin: 0;
+        }
+        &.btn {
+          padding-left: 3px;
+	        padding-right: 3px;
+        }
+      }
+    }
+    &:hover {
+      .table-row-actions {
+        display: block;
+      }
     }
   }
 }
