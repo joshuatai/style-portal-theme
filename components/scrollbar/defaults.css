@@ -17,5 +17,8 @@
     text-align: center;
     color: #999999;
     font-size: 13px;
-    line-height: 340px;
+    padding: 159px 56px;
+}
+.general-scrollbar-example .hidden-scrollable-container .hidden-scrollbar-text > span {
+    line-height: 20px
 }
