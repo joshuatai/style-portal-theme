@@ -7,16 +7,35 @@
     cursor: pointer;
   }
   .sortabled {
-    overflow: visible;
     color: #222;
     .icon-sortDescending,
     .icon-sortAscending {
       vertical-align: top;
       margin-top: 1px;
+      + .sort-priority {
+        display: inline-block;
+        font-size: 11px;
+        color: #222;
+        font-weight: normal;
+        -webkit-transform: scale(0.91);
+        line-height: 0;
+        position: relative;
+        vertical-align: super;
+        left: -4px;
+      }
+    }
+  }
+  .multi-sortable {
+    overflow: visible;
+    > div {
+      position: relative;
     }
     .table-row-actions {
-      float: right;
-      //display: none;
+      position: absolute;
+      line-height: 0;
+      right: -12px;
+      bottom: -8px;
+      display: none;
       .dropdown-toggle  {
         .caret {
           margin: 0;
@@ -24,6 +43,27 @@
         &.btn {
           padding-left: 3px;
 	        padding-right: 3px;
+        }
+      }
+      .dropdown-menu {
+        li a {
+          padding: 4px 32px 4px 40px;
+        }
+        li.descending a:before,
+        li.ascending a:before {
+          background-repeat: no-repeat;
+          content: "";
+          display: inline-block;
+          height: 20px;
+          margin: 0 8px 0 -24px;
+          vertical-align: top;
+          width: 16px;
+        }
+        li.descending a:before {
+            background-image: url(../images/icon/icon_thSortDescending.svg);
+        }
+        li.ascending a:before {
+            background-image: url(../images/icon/icon_thSortAscending.svg);
         }
       }
     }
