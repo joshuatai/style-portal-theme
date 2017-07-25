@@ -1,32 +1,24 @@
 <section class="tables-advanced-example">
-	<p>Entries within a column can be sorted by clicking their column header.</p>
+	<p>When two or more entries contain the same value after sorting a table based on one column, users can sort the entries again based on another column.</p>
 	<ul>
-		<li>The first click should sort entries in descending order, and the second click in ascending order.</li>
-		<li>When such headers are hovered over, display a pointer and show the header in another color to indicate sortability.</li>
+		<li>When a table is sorted based on more than one column, display a number in the column header to indicate the sorting priority.</li>
+		<li>Press CTRL+click on a column header to specify a second sorting criteria.</li>
 	</ul>
 	<table class="table table-bordered table-hover table-sortable">
 		<thead>
 			<tr>
-				<th class="sortabled th-action">
+				<th class="sortabled">
                     Deployment Plan
-					<span class="icon icon_sortDescending"></span>
-					<sup>1</sup>
-                    <div class="table-row-actions" role="group">
-						<div class="table-row-actions" role="group">
-							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu pull-right">
-								<li><a href="javascript:;">Delete</a></li>
-								<li><a href="javascript:;">Copy</a></li>
-							</ul>
-						</div>
-					</div>
+					<span class="icon icon-sortAscending"></span>
+					<sup class="sort-priority">2</sup>
                 </th>
-				<th>Type</th>
-				<th class="sortabled th-action">
+				<th class="sortabled">
+					Type
+					<span class="icon icon-sortDescending"></span>
+					<sup class="sort-priority">1</sup>
+				</th>
+				<th class="sortabled">
                     Appliance
-                    <span class="icon icon_sortDescending"></span>
                     <div class="table-row-actions" role="group">
 						<div class="table-row-actions" role="group">
 							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
@@ -45,25 +37,25 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>TW_Patch_01_DDI</td>
-				<td>Firmware</td>
-				<td>29</td>
-				<td>2016-04-17 21:20:18</td>
-				<td>Operator</td>
+				<td>JP_VA Image_DDEI</td>
+				<td>Virtual Analyzer image</td>
+				<td>30</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
 			</tr>
 			<tr>
-				<td>Hotfix_DDI_01</td>
+				<td>TW_VA Image_DDAN</td>
 				<td>Virtual Analyzer image</td>
-				<td>12</td>
+				<td>22</td>
 				<td>2016-04-18 23:17:20</td>
 				<td>Administrator</td>
 			</tr>
 			<tr>
-				<td>Hotfix_DDEI</td>
-				<td>Hotfix</td>
-				<td>8</td>
-				<td>2016-06-02 23:15:00</td>
-				<td>Administrator</td>
+				<td>CN_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>16</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
 			</tr>
 		</tbody>
 	</table>
