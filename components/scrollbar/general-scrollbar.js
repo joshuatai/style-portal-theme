@@ -1,4 +1,4 @@
-$('.dropdown-menu-scrollable', this).mCustomScrollbar();
+$('.general-scrollable', this).mCustomScrollbar();
 
 
 $('.hidden-scrollabler', this).mCustomScrollbar({
