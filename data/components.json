@@ -809,12 +809,14 @@
     "name": "Advanced Tables",
     "keywords": [
       "sortable table",
+      "multiple sortable table",
       "resize columns table",
       "toolbar table",
       "table"
     ],
     "segments": [
       "e26756ec-9811-4429-8435-6fb6f24c4e95",
+      "a318cffd-dfd8-474f-8431-8b3f668da1c4",
       "8f8315e8-d95a-4cef-92bd-dcb90f28f3ea",
       "f72b3eed-f984-4a53-9e8e-3e87cfc2c1df",
       "27557042-0d0f-41f9-a1a2-2092af954d7f"
