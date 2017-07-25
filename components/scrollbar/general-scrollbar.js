@@ -1,6 +1,6 @@
-$('.general-scrollable', this).mCustomScrollbar();
+$('.general-scrollable').mCustomScrollbar();
 
 
-$('.hidden-scrollabler', this).mCustomScrollbar({
+$('.hidden-scrollable').mCustomScrollbar({
     autoHideScrollbar: true
 });
