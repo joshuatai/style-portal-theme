@@ -1,3 +1,4 @@
+// Display dropdown when mouse hovers over the table thead th
 $(".multi-sortable").hover(
     function (){
         var sortdropDown = $(this).find(".table-sort-actions");
