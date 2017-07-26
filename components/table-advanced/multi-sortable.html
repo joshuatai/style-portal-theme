@@ -3,42 +3,39 @@
 	<pre>
 		<style data-selector=".table-sortable .multi-sortable"></style>
 	</pre>
-	<h5>Sortable container</h5>
-	<p>Wrap the table cells text, icon and drop-down within an <code data-tag="div"></code> element.</p>
+	<h5>Sortable entry container</h5>
+	<p>Wrap the text, icon, and drop-down of a table cell within a <code data-tag="div"></code> element.</p>
 	<pre>
 		<style data-selector=".table-sortable .multi-sortable > div"></style>
 	</pre>
-	<h5>Sort priority number class</h5>
-	<p>Use an inline-block level element to wrap a priority number after sort icon.</p>
+	<h5>Sorting priority number class</h5>
+	<p>Use an inline-block level element to wrap a priority number after the sort icon.</p>
 	<pre>
 		<style data-selector=".table-sortable .sortabled .icon-sortAscending + .sort-priority"> .sort-icon + .priority-number </style>
 	</pre>
 	<h5>Drop-down class</h5>
-	<p>Wrap the drop-down toggle and the drop-down menu within an <code data-tag="div"></code> element.</p>
+	<p>Wrap the drop-down toggle and the drop-down menu within a <code data-tag="div"></code> element.</p>
 	<pre>
-		<style data-selector=".table-sortable .multi-sortable .table-row-actions"></style>
-	</pre>
-	<pre data-title=":hover">
-		<style data-selector=".table-sortable .multi-sortable:hover .table-row-actions">Show drop-down when cursor hovers over the table header cells.</style>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions"></style>
 	</pre>
 	<h5>Drop-down toggle class</h5>
 	<pre>
-		<style data-selector=".table-sortable .multi-sortable .table-row-actions .dropdown-toggle.btn"></style>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-toggle.btn"></style>
 	</pre>
 	<h5>Caret</h5>
 	<pre>
-		<style data-selector=".table-sortable .multi-sortable .table-row-actions .dropdown-toggle .caret"></style>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-toggle .caret"></style>
 	</pre>
 	<h5>Drop-down menu items</h5>
 	<p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
 	<pre data-title="Replace default inner spacing">
-		<style data-selector=".table-sortable .multi-sortable .table-row-actions .dropdown-menu li a"></style>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-menu li a"></style>
 	</pre>
 	<pre data-title="Sort items">
-		<style data-selector=".table-sortable .multi-sortable .table-row-actions .dropdown-menu li.descending a:before">Displays the icon before sort items. For example, descending item.</style>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-menu li.descending a:before">Displays the icon before sort items. For example, descending item.</style>
 	</pre>
 	<h5>Disabled drop-down menu items</h5>
-	<p>About the disabled items style and state, please refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
+	<p>For information about disabled drop-down menu item style and state, see <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
   </pre>
 </section>
 
@@ -47,27 +44,26 @@
 	<ul>
 		<li>When a table is sorted based on more than one column, display a number (as superscript) in the column header to indicate the sorting priority.</li>
 		<li>To indicate that a table column is sortable, do the following when the cursor hovers over the column header: display a drop-down icon, display a pointer, and change the header color.</li>
-		<li>Users can select the sort a column by clicking the column header or selecting the sorting criteria from the drop-down list.</li>
+		<li>Users can sort a column by clicking the column header or selecting the sorting criteria from the drop-down list.</li>
 		<li>For a sorted column, click the column header to change the sorting direction (for example, from ascending sort to descending sort).</li>
 		<li>Press CTRL+click on a column header to specify a second sorting criteria.</li>
 	</ul>
-	<table class="table table-bordered table-hover table-sortable">
+	<table class="table table-bordered table-hover table-sortable table-multi-sortable ">
 		<thead>
 			<tr>
 				<th class="multi-sortable sortabled">
 					<div>
 						<div>
-							Deployment Plan
-							<span class="icon icon-sortAscending"></span>
+							Deployment Plan<span class="icon icon-sortAscending"></span>
 							<span class="sort-priority">2</span>
 						</div>
-						<div class="table-row-actions" role="group">
+						<div class="table-sort-actions" role="group">
 							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu pull-right">
-								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li><a href="javascript:;">No sorting</a></li>
 							</ul>
 						</div>
@@ -76,17 +72,16 @@
 				<th class="multi-sortable sortabled">
 					<div>
 						<div>
-							Type
-							<span class="icon icon-sortDescending"></span>
+							Type<span class="icon icon-sortDescending"></span>
 							<span class="sort-priority">1</span>
 						</div>
-						<div class="table-row-actions" role="group">
+						<div class="table-sort-actions" role="group">
 							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu pull-right">
-								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li><a href="javascript:;">No sorting</a></li>
 							</ul>
 						</div>
@@ -95,13 +90,13 @@
 				<th class="multi-sortable">
 					<div>
 						Appliance
-						<div class="table-row-actions" role="group">
+						<div class="table-sort-actions" role="group">
 							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu pull-right">
-								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="disabled"><a href="javascript:;">No sorting</a></li>
 							</ul>
 						</div>
@@ -110,13 +105,13 @@
 				<th class="multi-sortable">
 					<div>
 						Deployed
-						<div class="table-row-actions" role="group">
+						<div class="table-sort-actions" role="group">
 							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu pull-right">
-								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="disabled"><a href="javascript:;">No sorting</a></li>
 							</ul>
 						</div>
@@ -125,13 +120,13 @@
 				<th class="multi-sortable">
 					<div>
 						Creator
-						<div class="table-row-actions" role="group">
+						<div class="table-sort-actions" role="group">
 							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu pull-right">
-								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
 								<li class="disabled"><a href="javascript:;">No sorting</a></li>
 							</ul>
 						</div>
