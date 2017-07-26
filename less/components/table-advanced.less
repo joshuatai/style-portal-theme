@@ -30,17 +30,20 @@
     > div {
       position: relative;
     }
-    .table-row-actions {
+    .table-sort-actions {
       position: absolute;
       line-height: 0;
       right: -12px;
       bottom: -8px;
-      display: none;
       .dropdown-toggle  {
         .caret {
           margin: 0;
         }
         &.btn {
+          display: none;
+          &:focus {
+            display: block;
+          }
           padding-left: 3px;
 	        padding-right: 3px;
         }
@@ -68,7 +71,7 @@
       }
     }
     &:hover {
-      .table-row-actions {
+      .dropdown-toggle.btn  {
         display: block;
       }
     }
