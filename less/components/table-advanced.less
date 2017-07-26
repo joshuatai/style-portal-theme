@@ -35,15 +35,15 @@
       line-height: 0;
       right: -12px;
       bottom: -8px;
-      display: none;
-      &.show {
-        display: block;
-      }
       .dropdown-toggle  {
         .caret {
           margin: 0;
         }
         &.btn {
+          display: none;
+          &:focus {
+            display: block;
+          }
           padding-left: 3px;
 	        padding-right: 3px;
         }
@@ -68,6 +68,11 @@
         li.ascending a:before {
             background-image: url(../images/icon/icon_thSortAscending.svg);
         }
+      }
+    }
+    &:hover {
+      .dropdown-toggle.btn  {
+        display: block;
       }
     }
   }
