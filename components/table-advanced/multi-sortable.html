@@ -1,0 +1,164 @@
+<section class="css-reference">
+	<h5>Table header cells with drop-down</h5>
+	<pre>
+		<style data-selector=".table-sortable .multi-sortable"></style>
+	</pre>
+	<h5>Sortable entry container</h5>
+	<p>Wrap the text, icon, and drop-down of a table cell within a <code data-tag="div"></code> element.</p>
+	<pre>
+		<style data-selector=".table-sortable .multi-sortable > div"></style>
+	</pre>
+	<h5>Sorting priority number class</h5>
+	<p>Use an inline-block level element to wrap a priority number after the sort icon.</p>
+	<pre>
+		<style data-selector=".table-sortable .sortabled .icon-sortAscending + .sort-priority"> .sort-icon + .priority-number </style>
+	</pre>
+	<h5>Drop-down class</h5>
+	<p>Wrap the drop-down toggle and the drop-down menu within a <code data-tag="div"></code> element.</p>
+	<pre>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions"></style>
+	</pre>
+	<h5>Drop-down toggle class</h5>
+	<pre>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-toggle.btn"></style>
+	</pre>
+	<pre data-title=":hover, :focus">
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-toggle.btn:focus">Show drop-down toggle when cursor hovers over the table header cells. </style>
+	</pre>
+	<h5>Caret</h5>
+	<pre>
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-toggle .caret"></style>
+	</pre>
+	<h5>Drop-down menu items</h5>
+	<p>Use <code data-tag="a"></code> options under <code data-tag="li"></code> elements.</p>
+	<pre data-title="Replace default inner spacing">
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-menu li a"></style>
+	</pre>
+	<pre data-title="Sort items">
+		<style data-selector=".table-sortable .multi-sortable .table-sort-actions .dropdown-menu li.descending a:before">Displays the icon before sort items. For example, descending item.</style>
+	</pre>
+	<h5>Disabled drop-down menu items</h5>
+	<p>For information about disabled drop-down menu item style and state, see <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
+  </pre>
+</section>
+
+<section class="tables-advanced-example">
+	<p>When two or more entries contain the same value after sorting a table based on one column, users can sort the entries again based on another column.</p>
+	<ul>
+		<li>When a table is sorted based on more than one column, display a number (as superscript) in the column header to indicate the sorting priority.</li>
+		<li>To indicate that a table column is sortable, do the following when the cursor hovers over the column header: display a drop-down icon, display a pointer, and change the header color.</li>
+		<li>Users can sort a column by clicking the column header or selecting the sorting criteria from the drop-down list.</li>
+		<li>For a sorted column, click the column header to change the sorting direction (for example, from ascending sort to descending sort).</li>
+		<li>Press CTRL+click on a column header to specify a second sorting criteria.</li>
+	</ul>
+	<table class="table table-bordered table-hover table-sortable">
+		<thead>
+			<tr>
+				<th class="multi-sortable sortabled">
+					<div>
+						<div>
+							Deployment Plan<span class="icon icon-sortAscending"></span>
+							<span class="sort-priority">2</span>
+						</div>
+						<div class="table-sort-actions" role="group">
+							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
+								<li><a href="javascript:;">No sorting</a></li>
+							</ul>
+						</div>
+					</div>
+                </th>
+				<th class="multi-sortable sortabled">
+					<div>
+						<div>
+							Type<span class="icon icon-sortDescending"></span>
+							<span class="sort-priority">1</span>
+						</div>
+						<div class="table-sort-actions" role="group">
+							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
+								<li><a href="javascript:;">No sorting</a></li>
+							</ul>
+						</div>
+					</div>
+				</th>
+				<th class="multi-sortable">
+					<div>
+						Appliance
+						<div class="table-sort-actions" role="group">
+							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
+								<li class="disabled"><a href="javascript:;">No sorting</a></li>
+							</ul>
+						</div>
+					<div>
+				</th>
+				<th class="multi-sortable">
+					<div>
+						Deployed
+						<div class="table-sort-actions" role="group">
+							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
+								<li class="disabled"><a href="javascript:;">No sorting</a></li>
+							</ul>
+						</div>
+					</div>
+				</th>
+				<th class="multi-sortable">
+					<div>
+						Creator
+						<div class="table-sort-actions" role="group">
+							<button class="btn btn-border dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li class="ascending"><a href="javascript:;">Ascending sort</a></li>
+								<li class="descending"><a href="javascript:;">Descending sort</a></li>
+								<li class="disabled"><a href="javascript:;">No sorting</a></li>
+							</ul>
+						</div>
+					</div>
+                </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>JP_VA Image_DDEI</td>
+				<td>Virtual Analyzer image</td>
+				<td>30</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td>TW_VA Image_DDAN</td>
+				<td>Virtual Analyzer image</td>
+				<td>22</td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td>CN_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>16</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

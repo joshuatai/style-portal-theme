@@ -1,0 +1,16 @@
+{
+  "id": "5262fb53-b9b6-4786-bc1c-08a128bd9c5f",
+  "name": "Introduction",
+  "keywords": [
+    "icons",
+    "introduction"
+  ],
+  "location": "icons/introduction.html",
+  "dependencies": [],
+  "actions": [],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-10"
+  }
+}
