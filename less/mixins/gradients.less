@@ -56,4 +56,13 @@
     background-image: -o-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
     background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
   }
+
+  .horizontal-six-colors(@start-color: rgba(255, 255, 255, 1) 0%; @second-color: rgba(255, 255, 255, .8) 20%; @third-color: rgba(255, 255, 255, .6) 40%; @four-color: rgba(255, 255, 255, .4) 60%; @five-color: rgba(255, 255, 255, .2) 80%; @end-color: rgba(255, 255, 255, 0) 100%;) {
+    background: -webkit-linear-gradient(left, @start-color, @second-color, @third-color, @four-color, @five-color, @end-color); // Safari 5.1-6, Chrome 10+
+    background: -o-linear-gradient(left, @start-color, @second-color, @third-color, @four-color, @five-color, @end-color); // Opera 12
+    background: linear-gradient(to right, @start-color, @second-color, @third-color, @four-color, @five-color, @end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    //filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+  }
+
 }

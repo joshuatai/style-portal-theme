@@ -1,0 +1,16 @@
+{
+  "id": "d86e5c89-f05a-4198-9a72-6d8a401aaf87",
+  "name": "Design Details",
+  "keywords": [
+    "icons",
+    "design"
+  ],
+  "location": "icons/design-details.html",
+  "dependencies": [],
+  "actions": [],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-23 row-xl-22"
+  }
+}

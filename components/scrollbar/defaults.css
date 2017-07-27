@@ -1,0 +1,24 @@
+.general-scrollbar-example .hidden-scrollable-example {
+    margin-top: 230px;
+}
+
+.general-scrollbar-example .hidden-scrollable-container {
+    height: 340px;
+    border: 1px solid #cccccc;
+    display: flex;
+}
+.general-scrollbar-example .hidden-scrollable-container .hidden-scrollable {
+    overflow-y: auto;
+    width: 281px;
+}
+
+.general-scrollbar-example .hidden-scrollable-container .hidden-scrollbar-text {
+    flex: 1;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+    padding: 159px 56px;
+}
+.general-scrollbar-example .hidden-scrollable-container .hidden-scrollbar-text > span {
+    line-height: 20px
+}

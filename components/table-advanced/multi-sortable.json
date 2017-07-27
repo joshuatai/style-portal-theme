@@ -1,7 +1,6 @@
 {
-  "id": "e26756ec-9811-4429-8435-6fb6f24c4e95",
-  "from": ["ed131974-58a7-408b-b724-b24bd9831cbe"],
-  "name": "Single Sortable Entries",
+  "id": "a318cffd-dfd8-474f-8431-8b3f668da1c4",
+  "name": "Multiple Sortable Entries",
   "keywords": [
     "ascending",
     "descending",
@@ -10,9 +9,11 @@
     "reorder",
     "sortable",
     "sorting",
-    "tables"
+    "tables",
+    "multi sortable",
+    "multi sorting"
   ],
-  "location": "table-advanced/sortable.html",
+  "location": "table-advanced/multi-sortable.html",
   "dependencies": [],
   "actions": [
     {
@@ -23,6 +24,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-5"
+    "row": "row-md-6"
   }
 }
