@@ -33,3 +33,8 @@ $(document).on('show.bs.modal', '.modal', function (e) {
   var pro = $(this).data("bs.modal").__proto__;
   pro.adjustDialog = function () {}
 });
+
+var $window = $(window).on('resize', function () {
+      $(".modal-body.mCustomScrollbar").mCustomScrollbar("update");
+});
+$window.trigger('resize');
