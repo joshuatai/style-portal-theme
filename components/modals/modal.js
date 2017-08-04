@@ -34,7 +34,6 @@ $(document).on('show.bs.modal', '.modal', function (e) {
   pro.adjustDialog = function () {}
 });
 
-var $window = $(window).on('resize', function () {
+$(window).on('resize', function () {
       $(".modal-body.mCustomScrollbar").mCustomScrollbar("update");
 });
-$window.trigger('resize');
