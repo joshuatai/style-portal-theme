@@ -15,8 +15,10 @@ $('#demo-sm-button').on('click', function (e){
       $("body").append(modalSm.clone().attr("id", "modal-sm"));
 });
 $('#demo-md-button').on('click', function (e){
+      var modalMdBody = modalMd.find('modal-body');
       $("body").find("#modal-md").remove("#modal-md");
       $("body").append(modalMd.clone().attr("id", "modal-md"));
+      modalMdBody.mCustomScrollbar();
 });
 $('#demo-lg-button').on('click', function (e){
       var modalLgBody = modalLg.find('modal-body');

@@ -50,8 +50,13 @@
   margin-left: 0;
   margin-right: 0;
 }
+#modal-md .form-horizontal {
+  padding: 16px 24px;
+}
+#modal-md .modal-body,
 #modal-lg .modal-body {
   padding: 0;
+  overflow: hidden;
 }
 #modal-lg .modal-table-img {
   width: 926px;
