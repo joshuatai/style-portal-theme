@@ -1,0 +1,22 @@
+{
+  "id": "254a5286-1f8e-48b8-b20a-7736865bf54d",
+  "name": "Table Scroll Bars",
+  "keywords": [
+    "table scroll bar"
+  ],
+  "location": "scrollbar/table-scrollbar.html",
+  "dependencies": [
+    "mcustom-scrollbar-3.1.5"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-13"
+  }
+}
