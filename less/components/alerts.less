@@ -10,15 +10,17 @@
   font-family: @font-family-arial;
   font-size: @font-size-base;
   color: @gray-base;
-  padding: 8px 16px 8px 24px;
+  padding: 8px 40px 8px 48px;
   border-radius: 0;
-  .icon{
-    margin-right: 8px;
-    vertical-align: top;
-    margin-top: 2px;
+  > .cancel {
+    float: right;
+    margin-right: -24px;
   }
-  .icon-cancel{
-    margin-right: 0;
+  > i:first-of-type,
+  > span:first-of-type {
+    float: left;
+    margin-left: -24px;
+    margin-top: 2px;
   }
   a{
     text-decoration: none;
@@ -40,10 +42,9 @@
   opacity: 1;
 }
 
-
 .toast-alert{
   position: absolute;
-  padding: 8px 12px 8px 16px;
+  padding: 8px 36px 8px 40px;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   min-width: 280px;
