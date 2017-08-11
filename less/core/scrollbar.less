@@ -12,17 +12,17 @@
 }
 
 .mCS-autoHide {
+  > .mCustomScrollBox {
+    .mCSB_scrollTools {
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
   &:hover {
     > .mCustomScrollBox {
       .mCSB_scrollTools {
         opacity: 1;
       }
-    }
-  }
-  > .mCustomScrollBox {
-    .mCSB_scrollTools {
-      opacity: 0;
-      transition: all 0.2s ease-in-out;
     }
   }
 }
@@ -71,11 +71,6 @@
 
 // Table and Modal scrollbar rail 
 .mCustomScrollbar-dragger-fixed {
-  .table-scrollable& {
-    .mCSB_draggerRail {
-      border-right: 1px solid #dddddd;
-    }
-  }
   .mCSB_draggerContainer .mCSB_draggerRail {
     background-color: #e6e6e6;
   }

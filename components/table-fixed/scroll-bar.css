@@ -15,7 +15,11 @@
 .fixed-header-example .table-with-scrollbar .table-scrollable .table > tbody > tr:last-child > td {
 	border-bottom: 0;
 }
+.fixed-header-example .table-with-scrollbar .table-scrollable.mCustomScrollbar-dragger-fixed .mCSB_draggerRail {
+	border-right: 1px solid #dddddd;
+}
 
+/*Table horizontal scroll bar */
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable {
 	float: left;
 }
@@ -30,14 +34,6 @@
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable .table > tbody > tr.hover {
     background-color: #e6f4fc;
 }
-.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.fixed-column {
-	width: 240px;
-}
-.fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar {
-	max-width: calc(100% - 240px);
-	border-right: 1px solid #dddddd;
-}
-
 .fixed-header-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table {
 	border-left: 0;
 	border-right: 0;

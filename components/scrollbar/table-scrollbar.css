@@ -1,28 +1,3 @@
-.general-scrollbar-example .hidden-scrollable-example {
-    margin-top: 230px;
-}
-
-.general-scrollbar-example .hidden-scrollable-container {
-    height: 340px;
-    border: 1px solid #cccccc;
-    display: flex;
-}
-.general-scrollbar-example .hidden-scrollable-container .hidden-scrollable {
-    overflow-y: auto;
-    width: 281px;
-}
-
-.general-scrollbar-example .hidden-scrollable-container .hidden-scrollbar-text {
-    flex: 1;
-    text-align: center;
-    color: #999999;
-    font-size: 13px;
-    padding: 159px 56px;
-}
-.general-scrollbar-example .hidden-scrollable-container .hidden-scrollbar-text > span {
-    line-height: 20px
-}
-
 .table-scrollbar-example .table-with-scrollbar .table-pagination {
 	width: 100%;
 	vertical-align: top;
@@ -40,7 +15,11 @@
 .table-scrollbar-example .table-with-scrollbar .table-scrollable .table > tbody > tr:last-child > td {
 	border-bottom: 0;
 }
+.table-scrollbar-example .table-with-scrollbar .table-scrollable.mCustomScrollbar-dragger-fixed .mCSB_draggerRail {
+	border-right: 1px solid #dddddd;
+}
 
+/*Table horizontal scroll bar */
 .table-scrollbar-example .table-with-scrollbar .table-horizontal-scrollable {
 	float: left;
 }
@@ -55,14 +34,6 @@
 .table-scrollbar-example .table-with-scrollbar .table-horizontal-scrollable .table > tbody > tr.hover {
     background-color: #e6f4fc;
 }
-.table-scrollbar-example .table-with-scrollbar .table-horizontal-scrollable.fixed-column {
-	width: 240px;
-}
-.table-scrollbar-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar {
-	max-width: calc(100% - 240px);
-	border-right: 1px solid #dddddd;
-}
-
 .table-scrollbar-example .table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table {
 	border-left: 0;
 	border-right: 0;

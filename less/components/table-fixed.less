@@ -5,8 +5,8 @@
     overflow-y: auto;
   }
   .table-horizontal-scrollable {
-    overflow-x: auto;
     &.fixed-column {
+      width: 240px;
       .table {
         > thead > tr > th,
         > tbody > tr > td {
@@ -22,6 +22,11 @@
         border-right: 1px solid #bbbbbb;
         border-left: 1px solid #dddddd;
       }
+    }
+    &.mCustomHorizontalScrollbar {
+      overflow-x: auto;
+      max-width: calc(~"100% - 240px");
+	    border-right: 1px solid #dddddd;
     }
   }
 }
