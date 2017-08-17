@@ -1,7 +1,43 @@
 <section class="css-reference">
-  <h5>Horizontal scroll bar</h5>
-  <pre data-title="Fixed columns border">
+  <h5>Vertical scrollable container</h5>
+  <p>Wrap the table row of the table within a <code data-tag="div"></code> element and specify the height.</p>
+  <pre>
+    <style data-selector=".table-with-scrollbar .table-scrollable">Determine the max height according to product requirements</style>
+  </pre>
+  <h5>Table within vertical scrollable container</h5>
+  <pre>
+    <style data-selector=".table-with-scrollbar .table-scrollable .table"></style>
+  </pre>
+  <h5>Table cells within vertical scrollable container</h5>
+  <pre data-title="table cells of first row">
+    <style data-selector=".table-with-scrollbar .table-scrollable .table > tbody > tr:first-child > td"></style>
+  </pre>
+  <pre data-title="table cells of last row">
+    <style data-selector=".table-with-scrollbar .table-scrollable .table > tbody > tr:last-child > td"></style>
+  </pre>
+  <h5>Fixed columns container</h5>
+  <pre>
+    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.fixed-column">Determine the width according to product requirements</style>  
+  </pre>
+  <h5>Table cells within fixed columns container</h5>
+  <pre>
     <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.fixed-column .table > thead > tr > th"></style>
+  </pre>
+  <h5>Horizontal scrollable container</h5>
+  <p>Wrap the table within a <code data-tag="div"></code> element and specify the height.</p>
+  <pre>
+    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar">Determine the max width according to product requirements</style>
+  </pre>
+  <h5>Table within horizontal scrollable container</h5>
+  <pre>
+    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table"></style>
+  </pre>
+  <h5>Table cells within horizontal scrollable container</h5>
+  <pre data-title="table cells of first column">
+    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody > tr > td:first-child"></style>
+  </pre>
+  <pre data-title="table cells of last column">
+    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody > tr > td:last-child"></style>
   </pre>
 </section>
 <section class="fixed-header-example">
@@ -28,7 +64,7 @@
           </thead>
       </table>
     </div>
-    <div class="table-scrollable mCustomScrollbar mCustomScrollbar-dragger-hover">
+    <div class="table-scrollable mCustomScrollbar mCustomScrollbar-dragger-fixed">
       <table class="table table-bordered table-hover">
         <tbody>
           <tr>
@@ -137,7 +173,7 @@
     </div>
   </div>
   <div class="table-with-scrollbar">
-    <div class="table-horizontal-scrollable fixed-column">
+    <div class="table-horizontal-scrollable fixed-column pull-left">
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
@@ -163,7 +199,7 @@
         </tbody>
       </table>
     </div>
-    <div class="table-horizontal-scrollable mCustomHorizontalScrollbar mCustomScrollbar-dragger-hover">
+    <div class="table-horizontal-scrollable pull-left mCustomHorizontalScrollbar mCustomScrollbar-dragger-fixed">
       <table class="table table-bordered table-hover">
         <thead>
           <tr>

@@ -1,0 +1,11 @@
+.table-scrollbar-example .example .table-with-scrollbar + .table-with-scrollbar {
+	margin-top: 24px;
+}
+
+.table-scrollbar-example .table-with-scrollbar .table-pagination {
+	width: 100%;
+	vertical-align: top;
+}
+.table-scrollbar-example .table-with-scrollbar .table-pagination .table-pagination-block .pagination {
+	margin-bottom: 0;
+}
