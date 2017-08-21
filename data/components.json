@@ -924,7 +924,8 @@
     "name": "Scroll Bars",
     "keywords": [
       "scroll bar",
-      "hidden scroll bar"
+      "hidden scroll bar",
+      "table scroll bar"
     ],
     "segments": [
       "aa8b7cdb-389a-4ac4-a32d-451745bc15b0",
