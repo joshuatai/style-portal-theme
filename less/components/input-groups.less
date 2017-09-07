@@ -294,6 +294,9 @@
         border-bottom-color: #999;
         z-index: 4;
       }
+      &:focus {
+        z-index: 3;
+      }
       &:focus:hover {
         border-left-color: #999;
         border-bottom-color: #999;
@@ -307,6 +310,9 @@
       &:hover {
         border-left-color: #999;
         border-top-color: #999;
+        z-index: 4;
+      }
+      &:focus {
         z-index: 3;
       }
       &:focus:hover {
@@ -328,7 +334,7 @@
     border-right-color: #ccc;
     &:hover {
       border-right-color: #999;
-      z-index: 3;
+      z-index: 4;
     }
     &:focus:hover {
       border-right-color: #999;
@@ -341,7 +347,7 @@
     border-left-color: #ccc;
     &:hover {
       border-left-color: #999;
-      z-index: 3;
+      z-index: 4;
     }
     &:focus:hover {
       border-left-color: #999;

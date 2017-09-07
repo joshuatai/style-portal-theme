@@ -12,15 +12,21 @@
     position: relative;
     float: left;
     // Bring the "active" button to the front
-    &:hover,
-    &.hover,
     &:active,
     &.active {
-      z-index: 2;
+      &,
+      &:focus,
+      &.focus {
+        z-index: 2;
+      }
+    }
+    &:hover,
+    &.hover {
+      z-index: 3;
     }
     &:focus,
     &.focus {
-      z-index: 3;
+      z-index: 4;
     }
   }
 }
@@ -94,6 +100,11 @@
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0;
+
+  &:focus,
+  &.focus {
+    z-index: 2;
+  }
 }
 
 
