@@ -5,12 +5,22 @@
   <pre>
     <style data-selector=".table-container"></style>
   </pre>
-	<h5>Loader</h5>
-	<pre data-title="Loader overlay to wrap a large loader">
+	<h5>Loader overlay</h5>
+	<pre data-title="Wrap a large loader within the overlay">
     <style data-selector=".loader-overlay"></style>
   </pre>
-  <pre>
+  <pre data-title="For Standard Tables">
     <style data-selector=".table + .loader-overlay"></style>
+  </pre>
+  <pre data-title="For Reduced Padding Tables">
+    <style data-selector=".table-cramped + .loader-overlay"></style>
+  </pre>
+  <pre data-title="For Extra Padding Tables">
+    <style data-selector=".table-roomy + .loader-overlay"></style>
+  </pre>
+	<h5>Loader</h5>
+  <pre>
+    <style data-selector=".table + .loader-overlay > .loader"></style>
   </pre>
 </section>
 
