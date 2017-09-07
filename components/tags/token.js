@@ -75,7 +75,6 @@ $.tokenize.prototype.search = function() {
 
 $.tokenize.prototype.tokenAdd = function(value, text, first) {
     value = this.escape(value).trim();
-
     if(value == undefined || value == ''){
         return this;
     }
@@ -130,6 +129,7 @@ $.tokenize.prototype.tokenAdd = function(value, text, first) {
     if(!first){
         this.options.onAddToken(value, text, this);
     }
+    this.resetSearchInput();
     this.updateOrder();
     this.search();
     this.updatePlaceholder();
