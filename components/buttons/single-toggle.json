@@ -1,0 +1,21 @@
+{
+  "id": "06ddb9e5-ddc7-47fb-aee8-5599d2547982",
+  "name": "Single Toggle Button",
+  "keywords": [
+    "buttons",
+    "toggle"
+  ],
+  "location": "buttons/single-toggle.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-4 row-xl-6"
+  }
+}
