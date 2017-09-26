@@ -9,3 +9,52 @@
 .table-scrollbar-example .table-with-scrollbar .table-pagination .table-pagination-block .pagination {
 	margin-bottom: 0;
 }
+
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(1),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(1) {
+	width: 94px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(2),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(2) {
+	width: 231px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(3),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(3) {
+	width: 346px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(4),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(4) {
+	width: 156px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(5),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(5) {
+	width: 316px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(6),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(6) {
+	width: 142px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(7),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(7) {
+	width: 118px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(8),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(8) {
+	width: 145px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(9),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(9) {
+	width: 210px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(10),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(10) {
+	width: 113px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(11),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(11) {
+	width: 300px;;
+}
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(12),
+.table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(12) {
+	width: 146px;;
+}
