@@ -20,8 +20,7 @@
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(3),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(3) {
-	width: 346px;
-	text-align: left;
+	width: 350px;
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(4),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(4) {
@@ -29,23 +28,23 @@
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(5),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(5) {
-	width: 316px;
+	width: 320px;
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(6),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(6) {
-	width: 142px;
+	width: 146px;
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(7),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(7) {
-	width: 118px;
+	width: 122px;
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(8),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(8) {
-	width: 145px;
+	width: 150px;
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(9),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(9) {
-	width: 210px;
+	width: 214px;
 }
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > thead > tr > th:nth-child(10),
 .table-scrollbar-example .table-with-scrollbar.sb-vh .vh-column .table > tbody > tr > td:nth-child(10) {
