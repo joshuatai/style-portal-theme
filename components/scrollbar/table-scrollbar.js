@@ -32,7 +32,6 @@ sbVH.mCustomScrollbar({
     callbacks:{
         whileScrolling: function(){
             var root = $(this).parents('.table-with-scrollbar.sb-vh');
-            console.log(root);
             if (this.mcs.direction == "y") {
                 $('.table-v-scrollbar-hidden .mCSB_container', root).css("top", this.mcs.top);
             }
