@@ -2,6 +2,7 @@ var modalLg = $('[data-template="modal-lg"]').modal('show');
 var modalLgBody = modalLg.find('modal-body');
 
 modalLgBody.mCustomScrollbar({
+    autoHideScrollbar: true,
     callbacks:{
         whileScrolling:function(){
             $('.modal-header').toggleClass('fixedTop', this.mcs.top < 0);
