@@ -161,8 +161,6 @@ y-axis
 		}
 	}
 
-
-
 /* 
 ------------------------------------------------------------------------------------------------------------------------
 3. HORIZONTAL SCROLLBAR 
@@ -270,17 +268,17 @@ yx-axis
 		bottom: 0;
 		margin-right: 30px;
 		margin-bottom: 30px;
+		margin: 0
 	}
 	
 	.mCSB_container_wrapper > .mCSB_container{
-		padding-right: 30px;
-		padding-bottom: 30px;
+		padding-bottom: 8px;
 		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 	}
 	
-	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }
+	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 8px; }
 	
-	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }
+	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 8px; }
 	
 	/* non-visible horizontal scrollbar */
 	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }
@@ -312,7 +310,22 @@ yx-axis
 	/* non-visible horizontal scrollbar */
 	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
 
-
+	.table-with-scrollbar.sb-vh {
+		.table-vh-scrollbar {
+			&.mCustomScrollbar-dragger-fixed {
+				.mCSB_scrollTools {
+					&.mCSB_scrollTools_vertical {
+						right: 0;
+					}
+				}
+				.mCSB_draggerContainer {
+					.mCSB_draggerRail {
+						border-top: 1px solid #dddddd;
+					}
+				}
+			}
+		}
+	}
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
