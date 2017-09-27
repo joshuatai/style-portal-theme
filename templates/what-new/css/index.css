@@ -125,6 +125,7 @@ header.site-header {
     width: 420px;
 }
 .what-new-content .title {
+    margin-top: 16px;
     margin-bottom: 16px;
 }
 .what-new-content .desc {
