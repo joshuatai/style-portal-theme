@@ -2,42 +2,42 @@
   <h5>Vertical scrollable container</h5>
   <p>Wrap the table rows within a <code data-tag="div"></code> element and specify the height.</p>
   <pre>
-    <style data-selector=".table-with-scrollbar .table-scrollable">Determine the max height according to product requirements</style>
+    <style data-selector=".table-with-scrollbar.sb-v .table-scrollable">Determine the max height according to product requirements</style>
   </pre>
   <h5>Vertical scrollable container with a table</h5>
   <pre>
-    <style data-selector=".table-with-scrollbar .table-scrollable .table"></style>
+    <style data-selector=".table-with-scrollbar.sb-v .table-scrollable .table"></style>
   </pre>
   <h5>Vertical scrollable container with table cells</h5>
   <pre data-title="Cells in the first table row">
-    <style data-selector=".table-with-scrollbar .table-scrollable .table > tbody > tr:first-child > td"></style>
+    <style data-selector=".table-with-scrollbar.sb-v .table-scrollable .table > tbody > tr:first-child > td"></style>
   </pre>
   <pre data-title="Cells in the last table row">
-    <style data-selector=".table-with-scrollbar .table-scrollable .table > tbody > tr:last-child > td"></style>
+    <style data-selector=".table-with-scrollbar.sb-v .table-scrollable .table > tbody > tr:last-child > td"></style>
   </pre>
   <h5>Fixed column container</h5>
   <pre>
-    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.fixed-column">Determine the width according to product requirements</style>  
+    <style data-selector=".table-with-scrollbar.sb-h .fixed-column">Determine the width according to product requirements</style>  
   </pre>
   <h5>Fixed column container with table cells</h5>
   <pre>
-    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.fixed-column .table > thead > tr > th"></style>
+    <style data-selector=".table-with-scrollbar.sb-h .fixed-column .table > thead > tr > th"></style>
   </pre>
   <h5>Horizontal scrollable container</h5>
   <p>Wrap the table within a <code data-tag="div"></code> element and specify the height.</p>
   <pre>
-    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar">Determine the max width according to product requirements</style>
+    <style data-selector=".table-with-scrollbar.sb-h .table-horizontal-scrollable">Determine the max width according to product requirements</style>
   </pre>
   <h5>Horizontal scrollable container with a table</h5>
   <pre>
-    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table"></style>
+    <style data-selector=".table-with-scrollbar.sb-h .table-horizontal-scrollable .table"></style>
   </pre>
   <h5>Horizontal scrollable container with table cells</h5>
   <pre data-title="Cells in the first table column">
-    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody > tr > td:first-child"></style>
+    <style data-selector=".table-with-scrollbar.sb-h .table-horizontal-scrollable .table > tbody > tr > td:first-child"></style>
   </pre>
   <pre data-title="Cells in the last table column">
-    <style data-selector=".table-with-scrollbar .table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody > tr > td:last-child"></style>
+    <style data-selector=".table-with-scrollbar.sb-h .table-horizontal-scrollable .table > tbody > tr > td:last-child"></style>
   </pre>
 </section>
 <section class="fixed-header-example">
@@ -50,7 +50,7 @@
         <strong>Horizontal scroll bar:</strong> If you have to include a large number of columns in a table, freeze the primary column to one side of the table for easy reference. Change the color of the fixed column's right border to indicate that it is frozen.<span class="help-block">Note: A primary column is the one to which other columns are associated. For example, in the second table below, the Display Name column is the primary column.</span>
       </li>
   </ul>
-  <div class="table-with-scrollbar">
+  <div class="table-with-scrollbar sb-v">
     <div class="div-header">
       <table class="table table-bordered">
           <thead>
@@ -172,8 +172,8 @@
       </div>
     </div>
   </div>
-  <div class="table-with-scrollbar">
-    <div class="table-horizontal-scrollable fixed-column pull-left">
+  <div class="table-with-scrollbar sb-h">
+    <div class="fixed-column pull-left">
       <table class="table table-bordered table-hover">
         <thead>
           <tr>

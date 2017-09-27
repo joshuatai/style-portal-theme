@@ -1,28 +1,73 @@
-
-var tableScrollbar = $(".table-scrollbar-example .table-scrollable.mCustomScrollbar");
-var horizontalScrollbar = $(".table-scrollbar-example .mCustomHorizontalScrollbar");
+var scrollbarExample = $('.table-scrollbar-example');
+var tableScrollbar = $('.table-with-scrollbar.sb-v .table-scrollable', scrollbarExample);
+var tableHorizontalScrollbar = $('.table-with-scrollbar.sb-h .table-horizontal-scrollable', scrollbarExample);
+var sbVerticalHidden = $('.table-with-scrollbar.sb-vh .table-v-scrollbar-hidden', scrollbarExample);
+var sbHorizontalHidden = $('.table-with-scrollbar.sb-vh .table-h-scrollbar-hidden', scrollbarExample);
+var sbVH = $('.table-with-scrollbar.sb-vh .table-vh-scrollbar', scrollbarExample);
 
 tableScrollbar.mCustomScrollbar();
 
-horizontalScrollbar.mCustomScrollbar({
+tableHorizontalScrollbar.mCustomScrollbar({
     axis:"x"
 });
-$(".mCustomHorizontalScrollbar .mCSB_container").on("mousewheel", function(e){     
+
+sbVerticalHidden.mCustomScrollbar({
+    callbacks:{
+        whileScrolling: function(){
+            var root = $(this).parents('.table-with-scrollbar.sb-vh');
+            $('.table-vh-scrollbar .mCSB_container', root).css("top", this.mcs.top);
+            sbVH.mCustomScrollbar('update');
+        }
+    }
+});
+
+sbHorizontalHidden.mCustomScrollbar({
+    axis:"x",
+    mouseWheel:{ enable: false }
+});
+
+sbVH.mCustomScrollbar({
+    axis:"yx",
+    setHeight: "255px",
+    callbacks:{
+        whileScrolling: function(){
+            var root = $(this).parents('.table-with-scrollbar.sb-vh');
+            if (this.mcs.direction == "y") {
+                $('.table-v-scrollbar-hidden .mCSB_container', root).css("top", this.mcs.top);
+            }
+            else {
+                $('.table-h-scrollbar-hidden .mCSB_container', root).css("left", this.mcs.left);
+            }
+        }
+    }
+});
+
+$('.table-with-scrollbar.sb-h .table-horizontal-scrollable .mCSB_container', scrollbarExample).on('mousewheel', function(e){     
     if(!e.shiftKey) {
         e.preventDefault();
         e.stopPropagation();
     }
 });
 
-$('.table-scrollbar-example .table-horizontal-scrollable .table > tbody > tr').each(function() {
+$('.table-with-scrollbar.sb-h .table > tbody > tr', scrollbarExample).each(function() {
     var index = $(this).index();
-    var fixedTable = $('.table-horizontal-scrollable.fixed-column .table > tbody > tr');
-    var scrollTable = $('.table-horizontal-scrollable.mCustomHorizontalScrollbar .table > tbody > tr');
-    $(this).hover(function () {
-        fixedTable.eq(index).addClass("hover");
-        scrollTable.eq(index).addClass("hover");
-    },function () {
-        fixedTable.eq(index).removeClass("hover");
-        scrollTable.eq(index).removeClass("hover");
-    });
+    var fixedTableRow = $('.table-with-scrollbar.sb-h .fixed-column .table > tbody > tr', scrollbarExample);
+    var scrollTableRow = $('.table-with-scrollbar.sb-h .table-horizontal-scrollable .table > tbody > tr', scrollbarExample);
+    tableSbHover ($(this), index, fixedTableRow, scrollTableRow)
 });
+
+$('.table-with-scrollbar.sb-vh .table > tbody > tr', scrollbarExample).each(function() {
+    var index = $(this).index();
+    var fixedTableRow = $('.table-with-scrollbar.sb-vh .table-v-scrollbar-hidden .table > tbody > tr', scrollbarExample);
+    var scrollTableRow = $('.table-with-scrollbar.sb-vh .table-vh-scrollbar .table > tbody > tr', scrollbarExample);
+    tableSbHover ($(this), index, fixedTableRow, scrollTableRow)
+});
+function tableSbHover ($this, index, fixedRow, scrollRow) {
+    $this.hover(function () {
+        fixedRow.eq(index).addClass("hover");
+        scrollRow.eq(index).addClass("hover");
+    },function () {
+        fixedRow.eq(index).removeClass("hover");
+        scrollRow.eq(index).removeClass("hover");
+    });
+}
