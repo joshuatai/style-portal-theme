@@ -1,0 +1,22 @@
+{
+  "id": "83e500de-be08-4d39-9eb2-fe91b67892ff",
+  "name": "What's New",
+  "keywords": [
+    "what's new",
+    "information",
+    "templates"
+  ],
+  "location": "what-new/what-new.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-xs-12 templates",
+    "row": "row-md-6"
+  }
+}

@@ -32,7 +32,7 @@
   background-color: @tooltip-bg;
   border: 1px solid @tooltip-bg;
   border-radius: @border-radius-base;
-  .box-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+  .box-shadow(@tooltip-shadow);
 }
 
 // Arrows
@@ -110,6 +110,6 @@
   padding: @base-space @padding-small-horizontal;
   background-color: @tooltip-light-bg;
   border: 1px solid @btn-default-border;
-  .box-shadow(0 1px 5px rgba(0, 0, 0, 0.15));
+  .box-shadow(@tooltip-light-shadow);
   text-align: left;
 }

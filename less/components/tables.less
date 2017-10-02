@@ -205,8 +205,11 @@ th {
 // Placed here since it has to come after the potential zebra striping
 
 .table-hover {
-  > tbody > tr:hover {
-    background-color: @table-bg-hover;
+  > tbody > tr {
+    &:hover,
+    &.hover {
+      background-color: @table-bg-hover;
+    }
   }
 }
 
@@ -369,7 +372,15 @@ table {
   .table + & {
     top: 39px;
   }
-  .table-comfortable + & {
+  .table-cramped + & {
+    top: 31px;
+  }
+  .table-roomy + & {
     top: 47px;
   }
+}
+
+.table + .loader-overlay > .loader {
+  margin-top: 0;
+  top: 32px;
 }

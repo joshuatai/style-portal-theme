@@ -27,8 +27,13 @@
 }
 i, span {
   &.fa {
-      font-size: (@font-size-base + 1);
-      color: #666666;
+    font-size: (@font-size-base + 1);
+    color: #666;
+
+    &:hover,
+    &.hover {
+      color: #222;
+    }
   }
   &.svg {
     width: 16px;

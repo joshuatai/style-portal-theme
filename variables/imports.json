@@ -26,5 +26,6 @@
   "form-status-alerts",
   "charts",
   "panels",
-  "progress-bars"
+  "progress-bars",
+  "scrollbar"
 ]

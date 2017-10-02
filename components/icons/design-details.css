@@ -1,0 +1,21 @@
+
+.icon-colors {
+  display: inline-block;
+  margin: 20px;
+}
+
+.icon-color {
+  float: left;
+  margin: 0px 12px;
+  text-align: center;
+}
+
+.icon-color > .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-color > .color-code {
+  line-height: 2;
+  text-transform: uppercase;
+}

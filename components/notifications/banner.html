@@ -28,18 +28,15 @@
     <style data-selector=".icon"></style>
   </pre>
   <pre>
-    <style data-selector=".alert .icon">Leave a space between icon and text.</style>
+    <style data-selector=".alert > i:first-of-type">Position the icon</style>
   </pre>
 
   <h5>Cancel icon</h5>
-  <pre data-title="Normal">
-    <style data-selector=".pull-right">Cancel icon should float to the right of the alert.</style>
+  <pre>
+    <style data-selector=".alert > .cancel">Position the cancel icon</style>
   </pre>
   <pre>
     <style data-selector=".cancel"></style>
-  </pre>
-  <pre>
-    <style data-selector=".alert .icon-cancel">Because alert icon puts a right space. Cancel icon should remove the space.</style>
   </pre>
   <pre data-title=":hover">
     <style data-selector=".cancel:hover"></style>
@@ -81,22 +78,22 @@
 	</div>
 	<p>
 		<div class="alert alert-danger fade in" role="alert">
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		  <span class="icon icon-danger"></span>Your license will expire in 3 days.<button class="btn btn-border btn-xs">Renew Now</button>
-		  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		</div>
 		<div class="alert alert-warning fade in" role="alert">
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		  <span class="icon icon-warn"></span>Your browser is currently not supported. <a href="javascript:;">More Information</a>
-		  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		</div>
 		<!--
 		<div class="alert alert-success" role="alert">
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		  <span class="icon icon-success"></span>You successfully read this important alert message.
-		  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		</div>
 		-->
 		<div class="alert alert-info fade in" role="alert">
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		  <span class="icon icon-info"></span>This notification requires your attention, but it's not super important.
-		  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 		</div>
 	</p>
 	<div class="example">
@@ -106,8 +103,8 @@
 				<div class="placeholder" data-type="image" data-src="images/alert_img1_right.png"></div>
 			</div>
 			<div class="alert alert-warning fade in" role="alert">
+			  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 			  <span class="icon icon-warn"></span>Your browser is currently not supported. <a href="javascript:;">More Information</a>
-			  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 			</div>
 		</div>
 	</div>
@@ -121,12 +118,12 @@
 					<div class="placeholder" data-type="image" data-src="images/alert_img1_right.png"></div>
 				</div>
 				<div class="alert alert-danger fade in" role="alert">
+				  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 				  <span class="icon icon-danger"></span>Your license will expire in 3 days.<button class="btn btn-border btn-xs">Renew Now</button>
-				  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 				</div>
 				<div class="alert alert-warning fade in" role="alert">
+				  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 				  <span class="icon icon-warn"></span>Your browser is currently not supported. <a href="javascript:;">More Information</a>
-				  <a href="#" class="cancel pull-right" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
 				</div>
 			</div>
 		</div>

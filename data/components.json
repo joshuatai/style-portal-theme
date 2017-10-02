@@ -85,6 +85,7 @@
       "fcd98d30-d6bf-4b30-b50d-fafe594cf7bc",
       "4ebd3d3a-5ca6-42a9-86b2-38735dcf99e7",
       "a33044fb-3210-43dc-9ac9-c896eadf3793",
+      "06ddb9e5-ddc7-47fb-aee8-5599d2547982",
       "111d3211-7358-42c8-be48-da90f4ca60df"
     ],
     "css": {
@@ -924,13 +925,28 @@
     "name": "Scroll Bars",
     "keywords": [
       "scroll bar",
-      "hidden scroll bar"
+      "hidden scroll bar",
+      "table scroll bar"
     ],
     "segments": [
-      "aa8b7cdb-389a-4ac4-a32d-451745bc15b0"
+      "aa8b7cdb-389a-4ac4-a32d-451745bc15b0",
+      "254a5286-1f8e-48b8-b20a-7736865bf54d"
     ],
     "css": {
-      "name": "scrollbar"
+      "name": "scrollbar",
+      "sources": [
+        "dependencies/normalize",
+        "core/scrollbar"
+      ]
     }
+  },
+  {
+    "id": "42009d37-9873-4af7-905b-63da131a5f93",
+    "name": "What's New",
+    "guidelines": "http://tw-hie/ui_standards/2017/08/whats-new-2/",
+    "keywords": null,
+    "segments": [
+      "83e500de-be08-4d39-9eb2-fe91b67892ff"
+    ]
   }
 ]

@@ -2,10 +2,12 @@
 // Charts
 // --------------------------------------------------
 
+//** Charts position
 .chart-container {
   margin: 0 auto;
 }
 
+//** Charts style for display only
 .style-portal {
   .highcharts {
     .axis {
@@ -49,6 +51,9 @@
           border-radius: @highcharts-series-border-radius;
         }
       }
+    }
+    .tooltip {
+      box-shadow: @tooltip-light-shadow;
     }
     .area-tooltips {
       border: 1px solid #bbbbbb;
@@ -113,6 +118,7 @@
   }
 }
 
+//** Charts tooltip style
 .highcharts-tooltip > span > table {
   padding: 16px;
   background-color: @white;
@@ -137,6 +143,7 @@
   }
 }
 
+//** Charts legend 
 .legend {
   height: 30px;
   text-align: center;
@@ -181,10 +188,7 @@
   .make-lagend-list-style();
 }
 
-.chart-title + .legend {
-  margin-top: 0;
-}
-
+//** Charts vertical legend 
 .legend-vertical {
   position: absolute;
   top: 0;
@@ -211,6 +215,7 @@
   }
 }
 
+//** Charts legend page
 .legend-page {
   position: absolute;
   display: none;
@@ -235,6 +240,7 @@
   }
 }
 
+//** Charts with vertical legend
 .legend-vertical-container {
   position: relative;
   .legend-page {
@@ -247,6 +253,12 @@
   }
 }
 
+//** Bar Chart legend style with chart title
+.chart-title + .legend {
+  margin-top: 0;
+}
+
+//** Donut chart with vertical legend
 .donut-legend-container {
   .pie-donut-charts-container {
     width: 50%;

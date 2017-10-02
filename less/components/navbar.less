@@ -299,6 +299,20 @@
       background-color:  @dropdown-link-active-bg;
     }
   }
+
+  // Dropdown submenus
+  > .dropdown-submenu > .dropdown-menu {
+    padding: 16px 0;
+    > li {
+      + li {
+        margin-top: 4px;
+      }
+
+      > a {
+        padding: 4px 24px;
+      }
+    }
+  }
 }
 header .navbar-nav > li > .dropdown-menu {
   > li > a {

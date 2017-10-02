@@ -1,7 +1,7 @@
 {
   "id": "minimalism",
   "name": "Minimalism",
-  "version": "1.6.0",
+  "version": "1.8.0",
   "categories": [
     "67ec27d1-4f66-42b4-bb99-2dbb57f53a1e",
     "a2721936-4be9-4abf-9a74-cd64f40d9053",
@@ -22,6 +22,18 @@
     "icon": [
       "images/icon/form.png",
       "images/icon/home.png"
+    ],
+    "severity-icons": [
+      "images/icon/severity-high.png",
+      "images/icon/severity-medium.png",
+      "images/icon/severity-low.png",
+      "images/icon/severity-safe.png",
+      "images/icon/severity-info.png",
+      "images/icon/severity-high.svg",
+      "images/icon/severity-medium.svg",
+      "images/icon/severity-low.svg",
+      "images/icon/severity-safe.svg",
+      "images/icon/severity-info.svg"
     ],
     "fonts": [
       "fonts/Interstate-ExtraLight-webfont.eot",
