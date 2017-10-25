@@ -71,6 +71,7 @@ header.site-header {
 .about-content {
     max-width: 700px;
 }
+
 @media (min-width: 992px) {
     .modal-lg {
         width: 1092px;
@@ -85,74 +86,63 @@ header.site-header {
     text-align: center;
     font-weight: normal;
 }
-.display1 {
-    font-family: Interstate-ExtraLight, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
-    letter-spacing: -0.03em;
-    font-weight: normal;
-}
-.list-inline > li {
-    margin: 0;
-    padding-right: 12px;
-}
-.list-inline > li + li > a {
-    padding-left: 12px;
-    border-left: 1px solid #999999;
-}
 .modal-header {
     padding: 21px 24px;
     transition: all 0.5s;
-}
-.modal-header.fixedTop {
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 }
 .modal-header .close {
     font-size: inherit;
     margin-top: 10px;
 }
-.what-new-wrapper > div:nth-child(even) {
-    background: #E6F4FC;
-}
 .what-new-container {
-    display: flex;
-    padding: 40px 40px 24px 40px;
+    padding: 24px 40px 28px;
 }
-.what-new-content + .what-new-content {
+.what-new-content + .what-new-content{
     margin-left: 80px;
 }
-.what-new-content > img {
-    width: 420px;
+.functionalities {
+    display: table;
+    margin: -12px -24px;
+    border-collapse: separate;
+    border-spacing: 24px;
 }
-.what-new-content .title {
-    margin-top: 16px;
-    margin-bottom: 16px;
+.functionalities-row {
+    display: table-row;
 }
-.what-new-content .desc {
-    margin-bottom: 24px;
+.function {
+    display: table-cell;
+    width: 493px;
+    padding: 16px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+.function .banner {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    float: left;
+}
+.function .des {
+    display: flex;
+    flex-direction: column;
+}
+.function .function-title {
+    font-weight: normal;
+    margin: 0 0 4px 0;
+}
+.function p {
+    margin-bottom: 0;
+    min-height: 60px
 }
 .modal-footer {
     text-align: left;
-}
-.icon-down-arrow {
-    background: url('../images/icon_down.png') center center no-repeat;
-    width: 32px;
-    height: 32px;
-    display: block;
-    margin: 0 auto;
-    opacity: 0.3;
-}
-.icon-down-arrow:hover {
-    opacity: 1;
-    cursor: pointer;
+    padding: 16px 24px;
 }
 .screen-info {
     display: inline-block;
-    margin-top: 8px;
+    margin-top: 6px;
     color: #666666;
 }
-.icon-massage-info {
-    background: url('../images/icon_message_info.svg') center center no-repeat;
-    vertical-align: top;
-    margin-top: 1px;
+.screen-info a {
+    text-decoration: none;
 }
