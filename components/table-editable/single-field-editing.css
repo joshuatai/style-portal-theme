@@ -27,9 +27,3 @@
 	margin-left: 0;
 	width: 100%;
 }
-.table-singleField-edit-example .table-edit > tbody > tr td.edit-cell .editable-click {
-	display: block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
