@@ -74,7 +74,7 @@ header.site-header {
 
 @media (min-width: 992px) {
     .modal-lg {
-        width: 1092px;
+        width: 960px;
     }
 }
 .modal-lg .modal-body {
