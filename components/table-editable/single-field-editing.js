@@ -1,6 +1,6 @@
 $('.edit-cell > span').editable({
   mode: 'inline',
-	clear: false,
+  clear: false,
   highlight: false,
   showbuttons: false,
   inputclass: 'form-control'
