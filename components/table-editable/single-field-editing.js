@@ -3,7 +3,8 @@ $('.edit-cell > span').editable({
   clear: false,
   highlight: false,
   showbuttons: false,
-  inputclass: 'form-control'
+  inputclass: 'form-control',
+  emptytext: '&nbsp;'
 })
 .on('shown', function(e, editable) {
   var $td = editable.$element.parent();
