@@ -1,0 +1,29 @@
+.table-singleField-edit-example .table > thead > tr > th:nth-child(1),
+.table-singleField-edit-example .table > tbody > tr > td:nth-child(1) {
+	width: 11.76%;
+}
+.table-singleField-edit-example .table > thead > tr > th:nth-child(2),
+.table-singleField-edit-example .table > tbody > tr > td:nth-child(2) {
+	width: 11.76%;
+}
+.table-singleField-edit-example .table > thead > tr > th:nth-child(3),
+.table-singleField-edit-example .table > tbody > tr > td:nth-child(3) {
+	width: 11.76%;
+}
+.table-singleField-edit-example .table > thead > tr > th:nth-child(4),
+.table-singleField-edit-example .table > tbody > tr > td:nth-child(4) {
+	width: 35.3%;
+}
+.table-singleField-edit-example .lists-unordered ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.table-singleField-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group {
+	display: block;
+	margin-right: 0;
+	float: none;
+}
+.table-singleField-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
+	margin-left: 0;
+	width: 100%;
+}
