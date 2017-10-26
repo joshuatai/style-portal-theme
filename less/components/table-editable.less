@@ -1,0 +1,22 @@
+.table-edit {
+  > tbody {
+    > tr {
+      td.edit-cell {
+        &.edit-mode {
+          padding: 2px 2px;
+        }
+        &:hover {
+          padding: 2px 2px;
+          .editable-click {
+            display: block;
+            padding: 5px 12px;
+            border: 1px solid #0096cc;
+            background-color: transparent;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
