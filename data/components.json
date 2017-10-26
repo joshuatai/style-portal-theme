@@ -879,12 +879,14 @@
   },
   {
     "id": "5d77b5ec-a33b-4a6b-9a13-7c9107072d01",
-    "name": "Editable Table",
+    "name": "Inline Editing",
     "keywords": [
       "editable table",
       "table"
     ],
-    "segments": []
+    "segments": [
+      "6dfdb341-105a-4bc9-b1e7-6881066ac4de"
+    ]
   },
   {
     "id": "cce4e2d3-137d-4a21-8f51-c631339b3fae",
