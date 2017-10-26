@@ -886,7 +886,16 @@
     ],
     "segments": [
       "6dfdb341-105a-4bc9-b1e7-6881066ac4de"
-    ]
+    ],
+    "css": {
+      "name": "Table Inline Editing",
+      "sources": [
+        "dependencies/normalize",
+        "core/forms",
+        "components/tables",
+        "components/table-editable"
+      ]
+    }
   },
   {
     "id": "cce4e2d3-137d-4a21-8f51-c631339b3fae",
