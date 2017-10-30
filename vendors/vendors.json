@@ -24,14 +24,6 @@
     ],
     "tokenize": "Tokenize/jquery.tokenize.js",
     "bootstrap-datepicker": "bootstrap-datepicker/js/bootstrap-datepicker.js",
-    "trend-bootstrap-datepicker": [
-      "trend-bootstrap-datepicker/datepicker.js",
-      "trend-bootstrap-datepicker/datepicker.css"
-    ],
-    "trend-bootstrap-timepicker": [
-      "bootstrap-timepicker/timepicker.js",
-      "bootstrap-timepicker/timepicker.css"
-    ],
     "jquery.plugin.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.plugin.js",
     "jquery.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.timeentry.js",
     "clipboard-1.5.12": "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.js",
@@ -49,11 +41,6 @@
     "jquery.timeentry.package-2.0.1": {
       "deps": [
         "jquery.plugin.timeentry.package-2.0.1"
-      ]
-    },
-    "trend-bootstrap-datepicker": {
-      "deps": [
-        "bootstrap-datepicker"
       ]
     },
     "jquery-file-upload-9.12.5": {
