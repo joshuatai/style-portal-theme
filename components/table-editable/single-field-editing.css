@@ -27,3 +27,6 @@
 	margin-left: 0;
 	width: 100%;
 }
+.table-singleField-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
+	border-color: #0096cc;
+}
