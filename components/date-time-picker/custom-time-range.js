@@ -70,24 +70,24 @@ datePickerPaneBody.children().addClass('date-picker-pane-container');
 timePickerStartInput	
 	.val('12:00:00')	
 	.timepicker()
-  .on('change', function (e) {
-    var startDate = moment(dateStartInput.val());		
-    var endDate = dateEndInput.val();
-    if (startDate.isSame(endDate) && isStartTimeGreaterThanEndTime()) {	
-      timePickerEndInput.val(timePickerStartInput.val());
- 		} 
-  });
+	.on('change', function (e) {
+		var startDate = moment(dateStartInput.val());		
+		var endDate = dateEndInput.val();
+		if (startDate.isSame(endDate) && isStartTimeGreaterThanEndTime()) {	
+			timePickerEndInput.val(timePickerStartInput.val());
+		} 
+	});
 
 timePickerEndInput
+	.val('12:00:00')	
 	.timepicker()
-  .on('change', function (e) {
-    console.log('timePickerEndInput');
-    var startDate = moment(dateStartInput.val());		
-    var endDate = dateEndInput.val();
-    if (startDate.isSame(endDate) && isStartTimeGreaterThanEndTime()) {	
-      timePickerStartInput.val(timePickerEndInput.val());
- 		} 
-  });
+	.on('change', function (e) {
+		var startDate = moment(dateStartInput.val());		
+		var endDate = dateEndInput.val();
+		if (startDate.isSame(endDate) && isStartTimeGreaterThanEndTime()) {	
+			timePickerStartInput.val(timePickerEndInput.val());
+		} 
+	});
 
 dateTimeRangeDropdown
 	.on('shown.bs.dropdown', function (e) {
