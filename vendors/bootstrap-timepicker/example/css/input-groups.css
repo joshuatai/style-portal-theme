@@ -1,0 +1,292 @@
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.input-group[class*="col-"] {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.input-group .form-control {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+}
+.input-group .form-control:hover,
+.input-group .form-control:focus,
+.input-group .form-control.input-focus {
+  z-index: 4;
+}
+.input-group .input-icon-group > .form-control {
+  padding-left: 12px;
+}
+.input-group .input-icon-group > .icon {
+  z-index: 4;
+}
+.input-group .btn-group-vertical {
+  display: table-cell;
+  vertical-align: top;
+}
+.input-group .btn-group-vertical .btn {
+  margin-left: -1px;
+  line-height: 0;
+  width: 42px;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group .btn-group-vertical .btn + .btn {
+  margin-left: -1px;
+  padding-top: 1px;
+}
+.input-group .btn-group-vertical .btn .icon {
+  width: 14px;
+  height: 14px;
+}
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control,
+.input-group .input-icon-group {
+  display: table-cell;
+}
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group .input-icon-group:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.input-group .input-icon-group:not(:first-child):not(:last-child) .form-control {
+  border-radius: 0;
+}
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.input-group-addon .dropdown-toggle .caret,
+.input-group-btn .dropdown-toggle .caret {
+  float: none;
+  vertical-align: top;
+}
+.input-group-addon {
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  color: #222222;
+  text-align: center;
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+.input-group-addon.input-sm {
+  padding: 4px 16px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.input-group-addon.input-lg {
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+.input-group-addon:not(:first-child):not(:last-child) {
+  border-right: 0;
+  border-left: 0;
+  padding: 5px 8px;
+}
+.input-group-addon + .form-control {
+  border-left-color: #e6e6e6;
+}
+.input-group-addon + .form-control:not(:last-child) {
+  border-right-color: #e6e6e6;
+}
+.input-group-addon + .form-control:not(:last-child):focus {
+  border-right-color: #0096cc;
+}
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.input-group .btn-group-vertical > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.input-group-addon:first-child {
+  border-right: 0;
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.input-group .btn-group-vertical > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.input-group-addon:last-child {
+  border-left: 0;
+}
+.input-group-btn:last-child > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.input-icon-group {
+  position: relative;
+}
+.input-icon-group > .form-control {
+  padding-left: 30px;
+  padding-right: 36px;
+}
+.input-icon-label {
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  margin-top: -10px;
+  color: #666666;
+}
+.input-icon-group .loader,
+.input-icon-group .icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -8px;
+}
+.input-icon-group .icon-cancel {
+  opacity: 0.4;
+}
+.input-icon-group .icon-cancel:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.input-icon-group > .form-control:focus + .input-icon-label > i,
+.input-icon-group > .form-control.input-focus + .input-icon-label > i,
+.input-icon-group > .input-icon-label .focus {
+  transition: all .2s linear 0s;
+  color: #0096cc;
+}
+.input-icon-group > .form-control:focus + .input-icon-label > i i.fa,
+.input-icon-group > .form-control.input-focus + .input-icon-label > i i.fa,
+.input-icon-group > .input-icon-label .focus i.fa,
+.input-icon-group > .form-control:focus + .input-icon-label > i span.fa,
+.input-icon-group > .form-control.input-focus + .input-icon-label > i span.fa,
+.input-icon-group > .input-icon-label .focus span.fa {
+  color: #0096cc;
+  transition: color .2s linear;
+}
+.input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group {
+  z-index: 3;
+  margin-right: -1px;
+}
+.input-group-btn:first-child > .btn:hover,
+.input-group-btn:first-child > .btn-group:hover {
+  z-index: 3;
+}
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  z-index: 3;
+  margin-left: -1px;
+}
+.input-group-btn:last-child > .btn:hover,
+.input-group-btn:last-child > .btn-group:hover {
+  z-index: 3;
+}
+.input-group-btn > .btn {
+  position: relative;
+}
+.input-group-btn > .btn + .btn {
+  margin-left: -1px;
+}
+.input-group-btn > .btn:focus,
+.input-group-btn > .btn:active {
+  z-index: 4;
+}
+.input-group-btn > .btn .icon-plus,
+.input-group-btn > .btn .icon-minus {
+  vertical-align: top;
+  margin-top: 2px;
+}
+.touchspin-example-1.focused .form-control {
+  border-color: #0096cc #cccccc #0096cc #0096cc;
+  z-index: 2;
+}
+.touchspin-example-1.focused .btn:first-child {
+  border-top-color: #0096cc;
+  border-right-color: #0096cc;
+  border-left-color: #ccc;
+  border-bottom-color: #ccc;
+}
+.touchspin-example-1.focused .btn:first-child:hover {
+  border-left-color: #999;
+  border-bottom-color: #999;
+  z-index: 4;
+}
+.touchspin-example-1.focused .btn:first-child:focus:hover {
+  border-left-color: #999;
+  border-bottom-color: #999;
+}
+.touchspin-example-1.focused .btn:last-child {
+  border-bottom-color: #0096cc;
+  border-right-color: #0096cc;
+  border-left-color: #ccc;
+  border-top-color: #ccc;
+}
+.touchspin-example-1.focused .btn:last-child:hover {
+  border-left-color: #999;
+  border-top-color: #999;
+  z-index: 3;
+}
+.touchspin-example-1.focused .btn:last-child:focus:hover {
+  border-left-color: #999;
+  border-top-color: #999;
+}
+.touchspin-example-2.focused .form-control {
+  border-color: #0096cc #cccccc;
+  z-index: 2;
+}
+.touchspin-example-2.focused .input-group-btn:first-child .btn {
+  border-top-color: #0096cc;
+  border-bottom-color: #0096cc;
+  border-left-color: #0096cc;
+  border-right-color: #ccc;
+}
+.touchspin-example-2.focused .input-group-btn:first-child .btn:hover {
+  border-right-color: #999;
+  z-index: 3;
+}
+.touchspin-example-2.focused .input-group-btn:first-child .btn:focus:hover {
+  border-right-color: #999;
+}
+.touchspin-example-2.focused .input-group-btn:last-child .btn {
+  border-top-color: #0096cc;
+  border-bottom-color: #0096cc;
+  border-right-color: #0096cc;
+  border-left-color: #ccc;
+}
+.touchspin-example-2.focused .input-group-btn:last-child .btn:hover {
+  border-left-color: #999;
+  z-index: 3;
+}
+.touchspin-example-2.focused .input-group-btn:last-child .btn:focus:hover {
+  border-left-color: #999;
+}
