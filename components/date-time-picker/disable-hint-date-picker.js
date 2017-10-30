@@ -1,4 +1,3 @@
-return;
 var container = this;
 var disabledDatePickerContainer = $('#disabled-date-datepicker', container);
 

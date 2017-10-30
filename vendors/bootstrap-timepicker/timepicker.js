@@ -445,6 +445,7 @@
     _change: function (time) {
       if (time === this.value) return;
       else this.value = time;
+      
       this.$element.trigger($.Event('change'), [time]);
     },
     _prev: function () {

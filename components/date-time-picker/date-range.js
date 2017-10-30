@@ -5,7 +5,6 @@ var datePickerStartContainer;
 var datepickerEndInput = $('#datepicker-end-input', container);
 var datePickerEndContainer;
 
-return;
 var today = moment().format(format);
 var yestoday = moment().add(-1, 'd').format(format);
 

@@ -1,4 +1,3 @@
-return;
 var container = this;
 var datePickerTimeInput = $('#datepicker-with-time', container);
 var timePickerDate = $('#time-picker-date', container);

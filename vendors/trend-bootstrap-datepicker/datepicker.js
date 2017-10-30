@@ -129,7 +129,7 @@
     this.$datepickerWrapper        = $(datepickerWrapper);
     this.$element                  = $(element);
     this.$label                    = $(datepickerLabel).attr('for', this.$element.attr('id'));
-    this.$datepickerContainer      = $(datepickerContainer);
+    this.$datepickerContainer      = $(datepickerContainer).data('bootstrap-datepicker', this);
     this.$splitters = this.options.format.split(/dd|mm|yyyy|DD|MM|yy/gi), this.$splitters.pop(), this.$splitters.shift(), this.$splitters;
     this.$formater  = this.options.format.match(/dd|mm|yyyy|DD|MM|yy/gi);
 
@@ -169,6 +169,8 @@
         this.$datepickerContainer.attr('data-date', date);
         this.$datepickerContainer._datepicker(this.options);
       }
+      this.value = this.$datepickerContainer.data('datepicker').getFormattedDate();
+      
       if (this.options.isInline === false) {
         this.$datepickerContainer.addClass('dropdown-menu');
       }
@@ -621,7 +623,14 @@
   $(document)
     .on('changeDate changeMonth', '[data-role="datepicker"]', function (e) {
       var $this = $(this);
-      $this.parent().find('input').val($this.data('datepicker').getFormattedDate());
+      var instance = $this.data('bootstrap-datepicker');
+      var $input = instance.$element;
+      var value = $this.data('datepicker').getFormattedDate();
+      if (instance.value !== value) {
+        $input.val(value);
+        instance.value = value;
+        $input.trigger('change', [value]);
+      }
     })
     .on('focus click blur keydown', '[data-role="datepicker-input"]', function (e) {
       var $this = $(this);
@@ -654,6 +663,10 @@
       if (!instance.options.isInline) instance.$datepickerContainer.hide();
     })
     .on('change', '[data-role="datepicker-input"]', function (e, date) {
-      $(this).data('bs.datepicker').$datepickerContainer._datepicker('update', date);
+      var instance  = $(this).data('bs.datepicker');
+      if (instance.value !== date) {
+        instance.value = date;
+        instance.$datepickerContainer._datepicker('update', date);
+      }
     });
 }));

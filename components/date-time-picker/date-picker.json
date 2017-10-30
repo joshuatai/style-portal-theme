@@ -11,6 +11,7 @@
   ],
   "location": "date-time-picker/date-picker.html",
   "dependencies": [
+    "bootstrap-datepicker",
     "trend-bootstrap-datepicker"
   ],
   "actions": [
