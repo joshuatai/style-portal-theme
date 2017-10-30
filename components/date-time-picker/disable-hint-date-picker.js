@@ -1,9 +1,10 @@
+return;
 var container = this;
 var disabledDatePickerContainer = $('#disabled-date-datepicker', container);
 
 disabledDatePickerContainer
 	.data('date', '2017-01-10')
-	.datepicker({
+	._datepicker({
 	  todayHighlight: true,
 	  autoclose: true,
 	  format: 'yyyy-mm-dd',
