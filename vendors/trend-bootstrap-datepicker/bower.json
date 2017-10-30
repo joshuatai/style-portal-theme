@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap-datepicker",
+  "version": "1.0.0",
+  "description": "A Bootstrap plugin for custom datepicker.",
+  "theme": "minimalism",
+  "authors": [
+    "Joshua Tai (HIE-TW)<joshua_tai@trend.com.tw>",
+    "Austin Hung (HIE-TW)<austin_h_hung@trend.com.tw>"
+  ],
+  "visual-designer": ["Lesley Chien (HIE-TW-CON) <Lesley_Chien@trend.com.tw>"],
+  "ui-designer": "Hanwen Chang (HIE-TW) <hanwen_chang@trend.com.tw>",
+  "project-manager": ["Hsin Olive Eu (HIE-TW) <HsinOlive_Eu@trend.com.tw>"],
+  "develop-manager": ["Chandler Chou (HIE-TW) <chandler_chou@trend.com.tw>"],
+  "homepage": "./example/index.html",
+  "snapshots": [
+    "./datepicker-1.png"
+  ],
+  "keywords": [
+    "jquery",
+    "bootstrap",
+    "date",
+    "picker",
+    "datepicker"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4"
+  },
+  "license": "MIT"
+}
