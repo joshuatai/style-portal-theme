@@ -9,7 +9,7 @@
   ],
   "location": "date-time-picker/date-time.html",
   "dependencies": [
-  	"bootstrap-datepicker",
+    "trend-bootstrap-timepicker",
     "moment-2.18.1"
   ],
   "type": "draggable",

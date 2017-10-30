@@ -12,7 +12,7 @@
   ],
   "location": "date-time-picker/date-range.html",
   "dependencies": [
-    "bootstrap-datepicker",
+    "trend-bootstrap-datepicker",
     "moment-2.18.1"
   ],
   "actions": [
