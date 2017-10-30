@@ -7,9 +7,7 @@
     "timepicker"
   ],
   "location": "date-time-picker/time-picker.html",
-  "dependencies": [
-    "trend-bootstrap-timepicker"
-  ],
+  "dependencies": [],
   "actions": [
     {
       "name": "Style",

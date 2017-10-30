@@ -12,8 +12,6 @@
   "location": "date-time-picker/custom-time-range.html",
   "dependencies": [
     "bootstrap-datepicker",
-    "trend-bootstrap-datepicker",
-    "trend-bootstrap-timepicker",
     "moment-2.18.1"
   ],
   "actions": [
