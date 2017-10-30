@@ -1,0 +1,110 @@
+.input-xs {
+  height: 22px;
+  padding: 1px 12px;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 3px;
+}
+select.input-xs {
+  height: 22px;
+  line-height: 22px;
+}
+textarea.input-xs,
+select[multiple].input-xs {
+  height: auto;
+}
+.input-sm {
+  height: 28px;
+  padding: 4px 12px;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 3px;
+}
+select.input-sm {
+  height: 28px;
+  line-height: 28px;
+}
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+.form-group-sm .form-control {
+  height: 28px;
+  padding: 4px 16px;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 3px;
+}
+.form-group-sm select.form-control {
+  height: 28px;
+  line-height: 28px;
+}
+.form-group-sm textarea.form-control,
+.form-group-sm select[multiple].form-control {
+  height: auto;
+}
+.form-group-sm .form-control-static {
+  height: 28px;
+  min-height: 32px;
+  padding: 5px 16px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.input-lg {
+  height: 44px;
+  padding: 9px 12px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 3px;
+}
+select.input-lg {
+  height: 44px;
+  line-height: 44px;
+}
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+.form-group-lg .form-control {
+  height: 44px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 3px;
+}
+.form-group-lg select.form-control {
+  height: 44px;
+  line-height: 44px;
+}
+.form-group-lg textarea.form-control,
+.form-group-lg select[multiple].form-control {
+  height: auto;
+}
+.form-group-lg .form-control-static {
+  height: 44px;
+  min-height: 34px;
+  padding: 7px 16px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.input-width-mini {
+  width: 64px;
+}
+.input-width-xs {
+  width: 120px;
+}
+.input-width-sm {
+  width: 168px;
+}
+.input-width-default {
+  width: 256px;
+}
+.input-width-md {
+  width: 360px;
+}
+.input-width-lg {
+  width: 512px;
+}
+.input-width-fill {
+  width: 100%;
+}

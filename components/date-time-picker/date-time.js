@@ -1,42 +1,9 @@
 var container = this;
 var datePickerTimeInput = $('#datepicker-with-time', container);
-var datePickerTimeContainer = $('#datepicker-with-time-container', container);
 var timePickerDate = $('#time-picker-date', container);
-
-
-var today = moment().format('YYYY-MM-DD');
-
+var format = 'YYYY-MM-DD';
+var today = moment().format(format);
 $(container).children().css('z-index', 2);
 
-datePickerTimeInput
-	.val(today)	
-	.datepickerBehavior()
-	.on('edit', function (e, date) {
-		datePickerTimeInput.addClass('input-focus');
-		datePickerTimeContainer.show();
-	})
-	.on('unedit next prev', function (e) {
-		datePickerTimeInput.removeClass('input-focus');
-		datePickerTimeContainer.hide();
-	})
-	.on('change', function (e, date) {
-		datePickerTimeContainer.datepicker('update', date);
-	});
-
-datePickerTimeContainer
-	.data('date', today)
-	.datepicker({
-		todayHighlight: true,
-		autoclose: true,
-		format: 'yyyy-mm-dd',
-		keyboardNavigation: false
-	})
-	.on('changeDate changeMonth', function (e) {
-		datePickerTimeInput.val(moment(e.date).format('YYYY-MM-DD'));
-	});
-
-
-timePickerDate.timepickerBehavior();
-	
-$(".prev", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-left');
-$(".next", datePickerTimeContainer).find("i").attr('class', 'fa fa-angle-right');
+datePickerTimeInput.val(today).datepicker();
+timePickerDate.timepicker();
