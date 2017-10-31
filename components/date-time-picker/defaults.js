@@ -1,5 +1,8 @@
 if ($.fn._datepicker) return;
 ;(function ($) {
+    
+    'use strict';
+
     var static_datepicker   = $.fn._datepicker = $.fn.datepicker;
     var datepickerWrapper   = '<div class="datepicker-wrapper input-icon-group"></div>';
     var datepickerLabel     = '<label class="input-icon-label"><i class="fa fa-calendar"></i></label>';
