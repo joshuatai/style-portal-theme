@@ -308,4 +308,5 @@ $(document)
     $(this).children().removeClass('selected');
   });
 
+$(this).css('zIndex', 3);
 $('#combobox', this).combobox();
