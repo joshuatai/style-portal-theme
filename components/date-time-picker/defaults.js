@@ -168,7 +168,7 @@ if ($.fn._datepicker) return;
             var value = input.val();
             var start = input.prop('selectionStart');
             var end = input.prop('selectionEnd');
-            if (start !== 0 && end !== 0) {
+            if (!(start === 0 && end === 0)) {
                 this._showField(this.position[0]);
                 this._doEdit();
             }
@@ -819,13 +819,13 @@ if ($.fn._datepicker) return;
         }
     },
     _doFocus: function (e) {
-            var input = this.$element;
-            var value = input.val();
-            var start = input.prop('selectionStart');
+        var input = this.$element;
+        var value = input.val();
+        var start = input.prop('selectionStart');
         var end = input.prop('selectionEnd');
-        if (start !== 0 && end !== 0) {
-        this._showField(this.position[0]);
-        this._doEdit();
+        if (!(start === 0 && end === 0)) {
+            this._showField(this.position[0]);
+            this._doEdit();
         }
     },
     _doBlur: function (e) {
