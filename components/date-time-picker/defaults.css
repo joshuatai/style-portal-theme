@@ -1,12 +1,32 @@
-.date-time-picker-example .field-example {
-  display: inline-block;
-  margin-right: 42px;
+.date-time-picker-example .input-group {
+  width: 300px;
 }
-.date-time-picker-example .form-control {
-  padding-right: 12px;
+.date-time-picker-example .input-group .input-icon-group .input-icon-label {
+  z-index: 3;
 }
-.date-time-picker-example .datepicker-example {
-  display: inline-block;
+.date-time-picker-example .input-group .input-icon-group .form-control {
+  padding-left: 30px;
+}
+.date-time-picker-example .input-group .input-icon-group:first-child .form-control {
+  z-index: 3;
+  border-right-color: #e6e6e6;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.date-time-picker-example .input-group .input-icon-group:first-child .form-control:focus,
+.date-time-picker-example .input-group .input-icon-group:first-child .form-control.input-focus {
+  border-right-color: #0096cc;
+}
+.date-time-picker-example .input-group .input-icon-group:last-child .form-control {
+  z-index: 3;
+  border-left-color: #e6e6e6;
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+}
+.date-time-picker-example .input-group .input-icon-group:last-child .form-control:focus {
+  border-left-color: #0096cc;
 }
 .date-time-picker-example .dropdown-toggle {
   width: 120px;
@@ -34,48 +54,167 @@
 .date-time-picker-example .dropdown.open > .custom-wrapper > ul.dropdown-menu {
   width: 118px;
 }
-.date-time-picker-example .input-group {
-  width: 300px;
+.datepicker-inline.dropdown-menu {
+  position: static;
+  display: block;
 }
-.date-time-picker-example .input-group .input-icon-group .form-control {
-  padding-left: 30px;
+
+/* Datepicker */
+.datepicker-wrapper .form-control {
+  padding-right: 12px;
 }
-.date-time-picker-example .input-group .input-icon-group:first-child .form-control {
-  z-index: 3;
-  border-right-color: #e6e6e6;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.datepicker-wrapper .form-control[disabled] + label {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
-.date-time-picker-example .input-group .input-icon-group:first-child .form-control:focus,
-.date-time-picker-example .input-group .input-icon-group:first-child .form-control.input-focus {
-  border-right-color: #0096cc;
+.datepicker {
+  padding: 0;
+  width: 248px;
 }
-.date-time-picker-example .input-group .input-icon-group:last-child .form-control {
-  z-index: 3;
-  border-left-color: #e6e6e6;
-  border-top-left-radius: 0;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 0;
+.datepicker label {
+  cursor: default;
 }
-.date-time-picker-example .input-group .input-icon-group:last-child .form-control:focus {
-  border-left-color: #0096cc;
+.datepicker.days div.datepicker-days {
+  display: block;
 }
-.date-time-picker-example .input-group .input-icon-group .input-icon-label {
-  z-index: 3;
+.datepicker.months div.datepicker-months {
+  display: block;
 }
-.datepicker table thead tr:first-child th.prev .fa,
-.datepicker table thead tr:first-child th.next .fa {
+.datepicker.years div.datepicker-years {
+  display: block;
+}
+.datepicker table {
+  padding: 4px;
+  border-collapse: separate;
+  border-spacing: 4px 4px;
+}
+.datepicker table td,
+.datepicker table th {
+  text-align: center;
+  width: 30px;
+  line-height: 20px;
+  border: 0;
+  padding: 5px;
+  color: #222222;
+  font-size: 13px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.datepicker table th.switch {
+  font-weight: 700;
+}
+.datepicker div.datepicker-months table,
+.datepicker div.datepicker-years table {
+  padding: 8px 4px;
+  border-spacing: 4px 0;
+}
+.datepicker div.datepicker-months th.switch,
+.datepicker div.datepicker-years th.switch {
+  width: 166px;
+}
+.datepicker div.datepicker-months tbody > tr > td,
+.datepicker div.datepicker-years tbody > tr > td {
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+.datepicker table tr td.day:hover {
+  background: #eeeeee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #bbbbbb;
+}
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: none;
+  color: #bbb;
+  cursor: not-allowed;
+}
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+  color: #db3d44;
+}
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover {
+  color: #fff;
+  font-weight: bold;
+  background-color: #db3d44;
+  border-radius: 50%;
+}
+.datepicker table tr td span {
+  display: block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  float: left;
+  cursor: pointer;
+  color: #222222;
+  font-size: 13px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 5px;
+}
+.datepicker table tr td span:hover {
+  background: #eeeeee;
+  border-radius: 50%;
+}
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #bbb;
+  cursor: not-allowed;
+}
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  color: #ffffff;
+  background-color: #db3d44;
+  font-weight: 700;
+  border-radius: 50%;
+}
+.datepicker table tr td span.old {
+  color: #bbbbbb;
+}
+.datepicker thead tr:first-child th:hover,
+.datepicker tfoot tr:first-child th:hover {
+  cursor: pointer;
+  background: #eeeeee;
+  border-radius: 3px;
+}
+.datepicker thead tr:first-child th.prev .fa,
+.datepicker thead tr:first-child th.next .fa {
+  font-size: 16px;
+  color: #222222;
+  vertical-align: top;
+  margin-top: 1px;
   margin-right: 0;
 }
-.datepicker.dropdown-menu {
-  padding: 0;
+.datepicker .dow {
+  font-size: 12px;
+  font-weight: bold;
+  color: #222222;
+  padding-top: 9px;
 }
 .datepicker tfoot {
   display: none;
 }
 
-.datepicker-inline.dropdown-menu {
-  position: static;
-  display: block;
+/* Timepicker */
+.timepicker-wrapper .form-control {
+  padding-right: 12px;
+}
+.timepicker-wrapper .form-control[disabled] + label {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }

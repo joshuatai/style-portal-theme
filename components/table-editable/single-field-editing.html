@@ -1,0 +1,58 @@
+<section class="css-reference">
+  <h5>Editable table cells</h5>
+  <pre data-title=":hover">
+    <style data-selector=".table-edit > tbody > tr td.edit-cell.edit-mode"></style>
+  </pre>
+  <h5>Editable cell container</h5>
+  <p>When mouse-over, the container displays cell borders to indicate editable cells.</p>
+  <pre>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell:hover .editable-click"></style>
+  </pre>
+  <h5>Editable input</h5>
+  <pre data-title=":focus">
+    <style data-selector=".table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control"></style>
+  </pre>
+  <h5>String truncation</h5>
+  <pre>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell .editable-click"></style>
+  </pre>
+</section>
+<section class="table-singleField-edit-example">
+  <div class="lists-unordered">
+    <ul>
+      <li>Inline editing allows users to modify contents directly on the same display screen without having to access a separate edit screen.</li>
+      <li>Use inline editing for values that users may need to update often in simple UI components (for example, drop-down lists) or formats (for example, text strings).</li>
+    </ul>
+  </div>
+  <p>This example allows users to quickly modify values in a table. The most common way for users to start editing values in a table is to click a table cell.</p>
+	<table class="table table-bordered table-hover table-longtext-truncated table-edit">
+    <thead>
+      <tr>
+        <th>Plan Name</th>
+        <th>Type</th>
+        <th>Creator</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="edit-cell"><span>Hotfix_DDEI</span></td>
+        <td>Hotfix</td>
+        <td>David Wu</td>
+        <td class="edit-cell"><span>ipsum dolor sit amet, consectetuer adipiscing elit.</span></td>
+      </tr>
+      <tr>
+        <td class="edit-cell"><span>Hotfix_DDI_01</span></td>
+        <td>Virtual Analyzer image</td>
+        <td>Michael Chen</td>
+        <td class="edit-cell"><span>Aenean commodo ligula eget dolor.</span></td>
+      </tr>
+      <tr>
+        <td class="edit-cell"><span>TW_Patch_01_DDI</span></td>
+        <td>Firmware</td>
+        <td>Eric Lin</td>
+        <td class="edit-cell"><span>Donec vitae sapien ut libero venenatis faucibus.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

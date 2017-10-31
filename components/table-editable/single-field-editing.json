@@ -1,0 +1,25 @@
+{
+  "id": "6dfdb341-105a-4bc9-b1e7-6881066ac4de",
+  "name": "Single Field Editing",
+  "keywords": [
+    "table",
+    "editable",
+    "inline edit",
+    "input"
+  ],
+  "location": "table-editable/single-field-editing.html",
+  "dependencies": [
+    "x-editable-1.5.1"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-5"
+  }
+}
