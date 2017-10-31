@@ -70,7 +70,7 @@ datePickerPaneBody.children().addClass('date-picker-pane-container');
 timePickerStartInput	
 	.val('12:00:00')	
 	.timepicker()
-	.on('change', function (e) {
+	.on('change', function (e, time) {
 		var startDate = moment(dateStartInput.val());		
 		var endDate = dateEndInput.val();
 		if (startDate.isSame(endDate) && isStartTimeGreaterThanEndTime()) {	
@@ -81,7 +81,7 @@ timePickerStartInput
 timePickerEndInput
 	.val('12:00:00')	
 	.timepicker()
-	.on('change', function (e) {
+	.on('change', function (e, time) {
 		var startDate = moment(dateStartInput.val());		
 		var endDate = dateEndInput.val();
 		if (startDate.isSame(endDate) && isStartTimeGreaterThanEndTime()) {	
