@@ -102,8 +102,8 @@
 .container-fluid {
   > .navbar-header,
   > .navbar-collapse {
-    margin-right: -@navbar-padding-horizontal;
-    margin-left:  -@navbar-padding-horizontal;
+    margin-right: 0;
+    margin-left:  0;
 
     @media (min-width: @grid-float-breakpoint) {
       margin-right: 0;
@@ -174,7 +174,7 @@
   @media (min-width: @grid-float-breakpoint) {
     .navbar > .container &,
     .navbar > .container-fluid & {
-      margin-left: -@navbar-padding-horizontal;
+      margin-left: 0;
     }
   }
 }
