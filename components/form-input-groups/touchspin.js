@@ -34,7 +34,6 @@ $(document).mousedown(function(e) {
 .on('keydown', function(e) {
    // Edit input value when up and down key trigger
   if(e.target.closest('.touchspin.vertical > input')){
-    e.preventDefault();
     if(e.keyCode === 38) {
       e.preventDefault();
       increaseValue(touchspinVerInput);
@@ -45,7 +44,6 @@ $(document).mousedown(function(e) {
     }
   }
   if(e.target.closest('.touchspin.horizontal > input')){
-    e.preventDefault();
     if(e.keyCode === 38) {
       e.preventDefault();
       increaseValue(touchspinHorInput);
