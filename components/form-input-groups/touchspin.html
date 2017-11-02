@@ -50,54 +50,54 @@
 
   <h5>States for touchspin container with vertical buttons</h5>
   <pre data-title="Focused input with form controls">
-    <style data-selector=".touchspin-example-1.focused .form-control"></style>
+    <style data-selector=".touchspin.vertical.focused .form-control"></style>
   </pre>
   <pre data-title="Focused angle up button">
-    <style data-selector=".touchspin-example-1.focused .btn:first-child"></style>
-    <style data-selector=".touchspin-example-1.focused .btn:first-child:hover">:hover</style>
-    <style data-selector=".touchspin-example-1.focused .btn:first-child:focus">:focus</style>
-    <style data-selector=".touchspin-example-1.focused .btn:first-child:focus:hover">:focus:hover</style>
+    <style data-selector=".touchspin.vertical.focused .btn:first-child"></style>
+    <style data-selector=".touchspin.vertical.focused .btn:first-child:hover">:hover</style>
+    <style data-selector=".touchspin.vertical.focused .btn:first-child:focus">:focus</style>
+    <style data-selector=".touchspin.vertical.focused .btn:first-child:focus:hover">:focus:hover</style>
   </pre>
   <pre data-title="Angle down button">
-    <style data-selector=".touchspin-example-1.focused .btn:last-child"></style>
-    <style data-selector=".touchspin-example-1.focused .btn:last-child:hover">:hover</style>
-    <style data-selector=".touchspin-example-1.focused .btn:last-child:focus">:focus</style>
-    <style data-selector=".touchspin-example-1.focused .btn:last-child:focus:hover">:focus:hover</style>
+    <style data-selector=".touchspin.vertical.focused .btn:last-child"></style>
+    <style data-selector=".touchspin.vertical.focused .btn:last-child:hover">:hover</style>
+    <style data-selector=".touchspin.vertical.focused .btn:last-child:focus">:focus</style>
+    <style data-selector=".touchspin.vertical.focused .btn:last-child:focus:hover">:focus:hover</style>
   </pre>
   <h5>States for touchspin container with incrementer</h5>
   <pre data-title="Input with form controls">
-    <style data-selector=".touchspin-example-2.focused .form-control"></style>
+    <style data-selector=".touchspin.horizontal.focused .form-control"></style>
   </pre>
   <pre data-title="Minus button">
-    <style data-selector=".touchspin-example-2.focused .input-group-btn:first-child .btn"></style>
-    <style data-selector=".touchspin-example-2.focused .input-group-btn:first-child .btn:hover">:hover</style>
-    <style data-selector=".touchspin-example-2.focused .input-group-btn:first-child .btn:focus:hover">:focus:hover</style>
+    <style data-selector=".touchspin.horizontal.focused .input-group-btn:first-child .btn"></style>
+    <style data-selector=".touchspin.horizontal.focused .input-group-btn:first-child .btn:hover">:hover</style>
+    <style data-selector=".touchspin.horizontal.focused .input-group-btn:first-child .btn:focus:hover">:focus:hover</style>
   </pre>
   <pre data-title="Plus button">
-    <style data-selector=".touchspin-example-2.focused .input-group-btn:last-child .btn"></style>
-    <style data-selector=".touchspin-example-2.focused .input-group-btn:last-child .btn:hover">:hover</style>
-    <style data-selector=".touchspin-example-2.focused .input-group-btn:last-child .btn:focus:hover">:focus:hover</style>
+    <style data-selector=".touchspin.horizontal.focused .input-group-btn:last-child .btn"></style>
+    <style data-selector=".touchspin.horizontal.focused .input-group-btn:last-child .btn:hover">:hover</style>
+    <style data-selector=".touchspin.horizontal.focused .input-group-btn:last-child .btn:focus:hover">:focus:hover</style>
   </pre>
 </section>
 
 <section class="form-input-groups-example">
   <p>A touchspin should support controls using the mouse wheel and the UP and DOWN keys. You can set a maximum limit for the input.</p>
 
-    <div class="input-group touchspin-example-1" data-touchspin="removeClass">
-      <input type="text" class="form-control" id="touchspin_1" value="0">
+    <div class="input-group touchspin vertical">
+      <input type="text" class="form-control" value="0">
       <div class="btn-group-vertical">
-        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="touchspin"><span class="icon icon_angleup"></span></button>
-        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="touchspin"><span class="icon icon_angledown"></span></button>
+        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="vertical"><span class="icon icon_angleup"></span></button>
+        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="vertical"><span class="icon icon_angledown"></span></button>
       </div>
     </div><!-- /input-group -->
 
-    <div class="input-group touchspin-example-2">
+    <div class="input-group touchspin horizontal">
       <span class="input-group-btn">
-        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="touchspin"><span class="icon icon-minus"></span></button>
+        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="horizontal"><span class="icon icon-minus"></span></button>
       </span>
-      <input type="text" class="form-control" id="touchspin_2" value="0">
+      <input type="text" class="form-control" value="0">
       <span class="input-group-btn">
-        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="touchspin"><span class="icon icon-plus"></span></button>
+        <button type="button" class="btn btn-border btn-icon-only" data-touchspin="horizontal"><span class="icon icon-plus"></span></button>
       </span>
     </div><!-- /input-group -->
 
