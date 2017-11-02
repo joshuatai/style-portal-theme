@@ -27,11 +27,9 @@
 // styling of responsive aspects.
 
 .navbar-header {
+  border-right: 1px solid #C22327;
   &:extend(.clearfix all);
-
-  @media (min-width: @grid-float-breakpoint) {
-    float: left;
-  }
+  float: left;
 }
 
 // Navbar collapse (body)
@@ -159,13 +157,13 @@
 
 .navbar-brand {
   float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
-  font-size: @font-size-large;
-  line-height: @line-height-base-computed;
-  height: @navbar-height;
-
+  padding: 8px 24px;
+  
+  &,
   &:hover,
   &:focus {
+    cursor: default;
+    background-color: transparent;
     text-decoration: none;
   }
 
@@ -386,12 +384,22 @@ header .navbar-nav > li > .dropdown-menu {
   background-color: @navbar-default-bg;
   border-color: @navbar-default-border;
 
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .navbar-brand {
     color: @navbar-default-brand-color;
     &:hover,
     &:focus {
       color: @navbar-default-brand-hover-color;
       background-color: @navbar-default-brand-hover-bg;
+    }
+    > .icon {
+      width: 24px;
+      height: 24px;
+      vertical-align: top;
     }
   }
 
@@ -429,15 +437,6 @@ header .navbar-nav > li > .dropdown-menu {
     > li:hover > a {
       color: @navbar-default-link-hover-color;
       background-color: @navbar-default-link-hover-bg;
-    }
-
-    > li.navbar-first > a {
-      &,
-      &:hover,
-      &:focus {
-        cursor: default;
-        background-color: transparent;
-      }
     }
 
     > .active > a,
@@ -689,7 +688,7 @@ header .navbar-nav > li > .dropdown-menu {
 
 // Navbar Item fixed top
 // --------------------------------------------------
-.affix-top .navbar-first {
+.affix-top .navbar-header {
   animation-duration: 200ms;
   animation-name: slideleft;
   animation-fill-mode: forwards;
@@ -697,7 +696,7 @@ header .navbar-nav > li > .dropdown-menu {
 .affix {
   width: 100%;
 }
-.affix .navbar-first{
+.affix .navbar-header {
   animation-duration: 550ms;
   animation-name: slideright;
   animation-fill-mode: forwards;
