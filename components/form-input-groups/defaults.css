@@ -24,10 +24,10 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-input-groups-example .input-icon-group.touchspin-example-1,
-.form-input-groups-example .input-group.touchspin-example-1,
-.form-input-groups-example .input-icon-group.touchspin-example-2,
-.form-input-groups-example .input-group.touchspin-example-2 {
+.form-input-groups-example .input-icon-group.touchspin.vertical,
+.form-input-groups-example .input-group.touchspin.vertical,
+.form-input-groups-example .input-icon-group.touchspin.horizontal,
+.form-input-groups-example .input-group.touchspin.horizontal {
   width: 168px;
 }
 /*.form-input-groups-example .input-group .form-control {

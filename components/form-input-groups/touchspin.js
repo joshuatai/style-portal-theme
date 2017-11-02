@@ -1,46 +1,61 @@
-$('[data-touchspin=touchspin]', this).mousedown(function(e) {
+var touchspinVertical = $('.touchspin.vertical');
+var touchspinHorizontal = $('.touchspin.horizontal');
+var touchspinVerInput = touchspinVertical.find('input');
+var touchspinHorInput = touchspinHorizontal.find('input');
+
+$('[data-touchspin=vertical]', this).mousedown(function(e) {
   e.stopPropagation();
-  var contentObj_1 = document.getElementById("touchspin_1");
-  var contentObj_2 = document.getElementById("touchspin_2");
-  var value_1 = parseInt(contentObj_1.value);
-  var value_2 = parseInt(contentObj_2.value);
   var button = $(this).find('span');
-
-  if(button.hasClass("icon_angledown") || button.hasClass("icon_angleup")) {
-    if(!$('.touchspin-example-1').hasClass("focused")) {
-      $('.touchspin-example-1').addClass("focused");
-    }
-  }
-  if(button.hasClass("icon-minus") || button.hasClass("icon-plus")) {
-    if(!$('.touchspin-example-2').hasClass("focused")) {
-      $('.touchspin-example-2').addClass("focused");
-    }
-  }
+  removeFocus(touchspinHorizontal)
+  addFocus(touchspinVertical);
   if(button.hasClass("icon_angledown")) {
-      contentObj_1.value--;
-  } else if(button.hasClass("icon_angleup")){
-      contentObj_1.value++;
-  }
-  if(button.hasClass("icon-minus")) {
-      contentObj_2.value--;
-  } else if(button.hasClass("icon-plus")){
-      contentObj_2.value++;
+    touchspinVerInput.val(parseInt(touchspinVerInput.val()) - 1);
+  } 
+  if(button.hasClass("icon_angleup")){
+    touchspinVerInput.val(parseInt(touchspinVerInput.val()) + 1);
   }
 });
 
-$('#touchspin_1').mousedown(function(e) {
+$('[data-touchspin=horizontal]', this).mousedown(function(e) {
   e.stopPropagation();
-  if(!$('.touchspin-example-1').hasClass("focused")) {
-    $('.touchspin-example-1').addClass("focused");
+  var button = $(this).find('span');
+  removeFocus(touchspinVertical);
+  addFocus(touchspinHorizontal);
+  if(button.hasClass("icon-minus")) {
+    touchspinHorInput.val(parseInt(touchspinHorInput.val()) - 1);
+  } 
+  if(button.hasClass("icon-plus")){
+    touchspinHorInput.val(parseInt(touchspinHorInput.val()) + 1);
   }
-  });
-  $('#touchspin_2').mousedown(function(e) {
-  e.stopPropagation();
-  if(!$('.touchspin-example-2').hasClass("focused")) {
-    $('.touchspin-example-2').addClass("focused");
-  }
-  });
-  $('.wrapper').mousedown(function(e) {
-  $('.touchspin-example-1.focused').removeClass("focused");
-  $('.touchspin-example-2.focused').removeClass("focused");
 });
+
+touchspinVerInput.mousedown(function(e) {
+  e.stopPropagation();
+  removeFocus(touchspinHorizontal);
+  addFocus(touchspinVertical);
+});
+
+touchspinHorInput.mousedown(function(e) {
+  e.stopPropagation();
+  removeFocus(touchspinVertical);
+  addFocus(touchspinHorizontal);
+});
+
+$(document).mousedown(function(e) {
+  removeFocus('clearAll');
+});
+
+function addFocus(element) {
+  if(!element.hasClass('focused')) {
+    element.addClass('focused');
+  }
+}
+
+function removeFocus(element) {
+  if(element === 'clearAll') {
+    touchspinVertical.removeClass('focused');
+    touchspinHorizontal.removeClass('focused');
+  } else {
+    element.removeClass('focused');
+  }
+}
