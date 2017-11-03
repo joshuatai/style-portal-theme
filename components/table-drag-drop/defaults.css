@@ -16,3 +16,8 @@
     padding: 0 !important;
 		border: 0 !important;
 }
+
+.drag-drop-column-example .ui-column-highlight {
+  background-color: #f4f4f4;
+  color: #f4f4f4;
+}
