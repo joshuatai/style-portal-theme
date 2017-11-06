@@ -17,7 +17,22 @@
 		border: 0 !important;
 }
 
-.drag-drop-column-example .ui-column-highlight {
-  background-color: #f4f4f4;
-  color: #f4f4f4;
+.drag-drop-column-example .table-col-draggable-container .ui-column-highlight {
+  background-color: #f8f8f8;
+  color: #dddddd;
+  font-weight: bold;
+}
+
+.drag-drop-column-example .table-col-draggable-container-2 td.ui-column-highlight2 {
+  color: #dddddd;
+}
+.drag-drop-column-example .table-col-draggable-container-2 th.ui-column-highlight2 {
+  background-color: #f8f8f8;
+  color: #dddddd;
+}
+
+.drag-drop-column-example .draggable-table-col-helper2 thead th {
+  background-color: #ffffff;
+  border-color: #bbb;
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
