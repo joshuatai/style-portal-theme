@@ -1,4 +1,4 @@
-$('.edit-cell > span').editable({
+$('.table-edit.single-field .edit-cell > span').editable({
   mode: 'inline',
   onblur: 'submit',
   clear: false,

@@ -886,7 +886,8 @@
       "table"
     ],
     "segments": [
-      "6dfdb341-105a-4bc9-b1e7-6881066ac4de"
+      "6dfdb341-105a-4bc9-b1e7-6881066ac4de",
+      "7df05e2f-1185-4259-9ce9-fa503aba0b0a"
     ],
     "css": {
       "name": "Table Inline Editing",
@@ -894,7 +895,8 @@
         "dependencies/normalize",
         "core/forms",
         "components/tables",
-        "components/table-editable"
+        "components/table-editable",
+        "components/popovers"
       ]
     }
   },

@@ -1,4 +1,15 @@
 .table-edit {
+  &.validation {
+    > tbody {
+      > tr {
+        td.edit-cell {
+          &.edit-mode {
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
   > tbody {
     > tr {
       td.edit-cell {
@@ -33,3 +44,5 @@
     }
   }
 }
+
+
