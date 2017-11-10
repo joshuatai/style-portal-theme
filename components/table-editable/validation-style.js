@@ -1,3 +1,29 @@
+$('.table-edit.validation .edit-cell').on('focusout', '.editable-input', function(e) {
+  var $input = $(this).find('.form-control');
+  var $cell = $(this).parents('.edit-cell');
+  var $editable = $cell.find('.editable');
+  var opts = $editable.data('editable');
+  var invalidate = $editable.data('editable').options.validator($input, $input.val());
+  $cell.toggleClass('error-mode', !invalidate);
+})
+.on('keydown', '.form-control', function(e) {
+  if (e.which === 13) {
+    var $input = $(this);
+    var $cell = $(this).parents('.edit-cell');
+    var $editable = $cell.find('.editable');
+    var opts = $editable.data('editable');
+    var invalidate = $editable.data('editable').options.validator($input, $input.val());
+    $input.toggleClass('form-invalid', !invalidate);
+    if(!invalidate) {
+      $input.focus();
+      $editable.editable('show');
+    } else {
+      $editable.editable('setValue', $input.val());
+      $editable.editable('hide');
+    }
+  }
+});
+
 $('.table-edit.validation .edit-cell > span').editable({
   mode: 'inline',
   onblur: 'submit',
@@ -5,11 +31,10 @@ $('.table-edit.validation .edit-cell > span').editable({
   highlight: false,
   showbuttons: false,
   inputclass: 'form-control',
+  toggle: 'manual',
   emptytext: '&nbsp;',
-  validate: function(value) {
-    console.log('validate');
-    if($.trim(value) == '') {
-      var input = $(this).next('.editable-inline').find('.form-control');
+  validator: function(input, value) {
+    if(/[\?]/.test(value)) {
       var errorMsg = 'This field is required';
       var invalidElement = 
         `<div class="popover bottom-right align-left" role="tooltip">
@@ -18,39 +43,33 @@ $('.table-edit.validation .edit-cell > span').editable({
         </div>`;
       input.popover({
         content: errorMsg, 
-        trigger: 'hover',
+        trigger: 'hover focus',
         placement: 'bottom',
-        html: true, 
         template: invalidElement
       });
       input.addClass('form-invalid');
-      input.popover('show');
       $('.editable-error-block').removeClass('help-block');
-      return ' ';
+      return false;
     }
-  }
-})
-.on('mousedown', function(e) {
-  var invalidInput = $('.edit-cell.edit-mode').find('.form-control.form-invalid');
-  if(invalidInput.length) {
-    $(this).editable('enable');
+    return true;
   }
 })
 .on('click', function(e) {
-  var invalidInput = $('.edit-cell.edit-mode').find('.form-control.form-invalid');
-  if(invalidInput.length) {
-    invalidInput.popover('show');
-  }
-})
-.on('save', function(e) {
-  var editableCell = $('.edit-cell > .editable');
-  editableCell.editable('enable');
+  e.stopPropagation();
+  $(this).editable('show');
 })
 .on('shown', function(e, editable) {
   var $td = editable.$element.parent();
+  var input = editable.input.$input;
   $td.addClass('edit-mode');
+  editable.options.validator(input, input.val());
+  input.keypress(function (e) {
+    if (e.which == 13) {
+      return false;
+    }
+  });
 })
-.on('hidden', function(e) {
+.on('hidden', function(e, reason) {
   var $td = $(e.target).parent();
   $td.removeClass('edit-mode');
 });

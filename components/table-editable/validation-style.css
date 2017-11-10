@@ -14,6 +14,6 @@
 	position: relative;
 	display: block;
 }
-.table-validation-edit-example .edit-cell .editable-click {
+.table-validation-edit-example .edit-cell .editable {
 	outline: none;
 }
