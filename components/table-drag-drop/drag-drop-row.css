@@ -1,0 +1,18 @@
+.drag-drop-row-example .table-row-draggable > thead > tr > th:nth-child(2),
+.drag-drop-row-example .table-row-selection > tbody > tr > td:nth-child(2) {
+	width: 72px;
+}
+.drag-drop-row-example .table-row-draggable > thead > tr > th:nth-child(3),
+.drag-drop-row-example .table-row-draggable > tbody > tr > td:nth-child(3) {
+	width: 60.53%;
+}
+.table-row-draggable-helper {
+	border: 0 !important;
+}
+.table-row-draggable-helper thead th {
+    line-height: 0 !important;
+    font-size: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+		border: 0 !important;
+}
