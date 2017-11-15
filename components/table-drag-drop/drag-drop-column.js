@@ -9,52 +9,76 @@ function getSelectedText () {
 	}
 }
 
+var $tableContainer = $('.table-col-draggable-container');
 var $tableThead = $('.table-col-draggable-container .table-column-draggable thead');
 var $tableTbody = $('.table-col-draggable-container .table-column-draggable tbody');
-var startIdx;
+var $draggableItems = $tableThead.find('th.column-sortable');
+var highlightTh;
+var candidateTh;
 var originalIdx;
+var newIdx;
+var sensorPosition = [];
 
-var fixHelper = function(e, ui) {
-  var tableAlias = $('.table-col-draggable-container .table-column-draggable').clone().addClass('draggable-table-col-helper').css({"background-color": "#ffffff", "top": "0px"});
-  var tableAliasHead = tableAlias.find('thead');
-  var tableAliasBody = tableAlias.find('tbody');
-  tableAliasHead.html('');
-  tableAliasBody.html('');
-  tableAliasHead.append(`<tr>${ui.clone().prop('outerHTML')}</tr>`);
-  return tableAlias;
-};
-
-$tableThead.sortable({
-  axis: "x" ,
-  items: 'th.column-sortable',
-  revert: 300,
-  tolerance: "pointer",
-  cursor: 'move',
-  placeholder: 'ui-column-highlight',
+$draggableItems.draggable({
+	cursor: 'move',
+  cursorAt: { left: 5 },
   appendTo: ".table-col-draggable-container",
-  helper: fixHelper,
-  start: function(event, ui) {
-    $('.ui-column-highlight').html(ui.item.prop('innerHTML'));
-    startIdx = $tableThead.find('th').index(ui.item);
-    originalIdx = startIdx;
-  },
-  change: function(event, ui) {
-    var newIdx = $tableThead.find('th').index($tableThead.find('th.ui-column-highlight'));
-    if( newIdx > startIdx ) newIdx--;
-    $tableTbody.find('tr').find('td:eq(' + originalIdx + ')').each(function() {
-      var placeholderTd = $(this);
-      var placeholderTr = placeholderTd.parent();
-      var candidateTd = placeholderTr.find('td:eq(' + newIdx + ')');
-
-      if(newIdx > originalIdx) {
-        candidateTd.after(placeholderTd);  // Move it the right
-      } else {
-        candidateTd.before(placeholderTd); 
-      }
-
-    });
-    originalIdx = newIdx;
-  }
+	helper: 'clone',
+	start: function(event, ui) {
+		originalIdx = $tableThead.find('th').index($(this));
+		$(this).addClass('ui-column-highlight');
+		$(this).draggable('option').sensorOffset();
+	},
+	sensorOffset: function(){
+		sensorPosition = [];
+		$draggableItems.each(function() {
+			sensorPosition.push($(this).offset().left);
+		});
+		sensorPosition.sort(function(a, b){ return a-b });
+	},
+	change: function(direction, originalIdx, newIdx) {
+		highlightTh = $tableThead.find('tr').find('.ui-column-highlight');
+		candidateTh = $tableThead.find('tr').find('th:eq(' + newIdx + ')');
+		if(direction === 'right') {
+			candidateTh.after(highlightTh);
+		} else {
+			candidateTh.before(highlightTh);
+		}
+		$tableTbody.find('tr').find('td:eq(' + originalIdx + ')').each(function() {
+			var placeholderTd = $(this);
+			var placeholderTr = placeholderTd.parent();
+			var candidateTd = placeholderTr.find('td:eq(' + newIdx + ')');
+			if(direction === 'right') {
+				candidateTd.after(placeholderTd);
+			} else {
+				candidateTd.before(placeholderTd);
+			}
+		});
+		return true;
+	},
+	drag: function( event, ui ) {
+		if(event.pageY > $tableThead.offset().top && event.pageY < ($tableThead.offset().top + $tableContainer.height())){
+			if(event.pageX > sensorPosition[originalIdx]) {
+				newIdx = originalIdx + 1;
+				var hasChanged = $(this).draggable('option').change('right', originalIdx, newIdx);
+				if(hasChanged){
+					originalIdx = newIdx;
+				}
+			}
+			if(event.pageX < sensorPosition[originalIdx-1] && originalIdx > 1) {
+				if(event.pageX > sensorPosition[0]) {
+					newIdx = originalIdx - 1;
+					var hasChanged = $(this).draggable('option').change('left', originalIdx, newIdx);
+					if(hasChanged){
+						originalIdx = newIdx;
+					}
+				}
+			}
+		}
+	},
+	stop: function( event, ui ) {
+		$(this).removeClass('ui-column-highlight');
+	}
 });
 
 $('.table-col-draggable-container .table-column-draggable').on('click', 'thead > tr > th.gutter > .checkbox', (e) => {
@@ -137,58 +161,4 @@ $('.table-col-draggable-container .table-column-draggable').on('click', 'thead >
 })
 .on('click', 'tbody > tr a', (e) => {
 	e.stopPropagation();
-});
-
-
-var $tableThead2 = $('.table-col-draggable-container-2 .table-column-draggable thead');
-var $tableTbody2 = $('.table-col-draggable-container-2 .table-column-draggable tbody');
-var startIdx2;
-var originalIdx2;
-
-var fixHelper2 = function(e, ui) {
-  var tableAlias = $('.table-col-draggable-container-2 .table-column-draggable').clone().addClass('draggable-table-col-helper2').css({"background-color": "#ffffff", "top": "799px"});
-  var tableAliasHead = tableAlias.find('thead');
-  var tableAliasBody = tableAlias.find('tbody');
-  tableAliasHead.html('');
-  tableAliasBody.html('');
-  tableAliasHead.append(`<tr>${ui.clone().prop('outerHTML')}</tr>`);
-  // tableAliasHead.find('th').width(ui.outerWidth());
-  return tableAlias;
-};
-
-$tableThead2.sortable({
-  axis: "x" ,
-  items: 'th',
-  revert: 300,
-  tolerance: "pointer",
-  cursor: 'move',
-  placeholder: 'ui-column-highlight2',
-  appendTo: ".table-col-draggable-container-2",
-  helper: fixHelper2,
-  start: function(event, ui) {
-    $('.ui-column-highlight2').html(ui.item.prop('innerHTML'));
-    startIdx2 = $tableThead2.find('th').index(ui.item);
-    $tableTbody2.find('tr').find('td:eq(' + startIdx2 + ')').each(function() {
-      var tdElement = $(this);
-      tdElement.addClass('ui-column-highlight2');
-    });
-    originalIdx2 = startIdx2;
-  },
-  change: function(event, ui) {
-    var newIdx = $tableThead2.find('th').index($tableThead2.find('th.ui-column-highlight2'));
-    if( newIdx > startIdx2 ) newIdx--;
-    $tableTbody2.find('tr').find('td:eq(' + originalIdx2 + ')').each(function() {
-        var tdElement = $(this);
-        var tdElementParent = tdElement.parent();
-        if(newIdx > originalIdx2) { // Move it the right
-          tdElementParent.find('td:eq(' + newIdx + ')').after(tdElement); 
-        } else { // Move it the left
-          tdElementParent.find('td:eq(' + newIdx + ')').before(tdElement); 
-        }
-    });
-    originalIdx2 = newIdx;
-  },
-  stop: function( event, ui ) {
-    $tableTbody2.find('td').removeClass('ui-column-highlight2');
-  }
 });
