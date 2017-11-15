@@ -1,0 +1,26 @@
+{
+  "id": "f160851d-daf9-452e-aadc-2139e629ae47",
+  "from": ["ed131974-58a7-408b-b724-b24bd9831cbe"],
+  "name": "Draggable Columns",
+  "keywords": [
+    "drag",
+    "drop",
+    "column",
+    "tables"
+  ],
+  "location": "table-drag-drop/drag-drop-column.html",
+  "dependencies": [
+    "jquery-ui-1.12.1"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-8"
+  }
+}

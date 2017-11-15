@@ -6,10 +6,10 @@
 .drag-drop-row-example .table-row-draggable > tbody > tr > td:nth-child(3) {
 	width: 60.53%;
 }
-.draggable-table-helper {
+.table-row-draggable-helper {
 	border: 0 !important;
 }
-.draggable-table-helper thead th {
+.table-row-draggable-helper thead th {
     line-height: 0 !important;
     font-size: 0 !important;
     height: 0 !important;

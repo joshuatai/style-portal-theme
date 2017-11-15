@@ -11,7 +11,7 @@ function getSelectedText () {
 }
 
 var fixHelper = function(e, ui) {
-		var tableAlias = $('.table-row-draggable').clone().addClass('draggable-table-helper');
+		var tableAlias = $('.table-row-draggable').clone().addClass('table-row-draggable-helper');
 		var tableAliasHead = tableAlias.find('thead');
 		var tableAliasBody = tableAlias.find('tbody');
 		tableAliasBody.html('');

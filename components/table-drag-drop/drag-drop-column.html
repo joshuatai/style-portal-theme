@@ -1,0 +1,101 @@
+<section class="css-reference">
+  <h5>Draggable indicator</h5>
+  <pre data-title=":hover">
+    <style data-selector=".table-column-draggable thead th.column-sortable:hover"></style>
+  </pre>
+  <h5>Helper</h5>
+	<p>Use this style on the dragged table header cell.</p>
+	<pre>
+    <style data-selector=".column-sortable.ui-draggable-dragging"></style>
+  </pre>
+	<h5>Placeholder</h5>
+	<p>Use this style on table header cell to indicate where a dragged column will be dropped.</p>
+  <pre>
+    <style data-selector=".table-column-draggable thead th.ui-column-highlight"></style>
+  </pre>
+</section>
+
+<section class="drag-drop-column-example">
+  <p>Tables with draggable columns allow users to rearrange the order of table columns.</p>
+  <div class="lists-unordered">
+    <ul>
+      <li>Only allow one column to be dragged at a time.</li>
+      <li>Click and drag a column header to the desired position.</li>
+      <li>When mouseover a draggable column header, display a visual hint (a pointer cursor).</li>
+      <li>When dragging a column header, display a visual hint (a move cursor).</li>
+      <li>Display a visual hint (change font and background colors in the column header) to indicate where a dragged column will be dropped.</li>
+      <li>Selection columns (for example, checkboxes or radio buttons) are not draggable.</li>
+    </ul>
+  </div>
+  <div class="table-col-draggable-container">
+    <table class="table table-bordered table-column-draggable">
+      <thead class="ui-state-highlight">
+        <tr>
+          <th class="gutter">
+            <div class="checkbox">
+              <input type="checkbox" name="tablecheckboxs" id="table-column-draggable-checkbox" class="input-checkbox">
+              <label for="table-column-draggable-checkbox"></label>
+            </div>
+          </th>
+          <th class="column-sortable">Deployment Plan</th>
+          <th class="column-sortable column-3">Type</th>
+          <th class="column-sortable column-4">Product Name</th>
+          <th class="column-sortable column-5">Agent Version</th>
+          <th class="column-sortable column-6">Language</th>
+          <th class="column-sortable column-7">Deployed</th>
+          <th class="column-sortable column-8">Creator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">
+            <span class="draggable-indicator"></span>
+            <div class="checkbox">
+              <input type="checkbox" name="tablecheckboxs" id="table-column-draggable-checkbox-1" class="input-checkbox">
+              <label for="table-column-draggable-checkbox-1"></label>
+            </div>
+          </td>
+          <td>Hotfix_DDEI</td>
+          <td>Hotfix</td>
+          <td>Deep Discovery Inspector</td>
+          <td>1.1.0.1048</td>
+          <td>English</td>
+					<td>2016-06-02 23:15:00</td>
+					<td>Administrator</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span class="draggable-indicator"></span>
+            <div class="checkbox">
+              <input type="checkbox" name="tablecheckboxs" id="table-column-draggable-checkbox-2" class="input-checkbox">
+              <label for="table-column-draggable-checkbox-2"></label>
+            </div>
+          </td>
+          <td>Hotfix_DDI_01</td>
+          <td>Virtual Analyzer image</td>
+          <td>Deep Discovery Inspector</td>
+          <td>1.1.0.1048</td>
+          <td>English</td>
+          <td>2016-04-18 23:17:20</td>
+          <td>Administrator</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <span class="draggable-indicator"></span>
+            <div class="checkbox">
+              <input type="checkbox" name="tablecheckboxs" id="table-column-draggable-checkbox-3" class="input-checkbox">
+              <label for="table-column-draggable-checkbox-3"></label>
+            </div>
+          </td>
+          <td>TW_Patch_01_DDI</td>
+          <td>Firmware</td>
+          <td>Deep Discovery Email Inspector</td>
+          <td>1.1.0.1048</td>
+          <td>Japanese</td>
+          <td>2016-04-17 21:20:18</td>
+          <td>Operator</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
