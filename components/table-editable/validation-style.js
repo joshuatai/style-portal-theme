@@ -3,16 +3,20 @@ $('.table-edit.validation .edit-cell').on('focusout', '.editable-input', functio
   var $cell = $(this).parents('.edit-cell');
   var $editable = $cell.find('.editable');
   var opts = $editable.data('editable');
-  var invalidate = $editable.data('editable').options.validator($input, $input.val());
+  var validateVal = $input.val();
+  var invalidate = opts.options.validator($input, validateVal);
   $cell.toggleClass('error-mode', !invalidate);
 })
 .on('keydown', '.form-control', function(e) {
+  var $input = $(this);
+  var $cell = $(this).parents('.edit-cell');
+  var $editable = $cell.find('.editable');
   if (e.which === 13) {
     var $input = $(this);
     var $cell = $(this).parents('.edit-cell');
     var $editable = $cell.find('.editable');
     var opts = $editable.data('editable');
-    var invalidate = $editable.data('editable').options.validator($input, $input.val());
+    var invalidate = opts.options.validator($input, $input.val());
     $input.toggleClass('form-invalid', !invalidate);
     if(!invalidate) {
       $input.focus();
@@ -21,6 +25,10 @@ $('.table-edit.validation .edit-cell').on('focusout', '.editable-input', functio
       $editable.editable('setValue', $input.val());
       $editable.editable('hide');
     }
+  }
+  if (e.which === 27) {
+    $editable.editable('setValue', $editable.editable('getValue', true));
+    $editable.editable('hide');
   }
 });
 
@@ -48,7 +56,6 @@ $('.table-edit.validation .edit-cell > span').editable({
         template: invalidElement
       });
       input.addClass('form-invalid');
-      $('.editable-error-block').removeClass('help-block');
       return false;
     }
     return true;
@@ -64,7 +71,12 @@ $('.table-edit.validation .edit-cell > span').editable({
   $td.addClass('edit-mode');
   editable.options.validator(input, input.val());
   input.keypress(function (e) {
-    if (e.which == 13) {
+    if (e.which === 13) {
+      return false;
+    }
+  })
+  .keyup(function (e) {
+    if (e.which === 27) {
       return false;
     }
   });
