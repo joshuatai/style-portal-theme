@@ -20,6 +20,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-5"
+    "row": "row-md-9"
   }
 }
