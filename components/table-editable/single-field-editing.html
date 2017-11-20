@@ -3,13 +3,19 @@
   <pre data-title=":hover">
     <style data-selector=".table-edit > tbody > tr td.edit-cell.edit-mode"></style>
   </pre>
+  <pre data-title="Editable mode with a popover">
+    <style data-selector=".table-edit.validation > tbody > tr td.edit-cell.edit-mode"></style>
+  </pre>
   <h5>Editable cell container</h5>
   <p>When mouse-over, the container displays cell borders to indicate editable cells.</p>
   <pre>
     <style data-selector=".table-edit > tbody > tr td.edit-cell:hover .editable"></style>
   </pre>
   <pre data-title="Invalid state">
-    <style data-selector=".table-edit > tbody > tr td.edit-cell.error-mode .editable"></style>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell.error-mode .editable">When the input value is invalid.</style>
+  </pre>
+  <pre>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell .editable-inline"></style>
   </pre>
   <h5>Editable input</h5>
   <pre data-title=":focus">

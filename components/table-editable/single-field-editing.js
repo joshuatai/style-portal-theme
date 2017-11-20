@@ -1,3 +1,4 @@
+// Noraml editable
 $('.table-edit.single-field .edit-cell > span').editable({
   mode: 'inline',
   onblur: 'submit',
@@ -16,14 +17,13 @@ $('.table-edit.single-field .edit-cell > span').editable({
   $td.removeClass('edit-mode');
 });
 
-
+// Validation editable input event control
 $('.table-edit.validation .edit-cell').on('focusout', '.editable-input', function(e) {
   var $input = $(this).find('.form-control');
   var $cell = $(this).parents('.edit-cell');
   var $editable = $cell.find('.editable');
   var opts = $editable.data('editable');
-  var validateVal = $input.val();
-  var invalidate = opts.options.validator($input, validateVal);
+  var invalidate = opts.options.validator($input, $input.val());
   $cell.toggleClass('error-mode', !invalidate);
 })
 .on('keydown', '.form-control', function(e) {
@@ -31,9 +31,6 @@ $('.table-edit.validation .edit-cell').on('focusout', '.editable-input', functio
   var $cell = $(this).parents('.edit-cell');
   var $editable = $cell.find('.editable');
   if (e.which === 13) {
-    var $input = $(this);
-    var $cell = $(this).parents('.edit-cell');
-    var $editable = $cell.find('.editable');
     var opts = $editable.data('editable');
     var invalidate = opts.options.validator($input, $input.val());
     $input.toggleClass('form-invalid', !invalidate);
@@ -51,6 +48,7 @@ $('.table-edit.validation .edit-cell').on('focusout', '.editable-input', functio
   }
 });
 
+// Validation editable
 $('.table-edit.validation .edit-cell > span').editable({
   mode: 'inline',
   onblur: 'submit',
@@ -89,12 +87,13 @@ $('.table-edit.validation .edit-cell > span').editable({
   var input = editable.input.$input;
   $td.addClass('edit-mode');
   editable.options.validator(input, input.val());
+  
+  // Prevent enter and esc event for manual control
   input.keypress(function (e) {
     if (e.which === 13) {
       return false;
     }
-  })
-  .keyup(function (e) {
+  }).keyup(function (e) {
     if (e.which === 27) {
       return false;
     }
@@ -105,4 +104,5 @@ $('.table-edit.validation .edit-cell > span').editable({
   $td.removeClass('edit-mode');
 });
 
+// For display when page load.
 $('.table-edit.validation .edit-cell.default-error > span').editable('show');

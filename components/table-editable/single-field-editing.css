@@ -14,10 +14,6 @@
 .table-validation-edit-example .popover.align-left {
 	left: 0 !important;
 }
-.table-validation-edit-example .editable-inline {
-	position: relative;
-	display: block;
-}
 .table-validation-edit-example .edit-cell .editable {
 	outline: none;
 }
