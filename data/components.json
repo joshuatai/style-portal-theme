@@ -49,10 +49,9 @@
   },
   {
     "id": "1811bd76-57b6-4fb9-930f-b6899313fa41",
-    "name": "Icons",
-    "keywords": [
-      "icon"
-    ],
+    "renderer": "icons",
+    "name": "Icon Font",
+    "keywords": null,
     "segments": []
   },
   {
