@@ -57,6 +57,7 @@ $draggableItems.draggable({
 		return true;
 	},
 	drag: function( event, ui ) {
+		$tableContainer.find('.table').removeClass('table-hover');
 		if(event.pageY > $tableThead.offset().top && event.pageY < ($tableThead.offset().top + $tableContainer.height())){
 			if(event.pageX > sensorPosition[originalIdx]) {
 				newIdx = originalIdx + 1;
@@ -77,6 +78,7 @@ $draggableItems.draggable({
 		}
 	},
 	stop: function( event, ui ) {
+		$tableContainer.find('.table').addClass('table-hover');
 		$(this).removeClass('ui-column-highlight');
 	}
 });
