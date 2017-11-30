@@ -1,11 +1,23 @@
 .table-edit {
+  &.validation {
+    > tbody {
+      > tr {
+        td.edit-cell {
+          &.edit-mode {
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
   > tbody {
     > tr {
       td.edit-cell {
-        &.edit-mode {
+        &.edit-mode,
+        &.error-mode {
           padding: 2px 2px;
         }
-        .editable-click {
+        .editable {
           display: block;
           white-space: nowrap;
           overflow: hidden;
@@ -20,7 +32,7 @@
         }
         &:hover {
           padding: 2px 2px;
-          .editable-click {
+          .editable {
             display: block;
             padding: 5px 12px 5px 9px;
             border: 1px solid #0096cc;
@@ -29,7 +41,26 @@
             cursor: pointer;
           }
         }
+        &.error-mode {
+          .editable {
+            display: block;
+            padding: 5px 12px 5px 9px;
+            border: 1px solid #db3d44;
+            border-radius: 3px;
+          }
+        }
+        .editable-inline {
+          position: relative;
+          display: block;
+        }
       }
     }
   }
+  .popover {
+    &.align-left {
+      left: 0;
+    }
+  }
 }
+
+

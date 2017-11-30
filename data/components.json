@@ -49,10 +49,9 @@
   },
   {
     "id": "1811bd76-57b6-4fb9-930f-b6899313fa41",
-    "name": "Icons",
-    "keywords": [
-      "icon"
-    ],
+    "renderer": "icons",
+    "name": "Icon Font",
+    "keywords": null,
     "segments": []
   },
   {
@@ -845,7 +844,8 @@
       "table"
     ],
     "segments": [
-      "2f551841-42d2-48d0-8a29-c94c4fa67f74"
+      "2f551841-42d2-48d0-8a29-c94c4fa67f74",
+      "f160851d-daf9-452e-aadc-2139e629ae47"
     ]
   },
   {
@@ -893,7 +893,8 @@
         "dependencies/normalize",
         "core/forms",
         "components/tables",
-        "components/table-editable"
+        "components/table-editable",
+        "components/popovers"
       ]
     }
   },

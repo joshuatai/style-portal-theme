@@ -1,0 +1,28 @@
+.table-inline-editing-example .table > thead > tr > th:nth-child(1),
+.table-inline-editing-example .table > tbody > tr > td:nth-child(1) {
+	width: 11.76%;
+}
+.table-inline-editing-example .table > thead > tr > th:nth-child(2),
+.table-inline-editing-example .table > tbody > tr > td:nth-child(2) {
+	width: 11.76%;
+}
+.table-inline-editing-example .table > thead > tr > th:nth-child(3),
+.table-inline-editing-example .table > tbody > tr > td:nth-child(3) {
+	width: 11.76%;
+}
+.table-inline-editing-example .table > thead > tr > th:nth-child(4),
+.table-inline-editing-example .table > tbody > tr > td:nth-child(4) {
+	width: 35.3%;
+}
+.table-inline-editing-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group {
+	display: block;
+	margin-right: 0;
+	float: none;
+}
+.table-inline-editing-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
+	margin-left: 0;
+	width: 100%;
+}
+.table-inline-editing-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
+	border-color: #0096cc;
+}

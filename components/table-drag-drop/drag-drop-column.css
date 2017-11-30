@@ -1,0 +1,27 @@
+.drag-drop-column-example .table-col-draggable-container {
+  position: relative;
+}
+.drag-drop-column-example .table .input-checkbox + label:before {
+	margin-right: 0;
+}
+.drag-drop-column-example .table > thead > tr > th.gutter {
+	width: 38px;
+}
+.drag-drop-column-example .table > thead > tr > th.column-3 {
+	width: 15%;
+}
+.drag-drop-column-example .table > thead > tr > th.column-4 {
+	width: 18%;
+}
+.drag-drop-column-example .table > thead > tr > th.column-5 {
+	width: 10%;
+}
+.drag-drop-column-example .table > thead > tr > th.column-6 {
+	width: 8%;
+}
+.drag-drop-column-example .table > thead > tr > th.column-7 {
+	width: 14%;
+}
+.drag-drop-column-example .table > thead > tr > th.column-8 {
+	width: 10%;
+}

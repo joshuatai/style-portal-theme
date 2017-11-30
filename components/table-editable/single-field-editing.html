@@ -3,29 +3,45 @@
   <pre data-title=":hover">
     <style data-selector=".table-edit > tbody > tr td.edit-cell.edit-mode"></style>
   </pre>
+  <pre data-title="Editable mode with a popover">
+    <style data-selector=".table-edit.validation > tbody > tr td.edit-cell.edit-mode"></style>
+  </pre>
   <h5>Editable cell container</h5>
   <p>When mouse-over, the container displays cell borders to indicate editable cells.</p>
   <pre>
-    <style data-selector=".table-edit > tbody > tr td.edit-cell:hover .editable-click"></style>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell:hover .editable"></style>
+  </pre>
+  <pre data-title="Invalid state">
+    <style data-selector=".table-edit > tbody > tr td.edit-cell.error-mode .editable">When the input value is invalid.</style>
+  </pre>
+  <pre>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell .editable-inline"></style>
   </pre>
   <h5>Editable input</h5>
+  <p>For details on input field styles, refer to <a href="#/styles/{{theme}}/{{version}}/206355af-1c26-49d7-b878-d3d6f094990f">Form Elements</a>.</p>
   <pre data-title=":focus">
     <style data-selector=".table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control"></style>
   </pre>
   <h5>String truncation</h5>
   <pre>
-    <style data-selector=".table-edit > tbody > tr td.edit-cell .editable-click"></style>
+    <style data-selector=".table-edit > tbody > tr td.edit-cell .editable"></style>
+  </pre>
+  <h5>Popovers</h5>
+  <p>For details on popover styles, refer to <a href="#/styles/{{theme}}/{{version}}/24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a">Popovers</a>.</p>
+  <pre>
+    <style data-selector=".table-edit .popover.align-left"></style>
   </pre>
 </section>
-<section class="table-singleField-edit-example">
+<section class="table-inline-editing-example table-single-field-edit-example">
   <div class="lists-unordered">
     <ul>
       <li>Inline editing allows users to modify contents directly on the same display screen without having to access a separate edit screen.</li>
-      <li>Use inline editing for values that users may need to update often in simple UI components (for example, drop-down lists) or formats (for example, text strings).</li>
+      <li>Use inline editing for values that users may need to update often in tables or formats (for example, text strings).</li>
+      <li>The most common way for users to start editing values in a table is to click a table cell.</li>
+      <li>For more information, see the <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Inline%20Edit/html/inline_edit_-_tabel_cell_without_button.html" target="_blank">Interaction Flowchart</a>.</li>
     </ul>
   </div>
-  <p>This example allows users to quickly modify values in a table. The most common way for users to start editing values in a table is to click a table cell.</p>
-	<table class="table table-bordered table-hover table-longtext-truncated table-edit">
+	<table class="table table-bordered table-hover table-longtext-truncated table-edit single-field">
     <thead>
       <tr>
         <th>Plan Name</th>
@@ -56,3 +72,43 @@
     </tbody>
   </table>
 </section>
+<section class="table-inline-editing-example table-validation-edit-example">
+    <h5>Invalid Field Values</h5>
+    <div class="lists-unordered">
+      <ul>
+        <li>When the value in an editable table cell is invalid, highlight the cell and display an error message.</li>
+        <li>When users click another editable cell or outside the table, highlight and revert the current editable cell to text mode.</li>
+        <li>Mouse over or click the invalid cell to display the error message.</li>
+      </ul>
+    </div>
+    <table class="table table-bordered table-hover table-longtext-truncated table-edit validation">
+      <thead>
+        <tr>
+          <th>Plan Name</th>
+          <th>Type</th>
+          <th>Creator</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="edit-cell default-error"><span></span></td>
+          <td>Hotfix</td>
+          <td>David Wu</td>
+          <td class="edit-cell"><span>ipsum dolor sit amet, consectetuer adipiscing elit.</span></td>
+        </tr>
+        <tr>
+          <td class="edit-cell"><span>Hotfix_DDI_01</span></td>
+          <td>Virtual Analyzer image</td>
+          <td>Michael Chen</td>
+          <td class="edit-cell"><span>Aenean commodo ligula eget dolor.</span></td>
+        </tr>
+        <tr>
+          <td class="edit-cell"><span>TW_Patch_01_DDI</span></td>
+          <td>Firmware</td>
+          <td>Eric Lin</td>
+          <td class="edit-cell"><span>Donec vitae sapien ut libero venenatis faucibus.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
