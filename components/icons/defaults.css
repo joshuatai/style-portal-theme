@@ -2,3 +2,11 @@
 .sketch {
   margin: 10px 0 15px 30px;
 }
+.icon-example {
+  margin: 10px 0 15px 40px;
+  line-height: 50px;
+}
+.icon-example .tm {
+  margin-right: 36px;
+  vertical-align: middle;
+}
