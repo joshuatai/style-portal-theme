@@ -6,9 +6,7 @@
     "introduction"
   ],
   "location": "icons/introduction.html",
-  "dependencies": [
-    "icons/icon-font.css"
-  ],
+  "dependencies": [],
   "actions": [],
   "type": "draggable",
   "grid": {
