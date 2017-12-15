@@ -9,28 +9,13 @@
   margin: 0px 12px;
   text-align: center;
 }
+
+.icon-color > .icon {
+  width: 16px;
+  height: 16px;
+}
+
 .icon-color > .color-code {
   line-height: 2;
   text-transform: uppercase;
-}
-.icon-colors .tm-error {
-  color: #db3d44;
-}
-.icon-colors .tm-warning-circle {
-  color: #ff7633;
-}
-.icon-colors .tm-low {
-  color: #faca2a;
-}
-.icon-colors .tm-success {
-  color: #00a94f;
-}
-.icon-colors .tm-info {
-  color: #bbbbbb;
-}
-.icon-colors .tm-calendar {
-  color: #666666;
-}
-.icon-colors .tm-calendar.hover {
-  color: #222222;
 }
