@@ -29,7 +29,7 @@ sbVH.mCustomScrollbar({
     axis:"yx",
     setHeight: "255px",
     callbacks:{
-        whileScrolling: function(e){
+        whileScrolling: function() {
             var root = $(this).parents('.table-with-scrollbar.sb-vh');
             if (this.mcs.direction == "y") {
                 $('.table-v-scrollbar-hidden .mCSB_container', root).css("top", this.mcs.top);
