@@ -1,11 +1,11 @@
 if ($.fn._datepicker) return;
 ;(function ($) {
-    
+
     'use strict';
 
     var static_datepicker   = $.fn._datepicker = $.fn.datepicker;
     var datepickerWrapper   = '<div class="datepicker-wrapper input-icon-group"></div>';
-    var datepickerLabel     = '<label class="input-icon-label"><i class="fa fa-calendar"></i></label>';
+    var datepickerLabel     = '<label class="input-icon-label"><i class="tmicon tmicon-calendar"></i></label>';
     var datepickerContainer = '<div data-role="datepicker"></div>';
 
     var MIN_YEAR = 1900;
@@ -117,7 +117,7 @@ if ($.fn._datepicker) return;
         } else {
             $(options.container).append(this.$datepickerContainer);
         }
-        
+
         this._init();
     };
 
@@ -144,7 +144,7 @@ if ($.fn._datepicker) return;
                 this.$datepickerContainer._datepicker(this.options);
             }
             this.value = this.$datepickerContainer.data('datepicker').getFormattedDate();
-            
+
             if (this.options.isInline === false) {
                 this.$datepickerContainer.addClass('dropdown-menu');
             }
@@ -158,8 +158,8 @@ if ($.fn._datepicker) return;
                 this.disable();
             }
 
-            $(".prev", this.$datepickerContainer).find("i").attr('class', 'fa fa-angle-left');
-            $(".next", this.$datepickerContainer).find("i").attr('class', 'fa fa-angle-right');
+            $(".prev", this.$datepickerContainer).find("i").attr('class', 'tmicon tmicon-angle-left');
+            $(".next", this.$datepickerContainer).find("i").attr('class', 'tmicon tmicon-angle-right');
 
             $(document).on('click', $.proxy(this._doUnEdit, this));
         },
@@ -646,9 +646,9 @@ if ($.fn._datepicker) return;
 
 (function ($) {
     'use strict';
-    
+
     var timepickerWrapper   = '<div class="timepicker-wrapper input-icon-group"></div>';
-    var timepickerLabel     = '<label class="input-icon-label"><i class="fa fa-clock-o"></i></label>';
+    var timepickerLabel     = '<label class="input-icon-label"><i class="tmicon tmicon-clock"></i></label>';
     //var TIME_REG = /^\d{0,2}(\D{1})\d{1,2}(\D{1})\d{1,2}$/;
     var KEY = {
         DOWN: 'D',
@@ -677,7 +677,7 @@ if ($.fn._datepicker) return;
     var maxSeconds = this.options.maxSeconds;
     var timeArray;
     var timeText = '';
-    
+
     if (time) {
         if (!time.match(this.valueReg)) throw valueError;
         formaters.forEach(function (format, index) {
@@ -771,7 +771,7 @@ if ($.fn._datepicker) return;
     this.$label                    = $(timepickerLabel).attr('for', this.$element.attr('id'));
     this.formaters                 = options.format.match(/(hh|mm|ss)/gi);
     this.splitters                 = options.format.match(/\W+/gi) || [];
-    this.valueReg                  = new RegExp('^' + this.formaters.map((function (current, index) { 
+    this.valueReg                  = new RegExp('^' + this.formaters.map((function (current, index) {
         var regText = '(\\d{2,2})';
         return regText += this.splitters[index]? '\\D?' : '';
     }).bind(this)).join('') + '$', 'gi');
@@ -837,7 +837,7 @@ if ($.fn._datepicker) return;
             var start = input.prop('selectionStart');
         var end = input.prop('selectionEnd');
             var position = getChunkPosition.call(this, start, end);
-        
+
             if (!this._tmpCheck(position)) {
                 this.orgH = getChunkNumber(value, this.H_POS);
         this.orgM = getChunkNumber(value, this.M_POS);
@@ -913,14 +913,14 @@ if ($.fn._datepicker) return;
 
         var tmpString = tmp.join('');
         var tmpNumber = parseInt(tmpString, 10);
-        
+
         if(position.indicate === 'H') {
         var reachMax = true;
         for (var i = 0; i < 10; i++) {
             if (parseInt((tmpString + i),10) <= this.maxHours) {
             reachMax = false;
             }
-        } 
+        }
         if (reachMax || tmp.length === position.length) {
             if (tmpNumber > this.maxHours) {
             this.orgH = this.maxHours;
@@ -942,7 +942,7 @@ if ($.fn._datepicker) return;
             if (parseInt((tmpString + i),10) <= this.maxMinutes) {
             reachMax = false;
             }
-        } 
+        }
         if (reachMax || tmp.length === position.length) {
             if (tmpNumber > this.maxMinutes) {
             this.orgM = this.maxMinutes;
@@ -964,7 +964,7 @@ if ($.fn._datepicker) return;
             if (parseInt((tmpString + i),10) <= this.maxSeconds) {
             reachMax = false;
             }
-        } 
+        }
         if (reachMax || tmp.length === position.length) {
             if (tmpNumber > this.maxSeconds) {
             this.orgS = this.maxSeconds;
@@ -1065,7 +1065,7 @@ if ($.fn._datepicker) return;
     _change: function (time) {
         if (time === this.value) return;
         else this.value = time;
-        
+
         this.$element.trigger($.Event('change'), [time]);
     },
     _prev: function () {

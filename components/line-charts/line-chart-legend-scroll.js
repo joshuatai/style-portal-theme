@@ -3,19 +3,19 @@ $(function () {
         {
             name: 'Ransomware',
             data: [8, 5, 11, 17, 22, 24, 24]
-        }, 
+        },
         {
             name: 'Anti-spyware',
             data: [7, 6, 9, 14, 18, 21, 25]
-        },  
+        },
         {
             name: 'Web Reputation',
             data: [6, 3, 8, 13, 16, 18, 17]
-        }, 
+        },
         {
             name: 'Virus/Malware',
             data: [3, 4, 5, 8, 11, 15, 17]
-        }, 
+        },
         {
             name: 'Spyware/Grayeare',
             data: [0, 4, 5, 16, 15, 13, 22],
@@ -65,17 +65,17 @@ $(function () {
             name: 'Ransomware',
             data: [8, 5, 11, 17, 22, 24, 24],
             visible: false
-        }, 
+        },
         {
             name: 'Anti-spyware',
             data: [7, 6, 9, 14, 18, 21, 25],
             visible: false
-        },  
+        },
         {
             name: 'Web Reputation',
             data: [6, 3, 8, 13, 16, 18, 17],
             visible: false
-        }, 
+        },
         {
             name: 'Virus/Malware',
             data: [3, 4, 5, 8, 11, 15, 17],
@@ -92,8 +92,8 @@ $(function () {
                 var legend = $(".scroll-line-charts .legend");
                 var legendContainer = $('ul', legend);
                 var legend_page = $(".legend-page", legend);
-                var page_up = $(".fa-caret-up", legend_page);
-                var page_down = $(".fa-caret-down", legend_page);
+                var page_up = $(".tmicon-caret-up", legend_page);
+                var page_down = $(".tmicon-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
                 var total_page = $(".total", legend_page);
                 var initPage = "1";
@@ -102,7 +102,7 @@ $(function () {
 
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {
@@ -140,7 +140,7 @@ $(function () {
                         }
                     }
                     legend_page.addClass("show");
-                    
+
                 }
                 function changePage(pages) {
                     var value = pages-1;
@@ -151,7 +151,7 @@ $(function () {
                     else {
                         now_page.text(pages); //change page
                         legendContainer.css("margin-top","-" + margin_value + "px"); //change legend
-                    } 
+                    }
                 }
                 page_up.on("click", function(){
                     var now = parseInt(now_page.text()) -1;
@@ -165,10 +165,10 @@ $(function () {
                 page_down.on("click", function(){
                     var now = parseInt(now_page.text()) + 1;
                     if(now == totally_page) {
-                        page_down.addClass("unable"); 
+                        page_down.addClass("unable");
                     }
                     page_up.removeClass("unable");
-                    changePage(now);   
+                    changePage(now);
                 });
                 $(window).on('resize', function () {
                     ul_height = legendContainer.height();
