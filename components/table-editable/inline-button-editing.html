@@ -1,0 +1,79 @@
+<section class="table-inline-editing-example table-button-edit-example">
+  <div class="lists-unordered">
+    <ul>
+      <li>This example shows how to edit text in a table using the save and cancel buttons.</li>
+      <li>Use this design for users to make changes to field text in tables without the global save and cancel buttons</li>
+      <li>For more information, see the <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Inline%20Edit/html/#g=1&p=inline_edit_-_table_cell_with_button" target="_blank">Interaction Flowchart</a>.</li>
+    </ul>
+  </div>
+	<table class="table table-bordered table-hover table-longtext-truncated table-edit inline-button">
+    <thead>
+      <tr>
+        <th>Plan Name</th>
+        <th>Type</th>
+        <th>Creator</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hotfix_DDEI</td>
+        <td>Hotfix</td>
+        <td>David Wu</td>
+        <td class="edit-cell"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></td>
+      </tr>
+      <tr>
+        <td>Hotfix_DDI_01</td>
+        <td>Virtual Analyzer image</td>
+        <td>Michael Chen</td>
+        <td class="edit-cell"><span>Aenean commodo ligula eget dolor.</span></td>
+      </tr>
+      <tr>
+        <td>TW_Patch_01_DDI</td>
+        <td>Firmware</td>
+        <td>Eric Lin</td>
+        <td class="edit-cell"><span>Donec vitae sapien ut libero venenatis faucibus.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section class="table-inline-editing-example table-validation-button-edit-example">
+    <h5>Invalid Field Values</h5>
+    <div class="lists-unordered">
+      <ul>
+        <li>When the value in an editable table cell is invalid, highlight the cell and display an error message.</li>
+        <li>When users click another editable cell or outside the table, highlight the invalid cell and keep the save/cancel button visible.</li>
+        <li>Click the invalid cell to display the error message.</li>
+      </ul>
+    </div>
+    <table class="table table-bordered table-hover table-longtext-truncated table-edit validation">
+      <thead>
+        <tr>
+          <th>Plan Name</th>
+          <th>Type</th>
+          <th>Creator</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hotfix_DDEI</td>
+          <td>Hotfix</td>
+          <td>David Wu</td>
+          <td class="edit-cell default-error"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></td>
+        </tr>
+        <tr>
+          <td>Hotfix_DDI_01</td>
+          <td>Virtual Analyzer image</td>
+          <td>Michael Chen</td>
+          <td class="edit-cell"><span>Aenean commodo ligula eget dolor.</span></td>
+        </tr>
+        <tr>
+          <td>TW_Patch_01_DDI</td>
+          <td>Firmware</td>
+          <td>Eric Lin</td>
+          <td class="edit-cell"><span>Donec vitae sapien ut libero venenatis faucibus.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
