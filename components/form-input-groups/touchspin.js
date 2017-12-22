@@ -6,7 +6,7 @@ var touchspinHorInput = touchspinHorizontal.find('input');
 $(document).mousedown(function(e) {
   touchspinVertical.removeClass('focused');
   touchspinHorizontal.removeClass('focused');
-  
+
   // Add focus class on touchspin wrapper
   if(e.target.closest('.touchspin.vertical')){
     touchspinVertical.addClass('focused');
@@ -17,16 +17,16 @@ $(document).mousedown(function(e) {
   // Edit input value when click button
   if(e.target.closest('button')) {
     var button = $(e.target).closest('button').find('span');
-    if(button.hasClass("icon_angleup")){
+    if(button.hasClass("tmicon-chevron-up")){
       increaseValue(touchspinVerInput);
     }
-    if(button.hasClass("icon_angledown")) {
+    if(button.hasClass("tmicon-chevron-down")) {
       decreaseValue(touchspinVerInput);
-    } 
-    if(button.hasClass("icon-plus")){
+    }
+    if(button.hasClass("tmicon-add")){
       increaseValue(touchspinHorInput);
     }
-    if(button.hasClass("icon-minus")) {
+    if(button.hasClass("tmicon-minus")) {
       decreaseValue(touchspinHorInput);
     }
   }
@@ -37,7 +37,7 @@ $(document).mousedown(function(e) {
     if(e.keyCode === 38) {
       e.preventDefault();
       increaseValue(touchspinVerInput);
-    } 
+    }
     if(e.keyCode === 40){
       e.preventDefault();
       decreaseValue(touchspinVerInput);
@@ -47,7 +47,7 @@ $(document).mousedown(function(e) {
     if(e.keyCode === 38) {
       e.preventDefault();
       increaseValue(touchspinHorInput);
-    } 
+    }
     if(e.keyCode === 40){
       e.preventDefault();
       decreaseValue(touchspinHorInput);

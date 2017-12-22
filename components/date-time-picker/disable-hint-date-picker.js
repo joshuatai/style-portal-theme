@@ -11,5 +11,5 @@ disabledDatePickerContainer
 	  endDate: '2017-01-20'
 	});
 
-$(".prev", disabledDatePickerContainer).find("i").attr('class', 'fa fa-angle-left');
-$(".next", disabledDatePickerContainer).find("i").attr('class', 'fa fa-angle-right');
+$(".prev", disabledDatePickerContainer).find("i").attr('class', 'tmicon tmicon-angle-left');
+$(".next", disabledDatePickerContainer).find("i").attr('class', 'tmicon tmicon-angle-right');

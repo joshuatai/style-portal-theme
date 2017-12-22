@@ -5,13 +5,6 @@
 .btn {
   i,
   span {
-    &.fa {
-      .btn-lg&,
-      .btn-sm&,
-      .btn-xs& {
-        font-size: inherit;
-      }
-    }
     &.svg {
       .btn-lg& {
         width: 24px;
@@ -26,27 +19,11 @@
   }
 }
 i, span {
-  &.fa {
-    font-size: (@font-size-base + 1);
-    color: #666;
-
-    &:hover,
-    &.hover {
-      color: #222;
-    }
-  }
   &.svg {
     width: 16px;
     height: 16px;
   }
 }
-.btn-primary,
-.btn-danger {
-  i.fa, span.fa {
-    color: #ffffff;
-  }
-}
-
 
 // Custom icons
 .icon {
