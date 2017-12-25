@@ -885,7 +885,8 @@
       "table"
     ],
     "segments": [
-      "6dfdb341-105a-4bc9-b1e7-6881066ac4de"
+      "6dfdb341-105a-4bc9-b1e7-6881066ac4de",
+      "0d55de76-72f0-4da7-8db1-6c874baa8a58"
     ],
     "css": {
       "name": "Table Inline Editing",

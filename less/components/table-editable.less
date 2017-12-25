@@ -1,5 +1,6 @@
 .table-edit {
-  &.validation {
+  &.validation,
+  &.inline-button {
     > tbody {
       > tr {
         td.edit-cell {
@@ -52,6 +53,40 @@
         .editable-inline {
           position: relative;
           display: block;
+        }
+      }
+    }
+  }
+  &.inline-button {
+    > tbody {
+      > tr {
+        td.edit-cell {
+          .editable-inline {
+            .form-group {
+              > div {
+                display: flex;
+                .editable-input {
+                  flex: 1;
+                }
+                .editable-buttons {
+                  margin-left: 2px;
+                  .btn {
+                    &.btn-icon-only {
+                      width: 34px;
+                    }
+                    +.btn {
+                      margin-left: 2px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.edit-mode.error-mode {
+            input[type="text"]:focus {
+              border-color:#db3d44;
+            }
+          }
         }
       }
     }
