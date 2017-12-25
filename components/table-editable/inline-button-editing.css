@@ -1,0 +1,32 @@
+.table-button-edit-example .table-edit.inline-button .editable-error-block.help-block {
+  margin: 0
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell {
+  overflow: visible;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group {
+  margin: 0;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div {
+  display: flex;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input {
+  flex: 1;
+  border-radius: 3px;
+  border: 1px solid #db3d44;
+  background-color: #ffffff;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input .popover {
+  top: 32px; 
+  left: 0; 
+  display: block;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-buttons {
+  margin-left: 2px;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-buttons .btn.btn-icon-only {
+  width: 34px;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-buttons .btn + .btn {
+  margin-left: 2px;
+}
