@@ -1,3 +1,8 @@
+.table-single-field-edit-example .lists-unordered ul,
+.table-button-edit-example .lists-unordered ul{
+  list-style-type: none;
+  padding-left: 0;
+}
 .table-inline-editing-example .table > thead > tr > th:nth-child(1),
 .table-inline-editing-example .table > tbody > tr > td:nth-child(1) {
 	width: 11.76%;
