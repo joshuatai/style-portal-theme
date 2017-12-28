@@ -1,0 +1,26 @@
+{
+  "id": "0d55de76-72f0-4da7-8db1-6c874baa8a58",
+  "name": "Edit Buttons",
+  "keywords": [
+    "table",
+    "editable",
+    "inline edit",
+    "input",
+    "button"
+  ],
+  "location": "table-editable/inline-button-editing.html",
+  "dependencies": [
+    "x-editable-1.5.1"
+  ],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-9"
+  }
+}

@@ -72,8 +72,7 @@
     width: 42px;
   }
 
-  .fa {
-    font-size: (@font-size-base + 1);
+  .tmicon {
     margin-right: 8px;
     .btn-icon-only& {
       margin-right: 0;
@@ -82,6 +81,7 @@
     .btn-sm&,
     .btn-xs& {
       font-size: inherit;
+      line-height: inherit;
     }
   }
 
@@ -114,6 +114,10 @@
   &.focus {
     .box-shadow(@btn-primary-focus-shadow);
   }
+  .tmicon,
+  .tmicon:hover {
+    color: #fff;
+  }
 }
 
 // Danger and error appear as red
@@ -122,6 +126,10 @@
   &:focus,
   &.focus {
     .box-shadow(@btn-danger-focus-shadow);
+  }
+  .tmicon,
+  .tmicon:hover {
+    color: #fff;
   }
 }
 .btn-border {

@@ -1,3 +1,8 @@
+.table-single-field-edit-example .lists-unordered ul,
+.table-button-edit-example .lists-unordered ul{
+  list-style-type: none;
+  padding-left: 0;
+}
 .table-inline-editing-example .table > thead > tr > th:nth-child(1),
 .table-inline-editing-example .table > tbody > tr > td:nth-child(1) {
 	width: 11.76%;
@@ -23,6 +28,14 @@
 	margin-left: 0;
 	width: 100%;
 }
-.table-inline-editing-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
+.table-inline-editing-example.table-single-field-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
 	border-color: #0096cc;
+}
+.table-validation-edit-example .popover .arrow,
+.table-button-edit-example .popover .arrow{
+	left: 16px !important;
+}
+.table-validation-edit-example .popover.align-left,
+.table-button-edit-example .popover.align-left{
+	left: 0 !important;
 }

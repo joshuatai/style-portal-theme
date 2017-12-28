@@ -6,12 +6,14 @@
     background-color: #e6e6e6;;
     cursor: pointer;
   }
+  .tmicon-sort-down,
+  .tmicon-sort-up {
+    color: #000;
+  }
   .sortabled {
     color: #222;
-    .icon-sortDescending,
-    .icon-sortAscending {
-      vertical-align: top;
-      margin-top: 1px;
+    .tmicon-sort-down,
+    .tmicon-sort-up {
       + .sort-priority {
         display: inline-block;
         font-size: 11px;
@@ -54,19 +56,18 @@
         }
         li.descending a:before,
         li.ascending a:before {
-          background-repeat: no-repeat;
-          content: "";
+          font-family: TMicon;
+          font-size: 16px;
           display: inline-block;
-          height: 20px;
+          line-height: 20px;
           margin: 0 8px 0 -24px;
           vertical-align: top;
-          width: 16px;
         }
         li.descending a:before {
-            background-image: url(../images/icon/icon_thSortDescending.svg);
+          content: "\e917";
         }
         li.ascending a:before {
-            background-image: url(../images/icon/icon_thSortAscending.svg);
+          content: "\e918";
         }
       }
     }
@@ -193,7 +194,7 @@
   &.hover,
   &:focus,
   &.focus {
-    .fa {
+    .tmicon {
       color: @btn-default-color;
     }
   }

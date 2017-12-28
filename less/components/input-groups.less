@@ -196,6 +196,11 @@
   top: 50%;
   margin-top: -10px;
   color: @input-inner-icon-color;
+
+  .tmicon {
+    font-size: 14px;
+    margin-top: 0;
+  }
 }
 .input-icon-group .loader,
 .input-icon-group .icon {
@@ -214,15 +219,9 @@
 
 .input-icon-group > .form-control:focus + .input-icon-label > i,
 .input-icon-group > .form-control.input-focus + .input-icon-label > i,
-.input-icon-group > .input-icon-label .focus {
-  transition: all .2s linear 0s;
+.input-icon-group > .input-icon-label i.focus {
+  transition: color .2s linear;
   color: @input-inner-icon-focus-color;
-
-  i.fa,
-  span.fa {
-    color: @input-inner-icon-focus-color;
-    transition: color .2s linear;
-  }
 }
 
 
@@ -282,6 +281,11 @@
   .btn {
     transition: border-color 0.2s linear 0s;
   }
+}
+
+.touchspin.vertical .tmicon {
+  font-size: 12px;
+  line-height: 14px;
 }
 .touchspin.vertical.focused {
   .form-control {

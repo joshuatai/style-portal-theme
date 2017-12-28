@@ -37,8 +37,8 @@ $(function () {
                 var legend = $(".scroll-pie-chart .legend");
                 var legendContainer = $('ul', legend);
                 var legend_page = $(".legend-page", legend);
-                var page_up = $(".fa-caret-up", legend_page);
-                var page_down = $(".fa-caret-down", legend_page);
+                var page_up = $(".tmicon-caret-up", legend_page);
+                var page_down = $(".tmicon-caret-down", legend_page);
                 var now_page = $(".now", legend_page);
                 var total_page = $(".total", legend_page);
                 var initPage = "1";

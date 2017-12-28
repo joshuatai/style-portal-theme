@@ -1,0 +1,120 @@
+<section class="css-reference">
+  <h5>Editable cell with button container</h5>
+  <pre>
+    <style data-selector=".table-edit.inline-button > tbody > tr td.edit-cell .editable-inline .form-group > div"></style>
+  </pre>
+  <h5>Editable input container</h5>
+  <pre>
+    <style data-selector=".table-edit.inline-button > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input"></style>
+  </pre>
+  <h5>Editable botton container</h5>
+  <pre>
+    <style data-selector=".table-edit.inline-button > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-buttons"></style>
+  </pre>
+  <h5>Editable botton</h5>
+  <p>For information on icon-only button styles, see <a href="e5bd7778-d707-420b-ac64-4a55da161b83">Buttons</a>.</p>
+  <pre>
+    <style data-selector=".table-edit.inline-button > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-buttons .btn.btn-icon-only"></style>
+  </pre>
+  <pre data-title=".btn + .btn">
+    <style data-selector=".table-edit.inline-button > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-buttons .btn + .btn"></style>
+  </pre>
+</section>
+<section class="table-inline-editing-example table-button-edit-example">
+  <div class="lists-unordered">
+    <ul>
+      <li>You can click a <strong>Description</strong> field in the table example to try the inline editing feature with the save and cancel buttons.</li>
+      <li>Use this design for users to make changes to field text in tables without the global save and cancel buttons.</li>
+      <li>For more information, see the <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Inline%20Edit/html/#g=1&p=inline_edit_-_table_cell_with_button" target="_blank">Interaction Flowchart</a>.</li>
+    </ul>
+  </div>
+	<table class="table table-bordered table-hover table-longtext-truncated table-edit inline-button">
+    <thead>
+      <tr>
+        <th>Plan Name</th>
+        <th>Type</th>
+        <th>Creator</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hotfix_DDEI</td>
+        <td>Hotfix</td>
+        <td>David Wu</td>
+        <td class="edit-cell"><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span></td>
+      </tr>
+      <tr>
+        <td>Hotfix_DDI_01</td>
+        <td>Virtual Analyzer image</td>
+        <td>Michael Chen</td>
+        <td class="edit-cell"><span>Aenean commodo ligula eget dolor.</span></td>
+      </tr>
+      <tr>
+        <td>TW_Patch_01_DDI</td>
+        <td>Firmware</td>
+        <td>Eric Lin</td>
+        <td class="edit-cell"><span>Donec vitae sapien ut libero venenatis faucibus.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section class="table-inline-editing-example">
+    <h5>Invalid Field Values</h5>
+    <div class="lists-unordered">
+      <ul>
+        <li>When the value in an editable table cell is invalid, highlight the cell and display an error message.</li>
+        <li>When users click another editable cell or outside the table, highlight the invalid cell and keep the save/cancel button visible.</li>
+        <li>Click the invalid cell to display the error message.</li>
+      </ul>
+    </div>
+    <table class="table table-bordered table-hover table-longtext-truncated table-edit inline-button-validation">
+      <thead>
+        <tr>
+          <th>Plan Name</th>
+          <th>Type</th>
+          <th>Creator</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hotfix_DDEI</td>
+          <td>Hotfix</td>
+          <td>David Wu</td>
+          <td class="edit-cell edit-mode error-mode">
+            <span class="editable-container editable-inline">
+              <div>
+                <div class="control-group form-group has-error">
+                  <div>
+                    <div class="editable-input">
+                      <div class="popover bottom-right" role="tooltip">
+                        <div class="arrow"></div>
+                        <div class="popover-content">This field is required.</div>
+                      </div>
+                    </div>
+                    <div class="editable-buttons">
+                      <button class="btn btn-default btn-border btn-icon-only editable-submit" disabled="disabled"><span class="tmicon tmicon-check-s"></span></button><button class="btn btn-default btn-border btn-icon-only editable-cancel"><span class="tmicon tmicon-close-s"></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hotfix_DDI_01</td>
+          <td>Virtual Analyzer image</td>
+          <td>Michael Chen</td>
+          <td>Aenean commodo ligula eget dolor.</td>
+        </tr>
+        <tr>
+          <td>TW_Patch_01_DDI</td>
+          <td>Firmware</td>
+          <td>Eric Lin</td>
+          <td>Donec vitae sapien ut libero venenatis faucibus.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
