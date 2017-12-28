@@ -40,14 +40,14 @@ sbVH.mCustomScrollbar({
         }
     }
 });
-sbVH.find('#mCSB_8_container_wrapper').on('mousewheel', function (e) {
+sbVH.find('.mCSB_container_wrapper').on('mousewheel', function (e) {
     if (e.shiftKey) {
         var sbH = $('.mCSB_container_wrapper .mCSB_container', sbVH);
         var sbHHidden = $('.table-with-scrollbar.sb-vh .table-vh-scrollable .table-h-scrollbar-hidden .mCSB_container');
         var left = parseInt(sbH.css("left"), 10);
-
-        sbH.css("left", left + e.deltaY);
-        sbHHidden.css("left", left + e.deltaY);
+        var value = e.originalEvent.wheelDeltaY;
+        sbH.css("left", left + value);
+        sbHHidden.css("left", left + value);
         if (parseInt(sbH.css("left"), 10) > 0) {
             sbH.css("left", 0);
             sbHHidden.css("left", 0);
