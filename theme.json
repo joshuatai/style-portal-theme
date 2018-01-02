@@ -19,22 +19,6 @@
     "css": true
   },
   "archives": {
-    "icon": [
-      "images/icon/form.png",
-      "images/icon/home.png"
-    ],
-    "severity-icons": [
-      "images/icon/severity-high.png",
-      "images/icon/severity-medium.png",
-      "images/icon/severity-low.png",
-      "images/icon/severity-safe.png",
-      "images/icon/severity-info.png",
-      "images/icon/severity-high.svg",
-      "images/icon/severity-medium.svg",
-      "images/icon/severity-low.svg",
-      "images/icon/severity-safe.svg",
-      "images/icon/severity-info.svg"
-    ],
     "fonts": [
       "fonts/Interstate-ExtraLight-webfont.eot",
       "fonts/Interstate-ExtraLight-webfont.svg",
