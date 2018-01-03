@@ -1,3 +1,155 @@
+.tokenfield {
+  height: auto;
+  padding: 0 4px 3px 4px;
+  border: 1px solid @input-border;
+  cursor: text;
+  &.focus {
+    border-color: @input-border-focus;
+    transition: all 0.2s linear 0s;
+    outline: none;
+  }
+  .token {
+    border-radius: @border-radius-base;
+    display: inline-block;
+    background-color: @token-background-color;
+    white-space: nowrap;
+    margin: 3px 4px 0 0;
+    cursor: default;
+    vertical-align: top;
+    &.active {
+      background-color: @token-background-color-active;
+    }
+    .token-label {
+      display: inline-block;
+      padding: 2px 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-radius: 3px 0 0 3px;
+      max-width: 184px;
+      font-family: @font-family-arial;
+      font-size: @font-size-small;
+      color: @gray-base;
+      vertical-align: top;
+    }
+    .close {
+      display: inline-block;
+      text-decoration: none;
+      color: transparent;
+      font-size: 0;
+      float: none;
+      vertical-align: top;
+      margin-top: 3px;
+      margin-right: 8px;
+      opacity: 0.4;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .token-input {
+    background: none;
+    width: 60px;
+    min-width: 60px;
+    max-width: 184px;
+    border: 0;
+    padding: 0;
+    margin-top: 3px;
+    font-size: @font-size-small;
+    height: 24px;
+    &.placeholder {
+      margin-left: 8px;
+    }
+    &:focus {
+      border-color: transparent;
+      outline: 0;
+    }
+  }
+  > input[type="text"] {
+    &:focus {
+      transition-property: none;
+    }
+  }
+}
+
+.tokenfield.editable {
+  .token {
+    &:hover {
+      background-color: @token-background-color-editable;
+      cursor: pointer;
+    }
+    .token-label {
+      color: @token-font-color-editable;
+    }
+  }
+}
+
+.tokenfield.autocomplete {
+  position: relative;
+  padding-right: 48px;
+  > .icon-cancel {
+    position: absolute;
+    right: 24px;
+    top: 0;
+    margin-top: 7px;
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  &:after {
+    content: " ";
+    background: url(./images/icon/selectCaretDown.svg) no-repeat;
+    background-position: left 6px;
+    width: 24px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+}
+
+.ui-autocomplete {
+  &.dropdown-menu {
+    .ui-menu-item-wrapper {
+      display: block;
+      padding: 4px 16px;
+      clear: both;
+      font-weight: normal;
+      line-height: 20px;
+      color: #222222;
+      text-decoration: none;
+      white-space: nowrap;
+      &.ui-state-active {
+        color: #222;
+        text-decoration: none;
+        background-color: #eee;
+        cursor: pointer;
+      }
+    }
+    &.no-match {
+      .ui-menu-item-wrapper {
+        &.ui-state-active {
+          cursor: text;
+          background-color: #ffffff;
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+.ui-helper-hidden-accessible { 
+  display: none; 
+}
+
+
+
+
+
+
 // Tages
 .tag-editor {
     list-style-type: none;
