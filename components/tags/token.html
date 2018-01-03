@@ -63,20 +63,9 @@
 <section class="form-advanced-example">
   <p>In a token field, users can select and gather multiple tokens.</p>
 	<h5>Basic</h5>
-	<input type="text" data-input-tag="tags">
-	<h5>Token with filter</h5>
-	<div class="token-filed" data-token-field="initialize">
-		<select id="tokenize" multiple="multiple" data-token-field="token">
-		  	<option value="Japan" selected>Japan</option>
-		  	<option value="Korea" selected>Korea</option>
-		  	<option value="Malaysia" selected>Malaysia</option>
-		  	<option value="Switzerland">Switzerland</option>
-	    	<option value="Syria">Syria</option>
-	    	<option value="Tahiti">Tahiti</option>
-	    	<option value="Taiwan">Taiwan</option>
-			<option value="Tajikistan">Tajikistan</option>
-		</select>
-	</div>
+  <input type="text" class="form-control input-width-lg" id="tags" value="Hello, World, Example, Tags" />
+  <h5>Token with filter</h5>
+  <input type="text" class="form-control input-width-lg" id="filterTags" value="Japan, Korea, Malaysia" />
 	<h5>Editable</h5>
-	<input type="text" data-input-tag="editTags">
+	<input type="text" class="form-control input-width-lg" id="editTags" value="1.10.2.11, 1.10.2.12, 10.19.148.12" />
 </section>
