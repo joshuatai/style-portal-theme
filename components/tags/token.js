@@ -173,7 +173,7 @@
       }
     },
     editBtn: function(element){
-      element.find('a.close').addClass('icon icon-cancel').attr('href', 'javascript:;');
+      element.find('a.close').html('').addClass('icon icon-cancel').attr('href', 'javascript:;');
     },
     addPlaceholder: function(){
       this.$input.attr('placeholder', this.options.placeholder).addClass('placeholder');
