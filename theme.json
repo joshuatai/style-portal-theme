@@ -28,6 +28,16 @@
       "fonts/Interstate-Light-webfont.svg",
       "fonts/Interstate-Light-webfont.ttf",
       "fonts/Interstate-Light-webfont.woff"
+    ],
+    "modal-icons": [
+      "images/icon/modal_error.png",
+      "images/icon/modal_error.svg",
+      "images/icon/modal_info.png",
+      "images/icon/modal_info.svg",
+      "images/icon/modal_success.png",
+      "images/icon/modal_success.svg",
+      "images/icon/modal_warning.png",
+      "images/icon/modal_warning.svg"
     ]
   }
 }

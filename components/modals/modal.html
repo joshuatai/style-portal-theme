@@ -103,6 +103,20 @@
   <pre data-title="The modal body of the medium and large size">
     <style data-selector=".modal-lg .modal-body"></style>
   </pre>
+  <h5>Message dialog container</h5>
+  <pre>
+    <style data-selector=".modal-body .message-dialog"></style>
+  </pre>
+  <h5>Message dialog wrapper</h5>
+  <pre>
+    <style data-selector=".modal-body .message-dialog .message-wrapper"></style>
+  </pre>
+  <pre data-title=":before">
+    <style data-selector=".modal-body .message-dialog .message-wrapper:before"></style>
+  </pre>
+  <pre data-title="Primary message">
+    <style data-selector=".modal-body .message-dialog .message-wrapper .primary-msg"></style>
+  </pre>
 
   <h5>Modal footer</h5>
   <p>Use <code data-tag="div"></code> to create a modal footer class. For example, <code>.modal-footer</code> is a modal footer used in Bootstrap.</p>
@@ -116,7 +130,7 @@
 
 <section class="modal-example">
   <p>Modal dialogs are used to get a response from a user before other features can be assessed from the main page. Use title case for the titles.</p>
-  <p>There are four common modal sizes. You may also adjust the size as required.</p>
+  <p>There are four common modal sizes. You may also adjust the size as required. <a href="/themes/{{theme}}/{{version}}/archives/modal-icons.zip">Download icons</a></p>
   <div class="lists-unordered">
     <ul>
       <li><span>Extra small</span>:W400 x H240 px (minimum height)</li>
@@ -127,7 +141,7 @@
   </div>
   <div class="modal-example-wrapper">
     <div>
-      <h5>Basic dialog</h5>
+      <h5>Input dialog</h5>
       <div class="modal xs-example" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-xs" role="document">
           <div class="modal-content">
@@ -151,7 +165,7 @@
       </div><!-- /.modal -->
     </div>
     <div>
-      <h5>Basic dialog with no title</h5>
+      <h5>Message dialog</h5>
       <div class="modal xs-example" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-xs" role="document">
           <div class="modal-content">
@@ -159,7 +173,12 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-modal-close"></span></button>
             </div>
             <div class="modal-body body-xs">
-              <div class="placeholder" data-type="image" data-src="images/modal_content.png"></div>
+              <div class="message-dialog">
+                <div class="message-wrapper">
+                  <div class="primary-msg">Imported successfully!</div>
+                  <div class="descriptive-msg">4 duplicate records are found and merged.</div>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary">Save</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
