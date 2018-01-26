@@ -5,6 +5,12 @@
 .modal-example .modal-example-wrapper {
   margin: 32px 0 32px 12px;
 }
+.modal-example .modal-example-wrapper.msg-dialog-example h5 {
+  margin-bottom: 0;
+}
+.modal-example .modal-example-wrapper.msg-dialog-example h6 {
+  margin-bottom: 5px;
+}
 .modal-example .modal-example-wrapper > div {
   display: inline-block;
 }
@@ -51,7 +57,7 @@
   margin-right: 0;
 }
 #modal-md .form-horizontal {
-  padding: 16px 24px;
+  padding: 16px 24px 24px 24px;
 }
 #modal-md .modal-body,
 #modal-lg .modal-body {
