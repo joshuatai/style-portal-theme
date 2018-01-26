@@ -139,7 +139,7 @@
 //@modal-headerNfooter-height = ((@font-size-h3 * @headings-line-height) + 92);
 .modal-body {
   position: relative;
-  padding: @modal-inner-padding @modal-title-padding;
+  padding: @modal-inner-padding @modal-title-padding @modal-title-padding @modal-title-padding;
   .modal-lg &,
   .modal-md & {
     overflow: hidden;
@@ -164,8 +164,9 @@
       color: #222222;
       line-height: 20px;
       margin-left: 64px;
+      padding-top: 4px;
       .primary-msg {
-        padding: 4px 0;
+        padding-bottom: 4px;
         font-weight: bold;
         font-size: 14px;
       }
@@ -177,7 +178,12 @@
         width: 48px;
         height: 48px;
         background-size: 48px;
+      }
+      &.success-message:before {
         background-image: url("../images/icon/modal_success.svg");
+      }
+      &.info-message:before {
+        background-image: url("../images/icon/modal_info.svg");
       }
     }
   }
