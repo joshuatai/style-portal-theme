@@ -19,11 +19,15 @@
   <h5>File name</h5>
   <pre>
     <style data-selector=".multiple-file-info .file-name"></style>
-  </pre>
-
-  <h5>Cancel icon</h5>
-  <pre>
-    <style data-selector=".multiple-file-info .icon-cancel"></style>
+	</pre>
+	
+	<h5>Close icon class</h5>
+	<pre data-title="Icon color and position">
+		<style data-selector=".tmicon-light"></style>
+    <style data-selector=".multiple-file-info .tmicon-light"></style>
+	</pre>
+	<pre data-title=":hover">
+		<style data-selector=".tmicon-light.tmicon-hoverable:hover"></style>
   </pre>
 </section>
 
@@ -45,13 +49,13 @@
 	    	<input id="multifileupload2" type="file" name="file[]" multiple>
     		<ul class="multiple-file-info">
     			<li>
-    				<span class="file-name">IMG_1234.png </span><span class="file-size">(36 MB)</span><span class="icon icon-cancel"></span>
+    				<span class="file-name">IMG_1234.png </span><span class="file-size">(36 MB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
     				<span id="errorBlock" class="help-block help-block-invalid help-block-with-icon"><span class="tmicon tmicon-warning-circle tmicon-color-error"></span>Incorrect file format.</span>
     			</li>
-    			<li><span class="file-name">DDEI_2.5_en_hfb1234.tar </span><span class="file-size">(829 KB)</span><span class="icon icon-cancel"></span></li>
-    			<li><span class="file-name">DDEI_2.8_en_hfb5678.tar </span><span class="file-size">(970 KB)</span><span class="icon icon-cancel"></span></li>
-    			<li><span class="file-name">DDEI_3.0_en_hfb.tar </span><span class="file-size">(120 KB)</span><span class="icon icon-cancel"></span></li>
-    			<li><span class="file-name">DeepDiscoveryInspector_381_lx_en_criticalpatch1232890.tar </span><span class="file-size">(140 KB)</span><span class="icon icon-cancel"></span></li>
+    			<li><span class="file-name">DDEI_2.5_en_hfb1234.tar </span><span class="file-size">(829 KB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></li>
+    			<li><span class="file-name">DDEI_2.8_en_hfb5678.tar </span><span class="file-size">(970 KB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></li>
+    			<li><span class="file-name">DDEI_3.0_en_hfb.tar </span><span class="file-size">(120 KB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></li>
+    			<li><span class="file-name">DeepDiscoveryInspector_381_lx_en_criticalpatch1232890.tar </span><span class="file-size">(140 KB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></li>
     		</ul>
 		</div>
 	  </div>
@@ -64,7 +68,7 @@
 		    	<label for="multifileupload" class="btn btn-default">Select Files...</label>
 	        	<input id="multifileupload" type="file" name="file[]" data-file-upload="multiFile" multiple>
 	        	<ul id="multifileInfo" class="multiple-file-info"></ul>
-			</div>
+				</div>
 		  </div>
 		</form>
 	</div>
