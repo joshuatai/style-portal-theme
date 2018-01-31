@@ -13,7 +13,7 @@
 
     this.options          = options;
     this.$element         = $(element);
-    this.$filterCloseBtn  = $('<span />').addClass('icon icon-cancel');
+    this.$filterCloseBtn  = $('<span />').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable');
     this.elementWidth     = this.$element.outerWidth();
 
     // call the original constructor
@@ -173,7 +173,7 @@
       }
     },
     editBtn: function(element){
-      element.find('a.close').html('').addClass('icon icon-cancel').attr('href', 'javascript:;');
+      element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
     },
     addPlaceholder: function(){
       this.$input.attr('placeholder', this.options.placeholder).addClass('placeholder');
