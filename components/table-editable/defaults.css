@@ -28,14 +28,35 @@
 	margin-left: 0;
 	width: 100%;
 }
-.table-inline-editing-example.table-single-field-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
+/* .table-inline-editing-example.table-single-field-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
 	border-color: #0096cc;
-}
-.table-validation-edit-example .popover .arrow,
+} */
+.table-single-field-edit-example .popover .arrow,
 .table-button-edit-example .popover .arrow{
 	left: 16px !important;
 }
-.table-validation-edit-example .popover.align-left,
+.table-single-field-edit-example .popover.align-left,
 .table-button-edit-example .popover.align-left{
 	left: 0 !important;
+}
+
+.table-edit.inline-button-validation > tbody > tr td.edit-cell,
+.table-edit.single-field-validation > tbody > tr td.edit-cell {
+  overflow: visible;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group,
+.table-edit.single-field-validation > tbody > tr td.edit-cell .editable-inline .form-group {
+  margin: 0;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input,
+.table-edit.single-field-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input {
+  border-radius: 3px;
+  border: 1px solid #db3d44;
+  background-color: #ffffff;
+}
+.table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input .popover,
+.table-edit.single-field-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input .popover {
+  top: 32px; 
+  left: 0; 
+  display: block;
 }
