@@ -2,7 +2,7 @@
     padding-right: 48px;
     padding-left: 12px;
   }
-  .combobox .icon {
+  .combobox .tmicon-close-s {
     right: 25px;
   }
   .combobox [data-toggle="close"] {

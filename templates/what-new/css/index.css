@@ -107,9 +107,9 @@ header.site-header {
     z-index: 1;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 }
-.modal-header .close {
+.modal-header button {
     font-size: inherit;
-    margin-top: 10px;
+    margin-top: 9px;
 }
 .what-new-wrapper > div:nth-child(even) {
     background: #E6F4FC;

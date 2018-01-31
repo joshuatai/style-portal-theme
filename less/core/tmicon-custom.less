@@ -8,11 +8,26 @@
   display: inline-block;
   vertical-align: top;
 
-  &:hover,
-  &.hover {
-    color: #222;
+  &.tmicon-hoverable {
+    &:hover,
+    &.hover {
+      color: #222;
+    }
   }
 }
+
+
+.tmicon-light {
+  color: #222;
+  opacity: 0.5;
+  &.tmicon-hoverable {
+    &:hover,
+    &.hover {
+      opacity: 1;
+    }
+  }
+}
+
 
 // TMicon colors
 
