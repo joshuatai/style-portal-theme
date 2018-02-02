@@ -162,6 +162,7 @@
       this.setTokens([]);
       this.$input.blur();
       this.$input.autocomplete('close');
+      this.$filterCloseBtn.hide();
       this.addPlaceholder();
     },
     keydownEvent: function(e){
