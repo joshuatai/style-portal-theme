@@ -4,7 +4,7 @@
     padding-right: 48px;
     padding-left: 12px;
   }
-  .icon {
+  .tmicon-close-s {
     right: 25px;
   }
   .dropdown-menu {
@@ -30,6 +30,17 @@
         background: #f4f4f4;
       }
     }
+    .no-matches,
+    li.no-matches {
+      color: #999999;
+      &:hover,
+      &.selected {
+        color: #999999;
+        background-color: #ffffff;
+        cursor: text;
+      }
+    }
+
   }
   &:after {
     position: absolute;

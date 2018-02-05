@@ -51,7 +51,7 @@ var Combobox = function (element, options) {
   this.$body                     = $(document.body);
   this.$element                  = $(element);
   this.$combobox                 = $(combobox).insertBefore(this.$element).append(this.$element).data('combobox', this);
-  this.$close                    = $('<span data-toggle="close"></span>').addClass('icon icon-cancel').data('combobox', this);
+  this.$close                    = $('<span data-toggle="close"></span>').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').data('combobox', this);
   this.$listItems                = this.$element.children();
   this.$combobox.addClass(this.$element.attr('class').split(' ').filter(function (classname) {
     return classname !== 'form-control';

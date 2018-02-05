@@ -20,15 +20,13 @@
   <pre>
     <style data-selector=".file-info-container .file-size"></style>
   </pre>
-  <h5>Icon</h5>
-  <p>Icon classes should be only used on elements that contain no text content and have no child elements. We recommand to use <code data-tag="span"></code> element.</p>
-  <pre data-title="For Image icon:">
-    <style data-selector=".icon">Default size of icon</style>
-  </pre>
-	<pre data-title="Cancel icon">
-	<style data-selector=".icon-cancel"></style>
-    <style data-selector=".file-info-container .icon-cancel"></style>
-		<style data-selector=".file-info-container .icon-cancel:hover">:hover</style>
+  <h5>Cancel icon class</h5>
+	<pre data-title="Icon color and position">
+		<style data-selector=".tmicon-light"></style>
+    <style data-selector=".file-info-container .tmicon-close-s"></style>
+	</pre>
+	<pre data-title=":hover">
+		<style data-selector=".tmicon-light.tmicon-hoverable:hover"></style>
   </pre>
 </section>
 
@@ -49,7 +47,7 @@
     		<input id="fileupload2" type="file" name="file">
 	    	<label for="fileupload2" class="btn btn-default">Select Files...</label>
 	    	<div class="file-info-container">
-	    		<span>IMG_1234.png </span><span class="file-size">(36 MB)</span><span class="icon icon-cancel"></span>
+	    		<span>IMG_1234.png </span><span class="file-size">(36 MB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
 	    	</div>
         	<span id="errorBlock" class="help-block help-block-invalid help-block-with-icon"><span class="tmicon tmicon-warning-circle tmicon-color-error"></span>Incorrect file format.</span>
 		</div>
@@ -60,7 +58,7 @@
     		<input id="fileupload3" type="file" name="file">
 	    	<label for="fileupload3" class="btn btn-default">Select Files...</label>
 	    	<div class="file-info-container">
-	    		<span>DDEI_2.5_en_hfb1234.tar </span><span class="file-size">(829 KB)</span><span class="icon icon-cancel"></span>
+	    		<span>DDEI_2.5_en_hfb1234.tar </span><span class="file-size">(829 KB)</span><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
 	    	</div>
 		</div>
 	  </div>

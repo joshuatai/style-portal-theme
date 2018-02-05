@@ -90,9 +90,9 @@ header.site-header {
     padding: 21px 24px;
     transition: all 0.5s;
 }
-.modal-header .close {
+.modal-header button {
     font-size: inherit;
-    margin-top: 10px;
+    margin-top: 9px;
 }
 .what-new-container {
     padding: 24px 40px 28px;

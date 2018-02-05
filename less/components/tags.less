@@ -1,181 +1,134 @@
-// Tages
-.tag-editor {
-    list-style-type: none;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 3px;
-    overflow: hidden;
-    border: 1px solid @input-border;
-    border-radius: @input-border-radius;
-    background-color: @input-bg;
-    cursor: text;
-    &.focused,
-    &.Focused {
-      border-color: @input-border-focus;
-      transition: all 0.2s linear 0s;
-      outline: none;
+.tokenfield {
+  padding: 0 4px 3px 4px;
+  border: 1px solid @input-border;
+  cursor: text;
+  &.focus {
+    border-color: @input-border-focus;
+    transition: all 0.2s linear 0s;
+    outline: none;
+  }
+  .token {
+    border-radius: @border-radius-base;
+    display: inline-block;
+    background-color: @token-background-color;
+    white-space: nowrap;
+    margin: 3px 4px 0 0;
+    cursor: default;
+    vertical-align: top;
+    &.active {
+      background-color: @token-background-color-active;
     }
-    li {
-      display: block;
-      float: left;
-      overflow: hidden;
-      margin-right: 4px;
-      margin-top: 3px;
-      &:hover {
-        .tag-editor-tag,
-        > span {
-          cursor: default;
-        }
-        .tag-editor-editTag,
-        .tag-editor-editTag + .tag-editor-delete {
-          background: #E6F4FC;
-          cursor: pointer;
-        }
-      }
-    }
-    div {
-      float: left;
-    }
-    input {
-        vertical-align: inherit;
-        border: 0;
-        outline: none;
-        padding: 0;
-        margin: 0;
-        cursor: text;
-        box-shadow: none;
-        background: none;
-        color: @legend-color;
-    }
-    .tag-editor-tag,
-    .Token > span {
-      padding: 2px 8px;
+    .token-label {
+      display: inline-block;
+      padding: 2px 2px 2px 8px;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow:ellipsis;
+      text-overflow: ellipsis;
       border-radius: 3px 0 0 3px;
       max-width: 184px;
       font-family: @font-family-arial;
       font-size: @font-size-small;
-      color: @legend-color;
-      background: #cceaf5;
-      float: left;
-      &.active {
-        color: @legend-color;
-        background: none !important;
-        max-width: none;
+      color: @gray-base;
+      vertical-align: top;
+    }
+    .tmicon {
+      &.tmicon-close-s {
+        font-size: 14px;
       }
     }
-    .tag-editor-editTag {
-      color: @brand-primary;
+    .tmicon-close-s {
+      display: inline-block;
+      float: none;
+      margin-top: 2px;
+      margin-right: 8px;
+      text-decoration: none;
     }
-    .tag-editor-delete,
-    .Token .Close{
-      padding-right: 8px;
-      padding-top: 2px;
-      padding-bottom: 2px;
-      cursor: pointer;
-      border-radius: 0 3px 3px 0;
-      background: #cceaf5;
-      .icon-cancel {
-        opacity: 0.4;
-        vertical-align: top;
-        margin-top: 1px;
-      }
-      .icon-cancel:hover {
-        opacity: 1;
-      }
-    }
-    .tag-editor-tag.active + .tag-editor-delete,
-    .tag-editor-tag.active + .tag-editor-delete .icon {
-      visibility: hidden;
-      cursor: text;
-    }
-
-    .placeholder {
-      color: #bbbbbb;
-      line-height: 20px;
-      padding: 2px 0;
-      padding-left: 8px;
-    }
-
-}
-.tag-editor-hidden-src {
-  position: absolute !important;
-  left: -99999px;
-}
-
-
-// Tokens
-.tokenize {
-  position: relative;
-
-  .tag-editor {
-    padding-right: 48px;
   }
-  .tag-editor:after {
+  .token-input {
+    background: none;
+    max-width: 184px;
+    border: 0;
+    padding: 0;
+    margin-top: 3px;
+    font-size: @font-size-small;
+    height: 24px;
+    &.placeholder {
+      margin-left: 8px;
+    }
+    &:focus {
+      border-color: transparent;
+      outline: 0;
+    }
+  }
+  > input[type="text"] {
+    &:focus {
+      transition-property: none;
+    }
+  }
+}
+
+.tokenfield.editable {
+  .token {
+    &:hover {
+      background-color: @token-background-color-editable;
+      cursor: pointer;
+    }
+    .token-label {
+      color: @token-font-color-editable;
+    }
+  }
+}
+
+.tokenfield.autocomplete {
+  position: relative;
+  padding-right: 48px;
+  > .tmicon-close-s {
+    position: absolute;
+    right: 24px;
+    top: 0;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  &:after {
     content: " ";
     background: url(../images/icon/selectCaretDown.svg) no-repeat;
-    background-position: left 7px;
+    background-position: left 6px;
     width: 24px;
-    height: 32px;
+    height: 30px;
     position: absolute;
     right: 0;
     top: 0;
     cursor: pointer;
   }
+}
 
-  ul {
-    li.placeholder {
-      position: absolute;
-    }
-    input {
-      padding-top: 2px;
-      padding-left: 8px;
-      padding-bottom: 2px;
-    }
-  }
-
-  > .icon-cancel {
-    position: absolute;
-    right: 24px;
-    margin-top: 8px;
-    opacity: 0.4;
-    &:hover {
-      opacity: 1;
-      cursor: pointer;
-    }
-  }
-  .dropdown-menu {
-    li {
+.ui-autocomplete {
+  &.dropdown-menu {
+    .ui-menu-item-wrapper {
       display: block;
       padding: 4px 16px;
       clear: both;
       font-weight: normal;
       line-height: 20px;
-      color: #222;
+      color: #222222;
+      text-decoration: none;
       white-space: nowrap;
-      cursor: pointer;
-      &:hover,
-      &.Hover {
-        color: #222;
-        text-decoration: none;
+      &.ui-state-active {
         background-color: #eee;
+        cursor: pointer;
+      }
+    }
+    &.no-match {
+      .ui-menu-item-wrapper,
+      .ui-menu-item-wrapper.ui-state-active {
+        cursor: text;
+        background-color: #ffffff;
+        color: @token-autocomplete-no-match;
       }
     }
   }
 }
 
-// token field and combobox dropdown no matches style
-.dropdown-menu {
-  .no-matches,
-  li.no-matches {
-    color: #999999;
-    &:hover,
-    &.selected {
-      color: #999999;
-      background-color: #ffffff;
-      cursor: text;
-    }
-  }
+.ui-helper-hidden-accessible { 
+  display: none; 
 }

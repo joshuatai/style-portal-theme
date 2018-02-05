@@ -24,9 +24,6 @@
 
   <h5>Alert icon</h5>
   <p>The icon class should only be used on elements that do not contain text or child elements. We recommend using the <code data-tag="span"></code> element for the icon class.</p>
-  <pre data-title="For image icon">
-    <style data-selector=".icon"></style>
-  </pre>
   <pre>
     <style data-selector=".alert > .tmicon:first-of-type">Position the icon</style>
   </pre>
@@ -36,10 +33,10 @@
     <style data-selector=".alert > .cancel">Position the cancel icon</style>
   </pre>
   <pre>
-    <style data-selector=".cancel"></style>
+    <style data-selector=".tmicon-light"></style>
   </pre>
   <pre data-title=":hover">
-    <style data-selector=".cancel:hover"></style>
+    <style data-selector=".tmicon-light.tmicon-hoverable:hover"></style>
   </pre>
 
   <h5>Buttons within notifications (optional)</h5>
@@ -62,7 +59,7 @@
 			<ul>
 				<li>should appear on the top of a product console, just below the navigation bar.</li>
 				<li>should be full-width, static, and closable.</li>
-				<li>can contain action buttons or hyperlinks.</li>
+				<li>can contain hyperlinks that redirect users to another UI screen or action buttons to perform a task.</li>
 				<li>involving critical issues should only be closable when the alerted situations are resolved.</li>
 			</ul>
 		</div>
@@ -76,23 +73,24 @@
 			<li><strong>Informational:</strong> This type of banner notification is used to provide users with potentially useful, relevant informational.</li>
 		</ul>
 	</div>
+	<p>For detailed information, see <a href="http://tw-hie/ui_standards/2016/11/banner-messages/" target="_blank">Banner Messages</a>.</p>
 	<p>
 		<div class="alert alert-danger fade in" role="alert">
-		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 		  <span class="tmicon tmicon-error"></span>Your license will expire in 3 days.<button class="btn btn-border btn-xs">Renew Now</button>
 		</div>
 		<div class="alert alert-warning fade in" role="alert">
-		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 		  <span class="tmicon tmicon-warning-triangle"></span>Your browser is currently not supported. <a href="javascript:;">More Information</a>
 		</div>
 		<!--
 		<div class="alert alert-success" role="alert">
-		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 		  <span class="icon icon-success"></span>You successfully read this important alert message.
 		</div>
 		-->
 		<div class="alert alert-info fade in" role="alert">
-		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+		  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 		  <span class="tmicon tmicon-info"></span>This notification requires your attention, but it's not super important.
 		</div>
 	</p>
@@ -103,7 +101,7 @@
 				<div class="placeholder" data-type="image" data-src="images/alert_img1_right.png"></div>
 			</div>
 			<div class="alert alert-warning fade in" role="alert">
-			  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+			  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 			  <span class="tmicon tmicon-warning-triangle"></span>Your browser is currently not supported. <a href="javascript:;">More Information</a>
 			</div>
 		</div>
@@ -118,11 +116,11 @@
 					<div class="placeholder" data-type="image" data-src="images/alert_img1_right.png"></div>
 				</div>
 				<div class="alert alert-danger fade in" role="alert">
-				  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+				  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 				  <span class="tmicon tmicon-error"></span>Your license will expire in 3 days.<button class="btn btn-border btn-xs">Renew Now</button>
 				</div>
 				<div class="alert alert-warning fade in" role="alert">
-				  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="icon icon-cancel"></span></a>
+				  <a href="#" class="cancel" data-dismiss="alert" aria-label="close"><span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span></a>
 				  <span class="tmicon tmicon-warning-triangle"></span>Your browser is currently not supported. <a href="javascript:;">More Information</a>
 				</div>
 			</div>
