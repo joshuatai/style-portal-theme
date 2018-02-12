@@ -1,3 +1,8 @@
 .form-tags-example .tokenfield {
   border: 0;
 }
+
+.form-invalid,
+.form-invalid.focus {
+  border: 1px solid #db3d44;
+}

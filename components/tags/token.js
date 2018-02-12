@@ -13,8 +13,13 @@
 
     this.options          = options;
     this.$element         = $(element);
+    this.$controlWrapper  = $('<div />');
     this.$filterCloseBtn  = $('<span />').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable');
     this.elementWidth     = this.$element.outerWidth();
+
+    this.$helpBlock = $('<span />').addClass('help-block help-block-invalid help-block-with-icon');
+    this.$helpBlockIcon = $('<span />').addClass('tmicon tmicon-warning-circle tmicon-color-error');
+    this.$helpBlockText = $('<span />').addClass('invalid-text');
 
     // call the original constructor
     _super.Constructor.apply( this, arguments );
@@ -22,6 +27,10 @@
     // init icon style and wrapper style
     this.editBtn(this.$wrapper);
     this.$wrapper.css('width', this.elementWidth);
+    this.$helpBlock.append(this.$helpBlockIcon, this.$helpBlockText);
+    this.$helpBlock.hide();
+    this.$wrapper.wrap(this.$controlWrapper);
+    this.$wrapper.after(this.$helpBlock);
 
     // [editable] add editable class if the token is allowEditing
     if(this.options.allowEditing) {
@@ -68,6 +77,7 @@
         _self.getTokens().some(function(token) {
           if (token.value === e.attrs.value) {
             e.preventDefault();
+            _self.validationState(true);
             return true;
           }
         });
@@ -90,6 +100,7 @@
         $(e.relatedTarget).find('.token-label').prop('style').removeProperty('max-width');
         _self.$input.removeAttr('placeholder').removeClass('placeholder');
         _self.$filterCloseBtn.show();
+        _self.validationState(false);
         // open the filter menu
         if(autocomplete.source && autocomplete.source.length > 0) {
           _self.$input.autocomplete('search');
@@ -104,6 +115,9 @@
         if(_self.getTokens().length === 0) {
           _self.$filterCloseBtn.hide();
           _self.addPlaceholder();
+        }
+        if(_self.$wrapper.hasClass('form-invalid')){
+          _self.validationState(false);
         }
       });
 
@@ -186,12 +200,25 @@
           this.$input.trigger(e);
         }
       }
+      if(this.$wrapper.hasClass('form-invalid') && e.which !== 13){
+        this.validationState(false);
+      }
     },
     editBtn: function(element){
       element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
     },
     addPlaceholder: function(){
       this.$input.attr('placeholder', this.options.placeholder).addClass('placeholder');
+    },
+    validationState: function(state){
+      if(state) {
+        this.$wrapper.addClass('form-invalid');
+        this.$helpBlockText.html('Duplicated items');
+        this.$helpBlock.show();
+      } else {
+        this.$wrapper.removeClass('form-invalid');
+        this.$helpBlock.hide();
+      }
     }
   });
 
@@ -227,3 +254,7 @@ $('#filterTags').token({
 });
 
 $('#editTags').token();
+
+$('#tagsValid').token({
+	allowEditing: false
+});
