@@ -51,6 +51,11 @@
           // add the width on the menu style.
           _self.$input.data('ui-autocomplete').menu.element.css({'width': _self.elementWidth, 'min-width': _self.elementWidth});
         })
+        .on('autocompletesearch', function(e, ui){
+          //fix bug in jQuery.ui somewhere where menu.bindings just grows and grows when searching.
+          _self.$input.data("ui-autocomplete").menu.bindings = $();
+          $('.ui-helper-hidden-accessible').html('');
+        })
         .on('autocompletefocus', function(e, ui){
           // prevent the action of replace the text field's value 
           e.preventDefault();
@@ -119,12 +124,20 @@
     },
     bindEvents: function () {
       this.$wrapper
-        .on('click', $.proxy(this.clickEvent, this));
+        .on('click', $.proxy(this.clickEvent, this))
+        .on('mousedown', $.proxy(this.dropdownMenu, this));
       this.$input
         .on('click', $.proxy(this.search, this))
         .on('keydown', $.proxy(this.keydownEvent, this));
       this.$filterCloseBtn
         .on('mousedown', $.proxy(this.removeAllTags, this)); // use mousedown to prevent the autocomplete menu show first when click the close button.
+    },
+    dropdownMenu: function(e) {
+      if (this.$input.data('ui-autocomplete')) {
+        if ($(e.target).hasClass('tokenfield')) {
+          e.preventDefault();
+        };
+      }
     },
     clickEvent: function(e) {
       if (!this.$copyHelper.is(document.activeElement) || this.$wrapper.find('.token.active').length !== 1) return false;
