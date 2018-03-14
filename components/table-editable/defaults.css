@@ -28,9 +28,6 @@
 	margin-left: 0;
 	width: 100%;
 }
-/* .table-inline-editing-example.table-single-field-edit-example .table-edit > tbody > tr td.edit-cell .editable-inline .form-group .form-control {
-	border-color: #0096cc;
-} */
 .table-single-field-edit-example .popover .arrow,
 .table-button-edit-example .popover .arrow{
 	left: 16px !important;
