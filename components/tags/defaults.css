@@ -6,3 +6,7 @@
 .form-invalid.focus {
   border: 1px solid #db3d44;
 }
+
+.tokenfield .token-invalid {
+  background-color: #db3d44;
+}

@@ -3,7 +3,7 @@
   'use strict';
 
   var _super = $.fn.tokenfield;
-  
+
   var Token = function(element, options) {
     var _self = this;
     var autocomplete = $.extend({
@@ -73,14 +73,8 @@
 
     this.$element
       .on('tokenfield:createtoken', function (e) {
-        // stop create token, when the token is existing.
-        _self.getTokens().some(function(token) {
-          if (token.value === e.attrs.value) {
-            e.preventDefault();
-            _self.validationState(true);
-            return true;
-          }
-        });
+        // // stop create token, when the token is existing.
+        // _self.tagValidation(e);
         // [autocomplete] stop create token, when entry text is not in drop down list. 
         if(autocomplete.source && autocomplete.source.length > 0) {
           var availableTokens = _self.filterAvailableTokens();
@@ -94,6 +88,8 @@
         }
       })
       .on('tokenfield:createdtoken', function (e) {
+         // stop create token, when the token is existing.
+         _self.tagValidation(e);
         // add close icon style
         _self.editBtn($(e.relatedTarget));
         // remove plugin default token label attr style of width
@@ -210,10 +206,44 @@
     addPlaceholder: function(){
       this.$input.attr('placeholder', this.options.placeholder).addClass('placeholder');
     },
+    tagValidation: function(event){
+      var _self = this;
+      var tooltips;
+      var errorMsg;
+      var invalidElement = 
+        `<div class="tooltip" role="tooltip">
+          <div class="tooltip-inner tooltip-inner-light"></div>
+        </div>`;
+
+      var duplicateTags = $(_self.$wrapper).find(`[data-value='${event.attrs.value}']`);
+      if(duplicateTags.length >= 2) {
+        duplicateTags.addClass('token-invalid token-duplicate');
+        errorMsg = 'Duplicated entries';
+        tooltips = $('.token-duplicate');
+      }
+      if(event.attrs.value.length > 6) {
+        $(event.relatedTarget).addClass('token-invalid token-lengthly');
+        errorMsg = 'Token lengthly';
+        tooltips = $('.token-lengthly');
+      }
+      tooltips.tooltip({
+        title: errorMsg,
+        placement: "right",
+        template: invalidElement
+      });
+
+      // this.getTokens().some(function(token) {
+      //   if (token.value === event.attrs.value) {
+      //     //event.preventDefault();
+      //     //_self.validationState(true);
+      //     return true;
+      //   }
+      // });
+    },
     validationState: function(state){
       if(state) {
         this.$wrapper.addClass('form-invalid');
-        this.$helpBlockText.html('Duplicated items');
+        this.$helpBlockText.html('Duplicated IP address');
         this.$helpBlock.show();
       } else {
         this.$wrapper.removeClass('form-invalid');
