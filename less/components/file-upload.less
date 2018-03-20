@@ -4,18 +4,18 @@
   padding-left: 12px;
   float: right;
   line-height: 32px; //For btn-default line height
-  .file-size{
-    color: #999;
+  .file-size {
+    color: @file-upload-size-color;
     font-size: 12px;
   }
-  .tmicon-close-s{
+  .tmicon-close-s {
     margin-left: 2px;
     margin-top: 6px;
     cursor: pointer;    
   }
 }
 
-.multiple-file-info{
+.multiple-file-info {
     margin-top: 8px;
     min-width: 280px;
     max-width: 360px;
@@ -24,8 +24,8 @@
       position: relative;
       display: block;
       padding: 8px 52px 8px 16px;
-      border: 1px solid #dddddd;
-      background-color: #F8F8F8;
+      border: 1px solid @file-upload-multiple-info-border;
+      background-color: @file-upload-multiple-info-backgrund;
     }
     > li + li {
       border-top: 0;
@@ -33,11 +33,11 @@
     .file-name {
       word-wrap: break-word;
     }
-    .file-size{
-      color: #999;
+    .file-size {
+      color: @file-upload-size-color;
       font-size: 12px;
     }
-    .tmicon-close-s{
+    .tmicon-close-s {
       position: absolute;
       right: 12px;
       top: 8px;
