@@ -17,11 +17,23 @@
 @input-bg-disabled:              extract(@grays, 10);
 
 //** Text color for `<input>`s
-@input-color:                    @gray-base;
+@input-color:                    @gray-darkest;
 //** `<input>` border color #cccccc
 @input-border:                   extract(@grays, 9);
-//** `<input type="checkbox">` border color #999999
+//** `<input type="checkbox">` or `<input type="radio">` border color #999999
 @input-checkbox-radio-border:    extract(@grays, 6);
+
+//** `<input type="checkbox">` or `<input type="radio">` background color #ffffff
+@input-checkbox-radio-background:#ffffff;
+
+//** `<input type="checkbox">` or `<input type="radio">` color #ffffff
+@input-checkbox-radio-point-color: #ffffff;
+
+@input-checkbox-radio-checked-hover-background: #33ABD6;
+
+@input-checkbox-radio-disabled-background: #dddddd;
+
+@input-checkbox-radio-checked-hover-border: @input-checkbox-radio-checked-hover-background;
 
 //** TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -53,7 +65,7 @@
 //** `.form-group` margin
 @form-group-margin-bottom:       12px;
 
-@legend-color:                   @gray-base;
+@legend-color:                   @gray-darkest;
 @legend-border-color:            #e6e6e6;
 
 //** Background color for textual input addons
@@ -63,3 +75,7 @@
 
 //** Disabled cursor for form controls and buttons.
 @cursor-disabled:                not-allowed;
+
+
+//** Help block
+@help-block-color:               #999999;

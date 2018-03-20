@@ -31,141 +31,113 @@
 
 // Headings
 // -------------------------
-h1, .h1 {
-  font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
-  font-size: @font-size-h1;
-  line-height: @headings-line-height;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   color: @headings-color;
-  letter-spacing: @letter-spacing-heading-s;
-  margin-top: @font-margin;
-  margin-bottom: @font-margin;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   small,
   .small {
-    font-size: 70%;
+    font-size: @small-font-size;
     font-weight: normal;
-    line-height: 1;
+    line-height: @small-line-height;
     color: @headings-small-color;
   }
 }
-h2, .h2 {
-  font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
-  font-size: @font-size-h2;
-  line-height: @headings-line-height;
-  color: @headings-color;
-  letter-spacing: @letter-spacing-heading-s;
-  margin-top: @font-margin;
-  margin-bottom: @font-margin;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  small,
-  .small {
-    font-size: 70%;
-    font-weight: normal;
-    line-height: 1;
-    color: @headings-small-color;
-  }
-}
+h1, .h1,
+h2, .h2,
 h3, .h3 {
   font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
-  font-size: @font-size-h3;
   line-height: @headings-line-height;
-  color: @headings-color;
   letter-spacing: @letter-spacing-heading-s;
-  margin-top: @font-margin;
-  margin-bottom: @font-margin;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  small,
-  .small {
-    font-size: 70%;
-    font-weight: normal;
-    line-height: 1;
-    color: @headings-small-color;
-  }
 }
-h4, .h4 {
-  line-height: @line-height-base;
-  color: @headings-color;
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   font-family: @font-family-arial;
+  line-height: @line-height-base;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
   font-weight: @headings-font-weight;
-  font-size: @font-size-h4;
   margin-top: @font-margin;
   margin-bottom: @font-margin;
 }
-h5, .h5 {
-  line-height: @line-height-base;
-  color: @headings-color;
-  font-family: @font-family-arial;
+h5, .h5,
+h6, .h6 {
   font-weight: bold;
+}
+h1, .h1 {
+  font-size: @font-size-h1;
+}
+h2, .h2 {
+  font-size: @font-size-h2;
+}
+h3, .h3 {
+  font-size: @font-size-h3;
+}
+h4, .h4 {
+  font-size: @font-size-h4;
+}
+h5, .h5 {
   font-size: @font-size-h5;
   margin-top: @font-margin;
   margin-bottom: @font-margin;
 }
 h6, .h6 {
-  line-height: @line-height-base;
-  color: @headings-color;
-  font-family: @font-family-arial;
-  font-weight: bold;
   font-size: @font-size-h6;
   margin-top: (@line-height-base-computed / 2);
   margin-bottom: (@line-height-base-computed / 2);
 }
-.title {
-  font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
-  font-size: @font-size-h3;
-  line-height: @headings-line-height;
-  color: @headings-color;
-  letter-spacing: @letter-spacing-heading-s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.display1 {
-  font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
-  font-size: @font-size-h2;
-  line-height: @headings-line-height;
-  color: @headings-color;
-  letter-spacing: @letter-spacing-heading-s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.display2 {
-  font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
-  font-size: @font-size-h1;
-  line-height: @headings-line-height;
-  color: @headings-color;
-  letter-spacing: @letter-spacing-heading-s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+.title,
+.display1,
+.display2,
 .display3 {
   font-family: @font-family-interstate-light;
-  font-weight: @headings-font-weight;
+  
+}
+.title {
+  font-size: @font-size-h3;
+}
+.display1 {
+  font-size: @font-size-h2;  
+}
+.display2 {
+  font-size: @font-size-h1;
+}
+.display3 {
   font-size: @font-size-Display3;
-  line-height: @headings-line-height;
-  color: @headings-color;
-  letter-spacing: @letter-spacing-heading-l;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .display4 {
-  line-height: @headings-line-height;
-  color: @headings-color;
   font-family: @font-family-interstate-extralight;
-  font-weight: @headings-font-weight;
   font-size: @font-size-Display4;
-  letter-spacing: @letter-spacing-heading-l;
+}
+.title,
+.display1,
+.display2,
+.display3,
+.display4 {
+  color: @headings-color;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.title,
+.display1,
+.display2 {
+  letter-spacing: @letter-spacing-heading-s;
+}
+.display3,
+.display4 {
+  letter-spacing: @letter-spacing-heading-l;
+}
 
 // Body text
 // -------------------------
@@ -186,21 +158,16 @@ h6, .h6 {
   line-height: @line-height-base;
 }
 
-p {
-  margin: 0 0 @paragraph-margin-bottom;
-}
-
 .lead {
   margin-bottom: @line-height-base-computed;
   font-size: @font-size-lead;
   font-weight: normal;
   line-height: @line-height-base;
-  /*
-  @media (min-width: @screen-sm-min) {
-    font-size: (@font-size-base * 1.5);
-  }*/
 }
 
+p {
+  margin: 0 0 @paragraph-margin-bottom;
+}
 
 // Emphasis & misc
 // -------------------------
@@ -209,18 +176,6 @@ p {
 small,
 .small {
   font-size: @small-font-size;
-}
-
-// Delete
-del {
-  text-decoration: line-through;
-}
-
-// Highlight
-mark,
-.mark {
-  color: @gray-base;
-  background-color: @text-mark;
 }
 
 // Alignment
@@ -254,7 +209,6 @@ mark,
 .text-link {
   color: @brand-primary;
 }
-
 
 // Lists
 // -------------------------
@@ -330,7 +284,6 @@ dd {
   margin-left: 0; // Undo browser default
 }
 
-
 // Horizontal description lists
 //
 // Defaults to being stacked without any of the below styles applied, until the
@@ -357,9 +310,20 @@ dd {
   }
 }
 
-
 // Misc
 // -------------------------
+
+// Delete
+del {
+  text-decoration: line-through;
+}
+
+// Highlight
+mark,
+.mark {
+  color: @gray-darkest;
+  background-color: @text-mark;
+}
 
 // Abbreviations and acronyms
 abbr[title],
@@ -369,7 +333,6 @@ abbr[data-original-title] {
   border-bottom: 1px dotted @abbr-border-color;
   text-decoration: none;
 }
-
 
 // Addresses
 address {

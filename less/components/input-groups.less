@@ -136,11 +136,11 @@
     padding: @padding-base-vertical 8px;
   }
   + .form-control {
-    border-left-color: #e6e6e6;
+    border-left-color: @input-group-addon-beside-form-control-border;
   }
 
   + .form-control:not(:last-child) {
-    border-right-color: #e6e6e6;
+    border-right-color: @input-group-addon-beside-form-control-border;
     &:focus {
       border-right-color: @input-border-focus;
     }
@@ -288,7 +288,7 @@
 }
 .touchspin.vertical.focused {
   .form-control {
-    border-color: @btn-default-focus-border #ccc @btn-default-focus-border @btn-default-focus-border;
+    border-color: @btn-default-focus-border @input-border @btn-default-focus-border @btn-default-focus-border;
     z-index: 2;
   }
 
@@ -296,70 +296,70 @@
     &:first-child {
       border-top-color: @btn-default-focus-border;
       border-right-color: @btn-default-focus-border;
-      border-left-color: #ccc;
-      border-bottom-color: #ccc;
+      border-left-color: @input-border;
+      border-bottom-color: @input-border;
       &:hover {
-        border-left-color: #999;
-        border-bottom-color: #999;
+        border-left-color: @btn-default-border-hover;
+        border-bottom-color: @btn-default-border-hover;
         z-index: 4;
       }
       &:focus {
         z-index: 3;
       }
       &:focus:hover {
-        border-left-color: #999;
-        border-bottom-color: #999;
+        border-left-color: @btn-default-border-hover;
+        border-bottom-color: @btn-default-border-hover;
       }
     }
     &:last-child {
       border-bottom-color: @btn-default-focus-border;
       border-right-color: @btn-default-focus-border;
-      border-left-color: #ccc;
-      border-top-color: #ccc;
+      border-left-color: @input-border;
+      border-top-color: @input-border;
       &:hover {
-        border-left-color: #999;
-        border-top-color: #999;
+        border-left-color: @btn-default-border-hover;
+        border-top-color: @btn-default-border-hover;
         z-index: 4;
       }
       &:focus {
         z-index: 3;
       }
       &:focus:hover {
-        border-left-color: #999;
-        border-top-color: #999;
+        border-left-color: @btn-default-border-hover;
+        border-top-color: @btn-default-border-hover;
       }
     }
   }
 }
 .touchspin.horizontal.focused {
   .form-control {
-    border-color: @btn-default-focus-border #ccc;
+    border-color: @btn-default-focus-border @input-border;
     z-index: 2;
   }
   .input-group-btn:first-child .btn {
     border-top-color: @btn-default-focus-border;
     border-bottom-color: @btn-default-focus-border;
     border-left-color: @btn-default-focus-border;
-    border-right-color: #ccc;
+    border-right-color: @input-border;
     &:hover {
-      border-right-color: #999;
+      border-right-color: @btn-default-border-hover;
       z-index: 4;
     }
     &:focus:hover {
-      border-right-color: #999;
+      border-right-color: @btn-default-border-hover;
     }
   }
   .input-group-btn:last-child .btn {
     border-top-color: @btn-default-focus-border;
     border-bottom-color: @btn-default-focus-border;
     border-right-color: @btn-default-focus-border;
-    border-left-color: #ccc;
+    border-left-color: @input-border;
     &:hover {
-      border-left-color: #999;
+      border-left-color: @btn-default-border-hover;
       z-index: 4;
     }
     &:focus:hover {
-      border-left-color: #999;
+      border-left-color: @btn-default-border-hover;
     }
   }
 

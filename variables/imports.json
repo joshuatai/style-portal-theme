@@ -8,12 +8,16 @@
   "z-index",
   "media-queries",
   "grid-system",
+  "input-group",
   "form",
+  "file-upload",
   "button",
+  "combobox",
   "close",
   "dropdown",
   "breadcrumb",
   "modals",
+  "multiple-selection",
   "pagination",
   "popovers",
   "tooltip",
@@ -28,5 +32,6 @@
   "panels",
   "progress-bars",
   "scrollbar",
-  "tags"
+  "tags",
+  "toggle-switches"
 ]
