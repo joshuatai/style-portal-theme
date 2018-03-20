@@ -125,14 +125,15 @@
     bindEvents: function () {
       this.$wrapper
         .on('click', $.proxy(this.clickEvent, this))
-        .on('mousedown', $.proxy(this.dropdownMenu, this));
+        .on('mousedown', $.proxy(this.keeyDropdownMenuOpen, this));
       this.$input
         .on('click', $.proxy(this.search, this))
         .on('keydown', $.proxy(this.keydownEvent, this));
       this.$filterCloseBtn
         .on('mousedown', $.proxy(this.removeAllTags, this)); // use mousedown to prevent the autocomplete menu show first when click the close button.
     },
-    dropdownMenu: function(e) {
+    keeyDropdownMenuOpen: function(e) {
+      // keep open when dropdown menu is opened.
       if (this.$input.data('ui-autocomplete')) {
         if ($(e.target).hasClass('tokenfield')) {
           e.preventDefault();
