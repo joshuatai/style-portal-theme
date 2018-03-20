@@ -1,7 +1,9 @@
 {
   "map": {
     "jquery-2.2.4": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
+    "jquery": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
     "jquery-ui-1.12.1": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
+    "jquery.ui.widget": "jQuery-ui-core/jquery-ui.min.js",
     "bootstrap-3.3.7": [
       "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js",
       "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
@@ -31,7 +33,9 @@
     "colResizable-1.6": "colResizable-1.6/colResizable-1.6.min.js",
     "moment-2.18.1": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js",
     "x-editable-1.5.1": "https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js",
-    "bootstrap-tokenfield-0.12.0": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"
+    "bootstrap-tokenfield-0.12.0": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js",
+    "jquery.mask-1.14.15": "https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js",
+    "imask-3.1.2": "https://cdnjs.cloudflare.com/ajax/libs/imask/3.1.2/imask.min.js"
   },
   "meta": {
     "bootstrap-3.3.7": {
