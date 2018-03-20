@@ -110,11 +110,11 @@
       clear: both;
       font-weight: normal;
       line-height: 20px;
-      color: #222222;
+      // color: #222222;
       text-decoration: none;
       white-space: nowrap;
       &.ui-state-active {
-        background-color: #eee;
+        background-color: @token-autocomplete-item-hover-bg;
         cursor: pointer;
       }
     }
@@ -122,7 +122,7 @@
       .ui-menu-item-wrapper,
       .ui-menu-item-wrapper.ui-state-active {
         cursor: text;
-        background-color: #ffffff;
+        background-color: @body-bg;
         color: @token-autocomplete-no-match;
       }
     }
