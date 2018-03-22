@@ -170,7 +170,7 @@ x-axis
 
 	.mCSB_horizontal.mCSB_inside > .mCSB_container{
 		margin-right: 0;
-		margin-bottom: @horizontal-scrollbar-container-margin-bottom;
+		margin-bottom: @scrollbar-horizontal-container-margin-bottom;
 	}
 
 	.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }
@@ -179,7 +179,7 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal{
 		width: auto;
-		height: @horizontal-scrollbar-dragger-heigh;
+		height: @scrollbar-horizontal-dragger-height;
 		top: auto;
 		right: 0;
 		bottom: 0;
@@ -193,7 +193,7 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{
 		width: 100%;
-		height: @horizontal-scrollbar-dragger-heigh;
+		height: @scrollbar-horizontal-dragger-height;
 		margin: 0;
 	}
 
@@ -205,7 +205,7 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
 		width: 100%;
-		height: @horizontal-scrollbar-dragger-heigh;
+		height: @scrollbar-horizontal-dragger-height;
 		margin: 0 auto;
 	}
 
@@ -240,12 +240,12 @@ x-axis
 	/* Fixed column's scroll bar area in horizontal scrollbar */
 	.fixed-column-scrollbar-area {
 		content: "";
-        height: 8px;
-        width: 240px;
-        display: block;
-        background-color: #e6e6e6;
-        border-right: 1px solid #bbbbbb;
-        border-left: 1px solid #dddddd;
+		height: 8px;
+		width: 240px;
+		display: block;
+		background-color: @scrollbar-horizontal-1st-column-bottom-rail-bg;
+		border-right: 1px solid @scrollbar-horizontal-1st-column-bottom-rail-border-right;
+		border-left: 1px solid @scrollbar-horizontal-1st-column-bottom-rail-border-left;
 	}
 
 
@@ -316,22 +316,22 @@ yx-axis
 						right: 0;
 					}
 				}
-				.mCSB_draggerContainer {
+				.mCSB_scrollTools_horizontal .mCSB_draggerContainer {
 					.mCSB_draggerRail {
-						border-top: 1px solid #dddddd;
+						border-top: 1px solid @scrollbar-vh-bottom-rail-border-top;
 					}
 				}
 			}
 			.mCustomScrollBox:after {
 				content: "";
 				display: block;
-				width: 8px;
-				height: 8px;
-				background: #e6e6e6;
+				width: @scrollbar-vh-corner-square-width;
+				height: @scrollbar-vh-corner-square-height;
+				background: @scrollbar-vh-corner-square-bg;
 				position: absolute;
 				right: 0;
 				bottom: 0;
-				border-top: 1px solid #dddddd;
+				border-top: 1px solid @scrollbar-vh-corner-square-border-top;
 			}
 		}
 	}
