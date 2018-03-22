@@ -23,7 +23,7 @@
       .table {
         > thead > tr > th,
         > tbody > tr > td {
-          border-right: 1px solid #bbbbbb;
+          border-right: 1px solid @table-sb-fixed-col-border-right-color;
         }
       }
       &:after {
@@ -33,7 +33,7 @@
     .table-horizontal-scrollable {
       overflow-x: auto;
       max-width: calc(~"100% - 240px");
-      border-right: 1px solid #dddddd;
+      border-right: 1px solid @table-border-color;
       
       .table {
         border-left: 0;

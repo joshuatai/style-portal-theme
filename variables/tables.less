@@ -6,15 +6,51 @@
 @table-cell-padding:            8px 12px;
 //** Padding for cells in `.table-condensed`.
 @table-condensed-cell-padding:  5px;
+//** Table Zebra-striping color
+@zebra-sriping: #f9f9f9;
 
 //** Default background color used for all tables.
-@table-bg:                      transparent;
+@table-bg:                                  transparent;
+//** Default header font color used for all tables.
+@table-header-color:                        extract(@grays, 4);
 //** Background color used for `.table-striped`.
-@table-bg-accent:               #f9f9f9;
+@table-bg-accent:                           @zebra-sriping;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                #e6f4fc;
-@table-bg-active:               #fcf8da;
+@table-bg-hover:                            extract(@blues, 10);
+@table-bg-active:                           extract(@yellows, 10);
 
 //** Border color for table and cell borders.
-@table-border-color:            extract(@grays, 10);
-@table-header-border-bottom-color: extract(@grays, 9);
+@table-border-color:                        extract(@grays, 10);
+@table-header-border-bottom-color:          extract(@grays, 9);
+
+//** Bordered table background color.
+@table-bordered-header-bg:                  extract(@grays, 12);
+//** No data table font color.
+@table-no-data-color:                       extract(@grays, 6);
+//** Sortable table.
+@table-sortable-hover-bg:                   @gray-light;
+@table-sortable-icon-color:                 @black;
+@table-sortable-sorted-color:               @gray-base;
+//** Resizable table.
+@table-resizable-border-left-color:         extract(@grays, 6);
+//** Toolbar table.
+@table-with-header-toolbar-bg:              @gray-lighter;
+@table-with-header-toolbar-selected-color:  extract(@grays, 3);
+@table-with-header-toolbar-plain-bg:        @white;
+@table-with-header-toolbar-plain-shadow:    0 5px 5px -5px rgba(0, 0, 0, 0.06);
+
+//** Draggable table.
+@table-drag-placeholder-bg:                 extract(@grays, 13);
+@table-drag-placeholder-border-color:       extract(@grays, 13);
+@table-drag-helper-shadow:                  0 2px 6px rgba(0, 0, 0, 0.25);
+@table-drag-helper-bg:                      extract(@blues, 9);
+@table-drag-column-bg:                      @gray-lighter;
+@table-drag-column-header-color:            extract(@grays, 10);
+@table-drag-column-helper-border-color:     @gray;
+
+//** Fixed table.
+@table-sb-fixed-col-border-right-color:     @gray;
+
+//** Editable table.
+@table-edit-editable-hover-border-color:    @brand-primary;
+@table-edit-error-border-color:             @brand-danger;

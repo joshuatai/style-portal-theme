@@ -1,14 +1,14 @@
 .table-row-draggable {
 	.table-draggable-placeholder td {
-		background: #F4F4F4;
-		border-left-color: #F4F4F4;
-		border-right-color: #F4F4F4;
+		background: @table-drag-placeholder-bg;
+		border-left-color: @table-drag-placeholder-border-color;
+		border-right-color: @table-drag-placeholder-border-color;
 	}
 	.table-draggable-placeholder td:first-child {
-		border-left-color: #dddddd;
+		border-left-color: @table-border-color;
 	}
 	.table-draggable-placeholder td:last-child {
-		border-right-color: #dddddd;
+		border-right-color: @table-border-color;
 	}
 	.ui-sortable-handle:hover {
 		td {
@@ -32,11 +32,15 @@
 }
 
 .table-row-draggable-helper {
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-	background: #cceaf5;
+	box-shadow: @table-drag-helper-shadow;
+	background: @table-drag-helper-bg;
 	cursor: move;
-	td {
-		border: 1px solid #cccccc;
+	> tbody {
+		> tr {
+			> td {
+				border: 1px solid @table-header-border-bottom-color;
+			}
+		}
 	}
 }
 
@@ -49,18 +53,18 @@
 				}
 			}
 			&.ui-column-highlight {
-				background-color: #f8f8f8;
-				color: #dddddd;
+				background-color: @table-drag-column-bg;
+				color: @table-drag-column-header-color;
 			}
 		}
 	}
 }
 
 .column-sortable.ui-draggable-dragging {
-	background-color: #f8f8f8;
-	border: 1px solid #bbb;
-	box-shadow: 0 2px 6px rgba(0,0,0,.25);
+	background-color: @table-drag-column-bg;
+	border: 1px solid @table-drag-column-helper-border-color;
+	box-shadow: @table-drag-helper-shadow;
 	padding: 8px 12px;
-	color: #777777;
+	color: @table-header-color;
 	font-weight: bold;
 }
