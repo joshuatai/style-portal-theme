@@ -31,7 +31,7 @@
   border: 1px solid @dropdown-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-border;
   border-radius: 0;
-  .box-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  .box-shadow(0 2px 6px @dropdown-shadow-color);
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -57,13 +57,13 @@
     color: @dropdown-link-color;
     text-decoration: none;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+    > .tmicon {
+      margin-right: @base-space;
+    }
   }
   > li.dropdown-submenu > a {
     padding-right: 32px;
-  }
-
-  .tmicon {
-    margin-right: @base-space;
   }
 
   .badge {
