@@ -8,6 +8,7 @@
       definitions: {
         '0': /\d/,
         'a': /^[A-Za-z]+$/,
+        '*': /./,
         'A': /^[A-Za-z0-9]+$/
       },
       lazy: false,  // make placeholder always visible
@@ -15,7 +16,7 @@
     },
     _create: function () {
       this._renderInputMaskInfo();
-      this._getInputMaskCharData();
+      this._getMaskCharacter();
       this.mask = new IMask(this.element[0], this.options);
     },
     _renderInputMaskInfo: function () {
@@ -44,27 +45,58 @@
           }
         }
       });
+      this.element.on('keyup', function(e) {
+        //when user use keyboard(ctrlKey and shift key) to select text.
+        var selectedLength = String(window.getSelection()).length;
+        var keyCheck = ['Control', 'Meta', "Shift"].indexOf(e.key);
+        if(selectedLength > 0 && keyCheck > 0) {
+          _self.setSelectionPos();
+        }
+      });
     },
-    _getInputMaskCharData: function(){
+    _getMaskCharacter: function(){
       var _self = this;
       var maskVal = this.options.mask;
-      var filterVal;
-      var charArray = [];
       var uniqueArray = function(arrArg) {
         return arrArg.filter(function(elem, pos, arr) {
           return arr.indexOf(elem) == pos;
         });
       };
-      $.each(Object.keys(this.options.definitions), function(index, value) {
-        var regex = new RegExp(value, 'g');
-        if(maskVal.replace(regex, '') !== maskVal) {
-          console.log(maskVal.replace(regex, '').split(''));
-          _self.element.data('regExpChar', uniqueArray(maskVal.replace(regex, '').split('')));
-        }
-      });
+      var df = Object.keys(this.options.definitions).join('');
+      df = `[${df}]`;
+      this.element.data('regExpChar', uniqueArray(maskVal.replace(new RegExp(df, 'g'), '').split('')));
     },
     alignCursor: function(){
       this.mask.alignCursor();
+    },
+    setSelectionPos: function(){
+      var selection = window.getSelection();
+      var selectedStr = String(selection);
+      var placeholderChar = this.element.data('hie-inputMask').mask.masked.placeholderChar;
+      var indexOfPlaceholder = this.element.val().indexOf(placeholderChar);
+      var regExpChar = this.element.data('regExpChar');
+      var regPre = new RegExp(`^[${placeholderChar}${regExpChar.join('')}]*`); 
+      var regSuf = new RegExp(`[${placeholderChar}${regExpChar.join('')}]*$`);
+      var execPre = regPre.exec(selectedStr);
+      var execSuf = regSuf.exec(selectedStr);
+      var countPrefix = execPre[0]? execPre[0].length : 0;
+      var countSuffix = execSuf[0]? execSuf[0].length : 0;
+      var setRangeStart;
+      var setRangeEnd;
+      setRangeStart = this.element[0].selectionStart + countPrefix;
+      setRangeEnd = this.element[0].selectionEnd - countSuffix;
+
+      if(indexOfPlaceholder === -1 && selectedStr.length === this.element.val().length){
+        //selected string without placeholder and it's full text select
+        this.element[0].setSelectionRange(0, -1);
+      }
+      else if(countPrefix === countSuffix && (countPrefix || countSuffix) === selectedStr.length) {
+        // set cursor to the end of available input position.
+        this.alignCursor();
+      }
+      else {
+      this.element[0].setSelectionRange(setRangeStart, setRangeEnd);
+      }
     }
   });
   $(document).on('mouseup', function(e) {
@@ -72,30 +104,13 @@
       var selection = window.getSelection();
       return !!$(elem).data('hie-inputMask') && !!String(selection);
     }).each(function(index, elem) {
-      var selection = window.getSelection();
-      var selectedStr = String(selection);
-      var placeholderChar = $(elem).data('hie-inputMask').mask.masked.placeholderChar;
-      var regExpChar = $(elem).data('regExpChar');
-      var regPre = new RegExp(`^[${placeholderChar} ${regExpChar}]*`); ///^[_ : -.\s\(|\)]*/
-      var regSuf = new RegExp(`[${placeholderChar} ${regExpChar}]*$`); ///[_ : -.\s\(|\)]*$/
-      var countPrefix;
-      var countSuffix;
-      var setRangeStart;
-      var setRangeEnd;
-      countPrefix = selectedStr.length - selectedStr.replace(regPre, '').length;
-      countSuffix = selectedStr.length - selectedStr.replace(regSuf, '').length;
-      setRangeStart = elem.selectionStart + countPrefix;
-      setRangeEnd = elem.selectionEnd - countSuffix;
-      if(countPrefix === countSuffix) {
-        $(elem).inputMask('alignCursor');
-      }
-      elem.setSelectionRange(setRangeStart, setRangeEnd);
+      $(elem).inputMask('setSelectionPos');
     });
   });
 })(jQuery);
 
 $('[data-input-mask=phone]', this).inputMask({
-  mask: '(00) -0000-0000'
+  mask: '(00)-0000-0000'
 });
 $('[data-input-mask=mobilePhone]', this).inputMask({
   mask: '0000-000-000'
