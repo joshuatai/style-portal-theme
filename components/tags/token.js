@@ -96,7 +96,6 @@
         $(e.relatedTarget).find('.token-label').prop('style').removeProperty('max-width');
         _self.$input.removeAttr('placeholder').removeClass('placeholder');
         _self.$filterCloseBtn.show();
-        _self.validationState(false);
         // open the filter menu
         if(autocomplete.source && autocomplete.source.length > 0) {
           _self.$input.autocomplete('search');
@@ -107,13 +106,15 @@
         var inputValLength = _self.$input.val().length;
         _self.$input[0].setSelectionRange(inputValLength, inputValLength);
       })
+      .on('tokenfield:removetoken', function (e) {
+        if($(e.relatedTarget).data('bs.tooltip')) {
+          $(e.relatedTarget).tooltip('destroy');
+        }
+      })
       .on('tokenfield:removedtoken', function (e) {
         if(_self.getTokens().length === 0) {
           _self.$filterCloseBtn.hide();
           _self.addPlaceholder();
-        }
-        if(_self.$wrapper.hasClass('form-invalid')){
-          _self.validationState(false);
         }
       });
 
@@ -135,14 +136,14 @@
     bindEvents: function () {
       this.$wrapper
         .on('click', $.proxy(this.clickEvent, this))
-        .on('mousedown', $.proxy(this.keeyDropdownMenuOpen, this));
+        .on('mousedown', $.proxy(this.keepDropdownMenuOpen, this));
       this.$input
         .on('click', $.proxy(this.search, this))
         .on('keydown', $.proxy(this.keydownEvent, this));
       this.$filterCloseBtn
         .on('mousedown', $.proxy(this.removeAllTags, this)); // use mousedown to prevent the autocomplete menu show first when click the close button.
     },
-    keeyDropdownMenuOpen: function(e) {
+    keepDropdownMenuOpen: function(e) {
       // keep open when dropdown menu is opened.
       if (this.$input.data('ui-autocomplete')) {
         if ($(e.target).hasClass('tokenfield')) {
@@ -196,9 +197,9 @@
           this.$input.trigger(e);
         }
       }
-      if(this.$wrapper.hasClass('form-invalid') && e.which !== 13){
-        this.validationState(false);
-      }
+      // if(this.$wrapper.hasClass('form-invalid') && e.which !== 13){
+      //   this.validationState(false);
+      // }
     },
     editBtn: function(element){
       element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
@@ -215,38 +216,39 @@
           <div class="tooltip-inner tooltip-inner-light"></div>
         </div>`;
 
-      var duplicateTags = $(_self.$wrapper).find(`[data-value='${event.attrs.value}']`);
-      if(duplicateTags.length >= 2) {
-        duplicateTags.addClass('token-invalid token-duplicate');
-        errorMsg = 'Duplicated entries';
-        tooltips = $('.token-duplicate');
-      }
-      if(event.attrs.value.length > 6) {
-        $(event.relatedTarget).addClass('token-invalid token-lengthly');
-        errorMsg = 'Token lengthly';
-        tooltips = $('.token-lengthly');
-      }
+      // Handle duplicate state
+      this.getTokens().some(function(token) {
+        if (token.value === event.attrs.value) {
+          $(event.relatedTarget).addClass('token-invalid token-duplicate');
+          errorMsg = 'Duplicated entries';
+          tooltips = $('.token-duplicate');
+        }
+      });
       tooltips.tooltip({
         title: errorMsg,
         placement: "right",
         template: invalidElement
       });
-
-      // this.getTokens().some(function(token) {
-      //   if (token.value === event.attrs.value) {
-      //     //event.preventDefault();
-      //     //_self.validationState(true);
-      //     return true;
-      //   }
-      // });
+      this.validationState(true);
+      // var duplicateTags = $(_self.$wrapper).find(`[data-value='${event.attrs.value}']`);
+      // if(duplicateTags.length >= 2) {
+      //   duplicateTags.addClass('token-invalid token-duplicate');
+      //   errorMsg = 'Duplicated entries';
+      //   tooltips = $('.token-duplicate');
+      // }
+      // if(event.attrs.value.length > 6) {
+      //   $(event.relatedTarget).addClass('token-invalid token-lengthly');
+      //   errorMsg = 'Token lengthly';
+      //   tooltips = $('.token-lengthly');
+      // }
     },
     validationState: function(state){
       if(state) {
-        this.$wrapper.addClass('form-invalid');
-        this.$helpBlockText.html('Duplicated IP address');
+        this.$wrapper.addClass('form-invalided');
+        this.$helpBlockText.html('There are invalid entries');
         this.$helpBlock.show();
       } else {
-        this.$wrapper.removeClass('form-invalid');
+        this.$wrapper.removeClass('form-invalided');
         this.$helpBlock.hide();
       }
     }
