@@ -1,7 +1,6 @@
 {
   "map": {
     "jquery-2.2.4": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
-    "jquery": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js",
     "jquery-ui-1.12.1": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
     "jquery.ui.widget": "jQuery-ui-core/jquery-ui.min.js",
     "bootstrap-3.3.7": [
