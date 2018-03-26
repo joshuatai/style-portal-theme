@@ -1,24 +1,4 @@
-// Noraml editable
-$('.table-edit.single-field .edit-cell > span').editable({
-  mode: 'inline',
-  onblur: 'submit',
-  clear: false,
-  highlight: false,
-  showbuttons: false,
-  inputclass: 'form-control',
-  emptytext: '&nbsp;'
-})
-.on('shown', function(e, editable) {
-  var $td = editable.$element.parent();
-  $td.addClass('edit-mode');
-})
-.on('hidden', function(e) {
-  var $td = $(e.target).parent();
-  $td.removeClass('edit-mode');
-});
-
-// Validation editable input event control
-$('.table-edit.validation .edit-cell').on('focusout', '.editable-input', function(e) {
+$('.table-edit.single-field .edit-cell').on('focusout', '.editable-input', function(e) {
   var $input = $(this).find('.form-control');
   var $cell = $(this).parents('.edit-cell');
   var $editable = $cell.find('.editable');
@@ -48,8 +28,7 @@ $('.table-edit.validation .edit-cell').on('focusout', '.editable-input', functio
   }
 });
 
-// Validation editable
-$('.table-edit.validation .edit-cell > span').editable({
+$('.table-edit.single-field .edit-cell > span').editable({
   mode: 'inline',
   onblur: 'submit',
   clear: false,
@@ -103,6 +82,3 @@ $('.table-edit.validation .edit-cell > span').editable({
   var $td = $(e.target).parent();
   $td.removeClass('edit-mode');
 });
-
-// For display when page load.
-$('.table-edit.validation .edit-cell.default-error > span').editable('show');

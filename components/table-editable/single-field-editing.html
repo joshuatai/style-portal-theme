@@ -4,7 +4,7 @@
     <style data-selector=".table-edit > tbody > tr td.edit-cell.edit-mode"></style>
   </pre>
   <pre data-title="Editable mode with a popover">
-    <style data-selector=".table-edit.validation > tbody > tr td.edit-cell.edit-mode"></style>
+    <style data-selector=".table-edit.single-field > tbody > tr td.edit-cell.edit-mode"></style>
   </pre>
   <h5>Editable cell container</h5>
   <p>When mouse-over, the container displays cell borders to indicate editable cells.</p>
@@ -72,7 +72,7 @@
     </tbody>
   </table>
 </section>
-<section class="table-inline-editing-example table-validation-edit-example">
+<section class="table-inline-editing-example">
     <h5>Invalid Field Values</h5>
     <div class="lists-unordered">
       <ul>
@@ -81,7 +81,7 @@
         <li>Click the invalid cell to display the error message.</li>
       </ul>
     </div>
-    <table class="table table-bordered table-hover table-longtext-truncated table-edit validation">
+    <table class="table table-bordered table-hover table-longtext-truncated table-edit single-field-validation">
       <thead>
         <tr>
           <th>Plan Name</th>
@@ -92,22 +92,39 @@
       </thead>
       <tbody>
         <tr>
-          <td class="edit-cell default-error"><span></span></td>
+          <td class="edit-cell edit-mode error-mode">
+            <span class="editable-container editable-inline">
+                <div>
+                  <form class="form-inline">
+                      <div class="control-group form-group">
+                        <div>
+                            <div class="editable-input">
+                              <div class="popover bottom-right" role="tooltip">
+                                  <div class="arrow"></div>
+                                  <div class="popover-content">This field is required.</div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+            </span>
+          </td>
           <td>Hotfix</td>
           <td>David Wu</td>
-          <td class="edit-cell"><span>ipsum dolor sit amet, consectetuer adipiscing elit.</span></td>
+          <td>ipsum dolor sit amet, consectetuer adipiscing elit.</td>
         </tr>
         <tr>
-          <td class="edit-cell"><span>Hotfix_DDI_01</span></td>
+          <td>Hotfix_DDI_01</td>
           <td>Virtual Analyzer image</td>
           <td>Michael Chen</td>
-          <td class="edit-cell"><span>Aenean commodo ligula eget dolor.</span></td>
+          <td>Aenean commodo ligula eget dolor.</td>
         </tr>
         <tr>
-          <td class="edit-cell"><span>TW_Patch_01_DDI</span></td>
+          <td>TW_Patch_01_DDI</td>
           <td>Firmware</td>
           <td>Eric Lin</td>
-          <td class="edit-cell"><span>Donec vitae sapien ut libero venenatis faucibus.</span></td>
+          <td>Donec vitae sapien ut libero venenatis faucibus.</td>
         </tr>
       </tbody>
     </table>
