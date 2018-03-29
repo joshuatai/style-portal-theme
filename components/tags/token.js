@@ -233,10 +233,13 @@
       this.addPlaceholder();
     },
     keydownEvent: function(e){
-      if(e.which === 40 || e.which === 38) {
-        var activeItem = this.$dropdownMenu.find('.ui-menu-item-wrapper.ui-state-active');
-        if(activeItem.length === 0) {
-          this.$input.trigger(e);
+      console.log(e.which);
+      if (this.$input.data('ui-autocomplete')) {
+        if(e.which === 40 || e.which === 38) {
+          var activeItem = this.$dropdownMenu.find('.ui-menu-item-wrapper.ui-state-active');
+          if(activeItem.length === 0) {
+            this.$input.trigger(e);
+          }
         }
       }
     },
