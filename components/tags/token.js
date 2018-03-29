@@ -23,6 +23,8 @@
     this.$helpBlock = $('<span />').addClass('help-block help-block-invalid help-block-with-icon');
     this.$helpBlockIcon = $('<span />').addClass('tmicon tmicon-warning-circle tmicon-color-error');
     this.$helpBlockText = $('<span />').addClass('invalid-text');
+    this.invalidHelpBlockInfo = 'There are invalid entries.';
+    this.invalidInputClass = 'form-invalid';
     
     this.rules = [];
     // get rules array and check property, validators and onTagInvalid  of rule.
@@ -155,7 +157,7 @@
     defaultErrorClass: 'token-invalid',
     rules: [{
       name: 'duplicate',
-      message: 'Duplicated entries'
+      message: 'Entry already exists'
     }],
     validators: {
       duplicate: checkDuplicate
@@ -266,11 +268,11 @@
     },
     tokenValidate: function(invalid){
       if(invalid) {
-        this.$wrapper.addClass('form-invalid');
-        this.$helpBlockText.html('There are invalid entries');
+        this.$wrapper.addClass(this.invalidInputClass);
+        this.$helpBlockText.html(this.invalidHelpBlockInfo);
         this.$helpBlock.show();
       } else {
-        this.$wrapper.removeClass('form-invalid');
+        this.$wrapper.removeClass(this.invalidInputClass);
         this.$helpBlock.hide();
       }
     },
@@ -333,7 +335,7 @@ $('#editTags').token({
     message: 'Invalid IP address'
   }, {
     name: 'duplicate',
-    message: 'Duplicated entries'
+    message: 'Entry already exists'
   }],
   validators: {
     ipv4: function (value) {
@@ -349,7 +351,7 @@ $('#tagsValid').token({
     message: 'Invalid IP address'
   }, {
     name: 'duplicate',
-    message: 'Duplicated entries'
+    message: 'Entry already exists'
   }],
   validators: {
     ipv4: function (value) {
