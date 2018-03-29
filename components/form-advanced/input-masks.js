@@ -30,7 +30,15 @@
       var selection;
       var endPosition;
       this.element.on('keydown', function(e) {
-        if(e.which === 39){
+        // move cursor to available position when it moved to end of input field with empty text.
+        if((e.metaKey && e.key === 'ArrowRight' ) || e.key === 'End' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          inputVal = _self.element.val();
+          startPosition = endPosition = inputVal.indexOf(_self.options.placeholderChar);
+          _self.element[0].setSelectionRange(startPosition, endPosition);
+        }
+        // move cursor to available position when user press right arrow keyboard.
+        if(e.key === 'ArrowRight'){
           inputVal = _self.element.val();// user input value
           maskVal = _self.options.mask; // 'AA-AAAA-AAAA-AAAA'
           startPosition = _self.element[0].selectionStart;
@@ -46,10 +54,18 @@
         }
       });
       this.element.on('keyup', function(e) {
+        // move cursor to available position when user press Ctrl + ArrowRight.
+        if(((e.ctrlKey || e.altKey) && e.key === 'ArrowRight' )) {
+          var inputVal = _self.element.val();
+          var sliceVal = inputVal.slice(0, _self.element[0].selectionEnd);
+          if(sliceVal.indexOf(_self.options.placeholderChar) !== -1) {
+            _self.alignCursor();
+          }
+        }
         //when user use keyboard(ctrlKey and shift key) to select text.
         var selectedLength = String(window.getSelection()).length;
         var keyCheck = ['Control', 'Meta', "Shift"].indexOf(e.key);
-        if(selectedLength > 0 && keyCheck > 0) {
+        if(selectedLength > 0 && (keyCheck > 0 || _self.element.is(":focus"))) {
           _self.setSelectionPos();
         }
       });
