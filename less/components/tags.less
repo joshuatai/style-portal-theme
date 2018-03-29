@@ -2,6 +2,9 @@
   padding: 0 4px 3px 4px;
   border: 1px solid @input-border;
   cursor: text;
+  &.form-invalid {
+    border-color: @input-border-danger;
+  }
   &.focus {
     border-color: @input-border-focus;
     transition: all 0.2s linear 0s;
@@ -10,13 +13,19 @@
   .token {
     border-radius: @border-radius-base;
     display: inline-block;
-    background-color: @token-background-color;
+    background-color: @token-bg;
     white-space: nowrap;
     margin: 3px 4px 0 0;
     cursor: default;
     vertical-align: top;
+    &.token-invalid {
+      &.active {
+        background-color: @token-invalid-active-bg;
+      }
+      background-color: @token-invalid-bg;
+    }
     &.active {
-      background-color: @token-background-color-active;
+      background-color: @token-active-bg;
     }
     .token-label {
       display: inline-block;
@@ -69,12 +78,20 @@
 
 .tokenfield.editable {
   .token {
-    &:hover {
-      background-color: @token-background-color-editable;
+    &:hover,
+    &.hover {
+      background-color: @token-editable-hover-bg;
       cursor: pointer;
     }
     .token-label {
       color: @token-font-color-editable;
+    }
+  }
+  .token-invalid {
+    &:hover,
+    &.hover {
+      background-color: @token-editable-invalid-hover-bg;
+      cursor: pointer;
     }
   }
 }
