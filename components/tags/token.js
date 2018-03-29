@@ -233,7 +233,6 @@
       this.addPlaceholder();
     },
     keydownEvent: function(e){
-      console.log(e.which);
       if (this.$input.data('ui-autocomplete')) {
         if(e.which === 40 || e.which === 38) {
           var activeItem = this.$dropdownMenu.find('.ui-menu-item-wrapper.ui-state-active');
