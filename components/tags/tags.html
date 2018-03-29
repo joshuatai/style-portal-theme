@@ -3,12 +3,20 @@
   <pre>
     <style data-selector=".tokenfield .token"></style>
   </pre>
-  <pre data-title="Selected">
+  <h5>Tag container states</h5>
+  <pre data-title="Focus">
     <style data-selector=".tokenfield .token.active"></style>
   </pre>
+  <pre data-title="Invalid">
+    <style data-selector=".tokenfield .token.token-invalid"></style>
+  </pre>
+  <pre data-title="Invalid focus">
+    <style data-selector=".tokenfield .token.token-invalid.active"></style>
+  </pre>
   <pre data-title="Editable">
-      <style data-selector=".tokenfield.editable .token:hover">:hover</style>
-    </pre>
+    <style data-selector=".tokenfield.editable .token:hover">:hover</style>
+    <style data-selector=".tokenfield.editable .token-invalid:hover">invalid hover</style>
+  </pre>
   <h5>Text container</h5>
   <pre>
     <style data-selector=".tokenfield .token .token-label"></style>
@@ -31,34 +39,121 @@
 </section>
 <section class="form-tags-example">
   <p>Tags are often used to represent a category or to label an object. Tags should be removable.</p>
-  <h5>Basic</h5>
-  <div class="tokenfield form-control">
-    <div class="token">
-      <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
-    </div><div class="token">
-      <span class="token-label">Known threats</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+  <div class="tags-container">
+    <div></div>
+    <div class="states-title">Basic</div>
+    <div class="states-title">Editable</div>
+  </div>
+  <div class="tags-container">
+    <div>Normal</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+    <div class="states">
+      <div class="tokenfield form-control editable">
+        <div class="token">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
     </div>
   </div>
-  <h5>Selected</h5>
-  <div class="tokenfield form-control">
-    <div class="token active">
-      <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
-    </div><div class="token active">
-      <span class="token-label">Known threats</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+  <div class="tags-container">
+    <div>Hover</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+    <div class="states">
+      <div class="tokenfield form-control editable">
+        <div class="token hover">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
     </div>
   </div>
-  <h5>Editable</h5>
-  <div class="tokenfield form-control editable">
-    <div class="token">
-      <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
-    </div><div class="token">
-      <span class="token-label">Known threats</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+  <div class="tags-container">
+    <div>Focus</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token active">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+    <div class="states">
+      <div class="tokenfield form-control editable">
+        <div class="token active">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
     </div>
   </div>
-  <h5>Truncated</h5>
-  <div class="tokenfield form-control">
-    <div class="token">
-      <span class="token-label">Loreamet_psums12121@gmail.com</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+  <div class="tags-container">
+    <div>Invalid</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token token-invalid">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+    <div class="states">
+      <div class="tokenfield form-control editable">
+        <div class="token token-invalid">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tags-container">
+    <div>Invalid Hover</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token token-invalid">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+    <div class="states">
+      <div class="tokenfield form-control editable">
+        <div class="token token-invalid hover">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tags-container">
+    <div>Invalid Focus</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token token-invalid active">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+    <div class="states">
+      <div class="tokenfield form-control editable">
+        <div class="token token-invalid active">
+          <span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tags-container">
+    <div>Truncated</div>
+    <div class="states">
+      <div class="tokenfield form-control">
+        <div class="token">
+          <span class="token-label">Loreamet_psums12121@gmail.com</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
