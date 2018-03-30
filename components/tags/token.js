@@ -66,7 +66,7 @@
       if(this.getTokens().length > 0){
         this.$wrapper.append(this.$filterCloseBtn);
       }
-          
+      
       this.$input
         .autocomplete(autocomplete)
         .on('autocompleteclose', function(e, ui){
@@ -76,6 +76,10 @@
           };
         })
         .on('autocompleteopen', function(e, ui){
+          //if input field in selected mode, close dropdown menu.
+          if (_self.$wrapper.find('.token.active').length > 0) {
+            _self.$input.autocomplete('close');
+          };
           // add the width on the menu style.
           _self.$input.data('ui-autocomplete').menu.element.css({'width': _self.elementWidth, 'min-width': _self.elementWidth});
         })
@@ -87,6 +91,19 @@
         .on('autocompletefocus', function(e, ui){
           // prevent the action of replace the text field's value 
           e.preventDefault();
+        });
+
+        // handle tab key when token field with autocomplete
+        var handlers = $._data( this.$input[0], "events").keydown;
+        var othersEvents = handlers.slice(0); // get all third party "keydown" event.
+        handlers.splice(0, 2); // clear all keydown event.
+        this.$input.on('keydown', function (e) {
+          // prevent the tab key insert new tag, when token field with autocomplete.
+          if (e.key !== 'Tab') {
+            for(var i = 0; i < othersEvents.length; i++) {
+              othersEvents[i].handler.apply(this, [e]);
+            }
+          }
         });
     }
 
@@ -105,7 +122,6 @@
         }
       })
       .on('tokenfield:createdtoken', function (e) {
-        // stop create token, when the token is existing.
         _self.tagValidate(e);
         _self.checkTokenState();
         // add close icon style
@@ -232,7 +248,8 @@
       this.$filterCloseBtn.hide();
       this.addPlaceholder();
     },
-    keydownEvent: function(e){
+    keydownEvent: function(e) {
+      //use keyboard to continue select
       if (this.$input.data('ui-autocomplete')) {
         if(e.which === 40 || e.which === 38) {
           var activeItem = this.$dropdownMenu.find('.ui-menu-item-wrapper.ui-state-active');
@@ -311,6 +328,17 @@
       else if (options.show) data.show(_relatedTarget)
     })
   }
+  // user press esc key to unselect tokens and focus the input field.
+  $(document).on('keyup', function(e) {
+    var tokenField = $('.tokenfield.focus');
+    if(e.key === 'Escape' && tokenField.length ) {
+      var activeTokens = tokenField.find('.token.active');
+      var tokenInput = tokenField.find('.token-input');
+      if(activeTokens.length > 0) {
+        tokenInput.focus();
+      }
+    };
+  });
 
   $.fn.token = $.extend(Plugin, $.fn.tokenfield);
   
@@ -346,18 +374,17 @@ $('#editTags').token({
   }
 });
 
-$('#tagsValid').token({
-  allowEditing: false,
-  rules: [{
-    name: 'ipv4',
-    message: 'Invalid IP address'
-  }, {
-    name: 'duplicate',
-    message: 'Entry already exists'
-  }],
-  validators: {
-    ipv4: function (value) {
-      return /^(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)$/i.test(value);
-    }
-  }
+
+// For display tooltip of validation example
+$('.validation-example .tokenfield .token-duplicate').tooltip({
+  title: 'Entry already exists',
+  container: 'body',
+  template: 
+  `<div class="tooltip" role="tooltip">
+    <div class="tooltip-inner tooltip-inner-light"></div>
+  </div>`
+}).on('mouseenter', function(e) {
+  var top = $(this).offset().top + $(this).height() + 5;
+  var left = e.clientX;
+  $('.tooltip').css({top: top + 5, left: left });
 });

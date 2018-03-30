@@ -30,3 +30,6 @@
 .form-tags-example .tags-container .states + .states {
   margin-left: 16px;
 }
+.form-token-example .validation-example .tokenfield {
+  display: flex;
+}
