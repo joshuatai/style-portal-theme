@@ -36,8 +36,8 @@
     <style data-selector=".ui-autocomplete.dropdown-menu.no-match .ui-menu-item-wrapper.ui-state-active"></style>
   </pre>
 </section>
-<section class="form-advanced-example">
-  <p>In a token field, users can select and gather multiple tokens.</p>
+<section class="form-token-example">
+  <p>In a token field, users can select and gather multiple tokens. For detailed information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Token%20Field/html/#g=1&p=token_field" target="_blank">Token Field</a>.</p>
 	<h5>Basic</h5>
   <input type="text" class="form-control input-width-lg" id="tags" value="Hello, World, Example, Tags" />
   <h5>Token with filter</h5>
@@ -45,5 +45,13 @@
 	<h5>Editable</h5>
   <input type="text" class="form-control input-width-lg" id="editTags" value="1.10.2.11, 1.10.2.12, 10.19.148.12" />
   <h5>Validation and error handling</h5>
-	<input type="text" class="form-control input-width-lg" id="tagsValid" value="1.10.2.11, 1.10.2.12, 10.19.148.12" />
+  <div class="validation-example">
+    <div class="tokenfield form-control form-invalid" style="width: 512px;">
+      <div class="token"><span class="token-label">1.10.2.11</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a></div>
+      <div class="token"><span class="token-label">1.10.2.12</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a></div>
+      <div class="token"><span class="token-label">10.19.148.12</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a></div>
+      <div class="token token-invalid token-duplicate" data-original-title="" title=""><span class="token-label">10.19.148.12</span><a href="javascript:;" class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></a></div>
+    </div>
+    <span class="help-block help-block-invalid help-block-with-icon"><span class="tmicon tmicon-warning-circle tmicon-color-error"></span><span class="invalid-text">There are invalid entries.</span></span>
+  </div>
 </section>
