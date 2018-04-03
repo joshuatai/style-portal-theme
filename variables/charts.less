@@ -1,25 +1,24 @@
 //== Charts
 //
 //##
-@charts-tmicon-color:           #9c9c9c;
-@widgetLagendListColors:   			extract(@blues, 4), extract(@greens, 4), extract(@oranges, 5), extract(@cyans, 4), extract(@reds, 5), extract(@indigos, 5), extract(@teals, 4), extract(@light-greens, 5), extract(@yellows, 3), extract(@purples, 7), extract(@grays, 8);
-@charts-series-size:    			  8px;
-@charts-series-stroke-size:    	14px;
-@charts-series-outer-glow-size:	24px;
-@charts-series-border-radius:   50%;
+@widgetLagendListColors:   			   extract(@blues, 4), extract(@greens, 4), extract(@oranges, 5), extract(@cyans, 4), extract(@reds, 5), extract(@indigos, 5), extract(@teals, 4), extract(@light-greens, 5), extract(@yellows, 3), extract(@purples, 7), extract(@grays, 8);
+@charts-series-size:    			   8px;
+@charts-series-stroke-size:    	       14px;
+@charts-series-outer-glow-size:	       24px;
+@charts-series-border-radius:          50%;
 
 //** Axis
-@charts-axis-color:                    extract(@grays, 3);
+@charts-axis-color:                    #666666;
 @charts-axis-y-border-color:           @gray-light;
-@charts-axis-x-crosshair-border-color: extract(@grays, 10);
+@charts-axis-x-crosshair-border-color: #dddddd;
 
 //** Chart tooltip
-@charts-tooltip-bg:                    @white;
-@charts-tooltip-color:                 @gray-darkest;
+@charts-tooltip-bg:                    @body-bg;
+@charts-tooltip-color:                 @text-color;
 
 //** Chart legend
-@charts-legend-tmicon-color:           @charts-tmicon-color;
-@charts-legend-tmicon-unable-color:    extract(@grays, 10);
+@charts-legend-tmicon-color:           #9c9c9c;
+@charts-legend-tmicon-unable-color:    #dddddd;
 
 //** Area charts
 @area-chart-tooltip-border-color:      @gray;
@@ -31,4 +30,4 @@
 @pie-donut-chart-slices-border-color:  @white;
 
 //** Donut charts
-@donut-chart-title-color:              @gray-darkest;
+@donut-chart-title-color:              @text-color;

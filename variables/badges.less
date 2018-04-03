@@ -1,9 +1,13 @@
 //== Badges
 //
 //##
+
+//** Default text color
 @badge-color:                 #ffffff;
+//** Inverted text color
+@badge-inverse-color:         #666666;
 //** Linked badge text color on hover
-@badge-link-hover-color:      #ffffff;
+@badge-link-hover-color:      @badge-color;
 
 //** Light Gray badge background color
 @badge-light-gray-bg:         @gray-light;
@@ -23,7 +27,7 @@
 @badge-dark-bg:               extract(@grays, 3);
 
 //** Badge text color in active nav link
-@badge-active-color:          link-color;
+@badge-active-color:          @link-color;
 //** Badge background color in active nav link
 @badge-active-bg:             #ffffff;
 
