@@ -3,53 +3,59 @@
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-@table-cell-padding:            8px 12px;
+@table-cell-padding:                        8px 12px;
 //** Padding for cells in `.table-condensed`.
-@table-condensed-cell-padding:  5px;
+@table-condensed-cell-padding:              5px;
 //** Table Zebra-striping color
-@zebra-sriping: #f9f9f9;
+@zebra-sriping:                             #f9f9f9;
 
-//** Default background color used for all tables.
+//** Background color used for all tables.
 @table-bg:                                  transparent;
-//** Default header font color used for all tables.
-@table-header-color:                        extract(@grays, 4);
+//** Background color used for nesting tables.
+@table-nested-bg:                           #ffffff;
+//** Header font color used for all tables.
+@table-header-color:                        #777777;
 //** Background color used for `.table-striped`.
 @table-bg-accent:                           @zebra-sriping;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                            extract(@blues, 10);
-@table-bg-active:                           extract(@yellows, 10);
+@table-bg-hover:                            #e6f4fc;
+@table-bg-active:                           #fcf8da;
 
 //** Border color for table and cell borders.
-@table-border-color:                        extract(@grays, 10);
-@table-header-border-bottom-color:          extract(@grays, 9);
+@table-border-color:                        #dddddd;
+@table-header-border-bottom-color:          #cccccc;
 
 //** Bordered table background color.
-@table-bordered-header-bg:                  extract(@grays, 12);
+@table-bordered-header-bg:                  #eeeeee;
 //** No data table font color.
-@table-no-data-color:                       extract(@grays, 6);
+@table-no-data-color:                       @text-muted;
 //** Sortable table.
 @table-sortable-hover-bg:                   @gray-light;
 @table-sortable-icon-color:                 @black;
 @table-sortable-sorted-color:               @gray-darkest;
 //** Resizable table.
-@table-resizable-border-left-color:         extract(@grays, 6);
+@table-resizable-border-left-color:         #999999;
+@table-resizable-border-right-color:        rgba(34, 34, 34, .08);
 //** Toolbar table.
 @table-with-header-toolbar-bg:              @gray-lighter;
-@table-with-header-toolbar-selected-color:  extract(@grays, 3);
-@table-with-header-toolbar-plain-bg:        @white;
+@table-with-header-toolbar-selected-info-color:  #666666;
+@table-with-header-toolbar-plain-bg:        @table-bg;
 @table-with-header-toolbar-plain-shadow:    0 5px 5px -5px rgba(0, 0, 0, 0.06);
 
 //** Draggable table.
-@table-drag-placeholder-bg:                 extract(@grays, 13);
-@table-drag-placeholder-border-color:       extract(@grays, 13);
+@table-drag-placeholder-bg:                 #f4f4f4;
+@table-drag-placeholder-border-color:       #f4f4f4;
 @table-drag-helper-shadow:                  0 2px 6px rgba(0, 0, 0, 0.25);
-@table-drag-helper-bg:                      extract(@blues, 9);
+@table-drag-helper-bg:                      #cceaf5;
 @table-drag-column-bg:                      @gray-lighter;
-@table-drag-column-header-color:            extract(@grays, 10);
+@table-drag-column-header-color:            #dddddd;
 @table-drag-column-helper-border-color:     @gray;
 
 //** Fixed table.
 @table-sb-fixed-col-border-right-color:     @gray;
+@table-sb-vh-fixed-col-border-right-color:  #bbbbbb;
+@table-sb-vh-fixed-col-scrollbar-rail-border-top-color: #dddddd;
+@table-sb-vh-col-border-right-color:        #dddddd;
 
 //** Editable table.
 @table-edit-editable-hover-border-color:    @brand-primary;
