@@ -1,11 +1,11 @@
 // Multiple selection
 
-.ms-container{
+.ms-container {
   background: transparent url('../images/icon/exchange.png') no-repeat 50% 50%;
   width: 480px;
 }
 
-.ms-container:after{
+.ms-container:after {
   content: ".";
   display: block;
   height: 0;
@@ -16,18 +16,18 @@
   visibility: hidden;
 }
 
-.ms-container .ms-selectable, .ms-container .ms-selection{
-  background: #fff;
+.ms-container .ms-selectable, .ms-container .ms-selection {
+  background: @ms-bg;
   float: left;
   width: 224px;
 }
-.ms-container .ms-selection{
+.ms-container .ms-selection {
   float: right;
 }
 
-.ms-container .ms-list{
+.ms-container .ms-list {
   transition: border linear 0.2s, box-shadow linear 0.2s;
-  border: 1px solid #ccc;
+  border: 1px solid @ms-list-border;
   border-radius: 3px;
   position: relative;
   height: 150px;
@@ -35,26 +35,26 @@
   overflow-y: auto;
 }
 
-.ms-container .ms-list.ms-focus{
-  border: 1px solid #ccc;
+.ms-container .ms-list.ms-focus {
+  border: 1px solid @ms-list-border;
   outline: 0;
 }
 
-.ms-container ul{
+.ms-container ul {
   margin: 0;
   list-style-type: none;
   padding: 0;
 }
 
-.ms-container .ms-optgroup-container{
+.ms-container .ms-optgroup-container {
   width: 100%;
 }
 
-.ms-container .ms-optgroup-label{
+.ms-container .ms-optgroup-label {
   margin: 0;
   padding: 4px 0px 0px 12px;
   cursor: pointer;
-  color: #888;
+  color: @ms-option-group-label-color;
   font-size: 12px
 }
 
@@ -70,7 +70,7 @@
 .ms-container .ms-selectable li.ms-hover,
 .ms-container .ms-selection li.ms-hover {
   cursor: pointer;
-  color: #222222;
+  color: @ms-option-hover-color;
   text-decoration: none;
-  background-color: #eee;
+  background-color: @ms-option-hover-background;
 }

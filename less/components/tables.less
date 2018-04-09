@@ -62,7 +62,7 @@ th {
   // Bottom align for column headings
   > thead > tr > th {
     //border-bottom: 2px solid #cccccc;
-    color: #777777;
+    color: @table-header-color;
     font-weight: bold;
     &.gutter {
       width: 38px;
@@ -89,7 +89,7 @@ th {
 
   // Nesting
   .table {
-    background-color: @body-bg;
+    background-color: @table-nested-bg;
   }
 }
 
@@ -156,7 +156,7 @@ th {
     > tr {
       > th,
       > td {
-        background-color: #EEEEEE;
+        background-color: @table-bordered-header-bg;
         border-bottom-width: 2px;
         border-bottom-color: @table-header-border-bottom-color;
       }
@@ -220,7 +220,7 @@ th {
     td {
       text-align: center;
       padding: 26px 12px;
-      color: #999;
+      color: @table-no-data-color;
     }
   }
 }

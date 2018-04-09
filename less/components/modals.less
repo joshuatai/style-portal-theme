@@ -85,7 +85,7 @@
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
   border-radius: 0;
-  .box-shadow(0 4px 16px rgba(0, 0, 0, .5));
+  .box-shadow(0 4px 16px @modal-content-shadow);
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -162,9 +162,6 @@
     position: relative;
     .message-wrapper {
       font-family: @font-family-arial;
-      font-size: 13px;
-      color: #222222;
-      line-height: 20px;
       margin-left: 64px;
       padding-top: 4px;
       .primary-msg {

@@ -2,7 +2,6 @@
 // Datapicker
 .datepicker {
   padding: 0;
-  width: 248px;
   &.days div.datepicker-days {
     display: block;
   }
@@ -19,10 +18,11 @@
     td, th {
       text-align: center;
       width: 30px;
+      min-width: 30px;
       line-height: 20px;
       border: 0;
       padding: 5px;
-      color: #222222;
+      color: @datepicker-cell-normal-color;
       font-size: 13px;
       font-family: @font-family-arial;
     }
@@ -56,33 +56,33 @@
   }
   table tr td {
     &.day:hover {
-      background: #eeeeee;
+      background: @datepicker-cell-normal-hover-bg;
       cursor: pointer;
       border-radius: 50%;
     }
     &.old,
     &.new {
-      color: #bbbbbb;
+      color: @datepicker-cell-faded-color;
     }
     &.disabled,
     &.disabled:hover {
-      background: none;
-      color: #bbb;
+      background: @datepicker-cell-disabled-bg;
+      color: @datepicker-cell-disabled-color;
       cursor: not-allowed;
     }
     &.today,
     &.today:hover,
     &.today.disabled,
     &.today.disabled:hover {
-      color: #db3d44;
+      color: @datepicker-cell-today-color;
     }
     &.active,
     &.active:hover,
     &.active.disabled,
     &.active.disabled:hover {
-      color: #fff;
+      color: @datepicker-cell-active-color;
       font-weight: bold;
-      background-color: #db3d44;
+      background-color: @datepicker-cell-active-bg;
       border-radius: 50%;
     }
     span {
@@ -92,31 +92,31 @@
       line-height: 48px;
       float: left;
       cursor: pointer;
-      color: #222222;
+      color: @datepicker-cell-normal-color;
       font-size: 13px;
       font-family: @font-family-arial;
       margin: 5px;
       &:hover {
-        background: #eeeeee;
+        background: @datepicker-cell-normal-hover-bg;
         border-radius: 50%;
       }
       &.disabled,
       &.disabled:hover {
-        background:none;
-        color: #bbb;
+        background: @datepicker-cell-disabled-bg;
+        color: @datepicker-cell-disabled-color;
         cursor: not-allowed;
       }
       &.active,
       &.active:hover,
       &.active.disabled,
       &.active.disabled:hover {
-        color: #ffffff;
-        background-color: #db3d44;
+        color: @datepicker-cell-active-color;
+        background-color: @datepicker-cell-active-bg;
         font-weight: 700;
         border-radius: 50%;
       }
       &.old {
-        color: #bbbbbb;
+        color: @datepicker-cell-faded-color;
       }
     }
   }
@@ -124,45 +124,55 @@
   tfoot tr:first-child th {
     &:hover{
       cursor: pointer;
-      background: #eeeeee;
+      background: @datepicker-cell-normal-hover-bg;
       border-radius: 3px;
     }
   }
   thead tr:first-child th.prev,
   thead tr:first-child th.next {
     .tmicon {
-      color: #222222;
+      color: @datepicker-cell-normal-color;
     }
+  }
+  tfoot {
+    display: none;
   }
   .dow { //week name
     font-size: 12px;
     font-weight: bold;
-    color: #222222;
+    color: @datepicker-cell-normal-color;
     padding-top: 9px;
   }
 }
 
 .date-time-picker-example {
   .custom-wrapper {
+    display: none;
     position: absolute;
     left: 0;
-    border: 1px solid #bbbbbb;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    border: 1px solid @datepicker-custom-wrapper-border;
+    box-shadow: @datepicker-custom-wrapper-shadow;
     > ul.dropdown-menu {
       position: static;
     }
     .date-picker-pane {
+      display: none;
       padding: 12px;
-      border-left: 1px solid #dddddd;
+      border-left: 1px solid @datepicker-custom-wrapper-pane-border-left;
       &.show {
         display: inline-block !important;
       }
       .date-picker-pane-header {
+        height: 32px;
         .tilde {
+          float: left;
+          line-height: 32px;
+          text-align: center;
           width: 24px;
         }
       }
       .date-picker-pane-body {
+        height: 280px;
         margin-top: 8px;
         .date-picker-pane-container {
           float: left;
@@ -171,16 +181,15 @@
           }
           + .date-picker-pane-container {
             margin-left: 24px;
+            position: relative;
             &:before {
+              position: absolute;
               content: ' ';
               display: block;
               height: 260px;
-              vertical-align: middle;
               margin-left: -12px;
-              float: left;
-              margin-right: 12px;
               margin-top: 16px;
-              border-left: 1px solid #E6E6E6;
+              border-left: 1px solid #e6e6e6;
             }
           }
         }
@@ -192,6 +201,8 @@
   }
   .dropdown {
     &.open > .custom-wrapper {
+      display: block;
+
       > ul.dropdown-menu {
         display: inline-block;
         border: 0;

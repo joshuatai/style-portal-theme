@@ -24,12 +24,12 @@ label.switch input {
   left: 0;
   right: 0;
   bottom: 0;
-  border-color: #bbb;
-  background-color: #bbb;
+  border-color: @toggle-border;
+  background-color: @toggle-border;
   transition: all 0.4s ease;
 }
 .toggle:hover {
-  background-color: #ccc;
+  background-color: @toggle-hover-border;
 }
 
 .toggle:before {
@@ -39,10 +39,10 @@ label.switch input {
   width: 22px;
   left: 1px;
   bottom: 1px;
-  background-color: #ffffff;
+  background-color: @toggle-switcher-bg;
   transition: all 0.24s ease;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   border-radius: 50%;
+  .box-shadow(@toggle-switcher-shadow)
 }
 .toggle-sm:before{
   height: 14px;
@@ -50,8 +50,8 @@ label.switch input {
 }
 
 input:checked + .toggle {
-  border-color: #0096cc;
-  background-color: #0096cc;
+  border-color: @toggle-checked-border;
+  background-color: @toggle-checked-bg;
 }
 
 input:checked + .toggle:before{

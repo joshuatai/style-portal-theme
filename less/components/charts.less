@@ -11,52 +11,52 @@
 .style-portal {
   .highcharts {
     .axis {
-      color: #666666;
+      color: @charts-axis-color;
       font-size: 12px;
       font-family: @font-family-arial;
       &.xAxis {
         padding: 2px 0;
         &.crosshair {
-          border: 1px solid #dddddd;
+          border: 1px solid @charts-axis-x-crosshair-border-color;
         }
       }
       &.yAxis {
-        border: 1px solid #e6e6e6;
+        border: 1px solid @charts-axis-y-border-color;
       }
       .chart-title {
-          text-align: right;
-          line-height: 30px;
-          font-size: 12px;
-          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-          color: #666666;
+        text-align: right;
+        line-height: 30px;
+        font-size: 12px;
+        font-family: @font-family-arial;
+        color: @charts-axis-color;
       }
     }
     .series {
-      width: @highcharts-series-size;
-      height: @highcharts-series-size;
-      border-radius: @highcharts-series-border-radius;
+      width: @charts-series-size;
+      height: @charts-series-size;
+      border-radius: @charts-series-border-radius;
       &.stacked {
         opacity: 0.25;
       }
       &.hover {
         .stroke {
           background-color: @white;
-          width: @highcharts-series-stroke-size;
-          height: @highcharts-series-stroke-size;
-          border-radius: @highcharts-series-border-radius;
+          width: @charts-series-stroke-size;
+          height: @charts-series-stroke-size;
+          border-radius: @charts-series-border-radius;
         }
         .outer-glow {
-          width: @highcharts-series-outer-glow-size;
-          height: @highcharts-series-outer-glow-size;
-          border-radius: @highcharts-series-border-radius;
+          width: @charts-series-outer-glow-size;
+          height: @charts-series-outer-glow-size;
+          border-radius: @charts-series-border-radius;
         }
       }
     }
     .tooltip {
-      box-shadow: @tooltip-light-shadow;
+      box-shadow: @tooltip-inverse-shadow;
     }
     .area-tooltips {
-      border: 1px solid #bbbbbb;
+      border: 1px solid @area-chart-tooltip-border-color;
     }
     .bar-chart {
       .series {
@@ -71,7 +71,7 @@
           }
         }
         &.stacked {
-          border: 1px solid #ffffff;
+          border: 1px solid @bar-chart-stacked-border-color;
         }
       }
     }
@@ -81,7 +81,7 @@
       }
       .pie-slices,
       .donut-slices {
-        border: 1px solid #ffffff;
+        border: 1px solid @pie-donut-chart-slices-border-color;
         &.hover {
           width: 6px;
         }
@@ -102,15 +102,15 @@
         width: 184px;
       }
       .donut-chart-title {
-        color: #222222;
+        color: @donut-chart-title-color;
         font-size: 32px;
         font-family: @font-family-interstate-light;
         + .donut-chart-title {
-          hight: 8px;
+          height: 8px;
         }
       }
       .donut-chart-subtitle {
-        color: #222222;
+        color: @donut-chart-title-color;
         font-size: 13px;
         font-family: @font-family-arial;
       }
@@ -121,9 +121,9 @@
 //** Charts tooltip style
 .highcharts-tooltip > span > table {
   padding: 16px;
-  background-color: @white;
+  background-color: @charts-tooltip-bg;
   font-family: @font-family-arial;
-  color: #222222;
+  color: @charts-tooltip-color;
   td {
     line-height: 20px;
   }
@@ -222,7 +222,7 @@
   right: 12px;
   top: 5px;
   .tmicon {
-    color: #9c9c9c;
+    color: @charts-legend-tmicon-color;
     cursor: pointer;
   }
   .tmicon-caret-up {
@@ -233,7 +233,7 @@
   }
   .unable {
     cursor: default;
-    color: #DDDDDD;
+    color: @charts-legend-tmicon-unable-color;
   }
   &.show {
     display: inline-block;

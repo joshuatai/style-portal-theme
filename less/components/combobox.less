@@ -4,6 +4,20 @@
     padding-right: 48px;
     padding-left: 12px;
   }
+  &.selected {
+    .form-control:focus {
+      color: @combobox-input-placeholder;
+    }
+    &:hover [data-toggle="close"],
+    .form-control + [data-toggle="close"]:hover,
+    .form-control:hover + [data-toggle="close"],
+    .form-control:focus + [data-toggle="close"] {
+      display: block;
+    }
+  }
+  [data-toggle="close"] {
+    display: none;
+  }
   .tmicon-close-s {
     right: 25px;
   }
@@ -17,26 +31,26 @@
       clear: both;
       font-weight: normal;
       line-height: 20px;
-      color: #222;
-      text-decoration: none;
       white-space: nowrap;
       &:hover {
-        color: #222;
-        text-decoration: none;
-        background-color: #eee;
+        background-color: @combobox-dropdown-item-hover-bg;
         cursor: pointer;
       }
       &.selected {
-        background: #f4f4f4;
+        background-color: @combobox-dropdown-item-hover-bg;
+        cursor: pointer;
+      }
+      &.actived {
+        background: @combobox-dropdown-item-actived-bg;
       }
     }
     .no-matches,
     li.no-matches {
-      color: #999999;
+      color: @text-muted;
       &:hover,
       &.selected {
-        color: #999999;
-        background-color: #ffffff;
+        color: @text-muted;
+        background-color: @combobox-dropdown-bg;
         cursor: text;
       }
     }
@@ -53,5 +67,10 @@
     background-position-y: 7px;
     background-position-x: left;
     cursor: pointer;
+    .disabled& {
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      cursor: not-allowed;
+    }
   }
 }

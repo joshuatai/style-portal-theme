@@ -10,7 +10,10 @@
     "validation"
   ],
   "location": "form-advanced/input-masks.html",
-  "dependencies": ["jquery-inputmask"],
+  "dependencies": [
+    "jquery.ui.widget",
+    "imask-3.1.2"
+  ],
   "actions": [
     {
       "name": "Style",
@@ -20,6 +23,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-4"
+    "row": "row-md-6"
   }
 }

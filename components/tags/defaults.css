@@ -1,3 +1,35 @@
 .form-tags-example .tokenfield {
   border: 0;
 }
+
+.form-tags-example .tags-container .tokenfield{
+  padding: 0;
+}
+.form-tags-example .tags-container .tokenfield .token {
+  margin: 0;
+}
+.form-tags-example .tags-container + .tags-container {
+  margin-top: 16px;
+}
+.form-tags-example .tags-container > div:nth-child(1) {
+  width: 100px;
+  line-height: 24px;
+}
+.form-tags-example .tags-container > div {
+  display: inline-block;
+}
+.form-tags-example .tags-container .states-title {
+  width: 81px;
+  text-align: center;
+  font-weight: bold;
+}
+.form-tags-example .tags-container .states {
+  vertical-align: top;
+}
+.form-tags-example .tags-container .states-title + .states-title,
+.form-tags-example .tags-container .states + .states {
+  margin-left: 16px;
+}
+.form-token-example .validation-example .tokenfield {
+  display: flex;
+}
