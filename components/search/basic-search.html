@@ -41,7 +41,8 @@
 	<ul class="description">
 		<li>Consider using a loader if it will take some time to process the search results.</li>
 		<li>Whenever appropriate, include a reset button for cleaning up the search box. Only show the reset button when there is text in the search box.</li>
-	</ul>
+  </ul>
+  <p>For more information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Search%20Box/html/instant_search.html" target="_blank">Interaction Flowchart</a>.</p>
   <div>
   	<div class="input-icon-group">
       <input id="filter" type="text" class="form-control" placeholder="Case name">
@@ -56,12 +57,12 @@
       </label>
       <span class="loader loader-small"></span>
     </div>
-    <div class="input-icon-group">
+    <div class="input-icon-group" data-search-field="searchField">
       <input id="filter2" type="text" class="form-control input-focus" value="DDEI">
       <label class="input-icon-label" for="filter2">
         <i class="tmicon tmicon-search-o focus"></i>
       </label>
-      <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable" data-clear-field="clearField"></span>
+      <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
     </div>
   </div>
 </section>
