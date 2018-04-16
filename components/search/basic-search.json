@@ -7,7 +7,9 @@
     "search"
   ],
   "location": "search/basic-search.html",
-  "dependencies": [],
+  "dependencies": [
+    "jquery.ui.widget"
+  ],
   "actions": [
     {
       "name": "Style",

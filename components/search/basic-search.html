@@ -44,12 +44,7 @@
   </ul>
   <p>For more information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Search%20Box/html/instant_search.html" target="_blank">Interaction Flowchart</a>.</p>
   <div>
-  	<div class="input-icon-group">
-      <input id="filter" type="text" class="form-control" placeholder="Case name">
-      <label class="input-icon-label" for="filter">
-        <i class="tmicon tmicon-search-o"></i>
-      </label>
-    </div>
+    <input id="searchBox" type="text" class="form-control" placeholder="Case name" data-search-field="searchBox">
     <div class="input-icon-group">
       <input id="filter1" type="text" class="form-control input-focus" value="D">
       <label class="input-icon-label" for="filter1">
@@ -57,7 +52,7 @@
       </label>
       <span class="loader loader-small"></span>
     </div>
-    <div class="input-icon-group" data-search-field="searchField">
+    <div class="input-icon-group">
       <input id="filter2" type="text" class="form-control input-focus" value="DDEI">
       <label class="input-icon-label" for="filter2">
         <i class="tmicon tmicon-search-o focus"></i>
