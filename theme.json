@@ -3,9 +3,9 @@
   "name": "Minimalism",
   "version": "1.14.0",
   "color": {
-    "key": "light",
-    "hex": "#eee",
-    "order": 1
+    "key": "dark",
+    "hex": "#222",
+    "order": 2
   },
   "categories": [
     "67ec27d1-4f66-42b4-bb99-2dbb57f53a1e",
