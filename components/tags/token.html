@@ -35,6 +35,9 @@
   <pre data-title="normal and :hover for No matches list item">
     <style data-selector=".ui-autocomplete.dropdown-menu.no-match .ui-menu-item-wrapper.ui-state-active"></style>
   </pre>
+  <pre data-title="matches list item">
+    <style data-selector=".ui-autocomplete.dropdown-menu .ui-menu-item-wrapper .matched"></style>
+  </pre>
 </section>
 <section class="form-token-example">
   <p>In a token field, users can select and gather multiple tokens. For more information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Token%20Field/html/token_field.html" target="_blank">Interaction Flowchart</a>.</p>
@@ -42,6 +45,8 @@
   <input type="text" class="form-control input-width-lg" id="tags" value="Hello, World, Example, Tags" />
 	<h5>Editable</h5>
   <input type="text" class="form-control input-width-lg" id="editTags" value="1.10.2.11, 1.10.2.12, 10.19.148.12" />
+  <h5>Token field with Auto-Complete</h5>
+  <input type="text" class="form-control input-width-lg" id="autocompleteToken" value="2.2.2.2, 2.2.2.3"/>
   <h5>Validation and error handling</h5>
   <div class="validation-example">
     <div class="tokenfield form-control form-invalid" style="width: 512px;">

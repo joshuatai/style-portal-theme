@@ -6,7 +6,8 @@
 		"multiple",
 		"tags",
 		"tokenizer",
-		"tokens"
+		"tokens",
+		"combo box"
 	],
 	"location": "tags/token-combobox.html",
 	"dependencies": [
