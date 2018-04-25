@@ -1,0 +1,28 @@
+{
+	"id": "3c0d07fd-3919-4f7c-b139-35b22234a620",
+	"name": "Multiple-Select Combo Box",
+	"keywords": [
+		"inputs",
+		"multiple",
+		"tags",
+		"tokenizer",
+		"tokens"
+	],
+	"location": "tags/token-combobox.html",
+	"dependencies": [
+		"jQuery-ui-1.12.1-token-deps",
+		"bootstrap-tokenfield-0.12.0",
+		"style-portal-token"
+	],
+	"actions": [
+		{
+			"name": "Style",
+			"className": "fa fa-code"
+		}
+	],
+	"type": "draggable",
+	"grid": {
+		"col": "col-md-12",
+		"row": "row-md-3"
+	}
+}
