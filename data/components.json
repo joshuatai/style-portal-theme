@@ -567,11 +567,15 @@
     "name": "Tags & Tokens",
     "keywords": [
       "tags",
-      "token"
+      "token",
+      "autocomplete",
+      "combo box",
+      "multiple selection"
     ],
     "segments": [
       "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
-      "954d9736-4abf-41b5-bc49-d32a6805bd20"
+      "954d9736-4abf-41b5-bc49-d32a6805bd20",
+      "3c0d07fd-3919-4f7c-b139-35b22234a620"
     ],
     "css": {
       "name": "tags-and-tokens",
