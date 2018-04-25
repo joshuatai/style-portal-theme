@@ -25,7 +25,16 @@ $('#autocompleteToken').token({
       allowNewTag: true
   },
   showAutocompleteOnFocus: true,
-  placeholder: 'Select ...'
+  placeholder: 'Select ...',
+  rules: [{
+    name: 'ipv4',
+    message: 'Invalid IP address'
+  }],
+  validators: {
+    ipv4: function (value) {
+      return /^(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)\.(25[0-5]|2[0-4]\d|[01]?\d\d?)$/i.test(value);
+    }
+  }
 });
 
 // For display tooltip of validation example
