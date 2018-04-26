@@ -63,23 +63,8 @@
 
 <section class="search-example">
   <p>Use drop-down menus to limit your search in the selected category.</p>
+  <p>For more information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Search%20Box/html/scoped_search.html" target="_blank">Interaction Flowchart</a>.</p>
   <div>
-  	<div class="input-group">
-  	  <div class="input-group-btn">
-        <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-          	Host name<span class="caret"></span>
-        </button>
-      	<ul class="dropdown-menu">
-          <li><a href="javascript:;">Host name</a></li>
-          <li><a href="javascript:;">IP address</a></li>
-          <li><a href="javascript:;">Asset tag</a></li>
-      	</ul>
-  	  </div>
-      <input type="text" class="form-control">
-      <span class="input-group-btn">
-        <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
-      </span>
-    </div><!-- /input-group -->
     <div class="input-group">
       <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
@@ -91,11 +76,13 @@
           <li><a href="javascript:;">Asset tag</a></li>
       	</ul>
   	  </div>
-      <input type="text" class="form-control input-focus" value="DDEI">
+      <div class="input-icon-group">
+        <input type="text" class="form-control" data-search-box="searchBoxDisplay">
+      </div>
       <span class="input-group-btn">
         <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
       </span>
-    </div><!-- /input-group -->
+    </div>
     <div class="input-group">
       <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
@@ -108,12 +95,33 @@
       	</ul>
   	  </div>
     	<div class="input-icon-group">
-        <input type="text" class="form-control" value="DDEI">
-        <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable" data-clear-field="clearField"></span>
+        <input type="text" class="form-control input-focus" value="DDEI" data-search-box="searchBoxDisplay">
+        <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
       </div>
       <span class="input-group-btn">
         <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
       </span>
-    </div><!-- /input-group -->
+    </div>
+    <div class="example">
+      <div class="input-group">
+        <div class="input-group-btn">
+          <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+              Host name<span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Host name</a></li>
+            <li><a href="javascript:;">IP address</a></li>
+            <li><a href="javascript:;">Asset tag</a></li>
+          </ul>
+        </div>
+        <div class="input-icon-group" data-search-box="searchBox">
+          <input type="text" class="form-control">
+          <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
+        </div>
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
+        </span>
+      </div>
+    </div>
   </div>
 </section>
