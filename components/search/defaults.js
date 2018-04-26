@@ -1,10 +1,17 @@
-var searchField = $('[data-search-field=searchField]', this);
+$('[data-search-box=searchBoxDisplay]', this).on('mousedown', function(e){
+  e.preventDefault();
+});
+
+var searchField = $('[data-search-box=searchBox]', this);
 searchBox(searchField);
 
 function searchBox(elem) {
   var $inputGroup = elem;
   var $input = $inputGroup.find('.form-control');
   var $closeBtn = $inputGroup.find('.tmicon-close-s');
+  if($input.val() === '') {
+    $closeBtn.hide();
+  }
   $input.on('keyup', function (e){
     $(this).val() === '' ? $closeBtn.hide() : $closeBtn.show();
   });
@@ -68,13 +75,17 @@ function searchBox(elem) {
       }
       else {
         clearTimeout(this.timer);
-        if(this.element.val() !== '' && keyCheck === -1 && selectedLength === 0) {
+        if(keyCheck === -1 && selectedLength === 0) {
           this.timer = setTimeout(function(){
-            _self.$iconClose.hide();
-            _self.$iconLoader.show();
+              _self.$iconClose.hide();
+            if(_self.element.val() !== ''){
+              _self.$iconLoader.show();
+            }
             setTimeout(function(){
-              _self.$iconLoader.hide();
-              _self.$iconClose.show();
+                _self.$iconLoader.hide();
+              if(_self.element.val() !== ''){
+                _self.$iconClose.show();
+              }
             }, 500);
           }, 300);
         }
@@ -87,5 +98,6 @@ function searchBox(elem) {
       this.element.focus();
     }
   });
-  $('#searchBox').searchBox();
 })(jQuery);
+
+$('#searchBox').searchBox();
