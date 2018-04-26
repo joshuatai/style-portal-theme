@@ -29,6 +29,9 @@ $('#autocompleteToken').token({
   rules: [{
     name: 'ipv4',
     message: 'Invalid IP address'
+  }, {
+    name: 'duplicate',
+    message: 'Entry already exists'
   }],
   validators: {
     ipv4: function (value) {
