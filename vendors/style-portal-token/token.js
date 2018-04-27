@@ -6,13 +6,7 @@
   
     var Token = function(element, options) {
       var _self = this;
-      var autocomplete = $.extend({
-        classes: {'ui-autocomplete': 'dropdown-menu'},
-        autoFocus: true,
-        defaultHighlightClass: 'matched',
-        allowNewTag: false,
-        delay: 0
-      }, options.autocomplete);
+      var autocomplete;
   
       this.options          = options;
       this.options.validators = $.extend(true, {}, Token.DEFAULTS.validators, options.validators);
@@ -46,6 +40,14 @@
       // call the original constructor
       _super.Constructor.apply( this, arguments );
       
+      autocomplete = $.extend({
+        classes: {'ui-autocomplete': 'dropdown-menu'},
+        autoFocus: true,
+        defaultHighlightClass: 'matched',
+        allowNewTag: false,
+        delay: 0
+      }, options.autocomplete);
+
       // init icon style and wrapper style
       this.editBtn(this.$wrapper);
       this.$wrapper.css('width', this.elementWidth);
@@ -78,10 +80,13 @@
         this.$input
           .autocomplete(autocomplete)
           .on('autocompleteclose', function(e, ui){
-            // if the input still focus, open the menu list
-            if ($(e.target).is(':focus')) {
+            // if the input still focus, e.p. user select menu item then always open the menu.
+            if($(e.target).is(':focus')) {
               _self.search();
             };
+            if(e.key !== 'Escape' && !_self.options.autocomplete.allowNewTag){
+              _self.$input.val('');
+            }
           })
           .on('autocompleteopen', function(e, ui){
             //if input field in selected mode, close dropdown menu.
@@ -104,7 +109,6 @@
             _self.$input.data('noMatch', noMatch);
             _self.$dropdownMenu.toggleClass('no-match', noMatch);
           });
-  
           // resize the menu style.
           this.$input.data('ui-autocomplete')._resizeMenu = function(){
             this.menu.element.css({'width': _self.elementWidth, 'min-width': _self.elementWidth});
@@ -197,6 +201,10 @@
             _self.addPlaceholder();
           }
           _self.checkTokenState();
+          setTimeout(function(){
+            _self.$input.autocomplete('search');
+          }, 10);
+          
         });
   
       this.bindEvents();
@@ -261,8 +269,8 @@
       },
       customCreateToken: function() {
         // always add the selected item into token field.
-        if (this.$input.data('ui-autocomplete') && this.$input.data('ui-autocomplete').menu.element.find("li:has(a.ui-state-active)").length) {
-          if(!this.$input.data('noMatch')) {
+        if ((this.$input.data('ui-autocomplete') && this.$input.data('ui-autocomplete').menu.element.find("li:has(a.ui-state-active)").length) || this.$input.val() !== '') {
+          if (!this.$input.data('noMatch')) {
             if (this.createToken(this.$input.data('selectedVal'))) {
               this.$input.val('');
               this.search();
@@ -312,6 +320,7 @@
         e.stopPropagation();
         e.preventDefault();
         this.setTokens([]);
+        this.checkTokenState();
         this.$input.blur();
         this.$input.autocomplete('close');
         this.$filterCloseBtn.hide();
