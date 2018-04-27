@@ -78,10 +78,13 @@
         this.$input
           .autocomplete(autocomplete)
           .on('autocompleteclose', function(e, ui){
-            // if the input still focus, open the menu list
-            if ($(e.target).is(':focus')) {
+            // if the input still focus, e.p. user select menu item then always open the menu.
+            if($(e.target).is(':focus')) {
               _self.search();
             };
+            if(e.key !== 'Escape' && !_self.options.autocomplete.allowNewTag){
+              _self.$input.val('');
+            }
           })
           .on('autocompleteopen', function(e, ui){
             //if input field in selected mode, close dropdown menu.
@@ -104,7 +107,6 @@
             _self.$input.data('noMatch', noMatch);
             _self.$dropdownMenu.toggleClass('no-match', noMatch);
           });
-  
           // resize the menu style.
           this.$input.data('ui-autocomplete')._resizeMenu = function(){
             this.menu.element.css({'width': _self.elementWidth, 'min-width': _self.elementWidth});
@@ -312,6 +314,7 @@
         e.stopPropagation();
         e.preventDefault();
         this.setTokens([]);
+        this.checkTokenState();
         this.$input.blur();
         this.$input.autocomplete('close');
         this.$filterCloseBtn.hide();
