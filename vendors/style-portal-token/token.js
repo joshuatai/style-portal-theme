@@ -6,13 +6,7 @@
   
     var Token = function(element, options) {
       var _self = this;
-      var autocomplete = $.extend({
-        classes: {'ui-autocomplete': 'dropdown-menu'},
-        autoFocus: true,
-        defaultHighlightClass: 'matched',
-        allowNewTag: false,
-        delay: 0
-      }, options.autocomplete);
+      var autocomplete;
   
       this.options          = options;
       this.options.validators = $.extend(true, {}, Token.DEFAULTS.validators, options.validators);
@@ -46,6 +40,15 @@
       // call the original constructor
       _super.Constructor.apply( this, arguments );
       
+      autocomplete = $.extend({
+        appendTo: this.$wrapper,
+        classes: {'ui-autocomplete': 'dropdown-menu'},
+        autoFocus: true,
+        defaultHighlightClass: 'matched',
+        allowNewTag: false,
+        delay: 0
+      }, options.autocomplete);
+
       // init icon style and wrapper style
       this.editBtn(this.$wrapper);
       this.$wrapper.css('width', this.elementWidth);
@@ -199,6 +202,10 @@
             _self.addPlaceholder();
           }
           _self.checkTokenState();
+          setTimeout(function(){
+            _self.$input.autocomplete('search');
+          }, 10);
+          
         });
   
       this.bindEvents();
@@ -263,8 +270,8 @@
       },
       customCreateToken: function() {
         // always add the selected item into token field.
-        if (this.$input.data('ui-autocomplete') && this.$input.data('ui-autocomplete').menu.element.find("li:has(a.ui-state-active)").length) {
-          if(!this.$input.data('noMatch')) {
+        if ((this.$input.data('ui-autocomplete') && this.$input.data('ui-autocomplete').menu.element.find("li:has(a.ui-state-active)").length) || this.$input.val() !== '') {
+          if (!this.$input.data('noMatch')) {
             if (this.createToken(this.$input.data('selectedVal'))) {
               this.$input.val('');
               this.search();
