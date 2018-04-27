@@ -41,7 +41,6 @@
       _super.Constructor.apply( this, arguments );
       
       autocomplete = $.extend({
-        appendTo: this.$wrapper,
         classes: {'ui-autocomplete': 'dropdown-menu'},
         autoFocus: true,
         defaultHighlightClass: 'matched',
