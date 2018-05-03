@@ -262,7 +262,7 @@
           .on('keydown', $.proxy(this.keydownEvent, this));
         this.$filterCloseBtn
           .on('mousedown', $.proxy(this.removeAllTags, this)); // use mousedown to prevent the autocomplete menu show first when click the close button.
-       },
+      },
       keepDropdownMenuOpen: function(e) {
         // keep open when dropdown menu is opened.
         if (this.$input.data('ui-autocomplete')) {
