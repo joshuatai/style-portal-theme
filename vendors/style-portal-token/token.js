@@ -41,6 +41,7 @@
       _super.Constructor.apply( this, arguments );
       
       autocomplete = $.extend({
+        appendTo: this.$wrapper,
         classes: {'ui-autocomplete': 'dropdown-menu'},
         autoFocus: true,
         defaultHighlightClass: 'matched',
@@ -80,7 +81,7 @@
         this.$input
           .autocomplete(autocomplete)
           .on('autocompleteclose', function(e, ui){
-            // if the input still focus, e.p. user select menu item then always open the menu.
+            // if the input still focus, e.g. user select menu item then always open the menu.
             if($(e.target).is(':focus')) {
               _self.search();
             };
@@ -115,11 +116,11 @@
           }
           // highlight the match item text and return the custom menu items.
           this.$input.data('ui-autocomplete')._renderItem = function(ul, item){
-            var regExp = new RegExp(`(${this.term})`, 'gi');
-            var temp = `<span class="${autocomplete.defaultHighlightClass}">$1</span>`;
+            var checkSpecialChars = escapeSpecialChars(this.term);
+            var pattern = new RegExp(checkSpecialChars, 'gi');
             var $li = $('<li/>').appendTo(ul);
             var availableTokens = _self.filterAvailableTokens();
-            var label = item.label.replace(regExp, temp);
+            var label = item.label.replace(pattern, (matchStr) => `<span class="${autocomplete.defaultHighlightClass}">${matchStr}</span>`);
             if($.inArray(item.label, availableTokens) === -1) {
               label = `Press ENTER to add "${this.term}"`
             }
@@ -129,6 +130,10 @@
             $('<a/>').attr('href', '#').html(label).appendTo($li);
             return $li;
           }
+
+          this.$input.data('ui-autocomplete').menu.element.on('mousedown', function(e) {
+            e.stopPropagation();
+          });
   
           // handle tab key when token field with autocomplete
           var handlers = $._data( this.$input[0], "events").keydown;
@@ -209,6 +214,10 @@
   
       this.bindEvents();
     }
+
+    function escapeSpecialChars(str){
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
   
     function checkDuplicate (text) {
       var duplicateTags = $.map(this.getTokens(), function(token) {
@@ -253,7 +262,7 @@
           .on('keydown', $.proxy(this.keydownEvent, this));
         this.$filterCloseBtn
           .on('mousedown', $.proxy(this.removeAllTags, this)); // use mousedown to prevent the autocomplete menu show first when click the close button.
-      },
+       },
       keepDropdownMenuOpen: function(e) {
         // keep open when dropdown menu is opened.
         if (this.$input.data('ui-autocomplete')) {

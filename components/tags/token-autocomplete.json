@@ -1,6 +1,6 @@
 {
 	"id": "3c0d07fd-3919-4f7c-b139-35b22234a620",
-	"name": "Multiple-Select Combo Box",
+	"name": "Tokens with Auto-Complete",
 	"keywords": [
 		"inputs",
 		"multiple",
@@ -9,7 +9,7 @@
 		"tokens",
 		"combo box"
 	],
-	"location": "tags/token-combobox.html",
+	"location": "tags/token-autocomplete.html",
 	"dependencies": [
 		"jQuery-ui-1.12.1-token-deps",
 		"bootstrap-tokenfield-0.12.0",
@@ -24,6 +24,6 @@
 	"type": "draggable",
 	"grid": {
 		"col": "col-md-12",
-		"row": "row-md-3"
+		"row": "row-md-8"
 	}
 }
