@@ -1,6 +1,6 @@
 {
   "id": "856dcb17-52f2-47ab-acae-462ce182986c",
-  "name": "Search Box with a Button",
+  "name": "Regular Search",
   "keywords": [
     "filter",
     "inputs",
@@ -17,6 +17,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-6"
+    "row": "row-md-7"
   }
 }
