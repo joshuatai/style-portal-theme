@@ -33,6 +33,9 @@
 .colors-dark {
   color: #fff;
 }
+.colors-light {
+  color: #222;
+}
 .btn-copy-color {
 	min-width: auto;
 }

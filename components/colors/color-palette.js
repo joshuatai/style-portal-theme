@@ -21,14 +21,14 @@ $('[data-palette]', this).each((i, elem) => {
 
     css = styles.style(selector);
     $item = $('<li>').addClass('color-bar');
-    
+
     matches = /background-color: (#\w+);/.exec(css);
     color = tinycolor(matches[1]);
     dark = color.isDark();
 
     $item.attr('data-color', color.toHexString()).data();
 
-    $item.data({ color }).addClass(dark ? 'colors-dark' : null);
+    $item.data({ color }).addClass(dark ? 'colors-dark' : 'colors-light');
     $list.append($item);
 
     render(++index);
@@ -53,7 +53,7 @@ $('[data-palette]', this).each((i, elem) => {
 
     color = tinycolor(color);
 
-    $color.attr('data-content', [  
+    $color.attr('data-content', [
       '<p style="color: #222;">Copy color code</p>',
       ClipboardButtonTemplate('HEX', color.toHexString()),
       ClipboardButtonTemplate('RGB', color.toRgbString())
