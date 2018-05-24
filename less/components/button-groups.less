@@ -29,18 +29,6 @@
       z-index: 4;
     }
   }
-  > .btn-default,
-  > .btn-border {
-    &:active,
-    &.active {
-      &,
-      .tmicon {
-        color: @btn-primary-color;
-        background-color: @btn-primary-bg-active;
-        .box-shadow(none);
-      }
-    }
-  }
 }
 
 // Prevent double borders when buttons are next to each other
@@ -324,6 +312,20 @@
       position: absolute;
       clip: rect(0,0,0,0);
       pointer-events: none;
+    }
+  }
+
+  > .btn-default,
+  > .btn-border {
+    &:active,
+    &.active {
+      color: @btn-primary-color;
+      background-color: @btn-primary-bg-active;
+      .box-shadow(none);
+      
+      .tmicon {
+        color: @btn-primary-color;
+      }
     }
   }
 }
