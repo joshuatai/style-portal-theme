@@ -3,17 +3,15 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-.button-variant(@color; @background; @background-top; @background-bottom; @border; @background-hover-top; @background-hover-bottom; @border-hover; @border-focus; @background-active; @border-active; @active-shadow) {
+.button-variant(@color; @background; @border; @background-hover; @border-hover; @border-focus; @background-active; @border-active; @disabled-opacity) {
   color: @color;
   background-color: @background;
-  #gradient > .vertical(@start-color: @background-top; @end-color: @background-bottom);
   border-color: @border;
 
   &:hover,
   &.hover {
     color: @color;
-    background-color: @background;
-    #gradient > .vertical(@start-color: @background-hover-top; @end-color: @background-hover-bottom);    
+    background-color: @background-hover;
     border-color: @border-hover;
   }
   
@@ -29,15 +27,13 @@
     color: @color;
     background-color: @background-active;
     border-color: @border-active;
-    .box-shadow(@active-shadow);
     
     &:hover,
     &.hover,
     &:focus,
     &.focus {
-      color: @color;      
+      color: @color;
       border-color: @border-active;
-      .box-shadow(@active-shadow);
     }
   }
   
@@ -50,7 +46,7 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    .opacity(.5);
+    .opacity(@disabled-opacity);
     cursor: @cursor-disabled;
     
     &:hover,
@@ -58,7 +54,6 @@
     &:focus,
     &.focus {
       background-color: @background;
-      #gradient > .vertical(@start-color: @background-top; @end-color: @background-bottom);
       border-color: @border;
     }
   } 
