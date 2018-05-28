@@ -42,15 +42,13 @@
   &.active {
     .tab-focus();
     background-image: none;
-    .box-shadow(@btn-default-active-shadow);
   }
 
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
     cursor: @cursor-disabled;
-    .opacity(.5);
-    /*.box-shadow(none);*/
+    .opacity(@btn-disable-opacity);
   }
 
   a& {
@@ -105,15 +103,16 @@
 // --------------------------------------------------
 
 .btn-default {
-  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-bg-top; @btn-default-bg-bottom; @btn-default-border; @btn-default-bg-hover-top; @btn-default-bg-hover-bottom; @btn-default-border-hover; @btn-default-focus-border; @btn-default-bg-active; @btn-default-border-active; @btn-default-active-shadow);
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border; @btn-default-bg-hover;  @btn-default-border-hover; @btn-default-focus-border; @btn-default-bg-active; @btn-default-border-active; @btn-disable-opacity);
+  transition: @btn-border-transition;
+  background-image: none!important;
 }
 
 .btn-primary {
-  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg-top; @btn-primary-bg-bottom; @btn-primary-border; @btn-primary-bg-hover-top; @btn-primary-bg-hover-bottom; @btn-primary-border-hover; @btn-primary-focus-border; @btn-primary-bg-active; @btn-primary-border-active; @btn-primary-active-shadow);
-  &:focus,
-  &.focus {
-    .box-shadow(@btn-primary-focus-shadow);
-  }
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border; @btn-primary-bg-hover; @btn-primary-border-hover; @btn-primary-focus-border; @btn-primary-bg-active; @btn-primary-border-active; @btn-disable-opacity);
+  transition: @btn-border-transition;
+  background-image: none!important;
+  
   .tmicon,
   .tmicon:hover {
     color: @btn-primary-color;
@@ -122,18 +121,17 @@
 
 // Danger and error appear as red
 .btn-danger {
-  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-bg-top; @btn-danger-bg-bottom; @btn-danger-border; @btn-danger-bg-hover-top; @btn-danger-bg-hover-bottom; @btn-danger-border-hover; @btn-danger-focus-border; @btn-danger-bg-active; @btn-danger-border-active; @btn-danger-active-shadow);
-  &:focus,
-  &.focus {
-    .box-shadow(@btn-danger-focus-shadow);
-  }
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border; @btn-danger-bg-hover; @btn-danger-border-hover; @btn-danger-focus-border; @btn-danger-bg-active; @btn-danger-border-active; @btn-disable-opacity);
+  transition: @btn-border-transition;
+  background-image: none!important;
+
   .tmicon,
   .tmicon:hover {
     color: @btn-danger-color;
   }
 }
 .btn-border {
-  .button-variant(@btn-border-color; @btn-border-bg; @btn-border-bg-top; @btn-border-bg-bottom; @btn-border-border; @btn-border-bg-hover-top; @btn-border-bg-hover-bottom; @btn-border-border-hover; @btn-border-focus-border; @btn-border-bg-active; @btn-border-border-active; @btn-border-active-shadow);
+  .button-variant(@btn-border-color; @btn-border-bg; @btn-border-border; @btn-border-bg-hover; @btn-border-border-hover; @btn-border-focus-border; @btn-border-bg-active; @btn-border-border-active; @btn-disable-opacity);
   background-color: @btn-border-bg;
   transition: @btn-border-transition;
   background-image: none!important;
