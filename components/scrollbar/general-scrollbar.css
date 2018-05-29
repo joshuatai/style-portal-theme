@@ -4,7 +4,7 @@
 
 .general-scrollbar-example .hidden-scrollable-container {
     height: 340px;
-    border: 1px solid #cccccc;
+    border: 1px solid #555;
     display: flex;
 }
 .general-scrollbar-example .hidden-scrollable-container .hidden-scrollable {
@@ -15,7 +15,8 @@
 .general-scrollbar-example .hidden-scrollable-container .hidden-scrollbar-text {
     flex: 1;
     text-align: center;
-    color: #999999;
+    background-color: #222;
+    color: #666;
     font-size: 13px;
     padding: 159px 56px;
 }
