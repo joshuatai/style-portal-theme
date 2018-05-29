@@ -74,21 +74,24 @@
 
   //The pagination disabled class status
   > .disabled {
+    .opacity(@pagination-disabled-opacity);
     > span,
     > span:hover,
     > span:focus,
+    > span:active,
     > a,
     > a:hover,
-    > a:focus {
+    > a:focus,
+    > a:active,
+    > a:focus:active {
       color: @pagination-disabled-color;
       background-color: @pagination-disabled-bg;
       border-color: @pagination-disabled-border;
       cursor: @cursor-disabled;
-      opacity: .5;
     }
   }
 }
-.table-pagination{
+.table-pagination {
   background-color: @table-pagination-bg;
   border: 1px solid @table-pagination-border;
   display: inline-block;
@@ -104,48 +107,49 @@
         margin-left: 16px;
       }
     }
-    .pagination{
+    .pagination {
       vertical-align: top;
     }
-    .pagination-records{
+    .pagination-records {
       color: @table-pagination-text-color;
       font-size: 13px;
       margin-top: 14px;
       margin-bottom: 14px;
     }
-    .pagination-records + .dropdown{
+    .pagination-records + .dropdown {
       border-left: 1px solid @table-pagination-divider-border;
     }
-    .dropdown{
+    .dropdown {
       padding-left: 16px;
       margin-top: 13px;
       margin-bottom: 13px;
-      .dropdown-menu{
+      .dropdown-menu {
         left: 16px;
         top: (@line-height-base-computed + @padding-base-vertical + 2);
       }
-      .btn{
+      .btn {
         border-left: 0;
         border-right: 0;
         color: @table-pagination-text-color;
         font-size: 13px;
         &:hover {
           color: @link-color;
-          .caret{
+          .caret {
             border-top: 4px dashed @link-color;
           }
         }
       }
     }
-    .pagination-input{
-      color: @table-pagination-text-color;
-       > input{
+    .pagination-input {
+      color: @table-pagination-page-input-color;
+       > input {
         width: 32px;
         padding: 5px 0;
         text-align: center;
         border-radius: 3px;
+        background: @table-pagination-page-input-bg;
         border: 1px solid @table-pagination-page-input-border;
-        &:focus{
+        &:focus {
           border: 1px solid @table-pagination-page-input-focus-border;
         }
       }
