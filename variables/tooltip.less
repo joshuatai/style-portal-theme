@@ -7,13 +7,14 @@
 @tooltip-inverse-max-width:     680px;
 
 //** Tooltip text color
-@tooltip-color:               #fff;
+@tooltip-color:               @text-color;
 //** Tooltip background color
 @tooltip-bg:                  #444;
+@tooltip-boder-color:         #888;
 @tooltip-opacity:             1;
 
 //** Tooltip shadow
-@tooltip-shadow:              1px 1px 3px rgba(0, 0, 0, 0.3);
+@tooltip-shadow:              1px 1px 12px rgba(0, 0, 0, 0.5);
 
 //** Tooltip arrow width
 @tooltip-arrow-width:         5px;
@@ -21,6 +22,6 @@
 @tooltip-arrow-color:         @tooltip-bg;
 
 //** Tooltip light
-@tooltip-inverse-color:         @gray-darkest;
-@tooltip-inverse-bg:            @gray-lighter;
-@tooltip-inverse-shadow:        0 1px 5px rgba(0, 0, 0, 0.15);
+@tooltip-inverse-color:         @tooltip-color;
+@tooltip-inverse-bg:            @tooltip-bg;
+@tooltip-inverse-shadow:        @tooltip-shadow;
