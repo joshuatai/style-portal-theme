@@ -60,7 +60,7 @@
       color: @pagination-active-color;
       background-color: @pagination-active-bg;
       border-color: @pagination-active-border;
-      box-shadow: 0 1px 2px @pagination-active-shadow inset;
+      // box-shadow: 0 1px 2px @pagination-active-shadow inset;
       background-image: none;
     }
   }
@@ -109,6 +109,19 @@
     }
     .pagination {
       vertical-align: top;
+      //The pagination active status
+      > li > a:active,
+      > .active > a,
+      > .active > span {
+        &,
+        &:hover,
+        &:focus {
+          color: @pagination-active-color;
+          background-color: @table-inner-pagination-active-bg;
+          // border-color: @pagination-active-border;
+          // box-shadow: 0 1px 2px @pagination-active-shadow inset;
+        }
+      }
     }
     .pagination-records {
       color: @table-pagination-text-color;
@@ -132,6 +145,9 @@
         border-right: 0;
         color: @table-pagination-text-color;
         font-size: 13px;
+        .caret {
+          border-top-color: @table-pagination-text-color;
+        }
         &:hover {
           color: @link-color;
           .caret {
@@ -141,8 +157,9 @@
       }
     }
     .pagination-input {
-      color: @table-pagination-page-input-color;
+      color: @table-pagination-text-color;
        > input {
+        color: @table-pagination-page-input-color;
         width: 32px;
         padding: 5px 0;
         text-align: center;
