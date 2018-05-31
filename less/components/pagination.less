@@ -20,6 +20,7 @@
       margin-left: -1px;
       width: 32px;
       text-align: center;
+      transition: @btn-border-transition;
     }
     &:first-child { //The icon border
       > a,
@@ -60,9 +61,13 @@
       color: @pagination-active-color;
       background-color: @pagination-active-bg;
       border-color: @pagination-active-border;
-      // box-shadow: 0 1px 2px @pagination-active-shadow inset;
       background-image: none;
     }
+  }
+
+  > li:first-child > a:active,
+  > li:last-child > a:active {
+    background-color: @pagination-first-after-active-bg;
   }
 
 
@@ -109,19 +114,6 @@
     }
     .pagination {
       vertical-align: top;
-      //The pagination active status
-      > li > a:active,
-      > .active > a,
-      > .active > span {
-        &,
-        &:hover,
-        &:focus {
-          color: @pagination-active-color;
-          background-color: @table-inner-pagination-active-bg;
-          // border-color: @pagination-active-border;
-          // box-shadow: 0 1px 2px @pagination-active-shadow inset;
-        }
-      }
     }
     .pagination-records {
       color: @table-pagination-text-color;
@@ -159,16 +151,16 @@
     .pagination-input {
       color: @table-pagination-text-color;
        > input {
-        color: @table-pagination-page-input-color;
+        // color: @table-pagination-page-input-color;
         width: 32px;
         padding: 5px 0;
         text-align: center;
         border-radius: 3px;
-        background: @table-pagination-page-input-bg;
-        border: 1px solid @table-pagination-page-input-border;
-        &:focus {
-          border: 1px solid @table-pagination-page-input-focus-border;
-        }
+        // background: @table-pagination-page-input-bg;
+        // border: 1px solid @table-pagination-page-input-border;
+        // &:focus {
+        //   border: 1px solid @table-pagination-page-input-focus-border;
+        // }
       }
     }
   }
