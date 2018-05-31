@@ -21,7 +21,7 @@ $('#editTags').token({
 $('.validation-example .tokenfield .token-duplicate').tooltip({
   title: 'Entry already exists',
   container: 'body',
-  template: 
+  template:
   `<div class="tooltip" role="tooltip">
     <div class="tooltip-inner tooltip-inner-light"></div>
   </div>`

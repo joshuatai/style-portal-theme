@@ -27,11 +27,11 @@
   <p>Display a small icon to indicate progress. For details on loader styles, refer to <a href="#/styles/{{theme}}/{{version}}/4cd601bb-d7a7-4b4a-8d4d-d087a630929a">Loader</a>.</p>
   <h5>Cancel icon class</h5>
   <pre data-title="Icon color and position">
-    <style data-selector=".tmicon-light"></style>
+    <style data-selector=".tmicon-visible-low"></style>
     <style data-selector=".input-icon-group .tmicon-close-s"></style>
   </pre>
   <pre data-title=":hover">
-    <style data-selector=".tmicon-light.tmicon-hoverable:hover"></style>
+    <style data-selector=".tmicon-visible-low.tmicon-hoverable:hover"></style>
   </pre>
 </section>
 
@@ -59,7 +59,7 @@
       <label class="input-icon-label" for="filter2">
         <i class="tmicon tmicon-search-o focus"></i>
       </label>
-      <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
+      <span class="tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable" data-clear-field="clearField"></span>  
     </div>
     <div class="example">
       <input id="searchBox" type="text" class="form-control" placeholder="Case name" data-search-field="searchBox">
