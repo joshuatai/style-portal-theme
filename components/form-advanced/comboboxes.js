@@ -6,11 +6,11 @@ EditableSelect.prototype.show = function () {
     left:  this.$input.position().left,
     width: this.$input.outerWidth()
   });
-  
+
   if (!this.$list.is(':visible') && (this.$list.find('li.es-visible').length > 0 || this.$list.find('li.matched-visible').length > 0)) {
     var fns = { default: 'show', fade: 'fadeIn', slide: 'slideDown' };
     var fn  = fns[this.options.effects];
-    
+
     this.utility.trigger('show');
     this.$input.addClass('open');
     this.$list[fn](this.options.duration, $.proxy(this.utility.trigger, this.utility, 'shown'));
@@ -51,13 +51,13 @@ var Combobox = function (element, options) {
   this.$body                     = $(document.body);
   this.$element                  = $(element);
   this.$combobox                 = $(combobox).insertBefore(this.$element).append(this.$element).data('combobox', this);
-  this.$close                    = $('<span data-toggle="close"></span>').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').data('combobox', this);
+  this.$close                    = $('<span data-toggle="close"></span>').addClass('tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable').data('combobox', this);
   this.$listItems                = this.$element.children();
   this.$combobox.addClass(this.$element.attr('class').split(' ').filter(function (classname) {
     return classname !== 'form-control';
   }).join(' '));
   var selectedItem = this.$element.find('[selected]');
-  
+
   if (options.value) {
     var selectable = this.$listItems.filter(function (index, item) {
       return item.value === options.value;
@@ -221,7 +221,7 @@ $(document)
       .removeClass('selected')
       .addClass("es-visible")
       .show();
-    combobox._show(lists);      
+    combobox._show(lists);
   })
   .on('hidden.editable-select', '[data-toggle="combobox-input"]', function (e) {
     var combobox = $(this).data('editableSelect').combobox;
@@ -235,11 +235,11 @@ $(document)
     if (e.namespace) {
       var combobox = $(this).data('editableSelect').combobox;
       var value = $li.attr('value') || $li.text();
-      
+
       combobox._setValue(value);
       combobox._change(value);
       combobox.$input.trigger('blur');
-      
+
       e.preventDefault();
       e.stopPropagation();
     }

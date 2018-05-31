@@ -1,5 +1,5 @@
 !function($) {
-  
+
   'use strict';
 
   var _super = $.fn.tokenfield;
@@ -17,7 +17,7 @@
 
     this.$element         = $(element);
     this.$controlWrapper  = $('<div />');
-    this.$filterCloseBtn  = $('<span />').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable');
+    this.$filterCloseBtn  = $('<span />').addClass('tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable');
     this.elementWidth     = this.$element.outerWidth();
 
     this.$helpBlock = $('<span />').addClass('help-block help-block-invalid help-block-with-icon');
@@ -25,7 +25,7 @@
     this.$helpBlockText = $('<span />').addClass('invalid-text');
     this.invalidHelpBlockInfo = 'There are invalid entries.';
     this.invalidInputClass = 'form-invalid';
-    
+
     this.rules = [];
     // get rules array and check property, validators and onTagInvalid  of rule.
     $.each(this.options.rules, function(key, rule){
@@ -42,7 +42,7 @@
     });
     // call the original constructor
     _super.Constructor.apply( this, arguments );
-    
+
     // init icon style and wrapper style
     this.editBtn(this.$wrapper);
     this.$wrapper.css('width', this.elementWidth);
@@ -56,9 +56,9 @@
       this.$wrapper.addClass('editable');
     }
 
-    // [autocomplete] 
+    // [autocomplete]
     if(autocomplete.source && autocomplete.source.length > 0) {
-      
+
       this.$dropdownMenu = this.$input.autocomplete('widget');
       this.$wrapper.addClass('autocomplete');
 
@@ -66,7 +66,7 @@
       if(this.getTokens().length > 0){
         this.$wrapper.append(this.$filterCloseBtn);
       }
-      
+
       this.$input
         .autocomplete(autocomplete)
         .on('autocompleteclose', function(e, ui){
@@ -89,7 +89,7 @@
           $('.ui-helper-hidden-accessible').html('');
         })
         .on('autocompletefocus', function(e, ui){
-          // prevent the action of replace the text field's value 
+          // prevent the action of replace the text field's value
           e.preventDefault();
         });
 
@@ -109,7 +109,7 @@
 
     this.$element
       .on('tokenfield:createtoken', function (e) {
-        // [autocomplete] stop create token, when entry text is not in drop down list. 
+        // [autocomplete] stop create token, when entry text is not in drop down list.
         if(autocomplete.source && autocomplete.source.length > 0) {
           var availableTokens = _self.filterAvailableTokens();
           var notExists = availableTokens.every(function(token) {
@@ -260,7 +260,7 @@
       }
     },
     editBtn: function(element){
-      element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
+      element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
     },
     addPlaceholder: function(){
       this.$input.attr('placeholder', this.options.placeholder).addClass('placeholder');
@@ -296,7 +296,7 @@
       }
     },
     initTooltip: function(errorMsg, elem) {
-      var tooltipLight = 
+      var tooltipLight =
       `<div class="tooltip" role="tooltip">
         <div class="tooltip-inner tooltip-inner-light"></div>
       </div>`;
@@ -322,7 +322,7 @@
       var $this   = $(this)
       var data    = $this.data('token')
       var options = $.extend({}, Token.DEFAULTS, $this.data(), typeof option == 'object' && option)
-      
+
       if (!data) $this.data('token', (data = new Token(this, options)))
       if (typeof option == 'string') data[option](_relatedTarget)
       else if (options.show) data.show(_relatedTarget)
@@ -341,7 +341,7 @@
   });
 
   $.fn.token = $.extend(Plugin, $.fn.tokenfield);
-  
+
 }(jQuery);
 
 
@@ -379,7 +379,7 @@ $('#editTags').token({
 $('.validation-example .tokenfield .token-duplicate').tooltip({
   title: 'Entry already exists',
   container: 'body',
-  template: 
+  template:
   `<div class="tooltip" role="tooltip">
     <div class="tooltip-inner tooltip-inner-light"></div>
   </div>`
