@@ -49,16 +49,17 @@
 }
 // Note: Deprecated .top-left, .top-right, .bottom-left, and .bottom-right as of v3.3.1
 .tooltip {
-  &.top .tooltip-arrow,
-  &.top .tooltip-arrow:before {
+  &.top .tooltip-arrow {
     bottom: 0;
     left: 50%;
-    margin-left: -@tooltip-arrow-width;
+    margin-left: -@tooltip-arrow-width - 1px;
     border-width: @tooltip-arrow-width + 1px @tooltip-arrow-width + 1px 0;
     border-top-color: @tooltip-boder-color;
   }
   &.top .tooltip-arrow:before {
     bottom: 2px;
+    left: 50%;
+    margin-left: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-bg;
   }
@@ -76,42 +77,45 @@
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-arrow-color;
   }
-  &.right .tooltip-arrow,
-  &.right .tooltip-arrow:before {
+  &.right .tooltip-arrow {
     top: 50%;
     left: 0;
-    margin-top: -@tooltip-arrow-width;
+    margin-top: -@tooltip-arrow-width - 1px;
     border-width: @tooltip-arrow-width + 1px @tooltip-arrow-width + 1px @tooltip-arrow-width + 1px 0;
     border-right-color: @tooltip-boder-color;
   }
   &.right .tooltip-arrow:before {
+    top: 50%;
     left: 2px;
+    margin-top: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
     border-right-color: @tooltip-bg;
   }
-  &.left .tooltip-arrow,
-  &.left .tooltip-arrow:before {
+  &.left .tooltip-arrow {
     top: 50%;
     right: 0;
-    margin-top: -@tooltip-arrow-width;
+    margin-top: -@tooltip-arrow-width - 1px;
     border-width: @tooltip-arrow-width + 1px 0 @tooltip-arrow-width + 1px @tooltip-arrow-width + 1px;
     border-left-color: @tooltip-boder-color;
   }
   &.left .tooltip-arrow:before {
+    top: 50%;
     right: 2px;
+    margin-top: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-left-color: @tooltip-bg;
   }
-  &.bottom .tooltip-arrow,
-  &.bottom .tooltip-arrow:before {
+  &.bottom .tooltip-arrow {
     top: 0;
     left: 50%;
-    margin-left: -@tooltip-arrow-width;
+    margin-left: -@tooltip-arrow-width - 1px;
     border-width: 0 @tooltip-arrow-width + 1px @tooltip-arrow-width + 1px;
     border-bottom-color: @tooltip-boder-color;
   }
   &.bottom .tooltip-arrow:before {
     top: 2px;
+    left: 50%;
+    margin-left: -@tooltip-arrow-width;
     border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-bottom-color: @tooltip-bg;
   }
