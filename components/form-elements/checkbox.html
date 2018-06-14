@@ -1,60 +1,47 @@
 <section class="css-reference">
   <h5>Checkbox Container</h5>
-  <p>Wrap an <code>input</code> and a <code>label</code> within an element. For example, the Boostrap checkbox container is <code>.checkbox</code></p>
+  <p>Wrap an <code>input[type="checkbox"]</code> and a <code>label</code> within an element. E.g. A bootstrap radio is wrapped using a <code>.form-check</code></p>
   <pre>
-    <style data-selector=".checkbox"></style>
+    <style data-selector=".form-check"></style>
   </pre>
   <h5>Input checkbox</h5>
-  <p>A checkbox element should be wrapped using a checkbox container.</p>
-  <pre>
-    <style data-selector=".input-checkbox">In order to customized checkbox, hide the input checkbox type</style>
+	<p>The input element should be wrapped a checkbox container.</p>
+	<pre>
+    <style data-selector=".form-check .input-checkbox">In order to customized checkbox, hide the input checkbox</style>
   </pre>
-
-  <h5>Label</h5>
+	<h5>Label</h5>
   <p>The Label element should be wrapped using a checkbox container.</p>
-  <pre>
-    <style data-selector=".checkbox label"></style>
-  </pre>
+	<pre>
+    <style data-selector=".form-check .input-checkbox + label"></style>
+	</pre>
 	<pre data-title="Disabled Class">
-    <style data-selector=".checkbox.disabled label"></style>
-  </pre>
-  <h5>Customizing a Checkbox</h5>
-  <p>To customize a checkbox, replace the hidden checkbox with the pseudo-element.</p>
+    <style data-selector=".form-check .input-checkbox:disabled + label"></style>
+	</pre>
+	<h5>Customizing a Checkbox</h5>
+	<p>To customize a checkbox, replace the hidden checkbox with the pseudo-element.</p>
+	<pre data-title=":before">
+		<style data-selector=".form-check .input-checkbox + label:before"></style>
+		<style data-selector=".form-check .input-checkbox + label:hover:before">Hovered style</style> 
+		<style data-selector=".form-check .input-checkbox:checked + label:before">When checkbox is checked, put a background image on label class pseudo-element :before</style> 
+		<style data-selector=".form-check .input-checkbox:checked + label:hover:before">Checked and hovered style</style> 
+    <style data-selector=".form-check .checkbox-partial + label:before">For indeterminate state</style>
+		<style data-selector=".form-check .input-checkbox:disabled + label:before">This style should come after an input checkbox with disabled attribute</style> 		
+	</pre>
+	<pre data-title=":after">
+		<style data-selector=".form-check .input-checkbox + label:after"></style>
+		<style data-selector=".form-check .checkbox-partial:checked + label:after">Set content nothing for checked style</style>
+		<style data-selector=".form-check .checkbox-partial + label:after">For indeterminate state</style>
+	</pre>
+	<h5>A stacked checkbox (Checkbox container)</h5>
   <pre>
-    <style data-selector=".input-checkbox + label:before"></style>
-    <style data-selector=".checkbox label:before"></style>
-  </pre>
-  <pre data-title=":hover">
-    <style data-selector=".input-checkbox + label:hover::before"></style>
-  </pre>
-  <pre data-title=":checked">
-    <style data-selector=".input-checkbox:checked + label:before">When checkbox is checked, put a background image on label class pseudo-element :before</style>
-  </pre>
-  <pre data-title=":checked and :hover">
-    <style data-selector=".checkbox .checked-hover + label:before"></style>
-  </pre>
-  <pre data-title="Partial checked">
-    <style data-selector=".checkbox-partial + label:before">Add HTML character to content property</style>
-  </pre>
-  <pre data-title="Disabled Style">
-    <style data-selector=".checkbox .disabled + label:before">This style should come after an input checkbox with disabled attribute</style>
-  </pre>
-
-  <h5>A stacked checkbox</h5>
+    <style data-selector=".form-check + .form-check">Such as Bootstrap checkbox of a stacked: .form-check + .form-check</style>
+	</pre>
+	<h5>An inline checkbox (Checkbox container)</h5>
   <pre>
-    <style data-selector=".checkbox + .checkbox">Such as Bootstrap checkbox of a stacked: .checkbox + .checkbox</style>
-  </pre>
-
-  <h5>An inline checkbox</h5>
-  <pre>
-	  <style data-selector=".checkbox-inline"></style>
-    <style data-selector=".checkbox-inline + .checkbox-inline">Such as Bootstrap checkbox in a row: .checkbox-inline + .checkbox-inline</style>
-  </pre>
-  <pre>
-    <style data-selector=".checkbox-inline.disabled">Disabled</style>
+		<style data-selector=".form-check-inline"></style>
+    <style data-selector=".form-check-inline + .form-check-inline">Such as Bootstrap checkbox in a row: .form-check-inline + .form-check-inline</style>
   </pre>
 </section>
-
 <section class="form-elements-example">
   <p>Checkboxes are used to permit the user to select one or more options from a set.</p>
 	<div class="lists-unordered">
@@ -67,52 +54,52 @@
 		</ul>
 	</div>
 	<div class="checkbox-wrapper">
-		<div class="checkbox">
-		  <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1" class="input-checkbox">
+		<div class="form-check">
+		  <input type="checkbox" name="optionscheckboxs1" id="optionscheckboxs1">
 		  <label for="optionscheckboxs1">Normal</label>
 		</div>
-		<div class="checkbox">
-		  <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs2" class="input-checkbox hover">
-		  <label for="optionscheckboxs2">Hover</label>
+		<div class="form-check">
+		  <input type="checkbox" name="optionscheckboxs1" id="optionscheckboxs2">
+		  <label for="optionscheckboxs2" class="hover">Hover</label>
 		</div>
-		<div class="checkbox">
-		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs3" class="input-checkbox checked">
+		<div class="form-check">
+		    <input type="checkbox" name="optionscheckboxs3" id="optionscheckboxs3" checked>
 		    <label for="optionscheckboxs3">Checked</label>
 		</div>
-		<div class="checkbox">
-		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs4" class="input-checkbox checked-hover checked">
-		    <label for="optionscheckboxs4">Checked hover</label>
+		<div class="form-check">
+		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs4" checked>
+		    <label for="optionscheckboxs4" class="hover">Checked hover</label>
 		</div>
-		<div class="checkbox">
-		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs5" class="input-checkbox checkbox-partial">
+		<div class="form-check">
+		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs5" class="checkbox-partial">
 		    <label for="optionscheckboxs5">Partial checked</label>
 		</div>
-		<div class="checkbox disabled">
-		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs6" class="input-checkbox checked" disabled>
+		<div class="form-check disabled">
+		    <input type="checkbox" name="optionscheckboxs6" id="optionscheckboxs6" checked disabled>
 		    <label for="optionscheckboxs6">Checked disabled</label>
 		</div>
-		<div class="checkbox disabled">
-		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs7" class="input-checkbox disabled" disabled>
+		<div class="form-check">
+		    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs7" disabled>
 		    <label for="optionscheckboxs7">Disabled</label>
 		</div>
 	</div>
 	<hr>
 	<h5>Default (stacked)</h5>
 	<div class="checkbox-wrapper">
-		<div class="checkbox">
-		  <input type="checkbox" name="default" id="defaultcheckboxs1" class="input-checkbox">
+		<div class="form-check">
+		  <input type="checkbox" name="default" id="defaultcheckboxs1">
 		  <label for="defaultcheckboxs1">Normal label one</label>
 		</div>
-		<div class="checkbox">
-		  <input type="checkbox" name="default" id="defaultcheckboxs2" class="input-checkbox">
+		<div class="form-check">
+		  <input type="checkbox" name="default" id="defaultcheckboxs2">
 		  <label for="defaultcheckboxs2">Normal label two</label>
 		</div>
-		<div class="checkbox disabled">
-		    <input type="checkbox" name="default" id="defaultcheckboxs3" class="input-checkbox disabled" disabled>
+		<div class="form-check disabled">
+		    <input type="checkbox" name="default" id="defaultcheckboxs3" disabled>
 		    <label for="defaultcheckboxs3">Disabled label</label>
 		</div>
-		<div class="checkbox">
-		    <input type="checkbox" name="default" id="defaultcheckboxs4" class="input-checkbox checked">
+		<div class="form-check">
+		    <input type="checkbox" name="default" id="defaultcheckboxs4" checked>
 		    <label for="defaultcheckboxs4">Checked label</label>
 		</div>
 		<div class="default-block">
@@ -123,16 +110,16 @@
 	<hr>
 	<h5>Inline</h5>
 	<div class="checkbox-wrapper">
-		<div class="checkbox-inline">
-		  <input type="checkbox" name="inline" id="inlinecheckboxs1" class="input-checkbox">
+		<div class="form-check form-check-inline">
+		  <input type="checkbox" name="inline" id="inlinecheckboxs1">
 		  <label for="inlinecheckboxs1">Normal label</label>
 		</div>
-		<div class="checkbox-inline disabled">
-		    <input type="checkbox" name="inline" id="inlinecheckboxs2" class="input-checkbox disabled" disabled>
+		<div class="form-check form-check-inline disabled">
+		    <input type="checkbox" name="inline" id="inlinecheckboxs2" disabled>
 		    <label for="inlinecheckboxs2">Disabled label</label>
 		</div>
-		<div class="checkbox-inline">
-		    <input type="checkbox" name="inline" id="inlinecheckboxs3" class="input-checkbox" checked>
+		<div class="form-check form-check-inline">
+		    <input type="checkbox" name="inline" id="inlinecheckboxs3" checked>
 		    <label for="inlinecheckboxs3">Checked label</label>
 		</div>
 	</div>
