@@ -255,56 +255,6 @@ form {
   }
 }
 
-
-// Checkboxes and radios
-//
-// Indent the labels to position radios/checkboxes as hanging controls.
-
-.radio,
-.radio-inline,
-.checkbox,
-.checkbox-inline {
-  position: relative;
-  display: block;
-
-  label {
-    min-height: @line-height-base-computed; // Ensure the input doesn't jump when there is no text
-    padding: 0;
-    margin-bottom: 0;
-    cursor: pointer;
-    color: @text-color;
-    line-height: 20px;
-  }
-}
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  margin-left: -20px;
-  margin-top: 4px \9;
-}
-
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: 8px; // Move up sibling radios or checkboxes for tighter spacing
-}
-
-// Radios and checkboxes on same line
-.radio-inline,
-.checkbox-inline {
-  position: relative;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-  float: left;
-}
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-left: 16px; // space out consecutive inline controls
-}
-
 // Apply same disabled cursor tweak as for inputs
 // Some special care is needed because <label>s don't inherit their parent's `cursor`.
 //
@@ -317,29 +267,154 @@ input[type="checkbox"] {
     cursor: @cursor-disabled;
   }
 }
-// These classes are used directly on <label>s
-.radio-inline,
-.checkbox-inline {
-  &.disabled,
-  fieldset[disabled] & {
-    cursor: @cursor-disabled;
+
+// Checkboxes and radios
+//
+.form-check {
+  position: relative;
+  display: block;
+
+  input[type="radio"],
+  .input-radio,
+  input[type="checkbox"],
+  .input-checkbox, {
+    display: none;
+
+    & + label {
+      min-height: @line-height-base-computed; // Ensure the input doesn't jump when there is no text
+      padding: 0 0 0 22px;
+      margin-bottom: 0;
+      cursor: pointer;
+      color: @text-color;
+      line-height: 20px;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: "";
+        display: inline-block;
+      }
+      
+      &:before {
+        width: 14px;
+        height: 14px;
+        margin-left: -22px;
+        margin-top: 3px;
+        margin-right: 8px;
+        vertical-align: top;
+        border: 1px solid @input-checkbox-radio-border;
+        background-color: @input-checkbox-radio-background;
+        background-position: center;
+      }
+      &:hover:before,
+      &.hover:before {
+        border: 1px solid @input-border-focus;
+      }
+    }
+    &:disabled + label {
+      &:extend(.form-check-disabled-label all);
+      &:before {
+        border: 1px solid @input-checkbox-radio-border;
+        background-color: @input-checkbox-radio-disabled-background;
+      }
+    }
+    &:checked {
+      & + label {
+        &:hover:before,
+        &.hover:before {
+          border: 1px solid @input-checkbox-radio-checked-hover-border;
+          background-color: @input-checkbox-radio-checked-hover-background;
+        }
+      }
+      & + label:before,
+      &:disabled + label:before {
+        border: 1px solid @input-border-focus;
+        background-color: @input-border-focus;
+        transition: background-color 0.2s;
+      }
+    }
+    
   }
-}
-// These classes are used on elements with <label> descendants
-.radio,
-.radio-inline,
-.checkbox,
-.checkbox-inline {
+  input[type="radio"],
+  .input-radio, {
+    & + label:before,
+    & + label:after {
+      border-radius: 50%;
+    }
+    &:checked + label:after {
+      position: absolute;
+      left: 4px;
+      top: 7px;
+      height: 6px;
+      width: 6px;
+      background-color: #fff;
+      transition: background-color 0.2s;
+    }
+  }
+  input[type="checkbox"],
+  .input-checkbox, {
+    & + label:before {
+      border-radius: 2px;
+    }
+    &:checked + label:before {
+      background-image: url(../images/icon/component_check.svg);
+      background-position: center;
+    }
+  }
+  .checkbox-partial { 
+    & + label {
+      &:before {
+        border-color: @input-checkbox-radio-border;
+      }
+      &:after {
+        background-color: @input-border-focus;
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        position: absolute;
+        left: 4px;
+        top: 7px;
+        transition: background-color 0.2s;
+      }
+    }
+    &:checked + label:after {
+      content: none;
+    }
+  }
+  
   &.disabled,
   fieldset[disabled] & {
     label {
-      opacity: 0.5;
-      cursor: @cursor-disabled;
+      &:extend(.form-check-disabled-label all);
     }
+  }
+
+  + .form-check {
+    margin-top: 8px; // Move up sibling radios or checkboxes for tighter spacing
   }
 }
 
-//input text
+.form-check-disabled-label {
+  .opacity(.5);
+  cursor: @cursor-disabled;
+}
+
+
+// Radios and checkboxes on same line
+.form-check-inline {
+  vertical-align: middle;
+  // font-weight: normal;
+  float: left;
+
+  + .form-check-inline {
+    margin-left: 16px; // space out consecutive inline controls
+    margin-top: 0px;
+  }
+}
+
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+//Input text
 .input-focus{
   border-color: @input-border-focus;
 }
@@ -352,110 +427,12 @@ input[type="checkbox"] {
   color: @brand-danger;
 }
 
-//textarea
-
+//Textarea
 .textarea-resizable{
   textarea&{
     resize: vertical;//only can resize vertical
   }
 }
-
-//Customized Radio ans Checkbox
-.input-radio ,
-.input-checkbox {
-  display: none;
-}
-
-.input-radio + label:before,
-.input-checkbox + label:before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-right: 8px;
-  border: 1px solid @input-checkbox-radio-border;
-  vertical-align: top;
-  margin-top: 3px;
-  background-color: @input-checkbox-radio-background;
-  color: @input-checkbox-radio-point-color;
-}
-
-.radio label:before,
-.radio-inline label:before {
-  border-radius: 50%;
-}
-.checkbox label:before,
-.checkbox-inline label:before {
-  border-radius: 2px;
-}
-
-.input-radio + label:hover::before,
-.input-checkbox + label:hover::before,
-.radio .hover + label:before,
-.radio-inline .hover + label:before,
-.checkbox .hover + label:before,
-.checkbox-inline .hover + label:before {
-  border: 1px solid @input-border-focus;
-}
-
-.radio .checked + label:before,
-.radio-inline .checked + label:before,
-.input-radio:checked + label:before {
-    content: "\2022";
-    color: @input-checkbox-radio-point-color;
-    font-size: 16px;
-    text-align: center;
-    line-height: 14px;
-    border: 1px solid @input-border-focus;
-    background-color: @input-border-focus;
-    transition: background-color 0.2s;
-}
-
-.input-radio:checked + label:hover::before,
-.radio .checked-hover + label:before,
-.radio-inline .checked-hover + label:before {
-    border: 1px solid @input-checkbox-radio-checked-hover-border;
-    background-color: @input-checkbox-radio-checked-hover-background;
-}
-.radio .disabled + label:before,
-.radio-inline .disabled + label:before {
-  border: 1px solid @input-checkbox-radio-border;
-  background-color: @input-checkbox-radio-disabled-background;
-}
-
-.checkbox .checked + label:before,
-.checkbox-inline .checked + label:before,
-.input-checkbox:checked + label:before {
-    content: "";
-    background-image: url(../images/icon/component_check.svg);
-    background-position: center;
-    border: 1px solid @input-border-focus;
-    background-color: @input-border-focus;
-    transition: 0.2s;
-}
-
-.input-checkbox:checked + label:hover::before,
-.checkbox .checked-hover + label:before,
-.checkbox-inline .checked-hover + label:before {
-    border: 1px solid @input-checkbox-radio-checked-hover-border;
-    background-color: @input-checkbox-radio-checked-hover-background;
-}
-
-.checkbox-partial + label:before{
-  content: "\25A0";
-  color: @input-border-focus;
-  font-size: 13px;
-  text-align: center;
-  line-height: 10px;
-  transition: color 0.2s;
-}
-
-.checkbox .disabled + label:before,
-.checkbox-inline .disabled + label:before {
-  border: 1px solid @input-checkbox-radio-border;
-  background-color: @input-checkbox-radio-disabled-background;
-}
-
 
 // Static form control text
 //

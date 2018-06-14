@@ -1,55 +1,45 @@
 <section class="css-reference">
   <h5>Radio container</h5>
-  <p>Wrap an <code>input</code> and a <code>label</code> within an element. E.g. A bootstrap radio is <code>.radio</code></p>
+  <p>Wrap an <code>input[type="radio"]</code> and a <code>label</code> within an element. E.g. A bootstrap radio is wrapped using a <code>.form-check</code></p>
   <pre>
-    <style data-selector=".radio"></style>
+    <style data-selector=".form-check"></style>
   </pre>
   <h5>Input radio</h5>
-  <p>The input element should be wrapped a radio container.</p>
-  <pre>
-    <style data-selector=".input-radio">In order to customized radio, hide the input radio type</style>
-  </pre>
-
-  <h5>Label</h5>
-  <p>The Label element should be wrapped using a radio container.</p>
-  <pre>
-    <style data-selector=".radio label"></style>
-  </pre>
-	<pre data-title="Disabled Class">
-    <style data-selector=".radio.disabled label"></style>
-  </pre>
-  <h5>Customizing a radio button</h5>
-  <p>To customize a radio button, replace the hidden radio button with the pseudo-element.</p>
-  <pre>
-    <style data-selector=".input-radio + label:before"></style>
-    <style data-selector=".radio label:before">Add this style with a radius size half of the height and width</style>
-  </pre>
-  <pre data-title=":hover">
-    <style data-selector=".input-radio + label:hover::before"></style>
-  </pre>
-  <pre data-title=":checked">
-    <style data-selector=".input-radio:checked + label:before">Add HTML character to content property on label class pseudo-element :before</style>
-  </pre>
-  <pre data-title=":checked and :hover">
-    <style data-selector=".radio .checked-hover + label:before"></style>
-  </pre>
-  <pre data-title="Disabled Style">
-    <style data-selector=".radio .disabled + label:before">This style should come after an input radio with disabled attribute</style>
-  </pre>
-  <h5>Stacked radio buttons</h5>
-  <pre>
-    <style data-selector=".radio + .radio">Such as Bootstrap radio of a stacked: .radio + .radio</style>
-  </pre>
-  <h5>Inline radio buttons</h5>
-  <pre>
-		<style data-selector=".radio-inline"></style>
-    <style data-selector=".radio-inline + .radio-inline">Such as Bootstrap radio in a row: .radio-inline + .radio-inline</style>
-  </pre>
+	<p>The input element should be wrapped a radio container.</p>
 	<pre>
-    <style data-selector=".radio-inline.disabled">Disabled</style>
+    <style data-selector=".form-check .input-radio">In order to customized radio, hide the input radio</style>
+  </pre>
+	<h5>Label</h5>
+  <p>The Label element should be wrapped using a radio container.</p>
+	<pre>
+    <style data-selector=".form-check .input-radio + label"></style>
+	</pre>
+	<pre data-title="Disabled Class">
+    <style data-selector=".form-check .input-radio:disabled + label"></style>
+	</pre>
+	<h5>Customizing a radio button</h5>
+	<p>To customize a radio button, replace the hidden radio button with the pseudo-element.</p>
+	<pre data-title=":before">
+		<style data-selector=".form-check .input-radio + label:before"></style>
+		<style data-selector=".form-check .input-radio + label:hover:before">Hovered style</style> 
+		<style data-selector=".form-check .input-radio:checked + label:before">Checked or checked with disabled style</style> 
+		<style data-selector=".form-check .input-radio:checked + label:hover:before">Checked and hovered style</style> 
+		<style data-selector=".form-check .input-radio:disabled + label:before">This style should come after an input radio with disabled attribute</style> 		
+	</pre>
+	<pre data-title=":after">
+		<style data-selector=".form-check .input-radio + label:after"></style>
+		<style data-selector=".form-check .input-radio:checked + label:after">Checked style</style>
+	</pre>
+	<h5>Stacked radio buttons (Radio container)</h5>
+  <pre>
+    <style data-selector=".form-check + .form-check">Such as Bootstrap radio of a stacked: .form-check + .form-check</style>
+	</pre>
+	<h5>Inline radio buttons (Radio container)</h5>
+  <pre>
+		<style data-selector=".form-check-inline"></style>
+    <style data-selector=".form-check-inline + .form-check-inline">Such as Bootstrap radio in a row: .form-check-inline + .form-check-inline</style>
   </pre>
 </section>
-
 <section class="form-elements-example">
   <p>A radio button allows the user to select an option from a list of options.</p>
 	<p>Adhere to the following when using a radio button:</p>
@@ -64,48 +54,48 @@
 		</ul>
 	</div>
 	<div class="radio-wrapper">
-		<div class="radio">
-		  <input type="radio" name="optionsRadios" id="optionsRadios1" class="input-radio">
+		<div class="form-check">
+		  <input type="radio" name="optionsRadios1" id="optionsRadios1">
 		  <label for="optionsRadios1">Normal</label>
 		</div>
-		<div class="radio">
-		  <input type="radio" name="optionsRadios" id="optionsRadios2" class="input-radio hover">
-		  <label for="optionsRadios2">Hover</label>
+		<div class="form-check">
+		  <input type="radio" name="optionsRadios1" id="optionsRadios2">
+		  <label for="optionsRadios2" class="hover">Hover</label>
 		</div>
-		<div class="radio">
-		    <input type="radio" name="optionsRadios" id="optionsRadios3" class="input-radio" checked>
+		<div class="form-check">
+		    <input type="radio" name="optionsRadios3" id="optionsRadios3" class="input-radio" checked>
 		    <label for="optionsRadios3">Checked</label>
 		</div>
-		<div class="radio">
-		    <input type="radio" name="optionsRadios" id="optionsRadios4" class="input-radio checked checked-hover">
-		    <label for="optionsRadios4">Checked hover</label>
+		<div class="form-check">
+		    <input type="radio" name="optionsRadios4" id="optionsRadios4" checked>
+		    <label for="optionsRadios4" class="hover">Checked hover</label>
 		</div>
-		<div class="radio disabled">
-		    <input type="radio" name="optionsRadios" id="optionsRadios5" class="input-radio checked" disabled>
+		<div class="form-check disabled">
+		    <input type="radio" name="optionsRadios5" id="optionsRadios5" checked disabled>
 		    <label for="optionsRadios5">Checked disabled</label>
 		</div>
-		<div class="radio disabled">
-		    <input type="radio" name="optionsRadios" id="optionsRadios6" class="input-radio disabled" disabled>
+		<div class="form-check disabled">
+		    <input type="radio" name="optionsRadios6" id="optionsRadios6" disabled>
 		    <label for="optionsRadios6">Disabled</label>
 		</div>
 	</div>
 	<hr>
 	<h5>Default (stacked)</h5>
 	<div class="radio-wrapper">
-		<div class="radio">
-		  <input type="radio" name="default" id="default1" class="input-radio">
+		<div class="form-check">
+		  <input type="radio" name="default" id="default1">
 		  <label for="default1">Normal label one</label>
 		</div>
-		<div class="radio">
-		  <input type="radio" name="default" id="default2" class="input-radio">
+		<div class="form-check">
+		  <input type="radio" name="default" id="default2">
 		  <label for="default2">Normal label two</label>
 		</div>
-		<div class="radio disabled">
-		    <input type="radio" name="default" id="default3" class="input-radio disabled" disabled>
+		<div class="form-check disabled">
+		    <input type="radio" name="default" id="default3" disabled>
 		    <label for="default3">Disabled label</label>
 		</div>
-		<div class="radio">
-		    <input type="radio" name="default" id="default4" class="input-radio" checked>
+		<div class="form-check">
+		    <input type="radio" name="default" id="default4" checked>
 		    <label for="default4">Checked label</label>
 		</div>
 		<div class="default-block">
@@ -116,15 +106,15 @@
 	<hr>
 	<h5>Inline</h5>
 	<div class="radio-wrapper">
-		<div class="radio-inline">
+		<div class="form-check form-check-inline">
 		  <input type="radio" name="inline" id="inline1" class="input-radio">
 		  <label for="inline1">Normal label</label>
 		</div>
-		<div class="radio-inline disabled">
+		<div class="form-check form-check-inline disabled">
 		    <input type="radio" name="inline" id="inline2" class="input-radio disabled" disabled>
 		    <label for="inline2">Disabled label</label>
 		</div>
-		<div class="radio-inline">
+		<div class="form-check form-check-inline">
 		    <input type="radio" name="inline" id="inline3" class="input-radio" checked>
 		    <label for="inline3">Checked label</label>
 		</div>
