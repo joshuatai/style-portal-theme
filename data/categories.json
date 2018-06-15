@@ -3,6 +3,7 @@
     "id": "0ebb6bc8-2720-47bc-a53c-9c712efd844b",
     "name": "Getting Started",
     "icon": "home",
+    "renderer": "home",
     "segments": [],
     "components": []
   },
