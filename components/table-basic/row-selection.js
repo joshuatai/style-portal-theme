@@ -10,15 +10,15 @@ function getSelectedText () {
 	}
 }
 
-$('.table-selectable').on('click', 'thead > tr > th.gutter > .checkbox', (e) => {
+$('.table-selectable').on('click', 'thead > tr > th.gutter > .form-check', (e) => {
 	e.preventDefault();
-
+	
 	var $label = $(e.target);
-	var $control = $label.parent('.checkbox').find('.input-checkbox');
+	var $control = $label.parent('.form-check').find('input[type="checkbox"]');
 	var $table = $label.parents('.table');
 	var $rows = $table.find('tbody > tr');
 	var $active = $table.find('tbody > tr.active');
-	var $checkbox = $rows.find('input.input-checkbox');
+	var $checkbox = $rows.find('input[type="checkbox"]');
 
 	if ($rows.length !== $active.length) {
 		$control.addClass('checkbox-partial');
@@ -39,7 +39,7 @@ $('.table-selectable').on('click', 'thead > tr > th.gutter > .checkbox', (e) => 
 	var $row = $(e.target).parents('tr');
 	var $table = $row.parents('.table');
 	var $rows = $table.find('tbody > tr');
-	var $control = $table.find('thead > tr > th.gutter .input-checkbox');
+	var $control = $table.find('thead > tr > th.gutter input[type="checkbox"]');
 	var data = $table.data();
 	var clickTimer = data.clickTimer;
 	var dblclickRecoverTimer = data.dblclickRecoverTimer;
@@ -56,7 +56,7 @@ $('.table-selectable').on('click', 'thead > tr > th.gutter > .checkbox', (e) => 
 	clickTimer = setTimeout(function () {
 		if (getSelectedText()) { return; }
 
-		var $checkbox = $row.find('.input-checkbox');
+		var $checkbox = $row.find('input[type="checkbox"]');
 
 		if ($row.hasClass('active')) {
 			$control.prop('checked', false);
