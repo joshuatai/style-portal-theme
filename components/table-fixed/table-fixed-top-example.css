@@ -1,9 +1,14 @@
+.site-header .dropdown-toggle {
+	margin-top: 0;
+}
+.table-fixed-example {
+	background: transparent;
+}
 .table-fixed-example .table-bordered {
 	border: 0;
 }
-
 .table-fixed-example .div-header .table-bordered {
-	border-top: 1px solid #dddddd;
+	border-top: 1px solid #4c4c4c;
 }
 
 .table-fixed-example .div-body .table > tbody > tr:first-child > td {
@@ -18,7 +23,7 @@
 }
 .table-fixed-example nav {
 	padding: 0 24px;
-	background: #fff;
+	background: #222222;
 }
 .table-fixed-example .breadcrumb {
 	padding: 12px 0;
