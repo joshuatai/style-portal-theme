@@ -8,8 +8,8 @@ function toolbarSelection(selector) {
 	var functionalBlock = $('.controls', tableSelected);
 	var textOfSelected = $('.selected-records .count', functionalBlock);
 	var tbodyRow = $("tbody > tr", table);
-	var partialCheckbox = $("thead > tr > th.gutter input.input-checkbox", table);
-	var tbodyCheckbox = $("input.input-checkbox", tbodyRow);
+	var partialCheckbox = $('thead > tr > th.gutter input[type="checkbox"]', table);
+	var tbodyCheckbox = $('input[type="checkbox"]', tbodyRow);
 	var hasDblclicked = false;
 	var clickTimer;
 	var dblclickRecoverTimer;
@@ -25,7 +25,7 @@ function toolbarSelection(selector) {
 
 		clearTimeout(clickTimer);
 		clickTimer = setTimeout(function () {
-			var eachCheckbox = _this.children().find("input.input-checkbox");
+			var eachCheckbox = _this.find('input[type="checkbox"]');
 			selectText = getSelectedText();
 
 			if (selectText == "") {
@@ -33,18 +33,17 @@ function toolbarSelection(selector) {
 					eachCheckbox.prop("checked", false);
 					partialCheckbox.prop("checked", false);
 					_this.removeClass('active');
-					var numberOfChecked = table.find('tbody input:checkbox:checked');
+					var numberOfChecked = table.find('tbody input[type="checkbox"]:checked');
 					textOfSelected.html(numberOfChecked.length);
 					if (numberOfChecked.length == 0) {
 						partialCheckbox.removeClass("checkbox-partial");
 						functionalBlock.removeClass("show");
 					}
-				}
-				else {
+				} else {
 					eachCheckbox.prop("checked", true);
 					_this.addClass('active');
 					partialCheckbox.addClass("checkbox-partial");
-					var numberOfChecked = table.find('tbody input:checkbox:checked');
+					var numberOfChecked = table.find('tbody input[type="checkbox"]:checked');
 					textOfSelected.html(numberOfChecked.length);
 					functionalBlock.addClass("show");
 					if (numberOfChecked.length == tbodyRow.length) {
@@ -62,7 +61,7 @@ function toolbarSelection(selector) {
 		hasDblclicked = true;
 	});
 
-	table.on('click', "thead > tr > th.gutter > .checkbox", function (e) {
+	table.on('click', "thead > tr > th.gutter > .form-check", function (e) {
 		var tbodyRowActive = table.find("tbody > tr.active");
 
 		if (tbodyRow.hasClass('active') || tbodyRowActive.length == 0) {
