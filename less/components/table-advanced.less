@@ -85,7 +85,11 @@
 .table-col-min-width {
   min-width: 56px;
 }
-
+.JCLRgrips {
+  .JCLRgripDrag {
+    border-left: 1px solid @table-resizable-border-left-color  !important;
+  }
+}
 .JCLRgripDrag {
   border-right: 4px solid @table-resizable-border-right-color;
   border-left: 1px solid @table-resizable-border-left-color;
@@ -115,7 +119,7 @@
           float: left;
           margin-right: 12px;
           margin-top: 5px;
-          border-left: 1px solid @table-border-color;
+          border-left: 1px solid @table-with-header-toolbar-divider-border-color;
         }
       }
       .selected-records {
@@ -138,6 +142,7 @@
   }
   &.plain-header {
     .toolbar {
+      border: 0;
       background-color: @table-with-header-toolbar-plain-bg;
       box-shadow: @table-with-header-toolbar-plain-shadow;
       border-bottom: 1px solid @table-border-color;
