@@ -29,10 +29,10 @@
 .tables-advanced-example .table-with-header {
 	margin-bottom: 24px;
 }
-.tables-advanced-example .table-with-header.plain-header .toolbar {
+/* .tables-advanced-example .table-with-header.plain-header .toolbar {
 	border: 0;
 	border-bottom: 1px solid #dddddd;
-}
+} */
 .tables-advanced-example .table-with-header .toolbar .controls {
 	display: none;
 }
