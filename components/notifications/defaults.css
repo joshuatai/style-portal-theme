@@ -47,9 +47,13 @@
   float: right;
 }
 .alert-example .toast-alert-banner {
-  background-image: url("images/alert_img2_bg.png");
+  background-image: url("images/alert_img1_bg.png");
   background-repeat: repeat-x;
 }
 .alert-example .toast-alert-banner img[src*="righ"] {
   float: right;
+}
+.alert-example .breadcrumb {
+  padding-left: 24px;
+  border: 1px solid #4c4c4c;
 }
