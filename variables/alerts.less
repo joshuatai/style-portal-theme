@@ -1,18 +1,33 @@
 //== Alerts
 //
 //## Define alert colors, border radius, and padding.
-@alert-success-bg:        extract(@greens, 9);
-@alert-success-border:    1px solid extract(@greens, 8);
+@alert-color:              #222222;
+@alert-success-bg:         #4cc383;
+@alert-success-border:      1px solid #4cc383;
 
-@alert-info-bg:           extract(@blues, 9);
-@alert-info-border:       1px solid extract(@blues, 8);
+@alert-info-bg:            #4cb5db;
+@alert-info-border:         1px solid #4cb5db;
 
-@alert-warning-bg:        extract(@yellows, 9);
-@alert-warning-border:    1px solid extract(@yellows, 5);
+@alert-warning-bg:         #fcd963;
+@alert-warning-border:      1px solid #fcd963;
 
-@alert-danger-bg:         extract(@reds, 9);
-@alert-danger-border:     1px solid extract(@reds, 8);
+@alert-danger-bg:          #e56669;
+@alert-danger-border:       1px solid #e56669;
 
-@alert-icon-color:       #444;
+@alert-icon-color:          @alert-color;
+@alert-toast-shadow:       rgba(0, 0, 0, 0.2);
 
-@alert-toast-shadow:     rgba(0, 0, 0, 0.2);
+@alert-close-color:         @alert-color; 
+@alert-close-opacity:       .5;
+@alert-close-opacity-hover: 1;
+
+/* Button within an alert */
+@alert-button-color:        #222222;
+@alert-button-border-color: @alert-button-color; 
+@alert-button-bg:           rgba(255, 255, 255, 0);
+@alert-button-hover-bg:     rgba(255, 255, 255, 0.6);
+@alert-button-active-bg:    rgba(255, 255, 255, 0.9);
+@alert-button-focus-border: #ffffff;
+
+/* Link within an alert */
+@alert-link-color:          #222222;
