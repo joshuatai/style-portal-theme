@@ -75,7 +75,8 @@ $("#resize").colResizable({
 	hoverCursor: "col-resize",
 	minWidth: 56,
 	onDrag: setDragLineHeight,
-	onResize: setDragLineHeight
+	onResize: setDragLineHeight,
+	partialRefresh: true
 });
 $(".JCLRgrip").hover(function() {
 	setDragLineHeight();
