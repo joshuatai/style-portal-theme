@@ -19,9 +19,9 @@
 //** Text color for `<input>`s
 @input-color:                    @text-color;
 //** `<input>` border color
-@input-border:                   #cccccc;
+@input-border:                   #888888;
 //** `<input type="checkbox">` or `<input type="radio">` border color
-@input-checkbox-radio-border:    #999999;
+@input-checkbox-radio-border:    #bbbbbb;
 
 //** `<input type="checkbox">` or `<input type="radio">` background color 
 @input-checkbox-radio-background: @input-bg;
@@ -29,9 +29,13 @@
 //** `<input type="checkbox">` or `<input type="radio">` color 
 @input-checkbox-radio-point-color: @input-bg;
 
-@input-checkbox-radio-checked-hover-background: #33ABD6;
+@input-checkbox-radio-checked-hover-background: #33abd6;
 
-@input-checkbox-radio-disabled-background: @input-bg-disabled;
+@input-checkbox-radio-checked-border: #0382b0;
+@input-checkbox-radio-checked-background: @input-checkbox-radio-checked-border;
+
+@input-checkbox-radio-disabled-border: #666666;
+@input-checkbox-radio-disabled-background: #555555;
 
 @input-checkbox-radio-checked-hover-border: @input-checkbox-radio-checked-hover-background;
 
@@ -52,6 +56,8 @@
 //** Placeholder text color
 @input-color-placeholder:        @text-muted;
 
+//** Select
+@select-option-bg:               #2c2c2c;
 
 //** Default `.form-control` height
 @input-height-base:              (ceil(@font-size-base * @line-height-base) + (@padding-base-vertical * 2) + 2);
