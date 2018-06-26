@@ -141,10 +141,15 @@ output {
     appearance: none;
     background: url("../images/icon/selectCaretDown.svg") no-repeat;
     background-position: right 12px center;
+    
+    option {
+      background-color: @select-option-bg;
+    }
   }
   select[multiple]& {
     height: auto;
     background-image: none;
+    background-color: @select-option-bg;
   }
   select:focus&{
     outline: 0;
@@ -314,7 +319,7 @@ input[type="checkbox"] {
     &:disabled + label {
       &:extend(.form-check-disabled-label all);
       &:before {
-        border: 1px solid @input-checkbox-radio-border;
+        border: 1px solid @input-checkbox-radio-disabled-border;
         background-color: @input-checkbox-radio-disabled-background;
       }
     }
@@ -328,8 +333,8 @@ input[type="checkbox"] {
       }
       & + label:before,
       &:disabled + label:before {
-        border: 1px solid @input-border-focus;
-        background-color: @input-border-focus;
+        border: 1px solid @input-checkbox-radio-checked-border;
+        background-color: @input-checkbox-radio-checked-background;
         transition: background-color 0.2s;
       }
     }
@@ -395,7 +400,7 @@ input[type="checkbox"] {
 }
 
 .form-check-disabled-label {
-  .opacity(.5);
+  .opacity(.4);
   cursor: @cursor-disabled;
 }
 
