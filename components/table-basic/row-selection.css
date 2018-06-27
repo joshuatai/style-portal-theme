@@ -1,3 +1,7 @@
+label[for="tablecheckboxs1"],
+label[for="tablecheckboxs2"] {
+	pointer-events: none;
+}
 .tables-basic-example .table .input-checkbox + label:before {
 	margin-right: 0;
 }
