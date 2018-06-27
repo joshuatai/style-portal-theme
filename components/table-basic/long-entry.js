@@ -60,6 +60,6 @@ tableCell
 	});
 
 $(document).on('mousemove', function(e){
-    mouseY = e.pageY;
+    mouseY = e.pageY + 10;
     mouseX = e.pageX;
 })
