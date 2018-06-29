@@ -49,7 +49,6 @@
 .table-edit.single-field-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input {
   border-radius: 3px;
   border: 1px solid #db3d44;
-  background-color: #ffffff;
 }
 .table-edit.inline-button-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input .popover,
 .table-edit.single-field-validation > tbody > tr td.edit-cell .editable-inline .form-group > div .editable-input .popover {
