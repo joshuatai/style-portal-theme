@@ -53,8 +53,11 @@ th {
         //line-height: @line-height-base;
         > a {
           display: block;
-          text-decoration: underline;
+          text-decoration: none;
           padding: @table-cell-padding;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
