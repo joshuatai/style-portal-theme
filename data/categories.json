@@ -13,7 +13,6 @@
     "icon": "type",
     "segments": [],
     "components": [
-      "cc15a791-8a8e-4d02-b35a-a415a7da7ea5",
       "aca6f1ac-609a-431c-8fca-739b6c060299",
       "f558e7db-82df-426a-93a6-c0ad072bb894",
       "1811bd76-57b6-4fb9-930f-b6899313fa41"
@@ -27,19 +26,13 @@
     "components": [
       "97ad8624-f277-4734-93cb-3940ec280510",
       "e5bd7778-d707-420b-ac64-4a55da161b83",
-      "f67b16d7-2d35-4c9c-bc5a-02e2824e46c3",
       "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
-      "37a6f43e-9194-4b29-94ad-e54bbc3f1b38",
       "4cd601bb-d7a7-4b4a-8d4d-d087a630929a",
       "348487b9-82cc-4c06-98e4-ede8ac73a42b",
-      "a2fa8b5e-6dd7-4570-9352-eea232f1d5a0",
       "168263ea-0f3f-4782-8a37-f18334007680",
       "003ae527-8e9e-41fb-a275-ae2babcdf49e",
       "24bb5a2d-2d61-49a9-a4dd-4bdc57c87c0a",
-      "31ac4e6c-120e-46dd-9c31-285e04543ddd",
       "5d7725aa-ff52-4035-95d6-8220342da195",
-      "e70a6361-a194-44e2-8b6f-be42f78efe35",
-      "dbfe46cf-8026-4d8a-9c32-fdcfc8198848",
       "0cc7f2c3-4690-4f66-89b9-33ab469e8b5f"
     ]
   },
@@ -50,15 +43,11 @@
     "segments": [],
     "components": [
       "206355af-1c26-49d7-b878-d3d6f094990f",
-      "65ce6af3-87b9-45ed-b1e7-56f1b1ad3745",
       "8de08a62-4895-4549-a71b-adb5d2008f53",
       "b661774f-cb42-4ca4-9637-7da9bc5fb090",
       "13c93b6d-c0f4-4983-a2de-27a0f910caa8",
       "f1cdc7cd-5ee2-436a-b7ae-60188c813881",
-      "4ec8071d-3dc0-4c63-90d7-9b41cb87a423",
-      "0448aa99-2fd0-4218-b960-4037f18e8bcb",
-      "06f6ed7b-95c5-449d-a3c7-cd56ff037d66",
-      "73243502-1317-451b-b3c9-e75f7e5fab81"
+      "06f6ed7b-95c5-449d-a3c7-cd56ff037d66"
     ]
   },
   {
@@ -70,9 +59,7 @@
       "36b0decb-5891-4683-a933-214cc0dd82b9",
       "0dd091cf-6392-49d2-8a9d-5ccc45131f3d",
       "d343d2ac-67aa-44a4-a8ca-bd6f6cb490b8",
-      "e8bb3b3e-0ea9-4152-b74c-c413922210ca",
-      "f7017cfc-efff-457f-9457-cf4d34df4db1",
-      "5d77b5ec-a33b-4a6b-9a13-7c9107072d01"
+      "f7017cfc-efff-457f-9457-cf4d34df4db1"
     ]
   },
   {
