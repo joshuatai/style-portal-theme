@@ -4,11 +4,12 @@
 .table-fixed-example {
 	background: transparent;
 }
-.table-fixed-example .table-bordered {
-	border: 0 !important;
-}
+
 .table-fixed-example .div-header .table-bordered {
 	border-top: 1px solid #4c4c4c;
+}
+.table-fixed-example .div-body .table-bordered {
+	border: 0;
 }
 
 .table-fixed-example .div-body .table > tbody > tr:first-child > td {
