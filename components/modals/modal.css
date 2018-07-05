@@ -56,7 +56,8 @@
   margin-left: 0;
   margin-right: 0;
 }
-#modal-md .form-horizontal {
+#modal-md .form-horizontal,
+#modal-lg .form-horizontal {
   padding: 16px 24px 24px 24px;
 }
 #modal-md .modal-body,
@@ -66,4 +67,10 @@
 }
 #modal-lg .modal-table-img {
   width: 926px;
+}
+#modal-lg .modal-body .control-label {
+  width: 100px;
+}
+#modal-lg .modal-body .form-horizontal .form-group .control-wrapper {
+  width: 524px;
 }
