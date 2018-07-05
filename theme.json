@@ -2,7 +2,7 @@
   "id": "minimalism",
   "name": "Minimalism",
   "version": "1.14.0",
-  "color": {
+  "mode": {
     "key": "dark",
     "hex": "#222",
     "order": 2
