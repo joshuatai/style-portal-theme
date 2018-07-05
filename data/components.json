@@ -894,7 +894,7 @@
       "0d55de76-72f0-4da7-8db1-6c874baa8a58"
     ],
     "css": {
-      "name": "Table Inline Editing",
+      "name": "table-inline-editing",
       "sources": [
         "dependencies/normalize",
         "core/forms",
