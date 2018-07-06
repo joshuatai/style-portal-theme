@@ -2,6 +2,11 @@
   "id": "minimalism",
   "name": "Minimalism",
   "version": "1.6.0",
+  "mode": {
+    "key": "light",
+    "hex": "#eee",
+    "order": 1
+  },
   "categories": [
     "67ec27d1-4f66-42b4-bb99-2dbb57f53a1e",
     "a2721936-4be9-4abf-9a74-cd64f40d9053",
