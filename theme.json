@@ -1,8 +1,8 @@
 {
   "id": "minimalism",
   "name": "Minimalism",
-  "version": "1.14.0",
-  "color": {
+  "version": "1.15.0",
+  "mode": {
     "key": "light",
     "hex": "#eee",
     "order": 1
