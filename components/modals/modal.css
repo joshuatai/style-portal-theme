@@ -74,3 +74,8 @@
 #modal-lg .modal-body .form-horizontal .form-group .control-wrapper {
   width: 524px;
 }
+@media (min-width: 768px) {
+  #modal-lg .modal-body .control-label.checkbox-label {
+    margin-top: 0;
+  }
+}
