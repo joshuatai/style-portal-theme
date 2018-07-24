@@ -35,6 +35,6 @@
 	z-index: 1070;
 }
 
-.tables-advanced-example .table-sortable .sortabled .text:before {
+.tables-advanced-example .table-sortable .sortabled .truncated-text:before {
 	content: "";
 }
