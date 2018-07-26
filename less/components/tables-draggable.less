@@ -1,14 +1,7 @@
 .table-row-draggable {
 	.table-draggable-placeholder td {
 		background: @table-drag-placeholder-bg;
-		border-left-color: @table-drag-placeholder-border-color;
-		border-right-color: @table-drag-placeholder-border-color;
-	}
-	.table-draggable-placeholder td:first-child {
-		border-left-color: @table-border-color;
-	}
-	.table-draggable-placeholder td:last-child {
-		border-right-color: @table-border-color;
+		border: 0
 	}
 	.ui-sortable-handle:hover {
 		td {
@@ -37,6 +30,9 @@
 	cursor: move;
 	> tbody {
 		> tr {
+			&:hover {
+				background-color: @table-drag-helper-bg;
+			}
 			> td {
 				border: 1px solid @table-header-border-bottom-color;
 			}
