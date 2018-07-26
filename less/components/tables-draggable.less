@@ -1,14 +1,7 @@
 .table-row-draggable {
 	.table-draggable-placeholder td {
 		background: @table-drag-placeholder-bg;
-		border-left-color: @table-drag-placeholder-border-color;
-		border-right-color: @table-drag-placeholder-border-color;
-	}
-	.table-draggable-placeholder td:first-child {
-		border-left-color: @table-border-color;
-	}
-	.table-draggable-placeholder td:last-child {
-		border-right-color: @table-border-color;
+		border: 0
 	}
 	.ui-sortable-handle:hover {
 		td {
@@ -22,7 +15,7 @@
 					left: -10px;
 					cursor: move;
 					position: absolute;
-					background-image: url(../images/icon/icon_indicator.png);
+					background-image: url(../images/icon/icon_indicator_darkmode.png);
 					background-repeat: no-repeat;
 					background-position: center center;
 				}
@@ -53,7 +46,7 @@
 				}
 			}
 			&.ui-column-highlight {
-				background-color: @table-drag-column-bg;
+				background-color: @table-drag-column-header-bg;
 				color: @table-drag-column-header-color;
 			}
 		}
@@ -65,6 +58,6 @@
 	border: 1px solid @table-drag-column-helper-border-color;
 	box-shadow: @table-drag-helper-shadow;
 	padding: 8px 12px;
-	color: @table-header-color;
+	color: @table-drag-column-helper-color;
 	font-weight: bold;
 }
