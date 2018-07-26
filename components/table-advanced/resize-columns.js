@@ -47,7 +47,7 @@ tableCell
 
 		if(cellWidth < cellTextLength) {
 			tableLongtextToggle.html(cellText);			
-			$(this).css("cursor", "default");
+			$(this).hasClass('sortabled')? $(this).css("cursor", "pointer") : $(this).css("cursor", "default");
 			timer = setTimeout(function(){
 				tableLongtextToggle.appendTo('body').css({top: mouseY, left: mouseX});
 				setTimeout(function(){
@@ -58,7 +58,6 @@ tableCell
 	})
 	.mouseleave(function () {
 		clearTimeout(timer);
-		$(this).css("cursor", "auto");
 		tableLongtextToggle.removeClass("in").remove();		
 	});
 
@@ -69,27 +68,29 @@ $(document).on('mousemove', function(e){
 
 // RESIZABLE
 // =================
-colResizeTable.colResizable({
-	liveDrag: true,
-	headerOnly: true,
-	dragCursor: "col-resize",
-	hoverCursor: "col-resize",
-	minWidth: 80,
-	onDrag: setDragLineHeight,
-	onResize: setDragLineHeight,
-	partialRefresh: true
-});
-$(".JCLRgrip").hover(function() {
-	setDragLineHeight();
-},function(){
-	resetDragLineHeight();
-})
-
-function setDragLineHeight(){
-	var tableHeight = colResizeTable.outerHeight();
-	$(".JCLRgrip").css({height: tableHeight});
-}
-function resetDragLineHeight(){
-	var theadHeight = colResizeTable.find('thead').outerHeight();
-	$(".JCLRgrip").css({height: theadHeight});
-}
+setTimeout(() => {
+	colResizeTable.colResizable({
+		liveDrag: true,
+		headerOnly: true,
+		dragCursor: "col-resize",
+		hoverCursor: "col-resize",
+		minWidth: 77,
+		onDrag: setDragLineHeight,
+		onResize: setDragLineHeight,
+		partialRefresh: true
+	});
+	$(".JCLRgrip").hover(function() {
+		setDragLineHeight();
+	},function(){
+		resetDragLineHeight();
+	})
+	
+	function setDragLineHeight(){
+		var tableHeight = colResizeTable.outerHeight();
+		$(".JCLRgrip").css({height: tableHeight});
+	}
+	function resetDragLineHeight(){
+		var theadHeight = colResizeTable.find('thead').outerHeight();
+		$(".JCLRgrip").css({height: theadHeight});
+	}
+}, 200);
