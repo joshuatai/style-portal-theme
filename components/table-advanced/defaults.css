@@ -8,10 +8,6 @@
 .tables-advanced-example .table > tbody > tr > td:nth-child(1) {
 	width: 35.3%;
 }
-.tables-advanced-example .table > thead > tr > th:nth-child(2),
-.tables-advanced-example .table > tbody > tr > td:nth-child(2) {
-	width: 23.53%;
-}
 .tables-advanced-example .table > thead > tr > th:nth-child(3),
 .tables-advanced-example .table > tbody > tr > td:nth-child(3) {
 	width: 11.76%;
@@ -37,4 +33,7 @@
 
 .tables-advanced-example .table-sortable .sortabled .truncated-text:before {
 	content: "";
+}
+.tables-advanced-example .JCLRLastGrip {
+	visibility: hidden;
 }

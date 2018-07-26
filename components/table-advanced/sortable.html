@@ -16,9 +16,9 @@
 	<ul>
 		<li>The first click should sort entries in descending order, and the second click in ascending order.</li>
 		<li>When such headers are hovered over, display a pointer and show the header in another color to indicate sortability.</li>
-		<li>The sorting icon should be visible at the right side in a column even the column is narrow.</li>
+		<li>The sort icon should be visible on the right in a sortable column, regardless of the column width.</li>
 	</ul>
-	<table id="sortResizeTable" class="table table-bordered table-hover table-longtext-truncated table-sortable table-resize" data-table-longtext="truncated" data-table-resizeable="colResize">
+	<table class="table table-bordered table-hover table-longtext-truncated table-sortable table-resize" data-table-longtext="truncated" data-table-resizeable="colResize">
 		<thead>
 			<tr>
 				<th class="sortabled"><span class="truncated-text">Deployment Plan</span><span class="tmicon tmicon-sort-down"></span></th>
@@ -56,7 +56,7 @@
 		<thead>
 			<tr>
 				<th class="sortabled" style="width: 80px;"><span class="truncated-text">Deployment Plan</span><span class="tmicon tmicon-sort-down"></span></th>
-				<th style="width: auto;">Type</th>
+				<th>Type</th>
 				<th>Appliance</th>
 				<th>Deployed</span></th>
 				<th>Creator</th>
