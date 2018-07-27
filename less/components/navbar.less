@@ -259,7 +259,7 @@
     float: left;
     > a {
       padding-top:    @navbar-padding-vertical;
-      padding-bottom: @navbar-padding-vertical;
+      padding-bottom: @navbar-padding-vertical - 1;
       .caret {
         float: none;
         vertical-align: top;
@@ -383,6 +383,7 @@ header .navbar-nav > li > .dropdown-menu {
 .navbar-default {
   background-color: @navbar-default-bg;
   border-color: @navbar-default-border;
+  border-bottom: 1px solid @navbar-default-border-bottom;
 
   .container-fluid {
     padding-right: 0;
@@ -418,10 +419,13 @@ header .navbar-nav > li > .dropdown-menu {
     > li > a {
       color: @navbar-default-link-color;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
+      }
+      &:focus {
+        color: @navbar-default-link-focus-color;
+        background-color: @navbar-default-link-focus-bg;
       }
       .caret {
         border-top-color: @navbar-nav-caret-border;

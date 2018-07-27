@@ -39,6 +39,7 @@
   background-repeat: no-repeat;
 }
 .navbar-example .vertical-nav-example {
+  background-color: #222;
   border: 1px solid #4c4c4c;
   height: 342px;
   position: relative;
