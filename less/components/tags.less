@@ -37,16 +37,18 @@
       max-width: 184px;
       font-family: @font-family-arial;
       font-size: @font-size-small;
-      color: @text-color;
+      color: @token-color;
       vertical-align: top;
     }
     .tmicon {
+      color: @token-color;
+      .opacity(0.5);
+      &:hover,
+      &:focus {
+        .opacity(1);
+      }
       &.tmicon-close-s {
         font-size: 14px;
-        &:focus {
-          color: @tmicon-visible-low-color;
-          opacity: 1;
-        }
       }
     }
     .tmicon-close-s {
