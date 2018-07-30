@@ -7,9 +7,6 @@
 .form-layout-example .form-inline .form-group {
   margin-left: 0;
 }
-.form-layout-example .checkbox-label {
-  margin-top: 0;
-}
 @media (min-width: 768px) {
   .form-layout-example .form-group > .form-control {
     width: 579px;
