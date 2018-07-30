@@ -177,6 +177,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// menu items with checkboxes
+.dropdown-menu-selections {
+  > li > a {
+    padding: 0;
+
+    .form-check input[type="checkbox"] + label {
+      display: block;
+      padding: 4px 16px 4px 38px;
+    }
+  }
+}
+
 // Dropdown section headers
 .dropdown-header {
   display: block;
