@@ -11,22 +11,22 @@
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  .form-layout-example .form-horizontal .form-group .control-label {
+  .form-layout-horizontal-example .control-label {
     width: 84px;
   }
-  .form-layout-example .form-horizontal .form-group .control-wrapper-offset {
+  .form-layout-horizontal-example .control-wrapper-offset {
     margin-left: 84px;
   }
-  .form-layout-example .form-inline .form-group .form-control {
+  .form-layout-inline-example .form-control {
     width: 168px;
   }
-  .form-layout-example .example .form-horizontal .form-group .control-label {
+  .form-layout-label-example .form-horizontal .control-label {
     width: 85px;
   }
-  .form-layout-example .form-horizontal fieldset legend {
+  .form-layout-group-example fieldset legend {
     width: 616px;
   }
-  .form-layout-example .form-horizontal .form-group .control-label {
+  .form-layout-group-example .control-label {
     width: 68px;
   }
 }
