@@ -18,7 +18,7 @@ function searchBox(elem) {
   $closeBtn.on('click', function (event){
     $input.val('').focus();
     $(this).hide();
-  }); 
+  });
 }
 
 
@@ -50,7 +50,7 @@ function searchBox(elem) {
         'class': 'loader loader-small'
       }).hide().insertAfter(this.element);
       this.$iconClose = $('<span>', {
-        'class': 'tmicon tmicon-close-s tmicon-light tmicon-hoverable'
+        'class': 'tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable'
       }).hide().insertAfter(this.element);
 
       this.element
