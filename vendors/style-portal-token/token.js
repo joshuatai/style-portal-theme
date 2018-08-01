@@ -14,7 +14,7 @@
   
       this.$element         = $(element);
       this.$controlWrapper  = $('<div />');
-      this.$filterCloseBtn  = $('<span />').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable');
+      this.$filterCloseBtn  = $('<span />').addClass('tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable');
       this.elementWidth     = this.$element.outerWidth();
   
       this.$helpBlock = $('<span />').addClass('help-block help-block-invalid help-block-with-icon');
@@ -347,7 +347,7 @@
         }
       },
       editBtn: function(element){
-        element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-light tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
+        element.find('a.close').html('').addClass('tmicon tmicon-close-s tmicon-visible-low tmicon-hoverable').removeClass('close').attr('href', 'javascript:;');
       },
       addPlaceholder: function(){
         this.$input.attr('placeholder', this.options.placeholder).addClass('placeholder');
