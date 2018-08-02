@@ -7,7 +7,8 @@
     "inputs",
     "masks",
     "text",
-    "validation"
+    "validation",
+    "inputmask"
   ],
   "location": "form-advanced/input-masks.html",
   "dependencies": [
