@@ -11,7 +11,8 @@
     "sizes",
     "styles",
     "text",
-    "typography"
+    "typography",
+    "download"
   ],
   "location": "typography/font-and-sizing.html",
   "dependencies": [],
