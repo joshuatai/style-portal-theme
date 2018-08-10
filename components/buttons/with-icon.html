@@ -2,10 +2,10 @@
   <h5>Icon class</h5>
   <p>Icon class should only be used on elements that do not contain either text or child elements. We recommend wrapping <code data-tag="span"></code> into a <code data-tag="button"></code> element.</p>
   <pre data-title="For font-awesome icon">
-    <style data-selector=".btn .tmicon">Leave space between icon and button text</style>
+    <style data-selector=".btn .tmicon:not([class*=-caret-])">Leave space between icon and button text</style>
   </pre>
   <pre>
-    <style data-selector=".btn-lg.btn .tmicon">Large, small, or extra small size button</style>
+    <style data-selector=".btn-lg.btn .tmicon:not([class*=-caret-])">Large, small, or extra small size button</style>
   </pre>
 
   <pre data-title="For image icon (svg or png)">
@@ -23,7 +23,7 @@
     <style data-selector=".btn.btn-icon-only"></style>
   </pre>
   <pre data-title="Icon class">
-    <style data-selector=".btn-icon-only.btn .tmicon"></style>
+    <style data-selector=".btn-icon-only.btn .tmicon:not([class*=-caret-])"></style>
   </pre>
 </section>
 
