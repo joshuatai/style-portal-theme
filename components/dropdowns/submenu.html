@@ -9,9 +9,17 @@
   </pre>
 
   <h5>Submenu caret</h5>
+  <pre>
+    <style data-selector=".tmicon"></style>
+  </pre>
+  <pre data-title=":before">
+    <style data-selector=".tmicon-caret-right:before"></style>
+  </pre>
+  
+  <h5>Caret postions</h5>
   <p>Point the caret to the right to indicate a submenu.</p>
   <pre>
-    <style data-selector=".dropdown-submenu > a:before"></style>
+    <style data-selector=".dropdown-submenu > a .tmicon-caret-right"></style>
   </pre>
 
   <h5>Submenu items</h5>
@@ -35,7 +43,7 @@
   <p>
     <div class="dropdown open">
       <button class="btn btn-border dropdown-toggle" type="button">
-        <span class="caret"></span>Select an option
+        <span class="tmicon tmicon-caret-down"></span>Select an option
       </button>
 
       <ul class="dropdown-menu">
@@ -44,7 +52,7 @@
         <li><a href="javascript:;">Menu item three</a></li>
         <li role="separator" class="divider"></li>
         <li class="dropdown-submenu open">
-          <a href="javascript:;">Menu item four</a>
+          <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
 
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Second level item one</a></li>

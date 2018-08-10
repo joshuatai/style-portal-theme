@@ -122,23 +122,12 @@
 .dropdown-toggle {
   min-width: 0;
 
-  .caret {
+  .tmicon-caret-down {
     float: right; // To ensure the caret float to right
-    margin-top: ((@line-height-base-computed - @caret-width-base) / 2);
-    margin-right: 0;
-    margin-bottom: ((@line-height-base-computed - @caret-width-base) / 2);
-    margin-left: @base-space;
+    margin-left: 4px;
+    margin-right: -4px;
     .btn-lg& {
-      margin-top: ((@line-height-lead-computed - @caret-width-large) / 2);
-      margin-bottom: ((@line-height-lead-computed - @caret-width-large) / 2);
-    }
-    .btn-sm& {
-      margin-top: ((@line-height-small-computed - @caret-width-base) / 2);
-      margin-bottom: ((@line-height-small-computed - @caret-width-base) / 2);
-    }
-    .btn-xs& {
-      margin-top: ((@line-height-small-computed - @caret-width-base) / 2);
-      margin-bottom: ((@line-height-small-computed - @caret-width-base) / 2);
+      margin-top: 2px;
     }
   }
   &.btn {
@@ -161,9 +150,6 @@
       .tmicon {
         color: @link-color;
       }
-      .caret {
-        border-top-color: @link-color;
-      }
     }
   }
   .btn-label {
@@ -176,12 +162,13 @@
 
 // Give the line between buttons some depth
 .btn-group > .btn + .dropdown-toggle {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
   min-width: 0;
   // Reposition the caret
-  .caret {
+  .tmicon-caret-down {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 .btn-group > .btn-lg + .dropdown-toggle {
@@ -201,13 +188,12 @@
 }*/
 
 // Carets in other button sizes
-.btn-lg .caret {
-  border-width: @caret-width-large @caret-width-large 0;
-  border-bottom-width: 0;
+.btn-lg .tmicon-caret-down {
+  font-size: 20px;
 }
 // Upside down carets for .dropup
-.dropup .btn-lg .caret {
-  border-width: 0 @caret-width-large @caret-width-large;
+.dropup .btn-lg .tmicon-caret-up {
+  font-size: 20px;
 }
 
 
