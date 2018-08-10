@@ -105,12 +105,9 @@
     <style data-selector="header .nav > li > a"></style>
   </pre>
 
-  <h5>Menu caret</h5>
+  <h5>Menu caret postions</h5>
   <pre>
-    <style data-selector=".nav > li > a .caret"></style>
-  </pre>
-  <pre>
-    <style data-selector=".navbar-default .navbar-nav > li > a .caret"></style>
+    <style data-selector=".navbar-default .navbar-nav > li > a .tmicon-caret-down"></style>
   </pre>
 
   <h5>Drop-down menu</h5>
@@ -156,6 +153,11 @@
     <style data-selector=".navbar-nav > li > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a"></style>
   </pre>
 
+  <h5>Submenu caret postions</h5>
+  <pre>
+    <style data-selector=".navbar-nav > li > .dropdown-menu > .dropdown-submenu .tmicon-caret-right"></style>
+  </pre>
+
   <h5>Icon class</h5>
   <p>The icon class should only be used on elements that do not contain any text or child elements. We recommend wrapping any <code data-tag="span"></code> or <code data-tag="i"></code> elements.</p>
   <pre data-title="For image icon (svg or png):">
@@ -168,7 +170,7 @@
     <style data-selector="header .nav > li > a .icon"></style>
   </pre>
   <pre data-title="Within banner with text">
-    <style data-selector="header .nav > li.dropdown .tmicon"></style>
+    <style data-selector="header .nav > li.dropdown .tmicon:not([class*=-caret-])"></style>
   </pre>
   <pre data-title="T-ball icon">
     <style data-selector=".icon-t-ball-white"></style>
@@ -188,7 +190,7 @@
         <li><a href="javascript:;"><span class="tmicon tmicon-alert"></span></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="tmicon tmicon-user"></span>Admin_TW<span class="caret"></span>
+            <span class="tmicon tmicon-user"></span>Admin_TW<span class="tmicon tmicon-caret-down"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Change Password</a></li>
@@ -207,7 +209,7 @@
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -223,7 +225,7 @@
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -239,7 +241,7 @@
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -255,7 +257,7 @@
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -281,7 +283,7 @@
         <li><a href="javascript:;"><span class="tmicon tmicon-alert"></span></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="tmicon tmicon-user"></span>Admin_TW<span class="caret"></span>
+            <span class="tmicon tmicon-user"></span>Admin_TW<span class="tmicon tmicon-caret-down"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Change Password</a></li>
@@ -296,13 +298,13 @@
         <li class="active"><a href="javascript:;">Menu 1</a></li>
         <li><a href="javascript:;">Menu 2</a></li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-togfgle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 3<span class="caret"></span></a>
+          <a href="javascript:;" class="dropdown-toggle" data-togfgle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 3<span class="tmicon tmicon-caret-down"></span></a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -312,13 +314,13 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-toggfle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 4<span class="caret"></span></a>
+          <a href="javascript:;" class="dropdown-toggle" data-toggfle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 4<span class="tmicon tmicon-caret-down"></span></a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
