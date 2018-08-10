@@ -28,9 +28,6 @@
       &:active {
         background-color: @nav-link-active-bg;
       }
-      .caret {
-        margin-left: 4px;
-      }
     }
 
     // Disabled state sets text to gray and nukes hover/tab effects
@@ -96,7 +93,7 @@ header {
             padding: 4px 16px;
           }
         }
-        .tmicon {
+        .tmicon:not([class*="-caret-"]) {
             margin-right: 8px;
         }
       }
