@@ -1,5 +1,8 @@
 
 // Datapicker
+.datepicker-wrapper {
+  display: inline-block;
+}
 .datepicker {
   padding: 0;
   &.days div.datepicker-days {
@@ -33,14 +36,14 @@
   div.datepicker-months,
   div.datepicker-years {
     table {
-      padding: 8px 4px;
-      border-spacing: 4px 0;
+      width: 100%;
+      table-layout: fixed;
     }
     th.switch {
       width: 166px;
     }
     tbody > tr > td {
-      padding-top: 8px;
+      padding-top: 4px;
       padding-bottom: 12px;
       padding-left: 0;
       padding-right: 0;
@@ -164,11 +167,15 @@
       }
       .date-picker-pane-header {
         height: 32px;
+        display: flex;
         .tilde {
           float: left;
           line-height: 32px;
           text-align: center;
           width: 24px;
+        }
+        .input-icon-group + .input-icon-group {
+          margin-left: 8px;
         }
       }
       .date-picker-pane-body {
@@ -176,8 +183,17 @@
         margin-top: 8px;
         .date-picker-pane-container {
           float: left;
-          .datepicker table{
-            padding: 0 3px;
+          .datepicker {
+            table {
+              padding: 0 3px;
+            }
+            div.datepicker-months,
+            div.datepicker-years {
+              table {
+                width: auto;
+                table-layout: auto;
+              }
+            }
           }
           + .date-picker-pane-container {
             margin-left: 24px;
@@ -200,8 +216,11 @@
     }
   }
   .dropdown {
+    &.time-range-wrapper {
+      display: inline-block;
+    }
     &.open > .custom-wrapper {
-      display: block;
+      display: flex;
 
       > ul.dropdown-menu {
         display: inline-block;
@@ -211,11 +230,9 @@
     }
   }
   .simple-date-time-container {
-    .input-icon-group {
-      float: left;
-      + .input-icon-group {
-        margin-left: 8px;
-      }
+    display: flex;
+    .input-icon-group + .input-icon-group {
+      margin-left: 8px;
     }
   }
 }
