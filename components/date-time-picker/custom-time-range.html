@@ -4,6 +4,9 @@
   <pre>
     <style data-selector=".date-time-picker-example .custom-wrapper"></style>
   </pre>
+  <pre data-title="When dropdown is active">
+    <style data-selector=".date-time-picker-example .dropdown.open > .custom-wrapper"></style>
+  </pre>
 
   <h5>Dropdown menu</h5>
   <p>Extend dropdown menu style, please refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
@@ -18,14 +21,6 @@
   <p>Wrap the simple date time, start/end datepicker, buttons.</p>
   <pre>
     <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane"></style>
-  </pre>
-
-  <h5>Simple date time</h5>
-  <pre>
-    <style data-selector=".date-time-picker-example .simple-date-time-container .input-icon-group"></style>
-  </pre>
-  <pre>
-    <style data-selector=".date-time-picker-example .simple-date-time-container .input-icon-group + .input-icon-group">Leave space between start/end date and start/end time</style>
   </pre>
   <pre data-title="For the tilde">
     <style data-selector=".date-time-picker-example .custom-wrapper .date-picker-pane .date-picker-pane-header .tilde"></style>
@@ -62,7 +57,7 @@
 <section class="date-time-picker-example">
   <p>When the user specifies a date range using date and time pickers from two calendars. The calendar pane can be opened on the left or the right, dpending on the available space.</p>
   <p>For detailed information, see <a href="http://tw-hie/ui_standards/2010/11/calendar/#date/time-range-picker" target="_blank">Date/Time Range Picker</a>.</p>
-  <div id="date-time-range-dropdown" class="dropdown open">
+  <div id="date-time-range-dropdown" class="dropdown time-range-wrapper open">
     <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
       <span class="caret"></span><span id="date-time-range-text">Last 30 days</span>
     </button>
@@ -78,16 +73,11 @@
 
       <div class="date-picker-pane show">
         <div class="date-picker-pane-header">
-          <div class="simple-date-time-container">
-            <input id="pane-date-start-input" type="text" class="form-control input-width-xs">
-            <input id="pane-time-start-input" type="text" class="form-control input-width-xs">
-          </div>
-
+          <input id="pane-date-start-input" type="text" class="form-control input-width-xs">
+          <input id="pane-time-start-input" type="text" class="form-control input-width-xs">
           <div class="tilde">~</div>
-          <div class="simple-date-time-container">
-            <input id="pane-date-end-input" type="text" class="form-control input-width-xs">
-            <input id="pane-time-end-input" type="text" class="form-control input-width-xs">
-          </div>
+          <input id="pane-date-end-input" type="text" class="form-control input-width-xs">
+          <input id="pane-time-end-input" type="text" class="form-control input-width-xs">
         </div>
 
         <div class="date-picker-pane-body">
