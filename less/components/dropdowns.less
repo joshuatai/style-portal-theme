@@ -58,7 +58,7 @@
     text-decoration: none;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
 
-    > .tmicon:not([class*="-caret-"]) {
+    > .tmicon {
       margin-right: @base-space;
     }
   }
@@ -252,14 +252,15 @@
     left: 100%;
     margin-top: 0;
   }
-
-  > a {
-    .tmicon-caret-right {
-      float: right;
-      margin-right: -24px;
+  li& {
+    > a {
+      > .tmicon-caret-right {
+        float: right;
+        margin-right: -24px;
+      }
     }
   }
-
+  
   &:hover > .dropdown-menu,
   &.open > .dropdown-menu {
     display: block;
