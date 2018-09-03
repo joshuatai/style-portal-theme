@@ -3,7 +3,12 @@
 }
 .button-dropdowns-example .inline-block {
   width: 110px;
+  display: inline-block;
+  margin-right: 20px;
 }
 .button-dropdowns-example .inline-block h5 {
   margin-top: 0;
+}
+.button-dropdowns-example .block {
+  display: block;
 }
