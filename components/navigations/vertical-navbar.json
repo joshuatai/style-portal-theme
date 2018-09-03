@@ -11,7 +11,9 @@
     "vertical"
   ],
   "location": "navigations/vertical-navbar.html",
-  "dependencies": [],
+  "dependencies": [
+    "jquery-category"
+  ],
   "actions": [
     {
       "name": "Style",
