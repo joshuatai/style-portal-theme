@@ -7,10 +7,8 @@
       "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
     ],
     "bootswatch-lumen-3.3.7": "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/lumen/bootstrap.css",
-    "mcustom-scrollbar-3.1.5": [
-      "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    ],
+    "jquery-category": "jQuery-category/jquery.category.js",
+    "mcustom-scrollbar-3.1.5": "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js",
     "tinycolor-1.4.1": "https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.js",
     "prettify-298": [
       "https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css",
@@ -25,7 +23,6 @@
       "jQuery-tagEditor-master/jquery.caret.min.js",
       "jQuery-tagEditor-master/jquery.tag-editor.js"
     ],
-    "tokenize": "Tokenize/jquery.tokenize.js",
     "bootstrap-datepicker": "bootstrap-datepicker/js/bootstrap-datepicker.js",
     "jquery.plugin.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.plugin.js",
     "jquery.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.timeentry.js",
@@ -36,6 +33,11 @@
   },
   "meta": {
     "bootstrap-3.3.7": {
+      "deps": [
+        "jquery-2.2.4"
+      ]
+    },
+    "jquery-category": {
       "deps": [
         "jquery-2.2.4"
       ]
