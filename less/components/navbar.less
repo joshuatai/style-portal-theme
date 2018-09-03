@@ -789,10 +789,12 @@ header .navbar-nav > li > .dropdown-menu {
           height: 28px;
           position: absolute;
           top: 0;
+          background: @side-navigation-category-bg-light;
+          .opacity(0);
+          .transition(all .3s);
           z-index: -1;
         }
         &:hover::before {
-          background: @side-navigation-category-bg-light;
           .opacity(@side-navigation-category-hover-bg-opacity);
         }
         &:hover > a {
