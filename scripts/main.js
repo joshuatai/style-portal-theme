@@ -12,7 +12,3 @@ $(document).on('show.bs.modal', '#show-css-ref', function (e) {
 
   modal.empty().title(title).content(contents);
 });
-
-portal.on(Portal.EVENT_COMPONENT_LOADED, (e) => {
-  placeholder.replace(e.target, e.data);
-});
