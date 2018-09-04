@@ -130,6 +130,7 @@
   > thead > tr > td{
     padding-bottom: 4px;
     font-weight: bold;
+    color: #ffffff;
   }
   > tbody > tr > td:first-child {
     padding-right: 16px;
@@ -137,12 +138,21 @@
   > tbody > tr > td:last-child {
     text-align: right;
     font-weight: bold;
+    color: #ffffff;
     > span {
       font-weight: normal;
     }
   }
 }
 
+.highcharts-background {
+  fill: @charts-bg;
+}
+.highcharts-yaxis-grid .highcharts-grid-line,
+.highcharts-xaxis .highcharts-axis-line {
+  fill: @charts-axis-y-border-color;
+  stroke: @charts-axis-y-border-color;
+}
 //** Charts legend
 .legend {
   height: 30px;
@@ -163,6 +173,7 @@
       display: inline-block;
       cursor: pointer;
       line-height: 20px;
+      color: #bbbbbb;
       + li {
          margin-left: 16px;
       }
@@ -222,7 +233,6 @@
   right: 12px;
   top: 5px;
   .tmicon {
-    color: @charts-legend-tmicon-color;
     cursor: pointer;
   }
   .tmicon-caret-up {
@@ -233,7 +243,7 @@
   }
   .unable {
     cursor: default;
-    color: @charts-legend-tmicon-unable-color;
+    opacity: 0.4;
   }
   &.show {
     display: inline-block;
