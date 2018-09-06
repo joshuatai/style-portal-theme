@@ -4,17 +4,36 @@
     padding: 0 20px;
     height: 64px;
     margin-bottom: 0;
-    background-color: #fff;
-    border-bottom: 1px #ddd solid;
+    background-color: #2c2c2c;
+    border-bottom: 1px #111111 solid;
   
     a:link,
     a:hover,
     a:active,
     a:visited,
     a:focus {
-      color: #222;
+      color: #bbbbbb;
     }
   
+    .nav a:link,
+    .nav a:hover, 
+    .nav a:active, 
+    .nav a:visited, 
+    .nav a:focus {
+      color: #bbbbbb;
+      background: transparent;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .nav .open > a, 
+    .nav .open > a:hover, 
+    .nav .open > a:focus {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
     .dropdown-toggle,
     .btn,
     .input-icon-group,
