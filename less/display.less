@@ -1,3 +1,43 @@
+//** Scroll bar with fixed element
+.table-with-scrollbar {
+  &.sb-v {
+      .table {
+          > thead > tr > th:nth-child(1),
+          > tbody > tr > td:nth-child(1) {
+              width: 35.3%;
+          }
+          > thead > tr > th:nth-child(2),
+          > tbody > tr > td:nth-child(2) {
+              width: 23.53%;
+          }
+          > thead > tr > th:nth-child(3),
+          > tbody > tr > td:nth-child(3) {
+              width: 11.76%;
+              text-align: right;
+          }
+          > thead > tr > th:nth-child(4),
+          > tbody > tr > td:nth-child(4) {
+              width: 17.64%;
+          }
+          > thead > tr > th:nth-child(5),
+          > tbody > tr > td:nth-child(5) {
+              width: 11.77%;
+          }
+      }
+  }
+  &.sb-h {
+      .table-horizontal-scrollable {
+          .table {
+              table-layout: auto;
+              > thead > tr > th,
+              > tbody > tr > td {
+                  white-space: nowrap;
+                  text-align: left;
+              }
+          }
+      }
+  }
+}
 .com {
   color: #888;
   white-space: normal;
