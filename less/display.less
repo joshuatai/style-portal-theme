@@ -1,49 +1,43 @@
-// Core variables and mixins
-@import "variables";
-@import "mixins";
-
-// Utility
-@import "utilities/utilities";
-
-// Display
-@import "display/nav-icons";
-@import "display/grid-rows";
-@import "display/segment";
-@import "display/templates";
-
-body {
-  background: #eee;
+//** Scroll bar with fixed element
+.table-with-scrollbar {
+  &.sb-v {
+      .table {
+          > thead > tr > th:nth-child(1),
+          > tbody > tr > td:nth-child(1) {
+              width: 35.3%;
+          }
+          > thead > tr > th:nth-child(2),
+          > tbody > tr > td:nth-child(2) {
+              width: 23.53%;
+          }
+          > thead > tr > th:nth-child(3),
+          > tbody > tr > td:nth-child(3) {
+              width: 11.76%;
+              text-align: right;
+          }
+          > thead > tr > th:nth-child(4),
+          > tbody > tr > td:nth-child(4) {
+              width: 17.64%;
+          }
+          > thead > tr > th:nth-child(5),
+          > tbody > tr > td:nth-child(5) {
+              width: 11.77%;
+          }
+      }
+  }
+  &.sb-h {
+      .table-horizontal-scrollable {
+          .table {
+              table-layout: auto;
+              > thead > tr > th,
+              > tbody > tr > td {
+                  white-space: nowrap;
+                  text-align: left;
+              }
+          }
+      }
+  }
 }
-
-figure {
-  margin: 1em 2em;
-}
-
-pre {
-  background-color: #fcfcfc;
-}
-
-/* CSS Reference */
-
-.css-reference {
-  display: none;
-}
-
-.css-reference-title {
-  border-bottom: 1px solid #e5e5e5;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 4px 0;
-  margin-bottom: 8px;
-}
-
-/* prettyprint */
-
-pre.prettyprint {
-  border: 1px solid #eee;
-  padding: 8px 12px;
-}
-
 .com {
   color: #888;
   white-space: normal;
