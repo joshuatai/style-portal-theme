@@ -61,7 +61,7 @@ $(function () {
             visible: false
         }
       ];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
 
     Highcharts.chart('area-legend-right-container', {
         chart: {
@@ -154,19 +154,22 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  color: '#888888'
                 }
             },
             tickWidth: 0,
-            lineColor: '#e6e6e6',
             crosshair: {
                 width: 1,
-                color: "#dddddd"
+                color: "#888888"
             }
         },
         yAxis: {
             title: {
-                text: 'Amount'
+                text: 'Amount',
+                style: {
+                    color: '#bbbbbb'
+                }
             },
             labels: {
                 style: {
@@ -186,7 +189,7 @@ $(function () {
             series: {
                 pointStart: Date.UTC(2016, 9, 10),
                 pointIntervalUnit: 'day',
-                fillOpacity: 0.25,
+                fillOpacity: 0.4,
                 marker: {
                   radius: 4,
                   symbol: 'circle',
@@ -201,7 +204,7 @@ $(function () {
                     hover: {
                         halo: {
                             size: 13,
-                            opacity: 0.2
+                            opacity: 0.4
                         }
                     }
                 }
@@ -209,8 +212,8 @@ $(function () {
         },
         tooltip: {
             shared: true,
-            backgroundColor: '#FFFFFF',
-            borderColor: '#BBBBBB',
+            backgroundColor: '#222222',
+            borderColor: '#888888',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x:%Y/%m/%d}</td></tr></thead>',
