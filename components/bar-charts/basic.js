@@ -5,7 +5,7 @@ $(function () {
             data: [200, 120, 510, 260, 50]
         }
     ];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
     Highcharts.chart('basic-bar-chart-container', {
         chart: {
             type: 'bar',
@@ -41,11 +41,11 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  color: '#888888'
                 }
             },
-            tickWidth: 0,
-            lineColor: '#e6e6e6'
+            tickWidth: 0
         },
         yAxis: {
             min: 0,
@@ -56,7 +56,8 @@ $(function () {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal',
-                  paddingBottom: '10px'
+                  paddingBottom: '10px',
+                  color: '#888888'
                 }
             }
         },
@@ -66,6 +67,7 @@ $(function () {
         series: series,
         plotOptions: {
             series: {
+                borderColor: '#2c2c2c',
                 pointWidth: 25,
                 states: {
                     hover: {
@@ -75,7 +77,7 @@ $(function () {
             }
         },
         tooltip: {
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#222222',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x}</td></tr></thead>',
