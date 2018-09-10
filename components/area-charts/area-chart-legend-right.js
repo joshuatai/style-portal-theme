@@ -174,7 +174,8 @@ $(function () {
             labels: {
                 style: {
                   fontSize: '12px',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  color: '#888888'
                 }
             }
         },
