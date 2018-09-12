@@ -26,8 +26,8 @@
   },
   "archives": {
     "icon": [
-      "images/icon/form.png",
-      "images/icon/home.png"
+      "images/icon/get_start.png",
+      "images/icon/type.png"
     ],
     "severity-icons": [
       "images/icon/severity-high.png",
