@@ -14,7 +14,7 @@ $(function () {
             y: 5
         }]
     }];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
     Highcharts.chart('standard-pie-chart-container', {
         chart: {
             type: 'pie',
@@ -58,6 +58,7 @@ $(function () {
         series: series,
         plotOptions: {
             pie: {
+                borderColor: '#2c2c2c',
                 size: 250,
                 cursor: 'pointer',
                 dataLabels: {
@@ -66,7 +67,8 @@ $(function () {
                 states: {
                     hover: {
                         halo: {
-                            size: 6
+                            size: 6,
+                            opacity: 0.4
                         },
                         brightness: 0.12
                     }
@@ -74,7 +76,7 @@ $(function () {
             }
         },
         tooltip: {
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#222222',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>Threats</td></tr></thead>',
