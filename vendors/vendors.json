@@ -23,6 +23,7 @@
       "jQuery-tagEditor-master/jquery.caret.min.js",
       "jQuery-tagEditor-master/jquery.tag-editor.js"
     ],
+    "tokenize": "Tokenize/jquery.tokenize.js",
     "bootstrap-datepicker": "bootstrap-datepicker/js/bootstrap-datepicker.js",
     "jquery.plugin.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.plugin.js",
     "jquery.timeentry.package-2.0.1": "jQuery.timeentry.package-2.0.1/jquery.timeentry.js",
