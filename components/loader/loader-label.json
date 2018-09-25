@@ -1,6 +1,6 @@
 {
-  "id": "377a1cfd-6256-4ea0-900e-8325c785f184",
-  "name": "Loaders",
+  "id": "d6b26ada-edbb-4585-bc3a-0e703065fb8e",
+  "name": "Loader with label",
   "keywords": [
     "icons",
     "indicator",
@@ -13,7 +13,7 @@
     "spinner",
     "waiting"
   ],
-  "location": "loader/loader.html",
+  "location": "loader/loader-label.html",
   "dependencies": [],
   "actions": [
     {
@@ -23,7 +23,7 @@
   ],
   "type": "draggable",
   "grid": {
-    "col": "col-md-12",
-    "row": "row-md-8"
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-7 row-xl-7"
   }
 }
