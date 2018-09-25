@@ -1,6 +1,6 @@
 {
-  "id": "377a1cfd-6256-4ea0-900e-8325c785f184",
-  "name": "Loaders",
+  "id": "ab096cb6-bf2c-45fa-a279-de9e8bb52057",
+  "name": "Loader with Modal",
   "keywords": [
     "icons",
     "indicator",
@@ -13,7 +13,7 @@
     "spinner",
     "waiting"
   ],
-  "location": "loader/loader.html",
+  "location": "loader/loader-modal.html",
   "dependencies": [],
   "actions": [
     {
@@ -23,7 +23,7 @@
   ],
   "type": "draggable",
   "grid": {
-    "col": "col-md-12",
-    "row": "row-md-8"
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-7 row-xl-7"
   }
 }

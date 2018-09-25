@@ -1,6 +1,6 @@
 {
-  "id": "377a1cfd-6256-4ea0-900e-8325c785f184",
-  "name": "Loaders",
+  "id": "5da515ca-1287-4325-82d6-361391b7b2d8",
+  "name": "Loader with Button",
   "keywords": [
     "icons",
     "indicator",
@@ -13,7 +13,7 @@
     "spinner",
     "waiting"
   ],
-  "location": "loader/loader.html",
+  "location": "loader/loader-button.html",
   "dependencies": [],
   "actions": [
     {
@@ -23,7 +23,7 @@
   ],
   "type": "draggable",
   "grid": {
-    "col": "col-md-12",
-    "row": "row-md-8"
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6 row-xl-7"
   }
 }
