@@ -1,0 +1,36 @@
+.loader-example .modal-sm-example {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: block;
+  overflow: visible;
+}
+.loader-example .modal-sm-example .modal-sm .modal-body{
+  max-height: 192px;
+  padding: 0;
+  overflow: hidden;
+}
+.loader-example .modal-sm-example .modal-sm .modal-body{
+  max-height: 192px;
+  padding: 0;
+  overflow: hidden;
+}
+.loader-example .modal-sm-example .modal-sm .form-horizontal {
+  padding: 16px 24px 24px 24px;
+}
+.loader-example .modal-sm-example .modal-sm .form-horizontal .control-label {
+  width: 70px;
+}
+.loader-example .modal-sm-example .modal-sm .form-horizontal div:last-child .control-label {
+  margin-top: 0;
+}
+.loader-example .modal-sm-example .modal-sm .control-wrapper {
+  width: 85%;
+}
+.loader-example .modal-sm-example .modal-sm .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
