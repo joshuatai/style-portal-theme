@@ -1,0 +1,18 @@
+{
+  "id": "f85e76f4-7aa9-4da2-a531-4e32c2a67227",
+  "name": "Popout Collapsible Panels",
+  "keywords": [],
+  "location": "collapse/popout.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "panel-collapse-examples"
+  }
+}

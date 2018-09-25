@@ -1,0 +1,18 @@
+{
+  "id": "aada64f1-2751-43d8-9408-ba54166ea628",
+  "name": "Light Collapsible Panels",
+  "keywords": [],
+  "location": "collapse/light.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "panel-collapse-examples"
+  }
+}

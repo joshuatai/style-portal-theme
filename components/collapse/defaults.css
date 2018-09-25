@@ -1,0 +1,18 @@
+
+.panel-collapse-examples {
+  min-height: 350px;
+}
+
+.panel-collapse-examples > .segment-content {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .panel-group-collapse .dl-horizontal dt {
+    width: 102px;
+  }
+
+  .panel-group-collapse .dl-horizontal dd {
+    margin-left: 118px;
+  }
+}
