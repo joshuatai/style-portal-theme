@@ -46,8 +46,36 @@
       border-left-color: @loader-inverse-conspicuous-border;
     }
   }
+  &.btn-icon-only {
+    .loader {
+      margin-right: 0;
+    }
+  }
 }
-
+.loader-label {
+  &.loader-label-inline {
+    .loader {
+      float: left;
+      margin-top: ((@line-height-base-computed - 16) / 2);
+      margin-right: 8px;
+    }
+  }
+  &.loader-label-block {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    .label-text {
+      display: block;
+      margin-top: 8px;
+      color: @text-muted;
+    }
+  }
+  .label-text {
+    display: inline-block;
+    line-height: 20px;
+  }
+}
 .loader-overlay {
   background-color: @loader-overlay-bg;
   cursor: wait;
@@ -57,9 +85,7 @@
   left: 0;
   right: 0;
 
-  .loader,
-  .loader-small,
-  .loader-large {
+  .loader {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,5 +104,11 @@
   .loader-large {
     margin-top: -(@loader-large * .5);
     margin-left: -(@loader-large * .5);
+  }
+  .loader-label {
+    .loader {
+      position: static;
+      margin: 0;
+    }
   }
 }
