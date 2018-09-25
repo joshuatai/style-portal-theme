@@ -1,3 +1,8 @@
 .loader-size-example {
   margin: 0 0 38px 20px;
 }
+.loader-example .justified-container {
+  position: relative;
+  height: 240px;
+  border: 1px solid #4c4c4c;
+}
