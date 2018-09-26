@@ -82,10 +82,13 @@
 }
 
 .panel-group-collapse-popout > .panel {
-  border: 1px solid transparent;
-  border-top-color: #e6e6e6;
-  border-bottom: 0;
-  transition: margin-top .25s ease;
+  &,
+  + .panel {
+    border: 1px solid transparent;
+    border-top-color: #e6e6e6;
+    border-bottom: 0;
+    transition: margin-top .25s ease;
+  }
 
   &:first-child {
     border-top-color: transparent;
