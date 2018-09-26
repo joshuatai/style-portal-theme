@@ -91,10 +91,17 @@
 .panel-group-collapse-popout > .panel {
   &,
   + .panel {
+    background-color: transparent;
     border: 1px solid transparent;
     border-top-color: #e6e6e6;
     border-bottom: 0;
     transition: margin-top .25s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    z-index: 1;
   }
 
   &:first-child {
@@ -121,6 +128,8 @@
   }
 
   > .panel-heading {
+    background-color: transparent;
+
     &:hover {
       background-color: #f4f4f4;
 
