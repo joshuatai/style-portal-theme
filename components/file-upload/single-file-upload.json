@@ -10,7 +10,6 @@
   ],
   "location": "file-upload/single-file-upload.html",
   "dependencies": [
-    "jquery-ui-1.12.1",
     "jquery-file-upload-9.12.5"
   ],
   "actions": [
