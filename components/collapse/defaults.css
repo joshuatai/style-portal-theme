@@ -3,8 +3,21 @@
   min-height: 350px;
 }
 
-.panel-collapse-examples > .segment-content {
-  position: static;
+.panel-collapse-examples .table > thead > tr > th:nth-child(2) {
+	width: 350px;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(3) {
+	width: 200px;
+	text-align: right;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(4) {
+	width: 250px;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(5) {
+	width: 200px;
 }
 
 @media (min-width: 768px) {
