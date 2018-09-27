@@ -1,0 +1,18 @@
+{
+  "id": "658f3d39-3dc0-4198-8593-d1ea6ea2d2db",
+  "name": "Collapsible Panels",
+  "keywords": [],
+  "location": "collapse/intro.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-3"
+  }
+}

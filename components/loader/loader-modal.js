@@ -1,3 +1,3 @@
-var modalSm = $('[data-template="modal-sm"]', this);
-var modalSmBody = modalSm.find('modal-body');
-modalSmBody.mCustomScrollbar();
+var modalXs = $('[data-template="modal-xs"]', this);
+var modalXsBody = modalXs.find('modal-body');
+modalXsBody.mCustomScrollbar();

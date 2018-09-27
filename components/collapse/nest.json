@@ -1,0 +1,18 @@
+{
+  "id": "9819530a-a8cf-416c-9500-503db5ccd5a4",
+  "name": "Nest Collapsible Panels",
+  "keywords": [],
+  "location": "collapse/nest.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "content-static panel-collapse-examples"
+  }
+}
