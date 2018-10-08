@@ -1,7 +1,14 @@
 {
   "id": "4a994d1f-c0dd-4494-afbd-1d98313dad6f",
   "name": "Basic Collapsible Panels",
-  "keywords": [],
+  "keywords": [
+    "collapse",
+    "collapsible",
+    "expandable",
+    "expansion",
+    "panels",
+    "accordion"
+  ],
   "location": "collapse/basic.html",
   "dependencies": [],
   "actions": [

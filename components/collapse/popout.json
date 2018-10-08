@@ -1,7 +1,14 @@
 {
   "id": "f85e76f4-7aa9-4da2-a531-4e32c2a67227",
   "name": "Popout Collapsible Panels",
-  "keywords": [],
+  "keywords": [
+    "collapse",
+    "collapsible",
+    "expandable",
+    "expansion",
+    "panels",
+    "accordion"
+  ],
   "location": "collapse/popout.html",
   "dependencies": [],
   "actions": [

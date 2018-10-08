@@ -1,7 +1,15 @@
 {
   "id": "9819530a-a8cf-416c-9500-503db5ccd5a4",
   "name": "Nest Collapsible Panels",
-  "keywords": [],
+  "keywords": [
+    "collapse",
+    "collapsible",
+    "expandable",
+    "expansion",
+    "panels",
+    "accordion",
+    "nested"
+  ],
   "location": "collapse/nest.html",
   "dependencies": [],
   "actions": [

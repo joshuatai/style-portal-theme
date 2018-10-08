@@ -107,7 +107,8 @@
       "collapsible",
       "expandable",
       "expansion",
-      "panels"
+      "panels",
+      "accordion"
     ],
     "segments": [
       "658f3d39-3dc0-4198-8593-d1ea6ea2d2db",

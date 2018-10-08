@@ -1,7 +1,14 @@
 {
   "id": "aada64f1-2751-43d8-9408-ba54166ea628",
   "name": "Light Collapsible Panels",
-  "keywords": [],
+  "keywords": [
+    "collapse",
+    "collapsible",
+    "expandable",
+    "expansion",
+    "panels",
+    "accordion"
+  ],
   "location": "collapse/light.html",
   "dependencies": [],
   "actions": [
