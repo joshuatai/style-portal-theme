@@ -1,0 +1,12 @@
+.loader-example .example .btn:not(.btn-icon-only) {
+  overflow: hidden;
+}
+
+.loader-example .example .btn-clone {
+  overflow: auto;
+  position: absolute;
+  visibility: hidden;
+}
+.loader-example .example .tooltip + .btn {
+  margin-left: 8px;
+}

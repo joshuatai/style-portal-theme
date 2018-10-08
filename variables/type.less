@@ -5,8 +5,8 @@
 @font-family-arial: 		 	Arial, "Helvetica Neue", Helvetica, sans-serif;
 @font-family-sans-serif:  	 	"Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:  	 		Georgia, "Times New Roman", Times, serif;
-@font-family-interstate-light:  Interstate-Light, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
-@font-family-interstate-extralight: Interstate-ExtraLight, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
+@font-family-interstate-light:  Interstate-Light, Arial, "Helvetica Neue", Helvetica, sans-serif;
+@font-family-interstate-extralight: Interstate-ExtraLight, Arial, "Helvetica Neue", Helvetica, sans-serif;
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`
 @font-family-monospace: 		Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -87,7 +87,11 @@
 
 //** Width of horizontal description list titles
 @dl-horizontal-title-color:     @gray-dark;
-@dl-horizontal-line-height:     24px;
+@dl-horizontal-line-height:     20px;
+@dl-horizontal-margin-bottom:   4px;
 @dl-horizontal-offset:          @component-offset-horizontal;
 //** Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint:      @grid-float-breakpoint;
+
+@text-selection-color: #fff;
+@text-selection-bg: #0096cc;

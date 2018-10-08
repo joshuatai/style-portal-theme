@@ -4,7 +4,7 @@
 
 .general-scrollbar-example .hidden-scrollable-container {
     height: 340px;
-    border: 1px solid #555;
+    border: 1px solid #4c4c4c;
     display: flex;
 }
 .general-scrollbar-example .hidden-scrollable-container .hidden-scrollable {

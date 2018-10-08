@@ -1,0 +1,29 @@
+{
+  "id": "c9fc15ba-05cc-450c-bf7a-9cfd137ce738",
+  "name": "Loader with Table",
+  "keywords": [
+    "icons",
+    "indicator",
+    "inprogress",
+    "loaders",
+    "loading",
+    "processing",
+    "progress",
+    "rotate",
+    "spinner",
+    "waiting"
+  ],
+  "location": "loader/loader-table.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6 row-xl-7"
+  }
+}

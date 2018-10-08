@@ -1,0 +1,29 @@
+{
+  "id": "5da515ca-1287-4325-82d6-361391b7b2d8",
+  "name": "Loader with Button",
+  "keywords": [
+    "icons",
+    "indicator",
+    "inprogress",
+    "loaders",
+    "loading",
+    "processing",
+    "progress",
+    "rotate",
+    "spinner",
+    "waiting"
+  ],
+  "location": "loader/loader-button.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-6 row-xl-7"
+  }
+}

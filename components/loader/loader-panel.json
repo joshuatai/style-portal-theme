@@ -1,0 +1,29 @@
+{
+  "id": "fc776206-e7d5-4a0d-bf52-00c427bda66f",
+  "name": "Loader with Panel",
+  "keywords": [
+    "icons",
+    "indicator",
+    "inprogress",
+    "loaders",
+    "loading",
+    "processing",
+    "progress",
+    "rotate",
+    "spinner",
+    "waiting"
+  ],
+  "location": "loader/loader-panel.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-7 row-xl-7"
+  }
+}

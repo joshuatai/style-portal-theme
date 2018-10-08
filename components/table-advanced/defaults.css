@@ -1,13 +1,12 @@
+.table + .table {
+	margin-top: 24px;
+}
 .tables-advanced-example h5:not(:first-child) {
 	margin-top: 40px
 }
 .tables-advanced-example .table > thead > tr > th:nth-child(1),
 .tables-advanced-example .table > tbody > tr > td:nth-child(1) {
 	width: 35.3%;
-}
-.tables-advanced-example .table > thead > tr > th:nth-child(2),
-.tables-advanced-example .table > tbody > tr > td:nth-child(2) {
-	width: 23.53%;
 }
 .tables-advanced-example .table > thead > tr > th:nth-child(3),
 .tables-advanced-example .table > tbody > tr > td:nth-child(3) {
@@ -30,4 +29,11 @@
 .longtext-toggle {
 	position: absolute;
 	z-index: 1070;
+}
+
+.tables-advanced-example .table-sortable .sortabled .truncated-text:before {
+	content: "";
+}
+.tables-advanced-example .JCLRLastGrip {
+	visibility: hidden;
 }

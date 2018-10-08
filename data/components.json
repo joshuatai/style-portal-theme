@@ -162,7 +162,12 @@
       "loading"
     ],
     "segments": [
-      "377a1cfd-6256-4ea0-900e-8325c785f184"
+      "377a1cfd-6256-4ea0-900e-8325c785f184",
+      "5da515ca-1287-4325-82d6-361391b7b2d8",
+      "c9fc15ba-05cc-450c-bf7a-9cfd137ce738",
+      "ab096cb6-bf2c-45fa-a279-de9e8bb52057",
+      "fc776206-e7d5-4a0d-bf52-00c427bda66f",
+      "d6b26ada-edbb-4585-bc3a-0e703065fb8e"
     ],
     "css": {
       "name": "loader",
@@ -567,11 +572,15 @@
     "name": "Tags & Tokens",
     "keywords": [
       "tags",
-      "token"
+      "token",
+      "autocomplete",
+      "combo box",
+      "multiple selection"
     ],
     "segments": [
       "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
-      "954d9736-4abf-41b5-bc49-d32a6805bd20"
+      "954d9736-4abf-41b5-bc49-d32a6805bd20",
+      "3c0d07fd-3919-4f7c-b139-35b22234a620"
     ],
     "css": {
       "name": "tags-and-tokens",

@@ -13,7 +13,7 @@ $(function () {
             data: [70, 50, 80, 70, 50, 55, 40, 55, 55, 50, 50, 40]
         }
     ];
-    var colors = ['#33abd6', '#33ba72', '#fe9967', '#45cce7', '#e56669', '#7883e5', '#09dab7', '#b2d56a', '#faca2a', "#e07ad3"];
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
     Highcharts.chart('stacked-column-chart-container', {
         chart: {
             type: 'column',
@@ -63,22 +63,26 @@ $(function () {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal',
-                  paddingBottom: '10px'
+                  paddingBottom: '10px',
+                  color: '#888888'
                 }
             },
-            tickWidth: 0,
-            lineColor: '#e6e6e6'
+            tickWidth: 0
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Total Scanned Traffic (GB)'
+                text: 'Total Scanned Traffic (GB)',
+                style: {
+                    color: '#bbbbbb'
+                }
             },
             labels: {
                 style: {
                   fontSize: '12px',
                   fontWeight: 'normal',
-                  textOverflow: 'none'
+                  textOverflow: 'none',
+                  color: '#888888'
                 }
             }
         },
@@ -88,6 +92,7 @@ $(function () {
         series: series,
         plotOptions: {
             series: {
+                borderColor: '#2c2c2c',
                 stacking: 'normal',
                 pointWidth: 25,
                 states: {
@@ -99,8 +104,8 @@ $(function () {
         },
         tooltip: {
             shared: true,
-            backgroundColor: '#FFFFFF',
-            borderColor: '#BBBBBB',
+            backgroundColor: '#222222',
+            borderColor: '#888888',
             padding: 16,
             useHTML: true,
             headerFormat: '<table><thead><tr><td>{point.x}</td></tr></thead>',

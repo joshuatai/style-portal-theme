@@ -26,6 +26,13 @@
         left: -4px;
       }
     }
+    .truncated-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: calc(~"100% - @{tmicon-default-size}");
+    }
   }
   .multi-sortable {
     overflow: visible;
@@ -38,16 +45,17 @@
       right: -12px;
       bottom: -8px;
       .dropdown-toggle  {
-        .caret {
+        .tmicon-caret-down {
           margin: 0;
+          line-height: 14px;
+          font-size: 14px;
         }
         &.btn {
           display: none;
           &:focus {
             display: block;
           }
-          padding-left: 3px;
-	        padding-right: 3px;
+          padding: 0;
         }
       }
       .dropdown-menu {
@@ -83,7 +91,7 @@
 // Resizable
 
 .table-col-min-width {
-  min-width: 56px;
+  min-width: 80px;
 }
 .JCLRgrips {
   .JCLRgripDrag {

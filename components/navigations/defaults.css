@@ -1,3 +1,6 @@
+.header-navbar-container {
+  border: 1px solid #4c4c4c;
+}
 .navbar-example ul.description {
   margin-bottom: 12px;
 }
@@ -27,16 +30,17 @@
   width: 100%;
   height: 350px;
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: 1px solid #4c4c4c;
 }
 .navbar-example .fixed-top-content {
   height: 687px;
-  background-color: #fff;
+  background-color: #222;
   background-image: url("images/innerpage.png");
   background-repeat: no-repeat;
 }
 .navbar-example .vertical-nav-example {
-  border: 1px solid #ccc;
+  background-color: #222;
+  border: 1px solid #4c4c4c;
   height: 342px;
   position: relative;
   padding-left: 64px;
@@ -49,9 +53,15 @@
   bottom: inherit;
   height: 340px;
 }
-.navbar-example .nav-icon-getting-home {
-  background-image: url("images/get_start.png");
+.navbar-example .nav-icon-home {
+  background-image: url("images/home.png");
+}
+.navbar-example li.selected .nav-icon-home {
+  background-image: url("images/home-red.png");
 }
 .navbar-example .nav-icon-styles {
   background-image: url("images/type.png");
+}
+.navbar-example li.selected .nav-icon-styles {
+  background-image: url("images/type-red.png");
 }
