@@ -1,0 +1,29 @@
+{
+  "id": "d6b26ada-edbb-4585-bc3a-0e703065fb8e",
+  "name": "Loader with label",
+  "keywords": [
+    "icons",
+    "indicator",
+    "inprogress",
+    "loaders",
+    "loading",
+    "processing",
+    "progress",
+    "rotate",
+    "spinner",
+    "waiting"
+  ],
+  "location": "loader/loader-label.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-7 row-xl-7"
+  }
+}

@@ -1,0 +1,81 @@
+/* Header & Banner */
+.site-header {
+    position: relative;
+    padding: 0 20px;
+    height: 64px;
+    margin-bottom: 0;
+    background-color: #2c2c2c;
+    border-bottom: 1px #111111 solid;
+  
+    a:link,
+    a:hover,
+    a:active,
+    a:visited,
+    a:focus {
+      color: #bbbbbb;
+    }
+  
+    .nav a:link,
+    .nav a:hover, 
+    .nav a:active, 
+    .nav a:visited, 
+    .nav a:focus {
+      color: #bbbbbb;
+      background: transparent;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .nav .open > a, 
+    .nav .open > a:hover, 
+    .nav .open > a:focus {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-toggle,
+    .btn,
+    .input-icon-group,
+    .text-button-group-text {
+      margin-top: 15.5px;
+    }
+  
+    .input-icon-group > .btn,
+    .input-icon-group > .input-icon-group,
+    .input-icon-group > .dropdown-toggle {
+      margin-top: 0;
+    }
+  }
+  
+  .site-header .banner {
+    background: url(../images/tball.svg) center left no-repeat;
+    background-size: 32px;
+    float: left;
+    height: 63px;
+    padding: 0;
+  
+    &,
+    :hover {
+      text-decoration: none;
+    }
+  }
+  
+  .site-title {
+    margin: 14px 0 0 42px;
+    line-height: 36px;
+    font-family: "Interstate-Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+  }
+  
+  .navigation.collapsed + .site-header {
+    margin-left: 64px;
+  }
+  
+  .navigation.expand + .site-header {
+    margin-left: 240px;
+    transition: margin 0.1s linear;
+  }

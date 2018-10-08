@@ -1,13 +1,15 @@
 {
   "id": "e1f3dcf0-359f-4207-9efd-af567a12ed5e",
-  "name": "Basic Search Box",
+  "name": "Instant Search",
   "keywords": [
     "filter",
     "inputs",
     "search"
   ],
   "location": "search/basic-search.html",
-  "dependencies": [],
+  "dependencies": [
+    "jquery.ui.widget"
+  ],
   "actions": [
     {
       "name": "Style",
@@ -17,6 +19,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-5"
+    "row": "row-md-7"
   }
 }

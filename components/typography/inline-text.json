@@ -12,7 +12,8 @@
     "marked",
     "styles",
     "text",
-    "typography"
+    "typography",
+    "href"
   ],
   "location": "typography/inline-text.html",
   "dependencies": [],

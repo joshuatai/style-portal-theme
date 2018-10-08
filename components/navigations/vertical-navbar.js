@@ -2,8 +2,8 @@ var $sidebar = $('.vertical-nav-example .navigation-items');
 var object = [
   {
     "id": "1",
-    "name": "Getting Home",
-    "icon": "getting-home",
+    "name": "Home",
+    "icon": "home",
     "bower-search":null,
     "segments": [],
     "components": []

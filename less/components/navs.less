@@ -28,9 +28,6 @@
       &:active {
         background-color: @nav-link-active-bg;
       }
-      .caret {
-        margin-left: 4px;
-      }
     }
 
     // Disabled state sets text to gray and nukes hover/tab effects
@@ -99,13 +96,16 @@ header {
         .tmicon {
             margin-right: 8px;
         }
+        .tmicon-caret-down {
+            margin-right: -4px;
+        }
       }
     }
   }
   &.header-with-navbar {
-    border-bottom: 0;
+    border-bottom: 2px solid @brand-danger;
     .navbar-nav > li > a {
-      padding: 22px 24px;
+      padding: 21px 24px;
     }
   }
 }
@@ -219,6 +219,7 @@ header {
       &,
       &:hover,
       &:focus {
+        cursor: default;
         color: @nav-tabs-active-link-color;
         font-weight: bold;
         background-color: @nav-pills-active-link-hover-bg;
@@ -253,8 +254,9 @@ header {
       &,
       &:hover,
       &:focus {
+        cursor: default;
         font-weight: bold;
-        color: @text-color;
+        color: @nav-pills-vertical-active-link-color;
         border-left: 2px solid @nav-tabs-active-link-hover-border-top-color;
         padding-left: 14px;
         background-color: @nav-pills-vertical-active-link-hover-bg;
@@ -278,6 +280,7 @@ header {
       &,
       &:hover,
       &:focus {
+        cursor: default;
         background-color: @nav-pills-vertical-light-active-link-bg;
         font-weight: bold;
         color: @nav-tabs-active-link-hover-border-top-color;

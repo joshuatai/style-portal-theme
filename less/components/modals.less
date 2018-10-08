@@ -128,6 +128,11 @@
   &:focus {
     outline: 0;
   }
+  &.disabled,
+  &[disabled] {
+    cursor: @cursor-disabled;
+    .opacity(.5);
+  }
 }
 
 // Title text within header
@@ -219,6 +224,17 @@
   width: 50px;
   height: 50px;
   overflow: scroll;
+}
+
+// Loading within a modal
+.loader-overlay {
+  .modal-dialog .modal-content + & {
+    top: 55px;
+    bottom: 56px;
+    left: 1px;
+    right: 1px;
+    z-index: 1;
+  }
 }
 
 @media (min-width: 600px) {

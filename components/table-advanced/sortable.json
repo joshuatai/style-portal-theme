@@ -13,7 +13,9 @@
     "tables"
   ],
   "location": "table-advanced/sortable.html",
-  "dependencies": [],
+  "dependencies": [
+    "colResizable-1.6"
+  ],
   "actions": [
     {
       "name": "Style",
@@ -23,6 +25,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-5"
+    "row": "row-md-8"
   }
 }

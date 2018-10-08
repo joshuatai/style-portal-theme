@@ -1,19 +1,20 @@
 //== Charts
 //
 //##
-@widgetLagendListColors:   			   extract(@blues, 4), extract(@greens, 4), extract(@oranges, 5), extract(@cyans, 4), extract(@reds, 5), extract(@indigos, 5), extract(@teals, 4), extract(@light-greens, 5), extract(@yellows, 3), extract(@purples, 7), extract(@grays, 8);
-@charts-series-size:    			   8px;
+@widgetLagendListColors:   			       #0096cc, #4cc383, #fd884e, #5bd2ea, #e56669, #717eef, #0abfa1, #a8cf57, #faca2a, #d643c3;
+@charts-series-size:    			         8px;
 @charts-series-stroke-size:    	       14px;
 @charts-series-outer-glow-size:	       24px;
 @charts-series-border-radius:          50%;
+@charts-bg:                            #2c2c2c;
 
 //** Axis
-@charts-axis-color:                    #666666;
-@charts-axis-y-border-color:           @gray-light;
-@charts-axis-x-crosshair-border-color: #dddddd;
+@charts-axis-color:                    #888888;
+@charts-axis-y-border-color:           #444444;
+@charts-axis-x-crosshair-border-color: #888888;
 
 //** Chart tooltip
-@charts-tooltip-bg:                    @body-bg;
+@charts-tooltip-bg:                    @component-active-color;
 @charts-tooltip-color:                 @text-color;
 
 //** Chart legend
@@ -21,13 +22,14 @@
 @charts-legend-tmicon-unable-color:    #dddddd;
 
 //** Area charts
-@area-chart-tooltip-border-color:      #bbbbbb;
+@area-chart-tooltip-border-color:      #888888;
 
 //** Bar charts
-@bar-chart-stacked-border-color:       @white;
+@bar-chart-stacked-border-color:       #2c2c2c;
 
 //** Pie and Donut charts
-@pie-donut-chart-slices-border-color:  @white;
+@pie-donut-chart-slices-border-color:  #2c2c2c;
 
 //** Donut charts
-@donut-chart-title-color:              @text-color;
+@donut-chart-title-color:              #ffffff;
+@donut-chart-subTitle-color:           #bbbbbb;

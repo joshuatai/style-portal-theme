@@ -105,14 +105,6 @@
     <style data-selector="header .nav > li > a"></style>
   </pre>
 
-  <h5>Menu caret</h5>
-  <pre>
-    <style data-selector=".nav > li > a .caret"></style>
-  </pre>
-  <pre>
-    <style data-selector=".navbar-default .navbar-nav > li > a .caret"></style>
-  </pre>
-
   <h5>Drop-down menu</h5>
   <p>For details about drop-down menus and submenus, see <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
   <pre>
@@ -139,6 +131,9 @@
   </pre>
   <pre data-title="Within banner">
     <style data-selector="header .navbar-nav > li > .dropdown-menu > li > a"></style>
+  </pre>
+  <pre data-title="For links have a submenu">
+    <style data-selector=".navbar-nav > li > .dropdown-menu > .dropdown-submenu > a"></style>
   </pre>
 
   <h5>Submenus</h5>
@@ -170,9 +165,6 @@
   <pre data-title="Within banner with text">
     <style data-selector="header .nav > li.dropdown .tmicon"></style>
   </pre>
-  <pre data-title="Favorite icon">
-    <style data-selector=".icon-favorite"></style>
-  </pre>
   <pre data-title="T-ball icon">
     <style data-selector=".icon-t-ball-white"></style>
   </pre>
@@ -181,7 +173,7 @@
 <section class="navbar-example">
   <h5>Horizontal navigation bar without arrow icons</h5>
   <p>When all tabs contain sub-items, do not use any arrows to indicate sub-items.</p>
-  <div>
+  <div class="header-navbar-container" style="border-bottom: 0;">
     <header class="site-header header-with-navbar">
       <a href="javascript:;" class="banner">
         <!--div class="placeholder" data-type="image" data-refer="theme" data-src="tball.svg"></div-->
@@ -191,7 +183,7 @@
         <li><a href="javascript:;"><span class="tmicon tmicon-alert"></span></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="tmicon tmicon-user"></span>Admin_TW<span class="caret"></span>
+            <span class="tmicon tmicon-user"></span>Admin_TW<span class="tmicon tmicon-caret-down"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Change Password</a></li>
@@ -202,15 +194,15 @@
     </header>
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
-        <li><a class="navbar-icon" href="javascript:;"><span class="icon icon-favorite"></span></a></li>
+        <li><a class="navbar-icon" href="javascript:;"><span class="tmicon tmicon-pin-star"></span></a></li>
         <li class="dropdown active">
-          <a href="javascript:;" class="dropdown-toggle" datda-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 1</a>
+          <a href="javascript:;" class="dropdown-toggle" datda-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 1</a>
           <ul class="dropdown-menu open">
             <li class="active"><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -220,13 +212,13 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-tofggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 2</a>
+          <a href="javascript:;" class="dropdown-toggle" data-tofggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 2</a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -236,13 +228,13 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-tofggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 3</a>
+          <a href="javascript:;" class="dropdown-toggle" data-tofggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 3</a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -252,13 +244,13 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-tfoggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 4</a>
+          <a href="javascript:;" class="dropdown-toggle" data-tfoggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 4</a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -273,7 +265,7 @@
 
   <h5>Horizontal navigation bar with arrow icons</h5>
   <p>When you have a mix of tabs that do and do not contain sub-items, use arrows to indicate sub-items.</p>
-  <div>
+  <div class="header-navbar-container" style="border-bottom: 0;">
     <header class="site-header header-with-navbar">
       <a href="javascript:;" class="banner">
         <!--img src="dist/img/tball.svg" alt="Style Portal"-->
@@ -284,7 +276,7 @@
         <li><a href="javascript:;"><span class="tmicon tmicon-alert"></span></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="tmicon tmicon-user"></span>Admin_TW<span class="caret"></span>
+            <span class="tmicon tmicon-user"></span>Admin_TW<span class="tmicon tmicon-caret-down"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Change Password</a></li>
@@ -295,17 +287,17 @@
     </header>
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
-        <li><a class="navbar-icon" href="javascript:;"><span class="icon icon-favorite"></span></a></li>
-        <li class="active"><a href="javascript:;">Link 1</a></li>
-        <li><a href="javascript:;">Link 2</a></li>
+        <li><a class="navbar-icon" href="javascript:;"><span class="tmicon tmicon-pin-star"></span></a></li>
+        <li class="active"><a href="javascript:;">Menu 1</a></li>
+        <li><a href="javascript:;">Menu 2</a></li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-togfgle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 3<span class="caret"></span></a>
+          <a href="javascript:;" class="dropdown-toggle" data-togfgle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 3<span class="tmicon tmicon-caret-down"></span></a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>
@@ -315,13 +307,13 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle" data-toggfle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link 4<span class="caret"></span></a>
+          <a href="javascript:;" class="dropdown-toggle" data-toggfle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu 4<span class="tmicon tmicon-caret-down"></span></a>
           <ul class="dropdown-menu open">
             <li><a href="javascript:;">Menu item one</a></li>
             <li><a href="javascript:;">Menu item two</a></li>
             <li><a href="javascript:;">Menu item three</a></li>
             <li class="dropdown-submenu">
-              <a href="javascript:;">Menu item four</a>
+              <a href="javascript:;"><span class="tmicon tmicon-caret-right"></span>Menu item four</a>
               <ul class="dropdown-menu">
                 <li><a href="javascript:;">Second level item one</a></li>
                 <li><a href="javascript:;">Second level item two</a></li>

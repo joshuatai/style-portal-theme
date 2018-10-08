@@ -1,0 +1,32 @@
+<section class="css-reference">
+  <h5>Tokens with auto-complete container</h5>
+  <p>Wrap the tag, icon, and drop-down menu within a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".tokenfield.autocomplete"></style>
+  </pre>
+  <pre data-title=":after for dropdown caret ">
+    <style data-selector=".tokenfield.autocomplete:after"></style>
+  </pre>
+  <h5>Remove icon in tokens with auto-complete</h5>
+  <p>Do not display the remove icon in empty tokens.</p>
+  <pre>
+    <style data-selector=".tokenfield.autocomplete > .tmicon-close-s"></style>
+  </pre>
+  <h5>Drop-down menu</h5>
+  <p>For details on drop-down control styles, refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
+  <pre data-title="normal and :hover for No matches list item">
+    <style data-selector=".ui-autocomplete.dropdown-menu.no-match .ui-menu-item-wrapper.ui-state-active"></style>
+  </pre>
+  <pre data-title="matches list item">
+    <style data-selector=".ui-autocomplete.dropdown-menu .ui-menu-item-wrapper .matched"></style>
+  </pre>
+</section>
+<section class="form-token-example">
+	<p>Tokens with the auto-complete feature allow users to type or select values from a given list.</p>
+  <p>When custom values are allowed, include an option to add the custom value as a tag.</p>
+  <p>For more information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Token%20Field/html/token_field_with_auto-complete_vs__multiple-select.html" target="_blank">Interaction Flowchart</a>.</p>
+  <h5>Custom values allowed</h5>
+  <input type="text" class="form-control input-width-lg" id="autocompleteToken" value="2.2.2.2, 2.2.2.3"/>
+  <h5>No custom values allowed</h5>
+  <input type="text" class="form-control input-width-lg" id="tokenCombobox" value="Japan, Korea, Malaysia" />
+</section>

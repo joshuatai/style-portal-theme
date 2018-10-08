@@ -1,0 +1,32 @@
+.loader-example .modal-xs-example {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: block;
+  overflow: visible;
+  text-align: left;
+}
+.loader-example .modal-xs-example .modal-xs .modal-body{
+  max-height: 128px;
+  padding: 0;
+  overflow: hidden;
+}
+.loader-example .modal-xs-example .modal-xs .form-horizontal {
+  padding: 16px 24px 24px 24px;
+}
+.loader-example .modal-xs-example .modal-xs .form-horizontal .control-label {
+  width: 70px;
+}
+.loader-example .modal-xs-example .modal-xs .form-horizontal div:last-child .control-label {
+  margin-top: 0;
+}
+.loader-example .modal-xs-example .modal-xs .control-wrapper {
+  width: 80%;
+}
+.loader-example .modal-xs-example .modal-xs .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
