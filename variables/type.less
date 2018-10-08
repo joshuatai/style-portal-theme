@@ -5,8 +5,8 @@
 @font-family-arial: 		 	Arial, "Helvetica Neue", Helvetica, sans-serif;
 @font-family-sans-serif:  	 	"Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:  	 		Georgia, "Times New Roman", Times, serif;
-@font-family-interstate-light:  Interstate-Light, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
-@font-family-interstate-extralight: Interstate-ExtraLight, Arial, "Helvetica Neue", Helvetica, font-family-sans-serif;
+@font-family-interstate-light:  Interstate-Light, Arial, "Helvetica Neue", Helvetica, sans-serif;
+@font-family-interstate-extralight: Interstate-ExtraLight, Arial, "Helvetica Neue", Helvetica, sans-serif;
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`
 @font-family-monospace: 		Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -46,7 +46,7 @@
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:		 		1.5;
 
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.	
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-lead-computed:	 	ceil((@font-size-lead * @line-height-base));    // ~24px
 @line-height-large-computed:	ceil((@font-size-large * @line-height-base));   // ~21px
 @line-height-base-computed:	 	ceil((@font-size-base * @line-height-base));    // ~20px
@@ -55,7 +55,7 @@
 
 @paragraph-margin-bottom:  	 	@font-margin;
 
-//** Headings		
+//** Headings
 @headings-font-weight:          200;
 @headings-line-height: 		 	1.2;
 @headings-color: 				@text-color;
@@ -85,7 +85,11 @@
 
 //** Width of horizontal description list titles
 @dl-horizontal-title-color:     @gray-dark;
-@dl-horizontal-line-height:     24px;
+@dl-horizontal-line-height:     20px;
+@dl-horizontal-margin-bottom:   4px;
 @dl-horizontal-offset:          @component-offset-horizontal;
 //** Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint:      @grid-float-breakpoint;
+
+@text-selection-color: #fff;
+@text-selection-bg: #0096cc;

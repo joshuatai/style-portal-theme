@@ -1,0 +1,39 @@
+<section class="css-reference">
+  <h5>Loader with label container class</h5>
+  <p>Use a block-level element to wrap the loader and lable.</p>
+  <pre data-title="Block label container class">
+    <style data-selector=".loader-label.loader-label-block"></style>
+  </pre>
+  <h5>Loader class</h5>
+  <pre data-title="Loading class within inline label container">
+    <style data-selector=".loader-label.loader-label-inline .loader"></style>
+  </pre>
+  <pre data-title="Loading class within block label container">
+    <style data-selector=".loader-overlay .loader-label .loader"></style>
+  </pre>
+  <h5>Lable class</h5>
+  <pre>
+    <style data-selector=".loader-label .label-text"></style>
+  </pre>
+  <pre data-title="label class within block label container">
+    <style data-selector=".loader-label.loader-label-block .label-text"></style>
+  </pre>
+</section>
+
+<section class="loader-example">
+  <p>A loader can include a label to indicate a task in progress.</p>
+  <h5>Inline label</h5>
+  <div class="loader-label loader-label-inline">
+    <span class="loader loader-small"></span>
+    <span class="label-text">Updating data...</span>
+  </div>
+  <h5>Block label</h5>
+  <div class="justified-container">
+    <div class="loader-overlay">
+      <div class="loader-label loader-label-block">
+        <span class="loader loader-large"></span>
+        <span class="label-text">Updating data...</span>
+      </div>
+    </div>
+  </div>
+</section>

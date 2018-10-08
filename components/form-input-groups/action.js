@@ -1,1 +1,0 @@
-$(".segment-panel", this).addClass("overflow");

@@ -1,0 +1,32 @@
+
+.panel-collapse-examples {
+  min-height: 350px;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(2) {
+	width: 20%;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(3),
+.panel-collapse-examples .table > tbody > tr > td:nth-child(3) {
+	width: 15%;
+	text-align: right;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(4) {
+	width: 20%;
+}
+
+.panel-collapse-examples .table > thead > tr > th:nth-child(5) {
+	width: 20%;
+}
+
+@media (min-width: 768px) {
+  .panel-group-collapse .dl-horizontal dt {
+    width: 102px;
+  }
+
+  .panel-group-collapse .dl-horizontal dd {
+    margin-left: 118px;
+  }
+}

@@ -6,6 +6,9 @@
 	<pre>
 		<style data-selector=".table-sortable .sortabled">Sortable state</style>
 	</pre>
+	<pre data-title="Truncated header text container">
+		<style data-selector=".table-sortable .sortabled .truncated-text"></style>
+	</pre>
 </section>
 
 <section class="tables-advanced-example">
@@ -13,14 +16,49 @@
 	<ul>
 		<li>The first click should sort entries in descending order, and the second click in ascending order.</li>
 		<li>When such headers are hovered over, display a pointer and show the header in another color to indicate sortability.</li>
+		<li>The sort icon should be visible on the right in a sortable column, regardless of the column width.</li>
 	</ul>
-	<table class="table table-bordered table-hover table-sortable">
+	<table class="table table-bordered table-hover table-longtext-truncated table-sortable table-resize" data-table-longtext="truncated" data-table-resizeable="colResize">
 		<thead>
 			<tr>
-				<th class="sortabled">Deployment Plan<span class="tmicon tmicon-sort-down"></span></th>
+				<th class="sortabled"><span class="truncated-text">Deployment Plan</span><span class="tmicon tmicon-sort-down"></span></th>
 				<th>Type</th>
 				<th>Appliance</th>
 				<th>Deployed</th>
+				<th>Creator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>TW_Patch_01_DDI</td>
+				<td>Firmware</td>
+				<td>29</td>
+				<td>2016-04-17 21:20:18</td>
+				<td>Operator</td>
+			</tr>
+			<tr>
+				<td>Hotfix_DDI_01</td>
+				<td>Virtual Analyzer image</td>
+				<td>12</td>
+				<td>2016-04-18 23:17:20</td>
+				<td>Administrator</td>
+			</tr>
+			<tr>
+				<td>Hotfix_DDEI</td>
+				<td>Hotfix</td>
+				<td>8</td>
+				<td>2016-06-02 23:15:00</td>
+				<td>Administrator</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table table-bordered table-hover table-longtext-truncated table-sortable" data-table-longtext="truncated">
+		<thead>
+			<tr>
+				<th class="sortabled" style="width: 80px;"><span class="truncated-text">Deployment Plan</span><span class="tmicon tmicon-sort-down"></span></th>
+				<th>Type</th>
+				<th>Appliance</th>
+				<th>Deployed</span></th>
 				<th>Creator</th>
 			</tr>
 		</thead>

@@ -22,6 +22,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-4"
+    "row": "row-md-4 overflow"
   }
 }

@@ -100,6 +100,33 @@
     }
   },
   {
+    "id": "0f040920-c506-434a-8b2c-93f44c0e3abe",
+    "name": "Collapsible Panels",
+    "keywords": [
+      "collapse",
+      "collapsible",
+      "expandable",
+      "expansion",
+      "panels",
+      "accordion"
+    ],
+    "segments": [
+      "658f3d39-3dc0-4198-8593-d1ea6ea2d2db",
+      "4a994d1f-c0dd-4494-afbd-1d98313dad6f",
+      "aada64f1-2751-43d8-9408-ba54166ea628",
+      "f85e76f4-7aa9-4da2-a531-4e32c2a67227",
+      "9819530a-a8cf-416c-9500-503db5ccd5a4"
+    ],
+    "css": {
+      "name": "collapse",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/collapse"
+      ]
+    }
+  },
+  {
     "id": "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
     "name": "Drop-downs",
     "keywords": [
@@ -162,7 +189,12 @@
       "loading"
     ],
     "segments": [
-      "377a1cfd-6256-4ea0-900e-8325c785f184"
+      "377a1cfd-6256-4ea0-900e-8325c785f184",
+      "5da515ca-1287-4325-82d6-361391b7b2d8",
+      "c9fc15ba-05cc-450c-bf7a-9cfd137ce738",
+      "ab096cb6-bf2c-45fa-a279-de9e8bb52057",
+      "fc776206-e7d5-4a0d-bf52-00c427bda66f",
+      "d6b26ada-edbb-4585-bc3a-0e703065fb8e"
     ],
     "css": {
       "name": "loader",
@@ -567,11 +599,15 @@
     "name": "Tags & Tokens",
     "keywords": [
       "tags",
-      "token"
+      "token",
+      "autocomplete",
+      "combo box",
+      "multiple selection"
     ],
     "segments": [
       "97c2f7e9-2212-471f-b64a-d6e3f24eeb09",
-      "954d9736-4abf-41b5-bc49-d32a6805bd20"
+      "954d9736-4abf-41b5-bc49-d32a6805bd20",
+      "3c0d07fd-3919-4f7c-b139-35b22234a620"
     ],
     "css": {
       "name": "tags-and-tokens",

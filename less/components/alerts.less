@@ -23,6 +23,10 @@
   }
   a {
     text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 .alert + .alert {
@@ -40,6 +44,21 @@
   box-shadow: 1px 1px 4px @alert-toast-shadow;
   min-width: 280px;
   max-width: 680px;
+}
+
+.modal-lg {
+  .toast-alert{
+    min-width: 280px;
+    max-width: 680px;
+  }
+}
+.modal-md,
+.modal-sm,
+.modal-xs {
+  .toast-alert{
+    min-width: 280px;
+    max-width: 80%;
+  }
 }
 
 .toast-alert-top{

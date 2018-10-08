@@ -16,8 +16,8 @@
   <pre data-title=":first-child">
     <style data-selector=".input-group .form-control:first-child"></style>
   </pre>
-  <pre data-title=":last-child">
-    <style data-selector=".input-group .form-control:last-child"></style>
+  <pre data-title=":last-child:not(:first-child)">
+    <style data-selector=".input-group .form-control:last-child:not(:first-child)"></style>
   </pre>
   <pre data-title=":not(:first-child):not(:last-child)">
     <style data-selector=".input-group .form-control:not(:first-child):not(:last-child)"></style>
@@ -61,7 +61,7 @@
     <style data-selector=".input-group-btn:last-child > .dropdown-toggle"></style>
   </pre>
   <pre data-title="Dropdown caret">
-    <style data-selector=".input-group-btn .dropdown-toggle .caret">Put the caret icon behind the text</style>
+    <style data-selector=".input-group-btn .dropdown-toggle .tmicon-caret-down">Put the caret icon behind the text</style>
   </pre>
 </section>
 <section class="form-input-groups-example action">
@@ -88,7 +88,7 @@
     <div class="input-group">
       <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-            Sample<span class="caret"></span>
+            Sample<span class="tmicon tmicon-caret-down"></span>
           </button>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Menu item one</a></li>
@@ -103,7 +103,7 @@
       <input type="text" class="form-control">
       <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-            Sample<span class="caret"></span>
+            Sample<span class="tmicon tmicon-caret-down"></span>
           </button>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Menu item one</a></li>
@@ -117,7 +117,7 @@
     <div class="input-group hostName">
       <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-            Host name<span class="caret"></span>
+            Host name<span class="tmicon tmicon-caret-down"></span>
           </button>
           <ul class="dropdown-menu">
             <li><a href="javascript:;">Host name</a></li>

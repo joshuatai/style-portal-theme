@@ -100,13 +100,13 @@ h6, .h6 {
 .display2,
 .display3 {
   font-family: @font-family-interstate-light;
-  
+
 }
 .title {
   font-size: @font-size-h3;
 }
 .display1 {
-  font-size: @font-size-h2;  
+  font-size: @font-size-h2;
 }
 .display2 {
   font-size: @font-size-h1;
@@ -296,6 +296,11 @@ dd {
 // grid breakpoint is reached (default of ~768px).
 
 .dl-horizontal {
+  dt,
+  dd {
+    line-height: @dl-horizontal-line-height;
+    margin-bottom: @dl-horizontal-margin-bottom;
+  }
 
   dd {
     &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
@@ -345,4 +350,11 @@ address {
   margin-bottom: @line-height-base-computed;
   font-style: normal;
   line-height: @line-height-base;
+}
+
+// selection
+::selection,
+.text-selection {
+  color: @text-selection-color;
+  background: @text-selection-bg;
 }

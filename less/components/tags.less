@@ -137,12 +137,16 @@
         background-color: @token-autocomplete-item-hover-bg;
         cursor: pointer;
       }
+      .matched {
+        color: @token-autocomplete-item-text-matched;
+        font-weight: 700;
+      }
     }
     &.no-match {
       .ui-menu-item-wrapper,
       .ui-menu-item-wrapper.ui-state-active {
         cursor: text;
-        background-color: @body-bg;
+        background-color: @component-active-color;
         color: @token-autocomplete-no-match;
       }
     }
