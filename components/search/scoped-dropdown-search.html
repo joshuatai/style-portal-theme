@@ -16,7 +16,7 @@
     <style data-selector=".input-group-btn:first-child > .dropdown-toggle">Negative margin to only have a 1px border between the two</style>
   </pre>
   <pre data-title="Dropdown Caret">
-    <style data-selector=".input-group-btn .dropdown-toggle .caret">Put the caret icon behind the text</style>
+    <style data-selector=".input-group-btn .dropdown-toggle .tmicon-caret-down">Put the caret icon behind the text</style>
   </pre>
   <h5>Drop-down menus</h5>
   <p>For details on drop-down menu styles, refer to <a href="#/styles/{{theme}}/{{version}}/c30559fc-1076-4d01-a05a-ea5ef0b20f69">Drop-downs</a>.</p>
@@ -62,12 +62,13 @@
 </section>
 
 <section class="search-example">
-  <p>Use drop-down menus to limit your search in the selected category.</p>
+  <p>Scoped Search combines a drop-down menu with Regular Search to limit the search within the selected category.</p>
+  <p>For more information, see <a href="http://tw-hiesrv.tw.trendnet.org/uiwww/segment/01_enterprise/ENT_UX_Go/Style%20Portal%20Guidelines/Component%20Interaction%20Design/Search%20Box/html/scoped_search.html" target="_blank">Interaction Flowchart</a>.</p>
   <div>
-  	<div class="input-group">
-  	  <div class="input-group-btn">
+    <div class="input-group">
+      <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-          	Host name<span class="caret"></span>
+          	Host name<span class="tmicon tmicon-caret-down"></span>
         </button>
       	<ul class="dropdown-menu">
           <li><a href="javascript:;">Host name</a></li>
@@ -75,31 +76,17 @@
           <li><a href="javascript:;">Asset tag</a></li>
       	</ul>
   	  </div>
-      <input type="text" class="form-control">
+      <div class="input-icon-group">
+        <input type="text" class="form-control" data-search-box="searchBoxDisplay">
+      </div>
       <span class="input-group-btn">
         <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
       </span>
-    </div><!-- /input-group -->
+    </div>
     <div class="input-group">
       <div class="input-group-btn">
         <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-          	Host name<span class="caret"></span>
-        </button>
-      	<ul class="dropdown-menu">
-          <li><a href="javascript:;">Host name</a></li>
-          <li><a href="javascript:;">IP address</a></li>
-          <li><a href="javascript:;">Asset tag</a></li>
-      	</ul>
-  	  </div>
-      <input type="text" class="form-control input-focus" value="DDEI">
-      <span class="input-group-btn">
-        <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
-      </span>
-    </div><!-- /input-group -->
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
-          	Host name<span class="caret"></span>
+          	Host name<span class="tmicon tmicon-caret-down"></span>
         </button>
       	<ul class="dropdown-menu">
           <li><a href="javascript:;">Host name</a></li>
@@ -108,12 +95,33 @@
       	</ul>
   	  </div>
     	<div class="input-icon-group">
-        <input type="text" class="form-control" value="DDEI">
-        <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable" data-clear-field="clearField"></span>
+        <input type="text" class="form-control input-focus" value="DDEI" data-search-box="searchBoxDisplay">
+        <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
       </div>
       <span class="input-group-btn">
         <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
       </span>
-    </div><!-- /input-group -->
+    </div>
+    <div class="example">
+      <div class="input-group">
+        <div class="input-group-btn">
+          <button class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+              Host name<span class="tmicon tmicon-caret-down"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:;">Host name</a></li>
+            <li><a href="javascript:;">IP address</a></li>
+            <li><a href="javascript:;">Asset tag</a></li>
+          </ul>
+        </div>
+        <div class="input-icon-group" data-search-box="searchBox">
+          <input type="text" class="form-control">
+          <span class="tmicon tmicon-close-s tmicon-light tmicon-hoverable"></span>
+        </div>
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default btn-icon-only"><span class="tmicon tmicon-search-o"></span></button>
+        </span>
+      </div>
+    </div>
   </div>
 </section>

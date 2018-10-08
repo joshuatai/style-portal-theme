@@ -63,7 +63,7 @@
     }
   }
   > li.dropdown-submenu > a {
-    padding-right: 32px;
+    padding-right: 34px;
   }
 
   .badge {
@@ -162,7 +162,7 @@
 .dropdown-menu-multi-select > li.selected a:before{
   content: "\e011";
   color: @brand-primary;
-  font-family: 'SP-TMicon' !important;
+  font-family: 'TMicon' !important;
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
@@ -175,6 +175,18 @@
   vertical-align: top;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// menu items with checkboxes
+.dropdown-menu-selections {
+  > li > a {
+    padding: 0;
+
+    .form-check input[type="checkbox"] + label {
+      display: block;
+      padding: 4px 16px 4px 38px;
+    }
+  }
 }
 
 // Dropdown section headers
@@ -240,19 +252,15 @@
     left: 100%;
     margin-top: 0;
   }
-
-  > a:before {
-    display: block;
-    content: " ";
-    float: right;
-    width: 0;
-    height: 0;
-    border: @caret-width-base solid transparent;
-    border-right-width: 0;
-    border-left-color: @dropdown-caret-color;
-    margin: 6px -16px 6px 0;
+  li& {
+    > a {
+      > .tmicon-caret-right {
+        float: right;
+        margin-right: -24px;
+      }
+    }
   }
-
+  
   &:hover > .dropdown-menu,
   &.open > .dropdown-menu {
     display: block;

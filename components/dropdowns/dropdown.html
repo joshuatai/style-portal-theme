@@ -17,21 +17,15 @@
   <h5>Caret</h5>
   <p>Wrap a caret class using <code data-tag="span"></code> within drop-down buttons to indicate that they are drop-down toggle buttons.</p>
   <pre>
-    <style data-selector=".caret"></style>
+    <style data-selector=".tmicon"></style>
   </pre>
-  <pre data-title="Carets for basic drop-down buttons">
-    <style data-selector=".dropdown-toggle .caret">Note: Put caret before text to prevent a display bug in Firefox</style>
+  <pre data-title=":before">
+    <style data-selector=".tmicon-caret-down:before"></style>
   </pre>
 
   <h5>Caret postions</h5>
-  <pre data-title="For large buttons">
-    <style data-selector=".btn-lg.dropdown-toggle .caret"></style>
-  </pre>
-  <pre data-title="For small buttons">
-    <style data-selector=".btn-sm.dropdown-toggle .caret"></style>
-  </pre>
-  <pre data-title="For extra small buttons">
-    <style data-selector=".btn-xs.dropdown-toggle .caret"></style>
+  <pre data-title="Carets for basic drop-down buttons">
+    <style data-selector=".dropdown-toggle .tmicon-caret-down">Note: Put caret before text to prevent a display bug in Firefox</style>
   </pre>
 
   <h5>Sizes</h5>
@@ -40,7 +34,13 @@
     <style data-selector=".btn-group > .btn-lg + .dropdown-toggle"></style>
   </pre>
   <pre data-title="Carets in large button sizes">
-    <style data-selector=".btn-lg .caret"></style>
+    <style data-selector=".btn-lg.dropdown-toggle .tmicon-caret-down"></style>
+  </pre>
+  <pre data-title="Carets in small button sizes">
+    <style data-selector=".btn-sm.dropdown-toggle .tmicon-caret-down"></style>
+  </pre>
+  <pre data-title="Carets in extra small button sizes">
+    <style data-selector=".btn-xs.dropdown-toggle .tmicon-caret-down"></style>
   </pre>
 
   <h5>Split drop-down buttons</h5>
@@ -49,7 +49,7 @@
     <style data-selector=".btn-group > .btn + .dropdown-toggle"></style>
   </pre>
   <pre data-title="Reposition the caret`">
-    <style data-selector=".btn-group > .btn + .dropdown-toggle .caret"></style>
+    <style data-selector=".btn-group > .btn + .dropdown-toggle .tmicon-caret-down"></style>
   </pre>
 
   <h5>Link style dropdown</h5>
@@ -59,9 +59,6 @@
   </pre>
   <pre data-title="Hover link button dropdown">
     <style data-selector=".dropdown-toggle.btn-link:hover"></style>
-  </pre>
-  <pre data-title="Caret within a hovered link button dropdown">
-    <style data-selector=".dropdown-toggle.btn-link:hover .caret"></style>
   </pre>
   <pre data-title="Icon within a hovered link button dropdown">
     <style data-selector=".dropdown-toggle.btn-link:hover .tmicon"></style>
@@ -83,7 +80,7 @@
             <h5>Basic</h5>
             <div class="btn-group">
                 <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>Dropdown</button>
+                        <span class="tmicon tmicon-caret-down"></span>Dropdown</button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -95,7 +92,7 @@
             <h5>Text</h5>
             <div class="btn-group">
                 <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>All devices
+                    <span class="tmicon tmicon-caret-down"></span>All devices
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
@@ -112,7 +109,7 @@
             <div class="btn-group">
                 <button type="button" class="btn btn-border">Default</button>
                 <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
+                    <span class="tmicon tmicon-caret-down"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
@@ -128,7 +125,7 @@
             <p>Icon drop-down buttons are those that contain an icon in the drop-down button. These buttons may or may not contain text.</p>
             <div class="btn-group">
                 <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span><span class="tmicon tmicon-device"></span>All devices
+                    <span class="tmicon tmicon-caret-down"></span><span class="tmicon tmicon-device"></span>All devices
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
@@ -144,7 +141,7 @@
             <p>Labels can be included in drop-down buttons to present a clean look, especially when multiple drop-down buttons are lined next to each other.</p>
             <div class="btn-group">
                 <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span><span class="btn-label">Type:</span> All
+                    <span class="tmicon tmicon-caret-down"></span><span class="btn-label">Type:</span> All
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">All</a></li>
@@ -159,34 +156,31 @@
     <p>There are 4 sizes of drop-down buttons:</p>
     <div class="btn-group">
         <button type="button" class="btn btn-border btn-lg dropdown-toggle">
-            <span class="caret"></span>Large
+            <span class="tmicon tmicon-caret-down"></span>Large
         </button>
         <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
         </ul>
-    </div>
-    <div class="btn-group">
+    </div><div class="btn-group">
         <button type="button" class="btn btn-border dropdown-toggle">
-            <span class="caret"></span>Default
+            <span class="tmicon tmicon-caret-down"></span>Default
         </button>
         <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
         </ul>
-    </div>
-    <div class="btn-group">
+    </div><div class="btn-group">
         <button type="button" class="btn btn-border btn-sm dropdown-toggle">
-            <span class="caret"></span>Small
+            <span class="tmicon tmicon-caret-down"></span>Small
         </button>
         <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
         </ul>
-    </div>
-    <div class="btn-group">
+    </div><div class="btn-group">
         <button type="button" class="btn btn-border btn-xs dropdown-toggle">
-            <span class="caret"></span>Extra small
+            <span class="tmicon tmicon-caret-down"></span>Extra small
         </button>
         <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>

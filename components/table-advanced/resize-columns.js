@@ -4,7 +4,8 @@ var mouseY;
 var mouseX;
 var timer;
 var tableLongtextToggle = $("<div class='longtext-toggle tooltip-inner fade tooltip-inner-light'></div>");
-var tableCell = $('.table-longtext-truncated').find('tr').children();
+var tableCell = $('[data-table-longtext=truncated]', this).find('tr').children();
+var colResizeTable = $('[data-table-resizeable=colResize]', this);
 
 tableCell
 	.mouseenter(function () {
@@ -12,7 +13,7 @@ tableCell
 			$('.calSpace').remove();
 		}
 		var cellText = $(this).text();
-		var cellWidth = $(this).width();
+		var cellWidth = $(this).hasClass('sortabled')? $(this).width()-16 : $(this).width();
 		var wrapper = $('<div />');
 		var divtable = $('<div />');
 		var divtableRow = $('<div />');
@@ -46,7 +47,7 @@ tableCell
 
 		if(cellWidth < cellTextLength) {
 			tableLongtextToggle.html(cellText);			
-			$(this).css("cursor", "default");
+			$(this).hasClass('sortabled')? $(this).css("cursor", "pointer") : $(this).css("cursor", "default");
 			timer = setTimeout(function(){
 				tableLongtextToggle.appendTo('body').css({top: mouseY, left: mouseX});
 				setTimeout(function(){
@@ -57,7 +58,6 @@ tableCell
 	})
 	.mouseleave(function () {
 		clearTimeout(timer);
-		$(this).css("cursor", "auto");
 		tableLongtextToggle.removeClass("in").remove();		
 	});
 
@@ -68,27 +68,29 @@ $(document).on('mousemove', function(e){
 
 // RESIZABLE
 // =================
-$("#resize").colResizable({
-	liveDrag: true,
-	headerOnly: true,
-	dragCursor: "col-resize",
-	hoverCursor: "col-resize",
-	minWidth: 56,
-	onDrag: setDragLineHeight,
-	onResize: setDragLineHeight,
-	partialRefresh: true
-});
-$(".JCLRgrip").hover(function() {
-	setDragLineHeight();
-},function(){
-	resetDragLineHeight();
-})
-
-function setDragLineHeight(){
-	var tableHeight = $("#resize").outerHeight();
-	$(".JCLRgrip").css({height: tableHeight});
-}
-function resetDragLineHeight(){
-	var theadHeight = $("#resize > thead").outerHeight();
-	$(".JCLRgrip").css({height: theadHeight});
-}
+setTimeout(() => {
+	colResizeTable.colResizable({
+		liveDrag: true,
+		headerOnly: true,
+		dragCursor: "col-resize",
+		hoverCursor: "col-resize",
+		minWidth: 77,
+		onDrag: setDragLineHeight,
+		onResize: setDragLineHeight,
+		partialRefresh: true
+	});
+	$(".JCLRgrip").hover(function() {
+		setDragLineHeight();
+	},function(){
+		resetDragLineHeight();
+	})
+	
+	function setDragLineHeight(){
+		var tableHeight = colResizeTable.outerHeight();
+		$(".JCLRgrip").css({height: tableHeight});
+	}
+	function resetDragLineHeight(){
+		var theadHeight = colResizeTable.find('thead').outerHeight();
+		$(".JCLRgrip").css({height: theadHeight});
+	}
+}, 200);

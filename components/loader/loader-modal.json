@@ -1,0 +1,29 @@
+{
+  "id": "ab096cb6-bf2c-45fa-a279-de9e8bb52057",
+  "name": "Loader with Modal",
+  "keywords": [
+    "icons",
+    "indicator",
+    "inprogress",
+    "loaders",
+    "loading",
+    "processing",
+    "progress",
+    "rotate",
+    "spinner",
+    "waiting"
+  ],
+  "location": "loader/loader-modal.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12 col-lg-6 col-xl-4",
+    "row": "row-md-7 row-xl-7"
+  }
+}

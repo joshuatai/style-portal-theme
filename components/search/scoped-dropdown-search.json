@@ -1,6 +1,6 @@
 {
   "id": "27a7e158-ec25-440a-9c36-c73cba471f42",
-  "name": "Search Box with Drop-down Menus",
+  "name": "Scoped Search",
   "keywords": [
     "filter",
     "inputs",
@@ -17,6 +17,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-5"
+    "row": "row-sm-6 row-md-6"
   }
 }
