@@ -54,7 +54,7 @@ $('[data-palette]', this).each((i, elem) => {
     color = tinycolor(color);
 
     $color.attr('data-content', [
-      '<p style="color: #222;">Copy color code</p>',
+      '<p style="color: #bbb;">Copy color code</p>',
       ClipboardButtonTemplate('HEX', color.toHexString()),
       ClipboardButtonTemplate('RGB', color.toRgbString())
     ].join(' '));
