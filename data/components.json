@@ -222,7 +222,7 @@
       "notification",
       "alert"
     ],
-    "guidelines": "http://tw-hie/ui_standards/2016/11/banner-messages/",
+    "guidelines": "https://wiki.jarvis.trendmicro.com/display/UG/Banner+Messages",
     "segments": [
       "53677489-3466-4dcd-b724-a9670cc1ca23",
       "0be96478-bceb-4410-b5e7-afbaa331379c"
@@ -585,7 +585,7 @@
   {
     "id": "f67b16d7-2d35-4c9c-bc5a-02e2824e46c3",
     "name": "Date / Time Picker",
-    "guidelines": "http://tw-hie/ui_standards/2010/11/calendar/#date/time-range-picker/",
+    "guidelines": "https://wiki.jarvis.trendmicro.com/pages/viewpage.action?pageId=261109313",
     "keywords": [
       "datepicker",
       "timepicker"
