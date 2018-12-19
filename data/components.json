@@ -183,7 +183,7 @@
     "keywords": [
       "modal"
     ],
-    "guidelines": "http://tw-hie/ui_standards/2018/01/modal-dialogs/",
+    "guidelines": "https://wiki.jarvis.trendmicro.com/display/UG/Modal+Dialogs",
     "segments": [
       "7258a865-d31f-430c-8b78-a16fa083cbc1"
     ],
@@ -227,7 +227,7 @@
       "notification",
       "alert"
     ],
-    "guidelines": "http://tw-hie/ui_standards/2016/11/banner-messages/",
+    "guidelines": "https://wiki.jarvis.trendmicro.com/display/UG/Banner+Messages",
     "segments": [
       "53677489-3466-4dcd-b724-a9670cc1ca23",
       "0be96478-bceb-4410-b5e7-afbaa331379c"
@@ -594,7 +594,7 @@
   {
     "id": "f67b16d7-2d35-4c9c-bc5a-02e2824e46c3",
     "name": "Date / Time Picker",
-    "guidelines": "http://tw-hie/ui_standards/2010/11/calendar/#date/time-range-picker/",
+    "guidelines": "https://wiki.jarvis.trendmicro.com/pages/viewpage.action?pageId=261109313",
     "keywords": [
       "datepicker",
       "timepicker"
@@ -965,7 +965,7 @@
   {
     "id": "42009d37-9873-4af7-905b-63da131a5f93",
     "name": "What's New",
-    "guidelines": "http://tw-hie/ui_standards/2017/08/whats-new-2/",
+    "guidelines": "https://wiki.jarvis.trendmicro.com/pages/viewpage.action?pageId=261117298",
     "keywords": null,
     "segments": [
       "83e500de-be08-4d39-9eb2-fe91b67892ff"
