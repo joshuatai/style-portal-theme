@@ -1,0 +1,301 @@
+<section class="css-reference">
+  <h5>Table detail container</h5>
+  <pre data-title="Detail rows">
+    <style data-selector=".table > tbody > tr.table-row-source-expand:hover">Overwrite :hover and active styles</style>
+  </pre>
+  <pre data-title="Table cells contain detail containers">
+    <style data-selector=".table > tbody > tr > td.table-cell-child-table"></style>
+  </pre>
+  <pre data-title="Detail containers">
+    <style data-selector=".table-cell-child-table-container"></style>
+  </pre>
+
+  <h5>Nest tables</h5>
+  <pre data-title="Table">
+    <style data-selector=".table .table"></style>
+    <style data-selector=".table-cell-child-table .table-bordered"></style>
+  </pre>
+  <pre data-title="First column">
+    <style data-selector=".table-cell-child-table .table-bordered > thead > tr > th:first-child"></style>
+  </pre>
+  <pre data-title="Last column">
+    <style data-selector=".table-cell-child-table .table-bordered > thead > tr > th:last-child"></style>
+  </pre>
+  <pre data-title="Last row cells">
+    <style data-selector=".table-cell-child-table .table-bordered > tbody > tr:last-child > td"></style>
+  </pre>
+</section>
+
+<section>
+  <h5>Standard Tables</h5>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="gutter"></th>
+        <th>Endpoint</th>
+        <th>IP Address</th>
+        <th>Operating System</th>
+        <th>First Seen</th>
+        <th>Matched Values</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-row-expandable table-row-expand" data-source="#table-1-1">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>TW-HARRYCRANE-SRV1</td>
+        <td>10.1.129.150</td>
+        <td>Windows Server 2012</td>
+        <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+        <td>2</td>
+      </tr>
+
+      <tr id="table-1-1" class="table-row-source-expand">
+        <td class="table-cell-child-table" colspan="6">
+          <div class="table-cell-child-table-container">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Matched Values</th>
+                  <th>First Seen</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Client06</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+
+                <tr>
+                  <td>Client07</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#table-1-2">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>TW-HARRYCRANE-SRV</td>
+        <td>10.1.138.132</td>
+        <td>Windows 10</td>
+        <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+        <td>3</td>
+      </tr>
+
+      <tr id="table-1-2" class="table-row-source-collapse">
+        <td class="table-cell-child-table" colspan="6">
+          <div class="table-cell-child-table-container">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Matched Values</th>
+                  <th>First Seen</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Client05</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+
+                <tr>
+                  <td>Client08</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#table-1-3">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>TW-SALLYDRAPER-PC</td>
+        <td>10.1.128.141</td>
+        <td>Windows 10</td>
+        <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+        <td>4</td>
+      </tr>
+
+      <tr id="table-1-3" class="table-row-source-collapse">
+        <td class="table-cell-child-table" colspan="6">
+          <div class="table-cell-child-table-container">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Matched Values</th>
+                  <th>First Seen</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Client02</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+
+                <tr>
+                  <td>Client04</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5>Plain Tables</h5>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="gutter"></th>
+        <th>Endpoint</th>
+        <th>IP Address</th>
+        <th>Operating System</th>
+        <th>First Seen</th>
+        <th>Matched Values</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-row-expandable table-row-expand" data-source="#table-2-1">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>TW-HARRYCRANE-SRV1</td>
+        <td>10.1.129.150</td>
+        <td>Windows Server 2012</td>
+        <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+        <td>2</td>
+      </tr>
+
+      <tr id="table-2-1" class="table-row-source-expand">
+        <td class="table-cell-child-table" colspan="6">
+          <div class="table-cell-child-table-container">
+            <table class="table table-minimalism table-hover">
+              <thead>
+                <tr>
+                  <th>Matched Values</th>
+                  <th>First Seen</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Client06</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+
+                <tr>
+                  <td>Client07</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#table-2-2">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>TW-HARRYCRANE-SRV</td>
+        <td>10.1.138.132</td>
+        <td>Windows 10</td>
+        <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+        <td>3</td>
+      </tr>
+
+      <tr id="table-2-2" class="table-row-source-collapse">
+        <td class="table-cell-child-table" colspan="6">
+          <div class="table-cell-child-table-container">
+            <table class="table table-minimalism table-hover">
+              <thead>
+                <tr>
+                  <th>Matched Values</th>
+                  <th>First Seen</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Client05</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+
+                <tr>
+                  <td>Client08</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#table-2-3">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>TW-SALLYDRAPER-PC</td>
+        <td>10.1.128.141</td>
+        <td>Windows 10</td>
+        <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+        <td>4</td>
+      </tr>
+
+      <tr id="table-2-3" class="table-row-source-collapse">
+        <td class="table-cell-child-table" colspan="6">
+          <div class="table-cell-child-table-container">
+            <table class="table table-minimalism table-hover">
+              <thead>
+                <tr>
+                  <th>Matched Values</th>
+                  <th>First Seen</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Client02</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+
+                <tr>
+                  <td>Client04</td>
+                  <td>YYYY-MM-DDThh:mm:ss+00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

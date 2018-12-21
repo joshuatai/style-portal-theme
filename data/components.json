@@ -937,6 +937,30 @@
     }
   },
   {
+    "id": "c66ef466-becb-41d7-8410-62b0ae28ccb2",
+    "name": "Table Groups",
+    "keywords": [
+      "table groups",
+      "expansion",
+      "expandable",
+      "collapse",
+      "collapsible"
+    ],
+    "segments": [
+      "8028d888-4978-4767-abb9-35ee428d60ef",
+      "5fde8cb0-9954-4984-80e7-eeba69bd5277",
+      "38cc9e63-c7d4-45c3-8b6b-5672b58c6621",
+      "410e8716-5818-4c5a-8a95-c02d1389a074"
+    ],
+    "css": {
+      "name": "table-group",
+      "sources": [
+        "dependencies/normalize",
+        "components/tables"
+      ]
+    }
+  },
+  {
     "id": "cce4e2d3-137d-4a21-8f51-c631339b3fae",
     "name": "Tree Table",
     "keywords": [
