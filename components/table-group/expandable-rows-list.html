@@ -1,0 +1,237 @@
+<section class="css-reference">
+  <h5>Expand / collapse buttons</h5>
+  <pre data-title="For table cells contain expand buttons at the first column of table">
+    <style data-selector=".table > tbody > tr > td.table-cell-single-action"></style>
+  </pre>
+  <pre data-title="For expand buttons are floating on the right side to text content">
+    <style data-selector=".btn-table-row-action-right"></style>
+  </pre>
+  <pre data-title="For caret icon">
+    <style data-selector=".table-row-expandable .tmicon-caret-right"></style>
+    <style data-selector=".table-row-expand .tmicon-caret-right">Expanded</style>
+  </pre>
+
+  <h5>List detail container</h5>
+  <pre data-title="For table rows contain detail container">
+    <style data-selector=".table-row-source-collapse">Collapsed</style>
+    <style data-selector=".table-row-source-expand">Expanded</style>
+  </pre>
+  <pre data-title="For detail containers whose expand buttons are at the first column of table">
+    <style data-selector=".table > tbody > tr > td.table-cell-child-list-indented"></style>
+  </pre>
+  <pre data-title="For detail containers whose expand buttons are next to text content">
+    <style data-selector=".table > tbody > tr > td.table-cell-child-list"></style>
+  </pre>
+  <pre data-title="For detail titles">
+    <style data-selector=".table-cell-child-list > h5">Extend h5</style>
+  </pre>
+</section>
+
+<section>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="gutter"></th>
+        <th>Received</th>
+        <th>Latest Status</th>
+        <th>Risk Level</th>
+        <th>Recipients</th>
+        <th>Email Header (To)</th>
+        <th>Sender</th>
+        <th>Email Header (From)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-row-expandable table-row-expand" data-source="#list-1-1">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>2016-06-02 23:15:00</td>
+        <td>Processing completed</td>
+        <td><span class="tmicon tmicon-error tmicon-color-error"></span> High</td>
+        <td>Alan.chec@bbb.com</td>
+        <td>yojiro_fukuchi@trendmicro.co.jp</td>
+        <td>Chris@bbb.com</td>
+        <td>Cindy@trendmicro.com</td>
+      </tr>
+
+      <tr id="list-1-1" class="table-row-source-expand">
+        <td class="table-cell-child-list table-cell-child-list-indented" colspan="8">
+          <h5>Message details</h5>
+          <dl class="dl-horizontal">
+            <dt>Message ID:</dt>
+            <dd>&lt;e122587c77axxx@boardfficats.ent&gt;</dd>
+            <dt>Source IP:</dt>
+            <dd>185.182.81.12 (Germany)</dd>
+            <dt>Sender IP:</dt>
+            <dd>66.180.82.131 (San Jose, United States)</dd>
+          </dl>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#list-1-2">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>2016-04-18 23:17:20</td>
+        <td>Processing completed</td>
+        <td><span class="tmicon tmicon-error tmicon-color-error"></span> High</td>
+        <td>Bang.chec@bbb.com</td>
+        <td>yojiro_fukuchi@trendmicro.co.jp</td>
+        <td>fukuchi@ccc.com</td>
+        <td>Chen@ccc.com</td>
+      </tr>
+
+      <tr id="list-1-2" class="table-row-source-collapse">
+        <td class="table-cell-child-list table-cell-child-list-indented" colspan="8">
+          <h5>Message details</h5>
+          <dl class="dl-horizontal">
+            <dt>Message ID:</dt>
+            <dd>&lt;e122587c77axxx@boardfficats.ent&gt;</dd>
+            <dt>Source IP:</dt>
+            <dd>185.182.81.12 (Germany)</dd>
+            <dt>Sender IP:</dt>
+            <dd>66.180.82.131 (San Jose, United States)</dd>
+          </dl>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#list-1-3">
+        <td class="table-cell-single-action">
+          <button class="btn-table-row-action table-row-expand-btn">
+            <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>2016-04-17 21:20:18</td>
+        <td>Processing completed</td>
+        <td><span class="tmicon tmicon-error tmicon-color-error"></span> High</td>
+        <td>Alan.chec@bbb.com</td>
+        <td>yojiro_fukuchi@trendmicro.co.jp</td>
+        <td>yung_chen@ccc.com</td>
+        <td>James@trendmicro.com</td>
+      </tr>
+
+      <tr id="list-1-3" class="table-row-source-collapse">
+        <td class="table-cell-child-list table-cell-child-list-indented" colspan="8">
+          <h5>Message details</h5>
+          <dl class="dl-horizontal">
+            <dt>Message ID:</dt>
+            <dd>&lt;e122587c77axxx@boardfficats.ent&gt;</dd>
+            <dt>Source IP:</dt>
+            <dd>185.182.81.12 (Germany)</dd>
+            <dt>Sender IP:</dt>
+            <dd>66.180.82.131 (San Jose, United States)</dd>
+          </dl>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Received</th>
+        <th>Latest Status</th>
+        <th>Risk Level</th>
+        <th>Recipients</th>
+        <th>Email Header (To)</th>
+        <th>Sender</th>
+        <th>Email Header (From)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-row-expandable table-row-expandable-inline table-row-expand" data-source="#list-2-1">
+        <td>
+          <span>2016-06-02 23:15:00</span>
+          <button class="btn-table-row-action btn-table-row-action-inline btn-table-row-action-right table-row-expand-btn">
+            <span class="tmicon tmicon-detail tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>Processing completed</td>
+        <td><span class="tmicon tmicon-error tmicon-color-error"></span> High</td>
+        <td>Alan.chec@bbb.com</td>
+        <td>yojiro_fukuchi@trendmicro.co.jp</td>
+        <td>Chris@bbb.com</td>
+        <td>Cindy@trendmicro.com</td>
+      </tr>
+
+      <tr id="list-2-1" class="table-row-source-expand">
+        <td class="table-cell-child-list" colspan="7">
+          <h5>Message details</h5>
+          <dl class="dl-horizontal">
+            <dt>Message ID:</dt>
+            <dd>&lt;e122587c77axxx@boardfficats.ent&gt;</dd>
+            <dt>Source IP:</dt>
+            <dd>185.182.81.12 (Germany)</dd>
+            <dt>Sender IP:</dt>
+            <dd>66.180.82.131 (San Jose, United States)</dd>
+          </dl>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#list-2-2">
+        <td>
+          <span>2016-04-18 23:17:20</span>
+          <button class="btn-table-row-action btn-table-row-action-inline btn-table-row-action-right table-row-expand-btn">
+            <span class="tmicon tmicon-detail tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>Processing completed</td>
+        <td><span class="tmicon tmicon-error tmicon-color-error"></span> High</td>
+        <td>Bang.chec@bbb.com</td>
+        <td>yojiro_fukuchi@trendmicro.co.jp</td>
+        <td>fukuchi@ccc.com</td>
+        <td>Chen@ccc.com</td>
+      </tr>
+
+      <tr id="list-2-2" class="table-row-source-collapse">
+        <td class="table-cell-child-list" colspan="7">
+          <h5>Message details</h5>
+          <dl class="dl-horizontal">
+            <dt>Message ID:</dt>
+            <dd>&lt;e122587c77axxx@boardfficats.ent&gt;</dd>
+            <dt>Source IP:</dt>
+            <dd>185.182.81.12 (Germany)</dd>
+            <dt>Sender IP:</dt>
+            <dd>66.180.82.131 (San Jose, United States)</dd>
+          </dl>
+        </td>
+      </tr>
+
+      <tr class="table-row-expandable table-row-collapse" data-source="#list-2-3">
+        <td>
+          <span>2016-04-17 21:20:18</span>
+          <button class="btn-table-row-action btn-table-row-action-inline btn-table-row-action-right table-row-expand-btn">
+            <span class="tmicon tmicon-detail tmicon-hoverable"></span>
+          </button>
+        </td>
+        <td>Processing completed</td>
+        <td><span class="tmicon tmicon-error tmicon-color-error"></span> High</td>
+        <td>Alan.chec@bbb.com</td>
+        <td>yojiro_fukuchi@trendmicro.co.jp</td>
+        <td>yung_chen@ccc.com</td>
+        <td>James@trendmicro.com</td>
+      </tr>
+
+      <tr id="list-2-3" class="table-row-source-collapse">
+        <td class="table-cell-child-list" colspan="7">
+          <h5>Message details</h5>
+          <dl class="dl-horizontal">
+            <dt>Message ID:</dt>
+            <dd>&lt;e122587c77axxx@boardfficats.ent&gt;</dd>
+            <dt>Source IP:</dt>
+            <dd>185.182.81.12 (Germany)</dd>
+            <dt>Sender IP:</dt>
+            <dd>66.180.82.131 (San Jose, United States)</dd>
+          </dl>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

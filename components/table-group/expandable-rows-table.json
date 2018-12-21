@@ -1,0 +1,27 @@
+{
+  "id": "38cc9e63-c7d4-45c3-8b6b-5672b58c6621",
+  "name": "Expandable Rows - Table",
+  "keywords": [
+    "table group",
+    "expansion",
+    "expandable",
+    "collapse",
+    "collapsible",
+    "nested table",
+    "tables",
+    "grids"
+  ],
+  "location": "table-group/expandable-rows-table.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "content-static"
+  }
+}
