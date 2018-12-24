@@ -30,6 +30,9 @@
   -ms-flex-align: center;
           align-items: center;
 }
+.colors-circle-border-light {
+  border: 1px solid #444;
+}
 .colors-dark {
   color: #fff;
 }
