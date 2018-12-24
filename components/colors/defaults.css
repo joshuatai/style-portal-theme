@@ -9,7 +9,7 @@
 }
 .colors-container .colors-palette {
   display: table-cell;
-  padding: 0 32px;
+  padding: 24px 32px;
   vertical-align: middle;
 }
 .colors-container .colors-palette .colors-palette-row {
