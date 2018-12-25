@@ -5,6 +5,7 @@
   }
 
   &.table-cell-expandable {
+    position: relative;
     overflow: visible;
   }
 
@@ -65,10 +66,6 @@
 }
 
 .table-row-expandable {
-  > td {
-    position: relative;
-  }
-
   .tmicon-caret-right {
     transition: transform .25s ease;
   }
@@ -89,7 +86,7 @@
     transform: rotateZ(-45deg);
   }
 
-  > .table-cell-expandable::after {
+  > .table-cell-expandable:after {
     content: "";
     position: absolute;
     display: block;
