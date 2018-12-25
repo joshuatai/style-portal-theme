@@ -294,7 +294,7 @@ input[type="checkbox"] {
         content: "";
         display: inline-block;
       }
-      
+
       &:before {
         width: 14px;
         height: 14px;
@@ -333,7 +333,7 @@ input[type="checkbox"] {
         transition: background-color 0.2s;
       }
     }
-    
+
   }
   input[type="radio"],
   .input-radio, {
@@ -359,9 +359,10 @@ input[type="checkbox"] {
     &:checked + label:before {
       background-image: url(../images/icon/component_check.svg);
       background-position: center;
+      background-size: contain;
     }
   }
-  .checkbox-partial { 
+  .checkbox-partial {
     & + label {
       &:before {
         border-color: @input-checkbox-radio-border;
@@ -381,7 +382,7 @@ input[type="checkbox"] {
       content: none;
     }
   }
-  
+
   &.disabled,
   fieldset[disabled] & {
     label {

@@ -8,3 +8,13 @@
 .table:not(:last-child) {
   margin-bottom: 40px;
 }
+
+.server-scan-results-table > thead > tr > th:nth-child(6),
+.server-scan-results-table > tbody > tr > td:nth-child(6) {
+  text-align: right;
+}
+
+.server-scan-results-selectable-table > thead > tr > th:nth-child(7),
+.server-scan-results-selectable-table > tbody > tr > td:nth-child(7) {
+  text-align: right;
+}

@@ -4,6 +4,10 @@
     padding: 6px 7px;
   }
 
+  &.table-cell-expandable {
+    overflow: visible;
+  }
+
   &.table-cell-child-list,
   &.table-cell-child-list-indented {
     background-color: @table-group-detail-list-bg;
@@ -61,12 +65,44 @@
 }
 
 .table-row-expandable {
+  > td {
+    position: relative;
+  }
+
   .tmicon-caret-right {
     transition: transform .25s ease;
   }
 }
 
 .table-row-expand {
+  > .table-cell-expandable:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: -7px;
+    right: 18px;
+    border-width: 6px;
+    border-color: #ddd #ddd #0000 #0000;
+    border-style: solid;
+    transform: rotateZ(-45deg);
+  }
+
+  > .table-cell-expandable::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: -6px;
+    right: 19px;
+    border-width: 5px;
+    border-color: #f8f8f8 #f8f8f8 #0000 #0000;
+    border-style: solid;
+    transform: rotateZ(-45deg);
+  }
+
   .tmicon-caret-right {
     transform: rotateZ(90deg);
   }
