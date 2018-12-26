@@ -117,6 +117,7 @@
       "f85e76f4-7aa9-4da2-a531-4e32c2a67227",
       "9819530a-a8cf-416c-9500-503db5ccd5a4"
     ],
+    "progressive": false,
     "css": {
       "name": "collapse",
       "sources": [
@@ -952,6 +953,7 @@
       "38cc9e63-c7d4-45c3-8b6b-5672b58c6621",
       "410e8716-5818-4c5a-8a95-c02d1389a074"
     ],
+    "progressive": false,
     "css": {
       "name": "table-group",
       "sources": [
