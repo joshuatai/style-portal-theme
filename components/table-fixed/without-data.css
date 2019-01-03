@@ -1,0 +1,4 @@
+
+.table-with-scrollbar.sb-h .table-horizontal-scrollable .table-no-data {
+  table-layout: fixed;
+}
