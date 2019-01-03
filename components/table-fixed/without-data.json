@@ -1,0 +1,25 @@
+{
+  "id": "682a0dcd-5766-4b85-908f-b0c3d03803a4",
+  "name": "Fixed Tables without Data",
+  "keywords": [
+    "grids",
+    "tables",
+    "fixed",
+    "scrollbar",
+    "nodata",
+    "empty"
+  ],
+  "location": "table-fixed/without-data.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-6"
+  }
+}

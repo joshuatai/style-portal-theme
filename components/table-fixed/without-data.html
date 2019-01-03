@@ -1,0 +1,91 @@
+<section class="css-reference">
+  <h5>Table wrapper</h5>
+  <p>Wrap the tables, table pagination, and message overlay within a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".table-with-scrollbar-no-data"></style>
+  </pre>
+
+  <h5>Message overlay</h5>
+  <p>Place the system message within a <code data-tag="div"></code> element.</p>
+  <pre>
+    <style data-selector=".table-with-scrollbar-no-data > .table-inner-message"></style>
+  </pre>
+</section>
+
+<section class="fixed-header-example">
+  <p>Display any system message at the center of the table. The message should be in a fixed and visible position, and should not move with the scroll bar.</p>
+
+  <div class="table-with-scrollbar sb-h table-with-scrollbar-no-data">
+    <div class="table-inner-message">
+      No data to display
+    </div>
+
+    <div class="fixed-column pull-left">
+      <table class="table table-bordered table-no-data">
+        <thead>
+          <tr>
+            <th>Display Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="height: 170px;"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-horizontal-scrollable pull-left mCustomHorizontalScrollbar mCustomScrollbar-dragger-fixed">
+      <table class="table table-bordered table-no-data">
+        <thead>
+          <tr>
+            <th style="width: 92px;">IP Address</th>
+            <th style="width: 231px;">VA Image Name - 1</th>
+            <th style="width: 345px;">VA Platform - 1</th>
+            <th style="width: 156px;">VA Image Name - 2</th>
+            <th style="width: 316px;">VA Platform - 2</th>
+            <th style="width: 142px;">VA Image Name - 3</th>
+            <th style="width: 118px;">VA Platform - 3</th>
+            <th style="width: 145px;">Last Deployed Plan</th>
+            <th style="width: 210px;">Product Name</th>
+            <th style="width: 113px;">Agent Version</th>
+            <th style="width: 296px;">Product GUID</th>
+            <th style="width: 146px;">Registered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="12" style="height: 170px;"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class= "table-pagination">
+      <div class="table-pagination-block">
+        <div class="pagination-records">Records: 1-5 / 5</div>
+        <div class="dropdown">
+          <button class="btn btn-xs btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+            <span class="tmicon tmicon-caret-down"></span>10 per page
+          </button>
+          <ul class="dropdown-menu dropdown-menu-multi-select">
+            <li class="selected"><a href="javascript:;">10</a></li>
+            <li><a href="javascript:;">25</a></li>
+            <li><a href="javascript:;">50</a></li>
+            <li><a href="javascript:;">100</a></li>
+          </ul>
+        </div>
+        <div class="pagination-input"><input type="text" value="1"> / 1</div>
+        <div>
+          <ul class="pagination">
+            <li>
+              <a href="javascript:;" aria-label="Previous">
+                <span class="tmicon tmicon-angle-left" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;" aria-label="Next">
+                <span class="tmicon tmicon-angle-right" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
