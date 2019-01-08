@@ -211,7 +211,13 @@
   &:focus,
   &.focus {
     .tmicon {
-      color: @btn-default-color;
+      color: @btn-table-row-action-tmicon-color;
+    }
+  }
+  &:hover,
+  &.hover {
+    .tmicon.tmicon-hoverable {
+      color: @btn-table-row-action-tmicon-hover-color;
     }
   }
 }
