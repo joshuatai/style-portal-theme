@@ -169,6 +169,10 @@
 }
 
 .table-row-actions {
+  .btn-table-row-action {
+    float: left;
+  }
+
   .btn-table-row-action + .btn-table-row-action,
   .btn-table-row-action + .table-row-actions,
   .table-row-actions + .btn-table-row-action,
@@ -195,11 +199,40 @@
   height: 24px;
   width: 24px;
   position: relative;
-  float: left;
 
   &:active,
   &:focus, {
     background: none;
     outline: none;
   }
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    .tmicon {
+      color: @btn-table-row-action-tmicon-color;
+    }
+  }
+  &:hover,
+  &.hover {
+    .tmicon.tmicon-hoverable {
+      color: @btn-table-row-action-tmicon-hover-color;
+    }
+  }
+}
+
+.btn-table-row-action-inline {
+  margin-top: -5px;
+  margin-bottom: -1px;
+}
+
+.btn-table-row-action-right {
+  margin-top: -3px;
+  float: right;
+}
+
+.btn-table-row-action-left {
+  margin-top: -3px;
+  float: left;
 }

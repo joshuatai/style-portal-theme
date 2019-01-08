@@ -1,0 +1,18 @@
+{
+  "id": "8028d888-4978-4767-abb9-35ee428d60ef",
+  "name": "Expandable Table Rows",
+  "keywords": [],
+  "location": "table-group/intro.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "row-md-3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "410e8716-5818-4c5a-8a95-c02d1389a074",
+  "name": "Row Selection",
+  "keywords": [
+    "table group",
+    "expansion",
+    "expandable",
+    "collapse",
+    "collapsible",
+    "nested table",
+    "checkboxes",
+    "row",
+    "selection",
+    "tables",
+    "grids"
+  ],
+  "location": "table-group/expandable-rows-table-row-selection.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "content-static"
+  }
+}

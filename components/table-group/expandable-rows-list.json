@@ -1,0 +1,27 @@
+{
+  "id": "5fde8cb0-9954-4984-80e7-eeba69bd5277",
+  "name": "Message Details",
+  "keywords": [
+    "table group",
+    "expansion",
+    "expandable",
+    "collapse",
+    "collapsible",
+    "list",
+    "tables",
+    "grids"
+  ],
+  "location": "table-group/expandable-rows-list.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "content-static"
+  }
+}
