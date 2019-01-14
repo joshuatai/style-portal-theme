@@ -1,0 +1,176 @@
+<section class="css-reference">
+  <h5>Nest collapsible panels</h5>
+  <p>Extend the default panel styles for Nest Collapsible Panels.</p>
+  <pre data-title="Panel">
+    <style data-selector=".panel-group-collapse-nest > .panel"></style>
+    <style data-selector=".panel-group-collapse-nest > .panel + .panel">Sibling panels after the first panel</style>
+  </pre>
+
+  <pre data-title="Panel heading">
+    <style data-selector=".panel-group-collapse-nest > .panel > .panel-heading"></style>
+    <style data-selector=".panel-group-collapse-nest > .panel > .panel-heading:hover">:hover</style>
+    <style data-selector=".panel-group-collapse-nest > .panel > .panel-heading:hover[aria-expanded=true]">:hover on expaned</style>
+  </pre>
+
+  <pre data-title="Chevron icon within panel heading">
+    <style data-selector=".panel-group-collapse-nest > .panel > .panel-heading > .panel-title > .tmicon-chevron-down"></style>
+    <style data-selector=".panel-group-collapse-nest > .panel > .panel-heading[aria-expanded=true] > .panel-title > .tmicon-chevron-down">Panel expanded</style>
+  </pre>
+
+  <pre data-title="Panel body">
+    <style data-selector=".panel-group-collapse-nest > .panel > .panel-collapse > .panel-body"></style>
+  </pre>
+</section>
+
+<section>
+  <p>For a large data set or complex information, you may nest collapsible panels within collapsible panels to display structured content.</p>
+  <ul>
+    <li>When a panel is in the "collapse" state, change the background color and the pointer cursor of the collapsible group item when the user hovers over any part of that row.</li>
+    <li>When a panel is in the "expand" state, change the pointer cursor of the collapsible group item when the user hovers over any part of that row.</li>
+    <li>Bold the group title in expanded state to differentiate the group title from the expanded content.</li>
+  </ul>
+
+  <div class="panel-group panel-group-collapse panel-group-collapse-nest" id="nest-accordions" role="tablist">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" data-toggle="collapse" data-target="#nest-1"
+        aria-expanded="true">
+        <h4 class="panel-title">
+          <span>Collapsible group item 1</span>
+          <span class="tmicon tmicon-chevron-down tmicon-hoverable"></span>
+        </h4>
+      </div>
+      <div id="nest-1" class="panel-collapse collapse in" role="tabpanel">
+        <div class="panel-body">
+          <div class="panel-group panel-group-collapse panel-group-collapse-light" id="nest-light-accordions-1" role="tablist">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" data-toggle="collapse" data-target="#nest-light-1-1"
+                aria-expanded="false">
+                <h4 class="panel-title">
+                  <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+                  <span>Nested collapsible group item 1-1</span>
+                </h4>
+              </div>
+              <div id="nest-light-1-1" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                  <dl class="dl-horizontal">
+                    <dt>Original filename:</dt>
+                    <dd>ACME_encrybter.exe</dd>
+                    <dt>Location:</dt>
+                    <dd>C:\Program Files\Adobe\Reader11.0\Readme</dd>
+                    <dt>Size:</dt>
+                    <dd>27.6 MB</dd>
+                    <dt>File description:</dt>
+                    <dd>Acme Inc.</dd>
+                    <dt>File version:</dt>
+                    <dd>11.0.1.36</dd>
+                    <dt>Create time:</dt>
+                    <dd>04/12/2016 2:08:32 PM +0800</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" data-toggle="collapse" data-target="#nest-light-1-2"
+                aria-expanded="false">
+                <h4 class="panel-title">
+                  <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+                  <span>Nested collapsible group item 1-2</span>
+                </h4>
+              </div>
+              <div id="nest-light-1-2" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                  <dl class="dl-horizontal">
+                    <dt>Original filename:</dt>
+                    <dd>ACME_encrybter.exe</dd>
+                    <dt>Location:</dt>
+                    <dd>C:\Program Files\Adobe\Reader11.0\Readme</dd>
+                    <dt>Size:</dt>
+                    <dd>27.6 MB</dd>
+                    <dt>File description:</dt>
+                    <dd>Acme Inc.</dd>
+                    <dt>File version:</dt>
+                    <dd>11.0.1.36</dd>
+                    <dt>Create time:</dt>
+                    <dd>04/12/2016 2:08:32 PM +0800</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" data-toggle="collapse" data-target="#nest-2"
+        aria-expanded="false">
+        <h4 class="panel-title">
+          <span>Collapsible group item 2</span>
+          <span class="tmicon tmicon-chevron-down tmicon-hoverable"></span>
+        </h4>
+      </div>
+      <div id="nest-2" class="panel-collapse collapse" role="tabpanel">
+        <div class="panel-body">
+          <div class="panel-group panel-group-collapse panel-group-collapse-light" id="nest-light-accordions-2" role="tablist">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" data-toggle="collapse" data-target="#nest-light-2-1"
+                aria-expanded="false">
+                <h4 class="panel-title">
+                  <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+                  <span>Nested collapsible group item 2-1</span>
+                </h4>
+              </div>
+              <div id="nest-light-2-1" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                  <dl class="dl-horizontal">
+                    <dt>Original filename:</dt>
+                    <dd>ACME_encrybter.exe</dd>
+                    <dt>Location:</dt>
+                    <dd>C:\Program Files\Adobe\Reader11.0\Readme</dd>
+                    <dt>Size:</dt>
+                    <dd>27.6 MB</dd>
+                    <dt>File description:</dt>
+                    <dd>Acme Inc.</dd>
+                    <dt>File version:</dt>
+                    <dd>11.0.1.36</dd>
+                    <dt>Create time:</dt>
+                    <dd>04/12/2016 2:08:32 PM +0800</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" data-toggle="collapse" data-target="#nest-light-2-2"
+                aria-expanded="false">
+                <h4 class="panel-title">
+                  <span class="tmicon tmicon-caret-right tmicon-hoverable"></span>
+                  <span>Nested collapsible group item 2-2</span>
+                </h4>
+              </div>
+              <div id="nest-light-2-2" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                  <dl class="dl-horizontal">
+                    <dt>Original filename:</dt>
+                    <dd>ACME_encrybter.exe</dd>
+                    <dt>Location:</dt>
+                    <dd>C:\Program Files\Adobe\Reader11.0\Readme</dd>
+                    <dt>Size:</dt>
+                    <dd>27.6 MB</dd>
+                    <dt>File description:</dt>
+                    <dd>Acme Inc.</dd>
+                    <dt>File version:</dt>
+                    <dd>11.0.1.36</dd>
+                    <dt>Create time:</dt>
+                    <dd>04/12/2016 2:08:32 PM +0800</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
