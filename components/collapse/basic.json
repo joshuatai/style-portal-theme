@@ -1,0 +1,25 @@
+{
+  "id": "4a994d1f-c0dd-4494-afbd-1d98313dad6f",
+  "name": "Basic Collapsible Panels",
+  "keywords": [
+    "collapse",
+    "collapsible",
+    "expandable",
+    "expansion",
+    "panels",
+    "accordion"
+  ],
+  "location": "collapse/basic.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-md-12",
+    "row": "content-static panel-collapse-examples"
+  }
+}

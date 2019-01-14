@@ -100,6 +100,34 @@
     }
   },
   {
+    "id": "0f040920-c506-434a-8b2c-93f44c0e3abe",
+    "name": "Collapsible Panels",
+    "keywords": [
+      "collapse",
+      "collapsible",
+      "expandable",
+      "expansion",
+      "panels",
+      "accordion"
+    ],
+    "segments": [
+      "658f3d39-3dc0-4198-8593-d1ea6ea2d2db",
+      "4a994d1f-c0dd-4494-afbd-1d98313dad6f",
+      "aada64f1-2751-43d8-9408-ba54166ea628",
+      "f85e76f4-7aa9-4da2-a531-4e32c2a67227",
+      "9819530a-a8cf-416c-9500-503db5ccd5a4"
+    ],
+    "progressive": false,
+    "css": {
+      "name": "collapse",
+      "sources": [
+        "dependencies/normalize",
+        "core/scaffolding",
+        "components/collapse"
+      ]
+    }
+  },
+  {
     "id": "c30559fc-1076-4d01-a05a-ea5ef0b20f69",
     "name": "Drop-downs",
     "keywords": [

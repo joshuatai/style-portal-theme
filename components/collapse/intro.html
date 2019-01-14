@@ -1,0 +1,42 @@
+<section class="css-reference">
+  <h5>Collapsible Panels</h5>
+  <p>Use <code data-tag="div"></code> to create a panel class. For example, <code>.panel</code> is used in Bootstrap.</p>
+  <pre data-title="Panel">
+    <style data-selector=".panel"></style>
+    <style data-selector=".panel-group .panel"></style>
+  </pre>
+
+  <pre data-title="Panel heading">
+    <style data-selector=".panel-group-collapse > .panel > .panel-heading"></style>
+  </pre>
+
+  <pre data-title="Panel title">
+    <style data-selector=".panel-title"></style>
+    <style data-selector=".panel-group-collapse > .panel > .panel-heading[aria-expanded=true] > .panel-title">Panel expanded</style>
+  </pre>
+
+  <pre data-title="Caret icon within panel heading">
+    <style data-selector=".panel-group-collapse > .panel > .panel-heading > .panel-title > .tmicon-caret-right"></style>
+    <style data-selector=".panel-group-collapse > .panel > .panel-heading[aria-expanded=true] > .panel-title > .tmicon-caret-right">Panel expanded</style>
+  </pre>
+
+  <pre data-title="Panel body wrapper">
+    <style data-selector=".collapse">Collapsed</style>
+    <style data-selector=".collapsing">Collapsing</style>
+    <style data-selector=".collapse.in">Expanded</style>
+  </pre>
+
+  <pre data-title="Panel body">
+    <style data-selector=".panel-group-collapse > .panel > .panel-collapse > .panel-body"></style>
+  </pre>
+</section>
+
+<section>
+  <p>
+      Collapsible panels provide users with the ability to expand and collapse content as needed, they allow you to hide content that is not immediately relevant to the user. It can operate as either a single collapsible element (similar to an accordion) or multi-collapsible element.
+  </p>
+  <ul>
+    <li><b>Single collapsible element</b>: Allow only one panel to be expanded at any given time. Expanding a panel collapses the previously expanded panel.</li>
+    <li><b>Multi-collapsible element</b>: Allow more than one panel to be expanded at any given time. Expanding a panel has no impact on the other panels.</li>
+  </ul>
+</section>
