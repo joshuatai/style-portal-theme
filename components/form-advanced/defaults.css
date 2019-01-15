@@ -37,18 +37,6 @@
     width: 256px;
   }
 }
-@media (min-width: 1200px) {
-  .form-advanced-example .multiple-selection:first-child {
-    margin-right: 80px;
-  }
-}
-.form-advanced-example .multiple-selection {
-  display: inline-block;
-}
-.form-advanced-example .multiple-selection h5 {
-  margin-top: 0;
-}
-
 
 .form-advanced-example hr {
   margin: 20px 0;

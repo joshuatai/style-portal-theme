@@ -74,3 +74,78 @@
   text-decoration: none;
   background-color: @ms-option-hover-background;
 }
+
+// Advanced
+
+.ms-advanced-container {
+  background: none;
+  width: 496px;
+
+  &:focus {
+    outline: none;
+  }
+
+  .ms-selectable,
+  .ms-selection {
+    &:focus {
+      outline: none;
+    }
+
+    .ms-list-item {
+      &:focus {
+        outline: none;
+      }
+
+      &.ms-activating,
+      &.ms-active {
+        background-color: #ddd;
+        color: #222;
+      }
+    }
+  }
+
+  .ms-select-focus {
+    .ms-list {
+      border: 1px solid #0096cc;
+    }
+
+    .ms-list-item {
+      &.ms-activating,
+      &.ms-active {
+        background-color: #33abd6;
+        color: #fff;
+
+        &:focus {
+          outline: 1px solid #0382b0;
+        }
+      }
+    }
+  }
+
+  .ms-list {
+    height: 180px;
+  }
+
+  .ms-elem-selectable,
+  .ms-elem-selection,
+  .ms-optgroup-label {
+    user-select: none !important;
+  }
+}
+
+.ms-buttons {
+  display: inline-block;
+  padding: 20px 8px;
+
+  > .btn {
+    display: block;
+    margin: 0;
+    padding: 5px 7px;
+    width: 32px;
+    min-width: unset;
+  }
+
+  > .btn + .btn {
+    margin-top: 4px;
+  }
+}

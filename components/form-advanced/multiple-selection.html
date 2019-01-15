@@ -44,33 +44,121 @@
   <pre data-title="Group list options">
     <style data-selector=".ms-container .ms-optgroup li.ms-elem-selectable"></style>
   </pre>
+
+  <h5>Advanced multiple selection wrapper</h5>
+  <p>Extend the default basic styles for advanced multiple selection.</p>
+  <pre>
+    <style data-selector=".ms-advanced-container"></style>
+  </pre>
+  <pre data-title=":focus">
+    <style data-selector=".ms-advanced-container:focus"></style>
+  </pre>
+
+  <h5>Advanced multiple selection container</h5>
+  <pre data-title=":focus">
+    <style data-selector=".ms-advanced-container .ms-selectable:focus"></style>
+  </pre>
+
+  <h5>Advanced multiple selection container with list</h5>
+  <pre>
+    <style data-selector=".ms-advanced-container .ms-list"></style>
+  </pre>
+  <pre data-title="When focus on multiple selection container">
+    <style data-selector=".ms-advanced-container .ms-select-focus .ms-list"></style>
+  </pre>
+
+  <h5>Options and group list labels</h5>
+  <pre>
+    <style data-selector=".ms-advanced-container .ms-elem-selectable"></style>
+  </pre>
+  <pre data-title="Focus">
+    <style data-selector=".ms-advanced-container .ms-selectable .ms-list-item:focus"></style>
+  </pre>
+  <pre data-title="Focus and active">
+    <style data-selector=".ms-advanced-container .ms-select-focus .ms-list-item.ms-active:focus"></style>
+    <style data-selector=".ms-advanced-container .ms-select-focus .ms-list-item.ms-active"></style>
+  </pre>
+  <pre data-title="Active but blurred">
+    <style data-selector=".ms-advanced-container .ms-selectable .ms-list-item.ms-active"></style>
+  </pre>
+
+  <h5>Action buttons wrapper</h5>
+  <pre>
+    <style data-selector=".ms-buttons"></style>
+  </pre>
+
+  <h5>Action buttons</h5>
+  <p>Extend the flat button styles.</p>
+  <pre>
+    <style data-selector=".ms-buttons > .btn"></style>
+  </pre>
+  <pre data-title="Buttons after the irst button">
+    <style data-selector=".ms-buttons > .btn + .btn"></style>
+  </pre>
 </section>
 
 <section class="form-advanced-example">
-  <div class="multiple-selection">
-		<h5>Basic</h5>
-		<select multiple="multiple" data-multi-selection="multipleSelection">
-		  <option value="OptionA">Option A</option>
-		  <option value="OptionB">Option B</option>
-		  <option value="OptionC" selected>Option C</option>
-		  <option value="OptionD">Option D</option>
-		  <option value="OptionE">Option E</option>
-		  <option value="OptionF">Option F</option>
-		  <option value="OptionG" selected>Option G</option>
-		  <option value="OptionH">Option H</option>
-		</select>
-	</div>
-	<div class="multiple-selection">
-		<h5>Grouped options</h5>
-		<select id="optgroup" multiple="multiple" data-opt-multi-selection="optMultipleSelection">
-		  <optgroup label="GROUP TITLE A">
-		    <option value="1">Option A-1</option>
-		    <option value="2" selected>Option A-2</option>
-		  </optgroup>
-		  <optgroup label="GROUP TITLE B">
-		    <option value="3">Option B-1</option>
-		    <option value="4">Option B-2</option>
-		  </optgroup>
-		</select>
-	</div>
+  <div>
+    <div class="multiple-selection-example">
+      <h5>Basic</h5>
+      <select multiple="multiple" data-multi-selection="multipleSelection">
+        <option value="OptionA">Option A</option>
+        <option value="OptionB">Option B</option>
+        <option value="OptionC" selected>Option C</option>
+        <option value="OptionD">Option D</option>
+        <option value="OptionE">Option E</option>
+        <option value="OptionF">Option F</option>
+        <option value="OptionG" selected>Option G</option>
+        <option value="OptionH">Option H</option>
+      </select>
+    </div>
+
+    <div class="multiple-selection-example">
+      <h5>Grouped options</h5>
+      <select id="optgroup" multiple="multiple" data-opt-multi-selection="optMultipleSelection">
+        <optgroup label="GROUP TITLE A">
+          <option value="1">Option A-1</option>
+          <option value="2" selected>Option A-2</option>
+        </optgroup>
+        <optgroup label="GROUP TITLE B">
+          <option value="3">Option B-1</option>
+          <option value="4">Option B-2</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <div class="advanced-multiple-selection-example">
+      <h5>Advanced</h5>
+      <select multiple="multiple" data-multi-selection="advanced">
+        <option value="A">Option A</option>
+        <option value="B">Option B</option>
+        <option value="C" selected>Option C</option>
+        <option value="D">Option D</option>
+        <option value="E">Option E</option>
+        <option value="F">Option F</option>
+        <option value="G" selected>Option G</option>
+        <option value="H">Option H</option>
+        <option value="I">Option I</option>
+        <option value="J">Option J</option>
+      </select>
+    </div>
+
+    <div class="advanced-multiple-selection-example">
+      <h5>Advanced grouped options</h5>
+      <select multiple="multiple" data-opt-multi-selection="advanced">
+        <optgroup label="GROUP TITLE A">
+          <option value="A1">Option A-1</option>
+          <option value="A2" selected>Option A-2</option>
+          <option value="A3" selected>Option A-3</option>
+        </optgroup>
+        <optgroup label="GROUP TITLE B">
+          <option value="B1">Option B-1</option>
+          <option value="B2">Option B-2</option>
+          <option value="B3">Option B-3</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
 </section>

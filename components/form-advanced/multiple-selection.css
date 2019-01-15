@@ -1,0 +1,26 @@
+@media (min-width: 1200px) {
+  .multiple-selection-example,
+  .advanced-multiple-selection-example {
+    display: inline-block;
+  }
+
+  .multiple-selection-example:first-child {
+    margin-right: 80px;
+  }
+
+  .advanced-multiple-selection-example:first-child {
+    margin-right: 64px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .multiple-selection-example:not(:first-child),
+  .advanced-multiple-selection-example:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.multiple-selection-example h5,
+.advanced-multiple-selection-example h5 {
+  margin-top: 0;
+}
