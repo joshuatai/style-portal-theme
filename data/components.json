@@ -432,6 +432,7 @@
       "a3246c06-0d15-41f0-a52e-4683be4ff47f",
       "b275b05f-c3c7-4552-a8a8-94c42e4ed066"
     ],
+    "progressive": false,
     "css": {
       "name": "advanced-form",
       "sources": [
