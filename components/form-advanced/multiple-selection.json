@@ -9,7 +9,11 @@
     "selection"
   ],
   "location": "form-advanced/multiple-selection.html",
-  "dependencies": ["jquery.multi-select"],
+  "dependencies": [
+    "jquery.ui.widget",
+    "jquery.multi-select",
+    "jquery-multiple-selection"
+  ],
   "actions": [
     {
       "name": "Style",
@@ -19,6 +23,6 @@
   "type": "draggable",
   "grid": {
     "col": "col-md-12",
-    "row": "row-md-4"
+    "row": "content-static"
   }
 }
