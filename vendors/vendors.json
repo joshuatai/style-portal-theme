@@ -19,6 +19,7 @@
     "jquery-editable-select": "jQuery-editable-select-master/dist/jquery-editable-select.min.js",
     "jquery-file-upload-9.12.5": "jQuery-File-Upload-9.12.5/js/jquery.fileupload.js",
     "jquery.multi-select": "jQuery-multiselect/jquery.multi-select.js",
+    "jquery-multiple-selection": "jquery-multiple-selection/jquery.multiple-selection.js",
     "jquery-tageditor-master": [
       "jQuery-tagEditor-master/jquery.caret.min.js",
       "jQuery-tagEditor-master/jquery.tag-editor.js"
