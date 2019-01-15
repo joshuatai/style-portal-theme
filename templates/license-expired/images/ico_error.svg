@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="expired" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+<circle id="bg" fill="#E98B8F" cx="72" cy="72" r="72"/>
+<g id="icon">
+	<path fill="#FFFFFF" d="M102,105c0,2.002-1.01,3-3,3H31c-1.988,0-3-0.998-3-3V52h74v2h4V38c0-3.617-2.404-6-6-6H90v-2.5
+		c0-0.829-0.896-1.5-2-1.5s-2,0.671-2,1.5V32H44v-2.5c0-0.829-0.896-1.5-2-1.5s-2,0.671-2,1.5V32H30c-3.593,0-6,2.383-6,6v68
+		c0,3.617,2.407,6,6,6h70c3.596,0,6-2.383,6-6v-7h-4V105z M28,39c0-2.007,1.012-3,3-3h9v2.5c0,0.829,0.896,1.5,2,1.5s2-0.671,2-1.5
+		V36h42v2.5c0,0.829,0.896,1.5,2,1.5s2-0.671,2-1.5V36h9c1.99,0,3,0.993,3,3v9H28V39z"/>
+	<rect x="44" y="61" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="54" y="61" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="64" y="61" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="34" y="71" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="44" y="71" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="54" y="71" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="64" y="71" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="34" y="81" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="44" y="81" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="54" y="81" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="64" y="81" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="34" y="91" fill="#FFFFFF" width="6" height="6"/>
+	<rect x="44" y="91" fill="#FFFFFF" width="6" height="6"/>
+	<path fill="#FFFFFF" d="M118.001,58H82.003c-3.467,0-6,2-6,6L76,102.549c0.001,1.253,1.327,1.42,1.471,1.442
+		c0.336-0.006,0.67-0.124,0.931-0.36L91.002,95h26.999c3.467,0,5.999-2.527,5.999-6V64C124,60.521,121.468,58,118.001,58z
+		 M109,82.231L106.231,85L100,78.769L93.769,85L91,82.231L97.231,76L91,69.77L93.769,67L100,73.231L106.231,67L109,69.77L102.769,76
+		L109,82.231z"/>
+</g>
+</svg>
