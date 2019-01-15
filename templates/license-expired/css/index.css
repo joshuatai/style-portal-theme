@@ -1,5 +1,5 @@
 body {
-	background: #EEE;
+	background: #222222;
     left: 0;
     right: 0;
     height: 100%;
@@ -13,13 +13,18 @@ body {
 	padding-left: 24px;
 	height: 65px;
 	line-height: 60px;
-    background-color: #fff;
+    background-color: #2c2c2c;
     border-top: 4px solid #DB3D44;
-    border-bottom: 1px solid #CCC;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #111111;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 .brand-logo {
-	display: inline-block;
+    display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
 }
 .brand h1 {
     display: inline-block;
@@ -41,7 +46,7 @@ body {
     margin-bottom: 16px;
 }
 .icon-error {
-    background: url(../images/ico_error.png) no-repeat center center transparent;
+    background: url(../images/ico_error.svg) no-repeat center center transparent;
     width: 144px;
     height: 144px;
     margin: 0 auto;
@@ -62,10 +67,10 @@ footer {
     min-height: 40px;
     font-size: 12px;
     text-align: left;
-    background: #f5f5f5;
+    background: #2c2c2c;
     padding: 0 24px; 
-    border-top: 1px solid #dddddd;
-    color: #666666;
+    border-top: 1px solid #111111;
+    color: #888888;
 }
 footer .copyright {	
 	margin: 10px 0;
@@ -73,9 +78,11 @@ footer .copyright {
 }
 footer .footer-logo {
 	float: right;
-	margin: 6px 0;
+    margin: 6px 0;
 }
-
+footer .footer-logo img {
+    height: 28px;
+}
 footer .footer-links {
 	display: inline;
 	padding: 0;

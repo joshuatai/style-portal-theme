@@ -30,7 +30,7 @@
 }
 
 .template-screenshot-link {
-  border: 1px solid #ccc;
+  border: 1px solid #666666;
   border-radius: 4px;
   display: block;
   height: 269px; /* TODO: Height should be flexiable for RWD */
@@ -38,8 +38,8 @@
 }
 
 .template-screenshot-link:hover {
-  border: 1px solid #999;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffffff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
 }
 
 .template-screenshot-image {
