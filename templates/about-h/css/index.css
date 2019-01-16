@@ -1,5 +1,5 @@
 body {
-	background: #EEE;
+	background: #222222;
     left: 0;
     right: 0;
     height: 100%;
@@ -20,9 +20,18 @@ header.site-header {
     position: relative;
     padding: 0 20px;
     height: 64px;
+    line-height: 62px;
     margin-bottom: 0;
-    background-color: #fff;
+    background-color: #2c2c2c;
     border-bottom: 1px #ddd solid;
+}
+.brand-logo {
+    display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
 }
 .navbar {
     padding: 0;
@@ -35,10 +44,9 @@ header.site-header {
     color: #222;
 }
 .site-header .banner {
-    background: url(../images/tball.svg) center left no-repeat;
-    background-size: 32px;
-    float: left;
-    height: 63px;
+    background: none;
+    display: inline-block;
+    height: 62px;
     padding: 0;
 }
 .site-header .banner,
@@ -46,21 +54,24 @@ header.site-header {
     text-decoration: none;
 }
 .site-title {
-    margin: 14px 0 0 42px;
-    line-height: 36px;
-    font-family: "Interstate-Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 26px;
-    font-weight: 200;
-    letter-spacing: -0.03em;
-    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    line-height: 26px;
+    margin-top: 17px;
+    margin-bottom: 17px;
 }
 .site-header .dropdown-toggle {
     margin-top: 0;
 }
 .breadcrumb {
-    background: #fff;
     padding-left: 24px;
     padding-right: 24px;
+}
+.breadcrumb.with-line {
+    border-bottom: 1px #111111 solid;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .panel-body p:last-child {
     margin-bottom: 0;
