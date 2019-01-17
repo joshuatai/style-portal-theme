@@ -20,6 +20,11 @@ body {
 }
 .brand-logo {
 	display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
 }
 .brand h1 {
     display: inline-block;
@@ -42,7 +47,7 @@ body {
 }
 
 .icon-info {
-    background: url(../images/ico_info.png) no-repeat center center transparent;
+    background: url(../images/ico_info.svg) no-repeat center center transparent;
     width: 144px;
     height: 144px;
     margin: 0 auto;
@@ -133,7 +138,9 @@ footer .footer-logo {
 	float: right;
 	margin: 6px 0;
 }
-
+footer .footer-logo img {
+    height: 28px;
+}
 footer .footer-links {
 	display: inline;
 	padding: 0;
