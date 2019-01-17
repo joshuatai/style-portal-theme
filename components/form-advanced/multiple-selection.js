@@ -2,7 +2,7 @@ $('[data-multi-selection=multipleSelection]', this).multiSelect();
 $('[data-opt-multi-selection=optMultipleSelection]', this).multiSelect({ selectableOptgroup: true });
 
 const multipleSelectionOptions = {
-  buttonClass: 'btn btn-border',
+  buttonClass: 'btn btn-border btn-icon-only',
   buttonIcons: {
     addAll: '<span class="tmicon tmicon-collapse-right"></span>',
     add: '<span class="tmicon tmicon-angle-right"></span>',
