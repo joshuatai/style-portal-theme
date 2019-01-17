@@ -1,5 +1,5 @@
 body {
-	background: #EEE;
+	background: #222222;
     left: 0;
     right: 0;
     height: 100%;
@@ -17,12 +17,33 @@ header.site-header {
     padding-right: 0;
 }
 .site-header {
-    position: relative;
-    padding: 0 20px;
-    height: 64px;
-    margin-bottom: 0;
-    background-color: #fff;
-    border-bottom: 1px #ddd solid;
+    line-height: 63px;
+}
+.brand-logo {
+    display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
+}
+.site-header .banner {
+    background: none;
+    display: inline-block;
+    height: 63px;
+    padding: 0;
+}
+.site-header .banner,
+.site-header .banner :hover {
+    text-decoration: none;
+}
+.site-title {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    line-height: 26px;
+    margin-top: 18px;
+    margin-bottom: 18px;
 }
 .navigation.collapsed + .site-header,
 .navigation.collapsed ~ .breadcrumb,
@@ -36,44 +57,17 @@ header.site-header {
     margin-left: 240px;
     transition: all 0.15s;
 }
-
-.navbar {
-    padding: 0;
-}
-.site-header a:link,
-.site-header a:hover,
-.site-header a:active,
-.site-header a:visited,
-.site-header a:focus {
-    color: #222;
-}
-.site-header .banner {
-    background: url(../images/tball.svg) center left no-repeat;
-    background-size: 32px;
-    float: left;
-    height: 63px;
-    padding: 0;
-}
-.site-header .banner,
-.site-header .banner :hover {
-    text-decoration: none;
-}
-.site-title {
-    margin: 14px 0 0 42px;
-    line-height: 36px;
-    font-family: "Interstate-Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 26px;
-    font-weight: 200;
-    letter-spacing: -0.03em;
-    white-space: nowrap;
-}
 .site-header .dropdown-toggle {
     margin-top: 0;
 }
 .breadcrumb {
-    background: #fff;
     padding-left: 24px;
     padding-right: 24px;
+}
+.breadcrumb.with-line {
+    border-bottom: 1px #111111 solid;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .panel-body p:last-child {
     margin-bottom: 0;
@@ -87,21 +81,42 @@ header.site-header {
 .nav-icon-summary {
     background-image: url(../images/summary.svg);
 }
+li.selected .nav-icon-summary {
+    background-image: url(../images/summary-red.svg);
+}
 .nav-icon-devices {
     background-image: url(../images/devices.svg);
+}
+li.selected .nav-icon-devices {
+    background-image: url(../images/devices-red.svg);
 }
 .nav-icon-reports {
     background-image: url(../images/reports.svg);
 }
+li.selected .nav-icon-reports {
+    background-image: url(../images/reports-red.svg);
+}
 .nav-icon-export {
     background-image: url(../images/export.svg);
+}
+li.selected .nav-icon-export {
+    background-image: url(../images/export-red.svg);
 }
 .nav-icon-logs {
     background-image: url(../images/logs.svg);
 }
+li.selected .nav-icon-logs {
+    background-image: url(../images/logs-red.svg);
+}
 .nav-icon-install {
     background-image: url(../images/install.svg);
 }
+li.selected .nav-icon-install {
+    background-image: url(../images/install-red.svg);
+}
 .nav-icon-about {
     background-image: url(../images/about.svg);
+}
+li.selected .nav-icon-about {
+    background-image: url(../images/about-red.svg);
 }
