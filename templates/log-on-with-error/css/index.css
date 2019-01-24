@@ -1,5 +1,5 @@
 body {
-	background: #EEE;
+	background: #222222;
     left: 0;
     right: 0;
     height: 100%;
@@ -10,16 +10,21 @@ body {
     min-height: 100%;
 }
 .log-on-banner {
-	padding-left: 24px;
-	height: 65px;
-	line-height: 60px;
-    background-color: #fff;
+    padding-left: 24px;
+    height: 65px;
+    line-height: 60px;
+    background-color: #2c2c2c;
     border-top: 4px solid #DB3D44;
-    border-bottom: 1px solid #CCC;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #111111;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
-.log-on-brand-logo {
-	display: inline-block;
+.brand-logo {
+    display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
 }
 .log-on-brand h1 {
     display: inline-block;
@@ -39,14 +44,14 @@ body {
     width: 456px;
     padding: 32px 48px;
     text-align: left;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
-    -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.05); // iOS <4.3 & Android <4.1
-          box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+    background-color: #2c2c2c;
+    border: 1px solid #444444;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+          box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
 }
 .log-on-title {
-    background: url(../images/ico_account_gray.png) no-repeat left center transparent;
+    background: url(../images/ico_account_dark.svg) no-repeat left center transparent;
     padding-left: 40px;
     margin: 0;
     line-height: 32px;
@@ -84,10 +89,10 @@ footer {
     min-height: 40px;
     font-size: 12px;
     text-align: left;
-    background: #f5f5f5;
+    background: #2c2c2c;
     padding: 0 24px; 
-    border-top: 1px solid #dddddd;
-    color: #666666;
+    border-top: 1px solid #222222;
+    color: #888888;
 }
 footer .copyright {	
 	margin: 10px 0;
@@ -97,7 +102,9 @@ footer .footer-logo {
 	float: right;
 	margin: 6px 0;
 }
-
+footer .footer-logo img {
+    width: 80px;
+}
 footer .footer-links {
 	display: inline;
 	padding: 0;
