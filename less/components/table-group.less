@@ -43,6 +43,11 @@
 
 .table-cell-child-table-container {
   border-left: 2px solid @table-group-detail-table-left-border-color;
+  .table-minimalism {
+    > tbody > tr:last-child > td {
+      border-bottom: 0;
+    }
+  }
 }
 
 .table-cell-child-table {
