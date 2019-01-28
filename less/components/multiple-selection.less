@@ -101,6 +101,10 @@
   background: none;
   width: 506px;
 
+  &::before {
+    content: "";
+  }
+
   &:focus {
     outline: none;
   }
@@ -118,25 +122,25 @@
 
       &.ms-activating,
       &.ms-active {
-        background-color: #ddd;
-        color: #222;
+        background-color: @ms-blurred-active-bg;
+        color: @ms-blurred-active-color;
       }
     }
   }
 
   .ms-select-focus {
     .ms-list {
-      border: 1px solid #0096cc;
+      border: 1px solid @input-border-focus;
     }
 
     .ms-list-item {
       &.ms-activating,
       &.ms-active {
-        background-color: #33abd6;
-        color: #fff;
+        background-color: @ms-focus-active-bg;
+        color: @ms-focus-active-color;
 
         &:focus {
-          outline: 1px solid #0382b0;
+          outline: 1px solid @ms-focus-active-border-color;
         }
       }
     }
