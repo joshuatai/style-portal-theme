@@ -3,21 +3,21 @@ $(function () {
         {
             name: 'Ransomware',
             data: [2, 3, 4, 5, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 6, 6, 5, 5, 5, 5, 4, 4, 3, 3]
-        }, 
+        },
         {
             name: 'Anti-spyware',
             data: [5, 5, 6, 7, 8, 9, 9, 10, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 8, 7, 7, 6, 6, 6, 6, 5, 5, 4, 4, 4]
-        },  
+        },
         {
             name: 'Web Reputation',
             data: [14, 15, 16, 16, 16, 18, 20, 21, 21, 22, 21, 21, 21, 20, 20, 21, 21, 20, 20, 20, 19, 19, 18, 18, 17, 16, 16, 15, 15, 15]
-        }, 
+        },
         {
             name: 'Virus/Malware',
             data: [15, 16, 17, 18, 19, 20, 21, 23, 24, 24, 22, 22, 22, 21, 21, 22, 22, 22, 23, 22, 22, 22, 21, 21, 22, 22, 22, 21, 21, 21]
         }
     ];
-    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#9cd22a', '#faca2a', '#d643c3'];
     Highcharts.chart('line-chart-container', {
         chart: {
             type: 'line',
@@ -28,7 +28,7 @@ $(function () {
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {
@@ -88,7 +88,7 @@ $(function () {
           series: {
             pointStart: Date.UTC(2016, 9, 1),
             pointIntervalUnit: 'day',
-            marker: {  
+            marker: {
               radius: 4,
               symbol: 'circle',
               states: {

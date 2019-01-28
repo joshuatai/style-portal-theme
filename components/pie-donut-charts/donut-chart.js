@@ -11,7 +11,7 @@ $(function () {
             y: 281
         }]
     }];
-    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#9cd22a', '#faca2a', '#d643c3'];
     Highcharts.chart('standard-donut-chart-container', {
         chart: {
             type: 'pie',

@@ -3,18 +3,18 @@ $(function () {
         {
             name: 'Ransomware',
             data: [8, 5, 11, 17, 22, 24, 24]
-        }, 
+        },
         {
             name: 'Anti-spyware',
             data: [7, 6, 9, 14, 18, 21, 25]
-        },  
+        },
         {
             name: 'Web Reputation',
             data: [6, 3, 8, 13, 16, 18, 17]
         }
       ];
-    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#a8cf57', '#faca2a', '#d643c3'];
-    
+    var colors = ['#0096cc', '#4cc383', '#fd884e', '#5bd2ea', '#e56669', '#717eef', '#0abfa1', '#9cd22a', '#faca2a', '#d643c3'];
+
     Highcharts.chart('area-chart-container', {
         chart: {
             type: 'area',
@@ -25,7 +25,7 @@ $(function () {
                 var legendContainer = $('ul', legend);
                 for (var i = 0; i < series.length; i++) {
                     var color_idx = i%10;
-                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));  
+                    var newItem = $('<li>' + series[i].name + '</li>').addClass('color-' + colors[color_idx].replace('#', ''));
                     legendContainer.append(newItem);
                     newItem[0].series = series[i];
                     if (series[i].visible == false) {
@@ -87,7 +87,7 @@ $(function () {
                 pointStart: Date.UTC(2016, 9, 10),
                 pointIntervalUnit: 'day',
                 fillOpacity: 0.4,
-                marker: {  
+                marker: {
                   radius: 4,
                   symbol: 'circle',
                   states: {
