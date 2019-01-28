@@ -299,11 +299,11 @@ dd {
   dt,
   dd {
     line-height: @dl-horizontal-line-height;
-    margin-bottom: @dl-horizontal-margin-bottom;
   }
 
   dd {
     &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+    margin-bottom: @dl-horizontal-margin-bottom;
   }
 
   dt {
