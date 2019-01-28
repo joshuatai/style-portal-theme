@@ -23,3 +23,7 @@
 	position: absolute;
 	z-index: 1070;
 }
+
+.table-row-expandable td .tmicon {
+  margin-right: 8px;
+}
