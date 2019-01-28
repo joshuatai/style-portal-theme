@@ -140,9 +140,13 @@
 .table-with-scrollbar-no-data {
   position: relative;
 
+  &.table-with-scrollbar .fixed-column .table  > tbody > tr > td {
+    border-right-color: transparent;
+  }
+
   > .table-inner-message {
-    background-color: #fff;
-    color: #888;
+    background-color: @table-bg;
+    color: @table-no-data-color;
     position: absolute;
     top: 39px;
     bottom: 50px;
