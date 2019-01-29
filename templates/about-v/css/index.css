@@ -49,13 +49,12 @@ header.site-header {
 .navigation.collapsed ~ .breadcrumb,
 .navigation.collapsed ~ .container-fluid {
     margin-left: 64px;
-    transition: all 0.15s;
 }
 .navigation.expand + .site-header,
 .navigation.expand ~ .breadcrumb,
 .navigation.expand ~ .container-fluid {
     margin-left: 240px;
-    transition: all 0.15s;
+    transition: margin-left 0.15s;
 }
 .site-header .dropdown-toggle {
     margin-top: 0;
