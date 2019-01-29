@@ -15,7 +15,7 @@ var mouseY;
 var mouseX;
 var timer;
 var tableLongtextToggle = $("<div class='longtext-toggle tooltip-inner fade tooltip-inner-light'></div>");
-var tableCell = $('.table-longtext-truncated').find('tr').children();
+var tableCell = $('.table-longtext-truncated', this).find('tr').children();
 
 tableCell
 	.mouseenter(function () {
