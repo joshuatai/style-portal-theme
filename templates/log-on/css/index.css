@@ -18,8 +18,13 @@ body {
     border-bottom: 1px solid #CCC;
     box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
 }
-.log-on-brand-logo {
-	display: inline-block;
+.brand-logo {
+    display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
 }
 .log-on-brand h1 {
     display: inline-block;
@@ -46,7 +51,7 @@ body {
           box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
 }
 .log-on-title {
-    background: url(../images/ico_account_gray.png) no-repeat left center transparent;
+    background: url(../images/ico_account.svg) no-repeat left center transparent;
     padding-left: 40px;
     margin: 0;
     line-height: 32px;
@@ -97,7 +102,9 @@ footer .footer-logo {
 	float: right;
 	margin: 6px 0;
 }
-
+footer .footer-logo img {
+    width: 80px;
+}
 footer .footer-links {
 	display: inline;
 	padding: 0;
