@@ -1508,6 +1508,9 @@ dateEndInput
     }
   });
 
+var startDatePicker = dateStartInput.parent().find('[data-role="datepicker"]');
+var endDatePicker = dateEndInput.parent().find('[data-role="datepicker"]');
+
 datePickerPaneBody.children().addClass("date-picker-pane-container");
 
 timePickerStartInput
