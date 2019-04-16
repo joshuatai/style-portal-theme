@@ -1,0 +1,22 @@
+{
+  "id": "7a5c1c17-4282-4c8f-88f6-2de39e3f7dd7",
+  "name": "Logs",
+  "keywords": [
+    "log",
+    "raw",
+    "templates"
+  ],
+  "location": "logs/logs.html",
+  "dependencies": [],
+  "actions": [
+    {
+      "name": "Style",
+      "className": "fa fa-code"
+    }
+  ],
+  "type": "draggable",
+  "grid": {
+    "col": "col-xs-12 templates",
+    "row": "row-md-6"
+  }
+}

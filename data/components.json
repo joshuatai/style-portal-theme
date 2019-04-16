@@ -1026,5 +1026,13 @@
     "segments": [
       "83e500de-be08-4d39-9eb2-fe91b67892ff"
     ]
+  },
+  {
+    "id": "4e9252b0-d2e4-4584-9934-f4721e2f8ec9",
+    "name": "Logs",
+    "keywords": null,
+    "segments": [
+      "7a5c1c17-4282-4c8f-88f6-2de39e3f7dd7"
+    ]
   }
 ]
