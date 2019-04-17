@@ -1,67 +1,48 @@
 body {
-  background: #ffffff;
-  left: 0;
-  right: 0;
-  height: 100%;
-  position: absolute;
+	background: #222222;
+    left: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
 }
-
 .wrapper {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
-
 .container-fluid {
-  padding: 0 16px;
+    padding: 0 16px;
 }
-
-header.site-header {
-  padding: 0 24px;
-  padding-right: 0;
-}
-
 .site-header {
-  position: relative;
-  padding: 0 20px;
-  height: 64px;
-  margin-bottom: 0;
-  background-color: #fff;
-  border-bottom: 1px #ddd solid;
+    line-height: 62px;
+    padding: 0 24px;
+    padding-right: 0;
 }
-
-.navbar {
-  padding: 0;
+.brand-logo {
+    display: inline-block;
+    background: url(../images/tball.svg);
+    height: 32px;
+    width: 32px;
+    background-size: 94.93px 32px;
+    vertical-align: middle;
 }
-
-.site-header a:link,
-.site-header a:hover,
-.site-header a:active,
-.site-header a:visited,
-.site-header a:focus {
-  color: #222;
-}
-
 .site-header .banner {
-  background: url(../images/tball.svg) center left no-repeat;
-  background-size: 32px;
-  float: left;
-  height: 63px;
+  background: none;
+  display: inline-block;
+  height: 62px;
   padding: 0;
 }
-
 .site-header .banner,
 .site-header .banner :hover {
   text-decoration: none;
 }
 
 .site-title {
-  margin: 14px 0 0 42px;
-  line-height: 36px;
-  font-family: "Interstate-Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 26px;
-  font-weight: 200;
-  letter-spacing: -0.03em;
-  white-space: nowrap;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  line-height: 26px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .site-header .dropdown-toggle {
@@ -69,7 +50,6 @@ header.site-header {
 }
 
 .breadcrumb {
-  background: #fff;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -92,6 +72,10 @@ header.site-header {
 .breadcrumb .non-breadcrumb-item .help {
   margin-left: 8px;
   cursor: pointer;
+}
+.breadcrumb .non-breadcrumb-item .refresh i,
+.breadcrumb .non-breadcrumb-item .help i {
+  color: #888888;
 }
 .items-block > div {
   float: left;
@@ -139,7 +123,7 @@ header.site-header {
   display: block;
 }
 .date-picker-pane {
-  background: #ffffff;
+  background: #2c2c2c;
 }
 
 /* Datepicker */
@@ -224,5 +208,5 @@ header.site-header {
   height: 16px;
   padding-left: 8px;
   vertical-align: text-bottom;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #666666;
 }
